@@ -37,38 +37,9 @@ tags:
 
 [^winch-model]: Model confirmed **WARN ZEON 10-S** (owner, 2026-05-30) — the earlier "ZEON 10-S" naming was incorrect. WARN's published peak draw for the ZEON 10-S is **409A @ 10,000 lb** (pull table: 62/144/215/280/353/409A); the previously documented 450A (≈ ZEON Platinum) was conservative. 1/0 AWG cable and the integrated contactor retain margin above 409A; WARN service battery leads for the 10-S are **2 AWG** (our 1/0 AWG is a deliberate upsize). Source: [WARN ZEON 10-S (89611)](https://www.warn.com/products/zeon-10-s-89611) (checked 2026-05-30).
 
-## Circuit Protection - Engineering Justification {#winch-circuit-protection}
+## Circuit Protection {#winch-circuit-protection}
 
-**Design Decision:** No external circuit breaker per WARN manufacturer specifications
-
-**Manufacturer Specification:**
-
-- WARN Part: ZEON 10-S Winch
-- Installation Manual: [WARN ZEON 10-S Installation Guide][warn-manual]
-- Specification: "No external fuse or circuit breaker required"
-
-**Protection Strategy:**
-
-1. **Internal Thermal Protection:** Winch motor has integrated thermal cutoff
-2. **Contactor Disconnect:** Provides isolation when not in use
-3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 409A brief peaks
-4. **Duty Cycle:** Winch operations are brief (10-30 seconds typical recovery)
-
-**Automotive Industry Standard:**
-
-- Factory vehicle winch installations do NOT use external circuit breakers
-- Winch internal protection is designed for automotive fault scenarios
-- This differs from marine practice (ABYC E-11) which requires all circuits fused
-
-**Fault Scenarios Covered:**
-
-- **Motor Stall:** Internal thermal protection trips before fire hazard
-- **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 409A peak current)
-- **Contactor Weld:** Manual disconnect at battery terminal provides emergency shutoff
-
-**Standards Applied:** SAE J1128 (automotive), WARN manufacturer specifications
-
-**This is NOT an oversight** - it is intentional adherence to manufacturer specifications and automotive best practices. See [Standards Exceptions][standards-exceptions] for complete documentation.
+No external circuit breaker — per the [WARN ZEON 10-S installation manual][warn-manual]. Protection: integrated thermal cutoff, contactor isolation (emergency shutoff: disconnect at battery terminal), and 1/0 AWG cable (adequate for 409A brief peaks). Automotive practice (SAE J1128) differs from marine (ABYC E-11), which fuses all circuits. See [Standards Exceptions][standards-exceptions].
 
 ## Contactor/Solenoid
 

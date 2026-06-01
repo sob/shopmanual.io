@@ -165,12 +165,6 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 - Physical switch location: Rear cargo area (easily accessible from tailgate)
 - Switch type: SPST rocker or toggle switch
 
-**Benefits:**
-
-- Physical access from cargo area (don't need dashboard button or app)
-- Independent from other lighting circuits
-- Convenient when loading/unloading gear at night
-
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control
 
 ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
@@ -197,14 +191,6 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 - ARB Pressure Switch model 180901 (cut-in: 135 PSI, cut-out: 150 PSI)
 - Mounted on air manifold under passenger seat
 - Low current signal wire (18 AWG from manifold under passenger seat to SwitchPros TRIGGER-3 at firewall — short run)
-
-**Benefits:**
-
-- Automatic pressure maintenance (no user intervention required)
-- Instant locker engagement (tank always pressurized)
-- Manual override available for tire inflation (Button 11)
-- Prevents compressor over-cycling
-- Tank ready for use whenever needed
 
 **Related Documentation:**
 

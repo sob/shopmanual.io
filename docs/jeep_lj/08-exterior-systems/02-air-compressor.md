@@ -72,14 +72,6 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 | Ground        | Compressor negative terminal | AUX battery negative        | 6 AWG | None       | Direct for 90A return current |
 | Control       | SwitchPros OUTPUT-11         | Compressor control terminal | 14 AWG | 15A        | Auto or manual activation     |
 
-**Wiring Summary:**
-
-1. **Motor 1 Power (+):** AUX battery+ → 150A inline CB → SafetyHub → SafetyHub MIDI-1 (60A) → 6 AWG → compressor motor 1
-2. **Motor 2 Power (+):** AUX battery+ → 150A inline CB → SafetyHub → SafetyHub MIDI-2 (60A) → 6 AWG → compressor motor 2
-3. **Ground (-):** Compressor negative terminal → 6 AWG → AUX battery negative
-4. **Control (Automatic):** Pressure switch (ARB 180901) → SwitchPros TRIGGER-3 (Pin 17) → OUTPUT-11 → compressor control
-5. **Control (Manual Override):** SwitchPros Button 11 → OUTPUT-11 → compressor control
-
 ---
 
 ## Air Tank
@@ -104,14 +96,6 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 | Mounting         | Under passenger seat (horizontal or vertical) |
 | Ports            | 4 × 1/4" NPT (daisy-chain compatible) |
 
-**Purpose:**
-
-- Instant locker engagement (no waiting for compressor to build pressure)
-- Reduces compressor cycling frequency
-- Multiple locker uses per tank fill
-- Quick tire pressure adjustments
-- Air reserve for emergency use
-
 ---
 
 ## Pressure Switch
@@ -134,13 +118,6 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 | Cut-Out Pressure | 150 PSI (compressor stops)  |
 | Mounting         | On air manifold          |
 | Electrical       | Low-current switch (<1A) |
-
-**Function:**
-
-- Monitors tank pressure continuously
-- Automatically activates compressor when pressure drops below 135 PSI
-- Automatically deactivates compressor when pressure reaches 150 PSI
-- Integrated with SwitchPros TRIGGER-3 for automatic control
 
 ---
 
