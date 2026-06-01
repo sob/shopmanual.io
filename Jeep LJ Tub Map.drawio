@@ -152,19 +152,13 @@
                     <mxGeometry x="492" y="816" width="64" height="18" as="geometry"/>
                 </mxCell>
                 <mxCell id="ctrl-switchpros" value="SwitchPros" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#d8b8e8;strokeColor=#664488;strokeWidth=2;fontColor=#2a1a3a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="460" width="90" height="28" as="geometry"/>
-                </mxCell>
-                <mxCell id="ctrl-bus2" value="CONSTANT BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#aaaaaa;strokeColor=#444444;strokeWidth=1;fontColor=#000000;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="414" width="185" height="12" as="geometry"/>
+                    <mxGeometry x="378" y="444" width="70" height="16" as="geometry"/>
                 </mxCell>
                 <mxCell id="cb-fw-sp" value="150A→SP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="429" width="90" height="12" as="geometry"/>
+                    <mxGeometry x="378" y="426" width="70" height="12" as="geometry"/>
                 </mxCell>
                 <mxCell id="cb-fw-bp" value="100A→BP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="465" y="429" width="90" height="12" as="geometry"/>
-                </mxCell>
-                <mxCell id="ctrl-sp-gnd" value="SwitchPros GND BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#333333;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="370" y="446" width="185" height="12" as="geometry"/>
+                    <mxGeometry x="455.5" y="426" width="64.5" height="12" as="geometry"/>
                 </mxCell>
                 <mxCell id="ctrl-safetyhub" value="SafetyHub" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb0b0;strokeColor=#aa3333;strokeWidth=2;fontColor=#3a0a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
                     <mxGeometry x="493" y="860" width="64" height="18" as="geometry"/>
@@ -173,7 +167,7 @@
                     <mxGeometry x="440" y="350" width="100" height="25" as="geometry"/>
                 </mxCell>
                 <mxCell id="ctrl-bodypdu" value="BODY PDU" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#cce4b8;strokeColor=#558833;strokeWidth=2;fontColor=#2a4a1a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
-                    <mxGeometry x="465" y="460" width="90" height="28" as="geometry"/>
+                    <mxGeometry x="456.5" y="444" width="65" height="16" as="geometry"/>
                 </mxCell>
                 <mxCell id="seat-rear" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
                     <mxGeometry x="316" y="724" width="168" height="140" as="geometry"/>
@@ -193,17 +187,18 @@
                 <mxCell id="tailgate" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
                     <mxGeometry x="244" y="934" width="312" height="34" as="geometry"/>
                 </mxCell>
-                <mxCell id="bb-aux-fwd" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc2222;strokeWidth=5;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                <mxCell id="bb-aux-fwd" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc2222;strokeWidth=5;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="ctrl-bus2">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="525" y="720" as="sourcePoint"/>
-                        <mxPoint x="555" y="420" as="targetPoint"/>
+                        <mxPoint x="540" y="420" as="targetPoint"/>
                         <Array as="points">
+                            <mxPoint x="525" y="715"/>
                             <mxPoint x="540" y="715"/>
-                            <mxPoint x="540" y="420"/>
+                            <mxPoint x="540" y="414"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="bb-aux-fwd-lbl" value="&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;HARNESS &lt;/span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;H1/4&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;1× 2/0 AWG (AUX fwd feed)&lt;br&gt;2× 1/0 AWG (winch)&lt;/font&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontColor=#aa1111;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5f5;strokeColor=#aa1111;spacing=8;rounded=0;" parent="1" vertex="1">
+                <mxCell id="bb-aux-fwd-lbl" value="&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;HARNESS &lt;/span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;H1&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;1× 2/0 AWG (AUX fwd feed)&lt;br&gt;2× 1/0 AWG (winch)&lt;/font&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontColor=#aa1111;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5f5;strokeColor=#aa1111;spacing=8;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="595" y="620" width="195" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="bb-start-fwd-lbl" value="&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;HARNESS &lt;/span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;H2&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;3× 2/0 AWG (alt, starter, PMU)&lt;br&gt;3 direct (grid, ECM, iBooster)&lt;/font&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontColor=#aa1111;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5f5;strokeColor=#aa1111;spacing=8;rounded=0;" parent="1" vertex="1">
@@ -229,19 +224,18 @@
                         <mxPoint x="511" y="752" as="sourcePoint"/>
                         <mxPoint x="400" y="190" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="540" y="745"/>
+                            <mxPoint x="511" y="720"/>
+                            <mxPoint x="540" y="720"/>
                             <mxPoint x="540" y="240"/>
-                            <mxPoint x="425" y="200"/>
+                            <mxPoint x="425" y="240"/>
+                            <mxPoint x="425" y="190"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="bb-winch-lbl" value="H1/4 winch&amp;#10;continues to&amp;#10;front bumper" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#880000;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0f0;strokeColor=#880000;strokeWidth=2;" parent="1" vertex="1">
-                    <mxGeometry x="570" y="260" width="110" height="40" as="geometry"/>
+                <mxCell id="lbl-dash" value="&lt;u&gt;DASHBOARD + FIREWALL&lt;/u&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;AUX CONSTANT BUS&lt;/div&gt;&lt;div&gt;SwitchPros Groudn Bus&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Circuit Breakers:&lt;/div&gt;&lt;div&gt;&amp;nbsp;150A→SwitchPros&lt;/div&gt;&lt;div&gt;100A→Body PDU&lt;br&gt;SwitchPros GND bus&lt;/div&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dde6f0;strokeColor=#445566;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="460" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="lbl-dash" value="DASHBOARD + FIREWALL&#xa;CONSTANT BUS&#xa;CBs: 150A→SP, 100A→BP&#xa;SwitchPros, BODY PDU&#xa;SwitchPros GND bus&#xa;Dakota HDX, CT4 panel, SP panel,&#xa;HVAC, radio, gauges&#xa;(Fusion amp relocated under rear seat)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dde6f0;strokeColor=#445566;" parent="1" vertex="1">
-                    <mxGeometry x="700" y="460" width="200" height="110" as="geometry"/>
-                </mxCell>
-                <mxCell id="ldr-dash" style="endArrow=open;html=1;endSize=8;strokeColor=#445566;sketch=1;jiggle=2;" parent="1" edge="1">
+                <mxCell id="ldr-dash" style="endArrow=open;html=1;endSize=8;strokeColor=#445566;sketch=1;jiggle=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" edge="1" source="lbl-dash">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="710" y="476" as="sourcePoint"/>
                         <mxPoint x="555" y="450" as="targetPoint"/>
@@ -343,7 +337,7 @@
                 <mxCell id="ctrl-fusion" value="Fusion Amp&#xa;(under rear seat)" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#e8d4f0;strokeColor=#7744aa;strokeWidth=2;fontColor=#3a1a4a;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
                     <mxGeometry x="353" y="755" width="84" height="28" as="geometry"/>
                 </mxCell>
-                <mxCell id="bb-fusion-feed" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#7744aa;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" edge="1" target="ctrl-fusion" source="cb-fu">
+                <mxCell id="bb-fusion-feed" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#7744aa;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="cb-fu" target="ctrl-fusion" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="494" y="843" as="sourcePoint"/>
                         <mxPoint x="412" y="840" as="targetPoint"/>
@@ -355,8 +349,8 @@
                 <mxCell id="fp4-marker" value="FP4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
                     <mxGeometry x="528" y="382" width="24" height="24" as="geometry"/>
                 </mxCell>
-                <mxCell id="fp-legend" value="FIREWALL PENETRATIONS (this page)&amp;#10;FP3 Heavy grommet (driver) — H2 bundle&amp;#10;FP4 Heavy grommet (passenger) — H1/H4 bundle" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=1;" parent="1" vertex="1">
-                    <mxGeometry x="710" y="380" width="280" height="60" as="geometry"/>
+                <mxCell id="fp-legend" value="&lt;u&gt;FIREWALL PENETRATIONS&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;div&gt;FP3: Harness H2 - Heavy Grommett&lt;br&gt;FP4: Harness H1 - Heavy Grommett&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=1;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="358" width="190" height="80" as="geometry"/>
                 </mxCell>
                 <mxCell id="cb-master" value="300A→fwd" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
                     <mxGeometry x="494" y="720" width="64" height="14" as="geometry"/>
@@ -369,6 +363,9 @@
                 </mxCell>
                 <mxCell id="batt-aux-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
                     <mxGeometry x="532" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bus2" value="CONSTANT BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="408" width="142" height="12" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
