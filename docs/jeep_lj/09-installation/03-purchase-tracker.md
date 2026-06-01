@@ -72,8 +72,9 @@ Major components - watch for sales, consider financing options.
 | Wilwood 220-12993 -3 AN Flexline (×2) | Wilwood | ~$50-70 | High | 8" w/ 11/16-20 adapter - [iBooster][ibooster] |
 | iBooster Wiring Harness | Tulay's or EVcreate | ~$60-150 | High | TBD: Gen 2 universal vs EVcreate kit - [Harness][tulays] |
 | Firewall backing plate (cabin side) | SendCutSend | ~$15-30 | High | Flat 3/16" steel sandwich plate, donor bracket pattern + 62mm center - [iBooster][ibooster] |
-| Fusion Apollo MS-AP61800 Amplifier | Fusion (Garmin) | ~$450 | Medium | [Amplifier][amplifier] |
-| JL Audio M7-12IB-S-GmTi-i-4 Subwoofer | JL Audio | ~$400 | Low | [Subwoofer][subwoofer] |
+| JL Audio MV800/8i Amplifier (010-03339-00) | JL Audio (Garmin) | ~$900 | Medium | 8-ch w/ DSP, replaces Fusion AP61800 plan - [Amplifier][amplifier] |
+| JL Audio M6-8IB-S-GmTi-i-4 Subwoofer (×2) | JL Audio | ~$700 (pair) | Low | Replaces single M7-12IB plan - [Subwoofer][subwoofer] |
+| JL Audio VXi-BTC JLid Bluetooth Communicator (010-13543-00) | JL Audio (Garmin) | ~$100 | Low | Wireless TüN tuning of MV800/8i from phone/tablet - [Bluetooth Tuning][bt-tuning] |
 | JL Audio MLC-RW LED Controller | JL Audio | ~$250 | Low | [LED Controller][led-controller] |
 | Rugged Radios STX Intercom (4-place) | Rugged Radios | ~$400 | Medium | [Intercom][intercom] |
 | ARB Aluminum Air Tank (171507, 1-gal 4-port) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
@@ -206,6 +207,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [amplifier]: ../06-audio-systems/02-amplifier.md
 [subwoofer]: ../06-audio-systems/04-subwoofer.md
 [led-controller]: ../06-audio-systems/05-led-controller.md
+[bt-tuning]: ../06-audio-systems/06-bluetooth-tuning.md
 [intercom]: ../07-communication-systems/02-intercom.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [solar]: ../01-power-systems/01-power-generation/04-solar.md

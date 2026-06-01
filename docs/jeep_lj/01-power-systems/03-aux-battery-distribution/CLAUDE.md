@@ -75,7 +75,7 @@ This page is the **single source of truth** for wire specifications. When updati
 | Winch (+/-)                    | `08-exterior-systems/01-winch.md`                                            |
 | CONSTANT Bus Bar               | `02-constant-bus.md`                                                         |
 | SwitchPros                     | `05-control-interfaces/02-switchpros-sp1200.md`                              |
-| Fusion Apollo Amp              | `06-audio-systems/index.md`                                                  |
+| JL Audio MV800/8i Amp          | `06-audio-systems/index.md`                                                  |
 | START Battery Ground Reference | `02-starter-battery-distribution/index.md`                                   |
 
 **Changing BODY PDU circuits:**

@@ -104,19 +104,19 @@ Organized by installation order for efficient build workflow.
 
 - [ ] Mount Mechanical Products 174-S2-150-2 150A CB (SwitchPros)
 - [ ] Mount Mechanical Products 174-S2-100-2 100A CB (BODY PDU)
-- [ ] Mount Blue Sea 187-100A 100A CB (Fusion Apollo Amp)
+- [ ] Mount Blue Sea 187-100A 100A CB (JL Audio MV800/8i Amp) — note this CB is on the battery-side bracket, not at the firewall bus
 
 **Firewall CONSTANT Bus Wiring:**
 
 - [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 150A CB → SwitchPros power module (~2 ft)
 - [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 100A CB → BODY PDU power studs (~2 ft)
-- [ ] Confirm 4 AWG: Firewall CONSTANT Bus → 100A CB → Fusion Apollo Amp (~3 ft)
+- [ ] Confirm 4 AWG: AUX battery+ → 100A CB → JL Audio MV800/8i Amp (~3-4 ft, under rear seat — direct AUX feed, not via firewall bus)
 
 **Direct AUX Battery Connections (No Circuit Breaker):**
 
 - [ ] Confirm 1/0 AWG: AUX battery+ → Winch positive (13 ft one-way, direct connection per WARN spec)
 - [ ] Confirm 1/0 AWG: AUX battery- → Winch negative (13 ft one-way, matches positive path)
-- [ ] Confirm 4 AWG: AUX battery- → Fusion Apollo amplifier ground (~8-10 ft)
+- [ ] Confirm 4 AWG: AUX battery- → JL Audio MV800/8i amplifier ground (~3-4 ft)
 
 ### BCDC Alpha 50 Installation
 

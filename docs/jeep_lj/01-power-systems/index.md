@@ -23,7 +23,7 @@ See [Power Generation](01-power-generation/index.md) for complete details on bat
 Each battery uses a different distribution strategy:
 
 - **[START battery Distribution](02-starter-battery-distribution/index.md):** Inline CBs at battery (250A for PMU, 80A for BCDC input) — no local bus, direct stacked terminal lugs
-- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** Inline CBs at battery (300A master forward feed + 150A SafetyHub local) → [Firewall CONSTANT Bus](03-aux-battery-distribution/02-constant-bus.md) (Blue Sea 2105, 250A) feeds SwitchPros, BODY PDU, Fusion Amp at the firewall cluster
+- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** Inline CBs at battery (300A master forward feed + 150A SafetyHub local + 100A audio amp local) → [Firewall CONSTANT Bus](03-aux-battery-distribution/02-constant-bus.md) (Blue Sea 2105, 250A) feeds SwitchPros and BODY PDU at the firewall cluster; JL Audio MV800/8i amp fed direct from AUX battery via 100A CB
 
 The system replaces the factory TIPM with modular programmable controllers:
 

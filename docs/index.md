@@ -19,7 +19,7 @@ Comprehensive electrical wiring documentation for a Jeep LJ with Cummins R2.8 Tu
 - Complete TIPM replacement with custom RTMRs
 - SwitchPros SP-9100 lighting control
 - SafetyHub advanced safety system
-- Full stereo/communication system (Fusion Apollo, JL Audio, Rugged Radio)
+- Full stereo/communication system (Fusion MS-RA670 head unit, JL Audio MV800/8i amp + speakers, Rugged Radio)
 - ARB Twin Air Compressor
 - Warn 10,000 lb winch
 - Complete lighting package

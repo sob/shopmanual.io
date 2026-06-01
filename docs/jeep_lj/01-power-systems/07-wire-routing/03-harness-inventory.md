@@ -41,7 +41,7 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
                   │  FIREWALL CLUSTER (cabin side):  │                │
                   │  SwitchPros + GND bus + BODY PDU │                │
                   │  + Firewall CONSTANT bus + CBs   │                │
-                  │  + Fusion Amp                    │                │
+                  │  (audio amp on direct AUX feed)  │                │
                   └────┬──────────────┬──────────────┘                │
                        │              │                               │
                        │      H6/7 Rear Cabin Trunk Bundle              │

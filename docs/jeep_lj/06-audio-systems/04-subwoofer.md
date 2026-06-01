@@ -26,7 +26,7 @@ Pair of 8" infinite baffle marine subwoofers with RGB LED lighting, mounted symm
 
 **Mounting:** Rear quarter panels (one per side, above wheel wells, firing inward)
 
-**Power Source:** Amplifier Channels 1+2 (bridged), wired **in series** across both subs
+**Power Source:** Amplifier Channels 1+2 bridged @ 4Ω → Sub A; Ch 3+4 bridged @ 4Ω → Sub B (one dedicated bridged pair per sub)
 
 ///
 
@@ -45,22 +45,21 @@ Pair of 8" infinite baffle marine subwoofers with RGB LED lighting, mounted symm
 
 ## Wiring Configuration {#wiring}
 
-Both subs wired **in series** to the Fusion amp bridged Ch1+2 output. This is the only safe configuration with this amp/sub combination:
+Each sub runs on its own dedicated bridged channel pair on the JL Audio MV800/8i — Sub A on Ch 1+2 bridged, Sub B on Ch 3+4 bridged, both at 4Ω. This is an exact RMS match to the sub's 200W @ 4Ω rating, with no series compromise and independent per-sub gain/EQ/delay via the amp's onboard DSP.
 
-| Wiring | Total Z | Fusion AP61800 Output | Per Sub | Safe? |
-| :----- | :-----: | :------------------: | :-----: | :----: |
-| Parallel | 2Ω | n/a — below 4Ω bridged minimum | n/a | ❌ Damages amp |
-| **Series** | **8Ω** | ~290W | ~145W | ✅ 72% of RMS rating |
+| Wiring                    |  Per-Sub Load  | MV800/8i Output | Per Sub  | Safe? |
+| :------------------------ | :------------: | :-------------: | :------: | :----: |
+| **Bridged @ 4Ω per sub**  |       4Ω       |      200W       | **200W** | ✅ 100% of RMS rating |
+| Parallel both on one pair |       2Ω       |  n/a (bridged minimum is 4Ω) |   n/a    | ❌ Below bridged minimum |
 
-**Series wiring path:**
+**Wiring path (per sub, both pairs identical):**
 
 ```
-Amp Ch1+2 (+) → Sub A (+)
-              Sub A (−) → Sub B (+)
-                          Sub B (−) → Amp Ch1+2 (−)
+Amp Ch 1+2 (+/−) bridged → Sub A (+/−)
+Amp Ch 3+4 (+/−) bridged → Sub B (+/−)
 ```
 
-Total amp output ~290W into the pair (~145W per sub) — well-controlled, headroom for transients, no risk of over-excursion at sane gain settings.
+Total amp output 400W into the pair (200W per sub) — exact RMS match, no headroom waste from series resistance, independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
 
 ## Infinite Baffle Requirements
 
@@ -79,14 +78,13 @@ Total amp output ~290W into the pair (~145W per sub) — well-controlled, headro
 
 ## Wiring
 
-| Connection  | Wire   | Notes                   |
-| :---------- | :----- | :---------------------- |
-| Speaker (+) | 14 AWG | From amp Ch 1+2 bridged to Sub A (+) |
-| Sub A (−) → Sub B (+) | 14 AWG | Series jumper between subs |
-| Speaker (−) | 14 AWG | From Sub B (−) back to amp Ch 1+2 bridged (−) |
-| LED         | 20 AWG | RGB from MLC-RW (one tap per sub) |
+| Connection            | Wire   | Notes                                              |
+| :-------------------- | :----- | :------------------------------------------------- |
+| Sub A (+) / (−)       | 14 AWG | From amp Ch 1+2 bridged to Sub A voice coil        |
+| Sub B (+) / (−)       | 14 AWG | From amp Ch 3+4 bridged to Sub B voice coil        |
+| LED                   | 20 AWG | RGB from MLC-RW (one tap per sub)                  |
 
-Standard speaker wire (no XM-WHTMFC needed for subwoofer audio).
+Standard speaker wire (no XM-WHTMFC needed for subwoofer audio). No series jumper between subs — each sub returns directly to its own bridged channel pair.
 
 ## Why Two 8" vs Single 12"
 
@@ -96,7 +94,7 @@ The single 12" M7-12IB option (600W RMS, 14" overall diameter, 7.94" mounting de
 - **Single-sub asymmetry:** harder to integrate cosmetically vs symmetric L/R 8" pair.
 - **No matching 12" M6:** JL doesn't make a 12" M6-IB (M6 IB line tops at 10"), so the pair option doesn't exist at 12".
 
-**Tradeoff accepted:** total sub output drops from 580W (single M7-12IB @ 4Ω bridged) to ~290W (2× M6-8IB @ 8Ω bridged), about half. Acceptable for a soft-top Jeep where wind noise dominates at highway speed anyway, and the symmetric placement + easier install win out.
+**Tradeoff accepted:** total sub output is 400W (2× M6-8IB on dedicated bridged pairs of the MV800/8i @ 4Ω each) vs ~580W for a single M7-12IB. About 70% of the single-12" output, but symmetric L/R placement, independent per-sub DSP, and a feasible mounting depth in the LJ quarter panels win out. Acceptable for a soft-top Jeep where wind noise dominates at highway speed anyway.
 
 ## Outstanding Items
 
