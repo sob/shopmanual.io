@@ -165,10 +165,10 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 ## Outstanding Items
 
-- [ ] **Bench-verify ECM Pin 35 (WAIT-to-Start) polarity is active-low before committing WAIT-gate relay wiring** — the entire gate logic inverts if Pin 35 is not active-low (relay would block cranking when WAIT is *off* and pass it when *on*). Mirrors the [HDX WAIT/EX][hdx-control] bench-verify item; see [^wait-polarity]
+- [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
 - [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
 - [ ] Select WAIT-gate relay part (SPST 30A automotive, NC contacts used in start path)
-- [ ] Add 5A inline fuse on ignition outbound wire to ECM Pin 41 (per Cummins R2.8 install manual — confirm exact document/page, see [^ecm-fuse])
+- [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
@@ -187,9 +187,9 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 [^ch-coil]: Cole Hersee 24213 coil draw ~0.69A (17.5 Ω @ 12V) per the Littelfuse datasheet — see the `[^ch-24213]` footnote in [Starter System][starter]. Supersedes the earlier unsourced "~1.6A" figure that appeared in pre-merge drafts.
 
-[^ecm-fuse]: 5A inline fuse on the ignition feed to ECM Pin 41 is specified by the Cummins R2.8 install manual. ⚠️ The exact Cummins document/page is **unconfirmed**: earlier drafts cited "document 0042728," but the R2.8 Repower Installation Guide is documented elsewhere in this build as **5504137** (see [Runaway Protection][runaway-protection]) and the spec flyer as 5410825 — these do not match. Confirm the source document and page before final fuse placement. Tracked in [TBD Tracker][tbd-tracker].
+[^ecm-fuse]: **Confirmed.** Cummins Repower R2.8 CM2220 R101B Installation Guide, Bulletin 5504137 (Jan 2018), §2 *Wiring Harness* (pp. 2-19/2-20): the keyswitch feed to the ECM is **Pink, ECM pin 41**, with a **5 amp inline fuse** (Figure 2, item 3: *"Keyswitch – pink, 5 amp inline fuse"*). The guide requires this *"pink 5 amp wire … provide a minimum of 12 volts in the run position and during engine cranking."* Supersedes the unverified "document 0042728" cited in pre-merge drafts.
 
-[^wait-polarity]: ⚠️ VERIFY BEFORE WIRING. The sink-circuit topology and **active-low** WAIT-to-Start behavior at ECM Pin 35 are attributed to the Cummins R2.8 install manual (cited as "document 0042728" in pre-merge drafts — this number is **not corroborated** and conflicts with the R2.8 Repower Installation Guide number 5504137 used elsewhere in this build). The [HDX Control][hdx-control] doc independently flags this same Pin 35 signal's polarity for bench verification (HDX input is documented "active high"). Because the WAIT-gate relay logic depends entirely on Pin 35 being active-low, confirm polarity on the vehicle (or against the verified Cummins document/page) before committing the gate wiring. Tracked in [TBD Tracker][tbd-tracker].
+[^wait-polarity]: **Confirmed active-low.** Cummins Repower R2.8 CM2220 R101B Installation Guide, Bulletin 5504137 (Jan 2018), §2 *Wiring Harness* / *Engine Indicator Lamps* (pp. 2-19 → 2-24): the Circuit Wiring table lists **Lamp, Wait To Start — Yellow — ECM pin 35**, and the guide states *"The lamp circuits require power from the keyswitch to each lamp, with the ECM providing a path to ground via a sink circuit as engine conditions dictate"* and *"The ECM will enable a grounding path for the warning light to illuminate."* Pin 35 is therefore active-low (ECM sinks to ground when WAIT is active), validating the WAIT-gate relay logic above. The full schematic is the separate **R2.8 CM2220 R101B Wiring Diagram, Bulletin 5467560** (QuickServe Online). Supersedes the unverified "document 0042728" cited in pre-merge drafts. Note: the relay taps ECM Pin 35 directly, so it is governed by this Cummins spec — independent of the HDX *cluster-input* polarity question in [HDX Control][hdx-control].
 
 [pbs-i]: https://www.digitalguarddawg.com/keyless-ignition/automotive/pbs-i
 [pbs-i-manual]: https://cdn.shopify.com/s/files/1/0896/8005/2530/files/PBS-I-Manual.pdf

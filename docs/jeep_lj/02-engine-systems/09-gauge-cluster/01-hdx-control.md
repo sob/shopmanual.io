@@ -95,14 +95,14 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **IGNITION PWR**         | 16 AWG      | Ignition bus bar             | HDX ignition input      | Switched 12V for ignition-controlled features    |
 | **12 VDC CONSTANT**      | 16 AWG ✓    | Critical Cabin PDU Slot 2    | HDX power input         | 10A fuse, CONSTANT power, ~2 ft                  |
 | **DIM**                  | 18 AWG ✓    | Tail light circuit           | HDX DIM input           | Dash dimming control (variable voltage)          |
-| **ENGINE**               | 18 AWG ✓    | ECM Pin 22 (white wire, MIL) | HDX ENGINE input        | Check engine light / MIL signal — sink-circuit (active low at wire) per Cummins R2.8 manual |
+| **ENGINE**               | 18 AWG ✓    | ECM Pin 22 (white wire, MIL) | HDX ENGINE input        | Check engine light / MIL signal — sink-circuit (active low at wire) per Cummins R2.8 Installation Guide 5504137 |
 | **BRAKE**                | 18 AWG ✓    | Brake switch or CT4          | HDX BRAKE input         | Brake pedal indicator                            |
 | **HIGH**                 | 18 AWG ✓    | CT4 high beam output         | HDX HIGH input          | High beam indicator                              |
 | **LEFT**                 | 18 AWG ✓    | CT4 left turn output         | HDX LEFT input          | Left turn indicator                              |
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
 | **4x4/EX**               | 18 AWG ✓    | Transfer case switch         | HDX 4x4/EX input        | 4WD/4LO indicators                               |
 | GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
-| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 manual — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity needs bench verification during install (HDX may invert internally, or LJ build docs may be mislabeled). Also tapped by WAIT-gate relay coil-, see [Keyless Ignition][keyless-link] |
+| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity needs bench verification during install (HDX may invert internally, or LJ build docs may be mislabeled). Also tapped by WAIT-gate relay coil-, see [Keyless Ignition][keyless-link] |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | WARN OUT                 | -           | -                            | -                       | Not used                                         |
