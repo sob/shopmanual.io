@@ -19,15 +19,9 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 
 **Module:** Digital Guard Dawg PBS-I (Intelligent Push Button Start)
 
-**Type:** RFID-enabled push-button start/stop with onboard 60A relays for IGN, START, ACC1, ACC2
+**Type:** Self-contained RFID push-button start/stop; onboard 60A relays (IGN, START, ACC1, ACC2)
 
-**Anti-theft:** Built-in dual-mode (passive + active) RFID iTag fob
-
-**Diesel preheat handling:** External SPST WAIT-gate relay gates PURPLE START output through Cummins WAIT-to-Start lamp signal
-
-**Brake interlock:** Built into PBS-I (Accessory Harness Brake input)
-
-**Emergency Bypass:** Built-in 4-digit PIN entered via Programming Button (no hidden toggle)
+**Mounting:** Cabin, under dash (vendor mandate: not in engine bay)
 
 **Product Page:** [Digital Guard Dawg PBS-I][pbs-i]
 
@@ -67,11 +61,6 @@ The Cummins R2.8 ECM uses a **sink-circuit lamp topology**: keyswitch +12V → l
 | Contacts | NC; close when WAIT lamp off, open when WAIT lamp on |
 | Mounting | Cabin, adjacent to PBS-I |
 | Suggested Part | Bosch 0332019150 or Hella 4RA 003 510-04 (TBD) |
-
-**Logic:**
-
-- WAIT lamp ON (preheating) → ECM sinks Pin 35 to ground → ~12V across coil → coil energized → NC opens → start chain blocked
-- WAIT lamp OFF (ready or no preheat needed) → Pin 35 floats to ~+12V via lamp → ~0V across coil → coil de-energized → NC closes → start chain passes
 
 ### Cole Hersee 24213 Solenoid
 
@@ -154,10 +143,8 @@ See [Firewall Ingress][firewall-ingress] for pin assignments.
 Earlier iterations of this design included a discrete engine-running lockout relay and a P/N interlock relay in series with the starter coil. Both were removed in favor of simpler, layered protection:
 
 - **Brake interlock** is built into PBS-I (Accessory Harness Brake input).
-- **Engine-running protection** relies on the starter motor's Bendix overrunning clutch (standard automotive practice for hard-keyed ignition systems) plus the requirement to deliberately press brake + hold the button to crank — accidental restart of a running engine requires two-handed misuse.
-- **P/N interlock** is provided by the 8HP70 + Turbolamik: the transmission cannot be shifted out of Park without brake pressed, and the vehicle will always be in Park at start time. The Turbolamik can additionally inhibit start signal via its P/N aux output if a future build phase requires it (the signal is documented but unused by the keyless system today).
-
-This shifts the build's safety stance from "redundant external interlocks" to "PBS-I + transmission + driver behavior" — appropriate for a single-driver vehicle with a CR diesel and modern automatic.
+- **Engine-running protection** relies on the starter's Bendix overrunning clutch plus the deliberate brake + button-hold required to crank — accidental restart of a running engine takes two-handed misuse.
+- **P/N interlock** is provided by the 8HP70 + Turbolamik: the transmission can't leave Park without brake pressed, and the vehicle is always in Park at start time. The Turbolamik P/N aux output can inhibit the start signal in a future phase if needed (documented, unused today).
 
 ## Diesel Runaway Note
 
