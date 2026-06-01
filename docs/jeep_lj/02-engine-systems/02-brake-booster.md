@@ -85,8 +85,20 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 
 ### Plumbing
 
-- **Reservoir → MC feed:** -3 AN PTFE braided (Wilwood standard)
-- **MC → calipers:** -3 AN or 3/16" hardline (per brake system design)
+**Reservoir → MC feed (low pressure):** -3 AN PTFE braided — Wilwood 220-12993 (see Master Cylinder section). Gravity feed only; not a pressure circuit.
+
+**MC → calipers (high pressure) — hybrid hardline + axle flex.** Baseline design; switchable to a more standard (or full-PTFE) approach later without changing the MC or its 1/2-20 IF outlets.
+
+- **Chassis runs:** 3/16" **copper-nickel** (NiCopp / Cunifer) hardline off the MC's 1/2-20 IF outlets, 45° double (bubble) flare with inverted-flare fittings. DOT-approved for hydraulic brakes, will not corrode, and hand-bends/flares without a hydraulic bender.[^brakeline-material] Copper-nickel is softer than steel, so sleeve in stainless spring "gravel guard" armor at exposed points and route inside the frame rail where possible.[^brakeline-armor]
+- **Axle ends:** DOT-compliant (FMVSS 106) braided-stainless flex hose at each axle, extended length sized to full suspension droop. **Lengths are blocked on axle + suspension selection** (Section 10 TBDs) — do not cut to length until ride height/articulation is fixed.[^fmvss106]
+- **Hardline → flex transition:** bulkhead fittings at each axle.
+- **Proportioning:** the iBooster has no integral proportioning valve. Front disc + rear disc warrants an **adjustable proportioning valve** on the rear circuit (plus residual-pressure valves if needed); size on assembly. TBD.
+
+**Alternative considered — full -3 AN PTFE braided throughout (MC to calipers):** common on non-street comp rigs and field-repairable with reusable ends + unions, but not chosen as the baseline for a street-registered LJ on two counts: (1) FMVSS 106 certification attaches to the finished hose *assembly*, so DIY bulk-hose builds with reusable ends are not certified for road use — DOT-legal use means pre-made certified (crimped) assemblies, which removes the trail-repair advantage;[^fmvss106] (2) the braid hides the PTFE liner, so internal abrasion/degradation can't be visually inspected, and the bare braid abrades adjacent components. The hybrid keeps inspectable hardline for the long runs and isolates flex (and its failure points) to the axles.
+
+[^brakeline-material]: Copper-nickel (NiCopp / Cunifer / cupronickel) brake tubing is DOT-approved for hydraulic brake systems and has been in OE use since the 1970s (Volvo, Audi, Porsche). Strength comparable to steel, far better corrosion resistance, and bends ~58% easier than steel. Off-road trade-off: softer than steel, so less puncture-resistant — mitigate with spring armor. Sources: [AGS NiCopp](https://www.agscompany.com/products/domestic-nicopp-nickel-copper-brake-line), [BrakeConnect Cunifer](https://www.brakeconnect.com/cunifer-brake-line). Checked 2026-06-01.
+[^brakeline-armor]: Stainless spring "gravel guard" / brake-line armor slips over 3/16" hardline (install before flaring) to deflect rock and debris strikes; route lines inside the frame rail since underbody lines are the most exposed to rock hazard. Sources: [4LifetimeLines gravel guard](https://4lifetimelines.com/products/ltgg316-8), [Eastwood brakeline armor](https://www.eastwood.com/3-16-stainless-steel-brakeline-armor-3ft.html). Checked 2026-06-01.
+[^fmvss106]: FMVSS 106 (49 CFR 571.106) governs brake hose assemblies — it is a performance standard, not a material spec, so PTFE/braided-stainless hose can be DOT-compliant. Hydraulic brake hose must withstand 4,000 psi for 2 minutes without rupture; hose ≤1/8" inside diameter (e.g. -3 AN) is tested to 7,000 psi. Certification attaches to the completed assembly, and hose marketed "off-road use only" carries no DOT rating and is not for public-road use. Sources: [eCFR 49 CFR 571.106](https://www.ecfr.gov/current/title-49/subtitle-B/chapter-V/part-571/subpart-B/section-571.106), [Intertek FMVSS 106](https://www.intertek.com/automotive/standards/fmvss-106/). Checked 2026-06-01.
 
 ## Parts List
 
@@ -102,6 +114,11 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 | Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 60×80mm M8 pattern (80mm vertical), ~62mm body neck through firewall[^body-neck] |
 | Firewall reinforcement (cabin side) | SendCutSend custom — see [DXF][backing-plate-dxf] | ~$15-30 | ⚠️ DXF needs redesign for 60×80mm pattern (currently drawn 72×72mm — see Outstanding Items) | 3/16" A36 steel, 152×152mm, 12mm corner radius, 9mm M8 holes, 64mm center bore. Zinc yellow plating |
 | Wiring harness | TBD | Tulay's or EVcreate | Decision pending donor arrival | Choice depends on donor pigtail condition |
+| Brake hardline (caliper side) | 3/16" copper-nickel (NiCopp / Cunifer) coil | Summit / AGS / O'Reilly | Spec'd — order with fittings | DOT-approved; 45° double flare, 1/2-20 IF at MC; route inside frame rail |
+| Hardline armor | 3/16" stainless spring gravel guard | 4LifetimeLines / Eastwood | Spec'd | Slide on before flaring; exposed runs |
+| Inverted-flare fittings + bulkhead tees | 3/16" / -3 AN | Summit / Earl's / Wilwood | Spec'd | Hardline unions + hardline→flex transition at axles |
+| Axle flex hoses | DOT braided stainless, extended length (TBD) | Goodridge / Rock Krawler / Synergy / Rusty's | ⚠️ Length blocked on axle + suspension TBD (Section 10) | FMVSS 106; size to full droop |
+| Adjustable proportioning valve | TBD (Wilwood adjustable prop valve or equiv.) | Wilwood / Summit | TBD | Rear circuit — iBooster has no integral proportioning |
 
 ## Wiring
 
@@ -247,7 +264,14 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [ ] ✅ Order master cylinder — **Wilwood 260-15542 (1.00" bore)** — bore resolved, ready to order
 - [ ] Order plumbing: 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines (vendor-confirmed)
 - [ ] Order Back Bay Customs Wilwood MC adapter (confirmed vs 260-15542 — matches selected bore)
-- [ ] Confirm 260-15542 inlet/reservoir port thread on Wilwood datasheet before ordering reservoir feed fittings
+- [ ] Verify the 260-15542 reservoir-feed port thread on the **actual MC in hand** before buying any extra inlet fittings — Wilwood's datasheet leaves the inlet field blank (it's an integral-reservoir unit), so this is an in-hand check, not a datasheet lookup. Back Bay confirmed the remote reservoirs work with the adapter (Adam, 2026-05-30) and the 220-12993 is the flexline kit described to them.
+
+**Brake plumbing — caliper side (hybrid: copper-nickel hardline + axle flex):**
+
+- [ ] Order 3/16" copper-nickel hardline + inverted-flare fittings (1/2-20 IF at MC outlets) + stainless spring gravel-guard armor
+- [ ] 🔵 Select extended-length DOT (FMVSS 106) braided flex hoses — **blocked on axle + suspension selection** (Section 10); size to full droop, do not cut until ride height is fixed
+- [ ] Select adjustable proportioning valve for the rear circuit (iBooster has no integral proportioning) + any residual-pressure valves; size on assembly
+- [ ] Plan routing: chassis runs inside the frame rail, bulkhead fittings at each axle for the hardline→flex transition
 
 **Fab + install:**
 
