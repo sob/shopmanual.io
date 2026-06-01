@@ -13,7 +13,8 @@ All wire runs require appropriate protection based on location and environment:
 
 | Method              | Application                                 | Products                                        |
 | :------------------ | :------------------------------------------ | :---------------------------------------------- |
-| **Split Loom**      | General protection, bundling multiple wires | 1/4" to 1" diameter, slit for easy installation |
+| **Braided Sleeve (expandable)** | Preferred wrap for power runs and cabin/trunk bundles | PET expandable braid sized to bundle OD; plain or with a tracer stripe for harness ID — see [Protective Sleeve & Tracers][sleeve-convention] |
+| **Split Loom**      | General protection, bundling multiple wires; short/branchy small-wire runs | 1/4" to 1" diameter, slit for easy installation |
 | **Heat Sleeve**     | Engine bay, exhaust proximity               | Fiberglass sleeve rated 500°F+, 1/2" to 1"      |
 | **Abrasion Sleeve** | Frame rail contact, sharp edges             | Braided nylon or polyester                      |
 | **P-Clamps**        | Securing runs to frame/body                 | Rubber-lined, stainless steel                   |
@@ -194,7 +195,10 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 ## Related Documentation
 
-- [Harness Inventory][harness-inventory] - Fabricatable harness BOMs (H1–H9) with connectors, bundle interference assessment, and optimization notes
+- [Harness Inventory][harness-inventory] - Fabricatable harness overview (H1–H9): summary, harness map, bundle interference assessment, and optimization notes
+- [Build Sheet — Power Distribution][power-build] - H1, H2, H3 with tub-map diagram
+- [Build Sheet — Lighting & SwitchPros][lighting-build] - H4, H5 with tub-map diagram
+- [Build Sheet — Controls, Recovery & Drivetrain][controls-build] - H6–H9 with tub-map diagram
 - [Grounding Architecture][grounding] - Complete grounding system design
 - [START battery Distribution][starter-battery] - Driver rear wheel well power
 - [AUX battery Distribution][aux-battery] - Passenger rear wheel well power
@@ -207,6 +211,10 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 - [Recovery Systems][recovery-systems] - Winch installation and wiring
 
 [harness-inventory]: 03-harness-inventory.md
+[power-build]: 04-harness-power-distribution.md
+[lighting-build]: 05-harness-lighting-switchpros.md
+[controls-build]: 06-harness-controls-recovery-drivetrain.md
+[sleeve-convention]: 03-harness-inventory.md#sleeve-convention
 
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
