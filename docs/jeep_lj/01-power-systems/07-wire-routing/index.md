@@ -77,7 +77,7 @@ All wire runs require appropriate protection based on location and environment:
 
 **Routing:**
 
-- **Forward feed (2/0 AWG) + Winch power/ground (2× 1/0 AWG) (H1 + H4):** Passenger rear wheel well → up inside passenger rear quarter sill → forward along **inside floor board / side wall (passenger side)** → A-pillar area → through passenger firewall (H1 terminates at Firewall CONSTANT bus; H4 continues to engine bay → grille → front bumper). Three heavy cables bundled together. Fully inside body, no exposed frame rail.
+- **Forward feed (2/0 AWG) + Winch power/ground (2× 1/0 AWG) (H1):** Passenger rear wheel well → up inside passenger rear quarter sill → forward along **inside floor board / side wall (passenger side)** → A-pillar area → through passenger firewall (forward feed terminates at Firewall CONSTANT bus; winch cables continue to engine bay → grille → front bumper). Three heavy cables bundled together. Fully inside body, no exposed frame rail.
 - **BCDC input + cross-ground reference (H3):** **Under the rear bench seat** cushion → passenger rear wheel well. Short, dry, physically protected.
 - **SafetyHub local feed (2 AWG):** ~2 ft local in wheel well, no routing concern.
 
@@ -194,7 +194,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 ## Related Documentation
 
-- [Harness Inventory][harness-inventory] - Fabricatable harness BOMs (H1–H9) with connectors and bundle optimization notes
+- [Harness Inventory][harness-inventory] - Fabricatable harness BOMs (H1–H9) with connectors, bundle interference assessment, and optimization notes
 - [Grounding Architecture][grounding] - Complete grounding system design
 - [START battery Distribution][starter-battery] - Driver rear wheel well power
 - [AUX battery Distribution][aux-battery] - Passenger rear wheel well power

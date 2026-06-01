@@ -18,6 +18,8 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
 
 **Bundling philosophy:** Each harness terminates at a connector at every transition point (firewall, body penetration, distribution box). This makes harnesses individually serviceable and lets you lay them out flat for fabrication. The cost is more connectors; the benefit is much easier R&R.
 
+**Numbering note:** Two prior bundles (the old H1+H4 power trunk and the old H6+H7 rear cabin bundle) were merged in May 2026. The catalog was renumbered to a single sequence H1–H9 — there are no compound names (no "H1/4", no "H6/7"). See the [interference assessment](#bundle-interference-assessment) for why the merged bundles are safe.
+
 ---
 
 ## Harness Map
@@ -31,12 +33,12 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
                      │                                                │
                      ▼                                                │
                   ┌─────┐                                             │
-                  │ PMU │◄────── H5 SP front ◄──┐                     │
+                  │ PMU │◄────── H4 SP front ◄──┐                     │
                   └──┬──┘                       │                     │
                      │                          │                     │
   ═════════════════════════════════ FIREWALL ═════════════════════════│
                      │                          │                     │
-                     ▼ HDP20                    │                     │
+                     ▼ HDP24                    │                     │
                   ┌──────────────────────────────────┐                │
                   │  FIREWALL CLUSTER (cabin side):  │                │
                   │  SwitchPros + GND bus + BODY PDU │                │
@@ -44,41 +46,41 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
                   │  + Fusion Amp                    │                │
                   └────┬──────────────┬──────────────┘                │
                        │              │                               │
-                       │      H6/7 Rear Cabin Trunk Bundle              │
-                       │      (SwitchPros rear + PMU rear, ~10 cond)    │
-                       │              │                                  │
-                       ▼              ▼                                  │
+                       │      H5 Rear Cabin Trunk Bundle              │
+                       │      (SwitchPros rear + PMU rear, ~10 cond)  │
+                       │              │                               │
+                       ▼              ▼                               │
                   ┌─────────────────────────────────────────┐         │
                   │  CABIN TRUNK                            │         │
-                  │  Forward (passenger side): H1/4         │         │
+                  │  Forward (passenger side): H1           │         │
                   │  Forward (driver side): H2              │         │
-                  │  Rearward: H6/7 + CT4 turn + H8 signal  │         │
+                  │  Rearward: H5 + CT4 turn + H6 signal    │         │
                   │  Cross-cab: H3 (under rear bench)       │         │
                   └────┬──────────────────────────┬─────────┘         │
                        │                          │                   │
                        ▼                          ▼                   │
        ┌─────────────────────┐         ┌────────────────────┐         │
-       │ DRIVER REAR WELL    │         │ PASSENGER REAR WELL │         │
-       │ • START battery     │◄────────│ • AUX battery       │         │
-       │ • 250A + 80A CBs    │  H3     │ • 300A + 150A CBs   │         │
-       │                     │ BCDC    │ • SafetyHub         │         │
-       │                     │ cross   │ • BCDC              │         │
-       │  H2 ↑ (3× 2/0 AWG)  │ (under  │  H1/4 ↑ (3 cables)  │         │
-       │  driver floor/wall  │  rear   │  passenger          │         │
-       │  to engine bay      │  bench) │  floor/wall to      │         │
-       │                     │         │  3× bulkhead studs  │         │
-       └─────────────────────┘         │  at firewall;       │         │
-                                       │  winch portion      │         │
-                                       │  continues to       │         │
-                                       │  front bumper       │         │
-                                       │  H8 ARB compressor  │         │
-                                       │  → under pass seat  │         │
-                                       └──────┬──────────────┘         │
+       │ DRIVER REAR WELL    │         │ PASSENGER REAR WELL│         │
+       │ • START battery     │◄────────│ • AUX battery      │         │
+       │ • 250A + 80A CBs    │  H3     │ • 300A + 150A CBs  │         │
+       │                     │ BCDC    │ • SafetyHub        │         │
+       │                     │ cross   │ • BCDC             │         │
+       │  H2 ↑ (3× 2/0 AWG)  │ (under  │  H1 ↑ (3 cables)   │         │
+       │  driver floor/wall  │  rear   │  passenger         │         │
+       │  to engine bay      │  bench) │  floor/wall to     │         │
+       │                     │         │  3× bulkhead studs │         │
+       └─────────────────────┘         │  at firewall;      │         │
+                                       │  winch portion     │         │
+                                       │  continues to      │         │
+                                       │  front bumper      │         │
+                                       │  H6 ARB compressor │         │
+                                       │  → under pass seat │         │
+                                       └──────┬─────────────┘         │
                                               │                       │
                                               ▼                       │
        ┌─────────────────────────────────────────────────────────────┐
-       │  FRONT BUMPER (H1/4 winch portion terminates)               │
-       │  REAR CARGO BULKHEAD (H6/7 multi-pin breakout)              │
+       │  FRONT BUMPER (H1 winch portion terminates)                 │
+       │  REAR CARGO BULKHEAD (H5 multi-pin breakout)                │
        └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -86,9 +88,9 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
 
 ## Harness Catalog
 
-### H1/4 — Passenger Rear Power Trunk (AUX Forward Feed + Winch)
+### H1 — Passenger Rear Power Trunk (AUX Forward Feed + Winch)
 
-*Formerly two harnesses (H1 + H4) — merged 2026-05-30 since they share the entire passenger-side path. Fabricated and installed as a single bundled assembly.*
+*Formed 2026-05-30 by merging the prior H1 (AUX forward feed) and H4 (winch feed). The two shared the entire passenger-side path, so they are fabricated and installed as a single 3-cable bundle.*
 
 **Route:** Passenger rear wheel well (AUX battery) → up inside passenger rear quarter sill → forward along **inside floor board / side wall** (passenger side) → A-pillar area → **3× bulkhead studs through firewall** → engine bay → forward along passenger inner fender → through grille area → front bumper (winch portion only)
 
@@ -108,7 +110,7 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
 
 - WARN install documentation references this approach as standard for winch firewall pass-through
 - No amperage limit at the pass-through (the cable is the conductor; grommet just seals the hole)
-- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous — borderline for H1 (232A) and underrated for H4 winch peaks (400A)
+- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous — borderline for the forward feed (232A) and underrated for the winch leg (400A peak)
 - Anderson SB175 is undersized for the winch leg (175A continuous); SBE320/SB350 would work but adds complexity
 - Service is rare in practice — when needed, pulling the entire cable end-to-end is acceptable
 - Steele Rubber or similar 2-piece grommet, ~$5–15
@@ -173,19 +175,15 @@ Catalogs each fabricatable wire harness in the build. A "harness" here = a discr
 **Notes:**
 
 - Under-bench routing is short, dry, accessible, and physically protected (bench cushion above, floor pan below)
-- No frame rail exposure; no need to share the longer floor / side wall paths used by H1/H2/H4
+- No frame rail exposure; no need to share the longer floor / side wall paths used by H1 / H2
 - BCDC sensor cable (~6 ft, 2-pin) is included with BCDC unit, runs to AUX battery+ terminal at the same wheel well — short, stays passenger-side, not part of this harness
-- Path is independent of cabin trunk runs (H1/H4 passenger side, H2 driver side), so no cabin trunk congestion impact
+- Path is independent of cabin trunk runs (H1 passenger side, H2 driver side), so no cabin trunk congestion impact
 
 ---
 
-### H4 — Winch Feed *(merged into H1/4 — see above)*
+### H4 — SwitchPros Front Bundle
 
-**Status:** Merged into **H1/4 Passenger Rear Power Trunk** on 2026-05-30. The two harnesses share the entire passenger-side path from AUX battery to firewall, so they are now fabricated as a single 3-cable bundle. The 2× 1/0 AWG winch cables continue past the firewall to the front bumper. See [H1/4 above](#h14--passenger-rear-power-trunk-aux-forward-feed--winch).
-
----
-
-### H5 — SwitchPros Front Bundle
+*Previously numbered H5. Renumbered 2026-05-31 when the catalog was compacted after the H1+H4 and H6+H7 merges.*
 
 **Route:** SwitchPros (firewall, cabin side) → **dedicated SwitchPros HDP24-18-14 firewall bulkhead** → engine bay → grille / front bumper / front axle
 
@@ -215,9 +213,9 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 ---
 
-### H6/7 — Rear Cabin Trunk Bundle (SwitchPros Rear + PMU Rear)
+### H5 — Rear Cabin Trunk Bundle (SwitchPros Rear + PMU Rear)
 
-*Formerly two harnesses (H6 + H7) — merged 2026-05-30 since they share the firewall-to-rear cabin trunk path. Fabricated as a single multi-conductor bundle with a rear cargo bulkhead breakout connector.*
+*Formed 2026-05-30 by merging the prior H6 (SwitchPros rear outputs) and H7 (PMU rear lighting). The two shared the firewall-to-rear cabin trunk path, so they are fabricated as a single multi-conductor bundle with a rear cargo bulkhead breakout connector.*
 
 **Route:** SwitchPros (firewall, cabin side) + PMU24 outputs (via HDP24 pins 4/5/6 from engine bay) → converge at firewall → cabin trunk (trans tunnel) → rear cargo bulkhead breakout → fans out to rear destinations
 
@@ -255,13 +253,9 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 ---
 
-### H7 — PMU Rear Lighting *(merged into H6/7 — see above)*
+### H6 — ARB Compressor Bundle
 
-**Status:** Merged into **H6/7 Rear Cabin Trunk Bundle** on 2026-05-30. PMU rear outputs share the cabin trunk path with SwitchPros rear outputs after exiting HDP24, so they are now fabricated as a single multi-conductor bundle with shared rear bulkhead breakout. See [H6/7 above](#h67--rear-cabin-trunk-bundle-switchpros-rear--pmu-rear).
-
----
-
-### H8 — ARB Compressor Bundle
+*Previously numbered H8. Renumbered 2026-05-31.*
 
 **Route:** SafetyHub (passenger rear wheel well) → under cargo / under rear bench → under passenger seat (compressor mount)
 
@@ -282,13 +276,15 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 - Motor 1 + motor 2 are 6 AWG (high current, brief peaks) — bundle as a pair
 - Control + pressure switch wires originate at SwitchPros at firewall, NOT SafetyHub — they run from firewall through cabin to under passenger seat
-- Could be merged into H8 if they share routing, or kept separate as "H8b ARB signal"
+- Could be merged into H6 if they share routing, or kept separate as "H6b ARB signal"
 
-**Optimization opportunity:** Run the SwitchPros control + pressure switch wires through the cabin trunk to under passenger seat as part of H6 SwitchPros rear bundle (they're SP wires anyway), and split off at the compressor. Saves a separate harness — the only ARB-specific harness is the 2x 6 AWG motor cables from SafetyHub.
+**Optimization opportunity:** Run the SwitchPros control + pressure switch wires through the cabin trunk to under passenger seat as part of H5 SwitchPros rear bundle (they're SP wires anyway), and split off at the compressor. Saves a separate harness — the only ARB-specific harness is the 2x 6 AWG motor cables from SafetyHub.
 
 ---
 
-### H9 — Winch Trigger Control (small wire)
+### H7 — Winch Trigger Control (small wire)
+
+*Previously numbered H9. Renumbered 2026-05-31.*
 
 **Route:** BODY PDU (firewall, cabin side) → dash switch ([CH4X4 dual-momentary push][ch4x4-winch]) → HDP24 firewall pins 16/17 → winch contactor at front bumper
 
@@ -317,7 +313,9 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 ---
 
-### H10 — Kilduff Shifter to TCU
+### H8 — Kilduff Shifter to TCU
+
+*Previously numbered H10. Renumbered 2026-05-31.*
 
 **Route:** Kilduff shifter in **center console** → straight down through trans tunnel → Turbolamik TCU **mounted on 8HP70 mechatronic** (transmission valve body)
 
@@ -347,7 +345,9 @@ See [Transmission][transmission] for shifter and TCU specs.
 
 ---
 
-### H11 — TCU to Engine Bay
+### H9 — TCU to Engine Bay
+
+*Previously numbered H11. Renumbered 2026-05-31.*
 
 **Route:** Turbolamik TCU on 8HP70 mechatronic → up through trans tunnel forward → engine bay (PMU + J1939 tap + starter P/N relay)
 
@@ -384,24 +384,47 @@ See [Transmission][transmission] and [PMU Outputs][pmu-outputs] for related deta
 
 ---
 
+## Bundle Interference Assessment {#bundle-interference-assessment}
+
+Two harnesses (H1 and H5) bundle multiple originally-separate runs into a single sleeve. EMI/crosstalk evaluation:
+
+**H1 (Passenger Rear Power Trunk) — 1× 2/0 AWG forward feed + 2× 1/0 AWG winch power/ground:**
+
+- All three conductors carry power only — no sense lines, no signal returns, no CAN/audio/analog.
+- Inductive coupling between adjacent power conductors is irrelevant for distribution (the coupled noise has no signal path to corrupt; loads see CB-protected DC).
+- Winch peak current (~400A, seconds) raises a strong transient B-field but does not couple to the parallel forward-feed cable in any way that matters at the firewall CONSTANT bus.
+- **Verdict: no interference risk. Safe to bundle.**
+
+**H5 (Rear Cabin Trunk Bundle) — SP lighting outputs + PMU OUT-21/22/23 + 1 SP trigger return:**
+
+- SP OUT-6/7/10/12/13 are switched DC for lighting loads (14 AWG), not PWM.
+- PMU OUT-21/22/23 are switched DC for brake / reverse / parking tail signals (16 AWG), not PWM in this build (no dimming required; tail circuits run at full output when commanded).
+- TRIGGER-2 (18 AWG) is a switch return from the rear cargo rocker. SP triggers require sustained 12V to register; brief inductive transients from adjacent switched outputs are filtered by the SP input.
+- No CAN bus, no audio signal, no analog sensor wiring shares this bundle. (CT4 rear turn signals were considered for inclusion — they would also be switched DC and remain safe to add later.)
+- **Verdict: no interference risk under current load profile. Safe to bundle.** If a future change introduces PWM dimming on any PMU rear output, re-evaluate — twisted pair or shielding may be warranted for the TRIGGER-2 line in that case.
+
+**Other bundles (H2, H3, H4, H6, H7, H8, H9):** Each is single-purpose with homogeneous content (H2 = power only; H3 = power + ground reference; H4 = SP outputs; H6 = ARB power + signal already noted as physically separable; H7 = trigger logic only; H8 = factory shifter harness; H9 = TCU connections, includes twisted CAN pair). No new bundling concerns.
+
+---
+
 ## Cabin Trunk Bundle Summary
 
 The **cabin trunk** (trans tunnel / sill, firewall ↔ rear wheel wells) carries multiple harnesses in parallel. Total bundle inventory:
 
 | Direction | Harness | Cable count | Largest gauge | Path side |
 |:----------|:--------|:-----------:|:-------------:|:---------:|
-| Forward (rear → firewall) | **H1/4** Passenger Rear Power Trunk (AUX fwd + winch power+gnd) | 3 | 2/0 AWG | Passenger sill/floor |
+| Forward (rear → firewall) | **H1** Passenger Rear Power Trunk (AUX fwd + winch power+gnd) | 3 | 2/0 AWG | Passenger sill/floor |
 | Cross-cab | H3 (BCDC inter-battery + cross-gnd) | 2 | 1/0 AWG | Under rear bench |
 | Forward (driver rear → engine bay) | H2 (alt, starter, PMU feed) | 3 | 2/0 AWG | Driver sill/floor |
-| Rearward (firewall → rear) | **H6/7** Rear Cabin Trunk Bundle (SP rear outputs + PMU rear lighting) | ~10 | 14 AWG | Trans tunnel |
-| Rearward (firewall → rear) | CT4 rear turn signals | 2 | 14 AWG | Trans tunnel (could merge into H6/7) |
-| Rearward (firewall → under pass seat) | SwitchPros control + pressure (ARB) | 2 | 14–18 AWG | Trans tunnel (per H8 optimization) |
+| Rearward (firewall → rear) | **H5** Rear Cabin Trunk Bundle (SP rear outputs + PMU rear lighting) | ~10 | 14 AWG | Trans tunnel |
+| Rearward (firewall → rear) | CT4 rear turn signals | 2 | 14 AWG | Trans tunnel (could merge into H5) |
+| Rearward (firewall → under pass seat) | SwitchPros control + pressure (ARB) | 2 | 14–18 AWG | Trans tunnel (per H6 optimization) |
 
-**Passenger sill/floor (H1/4):** ~3 cables, ~1.5" OD bundle, terminates at 3× bulkhead studs at firewall
+**Passenger sill/floor (H1):** ~3 cables, ~1.5" OD bundle, terminates at 3× bulkhead studs at firewall
 
 **Driver sill/floor (H2):** ~3 cables, ~1.5" OD bundle, terminates at heavy power grommet at firewall
 
-**Trans tunnel rearward (H6/7 + CT4 + ARB signal):** ~14 conductors of small wire (14–18 AWG)
+**Trans tunnel rearward (H5 + CT4 + ARB signal):** ~14 conductors of small wire (14–18 AWG)
 
 **Suggested trunk wrap:** 1.5"–2" split loom or wrapped harness sleeve per side. P-clamp every 12–18".
 
@@ -411,10 +434,10 @@ The **cabin trunk** (trans tunnel / sill, firewall ↔ rear wheel wells) carries
 
 These were noted inline above; consolidated here for review:
 
-1. ~~H4 + H1 share rear-well → firewall path~~ **Resolved (2026-05-30):** Merged into single **H1/4 Passenger Rear Power Trunk**. Firewall transition uses a **single sealed 2-piece rubber grommet** (e.g., Steele Rubber) — cables run continuously, no service break. Bulkhead studs (Blue Sea 2203/2204) max at 250A and were underrated for the H4 winch peaks (400A); Anderson SB175 was also undersized. Continuous-cable + grommet is WARN's documented standard for high-current firewall pass-through.
-2. ~~H6 + H7 + CT4 rear turn + H8 SP signal wires share cabin trunk → rear~~ **Partially resolved (2026-05-30):** H6 + H7 merged into **H6/7 Rear Cabin Trunk Bundle** with single multi-pin breakout (Deutsch DT15 or AMP CPC ~15-pin) at rear cargo bulkhead. CT4 rear turn signals and ARB control wires *could* still join — pending decision.
-3. **H6/7 sub-harness (firewall → rear breakout) is a single straight pull;** R&R of any individual rear light becomes a pigtail swap.
-4. **H8 motor cables only.** Move control/pressure wires into H6/7 since they originate at SwitchPros.
+1. ~~Old H4 + old H1 share rear-well → firewall path~~ **Resolved (2026-05-30):** Merged into single **H1 Passenger Rear Power Trunk**. Firewall transition uses a **single sealed 2-piece rubber grommet** (e.g., Steele Rubber) — cables run continuously, no service break. Bulkhead studs (Blue Sea 2203/2204) max at 250A and were underrated for the winch peaks (400A); Anderson SB175 was also undersized. Continuous-cable + grommet is WARN's documented standard for high-current firewall pass-through.
+2. ~~Old H6 + old H7 + CT4 rear turn + old H8 SP signal wires share cabin trunk → rear~~ **Partially resolved (2026-05-30):** Old H6 + old H7 merged into **H5 Rear Cabin Trunk Bundle** with single multi-pin breakout (Deutsch DT15 or AMP CPC ~15-pin) at rear cargo bulkhead. CT4 rear turn signals and ARB control wires *could* still join — pending decision.
+3. **H5 sub-harness (firewall → rear breakout) is a single straight pull;** R&R of any individual rear light becomes a pigtail swap.
+4. **H6 motor cables only.** Move control/pressure wires into H5 since they originate at SwitchPros.
 5. **Front lockers + rock lights + fog in one bundle** through SwitchPros firewall bulkhead to engine bay → grille area. Splice/breakout at front for fan-out.
 6. ~~HDP20 firewall connector pin budget~~ **Resolved (2026-05-30):** Split into two dedicated bulkheads — HDP24-24-29 for non-SP traffic (18/29 used, 11 spare) + HDP24-18-14 for SwitchPros forward outputs (6/14 used, 8 spare). SP harness stays Delphi-native end-to-end. See [Pin Budget Audit][firewall-ingress].
 
@@ -426,21 +449,21 @@ These were noted inline above; consolidated here for review:
 - [ ] Decide rear cargo bulkhead breakout connector style and pin count
 - [x] ~~Calculate HDP20 firewall pin budget — fits or needs upsize?~~ → **Resolved:** Upsized to HDP24-24-29 (29 size-16 contacts, 21 used + 8 future headroom). See [Pin Budget Audit][firewall-ingress] for full pin assignment. Forward-going SP loads use chassis ground locally (1 pin per output instead of 2).
 - [ ] Confirm SwitchPros front locker wire routing (front axle access)
-- [ ] Decide if ARB control wires merge into H6 (recommended) or run as H8 signal pair
+- [ ] Decide if ARB control wires merge into H5 (recommended) or run as H6 signal pair
 - [ ] Source connector + lug + heat shrink BOM totals
 - [ ] Determine harness sleeve / wrap material (split loom vs braided sleeving) per zone
 
 ## Related Documentation
 
 - [Wire Routing][wire-routing] - Zone-based routing reference
-- [Firewall Ingress][firewall-ingress] - HDP20 pinout and penetrations
-- [AUX Battery Distribution][aux-battery] - H1 and H4 source
+- [Firewall Ingress][firewall-ingress] - HDP24 pinout and penetrations
+- [AUX Battery Distribution][aux-battery] - H1 source
 - [START Battery Distribution][start-battery] - H2 and H3 source
-- [SwitchPros SP-1200][switchpros] - H5, H6 source controller
-- [PMU24 Outputs][pmu-outputs] - H7 source
-- [SafetyHub 150][safetyhub] - H8, H9 source
-- [Recovery Systems / Winch][recovery] - H4 destination
-- [Air Compressor][air-compressor] - H8 destination
+- [SwitchPros SP-1200][switchpros] - H4, H5 source controller
+- [PMU24 Outputs][pmu-outputs] - H5 source
+- [SafetyHub 150][safetyhub] - H6, H7 source
+- [Recovery Systems / Winch][recovery] - H1 (winch portion) destination
+- [Air Compressor][air-compressor] - H6 destination
 
 [wire-routing]: index.md
 [firewall-ingress]: 02-firewall-ingress.md
