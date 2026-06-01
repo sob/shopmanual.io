@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-31
+**Last Updated:** 2026-06-01
 
-**Total Open Items:** 46
+**Total Open Items:** 49
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -44,6 +44,8 @@ Items needed before installation begins but not system-critical.
 | AMOT T-Handle Mounting Location   | Select dash mounting position for Midwest Control 30-144-TTL-BH-3 (reachable belted, away from accidental contact) | [Runaway Protection][runaway-protection] | High     |
 | AMOT Cable Firewall Grommet       | Assign dedicated firewall grommet for AMOT push-pull cable pass-through (must not share with other cables) | [Runaway Protection][runaway-protection] | High     |
 | Catch Can Mounting Bracket Point  | Select engine bracketry attachment point for Mishimoto MMOCC-UB universal bracket                  | [Runaway Protection][runaway-protection] | High     |
+| Brake Line (caliper side)         | Hybrid spec'd: 3/16" copper-nickel hardline (armored, routed inside frame rail) + DOT braided flex at axles. Order hardline + inverted-flare fittings (1/2-20 IF at MC) + spring gravel-guard armor | [Brake Booster][brake-booster] | High |
+| Brake Proportioning Valve         | Select adjustable proportioning valve for the rear disc circuit (iBooster has no integral proportioning); size on assembly | [Brake Booster][brake-booster] | High |
 
 ---
 
@@ -78,6 +80,7 @@ Items that improve the design but don't block installation.
 | Programming Button Storage             | Hidden but accessible location (under dash or in trunk) for PBS-I fob-learn and 4-digit-PIN emergency bypass | [Keyless Ignition][keyless]          | Medium   |
 | PBS-I Quiescent Current                | Measure or vendor-confirm standby draw to add to START battery parasitic budget  | [Keyless Ignition][keyless]          | Medium   |
 | PBS-I Feature Programming Defaults     | Confirm shipped Feature Programming defaults are acceptable before install (no DIP/jumper menu on PBS-I) | [Keyless Ignition][keyless]          | Medium   |
+| Axle Brake Flex Hose Length            | DOT (FMVSS 106) braided-stainless extended-length flex at each axle — length blocked on axle + suspension selection (Section 10); size to full droop, do not cut until ride height fixed | [Brake Booster][brake-booster] | Medium   |
 
 ---
 
@@ -233,12 +236,12 @@ Items completed since last update.
 | Priority         | Count  |
 | :--------------- | :----- |
 | 🔴 Critical      | 0      |
-| High             | 13     |
-| 📋 Medium        | 18     |
+| High             | 15     |
+| 📋 Medium        | 19     |
 | 📝 Low           | 2      |
 | 🔍 Verify        | 1      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **46** |
+| **TOTAL**        | **49** |
 
 ## Related Documentation
 
@@ -280,6 +283,7 @@ Items completed since last update.
 [pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
+[brake-booster]: ../02-engine-systems/02-brake-booster.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [firewall-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
 [harness-inventory]: ../01-power-systems/07-wire-routing/03-harness-inventory.md
