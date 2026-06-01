@@ -194,6 +194,7 @@ nav:
       - 6.3 - Speakers: jeep_lj/06-audio-systems/03-speakers.md
       - 6.4 - Subwoofer: jeep_lj/06-audio-systems/04-subwoofer.md
       - 6.5 - LED Controller: jeep_lj/06-audio-systems/05-led-controller.md
+      - 6.6 - Bluetooth Tuning: jeep_lj/06-audio-systems/06-bluetooth-tuning.md
     - Communications:
       - jeep_lj/07-communication-systems/index.md
       - 7.1 - GMRS Radio: jeep_lj/07-communication-systems/01-gmrs-radio.md

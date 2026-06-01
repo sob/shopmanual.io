@@ -12,7 +12,7 @@ AUX-side circuit breakers split into **two banks**:
 1. **Battery-side bank** (3 CBs at AUX battery+ in passenger rear wheel well, within 7" per code)
 2. **Firewall-side bank** (2 CBs at [Firewall CONSTANT Bus][constant-bus] in cabin)
 
-All Mechanical Products Series 17 (except Fusion Amp on Blue Sea 187).
+All Mechanical Products Series 17 (except audio amp on Blue Sea 187).
 
 ## Battery-Side CBs (Passenger Rear Wheel Well)
 
@@ -22,7 +22,7 @@ Mounted inline on a bracket within 7" of AUX battery+ terminal. Protect the thre
 | :----------------------------------- | :----------------------------------------------- | :----: | :--------- | :---------------------------------------------------------------------- | :-------------------- | :----------------------------- |
 | **Forward Feed (to Firewall Bus)**   | Mechanical Products<br/>([174-S2-300-2][mp-300]) |  300A  | Manual     | AUX battery+<br/>└→ 300A CB<br/>&nbsp;&nbsp;&nbsp;└→ Firewall CONSTANT Bus | ~152A combined max (SP + BODY PDU) | 197% of combined load (Fusion relocated to direct AUX feed) |
 | **SafetyHub 150 (Recovery)**         | Mechanical Products<br/>([174-S2-150-2][mp-150]) |  150A  | Manual     | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150        | ~100A (ARB 90A + Winch Trigger 10A) | 150% of max load (future-proofed) |
-| **Fusion Apollo Amp**                | Blue Sea<br/>([187-100A][bs-100])                |  100A  | Manual     | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ Fusion MS-AP61800 (under rear seat) | 78A max | 128% of max load — relocated from firewall bank when amp moved under rear seat |
+| **JL Audio MV800/8i Amp**            | Blue Sea<br/>([187-100A][bs-100])                |  100A  | Manual     | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ JL Audio MV800/8i (under rear seat) | 80A max (fuse-limited) | 125% of fuse rating — wire protection (4 AWG short run); amp's 80A internal fuse is primary trip path |
 
 ## Firewall-Side CBs (Co-located with Firewall CONSTANT Bus)
 
@@ -34,7 +34,7 @@ Mounted within 7" of [Firewall CONSTANT Bus][constant-bus]. Protect each downstr
 | **BODY PDU**                 | Mechanical Products<br/>([174-S2-100-2][mp-100]) |  100A  | Manual     | Firewall CONSTANT Bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU             | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load (future expansion) |
 
 !!! info "Wire Sizing for CB Protection"
-Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (now carries only SP+BODY, ~152A max; 2/0 retained for upgrade headroom). Firewall-side outputs use 2 AWG (130A @ 20°C) for SwitchPros and BODY PDU. Fusion uses 4 AWG (95A @ 20°C) for the short ~3-4 ft run from AUX battery to under-seat amp location.
+Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (now carries only SP+BODY, ~152A max; 2/0 retained for upgrade headroom). Firewall-side outputs use 2 AWG (130A @ 20°C) for SwitchPros and BODY PDU. Audio amp uses 4 AWG (95A @ 20°C, JL Audio minimum spec) for the short ~3-4 ft run from AUX battery to under-seat amp location.
 
 **Mechanical Products Series 17 (4 units):**
 
@@ -46,7 +46,7 @@ Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (
 - Standards: Marine-rated (SAE J1171, ABYC E-11, UL1500, IP67, MIL-STD-202)
 - Mounting: 2 at passenger rear wheel well (battery side: 300A + 150A), 2 at firewall (bus side: 150A SP + 100A BODY)
 
-**Blue Sea 187-Series (1 unit - Fusion Amp):**
+**Blue Sea 187-Series (1 unit - Audio Amp):**
 
 - Type: Surface mount
 - Reset: Manual
@@ -58,7 +58,7 @@ Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (
 
 **Space Requirements:**
 
-- **Battery-side bracket:** 3 CBs stacked (300A + 150A + 100A Fusion) — ~10" × 2" (~20 sq in) on wheel well bracket
+- **Battery-side bracket:** 3 CBs stacked (300A + 150A + 100A audio amp) — ~10" × 2" (~20 sq in) on wheel well bracket
 - **Firewall-side cluster:** 2 CBs in a row with wiring clearance — ~7" × 4" (~28 sq in) near bus
 
 ## Related Documentation
@@ -68,7 +68,7 @@ Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (
 - [SwitchPros][switchpros] - Load details for SwitchPros circuit
 - [SafetyHub 150][safetyhub] - Load details for SafetyHub circuit (ARB compressor, winch trigger)
 - [BODY PDU][body-rtmr] - Load details for BODY PDU circuit
-- [Fusion Apollo Amp][audio] - Load details for amplifier circuit
+- [JL Audio MV800/8i Amp][audio] - Load details for amplifier circuit
 
 [mp-300]: https://www.waytekwire.com/item/49081/
 [mp-150]: https://www.waytekwire.com/item/49079/

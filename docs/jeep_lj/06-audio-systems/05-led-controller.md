@@ -63,9 +63,9 @@ RGB LED controller for speaker lighting and footwell pods, with WiFi app and rot
 | :------------------ | :------- | :---------------------- |
 | Front Speakers (2x) | ~1A      | M6-650X-S-GmTi-i        |
 | Rear Speakers (2x)  | ~1A      | M6-650VEX-Mb-S-GmTi-i   |
-| Subwoofer (1x)      | ~1A      | M7-12IB-S-GmTi-i-4      |
+| Subwoofers (2x)     | ~2A      | M6-8IB-S-GmTi-i-4 (one tap per sub) |
 | Footwell Pods (4x)  | ~1A      | LED4Life RGBW           |
-| **Total**           | **~5A**  | Well under 30A capacity |
+| **Total**           | **~6A**  | Well under 30A capacity |
 
 ## Wiring
 

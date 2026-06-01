@@ -107,7 +107,7 @@ All wire runs require appropriate protection based on location and environment:
 | **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 300A master CB       | Heavy feed through cabin trunk - routing TBD    |
 | **Bus → SwitchPros**                   | 2 AWG      | ~2 ft    | TO SwitchPros power module                 | Via 150A CB                                     |
 | **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
-| **Bus → Fusion Apollo Amp**            | 4 AWG      | ~3 ft    | TO Fusion amp (behind dash radio)          | Via 100A CB                                     |
+| **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 100A CB at AUX battery (not via firewall bus) |
 | **SwitchPros Ground Bus**              | 1 AWG      | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
 | **SwitchPros control cable**           | Multi-pin  | ~5 ft    | TO SwitchPros panel on dash                | Standard SwitchPros cable                       |
 | **SwitchPros outputs (12 circuits)**   | Various    | TBD      | TO various loads (front/cabin/rear/roof)   | Mostly short forward fan-out from firewall      |

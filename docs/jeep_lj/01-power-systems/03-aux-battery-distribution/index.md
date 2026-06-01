@@ -13,7 +13,7 @@ The AUX battery ([Dakota Lithium 135Ah LiFePO4][batteries]) in the passenger rea
 2. **Direct charging input** → BCDC Alpha 50 output (no CB - charging path)
 3. **Inline 300A CB** → 2/0 AWG forward feed → [Firewall CONSTANT Bus][constant-bus] (SwitchPros, BODY PDU)
 4. **Inline 150A CB** → 2 AWG short feed → [SafetyHub 150][aux-safetyhub] (local in rear wheel well)
-5. **Inline 100A CB** → 4 AWG short feed → [Fusion Apollo Amp][audio] (mounted under rear seat)
+5. **Inline 100A CB** → 4 AWG short feed → [JL Audio MV800/8i Amp][audio] (mounted under rear seat)
 
 !!! info "Two-Stage Distribution Architecture"
 The AUX battery has **no local CONSTANT bus** — protected feeds run from inline CBs at the battery to two distribution points: the firewall CONSTANT bus (most loads) and SafetyHub (local). This places distribution near the loads, minimizes the cabin trunk to a single heavy cable, and keeps the rear wheel well compartment uncluttered.
@@ -30,7 +30,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | [BCDC Alpha 50 output][bcdc]         | Local (rear wheel well)           | 4 AWG      | Short    | 50A                 | Negligible      | None (charging)          |
 | [Firewall CONSTANT Bus][constant-bus] | Firewall (cabin side, passenger) | 2/0 AWG    | ~13 ft   | ~152A max           | 1.3% @ 20°C     | 300A CB at battery (<7") |
 | [SafetyHub 150][aux-safetyhub]       | Local (rear wheel well)           | 2 AWG      | ~2 ft    | ~100A max           | <0.5% @ 20°C    | 150A CB at battery (<7") |
-| [Fusion Apollo Amp][audio]           | Under rear seat                   | 4 AWG      | ~3-4 ft  | 78A max             | <0.5% @ 20°C    | 100A CB at battery (<7") |
+| [JL Audio MV800/8i Amp][audio]       | Under rear seat                   | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 20°C    | 100A CB at battery (<7") |
 | [Winch][recovery]                    | Front bumper                      | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9-7.9% @ 20°C | [None][winch-protection] |
 
 ## AUX battery Negative Terminal (5 connections)
@@ -39,7 +39,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | :------------------------------- | :--------------------- | :--------- | :------- | :------------------ | :------------ |
 | Rear Frame Rail                  | Local (chassis)        | 2/0 AWG    | ~3 ft    | 654A peak           | <0.1V @ 20°C  |
 | [BCDC Alpha 50][bcdc]            | Local                  | 4 AWG      | Short    | 50A                 | Negligible    |
-| [Fusion Apollo Amp][audio]       | Under rear seat        | 4 AWG      | ~3-4 ft  | 78A max             | <0.5% @ 30°C  |
+| [JL Audio MV800/8i Amp][audio]   | Under rear seat        | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 30°C  |
 | [START Battery][starter-battery] | Driver rear wheel well | 1/0 AWG    | 5-6 ft   | 75A max             | <0.05V @ 20°C |
 | [Winch][recovery]                | Front bumper           | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9-7.9% @ 20°C |
 

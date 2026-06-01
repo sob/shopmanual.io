@@ -53,7 +53,7 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Stereo Systems
 
-- **[Audio Systems](06-audio-systems/index.md)** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
+- **[Audio Systems](06-audio-systems/index.md)** - Fusion head unit, JL Audio MV800/8i 8-channel amp, JL Audio speakers and subwoofers
 
 ### Communications
 
@@ -97,7 +97,7 @@ Complete replacement of factory TIPM with modular power distribution:
 
 - **[Lighting Control](05-control-interfaces/02-switchpros-sp1200.md):** SwitchPros SP-1200 for offroad and auxiliary lighting
 - **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
-- **[Audio System](06-audio-systems/index.md):** Fusion Apollo 6-channel amp, JL Audio marine speakers with RGB LED
+- **[Audio System](06-audio-systems/index.md):** JL Audio MV800/8i 8-channel amp w/ DSP, JL Audio marine speakers and 2× 8" subs with RGB LED
 - **[Communication](07-communication-systems/index.md):** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
 - **[Recovery & Air](08-exterior-systems/index.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
