@@ -50,7 +50,7 @@ tags:
 
 **Main Power Source:** START battery+ direct connection (see [START Battery Distribution][starter-battery] for wire specs)
 
-**Control Solenoid:** Cole Hersee 24213 (85A continuous-duty)
+**Control Solenoid:** Cole Hersee 24213 (200A continuous-duty)[^ch-24213]
 
 **Safety Interlock:** PBS-I keyless ignition module sources the crank signal (60A PURPLE START output). Brake interlock and RFID authorization are inside the PBS-I. A single external SPST WAIT-gate relay blocks cranking while the Cummins WAIT-to-Start lamp is on (cold-start grid heater preheat). See [Keyless Ignition][keyless-ignition] for the full architecture.
 
@@ -62,9 +62,9 @@ tags:
 | :-------------------- | :------------------------------ | :-------------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
 | Main Power            | START battery+                  | Starter solenoid battery post     | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
 | Solenoid Power Tap    | START battery post              | Cole Hersee 24213 input           | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Start Signal (cabin)  | PBS-I PURPLE START output       | WAIT-gate relay COM (NC input)    | 14 AWG     | ~1.6A    | PBS-I output rated 60A but only Cole Hersee coil downstream      |
-| Gated Start (firewall)| WAIT-gate relay NC contact      | Firewall pin TBD → Cole Hersee coil+ | 16 AWG  | ~1.6A    | Open while WAIT-to-Start lamp on; closed otherwise               |
-| Solenoid Coil Ground  | Cole Hersee 24213 coil-         | Engine bay ground bus             | 16 AWG     | ~1.6A    | ~3 ft                                                            |
+| Start Signal (cabin)  | PBS-I PURPLE START output       | WAIT-gate relay COM (NC input)    | 14 AWG     | ~0.69A   | PBS-I output rated 60A but only Cole Hersee coil downstream[^ch-24213] |
+| Gated Start (firewall)| WAIT-gate relay NC contact      | Firewall Pin 15 → Cole Hersee coil+ | 16 AWG  | ~0.69A   | Open while WAIT-to-Start lamp on; closed otherwise               |
+| Solenoid Coil Ground  | Cole Hersee 24213 coil-         | Engine bay ground bus             | 16 AWG     | ~0.69A   | ~3 ft                                                            |
 | Solenoid Output       | Cole Hersee 24213 output        | Starter solenoid switch post      | 10 AWG     | 30-75A   | ~2 ft                                                            |
 | Ground Return         | Starter case                    | Engine block → START battery-     | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
 
@@ -80,7 +80,7 @@ PBS-I (cabin) authenticates fob → asserts PINK IGN (ECM powers up) and PURPLE 
 WAIT-gate relay (NC): closed if WAIT lamp off → start signal passes through
                        open  if WAIT lamp on  → wait for grid heater to finish
             ↓
-PBS-I PURPLE START → Firewall pin → Cole Hersee 24213 coil → Ground
+PBS-I PURPLE START → Firewall Pin 15 → Cole Hersee 24213 coil → Ground
             ↓
 Cole Hersee main contacts close
             ↓

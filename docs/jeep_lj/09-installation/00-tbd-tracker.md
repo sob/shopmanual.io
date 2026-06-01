@@ -7,9 +7,9 @@ hide:
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
-**Last Updated:** 2026-05-31
+**Last Updated:** 2026-06-01
 
-**Total Open Items:** 46
+**Total Open Items:** 48
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -36,7 +36,7 @@ Items needed before installation begins but not system-critical.
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
 | PBS-I Kit Order                   | Order Digital Guard Dawg PBS-I kit (ICM, 2 iTag fobs, Start Button + 36" harness, Programming Button, Bypass Card) | [Keyless Ignition][keyless]   | High     |
 | WAIT-Gate Relay Part              | Select SPST 30A automotive relay, NC contacts in start path (e.g. Bosch 0332019150 or Hella 4RA 003 510-04) | [Keyless Ignition][keyless]   | High     |
-| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on ignition outbound wire to ECM Pin 41 per Cummins R2.8 install manual (doc 0042728) | [Keyless Ignition][keyless]   | High     |
+| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on ignition outbound wire to ECM Pin 41 per Cummins R2.8 install manual (confirm doc/page — see "Cummins R2.8 Install Manual Doc #" verification item) | [Keyless Ignition][keyless]   | High     |
 | PBS-I Module Mounting Location    | Cabin under-dash position; module ~5.5"×3"×1.25"; away from heat and water (do NOT engine-bay mount) | [Keyless Ignition][keyless]   | High     |
 | Start Button Mounting Location    | Dash position within easy reach of driver (button + 36" harness included in PBS-I kit) | [Keyless Ignition][keyless]   | High     |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
@@ -99,6 +99,8 @@ Items that are estimated and need actual product specs to confirm.
 | Item                | Description                                                                                     | File                       | Action Needed      |
 | :------------------ | :---------------------------------------------------------------------------------------------- | :------------------------- | :----------------- |
 | Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
+| ECM Pin 35 WAIT Polarity | WAIT-gate relay logic assumes ECM Pin 35 is **active-low** (sinks to ground when WAIT lamp on). HDX doc flags this same signal "active high" pending bench check. Gate logic inverts if wrong. Bench-verify on vehicle before committing gate wiring. | [Keyless Ignition][keyless] | Bench-verify polarity |
+| Cummins R2.8 Install Manual Doc # | Keyless doc cited "document 0042728" for WAIT topology + 5A ECM-fuse spec; Runaway/Grid-Heater docs cite Repower Install Guide **5504137** / flyer 5410825. Numbers don't match — confirm the correct document and page for the cited specs. | [Keyless Ignition][keyless] | Confirm source doc/page |
 
 ---
 
@@ -236,9 +238,9 @@ Items completed since last update.
 | High             | 13     |
 | 📋 Medium        | 18     |
 | 📝 Low           | 2      |
-| 🔍 Verify        | 1      |
+| 🔍 Verify        | 3      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **46** |
+| **TOTAL**        | **48** |
 
 ## Related Documentation
 

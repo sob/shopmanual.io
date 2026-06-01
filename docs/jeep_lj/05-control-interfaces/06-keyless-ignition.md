@@ -42,8 +42,8 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 | Specification | Value |
 | :------------ | :---- |
 | Type | RFID push-button start, self-contained |
-| Onboard Relays | 4× 60A (IGN, START, ACC1 drops during crank, ACC2 stays on during crank) |
-| Inrush Capacity | 300A |
+| Onboard Relays | 4× 60A[^pbs-i-specs] (IGN, START, ACC1 drops during crank, ACC2 stays on during crank) |
+| Inrush Capacity | 300A[^pbs-i-specs] |
 | Supply Voltage | 12V DC |
 | Detection Range | ~10 ft (iTag fob) |
 | Auto-arm | 60 sec after fob leaves range |
@@ -56,7 +56,7 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 
 Single SPST automotive relay with normally-closed contacts. Blocks PBS-I's START output from reaching the Cole Hersee coil while the Cummins WAIT-to-Start lamp is illuminated.
 
-The Cummins R2.8 ECM uses a **sink-circuit lamp topology** (per Cummins R2.8 install manual, document 0042728): keyswitch +12V → lamp → ECM Pin 35 (yellow) → ECM internal sink to ground when condition is active. The WAIT signal at Pin 35 is therefore **active LOW** (~0V when WAIT lamp on, ~+12V when WAIT lamp off).
+The Cummins R2.8 ECM uses a **sink-circuit lamp topology**: keyswitch +12V → lamp → ECM Pin 35 (yellow) → ECM internal sink to ground when condition is active. The WAIT signal at Pin 35 is therefore **active LOW** (~0V when WAIT lamp on, ~+12V when WAIT lamp off).[^wait-polarity]
 
 | Specification | Value |
 | :------------ | :---- |
@@ -108,7 +108,7 @@ Unchanged from existing starter design. See [Starter System][starter].
 | :--- | :------- | :----- | :---------- | :---- |
 | RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby (TBD verify) |
 | BLACK | Chassis Ground | Cabin ground bus | PBS-I module | 14 AWG |
-| PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin) | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse per Cummins spec |
+| PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin), Stud 1 | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse[^ecm-fuse] |
 | PURPLE | Starter Out (60A) | PBS-I module | WAIT-gate relay common (NC input) | Cranks while button held |
 | PINK/BLK | Accessory 1 (60A) | PBS-I module | **[Reserve]** | Drops during crank |
 | BROWN | Accessory 2 (60A) | PBS-I module | **[Reserve]** | Stays on during crank |
@@ -144,8 +144,8 @@ Two PBS-I outputs need to cross the firewall from cabin (PBS-I location) to engi
 
 | Signal | Direction | Approximate Current | Notes |
 | :----- | :-------- | :------------------ | :---- |
-| Ignition signal (outbound from cabin bus bar) | Cabin → EB | ~5A typical (ECM + PMU Pin 7) | 14 AWG; feeds ECM Pin 41 (black, via **5A inline fuse** per Cummins spec) and PMU Pin 7 |
-| WAIT-gated PURPLE | Cabin → EB | ~1.6A (Cole Hersee coil) | 16 AWG sufficient; drives Cole Hersee 24213 coil+ during crank only |
+| Ignition signal (outbound from cabin bus bar) | Cabin → EB (HDP24 Pin 12) | ~5A typical (ECM + PMU Pin 7) | 14 AWG; feeds ECM Pin 41 (black, via **5A inline fuse**[^ecm-fuse]) and PMU Pin 7 |
+| WAIT-gated PURPLE | Cabin → EB (HDP24 Pin 15) | ~0.69A (Cole Hersee coil)[^ch-coil] | 16 AWG sufficient; drives Cole Hersee 24213 coil+ during crank only |
 
 See [Firewall Ingress][firewall-ingress] for pin assignments.
 
@@ -165,9 +165,10 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 ## Outstanding Items
 
+- [ ] **Bench-verify ECM Pin 35 (WAIT-to-Start) polarity is active-low before committing WAIT-gate relay wiring** — the entire gate logic inverts if Pin 35 is not active-low (relay would block cranking when WAIT is *off* and pass it when *on*). Mirrors the [HDX WAIT/EX][hdx-control] bench-verify item; see [^wait-polarity]
 - [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
 - [ ] Select WAIT-gate relay part (SPST 30A automotive, NC contacts used in start path)
-- [ ] Add 5A inline fuse on ignition outbound wire to ECM Pin 41 (per Cummins R2.8 install manual)
+- [ ] Add 5A inline fuse on ignition outbound wire to ECM Pin 41 (per Cummins R2.8 install manual — confirm exact document/page, see [^ecm-fuse])
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
@@ -182,8 +183,17 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 - [Grid Heater System][grid-heater] - R2.8 grid heater duty cycle (3-5 sec typical)
 - [Firewall Ingress][firewall-ingress] - PBS-I pin assignments
 
+[^pbs-i-specs]: Onboard relay ratings (4× 60A), 300A inrush capacity, and kit contents per the Digital Guard Dawg PBS-I install manual ([PBS-I Manual PDF][pbs-i-manual]) and product page ([Digital Guard Dawg PBS-I][pbs-i]).
+
+[^ch-coil]: Cole Hersee 24213 coil draw ~0.69A (17.5 Ω @ 12V) per the Littelfuse datasheet — see the `[^ch-24213]` footnote in [Starter System][starter]. Supersedes the earlier unsourced "~1.6A" figure that appeared in pre-merge drafts.
+
+[^ecm-fuse]: 5A inline fuse on the ignition feed to ECM Pin 41 is specified by the Cummins R2.8 install manual. ⚠️ The exact Cummins document/page is **unconfirmed**: earlier drafts cited "document 0042728," but the R2.8 Repower Installation Guide is documented elsewhere in this build as **5504137** (see [Runaway Protection][runaway-protection]) and the spec flyer as 5410825 — these do not match. Confirm the source document and page before final fuse placement. Tracked in [TBD Tracker][tbd-tracker].
+
+[^wait-polarity]: ⚠️ VERIFY BEFORE WIRING. The sink-circuit topology and **active-low** WAIT-to-Start behavior at ECM Pin 35 are attributed to the Cummins R2.8 install manual (cited as "document 0042728" in pre-merge drafts — this number is **not corroborated** and conflicts with the R2.8 Repower Installation Guide number 5504137 used elsewhere in this build). The [HDX Control][hdx-control] doc independently flags this same Pin 35 signal's polarity for bench verification (HDX input is documented "active high"). Because the WAIT-gate relay logic depends entirely on Pin 35 being active-low, confirm polarity on the vehicle (or against the verified Cummins document/page) before committing the gate wiring. Tracked in [TBD Tracker][tbd-tracker].
+
 [pbs-i]: https://www.digitalguarddawg.com/keyless-ignition/automotive/pbs-i
 [pbs-i-manual]: https://cdn.shopify.com/s/files/1/0896/8005/2530/files/PBS-I-Manual.pdf
+[tbd-tracker]: ../09-installation/00-tbd-tracker.md
 [starter]: ../02-engine-systems/01-starter.md
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
