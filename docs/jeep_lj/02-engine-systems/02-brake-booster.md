@@ -21,7 +21,7 @@ tags:
 
 **Honda OEM Part Numbers:** `46680-T3Z-A00` (booster module), `01469-TWA-A58` (MC/reservoir kit); MC mfr # `46100-TWA-A550-M1`[^donor-year]
 
-[^donor-year]: Part numbers **confirmed against the secured donor** — eBay listing #397546491129 (offer accepted 2026-05-30), OE/OEM: `46680-T3Z-A00` + `01469-TWA-A58`, MC mfr # `46100-TWA-A550-M1`, brand Honda, made in Japan. This is the first-party reference of record; the booster is the Bosch **Gen 2** unit (EVcreate lists the Honda Accord under Gen 2; Back Bay Customs adapter is Honda-Accord-iBooster-only, vendor 2026-05-30). **Model year is intentionally not asserted:** the listing states no year and the `T3Z` booster code does not map cleanly to a single Accord Hybrid generation in public catalogs — and it no longer matters, since the physical part (not a year-based catalog lookup) is now the fitment reference. The seller's own note ("eBay compatibility chart is not always correct… contact local dealer with your VIN") reinforces not relying on a catalog year. Supersedes the earlier "2017-2022 / 2018-2022" estimates. Verified 2026-05-30.
+[^donor-year]: Part numbers confirmed against the secured donor — eBay listing #397546491129 (offer accepted 2026-05-30): OE/OEM `46680-T3Z-A00` + `01469-TWA-A58`, MC mfr # `46100-TWA-A550-M1`, Honda, made in Japan. Booster is the Bosch **Gen 2** unit (EVcreate lists the Honda Accord under Gen 2; Back Bay adapter is Honda-Accord-only). Model year not asserted — the listing states none, and the physical part (not a catalog-year lookup) is the fitment reference. Verified 2026-05-30.
 
 **Master Cylinder:** Wilwood 260-15542 Tandem Compact — **1.00" bore** (sized to TJ Rubicon front calipers; see Master Cylinder section)
 
@@ -41,16 +41,16 @@ tags:
 
 ## Overview
 
-Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing. The Honda variant also ships with a factory **remote-mounted** reservoir (Honda solved the angled-reservoir issue at the OEM level) — moot for this build since the MC + reservoir are discarded in favor of the Wilwood ecosystem, but useful context.
+Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing.
 
-The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master directly to the iBooster, eliminating the angled-reservoir problem on a vertical firewall and putting the brake hydraulics on Wilwood's remote-reservoir ecosystem. (MC bore is pending recalculation — see the Master Cylinder section.)
+The factory master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master (260-15542, 1.00" bore) directly to the iBooster — solving the vertical-firewall reservoir-angle problem and putting the hydraulics on Wilwood's remote-reservoir ecosystem.
 
 **Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
 
-- Wilwood 260-15542 Tandem Compact **is compatible** with the adapter. (Note: 260-15542 is the **1.00"** bore unit; the MC bore is now pending recalculation — see the Master Cylinder section.)
-- The adapter is designed for the **Honda Accord iBooster only**, *not* the Tesla variant. This build uses the Honda Accord Hybrid donor, so it matches.
+- Wilwood 260-15542 Tandem Compact is compatible with the adapter.
+- The adapter fits the **Honda Accord iBooster only**, not the Tesla variant — this build's donor matches.
 - The 2× remote Wilwood reservoirs are fine with the adapter.
-- The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted with the **80mm dimension vertical**. Back Bay offers a separate adapter for an 80mm-horizontal orientation, but it is **out of stock** as of this writing — design around the 80mm-vertical orientation.
+- The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted **80mm vertical**. Back Bay's 80mm-horizontal adapter is out of stock — design around 80mm-vertical.
 
 ## Specifications
 
@@ -61,18 +61,17 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 
 ### Master Cylinder
 
-!!! success "✅ Bore resolved — 1.00\" (Wilwood 260-15542)"
-    Hold lifted (2026-05-30). With the brake hardware now known — **TJ Rubicon front calipers** (2.595" single piston) and **rear disc**, targeting a **standard/light pedal feel** — the hydraulics size to a **1.00" bore**, which is Wilwood **260-15542**.[^mc-bore] Three independent drivers agree: (1) the factory TJ master cylinder is a 1.00" bore that Mopar engineered specifically around these front calipers; (2) a smaller bore gives lighter pedal effort (a 1.125" bore would make it heavier — the wrong direction for the requested feel); (3) 1.00" = 260-15542, **the exact part Back Bay confirmed the adapter against** — no re-confirmation needed. The 1.125" (260-15541) only wins for high-volume multi-piston big-brake calipers, which this build does not use. **OK to order the 260-15542.**
+Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers and the exact part Back Bay confirmed the adapter against. Ready to order.[^mc-bore]
 
-- **Bore:** **1.00" — Wilwood 260-15542** (factory-matched to TJ Rubicon front calipers)[^mc-bore]
-- **Stroke:** 1.100" (260-15542)[^mc-stroke]
-- **Outlets:** Tandem (independent front/rear circuits); outlet thread **1/2-20 IF** (confirmed)[^mc-ports]
-- **Reservoir/Inlet Ports:** 2× (one per circuit, remote feed) — thread TBD with final bore selection[^mc-ports]
+- **Bore:** 1.00" — Wilwood 260-15542[^mc-bore]
+- **Stroke:** 1.10"[^mc-stroke]
+- **Outlets:** tandem (independent front/rear); thread **1/2-20 IF**[^mc-ports]
+- **Reservoir/inlet ports:** remote feed; thread is an in-hand check, not a datasheet lookup[^mc-ports]
 
-[^ibooster-torque]: Honda does not publish a Gen 2 iBooster-specific firewall-mount torque, but the booster mounts on **M8** studs (confirmed M8 by [EVcreate's iBooster install guide](https://www.evcreate.com/installing-the-ibooster/)), and Honda's published **power-brake-booster mounting-nut** torque is consistently **~115 in-lb / 13 Nm** across Accord generations (e.g. 115 in-lb on 2003-2007, 110 in-lb on 6th-gen). Corrected from the earlier unsourced 16.5 Nm estimate to the sourced **13 Nm** — also the conservative direction into the firewall + cabin-side backing plate. Do **not** confuse with the Bosch **16 Nm M12×1 brake-line** nut spec (a different fastener). Sources: [TorqueSpec Database — Accord 2003-2007](https://torque-spec-database.com/honda-accord-2003-2007/) (Power Brake Booster Mounting Nuts 115 in-lb); EVcreate (M8 confirmation). Verified 2026-05-30.
-[^mc-bore]: **Bore sizing (2026-05-30).** Wilwood [260-15542-BK](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) = **1.00" bore**; the 1.125" Tandem Compact is **260-15541** (different part). Selected 1.00" from the brake hardware: **front = TJ Rubicon calipers**, 2.595" single piston ≈ 5.29 sq in each, ~10.6 sq in front total; **rear = disc** (build runs front + rear disc); target **standard/light pedal effort**. Rationale: (1) the factory TJ master cylinder is itself a 1.00" bore that Mopar matched to these front calipers ([TJ community](https://www.jeepforum.com/threads/tj-brake-master-cylinder-upgrade.340389/): the 1" bore is "designed to work with booster force into a piston size of 5.22 sq in per side"); (2) at 1.00" bore × 1.10" stroke (0.86 cu in/circuit), worst-case caliper fill leaves ~50% stroke headroom even with rear discs; (3) smaller bore → higher line pressure per unit pedal force → lighter effort, matching the requested feel (1.125" would raise effort/shorten travel — only warranted for high-volume multi-piston big-brake calipers, not used here). 1.125"/260-15541 would also require re-confirming adapter fitment with Back Bay; 1.00"/260-15542 is the part they already confirmed. Pedal ratio (TJ auto pedal) should still be bench-measured on assembly as a **geometry/travel check** (confirm MC stroke headroom + iBooster input-rod travel), but it does not affect the bore — all three drivers favor 1.00" independently. Pedal *feel* itself is a drive-and-decide outcome with the parts now ordered, not a bench-tuned one. Supersedes the earlier "260-15542 = 1-1/8\"" error.
-[^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** — matches (checked 2026-05-30).
-[^mc-ports]: **Outlets confirmed 1/2-20 IF** per Wilwood's [260-15542-BK page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) (fitting options: outlet 1 = 3/8-24 IF or 1/2-20 IF; outlet 2 = 3/8-24 IF or 9/16-18 IF). This corrects the earlier "11/16-20" outlet claim, which conflated the **flexline adapter** thread (the 220-12993 inlet adapter is 11/16-20) with the MC's native outlet. With the bore now fixed at **260-15542**, confirm the **inlet/reservoir** thread against the Wilwood datasheet for that part before ordering reservoir feed fittings (Wilwood's product page lists an inlet size but not a clean thread spec). Outlet verified 2026-05-30.
+[^ibooster-torque]: M8 studs (confirmed by [EVcreate](https://www.evcreate.com/installing-the-ibooster/)); Honda's power-brake-booster mounting-nut torque is **~115 in-lb / 13 Nm** across Accord generations ([TorqueSpec Database — Accord 2003-2007](https://torque-spec-database.com/honda-accord-2003-2007/)). Honda publishes no Gen 2 iBooster-specific figure. Not to be confused with the Bosch 16 Nm M12×1 brake-line nut. Verified 2026-05-30.
+[^mc-bore]: Wilwood [260-15542-BK](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) = **1.00" bore** (the 1.125" Tandem Compact is 260-15541). Sized to the brake hardware: TJ Rubicon front calipers (2.595" piston, ~5.29 sq in each) + rear disc, targeting standard/light pedal effort. The factory TJ master is itself a 1.00" bore Mopar matched to these calipers ([TJ community](https://www.jeepforum.com/threads/tj-brake-master-cylinder-upgrade.340389/)); at 1.00" × 1.10" stroke (0.86 cu in/circuit) worst-case caliper fill leaves ~50% stroke headroom. A 1.125" bore would raise pedal effort and only benefits high-volume multi-piston calipers (not used here). 1.00"/260-15542 is also the part Back Bay confirmed the adapter against. Pedal ratio is a bench geometry/travel check on assembly, not a bore input. Checked 2026-05-30.
+[^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** (checked 2026-05-30).
+[^mc-ports]: Outlets **1/2-20 IF** per Wilwood's [260-15542-BK page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) (outlet 1: 3/8-24 IF or 1/2-20 IF; outlet 2: 3/8-24 IF or 9/16-18 IF). The 260-15542 is an integral-reservoir unit and Wilwood's datasheet leaves the inlet thread blank, so the reservoir-feed thread is verified on the part in hand. Back Bay confirmed the remote reservoirs work with the adapter (2026-05-30); the 220-12993 flexline is the kit described to them. Checked 2026-06-01.
 
 ### Brake Hardware (downstream — MC bore design inputs)
 
@@ -81,7 +80,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 - **Pedal:** 03-06 TJ/LJ auto pedal (ratio bench-measured on assembly)
 - These set the MC bore selection — see the Master Cylinder section and [^mc-bore].
 
-[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). Rear is disc (build runs front + rear disc). The front calipers are the dominant input to the MC bore calc ([^mc-bore]); the rear disc volume is within the 1.00" bore's stroke headroom. Rear-disc setup **confirmed** (seller, 2026-05-31): factory TJ rear disc with PowerStop drilled & slotted rotors — this validates the rear-disc assumption the bore was sized against. The drilled/slotted rotors are a friction-surface upgrade and do not change caliper piston area, so the MC bore basis is unchanged; still confirm actual rear caliper piston area when finalizing fittings.
+[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). The front calipers dominate the MC bore calc; the rear disc volume fits within the 1.00" bore's stroke headroom. Rear-disc setup confirmed (seller, 2026-05-31): factory TJ rear disc + PowerStop drilled & slotted rotors (a friction-surface upgrade — no change to caliper piston area). Confirm actual rear caliper piston area when finalizing fittings.
 
 ### Plumbing
 
@@ -94,7 +93,7 @@ The factory Tesla/Honda master cylinder is discarded. The Back Bay Customs adapt
 - **Hardline → flex transition:** bulkhead fittings at each axle.
 - **Proportioning:** the iBooster has no integral proportioning valve. Front disc + rear disc warrants an **adjustable proportioning valve** on the rear circuit (plus residual-pressure valves if needed); size on assembly. TBD.
 
-**Alternative considered — full -3 AN PTFE braided throughout (MC to calipers):** common on non-street comp rigs and field-repairable with reusable ends + unions, but not chosen as the baseline for a street-registered LJ on two counts: (1) FMVSS 106 certification attaches to the finished hose *assembly*, so DIY bulk-hose builds with reusable ends are not certified for road use — DOT-legal use means pre-made certified (crimped) assemblies, which removes the trail-repair advantage;[^fmvss106] (2) the braid hides the PTFE liner, so internal abrasion/degradation can't be visually inspected, and the bare braid abrades adjacent components. The hybrid keeps inspectable hardline for the long runs and isolates flex (and its failure points) to the axles.
+**Alternative considered — full -3 AN PTFE braided throughout:** field-repairable and common on non-street comp rigs, but not chosen for a street LJ — FMVSS 106 certification attaches to the finished assembly (DIY bulk-hose builds aren't road-certified) and the braid hides the liner from inspection.[^fmvss106] The hybrid keeps inspectable hardline on the long runs and isolates flex to the axles.
 
 [^brakeline-material]: Copper-nickel (NiCopp / Cunifer / cupronickel) brake tubing is DOT-approved for hydraulic brake systems and has been in OE use since the 1970s (Volvo, Audi, Porsche). Strength comparable to steel, far better corrosion resistance, and bends ~58% easier than steel. Off-road trade-off: softer than steel, so less puncture-resistant — mitigate with spring armor. Sources: [AGS NiCopp](https://www.agscompany.com/products/domestic-nicopp-nickel-copper-brake-line), [BrakeConnect Cunifer](https://www.brakeconnect.com/cunifer-brake-line). Checked 2026-06-01.
 [^brakeline-armor]: Stainless spring "gravel guard" / brake-line armor slips over 3/16" hardline (install before flaring) to deflect rock and debris strikes; route lines inside the frame rail since underbody lines are the most exposed to rock hazard. Sources: [4LifetimeLines gravel guard](https://4lifetimelines.com/products/ltgg316-8), [Eastwood brakeline armor](https://www.eastwood.com/3-16-stainless-steel-brakeline-armor-3ft.html). Checked 2026-06-01.
@@ -293,9 +292,9 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [evcreate-wiring]: https://www.evcreate.com/wiring-the-ibooster/
 [evcreate-install]: https://www.evcreate.com/installing-the-ibooster/
 [evcreate-donors]: https://www.evcreate.com/ibooster-donor-vehicles/
-[^bbc-firewall]: Back Bay Customs (adapter maker, Adam), email to owner 2026-05-30. First vendor-confirmed firewall bolt pattern; supersedes the earlier unsourced "72×72mm" estimate introduced in PR #12, which the original backing-plate DXF was cut to.
+[^bbc-firewall]: Back Bay Customs (adapter maker, Adam), email 2026-05-30. Vendor-confirmed firewall bolt pattern (60×80mm); the original backing-plate DXF was cut to an earlier unsourced 72×72mm estimate and needs the redesign noted above.
 
-[^body-neck]: ~62mm body-neck (firewall pass-through) is now **corroborated by two independent sources**: Back Bay Customs (adapter vendor, 2026-05-30) and independent retrofit measurements of the Gen 2 Accord iBooster reported by the [Bosch iBooster retrofit community](https://nastyz28.com/threads/ibooster-retrofit.343058/) / [EVcreate](https://www.evcreate.com/installing-the-ibooster/) (62mm firewall center bore, ~6mm protrusion). Honda does not publish this dimension (it is not a serviceable spec), so it remains a measured rather than datasheet figure. **Still confirm on the secured donor before final firewall cut:** the backing-plate bore is 64mm, leaving only ~2mm radial clearance over a 62mm neck. Checked 2026-05-30.
+[^body-neck]: ~62mm body-neck (firewall pass-through), corroborated by Back Bay Customs (vendor, 2026-05-30) and Gen 2 Accord iBooster retrofit measurements ([retrofit community](https://nastyz28.com/threads/ibooster-retrofit.343058/) / [EVcreate](https://www.evcreate.com/installing-the-ibooster/): 62mm center bore, ~6mm protrusion). Honda publishes no figure — measured, not datasheet. Confirm on the donor before the final firewall cut: the backing-plate bore is 64mm, ~2mm radial clearance over a 62mm neck. Checked 2026-05-30.
 
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
