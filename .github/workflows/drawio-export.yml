@@ -26,6 +26,11 @@ jobs:
           format: adoc
           transparent: false
           output: export
+          # Render PNGs at 3x pixel density (~288 DPI) so diagram
+          # lines and text stay crisp when zoomed or on hi-DPI displays.
+          scale: 3
+          # Small breathing room around the diagram edges.
+          border: 10
 
       - name: Get author and committer info from HEAD commit
         uses: rlespinasse/git-commit-data-action@v1
