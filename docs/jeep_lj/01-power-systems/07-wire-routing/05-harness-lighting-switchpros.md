@@ -14,7 +14,7 @@ Workbench specs for the SwitchPros lighting harnesses: **H4** SwitchPros Front B
 
 *Top-down tub map of the lighting harnesses. Diagram source: `Jeep LJ Tub Map.drawio` (page "Lighting & SwitchPros"); the image is regenerated from the draw.io file on each export.*
 
-**Reading this sheet:** SwitchPros loads arrive on the controller's own 2-pin Delphi pigtails — match those supplied colors rather than re-coloring. PMU outputs and grounds follow the [Wire Color Convention][color-convention] (ground = black; signal = builder's choice). Protection standards by location are in [Wire Protection Standards][wire-routing]; system-wide context is in the [Harness Inventory][harness-inventory] overview.
+**Reading this sheet:** SwitchPros loads arrive on the controller's own 2-pin Delphi pigtails — match those supplied colors rather than re-coloring. PMU outputs and grounds follow the [Wire Color Convention][color-convention] (ground = black; signal = builder's choice). These are small-wire lighting bundles, so split loom is fine — use a braided sleeve with a tracer if you'd rather color-code the cabin-trunk pull ([Protective Sleeve & Tracers][sleeve-convention]). Other protection standards by location are in [Wire Protection Standards][wire-routing]; system-wide context is in the [Harness Inventory][harness-inventory] overview.
 
 ---
 
@@ -106,6 +106,7 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 [harness-inventory]: 03-harness-inventory.md
 [color-convention]: 03-harness-inventory.md#wire-color-convention
+[sleeve-convention]: 03-harness-inventory.md#sleeve-convention
 [power-build]: 04-harness-power-distribution.md
 [controls-build]: 06-harness-controls-recovery-drivetrain.md
 [wire-routing]: index.md

@@ -13,7 +13,8 @@ All wire runs require appropriate protection based on location and environment:
 
 | Method              | Application                                 | Products                                        |
 | :------------------ | :------------------------------------------ | :---------------------------------------------- |
-| **Split Loom**      | General protection, bundling multiple wires | 1/4" to 1" diameter, slit for easy installation |
+| **Braided Sleeve (expandable)** | Preferred wrap for power runs and cabin/trunk bundles | PET expandable braid sized to bundle OD; plain or with a tracer stripe for harness ID — see [Protective Sleeve & Tracers][sleeve-convention] |
+| **Split Loom**      | General protection, bundling multiple wires; short/branchy small-wire runs | 1/4" to 1" diameter, slit for easy installation |
 | **Heat Sleeve**     | Engine bay, exhaust proximity               | Fiberglass sleeve rated 500°F+, 1/2" to 1"      |
 | **Abrasion Sleeve** | Frame rail contact, sharp edges             | Braided nylon or polyester                      |
 | **P-Clamps**        | Securing runs to frame/body                 | Rubber-lined, stainless steel                   |
@@ -213,6 +214,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 [power-build]: 04-harness-power-distribution.md
 [lighting-build]: 05-harness-lighting-switchpros.md
 [controls-build]: 06-harness-controls-recovery-drivetrain.md
+[sleeve-convention]: 03-harness-inventory.md#sleeve-convention
 
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md

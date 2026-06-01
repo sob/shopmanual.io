@@ -63,7 +63,24 @@ Colors on the build sheets follow this convention. Power and ground colors are u
 | Vendor-supplied harness | **Per vendor pigtail** | SwitchPros (Delphi), ARB, CH4X4, Kilduff/ZF ship their own colors — match the supplied pigtail |
 | Signal / trigger / output (non-vendor) | **Builder's choice** | Choose a consistent scheme and record it |
 
-For protective wrap/loom, heat sleeve, abrasion sleeve, and P-clamp standards by location, see [Wire Protection Standards][wire-routing].
+For protective wrap/loom, heat sleeve, abrasion sleeve, and P-clamp standards by location, see [Wire Protection Standards][wire-routing]. This build wraps power runs in braided sleeve with per-harness tracers — see [Protective Sleeve & Tracers](#sleeve-convention).
+
+## Protective Sleeve & Tracers {#sleeve-convention}
+
+Wrap preference for this build:
+
+- **Power runs use braided expandable sleeve** (PET, e.g. Techflex Flexo PET) over the full length, sized to the bundle OD. Braided sleeve is abrasion-resistant, flexes around the sill / trans-tunnel path, and lets you fan branches out without cutting the wrap.
+- **Tracers identify each power trunk.** Braided sleeve is sold plain or with a contrasting **tracer stripe** woven in. A per-harness tracer color makes bundles identifiable where several run together (e.g. in the cabin trunk). Suggested scheme — builder's choice, adjust to taste:
+
+| Harness | Sleeve | Suggested tracer | Carries |
+|:--------|:-------|:-----------------|:--------|
+| **H1** Passenger Rear Power Trunk | Red braided | Black | AUX forward feed + winch power/ground |
+| **H2** START Engine Bay Trunk | Red braided | Yellow | Alternator, starter, PMU feed |
+| **H3** BCDC Cross-Cab | Red braided | Green | BCDC input + cross-ground reference |
+| **H6** ARB Compressor (motor pair) | Red braided | Blue | 2× 6 AWG compressor motor cables |
+
+- **Heat sleeve still applies** where any run enters the engine bay within ~12" of exhaust — over the braided sleeve as needed.
+- **Split loom** remains fine for the small-wire signal/lighting bundles (H4, H5, H7, H9) and for short, branchy, or frequently-accessed runs where braided sleeve is awkward; use a braided sleeve with a tracer instead if you prefer to color-code those too. H8 ships as a factory harness (no added wrap needed beyond loom through the tunnel).
 
 ---
 
@@ -173,7 +190,7 @@ The **cabin trunk** (trans tunnel / sill, firewall ↔ rear wheel wells) carries
 
 **Trans tunnel rearward (H5 + CT4 + ARB signal):** ~14 conductors of small wire (14–18 AWG)
 
-**Suggested trunk wrap:** 1.5"–2" split loom or wrapped harness sleeve per side. P-clamp every 12–18".
+**Suggested trunk wrap:** 1.5"–2" braided expandable sleeve (preferred for the power runs) or split loom per side, tracer-coded per harness so the bundles stay identifiable — see [Protective Sleeve & Tracers](#sleeve-convention). P-clamp every 12–18".
 
 ---
 
@@ -198,7 +215,7 @@ These were noted inline on the build sheets; consolidated here for review:
 - [ ] Confirm SwitchPros front locker wire routing (front axle access)
 - [ ] Decide if ARB control wires merge into H5 (recommended) or run as H6 signal pair
 - [ ] Source connector + lug + heat shrink BOM totals
-- [ ] Determine harness sleeve / wrap material (split loom vs braided sleeving) per zone
+- [ ] Confirm braided-sleeve sizes and per-harness tracer colors for the power runs (see [Protective Sleeve & Tracers](#sleeve-convention)); decide split loom vs braided for the small-wire bundles per zone
 - [ ] Define and record the signal-wire color scheme for non-vendor signal/trigger wires (power = red, ground = black are fixed; see [Wire Color Convention](#wire-color-convention))
 
 ## Related Documentation
