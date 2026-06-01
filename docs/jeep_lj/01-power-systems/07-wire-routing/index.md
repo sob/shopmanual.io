@@ -194,7 +194,10 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 ## Related Documentation
 
-- [Harness Inventory][harness-inventory] - Fabricatable harness BOMs (H1–H9) with connectors, bundle interference assessment, and optimization notes
+- [Harness Inventory][harness-inventory] - Fabricatable harness overview (H1–H9): summary, harness map, bundle interference assessment, and optimization notes
+- [Build Sheet — Power Distribution][power-build] - H1, H2, H3 with tub-map diagram
+- [Build Sheet — Lighting & SwitchPros][lighting-build] - H4, H5 with tub-map diagram
+- [Build Sheet — Controls, Recovery & Drivetrain][controls-build] - H6–H9 with tub-map diagram
 - [Grounding Architecture][grounding] - Complete grounding system design
 - [START battery Distribution][starter-battery] - Driver rear wheel well power
 - [AUX battery Distribution][aux-battery] - Passenger rear wheel well power
@@ -207,6 +210,9 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 - [Recovery Systems][recovery-systems] - Winch installation and wiring
 
 [harness-inventory]: 03-harness-inventory.md
+[power-build]: 04-harness-power-distribution.md
+[lighting-build]: 05-harness-lighting-switchpros.md
+[controls-build]: 06-harness-controls-recovery-drivetrain.md
 
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md
