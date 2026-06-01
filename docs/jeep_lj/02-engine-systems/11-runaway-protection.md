@@ -16,7 +16,7 @@ Layered, fully mechanical defense against diesel runaway on the Cummins R2.8. Th
 1. **Prevention** - Mishimoto baffled catch can in the crankcase ventilation path blocks the most common runaway initiator (oil ingestion via PCV).
 2. **Termination** - AMOT 4261M intake air shutoff valve in the pre-turbo intake tract, manually actuated by a dash-mounted push-pull cable with locking T-handle.
 
-This is a deliberate departure from Cummins' Repower default (no air shutoff) because the R2.8 PMU/ECM kill path documented in [Keyless Ignition][keyless] cannot stop a runaway that is sustained by oil or hydrocarbon vapor — the ECM can be cutting injector commands and the engine will still run. The AMOT cable is the only kill path that works under all failure modes, including total ECM/PMU failure.
+This is a deliberate departure from Cummins' Repower default (no air shutoff) because the ECM kill path documented in [Keyless Ignition][keyless] (normal shutdown drops the PBS-I PINK IGN output, cutting ECM power — the PMU is not in this path) cannot stop a runaway that is sustained by oil or hydrocarbon vapor — the ECM can be cutting injector commands and the engine will still run. The AMOT cable is the only kill path that works under all failure modes, including total electrical/ECM failure.
 
 ## Components
 
@@ -120,7 +120,7 @@ This is intentional — it forces a diagnosis step and prevents an unattended re
 | Worn turbo shaft seal feeding oil to intake | Catch can (prevention) |
 | External fuel/oil/propane vapor inhaled by intake | AMOT cable          |
 | ECM stuck commanding injector duty cycle  | AMOT cable               |
-| PMU fault preventing OUT24 deassertion    | AMOT cable               |
+| PBS-I/ECM fails to cut injection (PINK IGN stuck, ECM keeps running) | AMOT cable     |
 | Total electrical failure                  | AMOT cable (mechanical)  |
 | Driver incapacitated                      | Not covered (no auto-trip in this design) |
 

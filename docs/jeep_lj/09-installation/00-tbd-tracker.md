@@ -9,7 +9,7 @@ hide:
 
 **Last Updated:** 2026-06-01
 
-**Total Open Items:** 49
+**Total Open Items:** 50
 
 > Count reflects the priority sections below. The Critical-Spec Verification Audit is a separate validation log (its open on-arrival/on-vehicle checks are tracked via GitHub issue [#29][i29]); items already marked ✅ Resolved are not counted.
 
@@ -36,7 +36,7 @@ Items needed before installation begins but not system-critical.
 | Turbolamik Aux: P/N               | Confirm aux output channel + pinout configured for P/N (start interlock) | [Transmission][transmission]   | High     |
 | PBS-I Kit Order                   | Order Digital Guard Dawg PBS-I kit (ICM, 2 iTag fobs, Start Button + 36" harness, Programming Button, Bypass Card) | [Keyless Ignition][keyless]   | High     |
 | WAIT-Gate Relay Part              | Select SPST 30A automotive relay, NC contacts in start path (e.g. Bosch 0332019150 or Hella 4RA 003 510-04) | [Keyless Ignition][keyless]   | High     |
-| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on ignition outbound wire to ECM Pin 41 per Cummins R2.8 install manual (doc 0042728) | [Keyless Ignition][keyless]   | High     |
+| ECM Pin 41 Inline Fuse            | Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins Repower R2.8 Installation Guide 5504137 (Fig 2, item 3) | [Keyless Ignition][keyless]   | High     |
 | PBS-I Module Mounting Location    | Cabin under-dash position; module ~5.5"×3"×1.25"; away from heat and water (do NOT engine-bay mount) | [Keyless Ignition][keyless]   | High     |
 | Start Button Mounting Location    | Dash position within easy reach of driver (button + 36" harness included in PBS-I kit) | [Keyless Ignition][keyless]   | High     |
 | R2.8 Turbo Inlet OD               | Measure turbo inlet tube outside diameter to confirm AMOT 4261M-02 (2.8" body) fitment and select intake-side adapter | [Runaway Protection][runaway-protection] | High     |
@@ -102,6 +102,7 @@ Items that are estimated and need actual product specs to confirm.
 | Item                | Description                                                                                     | File                       | Action Needed      |
 | :------------------ | :---------------------------------------------------------------------------------------------- | :------------------------- | :----------------- |
 | Grid Heater Current | Design value 80A - verify via element resistance measurement during installation (~0.15Ω @ 12V) | [Grid Heater][grid-heater] | Measure resistance |
+| ECM Lamp-Driver Sink Margin | WAIT-gate relay coil (~150 mA) sits in parallel with the dash WAIT lamp on ECM Pin 35's sink driver. Confirm total sink (lamp ~500 mA + coil) is within the ECM lamp-driver rating; if marginal, drive relay from the lamp keyswitch side or use a higher-impedance relay. (Pin 35 active-low polarity itself is confirmed — see Recently Resolved.) | [Keyless Ignition][keyless] | Verify at install |
 
 ---
 
@@ -134,6 +135,7 @@ Items completed since last update.
 
 | Item                          | Resolution                                                                                                                    | Date       |
 | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------- | :--------- |
+| ECM Pin 35 WAIT Polarity & Cummins Wiring Doc # | **Confirmed via Cummins Repower R2.8 CM2220 R101B Installation Guide (Bulletin 5504137, Jan 2018), §2 pp. 2-19→2-24.** Circuit Wiring table: Wait-To-Start = Yellow, ECM pin 35; Keyswitch = Pink, pin 41 with 5A inline fuse. Guide states lamps are fed +12V from the keyswitch with the ECM "providing a path to ground via a sink circuit" → Pin 35 is **active-low**, validating the WAIT-gate relay logic (relay taps Pin 35 directly, independent of HDX cluster-input polarity). Full schematic = separate Wiring Diagram Bulletin 5467560 (QSOL). The unverified "document 0042728" reference was removed from the keyless doc. Residual ECM lamp-driver sink-margin check moved to Verification. | 2026-06-01 |
 | Amplifier Selection (MV800/8i) | **Architecture change:** Swapped Fusion Apollo MS-AP61800 (6-ch, 1800W) → **JL Audio MV800/8i** (8-ch, 800W, integrated DSP, part 010-03339-00). 8 channels allow Sub A on Ch 1+2 bridged @ 4Ω (200W RMS, exact match to M6-8IB rating) and Sub B on Ch 3+4 bridged @ 4Ω (200W RMS), with Ch 5-8 driving the 4 cabin speakers @ 75W RMS each. Eliminates series-wired sub compromise. Onboard DSP (TüN software) replaces external crossover/EQ tuning. 80A internal fuse (vs 125A on Fusion). Power feed unchanged: 4 AWG, direct from AUX battery+ via Blue Sea 187-100A CB. | 2026-06-01 |
 | MV800/8i Idle Current & Min Bridged Impedance | Manual (MV800/8i_MAN_071519) confirms: standby current **2.4 mA** (negligible parasitic — no impact on AUX battery budget); minimum impedance **4Ω bridged / 2Ω unbridged**; required cooling clearance **1" (2.5 cm) above shell** when enclosed; manual recommends fuse value of 80A, matching internal fuse. | 2026-06-01 |
 | Amp Tuning Interface (VXi-BTC vs M-DRC-50) | Selected **VXi-BTC** (010-13543-00) only — Bluetooth LE 4.2, 33 ft range, JLid-powered (50 mA from amp's bus, no separate wiring). MV800/8i has single JLid-COMM port — only one accessory at a time; MVi-HUB doesn't add ports (it's for multi-amp networking). M-DRC-50 dash preset selector deferred: head unit already handles volume/source, multi-DSP-preset switching isn't a daily-use need yet, and Bluetooth tuning is lower-friction than crawling under the rear seat for the amp's USB port. | 2026-06-01 |
@@ -239,9 +241,9 @@ Items completed since last update.
 | High             | 15     |
 | 📋 Medium        | 19     |
 | 📝 Low           | 2      |
-| 🔍 Verify        | 1      |
+| 🔍 Verify        | 2      |
 | 🚙 Drivetrain    | 12     |
-| **TOTAL**        | **49** |
+| **TOTAL**        | **50** |
 
 ## Related Documentation
 

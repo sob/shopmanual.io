@@ -19,15 +19,9 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 
 **Module:** Digital Guard Dawg PBS-I (Intelligent Push Button Start)
 
-**Type:** RFID-enabled push-button start/stop with onboard 60A relays for IGN, START, ACC1, ACC2
+**Type:** Self-contained RFID push-button start/stop; onboard 60A relays (IGN, START, ACC1, ACC2)
 
-**Anti-theft:** Built-in dual-mode (passive + active) RFID iTag fob
-
-**Diesel preheat handling:** External SPST WAIT-gate relay gates PURPLE START output through Cummins WAIT-to-Start lamp signal
-
-**Brake interlock:** Built into PBS-I (Accessory Harness Brake input)
-
-**Emergency Bypass:** Built-in 4-digit PIN entered via Programming Button (no hidden toggle)
+**Mounting:** Cabin, under dash (vendor mandate: not in engine bay)
 
 **Product Page:** [Digital Guard Dawg PBS-I][pbs-i]
 
@@ -42,8 +36,8 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 | Specification | Value |
 | :------------ | :---- |
 | Type | RFID push-button start, self-contained |
-| Onboard Relays | 4× 60A (IGN, START, ACC1 drops during crank, ACC2 stays on during crank) |
-| Inrush Capacity | 300A |
+| Onboard Relays | 4× 60A[^pbs-i-specs] (IGN, START, ACC1 drops during crank, ACC2 stays on during crank) |
+| Inrush Capacity | 300A[^pbs-i-specs] |
 | Supply Voltage | 12V DC |
 | Detection Range | ~10 ft (iTag fob) |
 | Auto-arm | 60 sec after fob leaves range |
@@ -56,7 +50,7 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 
 Single SPST automotive relay with normally-closed contacts. Blocks PBS-I's START output from reaching the Cole Hersee coil while the Cummins WAIT-to-Start lamp is illuminated.
 
-The Cummins R2.8 ECM uses a **sink-circuit lamp topology** (per Cummins R2.8 install manual, document 0042728): keyswitch +12V → lamp → ECM Pin 35 (yellow) → ECM internal sink to ground when condition is active. The WAIT signal at Pin 35 is therefore **active LOW** (~0V when WAIT lamp on, ~+12V when WAIT lamp off).
+The Cummins R2.8 ECM uses a **sink-circuit lamp topology**: keyswitch +12V → lamp → ECM Pin 35 (yellow) → ECM internal sink to ground when condition is active. The WAIT signal at Pin 35 is therefore **active LOW** (~0V when WAIT lamp on, ~+12V when WAIT lamp off).[^wait-polarity]
 
 | Specification | Value |
 | :------------ | :---- |
@@ -67,11 +61,6 @@ The Cummins R2.8 ECM uses a **sink-circuit lamp topology** (per Cummins R2.8 ins
 | Contacts | NC; close when WAIT lamp off, open when WAIT lamp on |
 | Mounting | Cabin, adjacent to PBS-I |
 | Suggested Part | Bosch 0332019150 or Hella 4RA 003 510-04 (TBD) |
-
-**Logic:**
-
-- WAIT lamp ON (preheating) → ECM sinks Pin 35 to ground → ~12V across coil → coil energized → NC opens → start chain blocked
-- WAIT lamp OFF (ready or no preheat needed) → Pin 35 floats to ~+12V via lamp → ~0V across coil → coil de-energized → NC closes → start chain passes
 
 ### Cole Hersee 24213 Solenoid
 
@@ -108,7 +97,7 @@ Unchanged from existing starter design. See [Starter System][starter].
 | :--- | :------- | :----- | :---------- | :---- |
 | RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby (TBD verify) |
 | BLACK | Chassis Ground | Cabin ground bus | PBS-I module | 14 AWG |
-| PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin) | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse per Cummins spec |
+| PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin), Stud 1 | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse[^ecm-fuse] |
 | PURPLE | Starter Out (60A) | PBS-I module | WAIT-gate relay common (NC input) | Cranks while button held |
 | PINK/BLK | Accessory 1 (60A) | PBS-I module | **[Reserve]** | Drops during crank |
 | BROWN | Accessory 2 (60A) | PBS-I module | **[Reserve]** | Stays on during crank |
@@ -144,8 +133,8 @@ Two PBS-I outputs need to cross the firewall from cabin (PBS-I location) to engi
 
 | Signal | Direction | Approximate Current | Notes |
 | :----- | :-------- | :------------------ | :---- |
-| Ignition signal (outbound from cabin bus bar) | Cabin → EB | ~5A typical (ECM + PMU Pin 7) | 14 AWG; feeds ECM Pin 41 (black, via **5A inline fuse** per Cummins spec) and PMU Pin 7 |
-| WAIT-gated PURPLE | Cabin → EB | ~1.6A (Cole Hersee coil) | 16 AWG sufficient; drives Cole Hersee 24213 coil+ during crank only |
+| Ignition signal (outbound from cabin bus bar) | Cabin → EB (HDP24 Pin 12) | ~5A typical (ECM + PMU Pin 7) | 14 AWG; feeds ECM Pin 41 (black, via **5A inline fuse**[^ecm-fuse]) and PMU Pin 7 |
+| WAIT-gated PURPLE | Cabin → EB (HDP24 Pin 15) | ~0.69A (Cole Hersee coil)[^ch-coil] | 16 AWG sufficient; drives Cole Hersee 24213 coil+ during crank only |
 
 See [Firewall Ingress][firewall-ingress] for pin assignments.
 
@@ -154,10 +143,8 @@ See [Firewall Ingress][firewall-ingress] for pin assignments.
 Earlier iterations of this design included a discrete engine-running lockout relay and a P/N interlock relay in series with the starter coil. Both were removed in favor of simpler, layered protection:
 
 - **Brake interlock** is built into PBS-I (Accessory Harness Brake input).
-- **Engine-running protection** relies on the starter motor's Bendix overrunning clutch (standard automotive practice for hard-keyed ignition systems) plus the requirement to deliberately press brake + hold the button to crank — accidental restart of a running engine requires two-handed misuse.
-- **P/N interlock** is provided by the 8HP70 + Turbolamik: the transmission cannot be shifted out of Park without brake pressed, and the vehicle will always be in Park at start time. The Turbolamik can additionally inhibit start signal via its P/N aux output if a future build phase requires it (the signal is documented but unused by the keyless system today).
-
-This shifts the build's safety stance from "redundant external interlocks" to "PBS-I + transmission + driver behavior" — appropriate for a single-driver vehicle with a CR diesel and modern automatic.
+- **Engine-running protection** relies on the starter's Bendix overrunning clutch plus the deliberate brake + button-hold required to crank — accidental restart of a running engine takes two-handed misuse.
+- **P/N interlock** is provided by the 8HP70 + Turbolamik: the transmission can't leave Park without brake pressed, and the vehicle is always in Park at start time. The Turbolamik P/N aux output can inhibit the start signal in a future phase if needed (documented, unused today).
 
 ## Diesel Runaway Note
 
@@ -165,9 +152,10 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 ## Outstanding Items
 
+- [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
 - [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
 - [ ] Select WAIT-gate relay part (SPST 30A automotive, NC contacts used in start path)
-- [ ] Add 5A inline fuse on ignition outbound wire to ECM Pin 41 (per Cummins R2.8 install manual)
+- [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
@@ -182,8 +170,17 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 - [Grid Heater System][grid-heater] - R2.8 grid heater duty cycle (3-5 sec typical)
 - [Firewall Ingress][firewall-ingress] - PBS-I pin assignments
 
+[^pbs-i-specs]: Onboard relay ratings (4× 60A), 300A inrush capacity, and kit contents per the Digital Guard Dawg PBS-I install manual ([PBS-I Manual PDF][pbs-i-manual]) and product page ([Digital Guard Dawg PBS-I][pbs-i]).
+
+[^ch-coil]: Cole Hersee 24213 coil draw ~0.69A (17.5 Ω @ 12V) per the Littelfuse datasheet — see the `[^ch-24213]` footnote in [Starter System][starter]. Supersedes the earlier unsourced "~1.6A" figure that appeared in pre-merge drafts.
+
+[^ecm-fuse]: **Confirmed.** Cummins Repower R2.8 CM2220 R101B Installation Guide, Bulletin 5504137 (Jan 2018), §2 *Wiring Harness* (pp. 2-19/2-20): the keyswitch feed to the ECM is **Pink, ECM pin 41**, with a **5 amp inline fuse** (Figure 2, item 3: *"Keyswitch – pink, 5 amp inline fuse"*). The guide requires this *"pink 5 amp wire … provide a minimum of 12 volts in the run position and during engine cranking."* Supersedes the unverified "document 0042728" cited in pre-merge drafts.
+
+[^wait-polarity]: **Confirmed active-low.** Cummins Repower R2.8 CM2220 R101B Installation Guide, Bulletin 5504137 (Jan 2018), §2 *Wiring Harness* / *Engine Indicator Lamps* (pp. 2-19 → 2-24): the Circuit Wiring table lists **Lamp, Wait To Start — Yellow — ECM pin 35**, and the guide states *"The lamp circuits require power from the keyswitch to each lamp, with the ECM providing a path to ground via a sink circuit as engine conditions dictate"* and *"The ECM will enable a grounding path for the warning light to illuminate."* Pin 35 is therefore active-low (ECM sinks to ground when WAIT is active), validating the WAIT-gate relay logic above. The full schematic is the separate **R2.8 CM2220 R101B Wiring Diagram, Bulletin 5467560** (QuickServe Online). Supersedes the unverified "document 0042728" cited in pre-merge drafts. Note: the relay taps ECM Pin 35 directly, so it is governed by this Cummins spec — independent of the HDX *cluster-input* polarity question in [HDX Control][hdx-control].
+
 [pbs-i]: https://www.digitalguarddawg.com/keyless-ignition/automotive/pbs-i
 [pbs-i-manual]: https://cdn.shopify.com/s/files/1/0896/8005/2530/files/PBS-I-Manual.pdf
+[tbd-tracker]: ../09-installation/00-tbd-tracker.md
 [starter]: ../02-engine-systems/01-starter.md
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
