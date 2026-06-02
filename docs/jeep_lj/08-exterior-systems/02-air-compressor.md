@@ -181,14 +181,6 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 ---
 
-## Safety Considerations
-
-!!! warning "Compressor Operation"
-    - Monitor compressor duty cycle during extended use
-    - Allow cooling periods if running continuously for tire inflation
-    - Check air line connections regularly for leaks
-    - Drain moisture from tank/system periodically
-
 ## Outstanding Items
 
 - [ ] Verify ARB CKBLTA12 wiring harness connector pinout for motor 1, motor 2, and control terminals

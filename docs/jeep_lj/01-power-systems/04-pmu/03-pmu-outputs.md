@@ -80,17 +80,8 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 - PMU thermal protection will shut down overloaded outputs
 - Monitor output temperatures during initial testing (PMU displays thermal status)
-- **iBooster thermal design:** Non-adjacent combining (OUT1+10) provides 46A @ 40°C capacity vs 40A peak load = 87% utilization ✓
 - **Non-adjacent combining recommended** for all high-current loads (>30A) to maximize thermal margin
 - **Continuous loads** (HVAC, fans) require more conservative thermal margins than brief peaks
-
-!!! success "Thermal Analysis - iBooster Resolved"
-**iBooster relocated from OUT5+6 (adjacent) to OUT1+10 (non-adjacent)** per ECUMaster PMU24 manual Section 2.13:
-
-    - Non-adjacent 2.8mm terminals @ 40°C: 46A combined capacity (23A each)
-    - iBooster 40A peak: 87% utilization ✓ Excellent thermal margin
-    - Maximum physical separation eliminates adjacent terminal heating concerns
-    - HVAC blower relocated to OUT5 (single output, 87% utilization, unchanged)
 
 **Grounding Architecture:**
 
