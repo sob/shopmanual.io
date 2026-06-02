@@ -47,9 +47,6 @@ The factory master cylinder is discarded. The Back Bay Customs adapter mates a W
 
 **Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
 
-- Wilwood 260-15542 Tandem Compact is compatible with the adapter.
-- The adapter fits the **Honda Accord iBooster only**, not the Tesla variant — this build's donor matches.
-- The 2× remote Wilwood reservoirs are fine with the adapter.
 - The booster's 60×80mm firewall pattern[^bbc-firewall] must be mounted **80mm vertical**. Back Bay's 80mm-horizontal adapter is out of stock — design around 80mm-vertical.
 
 ## Specifications
