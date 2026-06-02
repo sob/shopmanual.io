@@ -76,6 +76,13 @@ markdown_extensions:
 plugins:
   - search
   - autorefs
+  - macros:
+      module_name: tbd_macros
+      on_error_fail: true
+      # Heading anchors use {#id}; remap Jinja comment delimiter so it isn't
+      # mistaken for a comment-open. {{ }} variables are unused elsewhere in docs.
+      j2_comment_start_string: '{##'
+      j2_comment_end_string: '##}'
   - tags:
       tags_file: tags.md
   - print-site:

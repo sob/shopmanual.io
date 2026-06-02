@@ -7,7 +7,11 @@ on:
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
+      - 'tbd_macros.py'
       - '.github/workflows/publish-docs.yml'
+  # Rebuild when TBD issues change, since the tracker is generated from them.
+  issues:
+    types: [opened, closed, reopened, edited, labeled, unlabeled, deleted]
   workflow_dispatch:
 
 concurrency:
@@ -18,6 +22,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  issues: read
 
 jobs:
   deploy:
@@ -33,6 +38,9 @@ jobs:
           python-version: 3.x
       - run: pip install zensical mkdocs-print-site-plugin
       - run: zensical build --clean
+        env:
+          # gh CLI (used by tbd_macros.py) reads this; auto-provided by Actions.
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site

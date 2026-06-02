@@ -13,6 +13,14 @@ hide:
 
 ---
 
+## ⚡ Live from GitHub Issues (prototype)
+
+_Generated at build time from open issues labeled `tbd`. Grouped by priority for this vehicle._
+
+{{ tbds(scope='project', group_by='priority') }}
+
+---
+
 ## 🔴 CRITICAL (Installation Blockers)
 
 Items that prevent build completion or system operation.

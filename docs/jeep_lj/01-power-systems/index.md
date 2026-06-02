@@ -53,3 +53,9 @@ Ground distribution architecture:
 See [Wire Distance Reference][wire-distance] for routing distances and gauge specifications.
 
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md
+
+## Outstanding TBD Items
+
+_Auto-derived from this page's section (`area/power-systems`) — open GitHub issues only._
+
+{{ tbds() }}
