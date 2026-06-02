@@ -54,7 +54,7 @@ START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Grou
 
 **Power Flow:**
 
-1. START battery+ → CONSTANT bus → PMU
+1. START battery+ → 250A inline CB → PMU
 2. Horn button (steering wheel) → PMU In 1 (trigger signal)
 3. PMU Out 18 activated when In 1 closes
 4. PMU Out 18 → PIAA horns (5.4A) → chassis ground (engine bay)
@@ -73,7 +73,7 @@ None - design complete. See [installation checklist][install-checklist] for buil
 ## Related Documentation
 
 - [PMU Outputs][pmu-outputs] - PMU Out 18 circuit and programming
-- [START Battery Distribution][starter-battery-distribution] - CONSTANT bus bar
+- [START Battery Distribution][starter-battery-distribution] - Inline CBs (250A PMU, 80A BCDC)
 - [Firewall Ingress][firewall-ingress] - Horn button trigger wire routing
 
 [piaa-horns]: https://www.piaa.com/product/85115/

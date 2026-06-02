@@ -26,6 +26,10 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 ///
 
+**Product Image:**
+
+![ARB RD116 Air Locker (Dana 44, 30-spline)](../../images/arb-rd116-air-locker.jpg)
+
 ## Specifications
 
 | Spec              | Front Locker          | Rear Locker           |
@@ -44,15 +48,15 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 | Locker | SwitchPros Output | Wire   | Route                                               |
 | ------ | ----------------- | ------ | --------------------------------------------------- |
-| Front  | OUTPUT-17         | 18 AWG | Wheel well → driver frame rail → front axle (~12 ft) |
-| Rear   | OUTPUT-10         | 18 AWG | Wheel well → rear axle (~6 ft)                      |
+| Front  | OUTPUT-17         | 18 AWG | Passenger rear wheel well → front axle (~12 ft, routing TBD) |
+| Rear   | OUTPUT-10         | 18 AWG | Passenger rear wheel well → rear axle (~6 ft)                |
 
 ### Wire Routing
 
-- **Front Locker (OUTPUT-17):** SwitchPros (wheel well) → along driver frame rail → to front axle solenoid (~12 ft)
+- **Front Locker (OUTPUT-17):** SwitchPros (passenger rear wheel well) → along driver frame rail → to front axle solenoid (~12 ft)
   - Wire: 18 AWG (2A load, low-side driver output)
   - Protection: Split loom, P-clamps every 18", secure to frame rail
-- **Rear Locker (OUTPUT-10):** SwitchPros (wheel well) → to rear axle solenoid (~6 ft)
+- **Rear Locker (OUTPUT-10):** SwitchPros (passenger rear wheel well) → to rear axle solenoid (~6 ft)
   - Wire: 18 AWG (2A load)
   - Protection: Split loom where exposed, secure to axle housing
 

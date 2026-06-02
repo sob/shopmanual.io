@@ -22,7 +22,9 @@ tags:
 
 **Mounting:** Engine bay near intake manifold
 
-**Power Source:** START battery+ direct (via fusible link, 40-80A)
+**Power Source:** START battery+ direct (via fusible link, 40-80A) — ⚠️ current unverified[^grid-current]
+
+[^grid-current]: ⚠️ UNVERIFIED. Cummins does not publish a current draw for grid-heater part 5467024 on the R2.8 (spec flyer 5410825 / install guide 5504137 give no amperage); commonly-cited 95-110A figures are for Dodge/Ram 5.9/6.7 heaters, not this part (checked 2026-05-30). The 40-80A / 80A element values are engineering estimates — confirm by element-resistance measurement during install (already tracked as a Verification item).
 
 **Control:** Direct ECM control (pins 46/21)
 

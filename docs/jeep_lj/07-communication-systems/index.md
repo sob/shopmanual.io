@@ -15,11 +15,10 @@ Radio communication and camera systems for vehicle-to-vehicle coordination and s
 | :------------------------- | :------------------ | -----: | :------------------- |
 | [GMRS Radio][gmrs-radio]   | Rugged Radio G1     | 15A TX | PMU OUT6             |
 | [Intercom][intercom]       | Rugged Radio STX    |     2A | PMU OUT20            |
-| [Ham Radio][ham-radio]     | Future              |    15A | PMU OUT12 (reserved) |
 | [Dash Camera][dash-camera] | WolfBox G900 TriPro |     5A | BODY PDU CB39        |
-| [Navigation][navigation]   | Garmin Tread XL     |     2A | SwitchPros OUT-8     |
+| [Navigation][navigation]   | Garmin Tread 2 Overland |     2A | SwitchPros OUT-8     |
 
-**Total System Power:** ~25A peak (radio transmitting + intercom + camera + navigation)
+**Total System Power:** ~24A peak (radio transmitting + intercom + camera + navigation)
 
 ## Signal Flow
 
@@ -54,7 +53,6 @@ None - see individual component pages for specific items.
 
 [gmrs-radio]: 01-gmrs-radio.md
 [intercom]: 02-intercom.md
-[ham-radio]: 03-ham-radio.md
 [dash-camera]: 04-dash-camera.md
 [navigation]: 05-navigation.md
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md

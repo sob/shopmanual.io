@@ -53,7 +53,9 @@ tags:
 
 **Mounting:** Firewall (engine bay side) near PMU
 
-**Torque:** 100-120 in-lb (3/8"-16 studs)
+**Torque:** 140 in-lb (3/8"-16 studs)[^bus-torque]
+
+[^bus-torque]: Blue Sea Systems' published terminal torque for the 2107 PowerBar's **3/8"-16 studs is 140 in-lb**. Corrected from the earlier 100-120 in-lb (that 120 in-lb figure is Blue Sea's spec for 5/16"-18 studs — a smaller stud — so the original value undertorqued these 3/8"-16 studs). Source: [Blue Sea Systems 2107 PowerBar 600A BusBar](https://www.bluesea.com/products/2107/PowerBar_600A_BusBar_-_Eight_3_8in-16_Studs__). Verified 2026-05-30.
 
 **Critical:** Clean metal-to-metal connections - remove paint/rust before installation, apply dielectric grease after assembly
 

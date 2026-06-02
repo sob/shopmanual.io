@@ -35,7 +35,7 @@ tags:
 | Stud/Terminal            | Connection                 | Wire Gauge  | Distance  | Max Current    | Notes                                                   |
 | :----------------------- | :------------------------- | :---------- | :-------- | :------------- | :------------------------------------------------------ |
 | **Stud 1 (5/16")**       | **Chassis Ground (INPUT)** | **4 AWG ✓** | **~2 ft** | **~50A total** | **Primary bus ground - to firewall**                    |
-| Stud 2 (5/16")           | **[Available]**            | -           | -         | -              | Future high-current ground                              |
+| Stud 2 (5/16")           | **\[Available\]**            | -           | -         | -              | Future high-current ground                              |
 | Terminal 1 (#10-24)      | Command Touch CT4          | 14 AWG ✓    | ~3 ft     | <1A            | Steering column controller logic ground                 |
 | Terminal 2 (#10-24)      | WS-51C Wiper Controller    | 16 AWG ✓    | ~2 ft     | ~5A            | Dash wiper control - see [Wiper System][wiper-system]   |
 | Terminal 3 (#10-24)      | BODY PDU                   | 14 AWG ✓    | ~4 ft     | ~3A            | Relay coil/logic ground only (high-side switching)      |
@@ -44,8 +44,8 @@ tags:
 | Terminal 6 (#10-24)      | Fusion MS-RA670 Head Unit  | 14 AWG ✓    | ~2 ft     | ~5A            | Audio head unit - see [Audio System][audio-system]      |
 | Terminal 7 (#10-24)      | MLC-RW LED Controller      | 16 AWG ✓    | ~2 ft     | ~3A            | Audio RGB controller - see [Audio System][audio-system] |
 | Terminal 8 (#10-24)      | WolfBox Camera/Mirror      | 16 AWG ✓    | ~2 ft     | ~5A            | Rearview mirror/camera system                           |
-| Terminal 9 (#10-24)      | **[Available]**            | -           | -         | -              | Future dash electronics                                 |
-| Terminals 10-12 (#10-24) | **[Available]**            | -           | -         | -              | Future expansion (3 terminals)                          |
+| Terminal 9 (#10-24)      | **\[Available\]**            | -           | -         | -              | Future dash electronics                                 |
+| Terminals 10-12 (#10-24) | **\[Available\]**            | -           | -         | -              | Future expansion (3 terminals)                          |
 
 **Utilization:** 9 of 14 used (1 stud + 8 terminals used, 1 stud + 4 terminals available)
 

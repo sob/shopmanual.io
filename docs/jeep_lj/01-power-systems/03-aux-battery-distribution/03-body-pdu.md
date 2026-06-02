@@ -26,7 +26,7 @@ tags:
 
 **Mounting:** Firewall - body side (cabin), passenger side
 
-**Power Source:** CONSTANT power from AUX battery via 2 AWG feed
+**Power Source:** Firewall CONSTANT bus via 100A CB (2 AWG, ~2 ft local — bus is fed from AUX battery through 300A master CB and 2/0 AWG forward feed)
 
 **Ground:** [Firewall Stud Bus][firewall-stud-bus] Terminal 3 (14 AWG) - relay coil/logic reference only
 
@@ -53,9 +53,9 @@ tags:
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                    |
 | CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element    |
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
-| CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on wheel well top                    |
-| CB43        | TRANS ECU               | Winch Control (dash rocker) | 10A  | 18AWG | ~2A                   | -     | Dash rocker + remote parallel control       |
-| CB44        | TRLR LIGHT              | **[Available]**             | -    | -     | -                     | -     | Future expansion                            |
+| CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on rear wheel well top               |
+| CB43        | TRANS ECU               | Winch Control (CH4X4 dual-push) | 10A  | 18AWG | ~3A peak per direction | -    | CH4X4-TOY-D-WINIO dual-momentary push at dash → HDP24 pins 16/17 → contactor; Warn remote parallel at contactor |
+| CB44        | TRLR LIGHT              | **\[Available\]**             | -    | -     | -                     | -     | Future expansion                            |
 
 **Circuit Breaker Utilization:** 7 of 8 used (1 available)
 
@@ -65,12 +65,12 @@ tags:
 | :------------- | :---------------------- | :-------------------- | :------ | :---------- | :------------------------------------- |
 | K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch | Controls CB45 output to driver seat    |
 | K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch | Controls CB42 output to passenger seat |
-| K27            | TRAILER BO STOP         | **[Available]**       | 12V     | -           | Future expansion                       |
-| K30            | TRAILER REAR LEFT       | **[Available]**       | 12V     | -           | Future expansion                       |
-| K31            | TRAILER REAR RIGHT      | **[Available]**       | 12V     | -           | Future expansion                       |
-| K53            | RADIO                   | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K40            | START DISABEL           | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K42            | ENGINE PTO              | **[Available]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K27            | TRAILER BO STOP         | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K30            | TRAILER REAR LEFT       | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K31            | TRAILER REAR RIGHT      | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K53            | RADIO                   | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K40            | START DISABEL           | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K42            | ENGINE PTO              | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
@@ -79,7 +79,7 @@ tags:
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 
 !!! info "Communication Devices"
-G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
+G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
 
 ## Outstanding Items
 
@@ -95,7 +95,7 @@ G1 GMRS Radio, STX Intercom, and Ham Radio are powered from [SafetyHub 150][safe
 
 ## Related Documentation
 
-- [AUX battery Distribution][house-battery] - Power source and circuit breaker (passenger wheel well)
+- [AUX battery Distribution][house-battery] - Power source and circuit breaker (passenger rear wheel well)
 - [Circuit Breakers][circuit-breakers] - 100A CB protection for LR-2 power feed
 - [Dashboard Controls][dashboard] - Physical switch panel layout
 - [Audio Systems][audio] - Fusion radio specifications

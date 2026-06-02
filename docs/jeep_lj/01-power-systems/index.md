@@ -11,19 +11,19 @@ The Jeep LJ uses a dual-battery electrical system with intelligent power distrib
 
 ### Power Generation & Storage
 
-- **START battery:** Odyssey PC1500 (850 CCA, 68 Ah) in driver wheel well - critical systems only
-- **AUX battery:** Dakota Lithium 135Ah LiFePO4 (108 Ah usable, heated BMS) in passenger wheel well - accessories, winch (jump start capable)
+- **START battery:** Odyssey PC1500 (850 CCA, 68 Ah) in driver rear wheel well - critical systems only
+- **AUX battery:** Dakota Lithium 135Ah LiFePO4 (108 Ah usable, heated BMS) in passenger rear wheel well - accessories, winch (jump start capable)
 - **RedArc BCDC Alpha 50:** DC-DC charger/isolator - batteries operate independently when isolated
-- **270A Alternator:** Charges START battery, BCDC charges AUX battery from front
+- **270A Alternator:** Charges START battery, BCDC charges AUX battery
 
 See [Power Generation](01-power-generation/index.md) for complete details on batteries, alternator, BCDC, and solar charging.
 
 ### Power Distribution
 
-Both batteries use CONSTANT bus bars for organized distribution with individual circuit breaker protection:
+Each battery uses a different distribution strategy:
 
-- **[START battery Distribution](02-starter-battery-distribution/index.md):** CONSTANT bus (Blue Sea 2107, 600A) feeds PMU, SafetyHub, BCDC
-- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** CONSTANT bus (Blue Sea 2104, 225A) feeds SwitchPros, BODY PDU
+- **[START battery Distribution](02-starter-battery-distribution/index.md):** Inline CBs at battery (250A for PMU, 80A for BCDC input) — no local bus, direct stacked terminal lugs
+- **[AUX battery Distribution](03-aux-battery-distribution/index.md):** Inline CBs at battery (300A master forward feed + 150A SafetyHub local + 100A audio amp local) → [Firewall CONSTANT Bus](03-aux-battery-distribution/02-constant-bus.md) (Blue Sea 2105, 250A) feeds SwitchPros and BODY PDU at the firewall cluster; JL Audio MV800/8i amp fed direct from AUX battery via 100A CB
 
 The system replaces the factory TIPM with modular programmable controllers:
 
@@ -48,7 +48,7 @@ Ground distribution architecture:
 | **Loom** | Split loom or braided sleeving | Abrasion protection where routed against metal |
 | **Grommets** | Rubber with sealant | All firewall and body penetrations |
 | **Temp derating** | 60°C for engine bay | Ampacity calculations must use derated values |
-| **Temp derating** | 30°C for cabin/wheel well | Standard ampacity values acceptable |
+| **Temp derating** | 30°C for cabin/rear wheel well | Standard ampacity values acceptable |
 
 See [Wire Distance Reference][wire-distance] for routing distances and gauge specifications.
 

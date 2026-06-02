@@ -8,9 +8,9 @@ Organized by installation order for efficient build workflow.
 
 ### Battery Compartments
 
-- [ ] Install Odyssey PC1500 (START) in driver wheel well with access panel
-- [ ] Build enclosed compartment in passenger wheel well with access panel (AUX)
-- [ ] Install Barnes 4WD battery box (Group 24) in passenger wheel well - powdercoat before install
+- [ ] Install Odyssey PC1500 (START) in driver rear wheel well with access panel
+- [ ] Build enclosed compartment in passenger rear wheel well with access panel (AUX)
+- [ ] Install Barnes 4WD battery box (Group 24) in passenger rear wheel well - powdercoat before install
 - [ ] Install Dakota Lithium 135Ah LiFePO4 (AUX) in Barnes battery box
 
 ### Grounding System
@@ -74,7 +74,6 @@ Organized by installation order for efficient build workflow.
 **Radio Grounds (RF Noise Isolation):**
 
 - [ ] Confirm 10 AWG: GMRS Radio ground → START battery- (route through floor/frame, ~8 ft)
-- [ ] Confirm 10 AWG: Ham Radio ground → START battery- (route through floor/frame, ~8 ft)
 - [ ] Confirm 10 AWG: STX Intercom ground → START battery- (route through floor/frame, ~8 ft)
 
 **Testing:**
@@ -83,34 +82,45 @@ Organized by installation order for efficient build workflow.
 - [ ] Verify voltage drop across main power cables under load (<3% at 60°C)
 - [ ] Verify ground resistance: Engine Bay Ground Bus to battery- (<0.1Ω)
 
-### AUX Battery Bus Bars & Circuit Breakers
+### AUX Battery Inline CBs & Firewall CONSTANT Bus
 
-**CONSTANT Bus Bar:**
+**Inline CBs at AUX battery (mount within 7" of battery on wheel well bracket):**
 
-- [ ] Mount CONSTANT bus bar (Blue Sea 2107 PowerBar, 600A) in passenger wheel well
-- [ ] Confirm 1/0 AWG: AUX battery+ → CONSTANT bus (~3 ft)
+- [ ] Mount Mechanical Products 174-S2-300-2 300A CB (forward feed to firewall bus)
+- [ ] Mount Mechanical Products 174-S2-150-2 150A CB (SafetyHub local feed)
+- [ ] Confirm AUX battery+ has 4 stacked ring lugs: Winch (1/0), BCDC output (4 AWG), 300A CB input (2/0), 150A CB input (2 AWG)
 
-**Circuit Breakers (mount within 7" of battery):**
+**Battery-Side Protected Feeds:**
 
-- [ ] Mount Blue Sea 187-150 150A CB (SwitchPros RCR-Force 12)
-- [ ] Mount Blue Sea 187-150 150A CB (SafetyHub 150)
+- [ ] Confirm 2/0 AWG: AUX battery+ → 300A CB → Firewall CONSTANT Bus (~13 ft via cabin trunk)
+- [ ] Confirm 2 AWG: AUX battery+ → 150A CB → SafetyHub 150 (~2 ft local)
+
+**Firewall CONSTANT Bus:**
+
+- [ ] Mount Blue Sea 2105 MaxiBus (250A) on firewall (passenger cabin side, near BODY PDU mounting area)
+- [ ] Confirm 2/0 AWG forward feed terminates at bus input stud
+
+**Firewall-Side CBs (mount within 7" of Firewall CONSTANT Bus):**
+
+- [ ] Mount Mechanical Products 174-S2-150-2 150A CB (SwitchPros)
 - [ ] Mount Mechanical Products 174-S2-100-2 100A CB (BODY PDU)
+- [ ] Mount Blue Sea 187-100A 100A CB (JL Audio MV800/8i Amp) — note this CB is on the battery-side bracket, not at the firewall bus
 
-**CONSTANT Bus Wiring:**
+**Firewall CONSTANT Bus Wiring:**
 
-- [ ] Confirm 2 AWG: CONSTANT bus → 150A CB → SwitchPros RCR-Force 12 (~2 ft)
-- [ ] Confirm 2 AWG: CONSTANT bus → 150A CB → SafetyHub 150 (~2 ft)
-- [ ] Confirm 2 AWG: CONSTANT bus → 100A CB → BODY PDU (~12 ft through firewall)
+- [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 150A CB → SwitchPros power module (~2 ft)
+- [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 100A CB → BODY PDU power studs (~2 ft)
+- [ ] Confirm 4 AWG: AUX battery+ → 100A CB → JL Audio MV800/8i Amp (~3-4 ft, under rear seat — direct AUX feed, not via firewall bus)
 
 **Direct AUX Battery Connections (No Circuit Breaker):**
 
 - [ ] Confirm 1/0 AWG: AUX battery+ → Winch positive (13 ft one-way, direct connection per WARN spec)
 - [ ] Confirm 1/0 AWG: AUX battery- → Winch negative (13 ft one-way, matches positive path)
-- [ ] Confirm 4 AWG: AUX battery- → Fusion Apollo amplifier ground (~8-10 ft)
+- [ ] Confirm 4 AWG: AUX battery- → JL Audio MV800/8i amplifier ground (~3-4 ft)
 
 ### BCDC Alpha 50 Installation
 
-- [ ] Mount BCDC in passenger wheel well (water-protected, LED visibility access)
+- [ ] Mount BCDC in passenger rear wheel well (water-protected, LED visibility access)
 - [ ] Confirm 4 AWG: START battery+ → 80A CB → BCDC input (red terminal, M8, ~6 ft)
 - [ ] Confirm 4 AWG: BCDC output (brown terminal, M8) → AUX battery+
 - [ ] Confirm 4 AWG: BCDC negative (black terminal, M8) → AUX battery-
@@ -119,7 +129,7 @@ Organized by installation order for efficient build workflow.
 **Battery Temperature Sensor (REQUIRED for LiFePO4):**
 
 - [ ] Install BCDC temp sensor ring terminal on AUX battery positive terminal bolt
-- [ ] Route sensor cable to BCDC (short run - both in passenger wheel well)
+- [ ] Route sensor cable to BCDC (short run - both in passenger rear wheel well)
 - [ ] Plug sensor into BCDC temperature sensor port (2-pin connector, polarity reversible)
 
 **BCDC Configuration & Testing:**
@@ -145,16 +155,16 @@ Organized by installation order for efficient build workflow.
 
 ### SafetyHub 150 Physical Installation
 
-- [ ] Mount SafetyHub 150 in passenger wheel well (co-located with AUX battery and circuit breakers)
-- [ ] Confirm 2 AWG: CONSTANT bus → 150A CB → SafetyHub input
-- [ ] Verify SafetyHub internal ground bus connected to SwitchPros Ground Bus
+- [ ] Mount SafetyHub 150 in passenger rear wheel well (co-located with AUX battery and inline CBs)
+- [ ] Confirm 2 AWG: AUX battery+ → 150A CB → SafetyHub input (~2 ft local)
+- [ ] Verify SafetyHub internal ground bus connected to chassis ground (rear frame rail)
 
 ### BODY PDU Physical Installation
 
 - [ ] Verify all circuit breakers and relays functional in LR-2 unit
 - [ ] Replace 24V relays (K40, K42, K53) with 12V relays (determine part numbers)
-- [ ] Mount LR-2 on firewall (body side, passenger side)
-- [ ] Confirm 2 AWG: CONSTANT bus → 100A CB → BODY PDU power studs (~12 ft)
+- [ ] Mount LR-2 on firewall (body side, passenger side, near Firewall CONSTANT Bus)
+- [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 100A CB → BODY PDU power studs (~2 ft)
 - [ ] Confirm 14 AWG: BODY PDU ground → Firewall Stud Bus Terminal 3 (relay coil/logic only)
 - [ ] Create custom wiring harnesses to adapt J301-J306 military connectors to civilian loads
 - [ ] Route heated seat dash switches to LR-2 relay control inputs (K21, K22)
@@ -162,9 +172,11 @@ Organized by installation order for efficient build workflow.
 
 ### SwitchPros RCR-Force 12 Physical Installation
 
-- [ ] Mount SwitchPros controller
-- [ ] Confirm 2 AWG: CONSTANT bus → 150A CB → SwitchPros power input
-- [ ] Confirm SwitchPros ground connected to SwitchPros Ground Bus Terminal 1 (14 AWG)
+- [ ] Mount SwitchPros power module on firewall (cabin side, passenger area, next to BODY PDU)
+- [ ] Mount SwitchPros Ground Bus (Blue Sea 2105 MaxiBus) at firewall near power module
+- [ ] Confirm 2 AWG: Firewall CONSTANT Bus → 150A CB → SwitchPros power input (~2 ft)
+- [ ] Confirm 4 AWG: SwitchPros logic ground → chassis ground at firewall (short run)
+- [ ] Mount SwitchPros control panel on dash; order 5 ft control cable (firewall to dash)
 
 **SwitchPros Custom Harness Note:**
 
@@ -199,18 +211,21 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 
 ### Ignition Signal Distribution
 
-- [ ] Confirm 18 AWG: Ignition RUN → Deutsch connector Pin 12 → PMU Pin 7
-- [ ] Confirm ignition signal bus bar splits to: CT4, SwitchPros, Fusion Radio, BCDC
-- [ ] Verify total ignition signal current <500mA for all taps
+- [ ] Confirm 14 AWG: PBS-I PINK IGN (cabin) → Ignition signal bus bar Stud 1
+- [ ] Confirm ignition signal bus bar Stud 2 → Deutsch connector Pin 12 (outbound to engine bay)
+- [ ] Confirm engine-bay junction off Pin 12 → ECM 12V supply + PMU Pin 7
+- [ ] Confirm bus bar terminals split to: CT4, SwitchPros, Fusion Radio, BCDC
+- [ ] Verify total ignition signal current <500mA for all bus bar taps
 
 ### PMU Input Wiring
 
-- [ ] Confirm 18 AWG: Ignition RUN → PMU Pin 7 (dedicated wire, not from bus bar)
+- [ ] Confirm 18 AWG: Ignition RUN (from engine-bay distribution off Pin 12) → PMU Pin 7
 - [ ] Confirm horn button → PMU In 1 (via Deutsch connector Pin 11)
 - [ ] Confirm brake pedal switch → PMU In 2 (via Deutsch connector Pin 13)
-- [ ] Confirm reverse switch → PMU In 3 (AX15 trans switch)
+- [ ] Confirm reverse signal → PMU In 3 (Turbolamik aux output, Reverse gear)
 - [ ] Confirm A/C request → PMU In 9 (via Deutsch connector Pin 14)
 - [ ] Confirm CT4 SW3 (headlight status) → PMU In 7 (tap on engine bay side of connector)
+- [ ] PMU In 4, In 5, In 6, In 8 — Available for future expansion (no current wiring)
 
 ### PMU Output Wiring
 
@@ -230,9 +245,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 **15A Outputs:**
 
 - [ ] Confirm wipers (WS-51C) → OUT11 (15A) - ground: Firewall Stud Bus T2
-- [ ] Confirm Ham Radio → OUT12 (13A) - ground: direct to START battery-
 - [ ] Confirm CT4 → OUT13 (9A, CONSTANT) - ground: Firewall Stud Bus T1
-- [ ] Confirm ADU7 Display → OUT14 (2A) - ground: A-pillar
 - [ ] Confirm winch contactor trigger → OUT15 (1A) - control signal only
 
 **7A Outputs:**
@@ -244,6 +257,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm brake lights → OUT21 (3A) - ground: SwitchPros Ground Bus T4
 - [ ] Confirm reverse lights → OUT22 (5A) - ground: SwitchPros Ground Bus T4
 - [ ] Confirm DRL/parking → OUT23 (2A) - ground: SwitchPros Ground Bus T5
+- [ ] OUT24 — Available for future expansion (no current wiring)
 
 ### PMU CAN Bus Integration
 
@@ -260,7 +274,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm WolfBox camera → CB39 (10A, 16 AWG, CONSTANT)
 - [ ] Confirm driver heated seat → CB45 (15A, 14 AWG) via relay K21 - 5A peak, 2A sustained
 - [ ] Confirm passenger heated seat → CB42 (20A, 14 AWG) via relay K22 - 5A peak, 2A sustained
-- [ ] Confirm cargo lights → CB20 (10A, 16 AWG) - switch on wheel well top
+- [ ] Confirm cargo lights → CB20 (10A, 16 AWG) - switch on rear wheel well top
 - [ ] Confirm winch control → CB43 (10A, 18 AWG) - dash rocker + remote parallel control
 
 **Verification:**
@@ -358,8 +372,8 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [Batteries][batteries] - START (Odyssey PC1500) and AUX (Dakota Lithium 135Ah) specifications
 - [BCDC Alpha 50][bcdc] - DC-DC charger installation and configuration
 - [Solar Charging][solar] - Cascadia 80W panel and overvoltage protection
-- [START Battery Distribution][start-dist] - Driver wheel well connections
-- [AUX Battery Distribution][aux-dist] - Passenger wheel well connections
+- [START Battery Distribution][start-dist] - Driver rear wheel well connections
+- [AUX Battery Distribution][aux-dist] - Passenger rear wheel well connections
 
 **Ground Bus Bars:**
 

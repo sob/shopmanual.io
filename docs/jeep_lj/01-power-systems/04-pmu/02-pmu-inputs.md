@@ -9,15 +9,15 @@ PMU input configuration including digital inputs, analog inputs, CAN bus integra
 
 ## 12V Switched Input (Pin 7)
 
-**Source:** Dedicated 18 AWG wire from ignition switch RUN terminal
+**Source:** Dedicated 18 AWG wire tapped from the ignition signal bus bar (which is fed by PBS-I PINK IGN output — see [Keyless Ignition][keyless-ignition] and [Ignition Signal Distribution][ignition-signal])
 
 **Function:** Provides switched power reference for PMU logic
 
-**Implementation:** Dedicated wire through firewall (Grommet 2) direct to PMU Pin 7 - NOT from ignition signal bus bar
+**Implementation:** Dedicated wire through firewall (Grommet 2) direct to PMU Pin 7
 
 **Load:** ~50mA
 
-See [Ignition Signal Distribution](#ignition-signal-distribution) for complete wiring architecture.
+See [Ignition Signal Distribution][ignition-signal] for complete wiring architecture.
 
 ## Digital Inputs (Trigger Sources)
 
@@ -27,34 +27,29 @@ See [Ignition Signal Distribution](#ignition-signal-distribution) for complete w
 | :------- | :------------------- | :--------------------------- | :---------------------- | :--------------------------------------- |
 | **In 1** | Horn Button          | Steering wheel button        | Out 18 (Horn)           | Normally open, closes when pressed       |
 | **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)   | Normally open, closes when pedal pressed |
-| **In 3** | Reverse Switch       | AX15 trans switch            | Out 22 (Reverse Lights) | Normally open, closes in reverse gear    |
-| **In 4** | **[Available]**      | -                            | -                       | Available for future expansion           |
-| **In 5** | **[Available]**      | -                            | -                       | Available for future expansion           |
-| **In 6** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 3** | Reverse Signal       | Turbolamik aux output (Reverse) | Out 22 (Reverse Lights) | 12V from TCU when 8HP70 in Reverse       |
+| **In 4** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
+| **In 5** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
+| **In 6** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
 | **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 14 (DRL) logic      | 12V when headlights active, disables DRL |
-| **In 8** | **[Available]**      | -                            | -                       | Available for future expansion           |
+| **In 8** | **\[Available\]**      | -                            | -                       | Available for future expansion           |
 | **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
-**Note:** Starter system uses traditional direct control (keyswitch → clutch switch → relay) independent of PMU. See [Starter System][starter].
+**Note:** Keyless ignition is handled entirely by the self-contained Digital Guard Dawg PBS-I module — PMU is not in the keyless logic path. See [Keyless Ignition][keyless-ignition].
 
-[starter]: ../../02-engine-systems/01-starter.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
+[ignition-signal]: ../06-ignition-signal/index.md
 
 ## Analog Inputs
 
 | Input       | Physical Pin | Range | Function                    | Notes                                          |
 | :---------- | :----------- | :---- | :-------------------------- | :--------------------------------------------- |
-| **An 1-4**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
-| **An 5**    | Dedicated    | 0-5V  | Boost Pressure              | 0-5V transducer, displayed on ADU7             |
-| **An 6**    | Dedicated    | 0-5V  | EGT (Exhaust Gas Temp)      | Thermocouple + amplifier, displayed on ADU7    |
-| **An 7**    | Dedicated    | 0-5V  | AUX Battery Voltage         | Voltage divider circuit, displayed on ADU7     |
-| **An 8**    | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
+| **An 1-8**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
 | **An 9-16** | OUT17-24     | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
 
 **Current Configuration:** An 9-16 configured as outputs (OUT17-24). See [PMU Outputs][pmu-outputs] for output assignments.
 
 **J1939 Data:** Engine oil temperature and coolant temperature are monitored via J1939 CAN bus from ECM (no analog inputs needed).
-
-**ADU7 Integration:** Analog inputs An 5-8 feed data to [ADU7 Display][adu7-display] via ECUMaster CAN bus.
 
 ## CAN Bus Integration (J1939)
 
@@ -91,13 +86,13 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 
 ## Ignition Signal Distribution
 
-**PMU Pin 7:** Dedicated 18 AWG wire directly from keyswitch RUN terminal (NOT from ignition signal bus bar)
+**PMU Pin 7:** 18 AWG wire tapped from the engine-bay distribution off HDP24 Pin 12 (which crosses the firewall from the ignition signal bus bar, fed by PBS-I PINK IGN)
 
-**Routing:** Through firewall (Grommet 2) to PMU Pin 7
+**Routing:** Engine bay (firewall Pin 12 junction → PMU Pin 7)
 
-**Purpose:** Critical PMU functions have guaranteed power independent of other devices
+**Purpose:** Shares the same switched supply path as the Cummins ECM 12V — both energize whenever the PBS-I asserts PINK IGN.
 
-**Non-critical devices** (CT4, SwitchPros, radio, BCDC, camera) use shared ignition signal bus bar - see [Ignition Signal][ignition-signal] for details.
+**Non-critical devices** (CT4, SwitchPros, radio, BCDC, camera) tap directly off the cabin-mounted ignition signal bus bar - see [Ignition Signal][ignition-signal] for details.
 
 ## Related Documentation
 
@@ -113,4 +108,3 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 [firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md
 [ignition-signal]: ../06-ignition-signal/index.md
-[adu7-display]: ../../02-engine-systems/10-adu7-display/index.md

@@ -1,0 +1,1520 @@
+<mxfile host="65bd71144e">
+    <diagram id="page-1" name="Power Distribution">
+        <mxGraphModel dx="1058" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1550" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Jeep LJ - Power Distribution" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="Battery trunks, charging cross-cab, winch feed - heavy current paths and direct-battery loads" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="60" width="900" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="rear-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="948" width="320" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="orient-arrow" value="FRONT" style="endArrow=classic;html=1;rounded=0;fontSize=12;fontStyle=1;strokeWidth=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="60" y="200" as="sourcePoint"/>
+                        <mxPoint x="60" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="body-tub" value="" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#e8d8b8;strokeColor=#5a4a2a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="180" width="320" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#d8c89a;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="200" width="300" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood-crease" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;dashed=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="220" as="sourcePoint"/>
+                        <mxPoint x="400" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="grille" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a3a3a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="200" width="280" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="slat1" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="205" as="sourcePoint"/>
+                        <mxPoint x="310" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat2" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="335" y="205" as="sourcePoint"/>
+                        <mxPoint x="335" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat3" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="205" as="sourcePoint"/>
+                        <mxPoint x="360" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat4" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="205" as="sourcePoint"/>
+                        <mxPoint x="440" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat5" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="205" as="sourcePoint"/>
+                        <mxPoint x="465" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat6" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="205" as="sourcePoint"/>
+                        <mxPoint x="490" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="headlight-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="headlight-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="486" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="front-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="158" width="190" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="fairlead" value="" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="166" width="60" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cowl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a89868;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="390" width="304" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="windshield" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8d8e8;fillStyle=hatch;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="252" y="404" width="296" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="door-fl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="460" as="sourcePoint"/>
+                        <mxPoint x="240" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fl-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="700" as="sourcePoint"/>
+                        <mxPoint x="260" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="460" as="sourcePoint"/>
+                        <mxPoint x="560" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="700" as="sourcePoint"/>
+                        <mxPoint x="540" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="710" as="sourcePoint"/>
+                        <mxPoint x="240" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="710" as="sourcePoint"/>
+                        <mxPoint x="560" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="seat-dr" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-pass" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3a2a0a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="468" width="56" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="console" value="" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#6a5a3a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="510" width="50" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-l" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="710" width="70" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-r" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="710" width="70" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fu" value="100A→Fusion" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="493" y="793" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-sh" value="150A→SH" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="840" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bcdc" value="BCDC" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb870;strokeColor=#aa5500;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="492" y="816" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-switchpros" value="SwitchPros" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#d8b8e8;strokeColor=#664488;strokeWidth=2;fontColor=#2a1a3a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="378" y="444" width="70" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-sp" value="150A→SP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="378" y="426" width="70" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-bp" value="100A→BP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="455.5" y="426" width="64.5" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-safetyhub" value="SafetyHub" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb0b0;strokeColor=#aa3333;strokeWidth=2;fontColor=#3a0a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="493" y="860" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-pmu" value="PMU24" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#b8d4f0;strokeColor=#2a5a8a;strokeWidth=2;fontColor=#1a3a5a;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="350" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bodypdu" value="BODY PDU" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#cce4b8;strokeColor=#558833;strokeWidth=2;fontColor=#2a4a1a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="456.5" y="444" width="65" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-rear" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="316" y="724" width="168" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="bench-div-1" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="372" y="685" as="sourcePoint"/>
+                        <mxPoint x="372" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bench-div-2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="428" y="685" as="sourcePoint"/>
+                        <mxPoint x="428" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tailgate" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="244" y="934" width="312" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-aux-fwd" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc2222;strokeWidth=5;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1" target="ctrl-bus2">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="525" y="720" as="sourcePoint"/>
+                        <mxPoint x="540" y="420" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="525" y="715"/>
+                            <mxPoint x="540" y="715"/>
+                            <mxPoint x="540" y="414"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-aux-fwd-lbl" value="&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;HARNESS &lt;/span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;H1&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;1× 2/0 AWG (AUX fwd feed)&lt;br&gt;2× 1/0 AWG (winch)&lt;/font&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontColor=#aa1111;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5f5;strokeColor=#aa1111;spacing=8;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="595" y="620" width="195" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-start-fwd-lbl" value="&lt;font style=&quot;&quot;&gt;&lt;u style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;HARNESS &lt;/span&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;H2&lt;/font&gt;&lt;/u&gt;&lt;br&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 12px;&quot;&gt;3× 2/0 AWG (alt, starter, PMU)&lt;br&gt;3 direct (grid, ECM, iBooster)&lt;/font&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontColor=#aa1111;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5f5;strokeColor=#aa1111;spacing=8;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="620" width="200" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-bcdc-cross" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#2266aa;strokeWidth=4;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=0.057;entryY=0.611;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="cb-bcdc-in" target="ww-intrude-r" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="261" y="779" as="sourcePoint"/>
+                        <mxPoint x="494" y="865" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="&lt;font data-font-src=&quot;https://fonts.googleapis.com/css?family=Architects+Daughter&quot; face=&quot;Architects Daughter&quot; style=&quot;font-size: 20px;&quot;&gt;H3&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];spacing=3;labelBorderColor=light-dark(#102370, #ededed);" parent="bb-bcdc-cross" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2802" relative="1" as="geometry">
+                        <mxPoint x="26" y="-3" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-bcdc-cross-lbl" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u style=&quot;&quot;&gt;HARNESS H3&lt;/u&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;4 AWG BCDC inter-battery&lt;br&gt;4 AWG + 1/0 AWG cross-gnd&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dae8fc;strokeColor=#6c8ebf;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="10" y="699" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-winch" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#880000;strokeWidth=6;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="511" y="752" as="sourcePoint"/>
+                        <mxPoint x="400" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="511" y="720"/>
+                            <mxPoint x="540" y="720"/>
+                            <mxPoint x="540" y="240"/>
+                            <mxPoint x="425" y="240"/>
+                            <mxPoint x="425" y="190"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-dash" value="&lt;u&gt;DASHBOARD + FIREWALL&lt;/u&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;AUX CONSTANT BUS&lt;/div&gt;&lt;div&gt;SwitchPros Groudn Bus&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Circuit Breakers:&lt;/div&gt;&lt;div&gt;&amp;nbsp;150A→SwitchPros&lt;/div&gt;&lt;div&gt;100A→Body PDU&lt;br&gt;SwitchPros GND bus&lt;/div&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dde6f0;strokeColor=#445566;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="460" width="200" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-dash" style="endArrow=open;html=1;endSize=8;strokeColor=#445566;sketch=1;jiggle=2;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" edge="1" source="lbl-dash">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="476" as="sourcePoint"/>
+                        <mxPoint x="555" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-rlhub" value="RL WHEEL WELL  ★&lt;br&gt;START BATTERY&lt;br&gt;&lt;br&gt;Circuit Breakers: &lt;br&gt;250A→PMU&lt;br&gt;80A→BCDC in" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="26.25" y="830" width="172.5" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-rrhub" value="RR WHEEL WELL  ★&lt;br&gt;AUX BATTERY&lt;br&gt;&lt;br&gt;&lt;div&gt;Circuit Breakers:&lt;/div&gt;&lt;div&gt;300A -&amp;gt; FWD&lt;/div&gt;&lt;div&gt;150A -&amp;gt; SafetyHub&lt;/div&gt;&lt;div&gt;100A -&amp;gt; Fusion Amp&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Direct Connections:&lt;/div&gt;&lt;div&gt;BCDC Output&lt;/div&gt;&lt;div&gt;Warn Winch&lt;/div&gt;" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="834" width="170" height="156" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-footer" value="See docs/jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md for full harness BOMs, connector specs, and routing details." style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1340" width="1400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="roster" value="LOADS ON THIS PAGE (●) — bundled with H1, H2, or H4 trunks&amp;#10;• Alternator (engine bay, via H2)&amp;#10;• Starter (engine bay, via H2)&amp;#10;• Grid heater (engine bay, direct via fusible link, shares H2 trunk)&amp;#10;• ECM (engine bay, direct via Cummins harness, shares H2 trunk)&amp;#10;&amp;#10;Plus H1 forward feed → Firewall CONSTANT Bus (shown as box)&amp;#10;and H4 winch power → contactor at front bumper" style="text;html=1;align=left;verticalAlign=top;fontSize=12;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#fff5f5;strokeColor=#cc3333;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1080" width="600" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn-h2-starter" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="378" as="sourcePoint"/>
+                        <mxPoint x="430" y="295" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="conn-h2-alternator" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="378" as="sourcePoint"/>
+                        <mxPoint x="370" y="225" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p1-h2branch-gridheater" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="378" as="sourcePoint"/>
+                        <mxPoint x="420" y="260" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p1-h2branch-ecm" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="378" as="sourcePoint"/>
+                        <mxPoint x="465" y="329" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ld-alternator" value="Alternator" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#880000;strokeWidth=2;fontColor=#440000;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="215" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-gridheater" value="Grid heater" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#880000;strokeWidth=2;fontColor=#440000;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="250" width="85" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-starter" value="Starter" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#880000;strokeWidth=2;fontColor=#440000;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="285" width="70" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-ecm" value="ECM" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#fff5f5;strokeColor=#880000;strokeWidth=2;fontColor=#440000;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="465" y="318" width="55" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn-h2-pmu" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="378" as="sourcePoint"/>
+                        <mxPoint x="440" y="363" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#2266aa;strokeWidth=4;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="cb-bcdc-in" target="batt-start-pos" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="278" y="873" as="sourcePoint"/>
+                        <mxPoint x="504" y="739" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cb-bcdc-in" value="80A→BCDC in" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="821" width="54" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-start-fwd" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa1111;strokeWidth=5;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="261" y="779" as="sourcePoint"/>
+                        <mxPoint x="350" y="378" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="260" y="708"/>
+                            <mxPoint x="260" y="378"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="H2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];spacing=0;spacingTop=0;spacingBottom=0;spacingLeft=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontStyle=1;fontSize=20;labelBorderColor=default;fontColor=#990000;" parent="bb-start-fwd" vertex="1" connectable="0">
+                    <mxGeometry x="-0.9434" y="1" relative="1" as="geometry">
+                        <mxPoint x="1" y="-131" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="cb-pmu" value="250A→PMU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="244" y="720" width="58" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="246" y="740" width="58" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start" value="START" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="8" vertex="1">
+                    <mxGeometry width="58" height="59.99999999999999" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="8" vertex="1">
+                    <mxGeometry x="36" y="7.636363636363636" width="14" height="15.272727272727272" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="8" vertex="1">
+                    <mxGeometry x="8" y="7.636363636363636" width="14" height="15.272727272727272" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-fusion" value="Fusion Amp&#xa;(under rear seat)" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#e8d4f0;strokeColor=#7744aa;strokeWidth=2;fontColor=#3a1a4a;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="353" y="755" width="84" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-fusion-feed" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#7744aa;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="cb-fu" target="ctrl-fusion" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="494" y="843" as="sourcePoint"/>
+                        <mxPoint x="412" y="840" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="fp3-marker" value="FP3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="251" y="382" width="24" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp4-marker" value="FP4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="528" y="382" width="24" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp-legend" value="&lt;u&gt;FIREWALL PENETRATIONS&lt;/u&gt;&lt;div&gt;&lt;u&gt;&lt;br&gt;&lt;/u&gt;&lt;div&gt;FP3: Harness H2 - Heavy Grommett&lt;br&gt;FP4: Harness H1 - Heavy Grommett&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=1;spacing=10;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="358" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-master" value="300A→fwd" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="720" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux" value="AUX" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="496" y="738" width="58" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="532" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bus2" value="CONSTANT BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=1;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="408" width="142" height="12" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="page-2" name="Lighting &amp; SwitchPros">
+        <mxGraphModel dx="1058" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1550" math="0" shadow="0">
+            <root>
+                <mxCell id="title" value="Jeep LJ - Lighting &amp; SwitchPros Fan-Out" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="PMU rear lighting + SwitchPros front/rear bundles - all lights and turn signals" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="60" width="900" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="rear-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="948" width="320" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="orient-arrow" value="FRONT" style="endArrow=classic;html=1;rounded=0;fontSize=12;fontStyle=1;strokeWidth=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="60" y="200" as="sourcePoint"/>
+                        <mxPoint x="60" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="body-tub" value="" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#e8d8b8;strokeColor=#5a4a2a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="180" width="320" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#d8c89a;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="200" width="300" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood-crease" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;dashed=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="220" as="sourcePoint"/>
+                        <mxPoint x="400" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="grille" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a3a3a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="200" width="280" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="slat1" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="205" as="sourcePoint"/>
+                        <mxPoint x="310" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat2" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="335" y="205" as="sourcePoint"/>
+                        <mxPoint x="335" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat3" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="205" as="sourcePoint"/>
+                        <mxPoint x="360" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat4" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="205" as="sourcePoint"/>
+                        <mxPoint x="440" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat5" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="205" as="sourcePoint"/>
+                        <mxPoint x="465" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat6" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="205" as="sourcePoint"/>
+                        <mxPoint x="490" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="headlight-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="headlight-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="486" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="front-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="158" width="190" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="fairlead" value="" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="166" width="60" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cowl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a89868;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="390" width="304" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="windshield" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8d8e8;fillStyle=hatch;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="252" y="404" width="296" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="door-fl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="460" as="sourcePoint"/>
+                        <mxPoint x="240" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fl-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="700" as="sourcePoint"/>
+                        <mxPoint x="260" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="460" as="sourcePoint"/>
+                        <mxPoint x="560" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="700" as="sourcePoint"/>
+                        <mxPoint x="540" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="710" as="sourcePoint"/>
+                        <mxPoint x="240" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="710" as="sourcePoint"/>
+                        <mxPoint x="560" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="seat-dr" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-pass" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3a2a0a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="468" width="56" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="console" value="" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#6a5a3a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="510" width="50" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-l" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="710" width="70" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-r" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="710" width="70" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start" value="START" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="765" width="58" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="254" y="772" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="282" y="772" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-pmu" value="250A→PMU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="720" width="58" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-bcdc-in" value="80A→BCDC in" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="738" width="58" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux" value="AUX" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="496" y="738" width="58" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="532" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-master" value="300A→fwd" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="720" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fu" value="100A→Fusion" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="836" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-sh" value="150A→SH" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="820" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bcdc" value="BCDC" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb870;strokeColor=#aa5500;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="872" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-switchpros" value="SwitchPros" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#d8b8e8;strokeColor=#664488;strokeWidth=2;fontColor=#2a1a3a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="460" width="90" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bus2" value="CONSTANT BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#aaaaaa;strokeColor=#444444;strokeWidth=1;fontColor=#000000;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="414" width="185" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-sp" value="150A→SP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="429" width="90" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-bp" value="100A→BP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="465" y="429" width="90" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-sp-gnd" value="SwitchPros GND BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#333333;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="446" width="185" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-safetyhub" value="SafetyHub" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb0b0;strokeColor=#aa3333;strokeWidth=2;fontColor=#3a0a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="852" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-pmu" value="PMU24" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#b8d4f0;strokeColor=#2a5a8a;strokeWidth=2;fontColor=#1a3a5a;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="350" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bodypdu" value="BODY PDU" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#cce4b8;strokeColor=#558833;strokeWidth=2;fontColor=#2a4a1a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="465" y="460" width="90" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-rear" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="316" y="724" width="168" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="bench-div-1" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="372" y="685" as="sourcePoint"/>
+                        <mxPoint x="372" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bench-div-2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="428" y="685" as="sourcePoint"/>
+                        <mxPoint x="428" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tailgate" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="244" y="934" width="312" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-sp-front" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="460" as="sourcePoint"/>
+                        <mxPoint x="380" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="460"/>
+                            <mxPoint x="380" y="405"/>
+                            <mxPoint x="380" y="300"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-sp-front-lbl" value="H5 SwitchPros front&amp;#10;(fog, front locker,&amp;#10;front rock lights)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#aa44aa;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#faf0fa;strokeColor=#aa44aa;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="330" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-sp-rear" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="488" as="sourcePoint"/>
+                        <mxPoint x="400" y="930" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="500"/>
+                            <mxPoint x="380" y="690"/>
+                            <mxPoint x="380" y="900"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-sp-rear-lbl" value="H6/7 Rear cabin trunk&amp;#10;SwitchPros rear portion&amp;#10;(combined with H7)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#cc66cc;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#faf0fa;strokeColor=#cc66cc;" parent="1" vertex="1">
+                    <mxGeometry x="195" y="640" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-pmu-rear" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="380" as="targetPoint"/>
+                        <mxPoint x="400" y="930" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="370" y="930"/>
+                            <mxPoint x="370" y="700"/>
+                            <mxPoint x="370" y="500"/>
+                            <mxPoint x="370" y="405"/>
+                            <mxPoint x="370" y="395"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-pmu-rear-lbl" value="H6/7 Rear cabin trunk&amp;#10;PMU rear portion&amp;#10;(combined with H6)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#3388cc;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#f0f5fa;strokeColor=#3388cc;" parent="1" vertex="1">
+                    <mxGeometry x="195" y="780" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-drl-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="265" y="222" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-drl-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="525" y="222" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-fturn-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcc33;strokeColor=#aa7700;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="252" y="170" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-fturn-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcc33;strokeColor=#aa7700;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="538" y="170" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-fog" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="168" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-frock" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="168" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rrock-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="158" y="800" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rrock-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="642" y="800" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-cargo-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="252" y="892" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-cargo-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="498" y="892" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-tail-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="918" width="12" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rturn-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcc33;strokeColor=#aa7700;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="262" y="918" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-tail-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="918" width="12" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rturn-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcc33;strokeColor=#aa7700;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="528" y="918" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-license" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="378" y="942" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-3rdbrake" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="418" y="942" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-chase" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="980" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rwork-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="985" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rwork-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="445" y="985" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-dash" value="DASHBOARD + FIREWALL&#xa;CONSTANT BUS&#xa;CBs: 150A→SP, 100A→BP&#xa;SwitchPros, BODY PDU&#xa;SwitchPros GND bus&#xa;Dakota HDX, CT4 panel, SP panel,&#xa;HVAC, radio, gauges&#xa;(Fusion amp relocated under rear seat)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dde6f0;strokeColor=#445566;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="430" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-dash" style="endArrow=open;html=1;endSize=8;strokeColor=#445566;sketch=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="476" as="sourcePoint"/>
+                        <mxPoint x="555" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-rlhub" value="RL WHEEL WELL  ★&#xa;START BATTERY&#xa;CBs: 250A→PMU, 80A→BCDC in&#xa;(rear-left, beside bench)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="730" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-rlhub" style="endArrow=open;html=1;endSize=8;strokeColor=#cc6600;sketch=1;jiggle=2;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="170" y="760" as="sourcePoint"/>
+                        <mxPoint x="275" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-rrhub" value="RR WHEEL WELL  ★&#xa;AUX BATTERY (5 stacked lugs)&#xa;Inline CBs: 300A→fwd, 150A→SH, 100A→Fusion&#xa;Direct: Winch, BCDC output&#xa;SafetyHub, BCDC, Fusion Amp&#xa;(amp mounted under rear seat)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="730" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-rrhub" style="endArrow=open;html=1;endSize=8;strokeColor=#cc6600;sketch=1;jiggle=2;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="760" as="sourcePoint"/>
+                        <mxPoint x="525" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-title" value="LEGEND" style="whiteSpace=wrap;text;html=1;align=center;fontSize=13;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="20.0" y="1080.0" width="180" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-batt-s" value="BATT" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1110.0" width="36" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-batt-t" value="Battery (START on driver side, AUX on passenger - both in rear wheel wells)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="84.0" y="1110.0" width="430" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-hub-s" value="★" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff9933;strokeColor=#aa4400;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1140.0" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-hub-t" value="Confirmed distribution hub" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="74.0" y="1138.0" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-cabin-s" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8d8b8;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1174.0" width="28" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-cabin-t" value="Body / cabin - protected interior space" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="78.0" y="1171.0" width="430" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-title" value="BACKBONE RUNS" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="540.0" y="1080.0" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-spf" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=3;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1190.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1190.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-spf-t" value="H5 SwitchPros front bundle (fog, front locker, front rock)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1183.0" width="320" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-spr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=3;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1210.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1210.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-spr-t" value="H6/7 Rear cabin trunk - SwitchPros rear portion" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1203.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-pmu" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=3;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1230.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1230.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-pmu-t" value="H6/7 Rear cabin trunk - PMU rear portion (16 AWG)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1223.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-title" value="LOADS (●)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1080.0" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-2" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#cc3333;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1120.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-2-t" value="PMU outputs (rad fan, HVAC, wipers, horn, DRL, tail/brake/reverse, license)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1120.0" width="320" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-3" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#ffcc33;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1138.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-3-t" value="CT4 (turn signals, headlight low/high)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1138.0" width="290" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-4" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#ff8833;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1156.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-4-t" value="SwitchPros (offroad lights, rock, chase, work, cargo, lockers, compressor ctrl)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1156.0" width="320" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-footer" value="See docs/jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md for full harness BOMs, connector specs, and routing details." style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1340" width="1400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="p2-h5-fog" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="240" as="sourcePoint"/>
+                        <mxPoint x="341" y="174" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-h5-frock" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="240" as="sourcePoint"/>
+                        <mxPoint x="456" y="174" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-rrock-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="164" y="806" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-rrock-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="648" y="806" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-cargo-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="258" y="898" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-cargo-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="504" y="898" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-chase" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="401" y="986" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-rwork-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="351" y="991" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-sprear-rwork-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc66cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="900" as="sourcePoint"/>
+                        <mxPoint x="451" y="991" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmurear-tail-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="900" as="sourcePoint"/>
+                        <mxPoint x="254" y="924" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmurear-tail-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="900" as="sourcePoint"/>
+                        <mxPoint x="546" y="924" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmurear-license" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="900" as="sourcePoint"/>
+                        <mxPoint x="384" y="948" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmurear-3rdbrake" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3388cc;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="370" y="900" as="sourcePoint"/>
+                        <mxPoint x="424" y="948" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmu-drl-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="271" y="228" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-pmu-drl-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="531" y="228" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-ct4-fturn-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ffcc33;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="323" y="485" as="sourcePoint"/>
+                        <mxPoint x="258" y="176" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-ct4-fturn-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ffcc33;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="323" y="485" as="sourcePoint"/>
+                        <mxPoint x="544" y="176" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-ct4-rturn-l" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ffcc33;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="323" y="485" as="sourcePoint"/>
+                        <mxPoint x="268" y="924" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p2-ct4-rturn-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ffcc33;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="323" y="485" as="sourcePoint"/>
+                        <mxPoint x="534" y="924" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="fp1-marker" value="FP1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#555555;strokeColor=#000000;strokeWidth=2;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="456" y="382" width="24" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp2-marker" value="FP2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#555555;strokeColor=#000000;strokeWidth=2;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="398" y="382" width="24" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp-legend" value="FIREWALL PENETRATIONS (this page)&amp;#10;FP1 HDP24-24-29 (signal/control, passenger)&amp;#10;FP2 HDP24-18-14 (SwitchPros, passenger)" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="380" width="280" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="page-3" name="Controls, Recovery &amp; Drivetrain">
+        <mxGraphModel dx="1058" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="1550" math="0" shadow="0">
+            <root>
+                <mxCell id="title" value="Jeep LJ - Controls, Recovery &amp; Drivetrain" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="20" width="900" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" value="ARB compressor, winch trigger, Kilduff shifter, TCU + dash controls, comms, sensors, engine accessories" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=12;fontStyle=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#666666;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="60" width="900" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="rear-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="948" width="320" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="orient-arrow" value="FRONT" style="endArrow=classic;html=1;rounded=0;fontSize=12;fontStyle=1;strokeWidth=2;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="60" y="200" as="sourcePoint"/>
+                        <mxPoint x="60" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="body-tub" value="" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#e8d8b8;strokeColor=#5a4a2a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="180" width="320" height="790" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#d8c89a;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="200" width="300" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="hood-crease" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;dashed=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="220" as="sourcePoint"/>
+                        <mxPoint x="400" y="380" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="grille" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3a3a3a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="200" width="280" height="38" as="geometry"/>
+                </mxCell>
+                <mxCell id="slat1" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="205" as="sourcePoint"/>
+                        <mxPoint x="310" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat2" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="335" y="205" as="sourcePoint"/>
+                        <mxPoint x="335" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat3" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="360" y="205" as="sourcePoint"/>
+                        <mxPoint x="360" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat4" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="205" as="sourcePoint"/>
+                        <mxPoint x="440" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat5" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="465" y="205" as="sourcePoint"/>
+                        <mxPoint x="465" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="slat6" value="" style="endArrow=none;html=1;strokeColor=#888888;strokeWidth=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="205" as="sourcePoint"/>
+                        <mxPoint x="490" y="233" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="headlight-l" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="headlight-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff7c0;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="486" y="200" width="36" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="front-bumper" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#2a2a2a;strokeColor=#000000;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="158" width="190" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="fairlead" value="" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#000000;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="166" width="60" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cowl" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#a89868;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="248" y="390" width="304" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="windshield" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8d8e8;fillStyle=hatch;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="252" y="404" width="296" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="door-fl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="460" as="sourcePoint"/>
+                        <mxPoint x="240" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fl-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="700" as="sourcePoint"/>
+                        <mxPoint x="260" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="460" as="sourcePoint"/>
+                        <mxPoint x="560" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-fr-h" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="700" as="sourcePoint"/>
+                        <mxPoint x="540" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rl" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="710" as="sourcePoint"/>
+                        <mxPoint x="240" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="door-rr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1.5;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="710" as="sourcePoint"/>
+                        <mxPoint x="560" y="810" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="seat-dr" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="278" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-pass" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="432" y="500" width="90" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="steering" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#3a2a0a;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="295" y="468" width="56" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="console" value="" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#6a5a3a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="510" width="50" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-l" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="710" width="70" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="ww-intrude-r" value="" style="rounded=1;arcSize=30;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="710" width="70" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start" value="START" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="765" width="58" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="254" y="772" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-start-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="282" y="772" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-pmu" value="250A→PMU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="720" width="58" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-bcdc-in" value="80A→BCDC in" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="246" y="738" width="58" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux" value="AUX" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="496" y="738" width="58" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-pos" value="+" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc0000;strokeColor=#660000;fontColor=#ffffff;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="504" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="batt-aux-neg" value="-" style="ellipse;whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#000000;fontColor=#ffffff;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="532" y="745" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-master" value="300A→fwd" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="720" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fu" value="100A→Fusion" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="836" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-sh" value="150A→SH" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="820" width="64" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bcdc" value="BCDC" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb870;strokeColor=#aa5500;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="872" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-switchpros" value="SwitchPros" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#d8b8e8;strokeColor=#664488;strokeWidth=2;fontColor=#2a1a3a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="460" width="90" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bus2" value="CONSTANT BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#aaaaaa;strokeColor=#444444;strokeWidth=1;fontColor=#000000;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="414" width="185" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-sp" value="150A→SP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="429" width="90" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="cb-fw-bp" value="100A→BP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="465" y="429" width="90" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-sp-gnd" value="SwitchPros GND BUS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#333333;strokeWidth=1;fontColor=#ffffff;fontSize=7;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="446" width="185" height="12" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-safetyhub" value="SafetyHub" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#ffb0b0;strokeColor=#aa3333;strokeWidth=2;fontColor=#3a0a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="494" y="852" width="64" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-pmu" value="PMU24" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#b8d4f0;strokeColor=#2a5a8a;strokeWidth=2;fontColor=#1a3a5a;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="350" width="100" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="ctrl-bodypdu" value="BODY PDU" style="rounded=1;arcSize=15;whiteSpace=wrap;html=1;fillColor=#cce4b8;strokeColor=#558833;strokeWidth=2;fontColor=#2a4a1a;fontSize=10;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="465" y="460" width="90" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="seat-rear" value="" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#7a6a4a;strokeColor=#3a2a0a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="316" y="724" width="168" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="bench-div-1" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="372" y="685" as="sourcePoint"/>
+                        <mxPoint x="372" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bench-div-2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#5a4a2a;strokeWidth=1;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="428" y="685" as="sourcePoint"/>
+                        <mxPoint x="428" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="tailgate" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="244" y="934" width="312" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-arb" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ff8833;strokeWidth=4;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="525" y="760" as="sourcePoint"/>
+                        <mxPoint x="477" y="667" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="525" y="700"/>
+                            <mxPoint x="475" y="700"/>
+                            <mxPoint x="475" y="620"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-arb-lbl" value="H8 ARB compressor&amp;#10;(6 AWG ×2 + 14 AWG ctrl)&amp;#10;to under passenger seat" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#cc6611;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5ee;strokeColor=#ff8833;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="680" width="120" height="42" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-radfan" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="252" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-hvac" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="352" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-wipers" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="445" y="392" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-horn" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="298" y="298" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-hdx" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="378" y="462" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-gmrs" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="435" y="472" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-sp-panel" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="455" y="462" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-garmin" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="358" y="475" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-keyless" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="298" y="466" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-wolfbox" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="458" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-fusion-hu" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#3366cc;strokeColor=#224488;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="418" y="488" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-hs-dr" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#66aa66;strokeColor=#336633;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="318" y="570" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-hs-pass" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#66aa66;strokeColor=#336633;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="472" y="570" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-usb" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#66aa66;strokeColor=#336633;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="555" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-intercom-f" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="540" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-arb-mani" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#444444;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="668" width="8" height="8" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-intercom-r" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="395" y="745" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-cargo-sw" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#444444;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="892" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-rcam" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#33aacc;strokeColor=#226688;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="398" y="965" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-airchuck" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#888888;strokeColor=#444444;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="478" y="985" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="lbl-dash" value="DASHBOARD + FIREWALL&#xa;CONSTANT BUS&#xa;CBs: 150A→SP, 100A→BP&#xa;SwitchPros, BODY PDU&#xa;SwitchPros GND bus&#xa;Dakota HDX, CT4 panel, SP panel,&#xa;HVAC, radio, gauges&#xa;(Fusion amp relocated under rear seat)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#dde6f0;strokeColor=#445566;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="430" width="200" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-dash" style="endArrow=open;html=1;endSize=8;strokeColor=#445566;sketch=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="476" as="sourcePoint"/>
+                        <mxPoint x="555" y="450" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-rlhub" value="RL WHEEL WELL  ★&#xa;START BATTERY&#xa;CBs: 250A→PMU, 80A→BCDC in&#xa;(rear-left, beside bench)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="730" width="170" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-rlhub" style="endArrow=open;html=1;endSize=8;strokeColor=#cc6600;sketch=1;jiggle=2;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="170" y="760" as="sourcePoint"/>
+                        <mxPoint x="275" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lbl-rrhub" value="RR WHEEL WELL  ★&#xa;AUX BATTERY (5 stacked lugs)&#xa;Inline CBs: 300A→fwd, 150A→SH, 100A→Fusion&#xa;Direct: Winch, BCDC output&#xa;SafetyHub, BCDC, Fusion Amp&#xa;(amp mounted under rear seat)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff0d8;strokeColor=#cc6600;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="730" width="200" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ldr-rrhub" style="endArrow=open;html=1;endSize=8;strokeColor=#cc6600;sketch=1;jiggle=2;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="710" y="760" as="sourcePoint"/>
+                        <mxPoint x="525" y="760" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-title" value="LEGEND" style="whiteSpace=wrap;text;html=1;align=center;fontSize=13;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="20.0" y="1080.0" width="180" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-batt-s" value="BATT" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffd84d;strokeColor=#aa6600;strokeWidth=2;fontColor=#3a2a0a;fontSize=8;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1110.0" width="36" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-batt-t" value="Battery (START on driver side, AUX on passenger - both in rear wheel wells)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="84.0" y="1110.0" width="430" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-hub-s" value="★" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff9933;strokeColor=#aa4400;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;sketch=1;curveFitting=1;jiggle=2;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1140.0" width="26" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-hub-t" value="Confirmed distribution hub" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="74.0" y="1138.0" width="200" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-cabin-s" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8d8b8;strokeColor=#5a4a2a;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;sketchStyle=comic;" parent="1" vertex="1">
+                    <mxGeometry x="40.0" y="1174.0" width="28" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-cabin-t" value="Body / cabin - protected interior space" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=10;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="78.0" y="1171.0" width="430" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-title" value="BACKBONE RUNS" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="540.0" y="1080.0" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-arb" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#ff8833;strokeWidth=4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1250.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1250.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-arb-t" value="H8 ARB compressor (6 AWG ×2 motor + 14 AWG control)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1243.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-title" value="LOADS (●)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=11;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1080.0" width="100" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-2" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#cc3333;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1120.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-2-t" value="PMU outputs (rad fan, HVAC, wipers, horn, DRL, tail/brake/reverse, license)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1120.0" width="320" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-5" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#66aa66;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1174.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-5-t" value="BODY PDU (heated seats, USB, radio, camera)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1174.0" width="290" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-6" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#3366cc;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1192.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-6-t" value="Audio (amp, head unit, speakers)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1192.0" width="290" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-7" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#33aacc;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1210.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-7-t" value="Instruments / control (HDX, CT4, panels, GMRS, intercom, GPS, keyless, cam)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1210.0" width="320" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-8" value="●" style="whiteSpace=wrap;text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#888888;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1020.0" y="1228.0" width="14" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-ld-8-t" value="Sensors / triggers (door, pressure, cargo rocker, air chuck)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="1038.0" y="1228.0" width="290" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-winch-trig" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#996633;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="475" as="sourcePoint"/>
+                        <mxPoint x="400" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="390" y="475"/>
+                            <mxPoint x="390" y="430"/>
+                            <mxPoint x="430" y="430"/>
+                            <mxPoint x="430" y="395"/>
+                            <mxPoint x="430" y="300"/>
+                            <mxPoint x="430" y="240"/>
+                            <mxPoint x="430" y="200"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-winch-trig-lbl" value="H9 Winch trigger&#xa;(18 AWG via CH4X4&#xa;at dash, BODY PDU CB43)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#996633;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#fff5ee;strokeColor=#996633;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-shifter" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#444488;strokeWidth=4;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="600" as="sourcePoint"/>
+                        <mxPoint x="400" y="690" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-shifter-lbl" value="H10 Kilduff → TCU&#xa;(factory 8HP70 connector,&#xa;~3-5 ft, trans tunnel)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#444488;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#f0f0fa;strokeColor=#444488;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="600" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="bb-tcu-eb" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#226633;strokeWidth=3;sketch=1;curveFitting=1;jiggle=2;edgeStyle=orthogonalEdgeStyle;curved=0;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="400" y="690" as="sourcePoint"/>
+                        <mxPoint x="440" y="363" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="400" y="500"/>
+                            <mxPoint x="400" y="395"/>
+                            <mxPoint x="370" y="395"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="bb-tcu-eb-lbl" value="H11 TCU → engine bay&#xa;(14 AWG power, J1939,&#xa;aux Reverse/PN, ground)" style="whiteSpace=wrap;text;html=1;align=center;fontSize=8;fontStyle=1;fontColor=#226633;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#f0faf0;strokeColor=#226633;" parent="1" vertex="1">
+                    <mxGeometry x="195" y="430" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-wtrig" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#996633;strokeWidth=3;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1230.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1230.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-wtrig-t" value="H9 Winch trigger (18 AWG, via BODY PDU CB43 + CH4X4 switch)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1223.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-shifter" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#444488;strokeWidth=4;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1250.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1250.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-shifter-t" value="H10 Kilduff shifter → TCU (factory 8HP70 connector)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1243.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-bb-tcueb" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#226633;strokeWidth=3;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540.0" y="1270.0" as="sourcePoint"/>
+                        <mxPoint x="580.0" y="1270.0" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="lg-bb-tcueb-t" value="H11 TCU → engine bay (power, J1939, aux outputs)" style="whiteSpace=wrap;text;html=1;align=left;verticalAlign=middle;fontSize=9;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="588.0" y="1263.0" width="380" height="16" as="geometry"/>
+                </mxCell>
+                <mxCell id="lg-footer" value="See docs/jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md for full harness BOMs, connector specs, and routing details." style="text;html=1;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#666666;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1340" width="1400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3-pmu-radfan" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="346" y="258" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-hvac" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="481" y="358" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-wipers" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="451" y="398" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-horn" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="304" y="304" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-hdx" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="384" y="468" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-gmrs" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="441" y="478" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-garmin" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="364" y="481" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-keyless" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="304" y="472" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-intercom-f" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="401" y="546" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-pmu-intercom-r" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="401" y="751" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-sp-panel" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="474" as="sourcePoint"/>
+                        <mxPoint x="461" y="468" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-sp-arb-mani" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=2;dashed=1;dashPattern=4 4;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="474" as="sourcePoint"/>
+                        <mxPoint x="494" y="672" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-sp-cargo-sw" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#aa44aa;strokeWidth=2;dashed=1;dashPattern=4 4;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="415" y="474" as="sourcePoint"/>
+                        <mxPoint x="546" y="898" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-wolfbox" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="401" y="464" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-fusion-hu" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="424" y="494" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-hs-dr" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="324" y="576" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-hs-pass" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="478" y="576" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-usb" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="401" y="561" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="p3-bp-rcam" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#66aa66;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="510" y="474" as="sourcePoint"/>
+                        <mxPoint x="404" y="971" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="ld-ibooster" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#cc3333;strokeColor=#660000;strokeWidth=2;" parent="1" vertex="1">
+                    <mxGeometry x="268" y="382" width="13" height="13" as="geometry"/>
+                </mxCell>
+                <mxCell id="ld-arb-comp" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ff8833;strokeColor=#aa4400;strokeWidth=3;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="660" width="14" height="14" as="geometry"/>
+                </mxCell>
+                <mxCell id="p3-pmu-ibooster" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#cc3333;strokeWidth=2;sketch=1;curveFitting=1;jiggle=2;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="440" y="363" as="sourcePoint"/>
+                        <mxPoint x="282" y="389" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="fp1-marker" value="FP1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#555555;strokeColor=#000000;strokeWidth=2;fontColor=#ffffff;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="456" y="382" width="24" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp5-marker" value="FP5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#c8b888;strokeColor=#5a4a2a;strokeWidth=2;fontColor=#3a2a0a;fontSize=9;fontStyle=1;align=center;verticalAlign=middle;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" parent="1" vertex="1">
+                    <mxGeometry x="294" y="384" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="fp-legend" value="FIREWALL PENETRATIONS (this page)&amp;#10;FP1 HDP24-24-29 (signal/control, passenger)&amp;#10;FP5 Small grommet (driver) — Dakota Digital BIM-17-2 → grille temp sensor" style="text;html=1;align=left;verticalAlign=top;fontSize=10;fontStyle=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;whiteSpace=wrap;fillColor=#eeeeee;strokeColor=#666666;strokeWidth=1;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="380" width="280" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

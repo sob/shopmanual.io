@@ -120,8 +120,16 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 | Output Speed Sensor   | Internal to trans     | Hall effect                   |
 | Transmission Temp     | Internal to trans     | NTC thermistor                |
 | Range Sensor (BTSI)   | Internal to trans     | Gear position                 |
-| Shifter Input         | Electronic shifter    | TBD - depends on shifter type |
+| Shifter Input         | Electronic shifter    | Kilduff (factory 8HP70 connector) |
 | Brake Switch          | Digital input         | Unlock from Park              |
+
+### Aux Outputs (TCU → Vehicle)
+
+| Output            | Function                          | Destination                              | Notes                                              |
+| :---------------- | :-------------------------------- | :--------------------------------------- | :------------------------------------------------- |
+| Aux Out (Reverse) | 12V when shifter in R             | [PMU In 3][pmu-inputs]                   | Drives PMU OUT22 (Reverse Lights)                  |
+| Aux Out (P/N)     | 12V when shifter in P or N        | **\[Reserve\]**                          | Not currently consumed; PBS-I handles brake interlock for cranking. Available for future P/N gating if needed. |
+| J1939 broadcast   | Gear position, trans temp, mode   | [BIM-01-2 J1939][bim-j1939] → HDX GEAR   | Shares Cummins J1939 bus                           |
 
 ### Shifter
 
@@ -194,14 +202,15 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 
 ## Related Documentation
 
-- [Transfer Case][transfer-case] - NP241OR connection
+- [Transfer Case][transfer-case] - NV241 GenII connection
 - [PMU Inputs][pmu-inputs] - J1939 CAN bus tap
 - [Cummins R2.8][engine] - Engine CAN integration
 
 [transfer-case]: 02-transfer-case.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
-[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [engine]: ../02-engine-systems/index.md
+[starter]: ../02-engine-systems/01-starter.md
+[bim-j1939]: ../02-engine-systems/09-gauge-cluster/03-bim-j1939.md
 [kilduff-shifter]: https://www.kilduffmachine.com/store/p168/Kilduff_8PH70_%2F_8_speed_ZF_Shifter_for_swaps_%23KIL8HP70.html
 [turbolamik]: https://www.turbolamik.us/tcu-2-0-turbolamik/
 [turbolamik-manual]: https://manual.turbolamik.eu/

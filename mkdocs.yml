@@ -63,6 +63,7 @@ markdown_extensions:
   - tables
   - attr_list
   - md_in_html
+  - footnotes
   - pymdownx.blocks.html
   - admonition
   - pymdownx.details
@@ -72,6 +73,9 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+
+hooks:
+  - hooks/copy_export_assets.py
 
 plugins:
   - search
@@ -142,6 +146,10 @@ nav:
       - 1.7 - Wire Routing:
         - jeep_lj/01-power-systems/07-wire-routing/index.md
         - 1.7.2 - Firewall Ingress: jeep_lj/01-power-systems/07-wire-routing/02-firewall-ingress.md
+        - 1.7.3 - Harness Inventory: jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md
+        - 1.7.4 - Build Sheet&#58; Power Distribution: jeep_lj/01-power-systems/07-wire-routing/04-harness-power-distribution.md
+        - 1.7.5 - Build Sheet&#58; Lighting & SwitchPros: jeep_lj/01-power-systems/07-wire-routing/05-harness-lighting-switchpros.md
+        - 1.7.6 - Build Sheet&#58; Controls, Recovery & Drivetrain: jeep_lj/01-power-systems/07-wire-routing/06-harness-controls-recovery-drivetrain.md
       - 1.8 - Load Analysis:
         - jeep_lj/01-power-systems/08-load-analysis/index.md
         - 1.8.1 - Scenarios: jeep_lj/01-power-systems/08-load-analysis/01-scenarios.md
@@ -165,7 +173,7 @@ nav:
         - 2.9.4 - BIM GPS: jeep_lj/02-engine-systems/09-gauge-cluster/04-bim-gps.md
         - 2.9.5 - BIM TPMS: jeep_lj/02-engine-systems/09-gauge-cluster/05-bim-tpms.md
         - 2.9.6 - BIM Compass: jeep_lj/02-engine-systems/09-gauge-cluster/06-bim-compass.md
-      - 2.10 - ADU7 Display: jeep_lj/02-engine-systems/10-adu7-display/index.md
+      - 2.11 - Runaway Protection: jeep_lj/02-engine-systems/11-runaway-protection.md
     - Vehicle Lighting:
       - jeep_lj/03-lighting-systems/index.md
       - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
@@ -191,6 +199,7 @@ nav:
       - 5.2 - SwitchPros SP-1200: jeep_lj/05-control-interfaces/02-switchpros-sp1200.md
       - 5.3 - Command Touch CT4: jeep_lj/05-control-interfaces/03-command-touch-ct4.md
       - 5.4 - Dashboard Switches: jeep_lj/05-control-interfaces/05-dashboard-controls.md
+      - 5.6 - Keyless Ignition: jeep_lj/05-control-interfaces/06-keyless-ignition.md
     - Stereo Systems:
       - jeep_lj/06-audio-systems/index.md
       - 6.1 - Head Unit: jeep_lj/06-audio-systems/01-head-unit.md
@@ -198,11 +207,11 @@ nav:
       - 6.3 - Speakers: jeep_lj/06-audio-systems/03-speakers.md
       - 6.4 - Subwoofer: jeep_lj/06-audio-systems/04-subwoofer.md
       - 6.5 - LED Controller: jeep_lj/06-audio-systems/05-led-controller.md
+      - 6.6 - Bluetooth Tuning: jeep_lj/06-audio-systems/06-bluetooth-tuning.md
     - Communications:
       - jeep_lj/07-communication-systems/index.md
       - 7.1 - GMRS Radio: jeep_lj/07-communication-systems/01-gmrs-radio.md
       - 7.2 - Intercom: jeep_lj/07-communication-systems/02-intercom.md
-      - 7.3 - Ham Radio: jeep_lj/07-communication-systems/03-ham-radio.md
       - 7.4 - Dash Camera: jeep_lj/07-communication-systems/04-dash-camera.md
       - 7.5 - Navigation: jeep_lj/07-communication-systems/05-navigation.md
     - Auxiliary Systems:

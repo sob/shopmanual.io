@@ -15,7 +15,7 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 | :----------------- | :---------------- | :--------------------- | :--------- | :--------------------------------------------------------------------------------------------------------------- |
 | **Main Power**     | START battery+    | 2/0 AWG                | 250A CB    | Optimized for 220A max load with proper protection coordination - See [Circuit Breakers][front-circuit-breakers] |
 | **Ground**         | START battery-    | 2/0 AWG                | N/A        | Matches power wire gauge for 220A max load - See [Grounding Architecture][grounding]                             |
-| **Ignition Sense** | Keyswitch RUN     | 18 AWG                 | N/A        | Dedicated wire - see [PMU Inputs][pmu-inputs]                                                                    |
+| **Ignition Sense** | Ignition signal bus bar (engine bay distribution off HDP24 Pin 12) | 18 AWG         | N/A        | Sourced from PBS-I PINK IGN via the cabin ignition bus bar - see [PMU Inputs][pmu-inputs] and [Keyless Ignition][keyless-ignition] |
 | **CAN Bus**        | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A        | Stub tap - see [PMU Inputs][pmu-inputs]                                                                          |
 
 ## System Components
@@ -39,3 +39,4 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 [grounding]: ../05-grounding/index.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
 [firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md

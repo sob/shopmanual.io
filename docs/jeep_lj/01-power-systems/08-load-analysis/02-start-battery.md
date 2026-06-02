@@ -22,9 +22,7 @@ All circuits powered by START battery (alternator charging):
 | OUT8             | PS Cooler Fan     |      0A |      15A | Temp-triggered         | Off unless hot        |
 | OUT9             | Dakota Digital    |     25A |      25A | Continuous             | Gauges always on      |
 | OUT11            | Wiper Controller  |      0A |      15A | Intermittent           | Rain only             |
-| OUT12            | Ham Radio         |      1A |      13A | Brief TX bursts        | Standby vs transmit   |
 | OUT13            | CT4 Controller    |     10A |      10A | Continuous             | Street lighting       |
-| OUT14            | DRL               |      8A |       8A | Daytime only           | Auto-off at night     |
 | OUT15            | Winch Trigger     |      0A |       1A | Recovery only          | Control signal only   |
 | OUT17            | A/C Clutch        |      0A |       5A | Summer only            | Seasonal              |
 | OUT18            | Horn              |      0A |     5.4A | Seconds                | Emergency only        |
@@ -32,6 +30,7 @@ All circuits powered by START battery (alternator charging):
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
 | OUT21            | Brake Lights      |      0A |       3A | Seconds during braking | Traffic-dependent     |
 | OUT22            | Reverse Lights    |      0A |       3A | Seconds in reverse     | Parking only          |
+| OUT23            | DRL               |      8A |       8A | Daytime only           | Auto-off at night     |
 | **BCDC Charger** |                   |         |          |                        |                       |
 | -                | BCDC to AUX       |     30A |      50A | Continuous             | Charges AUX battery   |
 | **Direct Loads** |                   |         |          |                        |                       |
@@ -55,15 +54,14 @@ All circuits powered by START battery (alternator charging):
 | PS Cooler Fan (OUT8)          |        0A | Temp normal                 |
 | **Dakota Digital (OUT9)**     |   **25A** | Always on                   |
 | Wiper (OUT11)                 |        0A | Dry weather                 |
-| **Ham Radio (OUT12)**         |    **1A** | Standby                     |
 | **CT4 (OUT13)**               |   **10A** | Running lights              |
-| **DRL (OUT14)**               |    **8A** | Daytime                     |
 | **iBooster Ignition (OUT19)** |    **5A** | Always on                   |
 | **STX Intercom (OUT20)**      |    **1A** | Standby                     |
+| **DRL (OUT23)**               |    **8A** | Daytime                     |
 | **BCDC Charger**              |   **30A** | Maintaining AUX             |
-| **TOTAL**                     |  **107A** |                             |
+| **TOTAL**                     |  **106A** |                             |
 
-**Alternator Load:** 107A of 270A capacity = **40% utilization** Excellent
+**Alternator Load:** 106A of 270A capacity = **39% utilization** Excellent
 
 ---
 
@@ -81,17 +79,16 @@ All circuits powered by START battery (alternator charging):
 | **PS Cooler Fan (OUT8)**      |  **15A** | Hot - active                 |
 | **Dakota Digital (OUT9)**     |  **25A** | Always on                    |
 | Wiper (OUT11)                 |       0A | Dry weather                  |
-| **Ham Radio (OUT12)**         |   **1A** | Standby                      |
 | **CT4 (OUT13)**               |  **10A** | Running lights               |
-| **DRL (OUT14)**               |   **8A** | Daytime                      |
 | **A/C Clutch (OUT17)**        |   **5A** | A/C on                       |
 | **iBooster Ignition (OUT19)** |   **5A** | Always on                    |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                      |
 | **Brake Lights (OUT21)**      |   **1A** | Average - traffic            |
+| **DRL (OUT23)**               |   **8A** | Daytime                      |
 | **BCDC Charger**              |  **40A** | Higher rate                  |
-| **TOTAL**                     | **194A** |                              |
+| **TOTAL**                     | **193A** |                              |
 
-**Alternator Load:** 194A of 270A capacity = **72% utilization** Good
+**Alternator Load:** 193A of 270A capacity = **71% utilization** Good
 
 ---
 
@@ -109,15 +106,14 @@ All circuits powered by START battery (alternator charging):
 | **PS Cooler Fan (OUT8)**      |  **15A** | Hot - active                      |
 | **Dakota Digital (OUT9)**     |  **25A** | Always on                         |
 | Wiper (OUT11)                 |       0A | Dry                               |
-| **Ham Radio (OUT12)**         |   **1A** | Standby                           |
 | **CT4 (OUT13)**               |  **10A** | Running lights                    |
-| **DRL (OUT14)**               |   **8A** | Daytime                           |
 | **iBooster Ignition (OUT19)** |   **5A** | Always on                         |
 | **STX Intercom (OUT20)**      |   **3A** | Occasional TX                     |
+| **DRL (OUT23)**               |   **8A** | Daytime                           |
 | **BCDC Charger**              |  **50A** | Full rate - supporting SwitchPros |
-| **TOTAL**                     | **207A** |                                   |
+| **TOTAL**                     | **206A** |                                   |
 
-**Alternator Load:** 207A of 270A capacity = **77% utilization** Good
+**Alternator Load:** 206A of 270A capacity = **76% utilization** Good
 
 **Note:** Offroad lighting (SwitchPros) draws from AUX battery, not alternator.
 
@@ -137,18 +133,17 @@ All circuits powered by START battery (alternator charging):
 | PS Cooler Fan (OUT8)          |       0A | Temp normal              |
 | **Dakota Digital (OUT9)**     |  **25A** | Always on                |
 | **Wiper (OUT11)**             |  **15A** | High speed               |
-| **Ham Radio (OUT12)**         |   **1A** | Standby                  |
 | **CT4 (OUT13)**               |  **10A** | Headlights               |
-| DRL (OUT14)                   |       0A | Off - headlights on      |
 | **iBooster Ignition (OUT19)** |   **5A** | Always on                |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                  |
 | **Brake Lights (OUT21)**      |   **3A** | Braking                  |
+| DRL (OUT23)                   |       0A | Off - headlights on      |
 | **BCDC Charger**              |  **30A** | Normal rate              |
-| **TOTAL**                     | **166A** |                          |
+| **TOTAL**                     | **165A** |                          |
 
 **Duration:** iBooster peak lasts 2-5 seconds only
 
-**Alternator Load:** 166A of 270A capacity = **61% utilization** Excellent
+**Alternator Load:** 165A of 270A capacity = **61% utilization** Excellent
 
 ---
 
@@ -166,16 +161,15 @@ All circuits powered by START battery (alternator charging):
 | PS Cooler Fan (OUT8)          |        0A | Temp stable           |
 | **Dakota Digital (OUT9)**     |   **25A** | Always on             |
 | Wiper (OUT11)                 |        0A | Off                   |
-| **Ham Radio (OUT12)**         |    **1A** | Standby               |
 | **CT4 (OUT13)**               |   **10A** | Parking lights        |
-| DRL (OUT14)                   |        0A | Off - parked          |
 | **A/C Clutch (OUT17)**        |    **5A** | If summer             |
 | **iBooster Ignition (OUT19)** |    **5A** | Always on             |
 | **STX Intercom (OUT20)**      |    **1A** | Standby               |
+| DRL (OUT23)                   |        0A | Off - parked          |
 | **BCDC Charger**              |   **30A** | Normal rate           |
-| **TOTAL**                     |  **123A** |                       |
+| **TOTAL**                     |  **122A** |                       |
 
-**Alternator Load:** 123A of 270A capacity = **46% utilization** Excellent
+**Alternator Load:** 122A of 270A capacity = **45% utilization** Excellent
 
 ---
 
@@ -183,13 +177,13 @@ All circuits powered by START battery (alternator charging):
 
 | Scenario          | Total Load | Alternator | Utilization | Status    |
 | :---------------- | :--------- | :--------- | :---------- | :-------- |
-| Highway Driving   | 107A       | 270A       | 40%         | Excellent |
-| Hot City Driving  | 194A       | 270A       | 72%         | Good      |
-| Offroad Trail     | 207A       | 270A       | 77%         | Good      |
-| Emergency Braking | 166A       | 270A       | 61%         | Excellent |
-| Parked Idling     | 123A       | 270A       | 46%         | Excellent |
+| Highway Driving   | 106A       | 270A       | 39%         | Excellent |
+| Hot City Driving  | 193A       | 270A       | 71%         | Good      |
+| Offroad Trail     | 206A       | 270A       | 76%         | Good      |
+| Emergency Braking | 165A       | 270A       | 61%         | Excellent |
+| Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Realistic Case:** 207A (offroad with hot engine) = **63A margin**
+**Worst Realistic Case:** 206A (offroad with hot engine) = **64A margin**
 
 **Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
 

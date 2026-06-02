@@ -1,8 +1,7 @@
-/* Increase width of primary (left) sidebar */
-.md-sidebar--primary {
-  width: 14rem;
-}
-
+/* Increase width of primary (left) sidebar (desktop only).
+   Scoped to the desktop breakpoint so it does NOT override Material's
+   off-canvas hamburger drawer on mobile (<= 76.1875em), where the primary
+   sidebar must stay translated off-screen until the drawer is toggled. */
 @media screen and (min-width: 76.25em) {
   .md-sidebar--primary {
     width: 14rem;
@@ -26,11 +25,15 @@
   overflow: visible;
 }
 
-/* Hide expand/collapse toggles in navigation */
-.md-nav__toggle,
-.md-nav__toggle + label::before,
-label.md-nav__link {
-  display: none;
+/* Hide expand/collapse toggles in navigation (desktop only).
+   On mobile the toggles drive Material's collapsible hamburger drawer, so
+   they must remain functional below the desktop breakpoint. */
+@media screen and (min-width: 76.25em) {
+  .md-nav__toggle,
+  .md-nav__toggle + label::before,
+  label.md-nav__link {
+    display: none;
+  }
 }
 
 /* Expand main content to use full width when TOC is hidden */

@@ -4,103 +4,148 @@ hide:
 tags:
   - product-details
   - audio-systems
-  - fusion
+  - jl-audio
 ---
 
 # 6.2 Amplifier {#amplifier}
 
-6-channel Class-D marine amplifier with independent bridging for flexible speaker configuration.
+8-channel Class-D marine amplifier with integrated DSP. Each subwoofer runs on its own bridged channel pair @ 4Ω; four remaining channels drive the four cabin speakers.
 
 /// html | div.product-info
-![Fusion Apollo MS-AP61800](../images/fusion-apollo-ms-ap61800.jpg){ loading=lazy }
+![JL Audio MV800/8i](../images/jl-audio-mv800-8i.jpg){ loading=lazy }
 
-**Type:** 6-Channel Marine Amplifier
+**Type:** 8-Channel Marine Amplifier (with DSP)
 
-**Model:** MS-AP61800
+**Model:** MV800/8i
 
-**Part Number:** 010-02284-65
+**Part Number:** 010-03339-00
 
-**Manufacturer:** Fusion (Garmin)
+**Manufacturer:** JL Audio (Garmin)
 
-**Product Page:** [Fusion Apollo MS-AP61800][product-link]
+**Product Page:** [JL Audio MV800/8i][product-link]
 
-**Manual:** [Installation Manual][manual-link]
+**Manual:** [Owner's Manual / Install Guide][manual-link]
 
-**Mounting:** Cab side firewall (behind radio)
+**Mounting:** Under rear seat (mounting plate w/ clearance for Class-D thermals)
 
-**Power Source:** CONSTANT bus via 100A breaker
+**Power Source:** AUX battery+ direct via 100A inline CB (~3-4 ft, short feed)
 
 ///
 
 ## Specifications
 
-| Spec              |                  Value |
-| :---------------- | ---------------------: |
-| Total Power       |            1800W rated |
-| 6-Channel         |       6x 150W RMS @ 4Ω |
-| Bridged           |       3x 580W RMS @ 4Ω |
-| Class             |    D (high efficiency) |
-| Fuse Rating       |   125A electronic fuse |
-| Current Draw Idle |       1.32A @ 14.4V in |
-| Current Draw Max  |                    78A |
-| Dimensions        | 11.69" x 7.06" x 2.13" |
-| Weight            |               5.95 lbs |
-| Waterproof        |                   IPX2 |
-| Operating Temp    |          32°F to 122°F |
+All specs from the JL Audio MV800/8i Connection Guide unless otherwise noted.[^specs-manual]
+
+| Spec                      |                                                                                Value |
+| :------------------------ | -----------------------------------------------------------------------------------: |
+| Topology                  |                            2nd-Gen NexD2™ High-Speed Class D, unregulated MOSFET PSU |
+| Total Power               |                                                                          800W rated |
+| RMS @ 14.4V               |                              8× 75W @ 4Ω · 8× 100W @ 2Ω · 4× 200W bridged @ 4Ω |
+| RMS @ 12.5V               |                               8× 60W @ 4Ω · 8× 90W @ 2Ω · 4× 180W bridged @ 4Ω |
+| Min Impedance             |                                                  4Ω bridged · 2Ω unbridged |
+| Operating Voltage         |                                                                          10–15V DC |
+| Standby Current           |                                                                  **2.4 mA** (negligible parasitic) |
+| Recommended Fuse          |                                                                                  80A |
+| Min Copper Power/GND Wire |                                                                                4 AWG |
+| Power Terminal Capacity   |                                                          up to 2 AWG (no CCA — tinned Cu preferred) |
+| Remote Turn-On Wire       |                                                                        18 – 10 AWG |
+| Frequency Response        |                                                            12 Hz – 21 kHz (+0, −1 dB) |
+| THD+N @ rated RMS         |                                                                                 <1% |
+| Damping Factor            |                                              >100 / 50 Hz @ 4Ω · >50 / 50 Hz @ 2Ω |
+| DSP                       |                  AKM AK7738, 24-bit / 48 kHz — LPF/HPF/slope/EQ/bass boost via TüN |
+| Analog Input Range        |                                       250 mV – 16 V RMS (speaker-level capable, no LOC) |
+| Signal-to-Noise           |                                          99 dB (ref rated power), 80 dB (ref 1 W), A-wtd |
+| Preamp Outputs            |                                                            4× line-level, 4 V RMS max |
+| Cooling                   |                                                  Convection (no fan); 1" (2.5 cm) free space above shell required if enclosed |
+| IP Rating                 |                                          IPX2 (mounted vertically, connections down) |
+| Dimensions (L × W × H)    |     13.96" × 6.93" × 2.05" / 355 × 176 × 52 mm (chassis; connector clearance adds ~1.4" depth) |
+| Weight                    |                                                                              5.6 lbs |
+| Warranty                  |                                                                  2 years parts + labor |
+
+[^specs-manual]: JL Audio MV800/8i Connection Guide (`MV800/8i_MAN_071519`), pp. 2–4, on file at `~/Downloads/13698649.pdf` (Crutchfield manual mirror, retrieved 2026-06-01). Dimensions cross-checked against Garmin PH product page; Crutchfield's "14" × 8-3/8"" figure includes connector clearance beyond the chassis L×W.
 
 ## Channel Configuration
 
-| Channel | Mode    |   Output | Load        |
-| :------ | :------ | -------: | :---------- |
-| Ch 1+2  | Bridged | 580W RMS | Subwoofer   |
-| Ch 3    | Stereo  | 150W RMS | Front Left  |
-| Ch 4    | Stereo  | 150W RMS | Front Right |
-| Ch 5    | Stereo  | 150W RMS | Rear Left   |
-| Ch 6    | Stereo  | 150W RMS | Rear Right  |
+| Channels | Mode             |   Output | Load                               |
+| :------- | :--------------- | -------: | :--------------------------------- |
+| Ch 1+2   | Bridged @ 4Ω     | 200W RMS | Sub A (rear quarter, driver side)  |
+| Ch 3+4   | Bridged @ 4Ω     | 200W RMS | Sub B (rear quarter, pass. side)   |
+| Ch 5     | Stereo @ 4Ω      |  75W RMS | Front Left                         |
+| Ch 6     | Stereo @ 4Ω      |  75W RMS | Front Right                        |
+| Ch 7     | Stereo @ 4Ω      |  75W RMS | Rear Left                          |
+| Ch 8     | Stereo @ 4Ω      |  75W RMS | Rear Right                         |
 
-## Protection Features
+Each sub gets a dedicated bridged pair at 4Ω — directly matches the JL M6-8IB-S-GmTi-i-4 RMS rating (200W @ 4Ω SVC). No series wiring, no impedance mismatch, independent per-sub gain/EQ/delay via onboard DSP.
 
-- Reverse voltage protection
-- Input under/over voltage protection
-- Over temperature protection
-- Output short circuit protection
-- Ignition Safety Protected (SAE J1171)
+## Onboard DSP
 
-## Bridge Adapters
+Integrated DSP (AKM AK7738, 24-bit / 48 kHz) supports per-channel:
 
-Fusion includes bridge adapters with built-in magnets:
+- Parametric EQ
+- Time-alignment delay
+- Crossover (HPF/LPF) with selectable slope
+- Bass boost
+- Signal routing & mixing (e.g. summing left/right sub-RCA to both bridged sub pairs)
 
-- Magnets trigger "High Power Mode" when bridging
-- Adapters block unused speaker terminals
-- Adapter blocks one RCA input for mono subwoofer
+Configured via JL Audio TüN software:
+
+- **USB (PC/Mac)** — laptop with USB A/B cable to the amp's USB port. Fallback method.
+- **Bluetooth** — via the [VXi-BTC][bt-tuning] (JLid Bluetooth Communicator), wired to the amp's JLid-COMM port. Phone/tablet running TüN Mobile or TüN Express. **Primary tuning method on this build.**
+
+The amp's single JLid-COMM port is occupied by the VXi-BTC; no M-DRC-50 preset selector is installed (see [Bluetooth Tuning page → Design Decisions][bt-tuning] for rationale).
+
+## Bridged Speaker Wiring (Sub Pairs)
+
+The MV800/8i ships with **four 2-channel speaker harnesses** (A/B, C/D, E/F, G/H). For each bridged pair, the (+) lead is on the lower-channel harness and the (−) lead is on the *adjacent* harness — the bridged pair spans two harnesses, not one.[^specs-manual]
+
+| Bridged Pair | (+) wire (from harness)  | (−) wire (from harness)     |
+| :----------- | :----------------------- | :-------------------------- |
+| **Ch 1+2 → Sub A** | White (harness A)  | Gray/Black (harness B)      |
+| **Ch 3+4 → Sub B** | Green (harness C)  | Purple/Black (harness D)    |
+
+The unused leads on the same harnesses (Gray + White/Black on harness A/B; Purple + Green/Black on harness C/D) are **not connected** when running that pair bridged. Cap or trim them at the harness; do not connect to anything.
+
+Ch 5/6 (front speakers) and Ch 7/8 (rear speakers) run stereo unbridged from harnesses E/F and G/H respectively — standard +/− per channel.
 
 ## Wiring
 
-| Connection | Wire     | Source          | Notes                    |
-| :--------- | :------- | :-------------- | :----------------------- |
-| Power (+)  | 4 AWG    | CONSTANT bus    | Via 100A Blue Sea breaker |
-| Ground (−) | 4 AWG    | AUX battery (−) | Direct to terminal       |
-| Remote     | 18 AWG   | MS-RA670        | Turn-on signal           |
-| RCA Zone 1 | Shielded | MS-RA670        | Ch 3+4 (front)           |
-| RCA Zone 2 | Shielded | MS-RA670        | Ch 5+6 (rear)            |
-| RCA Sub    | Shielded | MS-RA670        | Ch 1+2 (bridged)         |
+| Connection | Wire     | Source          | Notes                                                 |
+| :--------- | :------- | :-------------- | :---------------------------------------------------- |
+| Power (+)  | 4 AWG    | AUX battery+ direct | Via 100A inline CB at battery (~3-4 ft)            |
+| Ground (−) | 4 AWG    | AUX battery (−)     | Direct to terminal (~3-4 ft)                       |
+| Remote     | 18 AWG   | MS-RA670        | Turn-on signal, bundled w/ RCA through trans tunnel   |
+| RCA Zone 1 | Shielded | MS-RA670        | Ch 5+6 (front), ~10-12 ft — high-quality shielded     |
+| RCA Zone 2 | Shielded | MS-RA670        | Ch 7+8 (rear), ~10-12 ft                              |
+| RCA Sub    | Shielded | MS-RA670        | Summed to Ch 1+2 and Ch 3+4 (bridged subs), ~10-12 ft |
+
+**Sub RCA routing:** The MS-RA670 has a single mono sub-out. Route it into one amp input and mirror it to both bridged sub pairs (Ch 1+2 and Ch 3+4) via the onboard DSP signal routing — no Y-splitter required.
 
 ## Circuit Protection
 
-Amplifier has 125A internal electronic fuse (no replacement necessary). External protection at CONSTANT bus:
+The MV800/8i has an internal 80A fuse (primary amp protection). External protection at the AUX battery protects the supply wire:
 
 - **Breaker:** Blue Sea 187-100A (100A) thermal circuit breaker
-- Protects 4 AWG wiring (rated 95A continuous, 100A with short runs)
-- Mount at CONSTANT bus in passenger wheel well
+- Protects 4 AWG wiring (rated 95A continuous, 100A acceptable for ~3-4 ft run)
+- Mount inline within 7" of AUX battery+ terminal (5th stacked lug)
+
+The 100A external CB is intentionally above the 80A internal fuse — the internal fuse remains the primary trip path under amp fault, while the external CB protects the wire from a short upstream of the amp.
 
 ## Mounting Location
 
-**Cab side firewall (behind radio)**
+**Under rear seat (driver side or center, mounted to floor with clearance for Class-D thermals)**
 
-- Shortest RCA runs from head unit
-- Central location for speaker wire routing
-- Power/ground run ~8-10 ft to AUX battery in passenger wheel well
-- Adequate ventilation for Class-D efficiency
+- Power feed ~3-4 ft direct from AUX battery+ (short feed, low loss)
+- Ground return ~3-4 ft to AUX battery−. All system grounds (head unit + amp) should land at the same point per the manual to avoid ground loops.[^specs-manual]
+- Centroid to all 4 speakers + 2 subs — minimizes speaker wire runs
+- RCA + remote bundled together from head unit through trans tunnel (~10-12 ft, high-quality shielded RCA required to avoid alternator whine)
+- Mounting plate with at least **1" (2.5 cm) clear air space above the shell** (manual requirement for enclosed-compartment mounting); convection-cooled, no fan
+- Orient with connections pointing downward where practical (preserves IPX2 rating)
+- Keyhole mounting screws — insert screws first, then drop amp onto them and slide
+- USB access (front of chassis) needed for TüN DSP tuning — leave service loop
+
+## Outstanding Items
+
+- [ ] DSP configuration: corner frequencies, sub delay, channel gain matching (set during install with TüN software + measurement)
 
 ## Related Documentation
 
@@ -115,5 +160,6 @@ Amplifier has 125A internal electronic fuse (no replacement necessary). External
 [speakers]: 03-speakers.md
 [subwoofer]: 04-subwoofer.md
 [aux-distribution]: ../01-power-systems/03-aux-battery-distribution/index.md
-[product-link]: https://www.garmin.com/en-US/p/677280/pn/010-02284-60/
-[manual-link]: https://static.garmin.com/pumac/Fusion_Apollo_Multichannel_Amplifiers_Install_EN-US.pdf
+[bt-tuning]: 06-bluetooth-tuning.md
+[product-link]: https://www.garmin.com/en-US/p/1707541/pn/010-03339-00
+[manual-link]: https://support.garmin.com/en-US/?partNumber=010-03339-00&tab=manuals

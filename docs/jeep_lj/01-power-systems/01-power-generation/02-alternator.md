@@ -48,10 +48,10 @@ tags:
 
 | Connection      | Destination                        | Notes                                                            |
 | :-------------- | :--------------------------------- | :--------------------------------------------------------------- |
-| Positive Output | START battery+ (driver wheel well) | See [START Battery Distribution][starter-battery] for wire specs |
+| Positive Output | START battery+ (driver rear wheel well) | See [START Battery Distribution][starter-battery] for wire specs |
 | Ground          | Engine block                       | Bonded via alternator mounting bolts                             |
 
-**Ground Path:** Alternator case → Engine block → Frame rail → START battery-
+**Ground Path:** Alternator case → Engine block → Engine bay ground bus → START battery- (driver rear wheel well)
 
 See [START Battery Distribution][starter-battery] for complete wire specifications (gauge, distance, voltage drop calculations).
 

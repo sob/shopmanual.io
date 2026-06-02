@@ -26,11 +26,11 @@ tags:
 
 Provides fused distribution for recovery and auxiliary systems powered by the AUX battery.
 
-**Location:** Passenger wheel well (co-located with AUX battery and circuit breakers)
+**Location:** Passenger rear wheel well (co-located with AUX battery and circuit breakers)
 
-**Power Source:** CONSTANT bus via 150A CB - see [Circuit Breakers][circuit-breakers]
+**Power Source:** AUX battery+ via inline 150A CB (~2 ft, local in rear wheel well) - see [Circuit Breakers][circuit-breakers]
 
-**Note:** Communications systems (GMRS, Intercom, Ham Radio) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
+**Note:** Communications systems (GMRS, Intercom) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 
 !!! note "Future-Proof Capacity"
 Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides 50A headroom for additional recovery or auxiliary systems.
@@ -47,15 +47,15 @@ Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides
 
 | Slot   | Fuse | Circuit                              | Wire Gauge | Distance | Voltage @ Load | Load | Notes                                               |
 | :----- | :--- | :----------------------------------- | :--------- | :------- | :------------- | :--- | :-------------------------------------------------- |
-| MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
-| MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger wheel well → cargo → under passenger seat |
-| MIDI-3 | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
-| ATC-1  | 15A  | Winch Contactor Trigger              | 14 AWG ✓   | ~13 ft   | 13.70V (0.8%)  | 10A  | Passenger wheel well → front bumper via frame rail  |
-| ATC-2  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
-| ATC-3  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
-| ATC-4  | -    | **[Available]**                      | -          | -        | -              | -    | -                                                   |
+| MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
+| MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
+| MIDI-3 | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-1  | -    | **\[Available\]**                      | -          | -        | -              | -    | (Was Winch Contactor Trigger - reallocated 2026-05-30 to BODY PDU CB43 for shorter routing; see [Winch][recovery-systems] and [Dashboard Controls][dashboard-controls]) |
+| ATC-2  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-3  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
+| ATC-4  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
 
-**Slot Utilization:** 3 of 7 used (2 MIDI + 1 ATC, 4 available)
+**Slot Utilization:** 2 of 7 used (2 MIDI, 5 available — ATC-1 freed after winch trigger reallocated to BODY PDU CB43)
 
 **Total Load:** 100A maximum (ARB 90A + Winch Trigger 10A)
 
@@ -72,7 +72,7 @@ Winch motor power (400A peak) connects directly to AUX battery positive terminal
 
 - [AUX Battery Distribution Overview][aux-battery]
 - [Circuit Breakers][circuit-breakers] - 150A CB protection
-- [PMU Outputs][pmu-outputs] - Communications system power (GMRS, Intercom, Ham Radio)
+- [PMU Outputs][pmu-outputs] - Communications system power (GMRS, Intercom)
 - [Standards Exceptions][standards-exceptions] - Winch protection strategy documentation
 
 **Connected Systems:**
@@ -87,3 +87,4 @@ Winch motor power (400A peak) connects directly to AUX battery positive terminal
 [aux-battery]: index.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [standards-exceptions]: ../STANDARDS-EXCEPTIONS.md
+[dashboard-controls]: ../../05-control-interfaces/05-dashboard-controls.md

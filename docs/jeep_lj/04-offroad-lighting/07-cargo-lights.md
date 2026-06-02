@@ -27,7 +27,7 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 **Quantity:** 2 pods
 
-**Mounting:** Flush mount inset on wheel well
+**Mounting:** Flush mount inset on rear wheel well (cargo area)
 
 **Power Source:** BODY PDU (via physical switch)
 
@@ -45,7 +45,7 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 **Controller:** [Blue Sea 4160 Push Button Switch][switch-link]
 
-**Switch Location:** Top of wheel well (accessible from tailgate)
+**Switch Location:** Top of rear wheel well (accessible from tailgate)
 
 **Wiring:** BODY PDU CB20 (10A) → Switch → Cargo lights → Ground
 

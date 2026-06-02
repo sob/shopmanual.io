@@ -76,7 +76,7 @@ See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details
 
 ## Mounting
 
-- **Location:** Passenger wheel well near AUX battery (water-protected, accessible for LED visibility)
+- **Location:** Passenger rear wheel well near AUX battery (water-protected, accessible for LED visibility)
 - **Installation:** See [Section 1 Installation Checklist][installation-checklist]
 
 ## Temperature Sensor Installation
@@ -105,7 +105,7 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 **Installation Notes:**
 
 1. Install ring terminal on AUX battery positive terminal bolt
-2. Route sensor cable to BCDC (short run - both in passenger wheel well)
+2. Route sensor cable to BCDC (short run - both in passenger rear wheel well)
 3. Plug into BCDC temperature sensor port (2-pin connector)
 
 [redarc-bcdc]: https://www.redarcelectronics.com/products/the-manager30

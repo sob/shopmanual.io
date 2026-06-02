@@ -8,7 +8,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ## Winch Circuit - No External Overcurrent Protection
 
-**Component:** WARN VR EVO 10-S Winch
+**Component:** WARN ZEON 10-S Winch
 
 **Decision:** No external circuit breaker or fuse
 
@@ -22,7 +22,7 @@ This document tracks intentional deviations from general electrical standards wh
 - Designed for direct battery connection
 - Contactor provides disconnect capability
 
-**Product Page:** [WARN VR EVO 10-S][warn-product]
+**Product Page:** [WARN ZEON 10-S][warn-product]
 
 **Installation Manual:** [WARN Installation Guide][warn-manual]
 
@@ -186,9 +186,9 @@ It is intentional adherence to:
    - Thermal time constant >> cranking duration
    - No fire hazard during normal cranking
 
-2. **Clutch Safety Interlock**
-   - Prevents starter engagement unless clutch depressed
-   - Reduces accidental cranking scenarios
+2. **Brake + START Button + P/N Interlock**
+   - Prevents starter engagement unless brake pressed, START button held, and shifter in P or N
+   - Triple gate eliminates accidental cranking and in-gear cranking
 
 3. **Two-Stage Relay Control**
    - Cole Hersee 24213 solenoid controls high current
@@ -550,8 +550,8 @@ Before flagging as issues, verify these intentional design choices:
 
 ---
 
-[warn-product]: https://www.warn.com/
-[warn-manual]: https://www.warn.com/
+[warn-product]: https://www.warn.com/products/zeon-10-s-89611
+[warn-manual]: https://www.warn.com/products/zeon-10-s-89611
 [aux-battery-distribution]: 03-aux-battery-distribution/index.md
 [recovery-systems]: ../08-exterior-systems/01-winch.md
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md

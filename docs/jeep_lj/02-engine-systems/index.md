@@ -19,6 +19,7 @@ Engine bay systems and critical vehicle subsystems required for safe vehicle ope
 - **[2.6 Radiator Fan][radiator-fan]** - Electric radiator cooling fan system
 - **[2.7 Grid Heater][grid-heater]** - Cummins R2.8 cold-start grid heater relay and control
 - **[2.8 Fuel System][fuel-system]** - Lift pump control circuit (replaces factory PDC/PCM logic)
+- **[2.11 Runaway Protection][runaway-protection]** - Mishimoto catch can + AMOT 4261M manual air shutoff
 
 ## System Overview
 
@@ -40,6 +41,7 @@ Critical safety systems (brake booster, starter) have direct battery connections
 [radiator-fan]: 06-radiator-fan.md
 [grid-heater]: 07-grid-heater.md
 [fuel-system]: 08-fuel-system.md
+[runaway-protection]: 11-runaway-protection.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md

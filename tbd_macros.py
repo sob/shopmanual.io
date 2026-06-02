@@ -24,7 +24,8 @@ fetch fails (no gh / no token), pages render a notice instead of breaking.
 import json
 import os
 import re
-import subprocess
+import urllib.error
+import urllib.request
 
 import jinja2
 
@@ -57,36 +58,60 @@ def _repo_slug():
     return m2.group(1) if m2 else None
 
 
+def _next_link(link_header):
+    """Extract the rel="next" URL from a GitHub Link response header, if any."""
+    for part in (link_header or "").split(","):
+        m = re.search(r'<([^>]+)>;\s*rel="next"', part)
+        if m:
+            return m.group(1)
+    return None
+
+
 def _fetch_tbds():
-    """Return list of open issues labeled `tbd` with parsed labels. None on failure."""
+    """Open issues labeled `tbd` via the GitHub REST API. None on failure.
+
+    Uses urllib (stdlib) so it runs anywhere the build runs -- including
+    Cloudflare Pages, which has no `gh` CLI. The repo is public, so anonymous
+    requests work; set GITHUB_TOKEN / GH_TOKEN to raise the rate limit.
+    """
     repo = _repo_slug()
     if not repo:
         return None
-    try:
-        out = subprocess.run(
-            ["gh", "issue", "list", "-R", repo, "--state", "open",
-             "--label", "tbd", "--limit", "300",
-             "--json", "number,title,url,body,labels"],
-            capture_output=True, text=True, timeout=30, check=True,
-        ).stdout
-    except (subprocess.CalledProcessError, subprocess.TimeoutExpired, FileNotFoundError):
-        return None
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "tbd-macros"}
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
 
+    url = (f"https://api.github.com/repos/{repo}/issues"
+           "?labels=tbd&state=open&per_page=100")
     issues = []
-    for it in json.loads(out or "[]"):
-        names = {l["name"] for l in it.get("labels", [])}
-        priority = next(
-            (n.split("/", 1)[1] for n in names if n.startswith("priority/")), None
-        )
-        issues.append({
-            "number": it["number"],
-            "title": it["title"],
-            "url": it["url"],
-            "desc": _first_line(it.get("body", "")),
-            "projects": {n.split("/", 1)[1] for n in names if n.startswith("project/")},
-            "areas": {n.split("/", 1)[1] for n in names if n.startswith("area/")},
-            "priority": priority,
-        })
+    try:
+        for _ in range(20):  # pagination safety bound
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                page = json.load(resp)
+                url = _next_link(resp.headers.get("Link", ""))
+            for it in page:
+                if "pull_request" in it:        # /issues also returns PRs
+                    continue
+                names = {l["name"] for l in it.get("labels", [])}
+                priority = next(
+                    (n.split("/", 1)[1] for n in names if n.startswith("priority/")),
+                    None,
+                )
+                issues.append({
+                    "number": it["number"],
+                    "title": it["title"],
+                    "url": it.get("html_url", ""),
+                    "desc": _first_line(it.get("body", "")),
+                    "projects": {n.split("/", 1)[1] for n in names if n.startswith("project/")},
+                    "areas": {n.split("/", 1)[1] for n in names if n.startswith("area/")},
+                    "priority": priority,
+                })
+            if not url:
+                break
+    except (urllib.error.URLError, TimeoutError, ValueError, OSError):
+        return None
     return issues
 
 
@@ -150,8 +175,8 @@ def define_env(env):
         issues = _issues()
         if issues is None:
             return ('!!! failure "TBD tracker unavailable"\n\n'
-                    "    Could not fetch issues from GitHub. Check `gh` auth or "
-                    "`GH_TOKEN` in CI.\n")
+                    "    Could not reach the GitHub issues API at build time "
+                    "(network or rate limit). Set `GITHUB_TOKEN` to raise the limit.\n")
 
         # auto-derive project/area from the current page unless overridden
         d_project, d_area = _derive(_page_src_uri(ctx))

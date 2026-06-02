@@ -55,24 +55,13 @@ See [PMU Outputs][pmu-outputs] for complete configuration.
 
 **Components:** 10-15 ft vacuum line (1/4" ID), check valve, vacuum reservoir, tee fittings
 
-## R2.8 ECM A/C Integration (Optional)
+## R2.8 ECM A/C Integration
 
-The R2.8 ECM may have an A/C request input that enables idle speed bump when the compressor engages. This compensates for the additional load and prevents rough idle.
-
-| Signal      | Direction      | Purpose                             | Status               |
-| :---------- | :------------- | :---------------------------------- | :------------------- |
-| A/C Request | PMU → R2.8 ECM | Tell ECM when A/C clutch is engaged | TBD - verify ECM pin |
-
-**If ECM has A/C input:** Wire PMU OUT17 (or parallel signal) to ECM A/C request pin.
-
-**If ECM lacks A/C input:** No action needed - idle may dip slightly when A/C engages but not critical.
+The CM2220 ECM used by the R2.8 has no A/C request input pin, so PMU-to-ECM A/C signaling is not applicable for this build. A/C clutch engagement may cause a slight idle dip but not enough to require compensation.
 
 ## Outstanding Items
 
-- [ ] Verify if R2.8 CM2220 ECM has A/C request input pin (check Cummins wiring diagram via QuickServe Online)
-- [ ] If available, wire A/C signal from PMU to ECM for idle bump compensation
-
-See [installation checklist][install-checklist] for build tasks.
+None - design complete. See [installation checklist][install-checklist] for build tasks.
 
 ## Related Documentation
 

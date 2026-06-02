@@ -13,7 +13,8 @@ All wire runs require appropriate protection based on location and environment:
 
 | Method              | Application                                 | Products                                        |
 | :------------------ | :------------------------------------------ | :---------------------------------------------- |
-| **Split Loom**      | General protection, bundling multiple wires | 1/4" to 1" diameter, slit for easy installation |
+| **Braided Sleeve (expandable)** | Preferred wrap for power runs and cabin/trunk bundles | PET expandable braid sized to bundle OD; plain or with a tracer stripe for harness ID — see [Protective Sleeve & Tracers][sleeve-convention] |
+| **Split Loom**      | General protection, bundling multiple wires; short/branchy small-wire runs | 1/4" to 1" diameter, slit for easy installation |
 | **Heat Sleeve**     | Engine bay, exhaust proximity               | Fiberglass sleeve rated 500°F+, 1/2" to 1"      |
 | **Abrasion Sleeve** | Frame rail contact, sharp edges             | Braided nylon or polyester                      |
 | **P-Clamps**        | Securing runs to frame/body                 | Rubber-lined, stainless steel                   |
@@ -44,53 +45,73 @@ All wire runs require appropriate protection based on location and environment:
 
 ---
 
-## 🔧 Driver Wheel Well (START Battery)
+## 🔧 Driver Rear Wheel Well (START Battery)
 
 **High-current power distribution from START battery:**
 
-| Circuit                       | Wire Gauge | Distance | Destination                    | Current        | Notes                                                |
-| :---------------------------- | :--------- | :------- | :----------------------------- | :------------- | :--------------------------------------------------- |
-| **Alternator charging input** | 2/0 AWG    | 8 ft     | FROM Alternator (engine)       | 270A           | Charges START battery - see [Alternator][alternator] |
-| **Starter motor power**       | 2/0 AWG    | 6 ft     | TO Starter motor               | 400-600A       | Brief cranking load - see [Starter][starter]         |
-| **PMU24 power feed**          | 2/0 AWG    | 7 ft     | TO PMU24 (engine bay)          | 220A max       | Via 250A CB - see [PMU][pmu]                         |
-| **BCDC input feed**           | 4 AWG      | 5-6 ft   | TO BCDC (passenger wheel well) | 50-55A         | Via 80A CB - see [BCDC][bcdc]                        |
-| **Primary ground**            | 2/0 AWG    | 8 ft     | TO Engine bay ground bus       | 600A+ peak     | Primary return path                                  |
-| **Battery cross-ground**      | 1/0 AWG    | 5-6 ft   | TO AUX battery- (passenger)    | BCDC reference | Critical for BCDC operation                          |
+| Circuit                       | Wire Gauge | Distance | Destination                         | Current        | Notes                                                |
+| :---------------------------- | :--------- | :------- | :---------------------------------- | :------------- | :--------------------------------------------------- |
+| **Alternator charging input** | 2/0 AWG    | 8 ft     | FROM Alternator (engine bay)        | 270A           | Charges START battery - see [Alternator][alternator] |
+| **Starter motor power**       | 2/0 AWG    | 6 ft     | TO Starter motor (engine bay)       | 400-600A       | Brief cranking load - see [Starter][starter]         |
+| **PMU24 power feed**          | 2/0 AWG    | 7 ft     | TO PMU24 (engine bay)               | 220A max       | Via 250A CB - see [PMU][pmu]                         |
+| **BCDC input feed**           | 4 AWG      | 5-6 ft   | TO BCDC (passenger rear wheel well) | 50-55A         | Via 80A CB - see [BCDC][bcdc]                        |
+| **Primary ground**            | 2/0 AWG    | 3 ft     | TO Rear frame rail                  | 600A+ peak     | Primary return path                                  |
+| **Battery cross-ground**      | 1/0 AWG    | 5-6 ft   | TO AUX battery- (passenger)         | BCDC reference | Critical for BCDC operation                          |
 
-**Routing:** Frame rail along driver side, through wheel well to engine bay and firewall
+**Routing:** Driver rear wheel well → up inside driver rear quarter sill → forward along **inside floor board / side wall (driver side)** → driver A-pillar area → driver-side firewall grommet → engine bay. Path is fully inside the body (no exposed frame rail). BCDC input (4 AWG) takes the H3 cross-cab path instead (under rear bench seat to passenger side).
 
 ---
 
-## 🔋 Passenger Wheel Well (AUX Battery)
+## 🔋 Passenger Rear Wheel Well (AUX Battery)
 
 **Power distribution from AUX battery:**
 
-| Circuit                           | Wire Gauge | Distance | Destination                            | Current             | Notes                                                                |
-| :-------------------------------- | :--------- | :------- | :------------------------------------- | :------------------ | :------------------------------------------------------------------- |
-| **Warn VR EVO 10-S Winch power**  | 1/0 AWG    | 13 ft    | TO Front bumper winch                  | 250A typ, 400A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
-| **Warn VR EVO 10-S Winch ground** | 1/0 AWG    | 13 ft    | TO Winch motor ground                  | 250A typ, 400A peak | Return path via frame rail                                           |
-| **CONSTANT bus bar**              | 1/0 AWG    | 3 ft     | TO CONSTANT bus (passenger wheel well) | 254A max            | Feeds SwitchPros, SafetyHub, BODY PDU                                |
-| **BCDC output**                   | 4 AWG      | Short    | FROM BCDC (passenger wheel well)       | 50A                 | Charging input to AUX battery                                        |
-| **SwitchPros outputs**            | Various    | TBD      | TO Engine bay/front                    | ~100A               | Offroad lighting power - routing TBD                                 |
-| **Primary ground**                | 2/0 AWG    | 3 ft     | TO Rear frame rail                     | 569A peak           | Winch + accessories return                                           |
-| **Cross-ground reference**        | 1/0 AWG    | 5-6 ft   | FROM START battery- (driver)           | BCDC reference      | Critical for BCDC operation                                          |
+| Circuit                                | Wire Gauge | Distance | Destination                                       | Current             | Notes                                                                |
+| :------------------------------------- | :--------- | :------- | :------------------------------------------------ | :------------------ | :------------------------------------------------------------------- |
+| **Warn ZEON 10-S Winch power**       | 1/0 AWG    | 13 ft    | TO Front bumper winch                             | 250A typ, 409A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
+| **Warn ZEON 10-S Winch ground**      | 1/0 AWG    | 13 ft    | TO Winch motor ground                             | 250A typ, 409A peak | Return path - routing TBD                                            |
+| **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~232A max           | Protected by 300A CB at battery - feeds SwitchPros, BODY PDU, Fusion |
+| **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A CB at battery                                      |
+| **BCDC output**                        | 4 AWG      | Short    | FROM BCDC (local in wheel well)                   | 50A                 | Charging input to AUX battery                                        |
+| **Primary ground**                     | 2/0 AWG    | 3 ft     | TO Rear frame rail                                | 569A peak           | Winch + accessories return                                           |
+| **Cross-ground reference**             | 1/0 AWG    | 5-6 ft   | FROM START battery- (driver)                      | BCDC reference      | Critical for BCDC operation                                          |
 
-**Routing:** Frame rail from passenger wheel well to front bumper (winch), rear to cargo, TBD to engine bay
+**Routing:**
+
+- **Forward feed (2/0 AWG) + Winch power/ground (2× 1/0 AWG) (H1):** Passenger rear wheel well → up inside passenger rear quarter sill → forward along **inside floor board / side wall (passenger side)** → A-pillar area → through passenger firewall (forward feed terminates at Firewall CONSTANT bus; winch cables continue to engine bay → grille → front bumper). Three heavy cables bundled together. Fully inside body, no exposed frame rail.
+- **BCDC input + cross-ground reference (H3):** **Under the rear bench seat** cushion → passenger rear wheel well. Short, dry, physically protected.
+- **SafetyHub local feed (2 AWG):** ~2 ft local in wheel well, no routing concern.
 
 ---
 
-## ⚙️ Engine Bay & CONSTANT Bus
+## ⚙️ Engine Bay
 
 **Engine compartment wiring:**
 
 | Circuit                   | Wire Gauge | Distance | Source                | Destination           | Current    | Notes                         |
 | :------------------------ | :--------- | :------- | :-------------------- | :-------------------- | :--------- | :---------------------------- |
-| **Alternator to battery** | 2/0 AWG    | 8 ft     | Alternator            | START battery+        | 270A       | See Driver Wheel Well section |
-| **Starter motor**         | 2/0 AWG    | 6 ft     | START battery+        | Starter motor         | 400-600A   | See Driver Wheel Well section |
+| **Alternator to battery** | 2/0 AWG    | 8 ft     | Alternator            | START battery+        | 270A       | See Driver Rear Wheel Well section |
+| **Starter motor**         | 2/0 AWG    | 6 ft     | START battery+        | Starter motor         | 400-600A   | See Driver Rear Wheel Well section |
 | **Engine block ground**   | 2/0 AWG    | 8 ft     | Engine block          | Engine bay ground bus | 600A+ peak | Starter/alternator return     |
 | **Frame ground**          | 2/0 AWG    | 3 ft     | Engine bay ground bus | Front frame rail      | 600A+ peak | Chassis ground point          |
 
-**BCDC Location:** Passenger wheel well (near AUX battery) - charges AUX battery from START battery/alternator
+**BCDC Location:** Passenger rear wheel well (near AUX battery) - charges AUX battery from START battery/alternator
+
+---
+
+## 🏠 Firewall Cluster (Cabin Side, Passenger Area)
+
+**Cabin distribution cluster mounted on the firewall** - co-located components fed by the 2/0 AWG forward feed from AUX battery:
+
+| Component                              | Wire Gauge | Distance | Source/Destination                         | Notes                                           |
+| :------------------------------------- | :--------- | :------- | :----------------------------------------- | :---------------------------------------------- |
+| **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 300A master CB       | Heavy feed through cabin trunk - routing TBD    |
+| **Bus → SwitchPros**                   | 2 AWG      | ~2 ft    | TO SwitchPros power module                 | Via 150A CB                                     |
+| **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
+| **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 100A CB at AUX battery (not via firewall bus) |
+| **SwitchPros Ground Bus**              | 1 AWG      | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
+| **SwitchPros control cable**           | Multi-pin  | ~5 ft    | TO SwitchPros panel on dash                | Standard SwitchPros cable                       |
+| **SwitchPros outputs (12 circuits)**   | Various    | TBD      | TO various loads (front/cabin/rear/roof)   | Mostly short forward fan-out from firewall      |
 
 ---
 
@@ -141,8 +162,8 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Routing Path                     | Circuits                         | Method         | Notes                         |
 | :------------------------------- | :------------------------------- | :------------- | :---------------------------- |
-| **Cab → Cargo**                  | Rear lights, compressor, lockers | TBD            | Under seats or floor channels |
-| **Passenger wheel well → Cargo** | SwitchPros rear outputs          | Via frame rail | Rear auxiliary power          |
+| **Cab → Cargo**                       | Rear lights, compressor, lockers | TBD | Under seats or floor channels |
+| **Passenger rear wheel well → Cargo** | SwitchPros rear outputs          | TBD | Rear auxiliary power (avoid exposed frame rail) |
 
 ---
 
@@ -164,8 +185,8 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Location                      | Ground Bus            | Wire Gauge | Connections                                           | Notes                     |
 | :---------------------------- | :-------------------- | :--------- | :---------------------------------------------------- | :------------------------ |
-| 🔧 **Driver wheel well**      | Engine bay ground bus | 2/0 AWG    | START battery-, engine block, frame rail, AUX battery | Primary ground hub        |
-| 🔋 **Passenger wheel well**   | Rear frame rail       | 2/0 AWG    | AUX battery-                                          | AUX battery ground point  |
+| 🔧 **Driver rear wheel well**      | Engine bay ground bus | 2/0 AWG    | START battery-, engine block, frame rail, AUX battery | Primary ground hub        |
+| 🔋 **Passenger rear wheel well**   | Rear frame rail       | 2/0 AWG    | AUX battery-                                          | AUX battery ground point  |
 | 🏠 **Firewall (cabin side)**  | Firewall stud bus     | 4 AWG max  | Body electronics, sensors                             | Cabin electronics ground  |
 | ⚙️ **Firewall (engine side)** | Engine bay ground bus | Various    | PMU, controllers, accessories                         | Engine bay ground hub     |
 | 🌐 **SwitchPros controller**  | SwitchPros ground bus | 1 AWG      | Lighting/aux loads                                    | Dedicated lighting ground |
@@ -174,9 +195,13 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 ## Related Documentation
 
+- [Harness Inventory][harness-inventory] - Fabricatable harness overview (H1–H9): summary, harness map, bundle interference assessment, and optimization notes
+- [Build Sheet — Power Distribution][power-build] - H1, H2, H3 with tub-map diagram
+- [Build Sheet — Lighting & SwitchPros][lighting-build] - H4, H5 with tub-map diagram
+- [Build Sheet — Controls, Recovery & Drivetrain][controls-build] - H6–H9 with tub-map diagram
 - [Grounding Architecture][grounding] - Complete grounding system design
-- [START battery Distribution][starter-battery] - Driver wheel well power
-- [AUX battery Distribution][aux-battery] - Passenger wheel well power
+- [START battery Distribution][starter-battery] - Driver rear wheel well power
+- [AUX battery Distribution][aux-battery] - Passenger rear wheel well power
 - [PMU][pmu] - Power management unit
 - [SafetyHub][safetyhub] - Fused distribution
 - [BCDC][bcdc] - DC-DC charger
@@ -184,6 +209,12 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 - [Starter][starter] - Starter motor routing
 - [Firewall Ingress][firewall-ingress] - Detailed firewall penetrations and grommet specifications
 - [Recovery Systems][recovery-systems] - Winch installation and wiring
+
+[harness-inventory]: 03-harness-inventory.md
+[power-build]: 04-harness-power-distribution.md
+[lighting-build]: 05-harness-lighting-switchpros.md
+[controls-build]: 06-harness-controls-recovery-drivetrain.md
+[sleeve-convention]: 03-harness-inventory.md#sleeve-convention
 
 [grounding]: ../05-grounding/index.md
 [starter-battery]: ../02-starter-battery-distribution/index.md

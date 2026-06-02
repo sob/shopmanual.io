@@ -156,6 +156,36 @@ grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -
 - **📋 Medium:** Can determine during build (exact mounting spots)
 - **Low:** Nice to have (aesthetic choices, optional features)
 
+### 7. CITE CRITICAL FACTS
+
+Every critical number, measurement, or fact MUST carry a source, rendered as a footnote at the bottom of the page. "Critical" means anything that, if wrong, costs money or scrap: bolt patterns and hole spacings, bore/stroke, wire gauges and current ratings, torque specs, part-number fitment claims, pinouts, dimensions you'll cut/drill/order to.
+
+This rule exists because unsourced specs have shipped as fact. The iBooster firewall pattern was documented as "72×72mm M8" with no source, a DXF was cut to match, and a vendor later corrected it to 60×80mm — invalidating the fabrication file. **If you cannot cite it, you do not know it: mark it TBD and add it to the tracker. NEVER guess.**
+
+**Acceptable sources (in order of trust):**
+
+1. Manufacturer datasheet / OEM service manual (cite document number + page)
+2. Vendor confirmation (cite name + date, e.g., "Back Bay Customs, 2026-05-30")
+3. First-party measurement of the actual part in hand (cite "measured, <date>")
+
+A forum post, a guess, or "it's probably like the other one" is NOT a source — that's a TBD.
+
+**DO:**
+
+```markdown
+Firewall pattern is 60×80mm, mounted 80mm vertical.[^firewall-pattern]
+
+[^firewall-pattern]: Back Bay Customs (vendor), email 2026-05-30. First vendor-confirmed figure; supersedes the earlier unsourced 72×72mm estimate.
+```
+
+**DON'T:**
+
+- State a measurement as fact with no footnote
+- Cite "common knowledge" or another build for a number you'll fabricate to
+- Bury the provenance in a commit message instead of the page itself
+
+**Footnotes** are enabled in `mkdocs.yml` (`footnotes` extension). Use `[^id]` inline and define `[^id]:` at the bottom of the file; MkDocs collects all definitions into a footnote block at the page bottom regardless of where they're defined.
+
 ## Documentation Architecture
 
 ### Section Organization (Category-Based Numbering)

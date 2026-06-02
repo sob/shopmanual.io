@@ -33,7 +33,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | ATC-1                  | Winch Trigger            |      0A |  10A | Recovery only     | Contactor coil            |
 | **BODY PDU**           |                          |         |      |                   |                           |
 | CB30                   | Fusion Radio (memory)    |      1A |   1A | Continuous        | Clock/presets             |
-| CB44                   | Fusion Radio (amp)       |      0A |  15A | Audio playing     | Ignition-triggered        |
+| CB44                   | Fusion Radio (head unit) |      0A |  15A | Audio playing     | Ignition-triggered        |
 | CB48                   | USB Charging (2x 75W)    |      2A |  13A | Devices charging  | Always on                 |
 | CB39                   | WolfBox Camera           |      2A |  10A | Continuous        | Dash + backup             |
 | CB45                   | Driver Heated Seat       |      0A |   5A | Winter            | Relay K21                 |
@@ -54,7 +54,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 - **Capacity:** 135Ah nominal
 - **Usable capacity:** 108Ah (80% DOD safe for LiFePO4)
-- **Heated BMS:** Enables charging down to -4°F (critical for wheel well mount)
+- **Heated BMS:** Enables charging down to -4°F (critical for rear wheel well mount)
 - **Recovery rate:** At 50A charging, recovers 108Ah in ~2.2 hours
 
 ## Scenario Analysis
@@ -87,7 +87,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Fog Light (OUTPUT-3)**         |  **6A** | Visibility         |
 | **Rear Lights (OUTPUT-12)**      |  **5A** | License plate area |
 | **Fusion Radio memory (CB30)**   |  **1A** | Always on          |
-| **Fusion Radio amp (CB44)**      | **10A** | Music moderate     |
+| **Fusion head unit (CB44)**      | **10A** | Music moderate     |
 | **USB Charging (CB48)**          |  **5A** | Devices            |
 | **WolfBox Camera (CB39)**        |  **2A** | Always recording   |
 | **Driver Heated Seat (CB45)**    |  **3A** | Cycling            |
@@ -215,7 +215,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Rock Lights (OUTPUT-6)**     |  **3A** | Ground lighting  |
 | **Footwell Lights (MLC-RW)**   |  **1A** | Ambiance         |
 | **Fusion Radio memory (CB30)** |  **1A** | Always on        |
-| **Fusion Radio amp (CB44)**    |  **8A** | Music            |
+| **Fusion head unit (CB44)**    |  **8A** | Music            |
 | **USB Charging (CB48)**        | **10A** | Multiple devices |
 | **TOTAL**                      | **27A** |                  |
 

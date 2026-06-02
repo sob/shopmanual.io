@@ -40,7 +40,7 @@ Documents ground bus bars for the electrical system. Direct battery ground conne
 
 ## Navigation Scenarios
 
-**"Where does [component] ground?"** → Check appropriate ground file or battery distribution
+**"Where does \[component\] ground?"** → Check appropriate ground file or battery distribution
 
 **"What grounds directly to battery negative?"** → See battery distribution pages (1.2, 1.3)
 

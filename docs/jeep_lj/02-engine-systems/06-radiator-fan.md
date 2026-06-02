@@ -32,8 +32,10 @@ Brushless PWM electric fan with automatic temperature control via PMU24. J1939 C
 
 ## Specifications
 
-- **Current:** 53A @ full speed, 32A @ 60%, 16A @ 30%
-- **Airflow:** 4188 CFM installed, 5690 CFM free air
+- **Current:** 53A @ full speed, 32A @ 60%, 16A @ 30% — ⚠️ unverified[^fan-specs]
+- **Airflow:** 4188 CFM installed, 5690 CFM free air — ⚠️ unverified[^fan-specs]
+
+[^fan-specs]: ⚠️ UNVERIFIED. Neither GM nor ACDelco publishes a current-draw or CFM figure for fan 84100128 (now superseded by 84790788), so the 53A / 4188 CFM values could not be confirmed against a manufacturer source (checked 2026-05-30). These drive PMU output sizing (OUT2+3+4) and wire gauge — confirm by clamp-meter measurement on the actual fan before finalizing, or treat as an engineering estimate.
 
 ## Temperature Control
 

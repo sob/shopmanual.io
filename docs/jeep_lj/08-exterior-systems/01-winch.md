@@ -22,53 +22,30 @@ tags:
 
 ///
 
+**Product Image:**
+
+![Warn Zeon 10-S Winch](../../images/warn-zeon-10s-winch.jpg)
+
 ## Electrical Specifications
 
-- **Peak Amperage Draw:** 450A (at full load/stall - brief periods only)
+- **Peak Amperage Draw:** 409A (at full load/stall - brief periods only)[^winch-model]
 - **Typical Operating Draw:** 80-250A (most recovery operations)
-- **Main Power Source:** AUX battery (passenger wheel well - direct connection, no fuse/breaker)
+- **Main Power Source:** AUX battery (passenger rear wheel well - direct connection, no fuse/breaker)
   - See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing, voltage drop calculations)
   - **System Voltage:** 13.8V (alternator charging - engine running during winch operations)
   - **Protection:** None - direct connection (see justification below)
 
-## Circuit Protection - Engineering Justification {#winch-circuit-protection}
+[^winch-model]: Model confirmed **WARN ZEON 10-S** (owner, 2026-05-30) — the earlier "ZEON 10-S" naming was incorrect. WARN's published peak draw for the ZEON 10-S is **409A @ 10,000 lb** (pull table: 62/144/215/280/353/409A); the previously documented 450A (≈ ZEON Platinum) was conservative. 1/0 AWG cable and the integrated contactor retain margin above 409A; WARN service battery leads for the 10-S are **2 AWG** (our 1/0 AWG is a deliberate upsize). Source: [WARN ZEON 10-S (89611)](https://www.warn.com/products/zeon-10-s-89611) (checked 2026-05-30).
 
-**Design Decision:** No external circuit breaker per WARN manufacturer specifications
+## Circuit Protection {#winch-circuit-protection}
 
-**Manufacturer Specification:**
-
-- WARN Part: VR EVO 10-S Winch
-- Installation Manual: [WARN VR EVO Installation Guide][warn-manual]
-- Specification: "No external fuse or circuit breaker required"
-
-**Protection Strategy:**
-
-1. **Internal Thermal Protection:** Winch motor has integrated thermal cutoff
-2. **Contactor Disconnect:** Provides isolation when not in use
-3. **Cable Sizing:** 1/0 AWG rated 325A continuous, adequate for 450A brief peaks
-4. **Duty Cycle:** Winch operations are brief (10-30 seconds typical recovery)
-
-**Automotive Industry Standard:**
-
-- Factory vehicle winch installations do NOT use external circuit breakers
-- Winch internal protection is designed for automotive fault scenarios
-- This differs from marine practice (ABYC E-11) which requires all circuits fused
-
-**Fault Scenarios Covered:**
-
-- **Motor Stall:** Internal thermal protection trips before fire hazard
-- **Cable Short:** 1/0 AWG fuses open at ~800A+ (well above 450A peak current)
-- **Contactor Weld:** Manual disconnect at battery terminal provides emergency shutoff
-
-**Standards Applied:** SAE J1128 (automotive), WARN manufacturer specifications
-
-**This is NOT an oversight** - it is intentional adherence to manufacturer specifications and automotive best practices. See [Standards Exceptions][standards-exceptions] for complete documentation.
+No external circuit breaker — per the [WARN ZEON 10-S installation manual][warn-manual]. Protection: integrated thermal cutoff, contactor isolation (emergency shutoff: disconnect at battery terminal), and 1/0 AWG cable (adequate for 409A brief peaks). Automotive practice (SAE J1128) differs from marine (ABYC E-11), which fuses all circuits. See [Standards Exceptions][standards-exceptions].
 
 ## Contactor/Solenoid
 
 - **Type:** Warn Zeon 10-S integrated contactor (included with winch)
 - **Location:** Mounted on winch motor housing
-- **Rating:** 450A+ switching capability
+- **Rating:** Rated for full stall current (≥409A switching)
 - **Function:** High-current switching for winch motor direction and power
 
 ## Control System
@@ -115,19 +92,23 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 
 **Control Wiring:**
 
-- **Power Source:** SafetyHub ATC-1 (15A fuse) - AUX battery powered
-- **Dash Rocker:** SafetyHub ATC-1 → Dash rocker switch → Winch contactor IN/OUT signals
-- **Remote:** Wired in parallel with dash rocker (IN and OUT signals)
-- **Wire Gauge:** 14 AWG (low-current control signals only, ~2A max)
-- **Routing:** SafetyHub (wheel well) → dash switch → through firewall → winch contactor (front bumper)
-- **Remote Connection:** Paralleled at winch contactor terminals (IN/OUT)
+- **Power Source:** BODY PDU CB43 (10A fuse) - sourced from Firewall CONSTANT Bus (AUX battery)
+- **Dash Switch:** [CH4X4-TOY-D-WINIO][ch4x4-winch] dual-momentary push, Toyota-style (1.54" × 0.83" cutout) - see [Dashboard Controls][dashboard-controls]
+- **Signal Path:** BODY PDU CB43 → CH4X4 switch (push IN or OUT) → HDP24 pins 16/17 → winch contactor IN/OUT triggers
+- **Remote:** Wired in parallel with dash switch at contactor IN/OUT trigger terminals
+- **Wire Gauge:** 18 AWG (low-current trigger signals, ~2A max each direction)
+- **Routing:** BODY PDU (firewall cabin side) → ~3 ft to dash switch → out through HDP24 → engine bay → winch contactor (front bumper)
 
 | Circuit         | Source             | Protection            | Wire Gauge                                                 | Destination             | Function            |
 | --------------- | ------------------ | --------------------- | ---------------------------------------------------------- | ----------------------- | ------------------- |
 | Main Power (+)  | AUX battery+       | None (direct)         | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Contactor → Motor | High-current power  |
 | Main Power (-)  | AUX battery-       | None                  | See [AUX Battery Distribution][aux-battery] for wire specs | Winch Motor Ground      | High-current return |
-| Control Trigger | Dash Rocker Switch | SafetyHub ATC-1 (15A) | 14 AWG                                                     | Winch Contactor         | Low-current trigger |
-| Remote Control  | Warn Remote        | Internal to winch     | Per Warn specs                                             | Winch Control Pack      | Directional control |
+| Trigger IN      | CH4X4 IN button    | BODY PDU CB43 (10A)   | 18 AWG                                                     | Winch Contactor IN trig | Low-current trigger |
+| Trigger OUT     | CH4X4 OUT button   | BODY PDU CB43 (10A)   | 18 AWG                                                     | Winch Contactor OUT trig| Low-current trigger |
+| Remote Control  | Warn Remote        | Internal to winch     | Per Warn specs                                             | Winch Control Pack      | Parallel to dash    |
+
+[ch4x4-winch]: https://ch4x4.com/product/ch4x4-momentary-dual-push-switch-for-toyota-winch-in-out-symbol/
+[dashboard-controls]: ../05-control-interfaces/05-dashboard-controls.md
 
 ## Installation
 
@@ -135,9 +116,9 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 
 See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
 
-- **Route:** Passenger wheel well → along frame rail → front bumper (13 ft)
+- **Route:** Passenger rear wheel well → front bumper (~13 ft, exact path TBD - avoid exposed frame rail per offroad protection requirement)
 - **Protection:** Split loom over entire run
-- **Securing:** P-clamps every 18" along frame rail
+- **Securing:** P-clamps every 18" along the chosen path
 - **Grommets:** Rubber grommets with sealant at body penetrations
 - **Heat:** Route away from exhaust components (minimum 6" clearance)
 
@@ -164,7 +145,7 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
     - Monitor battery voltage during extended winch operations
 
 !!! warning "Electrical Safety"
-    - Winch power cables carry extremely high current (up to 450A)
+    - Winch power cables carry extremely high current (up to 409A)
     - Ensure all connections are tight and properly crimped
     - Never disconnect battery while winch is under load
     - Check cable insulation regularly for damage
@@ -175,7 +156,7 @@ None - all specifications determined.
 
 ## Related Documentation
 
-- [AUX Battery Distribution][aux-battery] - Winch power source (passenger wheel well)
+- [AUX Battery Distribution][aux-battery] - Winch power source (passenger rear wheel well)
 - [Wire Distance Reference][wire-distance] - Winch to battery routing distance (13 ft one-way, 26 ft circuit)
 - [SafetyHub][safetyhub] - Winch contactor trigger circuit protection
 - [Air Compressor][air-compressor] - ARB compressor for tire inflation
@@ -184,5 +165,5 @@ None - all specifications determined.
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [air-compressor]: 02-air-compressor.md
-[warn-manual]: https://www.warn.com/
+[warn-manual]: https://www.warn.com/products/zeon-10-s-89611
 [standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md

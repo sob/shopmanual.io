@@ -18,8 +18,8 @@ The electrical system is organized into zones for logical distribution and maint
 ### Power Systems
 
 - **[Power Generation](01-power-systems/01-power-generation/index.md)** - Batteries, alternator, BCDC, solar, grounding
-- **[START battery Distribution](01-power-systems/02-starter-battery-distribution/index.md)** - Engine bay primary power distribution
-- **[AUX battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Wheel well accessory power distribution
+- **[START battery Distribution](01-power-systems/02-starter-battery-distribution/index.md)** - Driver rear wheel well primary power distribution
+- **[AUX battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Passenger rear wheel well accessory power distribution
 - **[Power Management Unit](01-power-systems/04-pmu/index.md)** - PMU24 programmable power management
 - **[BODY PDU](01-power-systems/03-aux-battery-distribution/03-body-pdu.md)** - Body relay/fuse panel
 - **[SafetyHub](01-power-systems/03-aux-battery-distribution/04-safetyhub.md)** - Safety control system
@@ -53,7 +53,7 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Stereo Systems
 
-- **[Audio Systems](06-audio-systems/index.md)** - Fusion head unit, Apollo amplifier, JL Audio speakers and subwoofer
+- **[Audio Systems](06-audio-systems/index.md)** - Fusion head unit, JL Audio MV800/8i 8-channel amp, JL Audio speakers and subwoofers
 
 ### Communications
 
@@ -78,8 +78,8 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Dual Battery System
 
-- **START battery:** Engine bay - powers critical engine systems via PMU and SafetyHub
-- **AUX battery:** Wheel well - powers accessories via CONSTANT bus
+- **START battery:** Driver rear wheel well - powers critical engine systems via PMU and SafetyHub
+- **AUX battery:** Passenger rear wheel well - powers accessories via inline CBs + Firewall CONSTANT bus (cabin distribution cluster)
 - **Battery Isolation:** RedArc BCDC Alpha 50 DC-DC charger with automatic jump-start assist
 
 See [Power Generation](01-power-systems/01-power-generation/index.md) for complete battery and charging system details.
@@ -97,19 +97,19 @@ Complete replacement of factory TIPM with modular power distribution:
 
 - **[Lighting Control](05-control-interfaces/02-switchpros-sp1200.md):** SwitchPros SP-1200 for offroad and auxiliary lighting
 - **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
-- **[Audio System](06-audio-systems/index.md):** Fusion Apollo 6-channel amp, JL Audio marine speakers with RGB LED
+- **[Audio System](06-audio-systems/index.md):** JL Audio MV800/8i 8-channel amp w/ DSP, JL Audio marine speakers and 2× 8" subs with RGB LED
 - **[Communication](07-communication-systems/index.md):** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
 - **[Recovery & Air](08-exterior-systems/index.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
 ## Documentation Notes
 
 !!! info "Outstanding Items"
-Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
+    Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
 
     **[View Global TBD Tracker](09-installation/00-tbd-tracker.md)** - Centralized tracking of all To-Be-Determined items with priorities
 
 !!! warning "Work in Progress"
-This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
+    This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
 
 ## Print / Download
 

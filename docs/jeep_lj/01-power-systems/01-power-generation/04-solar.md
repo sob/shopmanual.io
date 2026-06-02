@@ -57,7 +57,7 @@ tags:
 - **Positive (+):** Panel output → BCDC Alpha 50 solar input positive terminal
 - **Negative (-):** Panel output → Chassis ground (NOT to BCDC negative)
 - **Wire Gauge:** 10 AWG minimum (for 2.23A Isc with safety margin)
-- **Routing:** Hood → Firewall → BCDC location in wheel well
+- **Routing:** Hood → Firewall → BCDC location in passenger rear wheel well
 - **Maximum Current:** 2.23A (Isc) - well within BCDC solar input capacity
 
 **VSS System Note:** VSS kit includes standalone MPPT controller - **not used**. BCDC has built-in MPPT on solar input, providing Green Power Priority and unified charge control.
@@ -130,7 +130,7 @@ Voltage Module Power: Self-powered from solar panel voltage
 
 ### Installation Notes
 
-- Mount module in weatherproof location (near BCDC in wheel well, or sealed enclosure)
+- Mount module in weatherproof location (near BCDC in passenger rear wheel well, or sealed enclosure)
 - Use MC4 inline connectors for easy solar disconnect during installation
 - Consider conformal coating on PCB for moisture protection
 - Test threshold settings before final installation

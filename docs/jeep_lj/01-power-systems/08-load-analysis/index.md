@@ -13,8 +13,8 @@ The Jeep LJ uses a dual battery architecture with isolated power domains:
 
 | Battery   | Location             | Charging                | Primary Loads                   |
 | :-------- | :------------------- | :---------------------- | :------------------------------ |
-| **START** | Driver wheel well    | Alternator (270A)       | PMU, engine systems, BCDC       |
-| **AUX**   | Passenger wheel well | BCDC (50A) + Solar (6A) | SwitchPros, SafetyHub, BODY PDU |
+| **START** | Driver rear wheel well    | Alternator (270A)       | PMU, engine systems, BCDC       |
+| **AUX**   | Passenger rear wheel well | BCDC (50A) + Solar (6A) | SwitchPros, SafetyHub, BODY PDU |
 
 **Key Principle:** The BCDC is the only connection between batteries during normal operation. AUX battery loads do NOT draw from the alternator directly.
 

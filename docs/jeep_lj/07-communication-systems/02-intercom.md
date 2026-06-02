@@ -63,8 +63,8 @@ tags:
 | :----- | :-------------- | :--------------------- | :-------------- |
 | Port 1 | Driver          | STX unit (behind dash) | 6 ft (included) |
 | Port 2 | Front passenger | STX unit (behind dash) | 6 ft (included) |
-| Port 3 | Rear left       | Driver wheel well      | Extended        |
-| Port 4 | Rear right      | Passenger wheel well   | Extended        |
+| Port 3 | Rear left       | Driver rear wheel well      | Extended        |
+| Port 4 | Rear right      | Passenger rear wheel well   | Extended        |
 
 ## Wiring
 

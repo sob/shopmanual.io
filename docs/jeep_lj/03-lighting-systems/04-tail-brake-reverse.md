@@ -111,6 +111,5 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 [drl-parking-lights]: 05-drl-parking.md
 [communication-systems]: ../07-communication-systems/index.md
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
-[rear-chase]: ../04-offroad-lighting/04-chase-lights.md
 [turn-signals]: 03-turn-signals.md
 [brake-lights]: #brake-lights

@@ -14,11 +14,11 @@ Batteries, alternator, BCDC charger, solar panel
 
 ### 1.2 START Battery Distribution (`02-starter-battery-distribution/`)
 
-Engine bay power distribution, circuit breakers, SafetyHub
+Driver rear wheel well power distribution, circuit breakers, SafetyHub
 
 ### 1.3 AUX Battery Distribution (`03-aux-battery-distribution/`)
 
-Wheel well power distribution, BODY PDU, SwitchPros power source
+Passenger rear wheel well power distribution, BODY PDU, SwitchPros power source
 
 ### 1.4 PMU (`04-pmu/`)
 
@@ -44,18 +44,18 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 | Lighting (3)           | DRL→OUT14, Brake→OUT21, Reverse→OUT22          | `03-lighting-systems/`      |
 | Control Interfaces (4) | CT4→OUT13, Dakota→OUT9, SwitchPros→AUX 150A CB | `05-control-interfaces/`    |
 | Audio (5)              | Fusion→BODY PDU                                | `06-audio-systems/`         |
-| Communication (6)      | Radios→PMU OUT6/12/20                          | `07-communication-systems/` |
+| Communication (6)      | Radios→PMU OUT6/20                             | `07-communication-systems/` |
 | Exterior (7)           | Winch→AUX direct, ARB→SafetyHub MIDI           | `08-exterior-systems/`      |
 
 ## Common Navigation Scenarios
 
 | Question                                  | Answer Location                                            |
 | :---------------------------------------- | :--------------------------------------------------------- |
-| Where does [component] get power?         | Battery distribution `index.md` terminal tables            |
-| What's on PMU OUT[X]?                     | `04-pmu/03-pmu-outputs.md`                                 |
-| Where does [wire] route through firewall? | `02-engine-systems/07-firewall-ingress.md`                 |
-| What CB protects [load]?                  | Battery distribution `01-circuit-breakers.md`              |
-| Where does [component] ground?            | `05-grounding/` or battery distribution for direct grounds |
+| Where does \[component\] get power?         | Battery distribution `index.md` terminal tables            |
+| What's on PMU OUT\[X\]?                     | `04-pmu/03-pmu-outputs.md`                                 |
+| Where does \[wire\] route through firewall? | `02-engine-systems/07-firewall-ingress.md`                 |
+| What CB protects \[load\]?                  | Battery distribution `01-circuit-breakers.md`              |
+| Where does \[component\] ground?            | `05-grounding/` or battery distribution for direct grounds |
 
 ## When Changing Content
 

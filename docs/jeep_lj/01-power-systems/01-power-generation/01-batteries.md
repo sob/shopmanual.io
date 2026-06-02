@@ -28,8 +28,10 @@ Dual battery system with AGM starter battery and LiFePO4 deep cycle auxiliary ba
 
 ### Specifications
 
-- **Capacity:** 68 Ah @ 20-hour rate
-- **CCA:** 850A @ 0°F (-18°C)
+- **Capacity:** 68 Ah @ 20-hour rate[^odyssey-pc1500]
+- **CCA:** 850A @ 0°F (-18°C)[^odyssey-pc1500]
+
+[^odyssey-pc1500]: Odyssey 34-PC1500 Extreme Series: **68 Ah** (20-hr) / **850 CCA** confirmed against the Odyssey Extreme Series spec table (checked 2026-05-30).
 - **PHCA:** 1500A (Pulse Hot Cranking Amps)
 - **Dimensions:** 10.9" L × 6.8" W × 7.9" H
 - **Weight:** 49.5 lbs
@@ -95,16 +97,16 @@ Accessories and high-draw auxiliary loads:
 
 ## System Configuration
 
-- **START battery (Driver Wheel Well):** Odyssey PC1500 - critical systems
-- **AUX battery (Passenger Wheel Well):** Dakota Lithium 135Ah - accessories
+- **START battery (Driver Rear Wheel Well):** Odyssey PC1500 - critical systems
+- **AUX battery (Passenger Rear Wheel Well):** Dakota Lithium 135Ah - accessories
 - **Isolation:** BCDC Alpha 50 (independent operation when engine off)
 - **Jump Start:** BCDC jump start assist can parallel batteries if START fails
 - **Redundancy:** Vehicle operates on START battery alone if AUX system fails
 
 ## Mounting
 
-- **START battery:** Driver wheel well - enclosed compartment with access panel
-- **AUX battery:** Passenger wheel well - Barnes 4WD battery box (Group 24 compatible)
+- **START battery:** Driver rear wheel well - enclosed compartment with access panel
+- **AUX battery:** Passenger rear wheel well - Barnes 4WD battery box (Group 24 compatible)
 
 ## Outstanding Items
 

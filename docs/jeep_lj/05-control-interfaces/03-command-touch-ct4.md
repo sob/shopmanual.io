@@ -34,8 +34,6 @@ tags:
 
 ## Overview
 
-The Command Touch CT4 is a steering column-mounted controller that replaces the factory multifunction stalk. It provides complete turn signal and headlight control for the Jeep LJ build.
-
 **Specifications:**
 
 - **Total Capacity:** 10A per switch output (~9A max actual load)
@@ -145,11 +143,7 @@ The CT4 is highly programmable. Recommended configuration for this build:
 
 ## GPS Module Configuration
 
-The CT4 includes a GPS module that enables intelligent automatic turn signal cancellation:
-
-- **GPS Auto-Cancel:** Monitors vehicle speed and steering angle to detect when a turn is complete
 - **Manual Override:** Can still manually cancel by moving lever to center or opposite direction
-- **Lane Change Mode:** Quick press (<0.5 sec) still flashes 3 times, then auto-cancels
 - **Mounting:** GPS antenna must have clear view of sky (mount on dash or near windshield)
 - **Calibration:** May require initial calibration drive for optimal performance
 
@@ -205,21 +199,12 @@ END
 - Total DRL circuit load: ~8A (4 circuits: license plate, LP6 DRL, front markers, rear markers)
 - PMU Out 9 capacity: 15A (sufficient for 8A load)
 
-**Advantages over relay:**
-
-- No external relay hardware required
-- PMU monitors current draw and provides diagnostics
-- Programmable delays and soft-start capabilities
-- Can log DRL activation events
-- Integrated overcurrent protection
-
 ## Installation Checklist
 
 ### Power & Ground
 
 - [ ] Route PMU Out 13 wire to steering column location (CT4 12V supply)
 - [ ] Connect CT4 ground to chassis ground or firewall ground stud
-- [ ] Verify ground connection is clean metal-to-metal contact
 
 ### Ignition Signal
 
