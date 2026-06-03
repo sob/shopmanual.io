@@ -406,3 +406,17 @@ a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
     break-inside: avoid;
   }
 }
+
+/* Promote two single-page entries (TBD Tracker, Standards Exceptions) to
+   visual section headers in the sidebar — matching the existing
+   .md-nav__item--section > .md-nav__link treatment. We can't wrap them as
+   MkDocs sections because Zensical collapses single-child sections to
+   leaf links, so we style by URL instead. */
+.md-sidebar__inner .md-nav--primary .md-nav__link[href*="tbd-tracker" i],
+.md-sidebar__inner .md-nav--primary .md-nav__link[href*="standards-exceptions" i] {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+}

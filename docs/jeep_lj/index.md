@@ -7,7 +7,7 @@ hide:
 
 ## Project Overview
 
-This documentation covers the complete electrical system design for a 2006 Jeep LJ (Wrangler Unlimited) with a Cummins R2.8 Turbo Diesel engine swap. The build features a comprehensive electrical redesign including dual battery architecture, TIPM replacement, and extensive custom electronics.
+This documentation covers the complete electrical system design for a 2006 Jeep LJ (Wrangler Unlimited) with a Cummins R2.8 Turbo Diesel engine swap. The factory wiring and TIPM are replaced with a modular architecture: dual isolated batteries, programmable power management (PMU24), a safety controller (SafetyHub), and split control surfaces for street lighting (Command Touch CT4) and offroad lighting (SwitchPros SP-1200). Brakes are converted to electro-hydraulic (Bosch iBooster + Wilwood master cylinder), and ignition is keyless via PBS-I with a WAIT-gate relay.
 
 <div class="mobile-nav-only" markdown="1">
 
@@ -27,12 +27,15 @@ The electrical system is organized into zones for logical distribution and maint
 ### Critical Systems
 
 - **[Starter System][starter]** - Engine starting system
-- **[Brake Booster][brake-booster]** - Vacuum brake booster
+- **[Brake Booster][brake-booster]** - Bosch iBooster Gen 2 + Wilwood master cylinder
 - **[HVAC System][hvac]** - Heating, ventilation, and air conditioning
 - **[Wiper System][wipers]** - Windshield wipers
 - **[Horn System][horn]** - Vehicle horn
 - **[Radiator Fan][radiator-fan]** - Engine cooling fan
 - **[Grid Heater][grid-heater]** - Diesel grid heater
+- **[Fuel System][fuel-system]** - Fuel pump and delivery
+- **[Gauge Cluster][gauge-cluster]** - Dakota Digital HDX cluster + BIMs
+- **[Runaway Protection][runaway-protection]** - Diesel runaway shutoff
 
 ### Lighting Systems
 
@@ -48,8 +51,8 @@ The electrical system is organized into zones for logical distribution and maint
 - **[Overview][control-overview]** - Control systems overview
 - **[SwitchPros SP-1200][switchpros]** - SwitchPros lighting controller
 - **[Command Touch CT4][ct4]** - Command Touch control panel
-- **[Digital Gauge Cluster][gauge-cluster]** - Dakota Digital gauge cluster
 - **[Dashboard Switches][dashboard-controls]** - Physical dashboard controls
+- **[Keyless Ignition][keyless-ignition]** - PBS-I keyless start with WAIT-gate relay
 
 ### Stereo Systems
 
@@ -66,8 +69,13 @@ The electrical system is organized into zones for logical distribution and maint
 - **[Air Lockers][air-lockers]** - ARB RD116 front/rear lockers
 - **[Rear Air Chuck][rear-air-chuck]** - External air access
 
-### Install Notes
+### Drivetrain
 
+- **[Drivetrain Overview][drivetrain]** - Transmission, transfer case, axles, suspension, steering
+
+### Installation
+
+- **[Installation Overview][installation]** - Build sequence, checklists, purchase tracker
 - **[Wire Routing & Layout][wire-routing]** - Physical wire routing, grommets, grounds
 
 </div>
@@ -82,14 +90,19 @@ The electrical system is organized into zones for logical distribution and maint
 
 See [Power Generation][power-generation] for complete battery and charging system details.
 
-### TIPM Replacement
+### Modular Power Distribution
 
-Complete replacement of factory TIPM with modular power distribution:
+The factory TIPM is replaced with discrete, serviceable modules:
 
 - **[PMU24][pmu]:** Programmable 24-channel power management unit
 - **[BODY PDU][body-pdu]:** Body relay/fuse panel for cabin accessories
 - **[SafetyHub][safetyhub]:** 12-channel advanced safety controller
-- **[Ron Francis WS-51C][wipers]:** Wiper control system
+- **[Ron Francis WS-51C][wipers]:** Wiper control module
+
+### Brake & Ignition
+
+- **[Bosch iBooster Gen 2 + Wilwood MC][brake-booster]:** Electro-hydraulic brake booster (Honda Accord Hybrid Gen 2 iBooster, Wilwood Tandem Compact master cylinder, Back Bay Customs adapter)
+- **[PBS-I Keyless Ignition][keyless-ignition]:** Pushbutton start, self-contained WAIT-gate relay (no PMU dependency)
 
 ### Major Systems
 
@@ -108,12 +121,6 @@ Complete replacement of factory TIPM with modular power distribution:
 
 !!! warning "Work in Progress"
     This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
-
-## Outstanding Items
-
-Live from open GitHub issues labeled `tbd` for this build. Full filterable view: **[TBD Tracker][tbd-tracker]**.
-
-{{ tbds(scope='project', layout='github') }}
 
 ## Print / Download
 
@@ -165,4 +172,9 @@ Need a physical copy for the shop? Use the print page which combines all documen
 [rear-air-chuck]: 08-exterior-systems/04-rear-air-chuck.md
 [recovery-air]: 08-exterior-systems/index.md
 [wire-routing]: 01-power-systems/07-wire-routing/index.md
+[fuel-system]: 02-engine-systems/08-fuel-system.md
+[runaway-protection]: 02-engine-systems/11-runaway-protection.md
+[keyless-ignition]: 05-control-interfaces/06-keyless-ignition.md
+[drivetrain]: 10-drivetrain/index.md
+[installation]: 09-installation/index.md
 [tbd-tracker]: tbd-tracker.md

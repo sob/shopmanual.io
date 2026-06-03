@@ -6,7 +6,7 @@ tags:
   - harness
 ---
 
-# 1.7.4 Build Sheet — Power Distribution {#harness-power-distribution}
+# 1.7.4 Power Distribution {#harness-power-distribution}
 
 Workbench specs for the high-current power harnesses: **H1** Passenger Rear Power Trunk, **H2** START Engine Bay Trunk, and **H3** BCDC Cross-Cab. These move battery power between the rear wheel wells, the firewall, and the engine bay.
 
@@ -14,7 +14,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 *Top-down tub map of the power-distribution harnesses. Diagram source: `Jeep LJ Tub Map.drawio` (page "Power Distribution"); the image is regenerated from the draw.io file on each export.*
 
-**Reading this sheet:** Wire colors follow the [Wire Color Convention][color-convention] (power = red, ground = black). These are power runs — they get a **red braided expandable sleeve with a per-harness tracer** ([Protective Sleeve & Tracers][sleeve-convention]); heat sleeve and P-clamp standards by location are in [Wire Protection Standards][wire-routing]. For the system-wide picture and the bundle interference analysis, see the [Harness Inventory][harness-inventory] overview.
+**Reading this sheet:** Wire colors follow the [Wire Color Convention][color-convention] (power = red, ground = black). These are power runs — they get a **black braided expandable sleeve with a per-harness tracer** ([Protective Sleeve & Tracers][sleeve-convention]); heat sleeve and P-clamp standards by location are in [Wire Protection Standards][wire-routing]. For the system-wide picture and the bundle interference analysis, see the [Harness Inventory][harness-inventory] overview.
 
 ---
 
@@ -22,7 +22,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 *Formed 2026-05-30 by merging the prior H1 (AUX forward feed) and H4 (winch feed). The two shared the entire passenger-side path, so they are fabricated and installed as a single 3-cable bundle.*
 
-**Build:** 3 conductors · longest run ~13 ft to firewall (+13 ft for the winch pair to the bumper) · ~1.5" OD red braided sleeve, black tracer · ring lugs both ends.
+**Build:** 3 conductors · longest run ~13 ft to firewall (+13 ft for the winch pair to the bumper) · ~1.5" OD black braided sleeve, red tracer · ring lugs both ends.
 
 **Route:** Passenger rear wheel well (AUX battery) → up inside passenger rear quarter sill → forward along **inside floor board / side wall** (passenger side) → A-pillar area → **3× bulkhead studs through firewall** → engine bay → forward along passenger inner fender → through grille area → front bumper (winch portion only)
 
@@ -47,7 +47,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 - Service is rare in practice — when needed, pulling the entire cable end-to-end is acceptable
 - Steele Rubber or similar 2-piece grommet, ~$5–15
 
-**Protection:** Red braided expandable sleeve (black tracer) over the entire cabin path, sized to the ~1.5" OD bundle. Heat sleeve over the sleeve where the winch cables enter engine bay. P-clamps every 12–18".
+**Protection:** Black braided expandable sleeve (red tracer) over the entire cabin path, sized to the ~1.5" OD bundle. Heat sleeve over the sleeve where the winch cables enter engine bay. P-clamps every 12–18".
 
 **Notes:**
 
@@ -59,7 +59,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 ## H2 — START Engine Bay Trunk {#h2}
 
-**Build:** 3 conductors (all 2/0 AWG) · 6–8 ft per cable · ~1.5" OD red braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
+**Build:** 3 conductors (all 2/0 AWG) · 6–8 ft per cable · ~1.5" OD black braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
 
 **Route:** Driver rear wheel well (START battery) → up inside driver rear quarter sill → forward along **inside floor board / side wall** (driver side) → A-pillar area → driver firewall penetration → engine bay
 
@@ -77,7 +77,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 3 cables with looms; expect ~1.5" OD final bundle.
 
-**Protection:** Red braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.5" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
+**Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.5" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
 
 **Firewall penetration:** Driver-side grommet for high-current cables — separate from the HDP24 (HDP24 is passenger-side, signal-only). Three 2/0 AWG cables need a grommet sized for ~1.5" bundle OD.
 
@@ -91,7 +91,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 ## H3 — BCDC Cross-Cab {#h3}
 
-**Build:** 2 conductors · ~5–6 ft straight run under the rear bench · lug terminations both ends · red braided sleeve, green tracer, no inline connectors.
+**Build:** 2 conductors · ~5–6 ft straight run under the rear bench · lug terminations both ends · black braided sleeve, green tracer, no inline connectors.
 
 **Route:** Driver rear wheel well (START battery) → **under the rear bench seat cushion** → passenger rear wheel well (BCDC + AUX battery)
 
@@ -106,7 +106,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Connectors:** Lug terminations both ends. No inline connectors needed for short run.
 
-**Protection:** Red braided expandable sleeve (green tracer) along the run. Bench cushion provides physical shielding from above; floor pan shields from below. P-clamps to body cross-member at 1–2 points.
+**Protection:** Black braided expandable sleeve (green tracer) along the run. Bench cushion provides physical shielding from above; floor pan shields from below. P-clamps to body cross-member at 1–2 points.
 
 **Notes:**
 

@@ -6,7 +6,7 @@ tags:
   - harness
 ---
 
-# 1.7.6 Build Sheet — Controls, Recovery & Drivetrain {#harness-controls-recovery-drivetrain}
+# 1.7.6 Controls, Recovery & Drivetrain {#harness-controls-recovery-drivetrain}
 
 Workbench specs for the recovery and drivetrain harnesses: **H6** ARB Compressor, **H7** Winch Trigger, **H8** Kilduff Shifter → TCU, and **H9** TCU → Engine Bay.
 
@@ -14,7 +14,7 @@ Workbench specs for the recovery and drivetrain harnesses: **H6** ARB Compressor
 
 *Top-down tub map of the controls/recovery/drivetrain harnesses. Diagram source: `Jeep LJ Tub Map.drawio` (page "Controls, Recovery & Drivetrain"); the image is regenerated from the draw.io file on each export.*
 
-**Reading this sheet:** Power = red, ground = black; CAN runs as a twisted pair; vendor-supplied harnesses (ARB, CH4X4, Kilduff/ZF) keep their shipped colors. See the [Wire Color Convention][color-convention]. The H6 compressor motor pair is a power run and takes a red braided sleeve (blue tracer); the small-wire signal harnesses (H7, H9) use split loom — see [Protective Sleeve & Tracers][sleeve-convention]. Other protection standards by location are in [Wire Protection Standards][wire-routing]; system-wide context is in the [Harness Inventory][harness-inventory] overview.
+**Reading this sheet:** Power = red, ground = black; CAN runs as a twisted pair; vendor-supplied harnesses (ARB, CH4X4, Kilduff/ZF) keep their shipped colors. See the [Wire Color Convention][color-convention]. The H6 compressor motor pair is a power run and takes a black braided sleeve (blue tracer); the small-wire signal harnesses (H7, H9) use split loom — see [Protective Sleeve & Tracers][sleeve-convention]. Other protection standards by location are in [Wire Protection Standards][wire-routing]; system-wide context is in the [Harness Inventory][harness-inventory] overview.
 
 ---
 
@@ -22,7 +22,7 @@ Workbench specs for the recovery and drivetrain harnesses: **H6** ARB Compressor
 
 *Previously numbered H8. Renumbered 2026-05-31.*
 
-**Build:** 4 conductors (2× 6 AWG motor + 2 signal) · ~10 ft · lug at SafetyHub, ring/spade at compressor · motor pair in red braided sleeve (blue tracer) · the two signal wires originate at SwitchPros, not SafetyHub.
+**Build:** 4 conductors (2× 6 AWG motor + 2 signal) · ~10 ft · lug at SafetyHub, ring/spade at compressor · motor pair in black braided sleeve (blue tracer) · the two signal wires originate at SwitchPros, not SafetyHub.
 
 **Route:** SafetyHub (passenger rear wheel well) → under cargo / under rear bench → under passenger seat (compressor mount)
 
@@ -39,7 +39,7 @@ Workbench specs for the recovery and drivetrain harnesses: **H6** ARB Compressor
 
 **Connectors:** Lug at SafetyHub side, ring/spade at compressor. ARB compressor manifold typically has a pigtail with its own connector.
 
-**Protection:** Red braided expandable sleeve (blue tracer) over the 2× 6 AWG motor pair along the under-floor / under-seat run. Split loom for the control + pressure signal wires. P-clamps every 12–18".
+**Protection:** Black braided expandable sleeve (blue tracer) over the 2× 6 AWG motor pair along the under-floor / under-seat run. Split loom for the control + pressure signal wires. P-clamps every 12–18".
 
 **Notes:**
 
