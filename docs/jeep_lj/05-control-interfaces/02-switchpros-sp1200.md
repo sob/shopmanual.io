@@ -194,6 +194,10 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine exact SwitchPros power module mounting location at firewall (passenger cabin side, near BODY PDU)
 - [ ] Determine SwitchPros control panel mounting location on dash
 - [ ] Route 4 AWG logic ground wire from SwitchPros power module to chassis ground at firewall (short run, per manufacturer spec)

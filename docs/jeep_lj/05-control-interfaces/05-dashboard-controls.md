@@ -27,9 +27,9 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 | # | Switch | Status | Function | Power | Notes |
 |:-:|:-------|:-------|:---------|:------|:------|
 | 1 | **Winch IN/OUT** | ✓ Selected: CH4X4-TOY-D-WINIO | Dual-momentary push, IN and OUT | BODY PDU CB43 (10A) | See [Winch Control Switch](#winch-control-switch) below |
-| 2 | **Drive mode select** (transmission) | 🔴 TBD | 3-position mode select (Street / Default / Offroad) — exact action depends on TCU spec | TBD (likely BODY PDU) | Verify TCU input requirements before sourcing |
-| 3 | **Driver heated seat** | 🔴 TBD | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
-| 4 | **Passenger heated seat** | 🔴 TBD | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
+| 2 | **Drive mode select** (transmission) | {{ tbd(72) }} | 3-position mode select (Street / Default / Offroad) — exact action depends on TCU spec | {{ tbd(72) }} (likely BODY PDU) | Verify TCU input requirements before sourcing |
+| 3 | **Driver heated seat** | {{ tbd(73) }} | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
+| 4 | **Passenger heated seat** | {{ tbd(73) }} | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
 
 **Excluded from this panel** (different aesthetic/form factor by design):
 

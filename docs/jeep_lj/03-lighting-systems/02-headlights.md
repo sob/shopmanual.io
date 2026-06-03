@@ -65,6 +65,10 @@ tags:
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from CT4 to headlight buckets (engine bay, 14 AWG)
 - [ ] Verify headlight aim after installation (LP6 DOT is compliant, just needs aiming)
 

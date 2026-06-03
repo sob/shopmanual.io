@@ -46,8 +46,8 @@ Wire gauges optimized for performance at measured routing distances:
 | **Alternator → START battery** | 8 ft                          | 2/0 AWG    | 270A                    | 2.81% @ 60°C                     | Charging system - temp derating applied                   |
 | **PMU24 Power Feed**           | 7 ft                          | 2/0 AWG    | 220A                    | 2.40% @ 60°C                     | Direct connection via 250A CB - upgraded from 1/0 AWG     |
 | **Starter Motor**              | 6 ft                          | 2/0 AWG    | 400-600A                | <3% @ 20°C                       | Brief cranking load - minimal temp effect                 |
-| **BCDC Inter-Battery**         | 5-6 ft                        | 4 AWG      | 50A                     | 0.94% @ 20°C                     | Rear wheel well to rear wheel well (cross-cab routing TBD - see [Wire Routing][wire-routing]) |
-| **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 400A peak | 6.3% @ 250A, 10.1% @ 400A @ 20°C | Passenger rear wheel well to front bumper routing (path TBD - see [Wire Routing][wire-routing]) |
+| **BCDC Inter-Battery**         | 5-6 ft                        | 4 AWG      | 50A                     | 0.94% @ 20°C                     | Rear wheel well to rear wheel well (H3 cross-cab, see [Wire Routing][wire-routing]) |
+| **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 400A peak | 6.3% @ 250A, 10.1% @ 400A @ 20°C | Passenger rear wheel well to front bumper routing — see {{ tbd(106) }} and [Wire Routing][wire-routing] |
 
 **Temperature Derating Notes:**
 

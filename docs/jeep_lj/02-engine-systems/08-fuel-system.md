@@ -57,7 +57,7 @@ Use the manual hand pump on the fuel filter/water separator to prime the system 
 
 ## Outstanding Items
 
-None - fuel system is straightforward mechanical design with no electrical integration required.
+{{ tbds() }}
 
 ## Related Documentation
 

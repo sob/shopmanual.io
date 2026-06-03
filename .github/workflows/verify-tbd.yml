@@ -1,0 +1,37 @@
+name: Verify TBD invariants
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'tbd_macros.py'
+      - 'hooks/verify_tbd.py'
+      - '.github/workflows/verify-tbd.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - 'tbd_macros.py'
+      - 'hooks/verify_tbd.py'
+
+permissions:
+  contents: read
+  issues: read
+
+concurrency:
+  group: verify-tbd-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify-tbd:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run hooks/verify_tbd.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 hooks/verify_tbd.py

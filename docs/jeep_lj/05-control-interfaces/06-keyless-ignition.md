@@ -95,7 +95,7 @@ Unchanged from existing starter design. See [Starter System][starter].
 
 | Wire | Function | Source | Destination | Notes |
 | :--- | :------- | :----- | :---------- | :---- |
-| RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby (TBD verify) |
+| RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby ({{ tbd(84) }}) |
 | BLACK | Chassis Ground | Cabin ground bus | PBS-I module | 14 AWG |
 | PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin), Stud 1 | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse[^ecm-fuse] |
 | PURPLE | Starter Out (60A) | PBS-I module | WAIT-gate relay common (NC input) | Cranks while button held |
@@ -152,15 +152,17 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
 - [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
-- [x] ~~Select WAIT-gate relay part~~ → **Bosch 0332209150** (5-pin SPDT changeover, superseded by 0986332400); wire COM (30) + NC (87a), leave NO (87) open. See [^wait-relay].
 - [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
 - [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
-- [x] ~~Confirm Feature Programming defaults~~ → PBS-I has no DIP/jumper menu; **shipped Feature Programming defaults confirmed acceptable** for this build (no reprogramming required at install). Owner decision, 2026-06-03.
 
 ## Related Documentation
 

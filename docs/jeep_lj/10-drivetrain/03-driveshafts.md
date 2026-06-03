@@ -7,18 +7,22 @@ Both driveshafts are custom units built to measured length by Tom Woods Custom D
 | Specification | Value |
 | :------------ | :---- |
 | Type | Custom (Tom Woods Custom Drive Shafts) |
-| Length | TBD — measure at final ride height |
-| U-Joint | TBD — per Tom Woods build spec |
+| Length | {{ tbd(93) }} — measure at final ride height |
+| U-Joint | {{ tbd(93) }} — per Tom Woods build spec |
 
 ## Rear Driveshaft
 
 | Specification | Value |
 | :------------ | :---- |
 | Type | Custom (Tom Woods Custom Drive Shafts) |
-| Length | TBD — measure at final ride height |
-| U-Joint | TBD — per Tom Woods build spec |
+| Length | {{ tbd(94) }} — measure at final ride height |
+| U-Joint | {{ tbd(94) }} — per Tom Woods build spec |
 
 ## Outstanding Items
+
+{{ tbds() }}
+
+## Build Tasks
 
 - [ ] Measure front driveshaft length at final ride height and order from Tom Woods
 - [ ] Measure rear driveshaft length at final ride height and order from Tom Woods

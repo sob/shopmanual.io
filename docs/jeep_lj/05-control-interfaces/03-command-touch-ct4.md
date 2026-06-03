@@ -289,6 +289,10 @@ END
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine GPS antenna mounting location (dash top or near windshield for best sky view)
 
 ## Related Documentation

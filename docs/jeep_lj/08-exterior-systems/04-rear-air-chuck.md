@@ -47,6 +47,10 @@ External air access plate mounted in the tailgate area for tire inflation and ai
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Select air chuck plate model/part number
 - [ ] Determine exact mounting location in tailgate area
 - [ ] Measure air line length from manifold to tailgate

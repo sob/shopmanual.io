@@ -53,7 +53,7 @@ See [PMU Outputs][pmu-outputs] for PMU configuration.
 
 ## Outstanding Items
 
-None - design complete. See [installation checklist][install-checklist] for build tasks.
+{{ tbds() }}
 
 ## Related Documentation
 

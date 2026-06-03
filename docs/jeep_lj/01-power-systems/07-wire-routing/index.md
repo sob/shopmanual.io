@@ -69,7 +69,7 @@ All wire runs require appropriate protection based on location and environment:
 | Circuit                                | Wire Gauge | Distance | Destination                                       | Current             | Notes                                                                |
 | :------------------------------------- | :--------- | :------- | :------------------------------------------------ | :------------------ | :------------------------------------------------------------------- |
 | **Warn ZEON 10-S Winch power**       | 1/0 AWG    | 13 ft    | TO Front bumper winch                             | 250A typ, 409A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
-| **Warn ZEON 10-S Winch ground**      | 1/0 AWG    | 13 ft    | TO Winch motor ground                             | 250A typ, 409A peak | Return path - routing TBD                                            |
+| **Warn ZEON 10-S Winch ground**      | 1/0 AWG    | 13 ft    | TO Winch motor ground                             | 250A typ, 409A peak | Return path - routing {{ tbd(106) }}                                 |
 | **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~232A max           | Protected by 300A CB at battery - feeds SwitchPros, BODY PDU, Fusion |
 | **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A CB at battery                                      |
 | **BCDC output**                        | 4 AWG      | Short    | FROM BCDC (local in wheel well)                   | 50A                 | Charging input to AUX battery                                        |
@@ -111,7 +111,7 @@ All wire runs require appropriate protection based on location and environment:
 | **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 100A CB at AUX battery (not via firewall bus) |
 | **SwitchPros Ground Bus**              | 1 AWG      | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
 | **SwitchPros control cable**           | Multi-pin  | ~5 ft    | TO SwitchPros panel on dash                | Standard SwitchPros cable                       |
-| **SwitchPros outputs (12 circuits)**   | Various    | TBD      | TO various loads (front/cabin/rear/roof)   | Mostly short forward fan-out from firewall      |
+| **SwitchPros outputs (12 circuits)**   | Various    | {{ tbd(107) }} | TO various loads (front/cabin/rear/roof) | Mostly short forward fan-out from firewall      |
 
 ---
 
@@ -122,7 +122,7 @@ All wire runs require appropriate protection based on location and environment:
 | Penetration | Location | Direction | Circuits | Wire Count | Notes |
 |:------------|:---------|:----------|:---------|:-----------|:------|
 | **Cummins Harness** | Factory location | Engine ↔ Cabin | Engine harness, J1939 CAN | Factory | Dedicated bulkhead connector |
-| **Deutsch HDP24-24-29** | TBD (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
+| **Deutsch HDP24-24-29** | {{ tbd(61) }} (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
 | **Temp Probe Grommet** | Near grille | Cabin → Grille | BIM-17-2 temp sensor | 2 (22 AWG) | Small grommet, twisted pair |
 
 !!! info "J1939 CAN Bus"
@@ -138,7 +138,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Routing Path        | Circuits                              | Method      | Notes                      |
 | :------------------ | :------------------------------------ | :---------- | :------------------------- |
-| **Dash → Console**  | Switch panels, USB, radio             | TBD         | Under dash routing         |
+| **Dash → Console**  | Switch panels, USB, radio             | {{ tbd(62) }} | Under dash routing       |
 | **Firewall → Dash** | Dakota Digital cluster, CT4, controls | Behind dash | Main instrument panel area |
 
 **Dakota Digital Firewall Panel (Cabin Side):**
@@ -151,8 +151,8 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 | BIM-17-2     | Compass/outside temp | Temp probe (through firewall to grille)         |
 | Main harness | BIM/IO cable         | Dakota Digital cluster in dash                  |
 
-**Panel Location:** TBD - firewall behind dashboard
-**Mounting:** TBD - HDPE sheet dimensions and fasteners
+**Panel Location:** {{ tbd(39) }} - firewall behind dashboard
+**Mounting:** {{ tbd(39) }} - HDPE sheet dimensions and fasteners
 
 ---
 
@@ -162,8 +162,8 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Routing Path                     | Circuits                         | Method         | Notes                         |
 | :------------------------------- | :------------------------------- | :------------- | :---------------------------- |
-| **Cab → Cargo**                       | Rear lights, compressor, lockers | TBD | Under seats or floor channels |
-| **Passenger rear wheel well → Cargo** | SwitchPros rear outputs          | TBD | Rear auxiliary power (avoid exposed frame rail) |
+| **Cab → Cargo**                       | Rear lights, compressor, lockers | {{ tbd(63) }} | Under seats or floor channels |
+| **Passenger rear wheel well → Cargo** | SwitchPros rear outputs          | {{ tbd(63) }} | Rear auxiliary power (avoid exposed frame rail) |
 
 ---
 
@@ -173,7 +173,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Routing Path       | Circuits                          | Method              | Notes                      |
 | :----------------- | :-------------------------------- | :------------------ | :------------------------- |
-| **Roof/Roll bar**  | Light bars, dome lights           | TBD                 | A-pillar or along roll bar |
+| **Roof/Roll bar**  | Light bars, dome lights           | {{ tbd(64) }}       | A-pillar or along roll bar |
 | **Front exterior** | Turn signals, offroad lights      | Engine bay to front | SwitchPros outputs         |
 | **Rear exterior**  | Tail/brake/reverse, license plate | Cargo to rear       | PMU and SwitchPros outputs |
 

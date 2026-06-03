@@ -96,6 +96,10 @@ The single 12" M7-12IB option (600W RMS, 14" overall diameter, 7.94" mounting de
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Confirm exact mounting locations in rear quarter panels (clear of cage tubes and rear seatbelts)
 - [ ] Verify quarter panel material can support sub weight + mounting torque (may need backing plate)
 - [ ] Source M6-8IB-S product image (`docs/jeep_lj/images/jl-audio-m6-8ib-s-gmti-i-4.jpg`)

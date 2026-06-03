@@ -88,6 +88,10 @@ tags:
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine outside temperature probe mounting location in grille area
 - [ ] Determine primary compass source (BIM-17-2 vs GPS-50-2)
 

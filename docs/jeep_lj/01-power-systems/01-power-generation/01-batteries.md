@@ -110,7 +110,10 @@ Accessories and high-draw auxiliary loads:
 
 ## Outstanding Items
 
-- [x] ~~Order Dakota Lithium DL+ 135Ah battery (~$999)~~ → Purchased
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Backorder Barnes 4WD battery box (Group 24 compatible, ~$67)
 - [ ] Powdercoat or paint battery box before installation
 
@@ -119,3 +122,4 @@ Accessories and high-draw auxiliary loads:
 [odyssey-pc1500]: https://www.odysseybattery.com/products/odx-agm34-battery-34-pc1500t/
 [dakota-135ah]: https://dakotalithium.com/product/dl-plus-12v-135ah-dual-purpose-1000cca-starter-car-truck-battery-plus-deep-cycle-performance/
 [installation-checklist]: ../../09-installation/01-power-systems-checklist.md#phase-1-foundations
+

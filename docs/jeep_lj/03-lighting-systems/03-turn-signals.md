@@ -58,7 +58,10 @@ Rear turn signals are fed from the CT4 splice (see distribution table above):
 
 ## Outstanding Items
 
-- [x] ~~Plan wire routing from CT4 to fender turn signal locations~~ → Via firewall grommet
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Measure wire distance: CT4 → firewall → fenders (see [Wire Distance Reference][wire-distance])
 
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md

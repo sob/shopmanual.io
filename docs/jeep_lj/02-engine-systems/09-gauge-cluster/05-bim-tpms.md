@@ -74,6 +74,10 @@ Wireless TPMS module displaying real-time tire pressure for all four wheels on H
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Confirm TPMS sensor compatibility with wheel/tire setup (valve stem hole size)
 - [ ] Determine sensor battery life and replacement procedure
 

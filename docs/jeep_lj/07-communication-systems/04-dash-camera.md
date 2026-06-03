@@ -85,7 +85,7 @@ Tap into reverse light circuit → route to WolfBox trigger input
 
 ## Outstanding Items
 
-None - all specifications determined.
+{{ tbds() }}
 
 ## Related Documentation
 

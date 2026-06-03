@@ -145,6 +145,10 @@ The 100A external CB is intentionally above the 80A internal fuse — the intern
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] DSP configuration: corner frequencies, sub delay, channel gain matching (set during install with TüN software + measurement)
 
 ## Related Documentation

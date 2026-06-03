@@ -83,6 +83,10 @@ G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (STAR
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
 - [ ] Determine replacement 12V relay part numbers for K40, K42, K53 (currently 24V coils)
 

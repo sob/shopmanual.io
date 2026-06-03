@@ -43,7 +43,7 @@ Recovery equipment and air systems for offroad capability.
 
 ## Outstanding Items
 
-See individual component pages for specific items.
+{{ tbds() }}
 
 ## Related Documentation
 

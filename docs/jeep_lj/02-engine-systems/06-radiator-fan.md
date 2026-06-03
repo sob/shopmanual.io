@@ -63,7 +63,7 @@ See [PMU Outputs][pmu-outputs] for complete configuration and [PMU Programming][
 
 ## Outstanding Items
 
-None - design complete. See [installation checklist][install-checklist] for build tasks.
+{{ tbds() }}
 
 ## Related Documentation
 

@@ -69,6 +69,10 @@ See [START Battery Load Analysis][start-load-analysis] for complete scenario det
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine alternator positive output terminal size (for 1/0 AWG lug selection) — see [Vendor Inquiry](#vendor-inquiry) below
 - [ ] Verify alternator voltage regulator set point (14.2–14.4V is the correct AGM target;[^agm-target] confirm the HO-C28 actually regulates there) — see [Vendor Inquiry](#vendor-inquiry) below
 

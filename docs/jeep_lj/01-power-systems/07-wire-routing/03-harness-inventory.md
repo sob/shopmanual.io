@@ -209,9 +209,12 @@ These were noted inline on the build sheets; consolidated here for review:
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Decide front bumper breakout connector style (Deutsch DT, AMP CPC, etc.)
 - [ ] Decide rear cargo bulkhead breakout connector style and pin count
-- [x] ~~Calculate HDP20 firewall pin budget — fits or needs upsize?~~ → **Resolved:** Upsized to HDP24-24-29 (29 size-16 contacts, 21 used + 8 future headroom). See [Pin Budget Audit][firewall-ingress] for full pin assignment. Forward-going SP loads use chassis ground locally (1 pin per output instead of 2).
 - [ ] Confirm SwitchPros front locker wire routing (front axle access)
 - [ ] Decide if ARB control wires merge into H5 (recommended) or run as H6 signal pair
 - [ ] Source connector + lug + heat shrink BOM totals
