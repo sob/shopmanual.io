@@ -93,7 +93,7 @@ Automatic ignition-controlled circuit that powers:
 - Front 2" LED side markers (parking function)
 - Maxbilt tail light RED wire (marker/parking function)
 
-**Power Source:** PMU Out 9 (8A capacity, SWITCHED)
+**Power Source:** PMU Out 23 (7A capacity, ~2.6A load, auto with ignition)
 
 **DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates (headlights on = DRL off)
 
@@ -113,7 +113,7 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 | Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights)                                       | 10A output, 5.6A load, disabled when ignition off        |
 | Red (thick) | 12V Supply | Main power input        | PMU Out 13 (15A CONSTANT)                                                | Powers all SW outputs, allows hazards when ignition off  |
 | Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
-| White/Gray  | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU In 6, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
+| White/Gray  | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU Pin 7, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
 
 ## Programming Configuration
 
@@ -156,42 +156,42 @@ The CT4 is highly programmable. Recommended configuration for this build:
 
 ```text
 PMU Input 7 (In 7): CT4 SW3 headlight status signal (tapped from low beam circuit)
-PMU Input 6 (In 6): Ignition RUN signal
-PMU Output 9 (Out 9): DRL/Parking lights circuit
+PMU Pin 7: Ignition RUN signal (12V switched input)
+PMU Output 23 (Out 23): DRL/Parking lights circuit
 
 Programming Logic:
-IF (In6_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out9_DRL = ON
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+  THEN Out23_DRL = ON
 ELSE
-  Out9_DRL = OFF
+  Out23_DRL = OFF
 END
 ```
 
 **How It Works:**
 
 1. **Ignition ON, Headlights OFF (CT4 SW3 off):**
-   - PMU In 6 = ON (ignition RUN)
+   - PMU Pin 7 = ON (ignition RUN)
    - PMU In 7 = OFF (CT4 SW3 not active)
-   - PMU Out 9 = ON
+   - PMU Out 23 = ON
    - All DRL/parking lights illuminated
 
 2. **Ignition ON, Headlights ON (CT4 SW3 on):**
-   - PMU In 6 = ON (ignition RUN)
+   - PMU Pin 7 = ON (ignition RUN)
    - PMU In 7 = ON (CT4 SW3 active)
-   - PMU Out 9 = OFF
+   - PMU Out 23 = OFF
    - Headlights (low or high beam) active instead
 
 3. **Ignition OFF:**
-   - PMU In 6 = OFF
-   - PMU Out 9 = OFF (regardless of headlight status)
+   - PMU Pin 7 = OFF
+   - PMU Out 23 = OFF (regardless of headlight status)
    - All DRL/parking lights off
 
 **Installation Notes:**
 
 - Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
-- Use 14 AWG wire from PMU Out 9 to DRL junction
-- Total DRL circuit load: ~8A (4 circuits: license plate, LP6 DRL, front markers, rear markers)
-- PMU Out 9 capacity: 15A (sufficient for 8A load)
+- Run wire from PMU Out 23 to DRL junction
+- Total DRL/parking circuit load: ~2.6A — see [DRL & Parking][drl-parking] for the itemized load breakdown and wiring
+- PMU Out 23 capacity: 7A (sufficient for the ~2.6A load)
 
 ## Installation Checklist
 
@@ -202,7 +202,7 @@ END
 
 ### Ignition Signal
 
-- [ ] Connect CT4 ignition signal to ignition switch RUN output (Y-split shared with PMU In 6, SwitchPros)
+- [ ] Connect CT4 ignition signal to ignition switch RUN output (Y-split shared with PMU Pin 7, SwitchPros)
 - [ ] Route ignition signal wire from ignition switch to steering column (18 AWG)
 - [ ] Verify SW3/SW4 (headlights) are disabled when ignition is off
 - [ ] Verify SW1/SW2 (turn signals/hazards) work with ignition off (safety feature)
@@ -221,14 +221,14 @@ END
   - BLACK wire → Ground (chassis ground)
   - WHITE wire → Reverse lights (PMU Out 18)
   - YELLOW wire → Brake/Turn (CT4 turn signal output + PMU Out 17 via diodes)
-  - RED wire → Marker/parking lights (PMU Out 9)
+  - RED wire → Marker/parking lights (PMU Out 23)
 - [ ] Verify turn signals flash front and rear simultaneously
 - [ ] Test lane change feature (< 0.5 sec press = 3 flashes)
 - [ ] Verify brake lights work independently of turn signals
 
 ### Headlight Wiring
 
-- [ ] Route ignition signal from ignition switch RUN output (18 AWG) to CT4 ignition input (splits to PMU In 6, SwitchPros, CT4)
+- [ ] Route ignition signal from ignition switch RUN output (18 AWG) to CT4 ignition input (splits to PMU Pin 7, SwitchPros, CT4)
 - [ ] Route CT4 main power from PMU Out 13 to CT4 12V supply
 - [ ] Route CT4 SW3 output wire to LP6 Pin 1 (low beam, both lights in parallel, 14 AWG)
 - [ ] Route CT4 SW4 output wire to LP6 Pin 4 (high beam, both lights in parallel, 14 AWG)
@@ -242,8 +242,8 @@ END
 ### DRL/Parking Light Wiring
 
 - [ ] Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
-- [ ] Configure PMU Out 9 DRL auto-off logic (see PMU programming section)
-- [ ] Route 14 AWG wire from PMU Out 9 to DRL junction
+- [ ] Configure PMU Out 23 DRL auto-off logic (see PMU programming section)
+- [ ] Route 14 AWG wire from PMU Out 23 to DRL junction
 - [ ] Route 16 AWG wire from junction to each light:
   - License plate lights
   - LP6 Headlight Pin 3 (DRL input) - both left and right
@@ -300,3 +300,4 @@ END
 [control-interfaces-overview]: 01-overview.md
 [vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[drl-parking]: ../03-lighting-systems/05-drl-parking.md

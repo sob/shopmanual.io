@@ -62,7 +62,7 @@ tags:
 
 **Utilization:** 23 of 24 outputs used (96%)
 
-**Primary loads:** Radiator fan (OUT2+3+4: 3×25A combined), iBooster (OUT1+10: 2×25A non-adjacent), HVAC (OUT5: 25A), GMRS radio (OUT6: 25A), aux fans (OUT7+8: 2×15A), Dakota Digital (OUT9: 25A), wipers (OUT11: 15A), Ham radio (OUT12: 15A), CT4 (OUT13: 15A), DRL (OUT14: 15A), winch trigger (OUT15: 15A), Turbolamik TCU (OUT16: 15A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), iBooster ignition (OUT19: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A)
+**Primary loads:** Radiator fan (OUT2+3+4: 3×25A combined), iBooster (OUT1+10: 2×25A non-adjacent), HVAC (OUT5: 25A), GMRS radio (OUT6: 25A), aux fans (OUT7+8: 2×15A), Dakota Digital (OUT9: 25A), wipers (OUT11: 15A), Ham radio (OUT12: 15A), CT4 (OUT13: 15A), winch trigger (OUT15: 15A), Turbolamik TCU (OUT16: 15A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), iBooster ignition (OUT19: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A)
 
 **Load:** ~253A theoretical peak (all radios transmitting + full radiator fan + iBooster braking), ~106A typical PMU circuits continuous (excluding radiator fan which varies 16-53A via PWM), total typical load ~140-170A (well within 300A PMU capacity)
 

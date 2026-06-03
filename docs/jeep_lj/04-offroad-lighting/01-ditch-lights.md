@@ -43,9 +43,13 @@ A-pillar mounted lights for peripheral and side illumination (Baja Designs Zone 
 | Output       | 4,400 lumens each (8,800 total) |
 | Draw         |              4A each (8A total) |
 
-## Control
+## Wiring
 
-**Controller:** SwitchPros Button 2 (OUTPUT-2)
+Both LP4 Pro pods run on SwitchPros OUTPUT-2 via 2-pin Delphi connectors (power + ground combined per pod).
+
+**Wire Routing:** SwitchPros (engine bay) to both A-pillars.
+
+**Controller:** SwitchPros Button 2 (OUTPUT-2) - 8A load on 35A output (23% utilization).
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 

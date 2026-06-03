@@ -34,7 +34,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Product Image:**
 
-![ARB CKBLTA12 Brushless Twin Compressor](../../images/arb-ckblta12-compressor.jpg)
+![ARB CKBLTA12 Brushless Twin Compressor](../images/arb-ckblta12-compressor.jpg)
 
 ## Specifications
 
@@ -86,7 +86,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Product Image:**
 
-![ARB 171507 1-Gallon Aluminum Air Tank](../../images/arb-171507-air-tank-1gal.jpg)
+![ARB 171507 1-Gallon Aluminum Air Tank](../images/arb-171507-air-tank-1gal.jpg)
 
 | Spec             | Value                                |
 | ---------------- | ------------------------------------ |
@@ -110,7 +110,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 **Product Image:**
 
-![ARB 180901 Pressure Switch](../../images/arb-180901-pressure-switch.jpg)
+![ARB 180901 Pressure Switch](../images/arb-180901-pressure-switch.jpg)
 
 | Spec             | Value                    |
 | ---------------- | ------------------------ |

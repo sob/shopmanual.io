@@ -36,11 +36,11 @@ PMU Out 23 splices to all running/marker lights:
 
 ```text
 PMU Input 7 (In 7): CT4 SW3 headlight status signal
-PMU Input 6 (In 6): Ignition RUN signal
+PMU Pin 7: Ignition RUN signal (12V switched input)
 PMU Output 23 (Out 23): DRL/Parking lights circuit
 
 Programming Logic:
-IF (In6_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
   THEN Out23_DRL = ON
 ELSE
   Out23_DRL = OFF
@@ -51,21 +51,21 @@ END
 
 **1. Ignition ON, Headlights OFF:**
 
-- PMU In 6 = ON (ignition RUN)
+- PMU Pin 7 = ON (ignition RUN)
 - PMU In 7 = OFF (CT4 SW3 not active)
 - PMU Out 23 = ON
 - **Result:** All DRL/parking lights illuminated
 
 **2. Ignition ON, Headlights ON:**
 
-- PMU In 6 = ON (ignition RUN)
+- PMU Pin 7 = ON (ignition RUN)
 - PMU In 7 = ON (CT4 SW3 active)
 - PMU Out 23 = OFF
 - **Result:** Headlights active, DRL off
 
 **3. Ignition OFF:**
 
-- PMU In 6 = OFF
+- PMU Pin 7 = OFF
 - PMU Out 23 = OFF (regardless of headlight status)
 - **Result:** All DRL/parking lights off
 
@@ -73,7 +73,7 @@ END
 
 **PMU Input Wiring:**
 
-- **In 6:** Ignition switch RUN output (shared with CT4, SwitchPros)
+- **Pin 7:** Ignition switch RUN signal (12V switched input, shared source with CT4, SwitchPros)
 - **In 7:** CT4 SW3 output (tapped from headlight low beam circuit)
 
 **PMU Output Wiring:**
@@ -86,7 +86,7 @@ END
 
 ## Outstanding Items
 
-- [ ] Plan wire routing from ignition switch RUN to PMU In 6 (splits to CT4, SwitchPros)
+- [ ] Plan wire routing from ignition switch RUN to PMU Pin 7 (splits to CT4, SwitchPros)
 - [ ] Plan wire routing from CT4 SW3 to PMU In 7 (DRL cutoff logic)
 - [ ] Create PMU programming configuration with DRL auto-off logic
 

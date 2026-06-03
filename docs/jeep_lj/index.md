@@ -17,60 +17,58 @@ The electrical system is organized into zones for logical distribution and maint
 
 ### Power Systems
 
-- **[Power Generation](01-power-systems/01-power-generation/index.md)** - Batteries, alternator, BCDC, solar, grounding
-- **[START battery Distribution](01-power-systems/02-starter-battery-distribution/index.md)** - Driver rear wheel well primary power distribution
-- **[AUX battery Distribution](01-power-systems/03-aux-battery-distribution/index.md)** - Passenger rear wheel well accessory power distribution
-- **[Power Management Unit](01-power-systems/04-pmu/index.md)** - PMU24 programmable power management
-- **[BODY PDU](01-power-systems/03-aux-battery-distribution/03-body-pdu.md)** - Body relay/fuse panel
-- **[SafetyHub](01-power-systems/03-aux-battery-distribution/04-safetyhub.md)** - Safety control system
+- **[Power Generation][power-generation]** - Batteries, alternator, BCDC, solar, grounding
+- **[START battery Distribution][start-battery]** - Driver rear wheel well primary power distribution
+- **[AUX battery Distribution][aux-battery]** - Passenger rear wheel well accessory power distribution
+- **[Power Management Unit][pmu]** - PMU24 programmable power management
+- **[BODY PDU][body-pdu]** - Body relay/fuse panel
+- **[SafetyHub][safetyhub]** - Safety control system
 
 ### Critical Systems
 
-- **[Starter System](02-engine-systems/01-starter.md)** - Engine starting system
-- **[Brake Booster](02-engine-systems/02-brake-booster.md)** - Vacuum brake booster
-- **[HVAC System](02-engine-systems/03-hvac.md)** - Heating, ventilation, and air conditioning
-- **[Wiper System](02-engine-systems/04-wipers.md)** - Windshield wipers
-- **[Horn System](02-engine-systems/05-horn.md)** - Vehicle horn
-- **[Radiator Fan](02-engine-systems/06-radiator-fan.md)** - Engine cooling fan
-- **[Grid Heater](02-engine-systems/07-grid-heater.md)** - Diesel grid heater
+- **[Starter System][starter]** - Engine starting system
+- **[Brake Booster][brake-booster]** - Vacuum brake booster
+- **[HVAC System][hvac]** - Heating, ventilation, and air conditioning
+- **[Wiper System][wipers]** - Windshield wipers
+- **[Horn System][horn]** - Vehicle horn
+- **[Radiator Fan][radiator-fan]** - Engine cooling fan
+- **[Grid Heater][grid-heater]** - Diesel grid heater
 
 ### Lighting Systems
 
-- **[Lighting Overview](03-lighting-systems/01-lighting-overview.md)** - Complete lighting system overview
-- **[Headlights](03-lighting-systems/02-headlights.md)** - Main headlights
-- **[Turn Signals](03-lighting-systems/03-turn-signals.md)** - Turn signal system
-- **[Tail, Brake & Reverse](03-lighting-systems/04-tail-brake-reverse.md)** - Rear lighting
-- **[DRL & Parking Lights](03-lighting-systems/05-drl-parking.md)** - Daytime running and parking lights
-- **[Offroad & Aux Lighting](04-offroad-lighting/index.md)** - Auxiliary and offroad lighting
+- **[Lighting Overview][lighting-overview]** - Complete lighting system overview
+- **[Headlights][headlights]** - Main headlights
+- **[Turn Signals][turn-signals]** - Turn signal system
+- **[Tail, Brake & Reverse][tail-brake-reverse]** - Rear lighting
+- **[DRL & Parking Lights][drl-parking]** - Daytime running and parking lights
+- **[Offroad & Aux Lighting][offroad-lighting]** - Auxiliary and offroad lighting
 
 ### Control Interfaces
 
-- **[Overview](05-control-interfaces/01-overview.md)** - Control systems overview
-- **[SwitchPros SP-1200](05-control-interfaces/02-switchpros-sp1200.md)** - SwitchPros lighting controller
-- **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md)** - Command Touch control panel
-- **[Digital Gauge Cluster](02-engine-systems/09-gauge-cluster/index.md)** - Dakota Digital gauge cluster
-- **[Dashboard Switches](05-control-interfaces/05-dashboard-controls.md)** - Physical dashboard controls
+- **[Overview][control-overview]** - Control systems overview
+- **[SwitchPros SP-1200][switchpros]** - SwitchPros lighting controller
+- **[Command Touch CT4][ct4]** - Command Touch control panel
+- **[Digital Gauge Cluster][gauge-cluster]** - Dakota Digital gauge cluster
+- **[Dashboard Switches][dashboard-controls]** - Physical dashboard controls
 
 ### Stereo Systems
 
-- **[Audio Systems](06-audio-systems/index.md)** - Fusion head unit, JL Audio MV800/8i 8-channel amp, JL Audio speakers and subwoofers
+- **[Audio Systems][audio]** - Fusion head unit, JL Audio MV800/8i 8-channel amp, JL Audio speakers and subwoofers
 
 ### Communications
 
-- **[Communication Systems](07-communication-systems/index.md)** - GMRS radio, intercom, dash camera
+- **[Communication Systems][communications]** - GMRS radio, intercom, dash camera
 
 ### Auxiliary Systems
 
-- **[Winch](08-exterior-systems/01-winch.md)** - Warn Zeon 10-S winch (10,000 lb)
-- **[Air Compressor](08-exterior-systems/02-air-compressor.md)** - ARB Twin Compressor and tank
-- **[Air Lockers](08-exterior-systems/03-air-lockers.md)** - ARB RD116 front/rear lockers
-- **[Rear Air Chuck](08-exterior-systems/04-rear-air-chuck.md)** - External air access
+- **[Winch][winch]** - Warn Zeon 10-S winch (10,000 lb)
+- **[Air Compressor][air-compressor]** - ARB Twin Compressor and tank
+- **[Air Lockers][air-lockers]** - ARB RD116 front/rear lockers
+- **[Rear Air Chuck][rear-air-chuck]** - External air access
 
 ### Install Notes
 
 - **[Wire Routing & Layout][wire-routing]** - Physical wire routing, grommets, grounds
-
-[wire-routing]: 01-power-systems/07-wire-routing/index.md
 
 </div>
 
@@ -82,38 +80,38 @@ The electrical system is organized into zones for logical distribution and maint
 - **AUX battery:** Passenger rear wheel well - powers accessories via inline CBs + Firewall CONSTANT bus (cabin distribution cluster)
 - **Battery Isolation:** RedArc BCDC Alpha 50 DC-DC charger with automatic jump-start assist
 
-See [Power Generation](01-power-systems/01-power-generation/index.md) for complete battery and charging system details.
+See [Power Generation][power-generation] for complete battery and charging system details.
 
 ### TIPM Replacement
 
 Complete replacement of factory TIPM with modular power distribution:
 
-- **[PMU24](01-power-systems/04-pmu/index.md):** Programmable 24-channel power management unit
-- **[BODY PDU](01-power-systems/03-aux-battery-distribution/03-body-pdu.md):** Body relay/fuse panel for cabin accessories
-- **[SafetyHub](01-power-systems/03-aux-battery-distribution/04-safetyhub.md):** 12-channel advanced safety controller
-- **[Ron Francis WS-51C](02-engine-systems/04-wipers.md):** Wiper control system
+- **[PMU24][pmu]:** Programmable 24-channel power management unit
+- **[BODY PDU][body-pdu]:** Body relay/fuse panel for cabin accessories
+- **[SafetyHub][safetyhub]:** 12-channel advanced safety controller
+- **[Ron Francis WS-51C][wipers]:** Wiper control system
 
 ### Major Systems
 
-- **[Lighting Control](05-control-interfaces/02-switchpros-sp1200.md):** SwitchPros SP-1200 for offroad and auxiliary lighting
-- **[Command Touch CT4](05-control-interfaces/03-command-touch-ct4.md):** Street-legal lighting and turn signal control
-- **[Audio System](06-audio-systems/index.md):** JL Audio MV800/8i 8-channel amp w/ DSP, JL Audio marine speakers and 2× 8" subs with RGB LED
-- **[Communication](07-communication-systems/index.md):** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
-- **[Recovery & Air](08-exterior-systems/index.md):** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
+- **[Lighting Control][switchpros]:** SwitchPros SP-1200 for offroad and auxiliary lighting
+- **[Command Touch CT4][ct4]:** Street-legal lighting and turn signal control
+- **[Audio System][audio]:** JL Audio MV800/8i 8-channel amp w/ DSP, JL Audio marine speakers and 2× 8" subs with RGB LED
+- **[Communication][communications]:** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
+- **[Recovery & Air][recovery-air]:** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
 ## Documentation Notes
 
 !!! info "Outstanding Items"
     Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
 
-    **[View Global TBD Tracker](tbd-tracker.md)** - Centralized tracking of all To-Be-Determined items with priorities
+    **[View Global TBD Tracker][tbd-tracker]** - Centralized tracking of all To-Be-Determined items with priorities
 
 !!! warning "Work in Progress"
     This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
 
 ## Outstanding Items
 
-Live from open GitHub issues labeled `tbd` for this build. Full filterable view: **[TBD Tracker](tbd-tracker.md)**.
+Live from open GitHub issues labeled `tbd` for this build. Full filterable view: **[TBD Tracker][tbd-tracker]**.
 
 {{ tbds(scope='project', layout='github') }}
 
@@ -134,3 +132,37 @@ Need a physical copy for the shop? Use the print page which combines all documen
 5. For duplex printing, select "Print on both sides" with "Flip on long edge"
 
 </div>
+
+[power-generation]: 01-power-systems/01-power-generation/index.md
+[start-battery]: 01-power-systems/02-starter-battery-distribution/index.md
+[aux-battery]: 01-power-systems/03-aux-battery-distribution/index.md
+[pmu]: 01-power-systems/04-pmu/index.md
+[body-pdu]: 01-power-systems/03-aux-battery-distribution/03-body-pdu.md
+[safetyhub]: 01-power-systems/03-aux-battery-distribution/04-safetyhub.md
+[starter]: 02-engine-systems/01-starter.md
+[brake-booster]: 02-engine-systems/02-brake-booster.md
+[hvac]: 02-engine-systems/03-hvac.md
+[wipers]: 02-engine-systems/04-wipers.md
+[horn]: 02-engine-systems/05-horn.md
+[radiator-fan]: 02-engine-systems/06-radiator-fan.md
+[grid-heater]: 02-engine-systems/07-grid-heater.md
+[lighting-overview]: 03-lighting-systems/01-lighting-overview.md
+[headlights]: 03-lighting-systems/02-headlights.md
+[turn-signals]: 03-lighting-systems/03-turn-signals.md
+[tail-brake-reverse]: 03-lighting-systems/04-tail-brake-reverse.md
+[drl-parking]: 03-lighting-systems/05-drl-parking.md
+[offroad-lighting]: 04-offroad-lighting/index.md
+[control-overview]: 05-control-interfaces/01-overview.md
+[switchpros]: 05-control-interfaces/02-switchpros-sp1200.md
+[ct4]: 05-control-interfaces/03-command-touch-ct4.md
+[gauge-cluster]: 02-engine-systems/09-gauge-cluster/index.md
+[dashboard-controls]: 05-control-interfaces/05-dashboard-controls.md
+[audio]: 06-audio-systems/index.md
+[communications]: 07-communication-systems/index.md
+[winch]: 08-exterior-systems/01-winch.md
+[air-compressor]: 08-exterior-systems/02-air-compressor.md
+[air-lockers]: 08-exterior-systems/03-air-lockers.md
+[rear-air-chuck]: 08-exterior-systems/04-rear-air-chuck.md
+[recovery-air]: 08-exterior-systems/index.md
+[wire-routing]: 01-power-systems/07-wire-routing/index.md
+[tbd-tracker]: tbd-tracker.md

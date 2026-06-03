@@ -18,7 +18,7 @@ All firewall penetration points for wire routing between engine bay and cabin.
 
 ---
 
-## Deutsch HDP20 Bulkhead Connector
+## Deutsch HDP24-24-29 Bulkhead Connector
 
 Single weatherproof bulkhead connector for all custom wiring through firewall.
 

@@ -194,7 +194,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 
 ### Firewall Bulkhead Connector
 
-**Deutsch HDP20 Installation:**
+**Deutsch HDP24-24-29 Installation:**
 
 - [ ] Drill 1.5" diameter hole in firewall for bulkhead connector
 - [ ] Mount HDP24-24-21PE-L015 receptacle (flange mount, engine side)
@@ -392,7 +392,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 
 - [BODY PDU][body-pdu] - LR-2 circuit breaker and relay assignments
 - [SafetyHub 150][safetyhub] - ARB and winch fuse assignments
-- [Firewall Ingress][firewall-ingress] - Deutsch HDP20 connector pinout
+- [Firewall Ingress][firewall-ingress] - Deutsch HDP24-24-29 connector pinout
 
 **External Manuals:**
 

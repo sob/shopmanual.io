@@ -30,6 +30,17 @@ tags:
 
 ///
 
+## Specifications
+
+| Spec              | Value                                              |
+| :---------------- | :------------------------------------------------- |
+| Type              | Cold-start air intake heater                       |
+| Relay part number | Cummins 5467024                                    |
+| Coil control      | ECM pins 46/21 (~0.5–1A)                           |
+| Element current   | 40–80A (design estimate)[^grid-current]            |
+| Duty cycle        | 3–5 s during cold start (ECM-controlled)           |
+| Protection        | Integrated fusible link                            |
+
 ## System Architecture
 
 1. **ECM Control (Direct):**

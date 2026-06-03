@@ -9,12 +9,12 @@ PMU configuration examples, logic sequences, and implementation checklist.
 
 ## Programming Examples
 
-### DRL Auto-Off Logic (Output 14)
+### DRL Auto-Off Logic (Output 23)
 
 ```text
 IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out14_DRL = ON
-ELSE Out14_DRL = OFF
+  THEN Out23_DRL = ON
+ELSE Out23_DRL = OFF
 ```
 
 DRL on with ignition, off when headlights active.

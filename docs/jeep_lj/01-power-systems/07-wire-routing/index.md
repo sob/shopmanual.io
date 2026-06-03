@@ -105,7 +105,7 @@ All wire runs require appropriate protection based on location and environment:
 
 | Component                              | Wire Gauge | Distance | Source/Destination                         | Notes                                           |
 | :------------------------------------- | :--------- | :------- | :----------------------------------------- | :---------------------------------------------- |
-| **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 300A master CB       | Heavy feed through cabin trunk - routing TBD    |
+| **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 300A master CB       | Heavy feed via H1: passenger floor/side wall → A-pillar → firewall (resolved 2026-05-30) |
 | **Bus → SwitchPros**                   | 2 AWG      | ~2 ft    | TO SwitchPros power module                 | Via 150A CB                                     |
 | **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
 | **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 100A CB at AUX battery (not via firewall bus) |
@@ -122,13 +122,13 @@ All wire runs require appropriate protection based on location and environment:
 | Penetration | Location | Direction | Circuits | Wire Count | Notes |
 |:------------|:---------|:----------|:---------|:-----------|:------|
 | **Cummins Harness** | Factory location | Engine ↔ Cabin | Engine harness, J1939 CAN | Factory | Dedicated bulkhead connector |
-| **Deutsch HDP20** | TBD (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
+| **Deutsch HDP24-24-29** | TBD (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
 | **Temp Probe Grommet** | Near grille | Cabin → Grille | BIM-17-2 temp sensor | 2 (22 AWG) | Small grommet, twisted pair |
 
 !!! info "J1939 CAN Bus"
 J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, then route to Dakota Digital 01-2-J1939 module on firewall HDPE panel (cabin side).
 
-**Complete Details:** See [Firewall Ingress][firewall-ingress] for Deutsch HDP20 connector pinout and BOM
+**Complete Details:** See [Firewall Ingress][firewall-ingress] for Deutsch HDP24-24-29 connector pinout and BOM
 
 ---
 

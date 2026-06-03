@@ -55,6 +55,10 @@ All 8 pods on single circuit via XL Linkable harness.
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
+## Outstanding Items
+
+- [ ] Plan wire routing from SwitchPros to roof rack (passenger A-pillar to roof)
+- [ ] Confirm roof rack mounting points for XL Linkable brackets
 
 ## Related Documentation
 

@@ -65,7 +65,7 @@ Detect ARB compressor activation and disable non-critical START battery loads to
 IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000):
 
   // Shed non-critical loads (priority order: lowest to highest impact)
-  Out14_DRL = OFF              // -8A: Daytime running lights (cosmetic)
+  Out23_DRL = OFF              // -8A: Daytime running lights (cosmetic)
   Out17_AC_Clutch = OFF        // -5A: Air conditioning (comfort)
 
   // Conditionally shed cooler fans if temperatures allow
@@ -82,7 +82,7 @@ IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000)
 
 ELSE:
   // Restore normal operation when ARB stops
-  Out14_DRL = (Per DRL auto-off logic)
+  Out23_DRL = (Per DRL auto-off logic)
   Out17_AC_Clutch = (Per A/C request logic)
   Out7_OilFan = (Per oil temp thresholds)
   Out8_PSFan = (Per coolant temp thresholds)
@@ -93,7 +93,7 @@ ELSE:
 
 | Load Shed             | Current Saved | Impact                       | When Disabled         |
 | :-------------------- | :------------ | :--------------------------- | :-------------------- |
-| DRL (OUT14)           | 8A            | Low - cosmetic only          | Always when ARB runs  |
+| DRL (OUT23)           | 8A            | Low - cosmetic only          | Always when ARB runs  |
 | A/C Clutch (OUT17)    | 5A            | Medium - comfort loss        | Always when ARB runs  |
 | Oil Cooler Fan (OUT7) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
 | PS Cooler Fan (OUT8)  | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
@@ -288,7 +288,7 @@ ELSE:
 LOG BatteryVoltage (1 Hz)
 LOG TotalCurrent_PMU (1 Hz)
 LOG EngineRPM (J1939_SPN190)
-LOG Out14_DRL (state)
+LOG Out23_DRL (state)
 LOG Out17_AC_Clutch (state)
 LOG Out7_OilFan (state)
 LOG Out8_PSFan (state)
