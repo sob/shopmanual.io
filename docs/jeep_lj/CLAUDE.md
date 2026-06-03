@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Agent Instructions: Jeep LJ Electrical System Documentation
 
 ## Your Role
@@ -174,6 +179,7 @@ label facet).
 
 **Macros (in `tbd_macros.py`):**
 
+{% raw %}
 - `{{ tbds() }}` — list open `tbd` issues for the current page's project+area,
   grouped by priority. Auto-derives scope from the page path.
 - `{{ tbds(scope='project', layout='github') }}` — filterable list of all open
@@ -184,6 +190,7 @@ label facet).
 - `{{ tbd(N) }}` — inline marker for a single spec cell. Renders `TBD #N` as a
   link while open; flips to the resolution snippet when the issue closes, so
   cells become self-resolving without a source edit.
+{% endraw %}
 
 **Priority Levels (`priority/*` labels):**
 

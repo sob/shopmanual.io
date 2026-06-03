@@ -1,4 +1,4 @@
-# Standards Exceptions & Design Decisions
+# 1.9 Standards Exceptions & Design Decisions {#standards-exceptions}
 
 This document tracks intentional deviations from general electrical standards where manufacturer specifications, automotive practice, or engineering analysis support alternative approaches.
 

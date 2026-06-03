@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Installation Section - Navigation Guide
 
 ## What's Here

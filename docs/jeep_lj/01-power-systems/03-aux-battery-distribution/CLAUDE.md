@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # AUX battery Distribution - Navigation Guide
 
 ## What's Here
