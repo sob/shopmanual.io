@@ -124,9 +124,7 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 
 ## Outstanding Items
 
-Starter-circuit-specific items are tracked in the [Keyless Ignition][keyless-ignition] doc and the [TBD Tracker][tbd-tracker], since the crank chain is sourced from the keyless ignition design.
-
-See [installation checklist][install-checklist] for build tasks.
+{{ tbds() }}
 
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
 

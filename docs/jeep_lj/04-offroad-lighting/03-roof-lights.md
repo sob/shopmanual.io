@@ -57,6 +57,10 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from SwitchPros to roof rack (passenger A-pillar to roof)
 - [ ] Confirm roof rack mounting points for XL Linkable brackets
 

@@ -172,7 +172,7 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 | GMRS Radio ground (-) | 14 AWG | Midland G1 | START battery negative |
 | STX Intercom ground (-) | 14 AWG | STX | START battery negative |
 
-**Routing:** Radios (cabin) → under seat/floor → START battery negative (driver rear wheel well) - exact path TBD (avoid exposed frame rail)
+**Routing:** Radios (cabin) → under seat/floor → START battery negative (driver rear wheel well) - exact path: {{ tbd(82) }} (avoid exposed frame rail)
 
 ---
 

@@ -23,8 +23,8 @@ tags:
 | :------------ | :---- |
 | Wheelbase | 110.5" (stretched from 103.4" stock) |
 | Approach Angle | 87.1° |
-| Departure Angle | TBD |
-| Breakover Angle | TBD |
+| Departure Angle | {{ tbd(102) }} |
+| Breakover Angle | {{ tbd(102) }} |
 | Type | Coilover bypass struts |
 | Front Travel | 14" |
 | Rear Travel | 16" |
@@ -35,24 +35,28 @@ tags:
 | Component | Specification |
 | :-------- | :------------ |
 | Struts | ORI 14" |
-| Coil Rate | TBD |
-| Bypass Valving | TBD |
-| Control Arms | TBD |
-| Track Bar | TBD |
-| Sway Bar | TBD |
+| Coil Rate | {{ tbd(97) }} |
+| Bypass Valving | {{ tbd(97) }} |
+| Control Arms | {{ tbd(97) }} |
+| Track Bar | {{ tbd(97) }} |
+| Sway Bar | {{ tbd(97) }} |
 
 ## Rear Suspension
 
 | Component | Specification |
 | :-------- | :------------ |
 | Struts | ORI 16" |
-| Coil Rate | TBD |
-| Bypass Valving | TBD |
-| Control Arms | TBD |
-| Track Bar | TBD |
-| Sway Bar | TBD |
+| Coil Rate | {{ tbd(98) }} |
+| Bypass Valving | {{ tbd(98) }} |
+| Control Arms | {{ tbd(98) }} |
+| Track Bar | {{ tbd(98) }} |
+| Sway Bar | {{ tbd(98) }} |
 
 ## Outstanding Items
+
+{{ tbds() }}
+
+## Build Tasks
 
 - [ ] Document ORI strut part numbers
 - [ ] Document coil rates

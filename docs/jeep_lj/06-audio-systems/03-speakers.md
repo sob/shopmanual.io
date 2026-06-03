@@ -107,7 +107,7 @@ Single cable run per speaker carries both audio and LED control.
 
 ## Outstanding Items
 
-- [x] ~~Determine front speaker mounting locations~~ → **In-door, custom Gatekeeper Offroad half-doors** (6.5" cutouts). Route speaker/LED cable through the door hinge into the body via a service grommet.
+{{ tbds() }}
 
 ## Related Documentation
 

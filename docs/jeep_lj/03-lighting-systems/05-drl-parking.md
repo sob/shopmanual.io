@@ -86,6 +86,10 @@ END
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from ignition switch RUN to PMU Pin 7 (splits to CT4, SwitchPros)
 - [ ] Plan wire routing from CT4 SW3 to PMU In 7 (DRL cutoff logic)
 - [ ] Create PMU programming configuration with DRL auto-off logic

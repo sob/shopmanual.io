@@ -90,6 +90,10 @@ The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler au
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Measure 8HP70 output-shaft protrusion (≤~96 mm, else order DomiWorks spacer plate or shorten)
 - [ ] Order: DomiWorks 24004001 adapter; 23-spline NV241 input gear (ZTNP22390 or equiv.); NV241 input bearing + front seal; grade-10.9 hardware
 - [ ] Confirm donor JK case input-gear spline before swapping to the 23-spline gear

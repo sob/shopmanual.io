@@ -63,6 +63,10 @@ Driving/Combo pattern provides peripheral illumination for:
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from SwitchPros to A-pillars
 
 ## Related Documentation

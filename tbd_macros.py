@@ -42,7 +42,15 @@ PRIORITY_META = {
 PRIORITY_ORDER = sorted(PRIORITY_META, key=lambda k: PRIORITY_META[k][3])
 
 # Build-lifetime cache. None == not fetched yet; a list == fetched (possibly empty).
-_CACHE = {"issues": None}
+_CACHE = {"issues": None, "closed": None, "comments": {}}
+
+
+def _http_headers():
+    h = {"Accept": "application/vnd.github+json", "User-Agent": "tbd-macros"}
+    tok = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if tok:
+        h["Authorization"] = f"Bearer {tok}"
+    return h
 
 
 def _repo_slug():
@@ -69,8 +77,8 @@ def _next_link(link_header):
     return None
 
 
-def _fetch_tbds():
-    """Open issues labeled `tbd` via the GitHub REST API. None on failure.
+def _fetch_tbds(state="open"):
+    """Issues labeled `tbd` via the GitHub REST API. None on failure.
 
     Uses urllib (stdlib) so it runs anywhere the build runs -- including
     Cloudflare Pages, which has no `gh` CLI. The repo is public, so anonymous
@@ -79,13 +87,10 @@ def _fetch_tbds():
     repo = _repo_slug()
     if not repo:
         return None
-    headers = {"Accept": "application/vnd.github+json", "User-Agent": "tbd-macros"}
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
+    headers = _http_headers()
 
     url = (f"https://api.github.com/repos/{repo}/issues"
-           "?labels=tbd&state=open&per_page=100")
+           f"?labels=tbd&state={state}&per_page=100")
     issues = []
     try:
         for _ in range(20):  # pagination safety bound
@@ -113,7 +118,10 @@ def _fetch_tbds():
                     "areas": {n.split("/", 1)[1] for n in names if n.startswith("area/")},
                     "priority": priority,
                     "created": it.get("created_at", ""),
+                    "closed": it.get("closed_at", ""),
                     "author": (it.get("user") or {}).get("login", ""),
+                    "comments_url": it.get("comments_url", ""),
+                    "comments_count": it.get("comments", 0),
                 })
             if not url:
                 break
@@ -122,10 +130,72 @@ def _fetch_tbds():
     return issues
 
 
+def _fetch_last_comment(comments_url):
+    """Fetch the last comment on an issue. '' on failure or no comments.
+
+    Cached per URL so re-renders within a single build are free.
+    """
+    if not comments_url:
+        return ""
+    if comments_url in _CACHE["comments"]:
+        return _CACHE["comments"][comments_url]
+    body = ""
+    try:
+        req = urllib.request.Request(comments_url + "?per_page=100",
+                                     headers=_http_headers())
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            comments = json.load(resp)
+        if comments:
+            body = (comments[-1].get("body") or "").strip()
+    except (urllib.error.URLError, TimeoutError, ValueError, OSError):
+        body = ""
+    _CACHE["comments"][comments_url] = body
+    return body
+
+
 def _issues():
     if _CACHE["issues"] is None:
-        _CACHE["issues"] = _fetch_tbds()
+        _CACHE["issues"] = _fetch_tbds("open")
     return _CACHE["issues"]
+
+
+def _closed_issues():
+    if _CACHE["closed"] is None:
+        _CACHE["closed"] = _fetch_tbds("closed")
+    return _CACHE["closed"]
+
+
+_SINCE_RE = re.compile(r"^\s*(\d+)\s*([dwmy]?)\s*$", re.IGNORECASE)
+
+
+def _parse_since(spec):
+    """Parse a 'since' spec ('90d', '6m', '1y', '2026-01-01', None) -> aware datetime or None."""
+    if not spec:
+        return None
+    if isinstance(spec, datetime.datetime):
+        return spec
+    m = _SINCE_RE.match(str(spec))
+    if m:
+        n = int(m.group(1))
+        unit = (m.group(2) or "d").lower()
+        days = n * {"d": 1, "w": 7, "m": 30, "y": 365}[unit]
+        return datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=days)
+    # ISO date fallback
+    try:
+        return datetime.datetime.strptime(str(spec)[:10], "%Y-%m-%d").replace(
+            tzinfo=datetime.timezone.utc)
+    except ValueError:
+        return None
+
+
+def _parse_iso(iso):
+    if not iso:
+        return None
+    try:
+        return datetime.datetime.strptime(iso[:19], "%Y-%m-%dT%H:%M:%S").replace(
+            tzinfo=datetime.timezone.utc)
+    except ValueError:
+        return None
 
 
 def _first_line(body):
@@ -222,6 +292,111 @@ def define_env(env):
 
         return _admonition(None, sel) if (sel or show_empty) else _none_note()
 
+    @env.macro
+    def tbd(n, label="TBD"):
+        """Inline cell-level marker linked to GitHub issue #n.
+
+        Open issue   -> '<label> #N' as a link.
+        Closed issue -> first sentence/line of the resolution (last comment),
+                        with a small clickable '#N' suffix pointing to the
+                        closed issue.
+        Missing      -> '<label> #N' linked, with a warning marker.
+        """
+        if not isinstance(n, int):
+            try:
+                n = int(n)
+            except (TypeError, ValueError):
+                return f"{label} (#?)"
+
+        # Search open issues first
+        for it in (_issues() or []):
+            if it["number"] == n:
+                return (f'<a href="{html.escape(it["url"])}" target="_blank" '
+                        f'rel="noopener">{html.escape(label)} #{n}</a>')
+        # Then closed
+        for it in (_closed_issues() or []):
+            if it["number"] == n:
+                resolution = ""
+                if it.get("comments_count"):
+                    resolution = _fetch_last_comment(it["comments_url"])
+                if not resolution:
+                    resolution = it.get("desc") or it["title"]
+                # First sentence (or first 200 chars)
+                snippet = re.split(r"(?<=[.!?])\s+", resolution.strip(), maxsplit=1)[0]
+                if len(snippet) > 200:
+                    snippet = snippet[:197].rstrip() + "…"
+                snippet = snippet.replace("|", "\\|")
+                return (f'{snippet} '
+                        f'<a href="{html.escape(it["url"])}" target="_blank" '
+                        f'rel="noopener" title="Closed issue #{n}">#{n}</a>')
+        # Not found in either list
+        repo = _repo_slug() or "sob/drawings"
+        return (f'<a href="https://github.com/{repo}/issues/{n}" '
+                f'target="_blank" rel="noopener" '
+                f'title="Issue not found in tbd-labeled list">⚠️ {html.escape(label)} #{n}</a>')
+
+    @env.macro
+    @jinja2.pass_context
+    def tbds_resolved(ctx, since="90d", project=None, area=None, scope=None,
+                      limit=None):
+        """Render closed `tbd` issues as a markdown table: Item | Resolution | Date.
+
+        `since` is a window like '90d' / '6m' / '1y' or an ISO date; pass None
+        for full history. Resolution is the last comment on the issue (which
+        is what `gh issue close -c "..."` posts).
+        """
+        items = _closed_issues()
+        if items is None:
+            return ('!!! failure "Resolved TBDs unavailable"\n\n'
+                    "    Could not reach the GitHub issues API at build time.\n")
+
+        # auto-derive project/area like tbds() does
+        d_project, d_area = _derive(_page_src_uri(ctx))
+        if project is None:
+            project = d_project
+        if scope in ("project", "all"):
+            area = None
+        elif area is None:
+            area = d_area
+        if scope == "all":
+            project = None
+
+        cutoff = _parse_since(since)
+        sel = []
+        for it in items:
+            if project and project not in it["projects"]:
+                continue
+            if area and area not in it["areas"]:
+                continue
+            closed_dt = _parse_iso(it["closed"])
+            if cutoff and (closed_dt is None or closed_dt < cutoff):
+                continue
+            sel.append(it)
+
+        sel.sort(key=lambda it: it["closed"], reverse=True)
+        if limit:
+            sel = sel[: int(limit)]
+
+        if not sel:
+            return ('!!! success "No resolved TBDs in window"\n\n'
+                    "    Nothing has been closed in this window.\n")
+
+        rows = ["| Item | Resolution | Date |", "| :--- | :--------- | :--- |"]
+        for it in sel:
+            resolution = ""
+            if it.get("comments_count"):
+                resolution = _fetch_last_comment(it["comments_url"])
+            if not resolution:
+                resolution = it.get("desc") or "_(closed without comment)_"
+            # Collapse newlines and pipes so we don't break the table.
+            resolution = re.sub(r"\s*\n+\s*", " ", resolution).replace("|", "\\|")
+            title_link = (f'<a href="{html.escape(it["url"])}" target="_blank" '
+                          f'rel="noopener">{html.escape(it["title"])} '
+                          f'(#{it["number"]})</a>')
+            date = _fmt_date(it["closed"]) or it["closed"][:10]
+            rows.append(f"| {title_link} | {resolution} | {date} |")
+        return "\n".join(rows)
+
 
 def _admonition(level, items):
     if level is None:
@@ -233,7 +408,10 @@ def _admonition(level, items):
     if items:
         for it in items:
             dash = f" — {it['desc']}" if it["desc"] else ""
-            lines.append(f"    - [{it['title']} (#{it['number']})]({it['url']}){dash}")
+            link = (f'<a href="{html.escape(it["url"])}" target="_blank" '
+                    f'rel="noopener">{html.escape(it["title"])} '
+                    f'(#{it["number"]})</a>')
+            lines.append(f"    - {link}{dash}")
     else:
         lines.append("    _No open items._")
     return "\n".join(lines)
@@ -381,7 +559,8 @@ def _github(items):
             f'data-created="{html.escape(it["created"])}">'
             f'{_OPEN_ICON}'
             f'<div class="ghi-main">'
-            f'<a class="ghi-title" href="{html.escape(it["url"])}">'
+            f'<a class="ghi-title" href="{html.escape(it["url"])}" '
+            f'target="_blank" rel="noopener">'
             f'{html.escape(it["title"])}</a> '
             f'<span class="ghi-labels">{pills}</span>'
             f'<div class="ghi-meta">{html.escape(sub)}</div>'

@@ -79,6 +79,10 @@ GPS speedometer is legally required for on-road operation. Ensure antenna has cl
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine GPS antenna mounting location (dash top vs windshield)
 - [ ] Determine if using SEN-15-1 temp probe with GPS-50-2 or separate BIM-17-2
 

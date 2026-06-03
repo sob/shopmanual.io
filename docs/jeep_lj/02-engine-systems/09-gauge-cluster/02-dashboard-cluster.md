@@ -74,6 +74,10 @@ Speedometer is legally required for on-road vehicle operation. GPS-50-2 module p
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Verify oil pressure/temp data available via J1939 from Cummins R2.8
 
 ## Related Documentation

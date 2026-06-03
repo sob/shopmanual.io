@@ -51,7 +51,7 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 
 ## Outstanding Items
 
-None - design complete. See individual product pages for component-specific items and [installation checklist][install-checklist] for build tasks.
+{{ tbds() }}
 
 ## Related Documentation
 

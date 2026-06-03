@@ -35,7 +35,7 @@ tags:
 
 **Power Source:** PMU OUT1+10 (40A main), OUT19 (5A ignition signal)
 
-**Wiring Harness:** TBD - [Tulay's Gen 2][tulays-harness] vs [EVcreate Gen 2 kit][evcreate-donors]
+**Wiring Harness:** {{ tbd(105) }} - [Tulay's Gen 2][tulays-harness] vs [EVcreate Gen 2 kit][evcreate-donors]
 
 ///
 
@@ -88,7 +88,7 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 - **Chassis runs:** 3/16" **copper-nickel** (NiCopp / Cunifer) hardline off the MC's 1/2-20 IF outlets, 45° double (bubble) flare with inverted-flare fittings. DOT-approved for hydraulic brakes, will not corrode, and hand-bends/flares without a hydraulic bender.[^brakeline-material] Copper-nickel is softer than steel, so sleeve in stainless spring "gravel guard" armor at exposed points and route inside the frame rail where possible.[^brakeline-armor]
 - **Axle ends:** DOT-compliant (FMVSS 106) braided-stainless flex hose at each axle, extended length sized to full suspension droop. **Lengths are blocked on axle + suspension selection** (Section 10 TBDs) — do not cut to length until ride height/articulation is fixed.[^fmvss106]
 - **Hardline → flex transition:** bulkhead fittings at each axle.
-- **Proportioning:** the iBooster has no integral proportioning valve. Front disc + rear disc warrants an **adjustable proportioning valve** on the rear circuit (plus residual-pressure valves if needed); size on assembly. TBD.
+- **Proportioning:** the iBooster has no integral proportioning valve. Front disc + rear disc warrants an **adjustable proportioning valve** on the rear circuit (plus residual-pressure valves if needed); size on assembly. {{ tbd(60) }}
 
 **Alternative considered — full -3 AN PTFE braided throughout:** field-repairable and common on non-street comp rigs, but not chosen for a street LJ — FMVSS 106 certification attaches to the finished assembly (DIY bulk-hose builds aren't road-certified) and the braid hides the liner from inspection.[^fmvss106] The hybrid keeps inspectable hardline on the long runs and isolates flex to the axles.
 
@@ -109,12 +109,12 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 | Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Ready to order | 8" -3 AN, includes 11/16-20 adapter |
 | Firewall mount (engine side) | iBooster integral 4-stud flange | Included w/ iBooster | Ships with donor | Bolts directly to firewall — 60×80mm M8 pattern (80mm vertical), ~62mm body neck through firewall[^body-neck] |
 | Firewall reinforcement (cabin side) | SendCutSend custom — see [DXF][backing-plate-dxf] | ~$15-30 | ⚠️ DXF needs redesign for 60×80mm pattern (currently drawn 72×72mm — see Outstanding Items) | 3/16" A36 steel, 152×152mm, 12mm corner radius, 9mm M8 holes, 64mm center bore. Zinc yellow plating |
-| Wiring harness | TBD | Tulay's or EVcreate | Decision pending donor arrival | Choice depends on donor pigtail condition |
+| Wiring harness | {{ tbd(105) }} | Tulay's or EVcreate | Decision pending donor arrival | Choice depends on donor pigtail condition |
 | Brake hardline (caliper side) | 3/16" copper-nickel (NiCopp / Cunifer) coil | Summit / AGS / O'Reilly | Spec'd — order with fittings | DOT-approved; 45° double flare, 1/2-20 IF at MC; route inside frame rail |
 | Hardline armor | 3/16" stainless spring gravel guard | 4LifetimeLines / Eastwood | Spec'd | Slide on before flaring; exposed runs |
 | Inverted-flare fittings + bulkhead tees | 3/16" / -3 AN | Summit / Earl's / Wilwood | Spec'd | Hardline unions + hardline→flex transition at axles |
-| Axle flex hoses | DOT braided stainless, extended length (TBD) | Goodridge / Rock Krawler / Synergy / Rusty's | ⚠️ Length blocked on axle + suspension TBD (Section 10) | FMVSS 106; size to full droop |
-| Adjustable proportioning valve | TBD (Wilwood adjustable prop valve or equiv.) | Wilwood / Summit | TBD | Rear circuit — iBooster has no integral proportioning |
+| Axle flex hoses | DOT braided stainless, extended length ({{ tbd(86) }}) | Goodridge / Rock Krawler / Synergy / Rusty's | ⚠️ Length blocked on axle + suspension (Section 10) | FMVSS 106; size to full droop |
+| Adjustable proportioning valve | {{ tbd(60) }} (Wilwood adjustable prop valve or equiv.) | Wilwood / Summit | {{ tbd(60) }} | Rear circuit — iBooster has no integral proportioning |
 
 ## Wiring
 
@@ -220,14 +220,14 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 ## Outstanding Items
 
-**Waiting on external action:**
+{{ tbds() }}
 
-- [x] ~~Confirm Back Bay Customs MC adapter compatibility with Wilwood 260-15542~~ — ✅ confirmed by vendor (Adam, 2026-05-30): adapter fits the 260-15542, is Honda-iBooster-only (not Tesla), and the remote reservoirs are fine. Blocker cleared.
-- [x] ~~Close iBooster eBay offer ($195 sent on $254 listing)~~ — ✅ offer accepted 2026-05-30 (listing #397546491129); part #s 46680-T3Z-A00 + 01469-TWA-A58 confirmed on listing
+## Build Tasks
+
+**Waiting on external action:**
 
 **MC bore — resolved:**
 
-- [x] ~~Recalculate the required MC bore from the brake-system hydraulics~~ — ✅ **1.00" → Wilwood 260-15542** (2026-05-30). Sized to TJ Rubicon front calipers + rear disc + standard/light pedal feel; factory-matched and agrees with the already-confirmed adapter fitment. See Master Cylinder section.
 - [ ] Bench-measure TJ auto-pedal ratio on assembly — **geometry/travel check only**: confirm the ratio leaves MC stroke headroom (no long/sinking pedal) and the iBooster input rod gets full travel + full return. Does not affect the bore; pedal *feel* is drive-and-decide, not bench-tuned.
 
 **Backing plate redesign (vendor revised the firewall pattern):**
@@ -237,7 +237,6 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 **In progress:**
 
-- [x] ~~Source 03-06 TJ/LJ automatic brake pedal assembly~~ — ordered; verify donor checks (switch + clip, pushrod hole bushing, pedal arm condition) on arrival
 - [ ] 3D-print PLA prototype of the **revised** backing plate ([DXF][backing-plate-dxf]) for trial fit; verify the 60×80mm hole spacing against donor studs and clearance for cabin-side hardware
 
 **Pending donor arrival** (purchased 2026-05-30, listing #397546491129):

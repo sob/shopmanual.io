@@ -11,7 +11,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Status | Count | Est. Total |
 |:-------|------:|-----------:|
 | Purchased | 20+ | ~$12,200+ |
-| To Purchase | 40+ | TBD |
+| To Purchase | 40+ | ~$8,800–9,300 |
 
 ---
 
@@ -70,7 +70,7 @@ Major components - watch for sales, consider financing options.
 | Wilwood 260-16392 Remote Reservoir (×2) | Wilwood | ~$260-320 | High | 4oz anodized, -3 AN port - [iBooster][ibooster] |
 | Wilwood 250-16393 Dual Reservoir Bracket | Wilwood | ~$45-65 | High | Anodized billet - [iBooster][ibooster] |
 | Wilwood 220-12993 -3 AN Flexline (×2) | Wilwood | ~$50-70 | High | 8" w/ 11/16-20 adapter - [iBooster][ibooster] |
-| iBooster Wiring Harness | Tulay's or EVcreate | ~$60-150 | High | TBD: Gen 2 universal vs EVcreate kit - [Harness][tulays] |
+| iBooster Wiring Harness | Tulay's or EVcreate | ~$60-150 | High | {{ tbd(105) }}: Gen 2 universal vs EVcreate kit - [Harness][tulays] |
 | Firewall backing plate (cabin side) | SendCutSend | ~$15-30 | High | Flat 3/16" steel sandwich plate, donor bracket pattern + 62mm center - [iBooster][ibooster] |
 | JL Audio MV800/8i Amplifier (010-03339-00) | JL Audio (Garmin) | ~$900 | Medium | 8-ch w/ DSP, replaces Fusion AP61800 plan - [Amplifier][amplifier] |
 | JL Audio M6-8IB-S-GmTi-i-4 Subwoofer (×2) | JL Audio | ~$700 (pair) | Low | Replaces single M7-12IB plan - [Subwoofer][subwoofer] |

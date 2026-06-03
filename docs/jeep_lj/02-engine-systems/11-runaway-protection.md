@@ -156,6 +156,10 @@ Both upgrades preserve the manual cable as the always-available backup.
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Verify R2.8 turbo inlet tube outside diameter (2.5" suspected; 2.8" AMOT body is closest available)
 - [ ] Source NPT-to-hose adapter fittings sized to match turbo inlet
 - [ ] Select dash T-handle mounting location (within reach belted, away from accidental contact)

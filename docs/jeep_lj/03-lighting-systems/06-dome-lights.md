@@ -53,6 +53,10 @@ Physical switch on KC #6337 bracket for rear dome control independent of SwitchP
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from SwitchPros to roll bar mounts
 
 ## Related Documentation

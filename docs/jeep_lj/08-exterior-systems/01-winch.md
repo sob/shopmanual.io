@@ -116,7 +116,7 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 
 See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
 
-- **Route:** Passenger rear wheel well → front bumper (~13 ft, exact path TBD - avoid exposed frame rail per offroad protection requirement)
+- **Route:** Passenger rear wheel well → front bumper (~13 ft, exact path: {{ tbd(106) }} - avoid exposed frame rail per offroad protection requirement)
 - **Protection:** Split loom over entire run
 - **Securing:** P-clamps every 18" along the chosen path
 - **Grommets:** Rubber grommets with sealant at body penetrations
@@ -152,7 +152,7 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
 
 ## Outstanding Items
 
-None - all specifications determined.
+{{ tbds() }}
 
 ## Related Documentation
 

@@ -41,7 +41,7 @@ tags:
 | :-------------------- | :--------------- | :------------ | :---------------------------- | :--------------------------------------------------------------- |
 | Start Battery (+)     | Red              | M8            | START battery positive        | See [START Battery Distribution][starter-battery] for wire specs |
 | Auxiliary Battery (+) | Brown            | M8            | AUX battery positive          | See [AUX Battery Distribution][aux-battery] for wire specs       |
-| Solar (+)             | Yellow           | TBD           | Cascadia 4x4 80W panel        | See [Solar Charging][solar]                                      |
+| Solar (+)             | Yellow           | {{ tbd(108) }} | Cascadia 4x4 80W panel       | See [Solar Charging][solar]                                      |
 | Ground (-)            | Black            | M8            | AUX battery negative          | See [AUX Battery Distribution][aux-battery] for wire specs       |
 | Ignition              | Blue             | Spade         | PMU ignition sense tap        | 18 AWG - see [PMU Inputs][pmu-inputs]                            |
 | Battery Temp Sensor   | +/- (reversible) | 2-pin plug    | AUX battery positive terminal | **REQUIRED** - LiFePO4 temperature-compensated charging          |

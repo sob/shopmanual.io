@@ -183,6 +183,10 @@ Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Verify ARB CKBLTA12 wiring harness connector pinout for motor 1, motor 2, and control terminals
 - [ ] Confirm under-seat mounting bracket/location for compressor and 1-gallon tank
 - [ ] Purchase ARB 171507 1-gallon aluminum air tank

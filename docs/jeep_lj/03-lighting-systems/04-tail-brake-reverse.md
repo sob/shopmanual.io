@@ -95,6 +95,10 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Plan wire routing from CT4 to rear tail lights
 - [ ] Plan wire routing from PMU Out 21/22 to rear tail lights
 

@@ -79,7 +79,7 @@ Head unit has internal power management - draws full power when ignition sense i
 
 ## Outstanding Items
 
-None - all specifications determined.
+{{ tbds() }}
 
 ## Related Documentation
 

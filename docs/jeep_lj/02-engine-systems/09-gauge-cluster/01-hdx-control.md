@@ -122,6 +122,10 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Determine 4WD/4LO indicator signal types (NP241 Rubicon transfer case outputs)
 - [ ] Determine brake indicator source (brake switch vs CT4 output)
 - [ ] Bench-verify WAIT/EX polarity at HDX input — Cummins manual specifies active-low sink-circuit, but HDX docs list "active high"; resolve before final wiring

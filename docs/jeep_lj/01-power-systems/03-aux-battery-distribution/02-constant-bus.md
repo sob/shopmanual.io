@@ -48,7 +48,7 @@ The AUX battery has no local CONSTANT bus. Loads are distributed in two stages:
 
 | From                    | Cable     | Distance | Protection                | Voltage Drop @ 200A | Notes                                          |
 | :---------------------- | :-------- | :------- | :------------------------ | :------------------ | :--------------------------------------------- |
-| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 300A CB at battery (<7") | ~2.0% @ 20°C        | Routed via cabin trunk (path TBD)              |
+| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 300A CB at battery (<7") | ~2.0% @ 20°C        | Routed via cabin trunk — see {{ tbd(75) }}     |
 
 ## Load Distribution
 

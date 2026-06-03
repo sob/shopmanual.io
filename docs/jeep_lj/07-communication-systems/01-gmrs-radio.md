@@ -79,7 +79,7 @@ tags:
 
 ## Outstanding Items
 
-None - all specifications determined.
+{{ tbds() }}
 
 ## Related Documentation
 

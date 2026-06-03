@@ -148,6 +148,10 @@ For a passive (no electronics) solution, install 4-5 series rectifier diodes (10
 
 ## Outstanding Items
 
+{{ tbds() }}
+
+## Build Tasks
+
 - [ ] Order overvoltage protection relay module (DC 36V version, ~$15-25)
 - [ ] Determine mounting location for voltage module (near BCDC or inline with solar wiring)
 - [ ] Test and configure voltage thresholds before final installation (47V disconnect, 44V reconnect)
@@ -156,3 +160,4 @@ For a passive (no electronics) solution, install 4-5 series rectifier diodes (10
 [bcdc]: 03-bcdc.md
 [installation-checklist]: ../../09-installation/01-power-systems-checklist.md#phase-4-integration-wiring
 [overvoltage-module]: https://www.amazon.com/Over-Voltage-Under-Voltage-Protection-Monitoring-Adjustable/dp/B07Y2PTB4M
+

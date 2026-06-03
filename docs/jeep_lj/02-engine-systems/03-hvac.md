@@ -61,7 +61,7 @@ The CM2220 ECM used by the R2.8 has no A/C request input pin, so PMU-to-ECM A/C 
 
 ## Outstanding Items
 
-None - design complete. See [installation checklist][install-checklist] for build tasks.
+{{ tbds() }}
 
 ## Related Documentation
 

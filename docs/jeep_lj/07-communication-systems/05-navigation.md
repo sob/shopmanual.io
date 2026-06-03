@@ -75,7 +75,7 @@ The Tread 2 Overland has built-in inReach hardware but it is not activated — s
 
 ## Outstanding Items
 
-None - all specifications determined.
+{{ tbds() }}
 
 ## Related Documentation
 

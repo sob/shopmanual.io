@@ -186,9 +186,13 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 | :----------------- | :----------------- | :------------------------------- |
 | Adapter Kit        | Custom             | R2.8 to 8HP70 (in progress)      |
 | Flexplate          | Adapted from AX15 kit | R2.8 to 8HP70 (custom adapter) |
-| Pilot Bearing      | TBD                | If required                      |
+| Pilot Bearing      | {{ tbd(91) }}      | If required                      |
 
 ## Outstanding Items
+
+{{ tbds() }}
+
+## Build Tasks
 
 - [ ] Order Turbolamik TCU 2.0 with basic wiring harness
 - [ ] Install Turbolamik TCU on 8HP70 mechatronic (soldering required)

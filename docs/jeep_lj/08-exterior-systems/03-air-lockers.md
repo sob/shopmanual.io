@@ -48,7 +48,7 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 | Locker | SwitchPros Output | Wire   | Route                                               |
 | ------ | ----------------- | ------ | --------------------------------------------------- |
-| Front  | OUTPUT-17         | 18 AWG | Passenger rear wheel well → front axle (~12 ft, routing TBD) |
+| Front  | OUTPUT-17         | 18 AWG | Passenger rear wheel well → front axle (~12 ft, routing {{ tbd(81) }}) |
 | Rear   | OUTPUT-10         | 18 AWG | Passenger rear wheel well → rear axle (~6 ft)                |
 
 ### Wire Routing
@@ -115,6 +115,10 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
     - Ensure adequate air pressure before engaging lockers
 
 ## Outstanding Items
+
+{{ tbds() }}
+
+## Build Tasks
 
 - [ ] Verify ARB RD116 compatibility with Dana 44 30-spline 5.38 gear ratio
 - [ ] Order ARB air line installation kit with 1/4" fittings for front/rear lockers

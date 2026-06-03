@@ -165,7 +165,25 @@ grep -rn "TBD" docs/jeep_lj --include="*.md" | grep -v "tbd-tracker" | grep -v "
 gh issue list -R sob/drawings --label tbd --state open --limit 200
 ```
 
-Run `/verify-tbd` to reconcile source TBD markers against open issues.
+Run `/verify-tbd` to reconcile source TBD markers against open issues, or run
+`python3 hooks/verify_tbd.py` for the non-interactive version (this is what
+CI runs via `.github/workflows/verify-tbd.yml` — a PR touching `docs/**` or
+`tbd_macros.py` fails the check if any source TBD is untracked, any open
+issue's `Source:` file is missing, or any open issue is missing a required
+label facet).
+
+**Macros (in `tbd_macros.py`):**
+
+- `{{ tbds() }}` — list open `tbd` issues for the current page's project+area,
+  grouped by priority. Auto-derives scope from the page path.
+- `{{ tbds(scope='project', layout='github') }}` — filterable list of all open
+  issues for the vehicle (used on `tbd-tracker.md`).
+- `{{ tbds_resolved(scope='project', since='90d') }}` — closed `tbd` issues in
+  the window, with the closing comment as the resolution (replaces the
+  hand-maintained RECENTLY RESOLVED table).
+- `{{ tbd(N) }}` — inline marker for a single spec cell. Renders `TBD #N` as a
+  link while open; flips to the resolution snippet when the issue closes, so
+  cells become self-resolving without a source edit.
 
 **Priority Levels (`priority/*` labels):**
 

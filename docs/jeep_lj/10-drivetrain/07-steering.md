@@ -27,8 +27,8 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Kit | PSC FHK400TJ (TJ/LJ Extreme Series, 2.75" double-ended) |
 | Steering Control Valve | PSC 160cc orbital (in FHA160-S accessory kit) |
 | Ram | PSC SC2227K1 (2.75" × 8.0" double-ended) |
-| Pump | Cummins-specific PSC pump TBD (kit PK40JP2-FH is 4.0L-only) |
-| Reservoir | Remote (included with pump kit) — model TBD |
+| Pump | Cummins-specific PSC pump — {{ tbd(99) }} (kit PK40JP2-FH is 4.0L-only) |
+| Reservoir | Remote (included with pump kit) — model {{ tbd(103) }} |
 | Cooler | Mishimoto fluid cooler + fan (180 °F inline thermostat) |
 | Fluid | PSC 715 (SWEPCO 715) |
 
@@ -41,10 +41,10 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Specification | Value |
 | :------------ | :---- |
 | Manufacturer | PSC Motorsports |
-| Model | TBD — Cummins R2.8 pump + bracket (NOT the kit's PK40JP2-FH) |
-| Flow Rate | TBD |
-| Pressure | TBD |
-| Drive | TBD (belt vs. Cummins gear-drive) |
+| Model | {{ tbd(99) }} — Cummins R2.8 pump + bracket (NOT the kit's PK40JP2-FH) |
+| Flow Rate | {{ tbd(99) }} |
+| Pressure | {{ tbd(99) }} |
+| Drive | {{ tbd(99) }} (belt vs. Cummins gear-drive) |
 
 ### Steering Control Valve
 
@@ -68,8 +68,8 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Specification | Value |
 | :------------ | :---- |
 | Type | Remote (included with PSC pump kit) |
-| Capacity | TBD |
-| Location | TBD |
+| Capacity | {{ tbd(103) }} |
+| Location | {{ tbd(103) }} |
 
 ### Cooler
 
@@ -78,7 +78,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Unit | Mishimoto fluid cooler |
 | Fan | Mishimoto (matched to cooler) |
 | Control | 180 °F inline thermostat |
-| Fan Current Draw | TBD (confirm fits PMU Out 8 ~15A budget) |
+| Fan Current Draw | {{ tbd(101) }} (confirm fits PMU Out 8 ~15A budget) |
 | Fan Power Source | PMU Out 8 (~15A, thermostat-switched) — see [PMU Outputs][pmu-outputs] |
 
 ## Fluid Specifications
@@ -86,9 +86,13 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Specification | Value |
 | :------------ | :---- |
 | Fluid Type | PSC 715 (SWEPCO 715) |
-| Capacity | TBD (kit ships ~4 qt; confirm system fill) |
+| Capacity | {{ tbd(103) }} (kit ships ~4 qt; confirm system fill) |
 
 ## Outstanding Items
+
+{{ tbds() }}
+
+## Build Tasks
 
 - [ ] Source a Cummins R2.8-compatible PSC pump + bracket (kit PK40JP2-FH is 4.0L-only)
 - [ ] Confirm pump drive type (belt vs Cummins gear-drive), flow rate, and pressure
@@ -100,7 +104,6 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 - [ ] Document hydraulic line routing
 
 [^steering-config]: Owner decision, 2026-05-30 — full-hydro kit is PSC pump + PSC orbital valve + PSC double-ended ram; Busted Knuckle Off-Road steering stops limit ram stroke to Dana 44 spec; Artec Industries Dana 60 ram mount cut down to the Dana 44; Mishimoto fluid cooler + fan on a 180 °F inline thermostat. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending.
-
 [^psc-kit]: PSC Motorsports **FHK400TJ** — 1997-2006 Jeep TJ/LJ Extreme Series full hydraulic kit, 2.75" double-ended cylinder (PSC Motorsports / pscsteering.com, accessed 2026-05-31). Kit boxes: **FHA160-S** (160cc full-hydraulic accessory kit w/ orbital valve), **PK40JP2-FH** (high-flow pump kit — **Jeep 4.0L bracket**, not used here), **SC2227K1** (2.75" × 8.0" double-ended cylinder); fluid PSC/SWEPCO 715. Smaller-tire variant is **FHK100TJ** (2.5" bore / 125cc valve, 35-42"). Pump bracket is 4.0L-specific, so it does not fit this build's Cummins R2.8 — valve and cylinder carry over.
 
 ## Related Documentation
