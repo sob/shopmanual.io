@@ -10,11 +10,11 @@
 # Set the Cloudflare Pages "Build command" to:  bash build.sh
 set -euo pipefail
 
-# Install the generator (Cloudflare provides Python; pin nothing so we track the
-# same version the dashboard installs today).
-pip install --quiet zensical
+# Install the generator + plugins (Cloudflare provides Python). Keep this list
+# in sync with the plugins referenced by mkdocs.yml.
+pip install --quiet zensical mkdocs-print-site-plugin
 
-zensical build
+zensical build --clean
 
 # Remove published CLAUDE.md pages (directory-URL output -> ".../CLAUDE/").
 SITE_DIR="${ZENSICAL_SITE_DIR:-site}"
