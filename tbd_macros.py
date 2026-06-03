@@ -241,8 +241,10 @@ def _table(items, show_project=False):
     sorting on the Priority or Area column.
 
     Rows are pre-sorted by priority so the default (pre-JS) view is grouped.
-    The Priority cell carries a hidden numeric rank span so sorting that column
-    follows critical->verify order rather than alphabetical.
+    The Priority cell carries a visible (muted) numeric rank prefix so sorting
+    that column follows critical->verify order rather than alphabetical. The
+    rank must be visible text: simple-datatables derives its sort value from
+    innerText, which drops display:none and clipped content unreliably.
     """
     def sort_key(it):
         meta = PRIORITY_META.get(it["priority"])
@@ -259,10 +261,9 @@ def _table(items, show_project=False):
         meta = PRIORITY_META.get(it["priority"])
         rank = (meta[3] if meta else 99) + 1
         label = meta[0] if meta else (it["priority"] or "—")
-        emoji = f"{meta[2]} " if (meta and meta[2]) else ""
         slug = it["priority"] or "none"
-        pri = (f'<span class="tbd-pri-rank">{rank}</span>'
-               f'<span class="tbd-pri tbd-pri--{slug}">{emoji}{html.escape(label)}</span>')
+        pri = (f'<span class="tbd-pri tbd-pri--{slug}">'
+               f'<span class="tbd-pri-num">{rank}</span>&nbsp;{html.escape(label)}</span>')
         link = (f'<a href="{html.escape(it["url"])}">'
                 f'{html.escape(it["title"])} (#{it["number"]})</a>')
         cells = [f"<td>{pri}</td>"]

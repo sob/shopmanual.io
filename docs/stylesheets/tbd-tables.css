@@ -1,6 +1,12 @@
-/* TBD table styling. Hidden rank span makes the Priority column sort in
-   critical->verify order instead of alphabetically. */
-.tbd-table .tbd-pri-rank { display: none; }
+/* TBD table styling. A small muted rank number prefixes the priority label so
+   the Priority column sorts in critical->verify order instead of
+   alphabetically. It is kept visible (not display:none/clipped) on purpose:
+   simple-datatables sorts by innerText, which drops hidden/clipped text. */
+.tbd-table .tbd-pri-num {
+  color: var(--md-default-fg-color--lighter, #999);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85em;
+}
 .tbd-table .tbd-pri { font-weight: 600; white-space: nowrap; }
 .tbd-table .tbd-pri--critical { color: #b60205; }
 .tbd-table .tbd-pri--high     { color: #d93f0b; }
