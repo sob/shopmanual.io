@@ -53,14 +53,6 @@ Both LP4 Pro pods run on SwitchPros OUTPUT-2 via 2-pin Delphi connectors (power 
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring details.
 
-## Zone 2 Purpose
-
-Driving/Combo pattern provides peripheral illumination for:
-
-- Trail obstacle visibility on sides
-- Ditch and shoulder illumination
-- Tight maneuvering situations
-
 ## Outstanding Items
 
 {{ tbds() }}

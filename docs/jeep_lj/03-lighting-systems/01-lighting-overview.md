@@ -65,12 +65,6 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 | Brake Lights        | PMU Out 21             | 7A       | ~3A     |
 | Reverse Lights      | PMU Out 22             | 7A       | ~5A     |
 
-## Key Features
-
-- **GPS Auto-Cancel:** Turn signals cancel after turns
-- **DRL Auto-Off:** PMU programming disables DRL when headlights activate
-- **Diode Isolation:** Turn signals and brake lights integrated without backfeed
-
 ## Related Documentation
 
 - [Command Touch CT4][command-touch-ct4] - Controller specifications and programming

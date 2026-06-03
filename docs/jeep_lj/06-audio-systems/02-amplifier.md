@@ -134,13 +134,9 @@ The 100A external CB is intentionally above the 80A internal fuse — the intern
 
 **Under rear seat (driver side or center, mounted to floor with clearance for Class-D thermals)**
 
-- Power feed ~3-4 ft direct from AUX battery+ (short feed, low loss)
 - Ground return ~3-4 ft to AUX battery−. All system grounds (head unit + amp) should land at the same point per the manual to avoid ground loops.[^specs-manual]
 - Centroid to all 4 speakers + 2 subs — minimizes speaker wire runs
 - RCA + remote bundled together from head unit through trans tunnel (~10-12 ft, high-quality shielded RCA required to avoid alternator whine)
-- Mounting plate with at least **1" (2.5 cm) clear air space above the shell** (manual requirement for enclosed-compartment mounting); convection-cooled, no fan
-- Orient with connections pointing downward where practical (preserves IPX2 rating)
-- Keyhole mounting screws — insert screws first, then drop amp onto them and slide
 - USB access (front of chassis) needed for TüN DSP tuning — leave service loop
 
 ## Outstanding Items
