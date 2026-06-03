@@ -84,13 +84,17 @@
   text-transform: uppercase;
 }
 
-/* Highlight current/active navigation item with background */
+/* Highlight current/active navigation item with background.
+   Keep the same left indent as inactive links (0.8rem padding + 0.2rem margin,
+   per the base .md-nav__link rule) so a top-level page link (e.g. TBD Tracker)
+   aligns with siblings instead of bleeding to the sidebar edge. Nested items
+   get their level indent from the container, so this matches at every depth. */
 .md-sidebar__inner .md-nav--primary .md-nav__item a.md-nav__link--active {
   background-color: rgba(99, 102, 241, 0.1);
   font-weight: 600;
   border-radius: 4px;
-  padding: 0.5rem 0.75rem 0.5rem 0;
-  margin: 0.25rem 0;
+  padding: 0.5rem 0.75rem 0.5rem 0.8rem;
+  margin: 0.25rem 0.2rem;
 }
 
 /* Section headings - uppercase with horizontal line separator */
