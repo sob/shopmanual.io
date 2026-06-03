@@ -232,7 +232,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
-[tbd-tracker]: 00-tbd-tracker.md
+[tbd-tracker]: ../tbd-tracker.md
 [bd-site]: https://www.bajadesigns.com/
 [4wp-site]: https://www.4wheelparts.com/
 [quad-site]: https://www.quadratec.com/

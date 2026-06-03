@@ -11,6 +11,7 @@ __pycache__/
 .Python
 env/
 venv/
+.venv*/
 ENV/
 
 # IDE
@@ -34,3 +35,6 @@ Thumbs.db
 
 # Analysis files
 docs/ANALYZE/
+
+# Local preview server config (Claude Preview)
+.claude/launch.json

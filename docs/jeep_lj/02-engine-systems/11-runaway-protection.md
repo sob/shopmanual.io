@@ -171,5 +171,5 @@ Both upgrades preserve the manual cable as the always-available backup.
 
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md
 [checklist]: ../09-installation/02-engine-systems-checklist.md
-[tbd]: ../09-installation/00-tbd-tracker.md
+[tbd]: ../tbd-tracker.md
 [purchase]: ../09-installation/03-purchase-tracker.md

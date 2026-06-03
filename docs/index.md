@@ -26,6 +26,12 @@ Comprehensive electrical wiring documentation for a Jeep LJ with Cummins R2.8 Tu
 
 ---
 
+## Outstanding Items (all projects)
+
+Live from open GitHub issues labeled `tbd`, across every vehicle. Filter by `project:`, `area:`, `priority:`, or text.
+
+{{ tbds(scope='all', layout='github') }}
+
 ## Getting Started
 
 Browse the navigation menu to explore detailed technical documentation for each project.

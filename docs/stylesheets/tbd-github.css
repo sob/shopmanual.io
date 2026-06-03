@@ -1,0 +1,131 @@
+/* GitHub-issues-style TBD list. Mimics Primer (github.com issues). Colors are
+   driven by CSS variables with a [data-md-color-scheme=slate] dark override so
+   it tracks the Material light/dark toggle. */
+.ghi {
+  --ghi-border: #d0d7de;
+  --ghi-canvas: #ffffff;
+  --ghi-subtle: #f6f8fa;
+  --ghi-fg: #1f2328;
+  --ghi-muted: #59636e;
+  --ghi-link: #0969da;
+  --ghi-open: #1a7f37;
+  --ghi-btn-hover: #eef1f4;
+  font-size: 0.8rem;
+  margin: 1em 0;
+  color: var(--ghi-fg);
+}
+[data-md-color-scheme="slate"] .ghi {
+  --ghi-border: #30363d;
+  --ghi-canvas: #0d1117;
+  --ghi-subtle: #161b22;
+  --ghi-fg: #e6edf3;
+  --ghi-muted: #8b949e;
+  --ghi-link: #2f81f7;
+  --ghi-open: #3fb950;
+  --ghi-btn-hover: #21262d;
+}
+
+/* ---- toolbar (search + facet dropdowns) ---- */
+.ghi-toolbar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.ghi-search-wrap { position: relative; flex: 1 1 320px; display: flex; align-items: center; }
+.ghi-search-icon { position: absolute; left: 8px; fill: var(--ghi-muted); pointer-events: none; }
+.ghi-search {
+  width: 100%; padding: 5px 12px 5px 30px;
+  border: 1px solid var(--ghi-border); border-radius: 6px;
+  background: var(--ghi-canvas); color: var(--ghi-fg);
+  font-size: 0.8rem; line-height: 20px;
+}
+.ghi-search:focus { outline: none; border-color: var(--ghi-link);
+  box-shadow: 0 0 0 1px var(--ghi-link); }
+
+.ghi-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.ghi-dd { position: relative; }
+.ghi-dd > summary {
+  list-style: none; cursor: pointer; user-select: none;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 12px; font-weight: 500; font-size: 0.8rem;
+  border: 1px solid var(--ghi-border); border-radius: 6px;
+  background: var(--ghi-subtle); color: var(--ghi-fg);
+}
+.ghi-dd > summary::-webkit-details-marker { display: none; }
+.ghi-dd > summary:hover { background: var(--ghi-btn-hover); }
+.ghi-caret { font-size: 0.7em; color: var(--ghi-muted); }
+.ghi-menu {
+  position: absolute; z-index: 30; top: calc(100% + 4px); left: 0;
+  min-width: 220px; max-height: 60vh; overflow: auto;
+  background: var(--ghi-canvas); border: 1px solid var(--ghi-border);
+  border-radius: 6px; box-shadow: 0 8px 24px rgba(31, 35, 40, 0.2);
+  padding: 4px 0;
+}
+.ghi-dd--right .ghi-menu { left: auto; right: 0; }
+.ghi-menu-item, .ghi-sort {
+  display: flex; align-items: center; gap: 8px; width: 100%;
+  padding: 6px 12px; border: 0; background: none; cursor: pointer;
+  font-size: 0.8rem; text-align: left; color: var(--ghi-fg); white-space: nowrap;
+}
+.ghi-menu-item:hover, .ghi-sort:hover { background: var(--ghi-subtle); }
+.ghi-check { visibility: hidden; color: var(--ghi-fg); font-size: 0.8em; width: 12px; }
+.ghi-menu-item[aria-checked="true"] .ghi-check { visibility: visible; }
+.ghi-sort[aria-checked="true"]::after { content: "✓"; margin-left: auto; }
+.ghi-swatch { width: 12px; height: 12px; border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15); flex: none; }
+
+/* ---- box + rows ---- */
+.ghi-box { border: 1px solid var(--ghi-border); border-radius: 6px;
+  background: var(--ghi-canvas); overflow: hidden; }
+.ghi-head { display: flex; align-items: center; gap: 6px;
+  padding: 12px 16px; background: var(--ghi-subtle);
+  border-bottom: 1px solid var(--ghi-border); font-weight: 600; }
+.ghi-head .ghi-state { fill: var(--ghi-open); }
+
+.ghi-list { list-style: none; margin: 0; padding: 0; }
+.ghi-row { display: flex; gap: 8px; padding: 8px 16px;
+  border-top: 1px solid var(--ghi-border); align-items: flex-start; }
+.ghi-row:first-child { border-top: 0; }
+.ghi-row:hover { background: var(--ghi-subtle); }
+.ghi-row > .ghi-state { fill: var(--ghi-open); margin-top: 2px; flex: none; }
+.ghi-main { min-width: 0; flex: 1; }
+.ghi-title { font-weight: 600; color: var(--ghi-fg) !important; text-decoration: none; }
+.ghi-title:hover { color: var(--ghi-link) !important; text-decoration: none; }
+.ghi-meta { color: var(--ghi-muted); font-size: 0.75rem; margin-top: 4px; }
+
+.ghi-labels { display: inline; }
+.ghi-label {
+  display: inline-block; margin: 0 0 2px 4px; padding: 0 7px;
+  font-size: 0.72rem; font-weight: 500; line-height: 18px;
+  border-radius: 2em; cursor: pointer; vertical-align: middle;
+  background: var(--lbl-bg, #ededed); color: var(--lbl-fg, #1f2328);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.ghi-label:hover { filter: brightness(0.95); }
+
+.ghi-empty { padding: 32px 16px; text-align: center; color: var(--ghi-muted); }
+.ghi-row[hidden], .ghi-empty[hidden] { display: none; }
+
+/* ---- override Material for MkDocs defaults that fight the component ----
+   Material styles <details> as collapsible admonitions (border, icon, chevron)
+   and adds an external-link icon + list bullets. Re-scope with .md-typeset to
+   win specificity and reset those. */
+.md-typeset .ghi-dd {
+  display: inline-block; margin: 0; padding: 0; border: 0; border-radius: 0;
+  box-shadow: none; background: none; font-size: inherit;
+}
+.md-typeset .ghi-dd > summary {
+  display: inline-flex; align-items: center; gap: 4px; list-style: none;
+  padding: 5px 12px; font-weight: 500;
+  border: 1px solid var(--ghi-border); border-radius: 6px;
+  background: var(--ghi-subtle); color: var(--ghi-fg); cursor: pointer;
+}
+.md-typeset .ghi-dd > summary:hover { background: var(--ghi-btn-hover); }
+.md-typeset .ghi-dd > summary::before,
+.md-typeset .ghi-dd > summary::after { content: none !important; display: none !important; }
+
+.md-typeset .ghi-list { margin: 0; padding: 0; list-style: none; }
+.md-typeset .ghi-list > .ghi-row { margin: 0; }
+.md-typeset .ghi-list > .ghi-row::before { content: none; }
+
+.md-typeset a.ghi-title { color: var(--ghi-fg); text-decoration: none; }
+.md-typeset a.ghi-title:hover { color: var(--ghi-link); text-decoration: none; }
+.md-typeset a.ghi-title::after { content: none !important; display: none !important; }
+
+.md-typeset .ghi-label { margin: 0 0 2px 4px; }

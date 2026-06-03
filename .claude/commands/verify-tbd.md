@@ -1,83 +1,83 @@
 ---
-description: Verify all TBD items are tracked in the centralized tracker
+description: Reconcile source TBD markers against open GitHub `tbd` issues
 ---
 
 # Verify TBD Tracking
 
-Ensure all TBD items are tracked in the centralized tracker with appropriate priorities.
+The source of truth for TBD items is **GitHub Issues labeled `tbd`** (the
+`docs/jeep_lj/tbd-tracker.md` page just renders them). This command checks that
+source TBD markers and open issues stay in sync.
 
-**Search Path:** `docs/jeep_lj/` (exclude CLAUDE.md files, tracker itself, and .claude/)
+**Search Path:** `docs/jeep_lj/` (exclude `CLAUDE.md`, `tbd-tracker.md`, `.claude/`, `ANALYZE/`)
 
-**Tracker Location:** `docs/jeep_lj/08-installation/00-tbd-tracker.md`
+**Issues:** `gh issue list -R sob/drawings --label tbd --state open --limit 300 --json number,title,body,labels`
 
 ## Checks to Perform
 
-### 1. Find all TBD items in source files
+### 1. Find all TBD markers in source files
 
-Search all .md files in `docs/jeep_lj/` for:
+Search all `.md` files under `docs/jeep_lj/` for:
 - "TBD" (case insensitive)
 - "TODO" outside of Outstanding Items sections
-- "UNKNOWN" or "unknown"
+- "UNKNOWN" / "unknown" used as a placeholder value
 
-### 2. Cross-reference: Source → Tracker
+### 2. Source → Issues (untracked TBDs)
 
-For each TBD found in source files:
-- Check if it exists in tracker
-- Verify priority level is assigned (Critical/High/Medium/Low/Verify)
-- Verify file path in tracker matches actual location
+For each TBD found in a source file, confirm an **open** `tbd` issue exists for
+it — match on the `Source:` path in the issue body and/or the topic in the
+title. Flag any source TBD with no matching open issue.
 
-### 3. Cross-reference: Tracker → Source (CRITICAL)
+### 3. Issues → Source (stale issues)
 
-For each entry in the tracker, verify the TBD still exists in the source file:
-- Read the referenced file
-- Search for corresponding TBD text
-- If TBD is resolved (no longer says TBD), mark as stale
+For each open `tbd` issue, read its `Source:` file and confirm the TBD still
+exists there. Flag issues whose source:
+- no longer contains the TBD (resolved in docs but issue still open), or
+- points to a file that no longer exists.
 
-### 4. Stale tracker entries
+### 4. Label hygiene
 
-Flag tracker entries where:
-- Referenced file no longer exists
-- TBD has been resolved but not moved to "Recently Resolved"
-- Duplicate entries for same item
-- Source file now has actual value instead of TBD
+Flag any open `tbd` issue missing a required facet label:
+- `project/<vehicle>` (e.g. `project/jeep-lj`)
+- `priority/<level>` (`critical` | `high` | `medium` | `low` | `verify`)
+- `area/<section>` (e.g. `area/power-systems`)
 
-### 5. Priority validation
-
-Flag potential priority mismatches:
-- Part numbers marked Medium/Low should be High (blocks ordering)
-- Wire gauges marked Low should be Medium (affects installation)
-- Mounting locations can stay Medium/Low (determined during build)
+Also flag obvious priority mismatches (e.g. a part number needed before ordering
+marked `priority/low` → should be `high`).
 
 ## Exclusions
 
-Skip these files when searching:
-- `CLAUDE.md` files (navigation guides, reference TBD process)
-- `00-tbd-tracker.md` itself (contains TBD as content)
-- Any file in `.claude/` directory
-- `index.md` files that just reference the tracker
+Skip when scanning source:
+- `CLAUDE.md` files (navigation guides; they reference the TBD process)
+- `tbd-tracker.md` (renders issues — not a source of TBDs)
+- anything in `.claude/` or `docs/ANALYZE/`
+- `index.md` files that only link to the tracker
 
 ## Output Format
 
-**Untracked TBD Items:**
-| File | Line | TBD Text | Suggested Priority |
-|------|------|----------|-------------------|
+**Untracked source TBDs (need an issue):**
+| File | Line | TBD Text | Suggested priority | Suggested area |
+|------|------|----------|--------------------|----------------|
 
-**Stale Tracker Entries (resolved in source):**
-| Tracker Entry | Source File | Current Value | Action |
-|---------------|-------------|---------------|--------|
+**Stale open issues (resolved in source):**
+| Issue | Title | Source file | Current state | Action |
+|-------|-------|-------------|---------------|--------|
 
-**Priority Mismatches:**
-| Item | Current | Suggested | Reason |
-|------|---------|-----------|--------|
+**Label problems:**
+| Issue | Title | Missing / wrong label |
+|-------|-------|------------------------|
 
-**Count Validation:**
-- Verify tracker summary counts match actual table row counts
-- Verify Total Open Items matches sum of priorities
+## After Audit (with approval)
 
-## After Audit
+1. **Open issues** for untracked source TBDs:
+   ```bash
+   gh issue create -R sob/drawings --title "<topic>" \
+     --body "<description>
 
-1. Move resolved items to "Recently Resolved" with date and resolution
-2. Add untracked items to appropriate priority section
-3. Update priority levels if needed
-4. Update summary counts
-5. Run `mkdocs build` to verify no broken links
+   Source: <path>" \
+     --label tbd --label project/jeep-lj --label priority/<level> --label area/<section>
+   ```
+2. **Close** issues resolved in source: `gh issue close <n> -R sob/drawings -c "<resolution>"`
+3. **Fix labels:** `gh issue edit <n> -R sob/drawings --add-label area/<section>`
+
+No markdown table to edit and no counts to update — the tracker page and the
+landing-page blocks refresh from issues on the next build.
