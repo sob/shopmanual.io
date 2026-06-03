@@ -69,8 +69,35 @@ See [START Battery Load Analysis][start-load-analysis] for complete scenario det
 
 ## Outstanding Items
 
-- [ ] Determine alternator positive output terminal size (for 1/0 AWG lug selection)
-- [ ] Verify alternator voltage regulator set point (14.2-14.4V for AGM batteries)
+- [ ] Determine alternator positive output terminal size (for 1/0 AWG lug selection) — see [Vendor Inquiry](#vendor-inquiry) below
+- [ ] Verify alternator voltage regulator set point (14.2–14.4V is the correct AGM target;[^agm-target] confirm the HO-C28 actually regulates there) — see [Vendor Inquiry](#vendor-inquiry) below
+
+## Vendor Inquiry — Premier Power Welder (draft) {#vendor-inquiry}
+
+Both open items above are answered by one email to Premier Power Welder:
+
+```text
+Subject: HO-C28 (Cummins R2.8 270A) — output stud size & regulator set point
+
+Hi Premier Power Welder,
+
+I'm wiring the HO-C28 270A alternator (Cummins R2.8) into a dual-battery
+truck and need two specs to finish the install:
+
+1. Output terminal: what is the thread/stud size of the positive output
+   post? I'm sizing a ring lug for 1/0 AWG cable and want the correct
+   stud diameter (e.g. 1/4"-20, 5/16"-18, M8, etc.).
+
+2. Voltage regulation: what is the regulator set point, and is it
+   suitable for AGM batteries (target ~14.2-14.4V at the battery)? Is the
+   regulator internal and fixed, or adjustable? My START battery is AGM.
+
+Application: HO-C28 on a Cummins R2.8 Repower, charging an AGM start
+battery (~850 CCA).
+
+Thanks,
+[name]
+```
 
 ## Related Documentation
 
@@ -84,3 +111,5 @@ See [START Battery Load Analysis][start-load-analysis] for complete scenario det
 [start-load-analysis]: ../08-load-analysis/02-start-battery.md
 [grounding]: ../05-grounding/index.md
 [wire-distance]: 05-wire-distance-reference.md
+
+[^agm-target]: AGM batteries take an absorption/charge voltage of ~14.2–14.7V at the terminals (mfr range 14.0–14.7V), so the 14.2–14.4V target is correct; many stock regulators sit lower (13.8–14.0V) and undercharge AGM. The target is validated — what remains is confirming the HO-C28's actual set point (vendor or field measurement). General AGM charging references (Victron / battery-mfr guidance), accessed 2026-06-03.

@@ -87,8 +87,7 @@ plugins:
       # mistaken for a comment-open. {{ }} variables are unused elsewhere in docs.
       j2_comment_start_string: '{##'
       j2_comment_end_string: '##}'
-  - tags:
-      tags_file: tags.md
+  - tags
   - print-site:
       add_to_navigation: true
       print_page_title: 'Print / PDF'
@@ -115,11 +114,12 @@ nav:
     - TBD Tracker: jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
+      - Standards Exceptions: jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
       - 1.1 - Power Generation:
         - jeep_lj/01-power-systems/01-power-generation/index.md
         - 1.1.1 - Batteries: jeep_lj/01-power-systems/01-power-generation/01-batteries.md
         - 1.1.2 - Alternator: jeep_lj/01-power-systems/01-power-generation/02-alternator.md
-        - 1.1.3 - BCDC Alpha 25: jeep_lj/01-power-systems/01-power-generation/03-bcdc.md
+        - 1.1.3 - BCDC Alpha 50: jeep_lj/01-power-systems/01-power-generation/03-bcdc.md
         - 1.1.4 - Solar Charging: jeep_lj/01-power-systems/01-power-generation/04-solar.md
         - 1.1.5 - Wire Distance Reference: jeep_lj/01-power-systems/01-power-generation/05-wire-distance-reference.md
       - 1.2 - START Battery Distribution:

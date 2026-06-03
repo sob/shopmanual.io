@@ -135,7 +135,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Ron Francis WS-51C Wiper Controller | Ron Francis | ~$80 | Medium | [Wipers][wipers] |
 | PIAA 85115 Sports Horn | PIAA | ~$50 | Low | [Horn][horn] |
 | Overvoltage Protection Relay | Generic | ~$15-25 | Low | Solar protection - [Solar][solar] |
-| Deutsch HDP20 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
+| Deutsch HDP24-24-29 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
 | ARB Air Line Installation Kit | ARB | ~$50 | Medium | [Air Lockers][air-lockers] |
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |

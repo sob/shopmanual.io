@@ -65,7 +65,7 @@ Detect ARB compressor activation and disable non-critical START battery loads to
 IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000):
 
   // Shed non-critical loads (priority order: lowest to highest impact)
-  Out14_DRL = OFF              // -8A: Daytime running lights (cosmetic)
+  Out23_DRL = OFF              // -2.6A: Daytime running lights (cosmetic)
   Out17_AC_Clutch = OFF        // -5A: Air conditioning (comfort)
 
   // Conditionally shed cooler fans if temperatures allow
@@ -75,14 +75,14 @@ IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000)
   IF (J1939_SPN110_CoolantTemp < 210°F):
     Out8_PSFan = OFF           // -15A: PS cooler fan (temp-dependent)
 
-  // Total load reduction: 28-43A depending on temperatures
+  // Total load reduction: ~8-38A depending on temperatures
 
   // Optional: Trigger dashboard indicator
   Out_ARB_Active_Indicator = ON  // Visual feedback to driver
 
 ELSE:
   // Restore normal operation when ARB stops
-  Out14_DRL = (Per DRL auto-off logic)
+  Out23_DRL = (Per DRL auto-off logic)
   Out17_AC_Clutch = (Per A/C request logic)
   Out7_OilFan = (Per oil temp thresholds)
   Out8_PSFan = (Per coolant temp thresholds)
@@ -93,11 +93,11 @@ ELSE:
 
 | Load Shed             | Current Saved | Impact                       | When Disabled         |
 | :-------------------- | :------------ | :--------------------------- | :-------------------- |
-| DRL (OUT14)           | 8A            | Low - cosmetic only          | Always when ARB runs  |
+| DRL (OUT23)           | 2.6A          | Low - cosmetic only          | Always when ARB runs  |
 | A/C Clutch (OUT17)    | 5A            | Medium - comfort loss        | Always when ARB runs  |
 | Oil Cooler Fan (OUT7) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
 | PS Cooler Fan (OUT8)  | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
-| **Total Saved**       | **28-43A**    | -                            | -                     |
+| **Total Saved**       | **~8-38A**    | -                            | -                     |
 
 ## AUX Battery Impact Analysis
 
@@ -124,13 +124,13 @@ Time to 50% SOC:         45 minutes
 - Alternator: 270A
 - **Margin: +105A** Alternator is NOT the constraint
 
-### WITH Load Shedding (Minimum - 13A shed from START)
+### WITH Load Shedding (Minimum - ~8A shed from START)
 
-Shedding DRL (8A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
+Shedding DRL (~2.6A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
 
 ```text
 START battery:
-PMU reduced:          93A   (was 106A, shed DRL + A/C)
+PMU reduced:          93A   (was 101A, shed DRL + A/C)
 Radiator fan:         35A   (moderate, stationary)
 BCDC at full rate:    50A   (maximized)
 ─────────────────────────────
@@ -148,7 +148,7 @@ Net AUX drain:        45A   (unchanged - BCDC still maxed)
 
 **Primary benefit:** Ensures BCDC maintains full 50A output even if START battery voltage sags.
 
-### WITH Load Shedding (Maximum - 43A shed from START)
+### WITH Load Shedding (Maximum - ~38A shed from START)
 
 **When oil/coolant temps allow disabling cooler fans:**
 
@@ -288,7 +288,7 @@ ELSE:
 LOG BatteryVoltage (1 Hz)
 LOG TotalCurrent_PMU (1 Hz)
 LOG EngineRPM (J1939_SPN190)
-LOG Out14_DRL (state)
+LOG Out23_DRL (state)
 LOG Out17_AC_Clutch (state)
 LOG Out7_OilFan (state)
 LOG Out8_PSFan (state)

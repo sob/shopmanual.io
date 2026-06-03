@@ -24,7 +24,7 @@ tags:
 
 **Product Image:**
 
-![Warn Zeon 10-S Winch](../../images/warn-zeon-10s-winch.jpg)
+![Warn Zeon 10-S Winch](../images/warn-zeon-10s-winch.jpg)
 
 ## Electrical Specifications
 

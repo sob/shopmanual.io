@@ -40,7 +40,7 @@ tags:
 | Terminal 2 (#10-24)     | Headlights (LP6) - pair 1         | 16 AWG ✓      | ~10 ft       | ~8A             | See [Headlights][headlights]           |
 | Terminal 3 (#10-24)     | Headlights (LP6) - pair 2         | 16 AWG ✓      | ~10 ft       | ~8A             | See [Headlights][headlights]           |
 | Terminal 4 (#10-24)     | Tail/brake/reverse (PMU OUT21+22) | 16 AWG ✓      | ~12 ft       | ~6A             | Integrated unit, single ground wire    |
-| Terminal 5 (#10-24)     | DRL/Parking (PMU OUT14)           | 16 AWG ✓      | ~10 ft       | ~8A             | Front marker/DRL lights                |
+| Terminal 5 (#10-24)     | DRL/Parking (PMU OUT23)           | 16 AWG ✓      | ~10 ft       | ~2.6A           | Front marker/DRL lights                |
 | Terminal 6 (#10-24)     | Roof lights (8x XL Sport)         | 14 AWG ✓      | ~8 ft        | ~18A            | Single circuit via XL Linkable harness |
 | Terminal 7 (#10-24)     | Ditch lights                      | 16 AWG ✓      | ~8 ft        | ~8A             | Auxiliary lighting                     |
 | Terminal 8 (#10-24)     | Rock lights                       | 16 AWG ✓      | ~6 ft        | ~5A             | Auxiliary lighting                     |

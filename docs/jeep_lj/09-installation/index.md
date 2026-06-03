@@ -22,7 +22,7 @@ Physical installation planning, tracking, and validation procedures.
 
 **Firewall Planning:**
 
-- [Section 1.7.2 - Firewall Ingress][firewall-ingress] - Deutsch HDP20 connector pinout and specifications
+- [Section 1.7.2 - Firewall Ingress][firewall-ingress] - Deutsch HDP24-24-29 connector pinout and specifications
 
 ## System Overview
 

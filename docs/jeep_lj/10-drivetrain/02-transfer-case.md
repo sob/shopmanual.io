@@ -27,7 +27,7 @@ tags:
 | Low Range Ratio | 2.72:1[^lowrange] |
 | High Range Ratio | 1.0:1 |
 | Rear Output | 32-spline, fixed yoke[^output] |
-| Input | Adapter-dependent — mates to 8HP70 via adapter[^input] |
+| Input | 23-spline (DomiWorks 24004001 adapter + ZTNP22390 input gear)[^input] |
 
 ## Gear Ratios
 
@@ -87,8 +87,6 @@ The 8HP *family* does pair with an NV241 from the factory — the JL Wrangler au
 | :------------ | :---- |
 | Fluid Type | ATF+4[^fluid] |
 | Capacity | ≈1.6 L (3.4 pt); fill to overflow[^fluid] |
-
-[^tc-ratio]: The 2012 Jeep Wrangler JK Command-Trac (NVG241 Gen II) low-range ratio is **2.72:1** per Jeep factory specification; the 4.0:1 unit is the Rubicon-only Rock-Trac (NV241OR), which this build no longer uses. Confirm against the JK FSM transfer-case section when finalizing crawl-ratio math.
 
 ## Outstanding Items
 

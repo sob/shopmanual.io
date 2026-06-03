@@ -9,12 +9,12 @@ PMU configuration examples, logic sequences, and implementation checklist.
 
 ## Programming Examples
 
-### DRL Auto-Off Logic (Output 14)
+### DRL Auto-Off Logic (Output 23)
 
 ```text
 IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out14_DRL = ON
-ELSE Out14_DRL = OFF
+  THEN Out23_DRL = ON
+ELSE Out23_DRL = OFF
 ```
 
 DRL on with ignition, off when headlights active.
@@ -109,7 +109,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Purpose:** Automatically shed non-critical loads when ARB compressor runs (90A) to prevent exceeding 270A alternator capacity.
 
-**Summary:** Detects ARB activation and disables DRL (8A), A/C (5A), and conditionally oil/PS cooler fans (15A each) to reduce total load from 271A to 243A, providing +27A alternator margin during tire inflation.
+**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each) to reduce total load from 266A to 243A, providing +27A alternator margin during tire inflation.
 
 **See:** [ARB Load Shedding Logic][arb-load-shedding] for complete implementation details, load analysis, testing procedures, and operator guidelines.
 

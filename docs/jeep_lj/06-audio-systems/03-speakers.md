@@ -11,7 +11,7 @@ tags:
 
 Marine-grade coaxial speakers with integrated RGB LED lighting for front dash and rear roll bar positions.
 
-## Front Dash Speakers
+## Front Half-Door Speakers
 
 /// html | div.product-info
 ![JL Audio M6-650X-S-GmTi-i](../images/jl-audio-m6-650x-s-gmti-i.jpg){ loading=lazy }
@@ -26,7 +26,7 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 
 **Quantity:** 2 (pair)
 
-**Mounting:** Dashboard (custom 6.5" cutouts)
+**Mounting:** In-door, custom Gatekeeper Offroad half-doors (6.5" cutouts)[^front-mount]
 
 **Power Source:** Amplifier Channels 3+4
 
@@ -107,7 +107,7 @@ Single cable run per speaker carries both audio and LED control.
 
 ## Outstanding Items
 
-- [ ] Determine front speaker mounting locations (dash end caps or kick panels)
+- [x] ~~Determine front speaker mounting locations~~ → **In-door, custom Gatekeeper Offroad half-doors** (6.5" cutouts). Route speaker/LED cable through the door hinge into the body via a service grommet.
 
 ## Related Documentation
 
@@ -120,3 +120,5 @@ Single cable run per speaker carries both audio and LED control.
 [led-controller]: 05-led-controller.md
 [front-product-link]: https://www.jlaudio.com/products/m6-650x-s-gmti-i-marine-audio-coaxial-speakers-93715
 [rear-product-link]: https://www.jlaudio.com/products/m6-650vex-mb-s-gmti-i-marine-audio-enclosed-speaker-systems-vex-93411
+
+[^front-mount]: Front speakers mount in custom **Gatekeeper Offroad** half-doors (in-door location, not dash end caps or kick panels). Owner decision, 2026-06-03.

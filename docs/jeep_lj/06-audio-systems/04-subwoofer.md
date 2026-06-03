@@ -12,8 +12,6 @@ tags:
 Pair of 8" infinite baffle marine subwoofers with RGB LED lighting, mounted symmetrically in the rear quarter panels.
 
 /// html | div.product-info
-![JL Audio M6-8IB-S-GmTi-i-4](../images/jl-audio-m6-8ib-s-gmti-i-4.jpg){ loading=lazy }
-
 **Type:** 8" Infinite Baffle Marine Subwoofer
 
 **Model:** M6-8IB-S-GmTi-i-4
@@ -100,6 +98,7 @@ The single 12" M7-12IB option (600W RMS, 14" overall diameter, 7.94" mounting de
 
 - [ ] Confirm exact mounting locations in rear quarter panels (clear of cage tubes and rear seatbelts)
 - [ ] Verify quarter panel material can support sub weight + mounting torque (may need backing plate)
+- [ ] Source M6-8IB-S product image (`docs/jeep_lj/images/jl-audio-m6-8ib-s-gmti-i-4.jpg`)
 
 ## Related Documentation
 

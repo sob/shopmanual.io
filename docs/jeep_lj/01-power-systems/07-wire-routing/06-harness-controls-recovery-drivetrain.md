@@ -135,6 +135,7 @@ See [Transmission][transmission] for shifter and TCU specs.
 | J1939 CAN Low | Twisted pair (paired with CAN High) | Twisted pair (CAN) | Shared J1939 bus tap | CAN bus tap point | TCU CAN-L |
 | Aux out (Reverse) | 18 AWG | Builder's choice | TCU aux output: 12V when shifter in R → PMU In 3 (drives PMU OUT22 reverse lights) | TCU aux Reverse pin | PMU In 3 |
 | Aux out (P/N) | 18 AWG | Builder's choice | TCU aux output: 12V when shifter in P or N → starter P/N interlock relay coil | TCU aux P/N pin | Starter P/N interlock relay coil+ |
+| Brake input | 18 AWG | Builder's choice | Dedicated brake-pedal signal for unlock-from-Park (separate from PMU In 2 tap) — crosses firewall via HDP24 | Cabin brake pedal switch | TCU brake input pin |
 | TCU ground | 14 AWG | Black | TCU ground return | TCU ground terminal | Engine bay ground bus |
 
 **Connectors:**
@@ -146,9 +147,9 @@ See [Transmission][transmission] for shifter and TCU specs.
 
 **Notes:**
 
-- All endpoints are in engine bay — no firewall penetration needed
+- Engine-bay endpoints need no firewall penetration; the one exception is the brake-switch input below, which originates at the cabin brake pedal switch
 - J1939 CAN tap is shared with PMU and Dakota Digital BIM-01-2 — the TCU is a third node on the same bus (just adds a splice at the existing tap point)
-- The brake switch input to TCU (for unlock-from-Park) is sourced from the cabin brake pedal switch (which already feeds PMU In 2 via HDP24 pin 13) — could share routing or take a separate tap; routing TBD
+- **Brake switch input to TCU (for unlock-from-Park): dedicated wire** (decided 2026-06-03). A separate 18 AWG conductor runs from the cabin brake pedal switch through the firewall (HDP24, dedicated pin) to the TCU brake input — **not** a shared tap off the PMU In 2 feed. A dedicated wire keeps the TCU and PMU brake-sense paths electrically independent (a fault or load on one cannot disturb the other) at the cost of one added HDP24 contact
 - TCU is one of three controllers tightly coupled to the engine bay: PMU24 (mounted on firewall), Dakota Digital BIM modules (on HDPE panel cabin side), and TCU (mounted on transmission). All share the J1939 CAN bus.
 
 See [Transmission][transmission] and [PMU Outputs][pmu-outputs] for related details.

@@ -54,13 +54,13 @@ The Cummins R2.8 ECM uses a **sink-circuit lamp topology**: keyswitch +12V → l
 
 | Specification | Value |
 | :------------ | :---- |
-| Type | SPST automotive, 30A continuous, NC contacts in start path |
-| Coil | 12V DC, ~150 mA |
+| Type | 5-pin SPDT changeover, used as SPST-NC (30/87a wired, 87 unused); 30A NO / 20A NC contacts[^wait-relay] |
+| Coil | 12V DC, ~160 mA |
 | Coil+ | Switched +12V (tap from ignition signal bus bar — same source as the WAIT lamp itself) |
 | Coil- | ECM Pin 35 (yellow WAIT-to-Start wire) tap on cabin side (shared with HDX WAIT/EX input) |
-| Contacts | NC; close when WAIT lamp off, open when WAIT lamp on |
+| Contacts | NC (87a); closed when coil de-energized (WAIT lamp off), opens when coil energized (WAIT lamp on) |
 | Mounting | Cabin, adjacent to PBS-I |
-| Suggested Part | Bosch 0332019150 or Hella 4RA 003 510-04 (TBD) |
+| Part | **Bosch 0332209150** (superseded by 0986332400) — 5-pin changeover[^wait-relay] |
 
 ### Cole Hersee 24213 Solenoid
 
@@ -154,13 +154,13 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 - [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
 - [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
-- [ ] Select WAIT-gate relay part (SPST 30A automotive, NC contacts used in start path)
+- [x] ~~Select WAIT-gate relay part~~ → **Bosch 0332209150** (5-pin SPDT changeover, superseded by 0986332400); wire COM (30) + NC (87a), leave NO (87) open. See [^wait-relay].
 - [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
 - [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
 - [ ] Select Start Button dash mounting position (within easy reach of driver)
 - [ ] Select Programming Button storage location (hidden but accessible)
 - [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
-- [ ] Set DIP switches / jumpers per install manual (PBS-I has no DIP/Jumper menu; check Feature Programming defaults are acceptable)
+- [x] ~~Confirm Feature Programming defaults~~ → PBS-I has no DIP/jumper menu; **shipped Feature Programming defaults confirmed acceptable** for this build (no reprogramming required at install). Owner decision, 2026-06-03.
 
 ## Related Documentation
 
@@ -171,6 +171,8 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 - [Firewall Ingress][firewall-ingress] - PBS-I pin assignments
 
 [^pbs-i-specs]: Onboard relay ratings (4× 60A), 300A inrush capacity, and kit contents per the Digital Guard Dawg PBS-I install manual ([PBS-I Manual PDF][pbs-i-manual]) and product page ([Digital Guard Dawg PBS-I][pbs-i]).
+
+[^wait-relay]: **Bosch 0332209150** — 5-pin SPDT *changeover* mini-relay, 12V, 30A NO / **20A NC**, ~160 mA coil (Bosch/Amazon listing, accessed 2026-06-03; superseded by **0986332400**). This circuit energizes the coil to *open* the start path (WAIT lamp on → coil energized → contacts open), so it must use the **NC (87a)** contact — which requires a changeover relay. The earlier "suggested" parts were both wrong for this: Bosch **0332019150** is a twin-87 NO-only relay (no 87a terminal) and Hella **4RA** is an SPST make-only series — neither has an NC contact. The NC side here carries only the Cole Hersee 24213 coil (~0.69A), far under the 20A NC rating. Equivalent changeover relays (Hella **4RD** series, Tyco/TE V23234) are acceptable substitutes.
 
 [^ch-coil]: Cole Hersee 24213 coil draw ~0.69A (17.5 Ω @ 12V) per the Littelfuse datasheet — see the `[^ch-24213]` footnote in [Starter System][starter]. Supersedes the earlier unsourced "~1.6A" figure that appeared in pre-merge drafts.
 
