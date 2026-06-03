@@ -180,7 +180,7 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 [pbs-i]: https://www.digitalguarddawg.com/keyless-ignition/automotive/pbs-i
 [pbs-i-manual]: https://cdn.shopify.com/s/files/1/0896/8005/2530/files/PBS-I-Manual.pdf
-[tbd-tracker]: ../09-installation/00-tbd-tracker.md
+[tbd-tracker]: ../tbd-tracker.md
 [starter]: ../02-engine-systems/01-starter.md
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

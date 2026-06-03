@@ -15,7 +15,7 @@ Audit and fix the specified documentation section for quality and consistency is
 - **Duplicate content** - Remove repeated tables, specs, or text; link to authoritative source
 - **Broken links** - Fix or remove broken reference-style links
 - **Inline links** - Convert to reference-style format per CLAUDE.md
-- **TBD tracking** - Add any untracked TBD items to `08-installation/00-tbd-tracker.md`
+- **TBD tracking** - Open a `tbd` GitHub issue (labels: tbd, project/*, priority/*, area/*) for any untracked TBD; run `/verify-tbd` to reconcile
 - **Outstanding items** - Make checkbox items specific and actionable, or mark "None - design complete"
 - **Image paths** - Fix paths to point to `docs/jeep_lj/images/`
 

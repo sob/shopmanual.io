@@ -147,4 +147,4 @@ See [installation checklist][install-checklist] for build tasks.
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [keyless-ignition]: ../05-control-interfaces/06-keyless-ignition.md
-[tbd-tracker]: ../09-installation/00-tbd-tracker.md
+[tbd-tracker]: ../tbd-tracker.md

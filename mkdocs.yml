@@ -112,6 +112,7 @@ nav:
   - Home: index.md
   - Jeep Wrangler LJ:
     - jeep_lj/index.md
+    - TBD Tracker: jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
       - 1.1 - Power Generation:
@@ -222,7 +223,6 @@ nav:
       - 8.4 - Rear Air Chuck: jeep_lj/08-exterior-systems/04-rear-air-chuck.md
     - Installation:
       - jeep_lj/09-installation/index.md
-      - 9.0 - TBD Tracker: jeep_lj/09-installation/00-tbd-tracker.md
       - 9.1 - Power Systems Checklist: jeep_lj/09-installation/01-power-systems-checklist.md
       - 9.2 - Engine Systems Checklist: jeep_lj/09-installation/02-engine-systems-checklist.md
       - 9.3 - Purchase Tracker: jeep_lj/09-installation/03-purchase-tracker.md

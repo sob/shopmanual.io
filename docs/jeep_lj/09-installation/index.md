@@ -34,7 +34,7 @@ Installation planning and tracking includes:
 - Firewall penetration planning
 - Testing and validation procedures
 
-[tbd-tracker]: 00-tbd-tracker.md
+[tbd-tracker]: ../tbd-tracker.md
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
 [purchase-tracker]: 03-purchase-tracker.md

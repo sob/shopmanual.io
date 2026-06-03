@@ -120,41 +120,60 @@ Installation checklists organized by build sequence, not by component.
 - Include obvious steps ("clean surfaces", "torque to spec")
 - Duplicate manufacturer manual instructions
 
-### 6. MAINTAIN TBD TRACKER
+### 6. MAINTAIN TBD ITEMS AS GITHUB ISSUES
 
-All To-Be-Determined items must be tracked in the centralized TBD Tracker.
+**The source of truth for TBD items is GitHub Issues, not a markdown table.** The
+TBD Tracker page (`docs/jeep_lj/tbd-tracker.md`) renders open issues live at build
+time — never hand-edit a list of items into it.
 
 **DO:**
 
-- When adding TBD to any file: immediately add to TBD Tracker
-- Include file path and priority (Critical, High, Medium, Low)
-- When resolving TBD: move to "Recently Resolved" section with date
-- Use TBD for unknown specs - NEVER guess at specifications
+- When you mark a spec TBD in any file: open a GitHub issue for it.
+- Label every TBD issue with all four facets:
+  - `tbd` (required — this is what the tracker queries)
+  - `project/<vehicle>` (e.g. `project/jeep-lj`)
+  - `priority/<level>` (`critical` | `high` | `medium` | `low` | `verify`)
+  - `area/<section>` (the doc section, e.g. `area/power-systems`, `area/drivetrain`)
+- Put the source file path in the issue body (`Source: docs/jeep_lj/...`).
+- When resolved: **close the issue** (it disappears from the tracker automatically).
+- Use TBD for unknown specs — NEVER guess at specifications.
 
 **DON'T:**
 
-- Leave TBD items without tracking them
-- Guess at specifications instead of marking TBD
-- Forget to update tracker when resolving items
+- Add or edit rows in `tbd-tracker.md` (it's generated; changes are overwritten).
+- Leave a source TBD without a matching open issue.
+- Guess at specifications instead of marking TBD + opening an issue.
 
-**TBD Tracker Location:** `/docs/jeep_lj/09-installation/00-tbd-tracker.md`
-
-**Quick Commands:**
+**Create an issue (example):**
 
 ```bash
-# Find all TBD items
-grep -r "TBD" docs/jeep_lj --include="*.md" -n | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "00-tbd-tracker"
+gh issue create -R sob/drawings \
+  --title "Alternator Output Terminal Size" \
+  --body "Terminal size for 1/0 AWG lug selection.
 
-# Count TBD items
-grep -r "TBD" docs/jeep_lj --include="*.md" | grep -v "PHASE1-ANALYSIS" | grep -v "PROMPT.md" | grep -v "00-tbd-tracker" | wc -l
+Source: docs/jeep_lj/01-power-systems/01-power-generation/02-alternator.md" \
+  --label tbd --label project/jeep-lj --label priority/medium --label area/power-systems
 ```
 
-**Priority Levels:**
+**Find / audit:**
 
-- **🔴 Critical:** Installation blockers (part numbers, required specs)
-- **High:** Needed before parts order (wire routing, mounting locations)
-- **📋 Medium:** Can determine during build (exact mounting spots)
-- **Low:** Nice to have (aesthetic choices, optional features)
+```bash
+# TBD markers still in source files
+grep -rn "TBD" docs/jeep_lj --include="*.md" | grep -v "tbd-tracker" | grep -v "PROMPT.md"
+
+# Open TBD issues
+gh issue list -R sob/drawings --label tbd --state open --limit 200
+```
+
+Run `/verify-tbd` to reconcile source TBD markers against open issues.
+
+**Priority Levels (`priority/*` labels):**
+
+- **critical:** Installation blockers (part numbers, required specs)
+- **high:** Needed before parts order (wire routing, mounting locations)
+- **medium:** Can determine during build (exact mounting spots)
+- **low:** Nice to have (aesthetic choices, optional features)
+- **verify:** Estimated value that needs field measurement / vendor confirmation
 
 ### 7. CITE CRITICAL FACTS
 
@@ -439,10 +458,10 @@ Net drain: 20A, Time to 50% SOC: 102 minutes
 1. **Mixing control systems** - CT4, SwitchPros, PMU control different loads
 2. **Duplicating information** - Link to source instead
 3. **Creating unnecessary files** - Edit existing content
-4. **Vague specifications** - Mark as TBD and add to TBD Tracker immediately
+4. **Vague specifications** - Mark as TBD and open a GitHub issue (labels: tbd, project/*, priority/*, area/*) immediately
 5. **Implementation in CLAUDE.md** - These are navigation guides only
 6. **Inline links** - Use reference-style format
-7. **Untracked TBD items** - Every TBD must be in TBD Tracker with priority
+7. **Untracked TBD items** - Every source TBD must have a matching open GitHub issue
 
 ## When Making Changes
 
@@ -453,7 +472,7 @@ Net drain: 20A, Time to 50% SOC: 102 minutes
 3. Update cross-references when moving content
 4. Maintain consistent formatting
 5. Update overview files when adding components
-6. **Update TBD Tracker when adding or resolving TBD items**
+6. **Open a `tbd` GitHub issue when adding a TBD; close it when resolved**
 7. Verify build succeeds (`mkdocs build`)
 
 **Never:**
@@ -475,7 +494,7 @@ Net drain: 20A, Time to 50% SOC: 102 minutes
 
 **Outstanding work:** `grep -r "\- \[ \]" docs/jeep_lj --include="*.md"`
 
-**TBD items:** See [Section 9.1 - TBD Tracker](09-installation/00-tbd-tracker.md) for centralized list with priorities
+**TBD items:** See the [TBD Tracker](tbd-tracker.md) (live from open `tbd` GitHub issues). Audit with `/verify-tbd`.
 
 **Search for specific TBD:** `grep -r "TBD" docs/jeep_lj --include="*.md" -n`
 
@@ -489,6 +508,6 @@ No duplicate information across files
 Build succeeds with no broken links
 Documentation is succinct and actionable
 Cross-references are accurate and up-to-date
-**All TBD items are tracked in TBD Tracker with priorities**
+**Every source TBD has a matching open `tbd` GitHub issue with priority/area labels**
 Outstanding Items are specific and tracked
 Changes follow established patterns

@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# 8.1 TBD Tracker - Outstanding Items {#tbd-tracker}
+# TBD Tracker {#tbd-tracker}
 
 **Purpose:** Central tracking for all To-Be-Determined items across the Jeep LJ electrical system documentation.
 
@@ -130,6 +130,6 @@ Items completed since last update.
 - [Section 1 Installation Checklist][section-1-install] - Power systems installation guide
 - [Section 1.7 Wire Routing][wire-routing] - Wire routing organized by location
 
-[wire-routing]: ../01-power-systems/07-wire-routing/index.md
-[section-1-install]: 01-power-systems-checklist.md
+[wire-routing]: 01-power-systems/07-wire-routing/index.md
+[section-1-install]: 09-installation/01-power-systems-checklist.md
 [i29]: https://github.com/sob/drawings/issues/29

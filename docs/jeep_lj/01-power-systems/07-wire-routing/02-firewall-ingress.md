@@ -338,7 +338,7 @@ PMU In 7 receives the headlight status signal from this tap, enabling DRL auto-o
 - [Intercom][intercom] - STX power routing
 
 [wire-routing]: index.md
-[tbd-tracker]: ../../09-installation/00-tbd-tracker.md
+[tbd-tracker]: ../../tbd-tracker.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md
