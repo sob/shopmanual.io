@@ -28,7 +28,7 @@ Marine-grade audio system with multi-zone control and RGB LED lighting integrati
 ```text
 MS-RA670 Head Unit
     │
-    ├─► Zone 1 RCA ──► MV800/8i Ch 5+6 ──► Front Dash Speakers
+    ├─► Zone 1 RCA ──► MV800/8i Ch 5+6 ──► Front Half-Door Speakers
     ├─► Zone 2 RCA ──► MV800/8i Ch 7+8 ──► Rear Roll Bar Speakers
     ├─► Sub RCA ────► MV800/8i (DSP signal-routed to:)
     │                   ├─► Ch 1+2 bridged @ 4Ω ──► Sub A (200W RMS)
