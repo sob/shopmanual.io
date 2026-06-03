@@ -108,12 +108,10 @@ nav:
   - Home: index.md
   - Jeep Wrangler LJ:
     - jeep_lj/index.md
-    - TBD Tracker:
-      - jeep_lj/tbd-tracker.md
+    - TBD Tracker: jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
-      - Standards Exceptions:
-        - jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
+      - Standards Exceptions: jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
       - 1.1 - Power Generation:
         - jeep_lj/01-power-systems/01-power-generation/index.md
         - 1.1.1 - Batteries: jeep_lj/01-power-systems/01-power-generation/01-batteries.md
