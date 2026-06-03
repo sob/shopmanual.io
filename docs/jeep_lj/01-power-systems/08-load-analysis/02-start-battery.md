@@ -30,7 +30,7 @@ All circuits powered by START battery (alternator charging):
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
 | OUT21            | Brake Lights      |      0A |       3A | Seconds during braking | Traffic-dependent     |
 | OUT22            | Reverse Lights    |      0A |       3A | Seconds in reverse     | Parking only          |
-| OUT23            | DRL               |      8A |       8A | Daytime only           | Auto-off at night     |
+| OUT23            | DRL               |    2.6A |     2.6A | Daytime only           | Auto-off at night     |
 | **BCDC Charger** |                   |         |          |                        |                       |
 | -                | BCDC to AUX       |     30A |      50A | Continuous             | Charges AUX battery   |
 | **Direct Loads** |                   |         |          |                        |                       |
@@ -57,11 +57,11 @@ All circuits powered by START battery (alternator charging):
 | **CT4 (OUT13)**               |   **10A** | Running lights              |
 | **iBooster Ignition (OUT19)** |    **5A** | Always on                   |
 | **STX Intercom (OUT20)**      |    **1A** | Standby                     |
-| **DRL (OUT23)**               |    **8A** | Daytime                     |
+| **DRL (OUT23)**               |    **2.6A** | Daytime                     |
 | **BCDC Charger**              |   **30A** | Maintaining AUX             |
-| **TOTAL**                     |  **106A** |                             |
+| **TOTAL**                     |  **101A** |                             |
 
-**Alternator Load:** 106A of 270A capacity = **39% utilization** Excellent
+**Alternator Load:** 101A of 270A capacity = **37% utilization** Excellent
 
 ---
 
@@ -84,11 +84,11 @@ All circuits powered by START battery (alternator charging):
 | **iBooster Ignition (OUT19)** |   **5A** | Always on                    |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                      |
 | **Brake Lights (OUT21)**      |   **1A** | Average - traffic            |
-| **DRL (OUT23)**               |   **8A** | Daytime                      |
+| **DRL (OUT23)**               |   **2.6A** | Daytime                      |
 | **BCDC Charger**              |  **40A** | Higher rate                  |
-| **TOTAL**                     | **193A** |                              |
+| **TOTAL**                     | **188A** |                              |
 
-**Alternator Load:** 193A of 270A capacity = **71% utilization** Good
+**Alternator Load:** 188A of 270A capacity = **70% utilization** Good
 
 ---
 
@@ -109,11 +109,11 @@ All circuits powered by START battery (alternator charging):
 | **CT4 (OUT13)**               |  **10A** | Running lights                    |
 | **iBooster Ignition (OUT19)** |   **5A** | Always on                         |
 | **STX Intercom (OUT20)**      |   **3A** | Occasional TX                     |
-| **DRL (OUT23)**               |   **8A** | Daytime                           |
+| **DRL (OUT23)**               |   **2.6A** | Daytime                           |
 | **BCDC Charger**              |  **50A** | Full rate - supporting SwitchPros |
-| **TOTAL**                     | **206A** |                                   |
+| **TOTAL**                     | **201A** |                                   |
 
-**Alternator Load:** 206A of 270A capacity = **76% utilization** Good
+**Alternator Load:** 201A of 270A capacity = **74% utilization** Good
 
 **Note:** Offroad lighting (SwitchPros) draws from AUX battery, not alternator.
 
@@ -177,13 +177,13 @@ All circuits powered by START battery (alternator charging):
 
 | Scenario          | Total Load | Alternator | Utilization | Status    |
 | :---------------- | :--------- | :--------- | :---------- | :-------- |
-| Highway Driving   | 106A       | 270A       | 39%         | Excellent |
-| Hot City Driving  | 193A       | 270A       | 71%         | Good      |
-| Offroad Trail     | 206A       | 270A       | 76%         | Good      |
+| Highway Driving   | 101A       | 270A       | 37%         | Excellent |
+| Hot City Driving  | 188A       | 270A       | 70%         | Good      |
+| Offroad Trail     | 201A       | 270A       | 74%         | Good      |
 | Emergency Braking | 165A       | 270A       | 61%         | Excellent |
 | Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Realistic Case:** 206A (offroad with hot engine) = **64A margin**
+**Worst Realistic Case:** 201A (offroad with hot engine) = **69A margin**
 
 **Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
 

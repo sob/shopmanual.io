@@ -47,7 +47,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
 | **Out 22** | Reverse Lights           | ~5A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Maxbilt + Squadron Sport       |
-| **Out 23** | DRL/Parking Lights       | ~2A  | [SwitchPros Ground Bus][switchpros-ground]            | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
+| **Out 23** | DRL/Parking Lights       | ~2.6A | [SwitchPros Ground Bus][switchpros-ground]           | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
 | **Out 24** | **[Available]**          | -    | -                                                     | -                   | Available for future expansion (7A)                                                                                                                          |
 
 ## Combined Outputs

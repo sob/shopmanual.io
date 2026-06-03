@@ -256,7 +256,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 - [ ] Confirm STX Intercom → OUT20 (5A) - ground: direct to START battery-
 - [ ] Confirm brake lights → OUT21 (3A) - ground: SwitchPros Ground Bus T4
 - [ ] Confirm reverse lights → OUT22 (5A) - ground: SwitchPros Ground Bus T4
-- [ ] Confirm DRL/parking → OUT23 (2A) - ground: SwitchPros Ground Bus T5
+- [ ] Confirm DRL/parking → OUT23 (~2.6A) - ground: SwitchPros Ground Bus T5
 - [ ] OUT24 — Available for future expansion (no current wiring)
 
 ### PMU CAN Bus Integration

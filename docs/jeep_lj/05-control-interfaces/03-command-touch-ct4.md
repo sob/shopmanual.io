@@ -252,7 +252,7 @@ END
 - [ ] Verify all DRL/parking lights illuminate when ignition is turned on
 - [ ] Verify DRL automatically turns off when headlights are activated (CT4 SW3)
 - [ ] Verify DRL turns back on when headlights are turned off
-- [ ] Test total current draw on DRL circuit via PMU diagnostics (should be ~8A)
+- [ ] Test total current draw on DRL circuit via PMU diagnostics (should be ~2.6A)
 
 ### GPS Module Installation
 

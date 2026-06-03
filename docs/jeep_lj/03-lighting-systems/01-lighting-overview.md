@@ -49,7 +49,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 ### DRL & Parking Lights {#drl-parking-overview}
 
-- **Circuit:** PMU Out 23 (7A capacity, ~2A load)
+- **Circuit:** PMU Out 23 (7A capacity, ~2.6A load)
 - **Components:** LP6 DRL, Maxbilt tail markers
 - **Control:** Automatic with ignition, PMU logic disables when headlights on
 - **No external relay needed** - handled by PMU programming
@@ -61,7 +61,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 | :------------------ | :--------------------- | :------- | :------ |
 | CT4 Controller      | START battery CONSTANT | 40A      | ~20A    |
 | Headlights Low/High | CT4 SW3/SW4            | 10A each | 3.6/5.6A|
-| DRL/Parking         | PMU Out 23             | 7A       | ~2A     |
+| DRL/Parking         | PMU Out 23             | 7A       | ~2.6A   |
 | Brake Lights        | PMU Out 21             | 7A       | ~3A     |
 | Reverse Lights      | PMU Out 22             | 7A       | ~5A     |
 
