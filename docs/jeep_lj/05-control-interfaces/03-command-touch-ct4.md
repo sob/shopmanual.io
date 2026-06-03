@@ -61,7 +61,6 @@ The CT4 provides complete turn signal and headlight control:
   - **Brake/Turn wire (Yellow):** Combined brake and turn signal function
   - Wired to CT4 SW1 (right) and SW2 (left) outputs (parallel with front signals)
   - Wire gauge: 14 AWG from CT4 to rear junction
-  - **Note:** Yellow wire handles both brake and turn signal (combined function)
 
 ### Headlight Control
 
@@ -191,11 +190,6 @@ END
 
 - Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
 - Use 14 AWG wire from PMU Out 9 to DRL junction
-- PMU Out 9 distributes to:
-  - LP6 Pin 3 (DRL) - both lights
-  - License plate lights
-  - Front LED side markers
-  - Maxbilt tail RED wire (marker/parking)
 - Total DRL circuit load: ~8A (4 circuits: license plate, LP6 DRL, front markers, rear markers)
 - PMU Out 9 capacity: 15A (sufficient for 8A load)
 

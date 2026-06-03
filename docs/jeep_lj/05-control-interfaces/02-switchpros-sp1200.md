@@ -143,14 +143,12 @@ Factory Passenger Door Plunger (NO)─┘
 **Configuration:**
 
 - Program Button 4 to control OUTPUT-4 OR TRIGGER-1 → OUTPUT-4
-- Manual control: Press Button 4
-- Automatic control: Open driver or passenger door
 
 **Note:** Rear tailgate replaced factory rear door - no rear door switch needed
 
 ### TRIGGER-2: Rear Rocker Switch → Cargo Light
 
-Physical rocker switch mounted in rear cargo area for convenient access when loading/unloading.
+Physical rocker switch mounted in rear cargo area.
 
 **Wiring:**
 
@@ -161,8 +159,6 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 **Configuration:**
 
 - Program TRIGGER-2 → OUTPUT-13 (cargo light)
-- No button assignment needed
-- Physical switch location: Rear cargo area (easily accessible from tailgate)
 - Switch type: SPST rocker or toggle switch
 
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control

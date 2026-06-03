@@ -65,8 +65,6 @@ ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100% /
 - **PWM frequency:** 100-400 Hz (PMU supports 4-400 Hz on 25A outputs)
 - **Temperature source:** J1939 SPN 110 (coolant temp) - same as PS fan
 - **Quieter operation:** Low speed sufficient for highway cruising
-- **Thermal management:** Progressive cooling matches engine demand
-
 **Replaces:** Dakota Digital PAC-2800BT controller, BIM-01-2 adapter (for fan), external relay, 100A circuit breaker
 
 ### Sequential Load Startup
@@ -100,26 +98,12 @@ LOG EngineRPM (J1939_SPN190)
 - **<12.5V** (engine running): Alternator undersized or failing
 - **<11.5V** (engine running): Critical - load exceeds alternator output
 
-**Monitoring Strategy:**
-
-1. **Baseline Testing:** Run engine at idle with all loads off - note voltage (should be 14.2-14.4V)
-2. **Progressive Load Testing:** Add loads incrementally (HVAC → fans → lights) and monitor voltage drop
-3. **Peak Load Testing:** Run all typical simultaneous loads and verify voltage stays >13.5V
-4. **Data Analysis:** Export PMU logs to identify which load combinations cause voltage sag
-
 **Warning Triggers:**
 
 ```text
 IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
   THEN Trigger_Low_Voltage_Warning = ON
 ```
-
-**Use Cases:**
-
-- Verify 270A alternator capacity under real-world loads
-- Identify which load combinations exceed alternator output
-- Monitor battery state of charge during off-grid camping
-- Track battery health over time (voltage recovery patterns)
 
 ### ARB Compressor Load Shedding
 
