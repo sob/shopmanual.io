@@ -17,9 +17,9 @@ hide:
 
 ## ⚡ Live from GitHub Issues (prototype)
 
-_Generated at build time from open issues labeled `tbd`. Click a column to sort (e.g. Priority or Area to group); type in the filter box to search._
+_Generated at build time from open issues labeled `tbd`. Filter with GitHub syntax (`label:`, `priority:`, `area:`, `project:` or free text), use the dropdowns, click a label to filter by it, or change the sort._
 
-{{ tbds(scope='project', layout='table') }}
+{{ tbds(scope='project', layout='github') }}
 
 ---
 
