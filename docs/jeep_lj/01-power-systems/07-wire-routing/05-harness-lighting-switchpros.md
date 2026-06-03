@@ -6,7 +6,7 @@ tags:
   - harness
 ---
 
-# 1.7.5 Build Sheet — Lighting & SwitchPros {#harness-lighting-switchpros}
+# 1.7.5 Lighting & SwitchPros {#harness-lighting-switchpros}
 
 Workbench specs for the SwitchPros lighting harnesses: **H4** SwitchPros Front Bundle (forward loads through the dedicated SP bulkhead) and **H5** Rear Cabin Trunk Bundle (SwitchPros rear outputs + PMU rear lighting through the cabin trunk to a rear breakout).
 

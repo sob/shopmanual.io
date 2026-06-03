@@ -74,9 +74,6 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-hooks:
-  - hooks/copy_export_assets.py
-
 plugins:
   - search
   - autorefs
@@ -111,10 +108,12 @@ nav:
   - Home: index.md
   - Jeep Wrangler LJ:
     - jeep_lj/index.md
-    - TBD Tracker: jeep_lj/tbd-tracker.md
+    - TBD Tracker:
+      - jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
-      - Standards Exceptions: jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
+      - Standards Exceptions:
+        - jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
       - 1.1 - Power Generation:
         - jeep_lj/01-power-systems/01-power-generation/index.md
         - 1.1.1 - Batteries: jeep_lj/01-power-systems/01-power-generation/01-batteries.md
@@ -148,9 +147,9 @@ nav:
         - jeep_lj/01-power-systems/07-wire-routing/index.md
         - 1.7.2 - Firewall Ingress: jeep_lj/01-power-systems/07-wire-routing/02-firewall-ingress.md
         - 1.7.3 - Harness Inventory: jeep_lj/01-power-systems/07-wire-routing/03-harness-inventory.md
-        - 1.7.4 - Build Sheet&#58; Power Distribution: jeep_lj/01-power-systems/07-wire-routing/04-harness-power-distribution.md
-        - 1.7.5 - Build Sheet&#58; Lighting & SwitchPros: jeep_lj/01-power-systems/07-wire-routing/05-harness-lighting-switchpros.md
-        - 1.7.6 - Build Sheet&#58; Controls, Recovery & Drivetrain: jeep_lj/01-power-systems/07-wire-routing/06-harness-controls-recovery-drivetrain.md
+        - 1.7.4 - Power Distribution: jeep_lj/01-power-systems/07-wire-routing/04-harness-power-distribution.md
+        - 1.7.5 - Lighting & SwitchPros: jeep_lj/01-power-systems/07-wire-routing/05-harness-lighting-switchpros.md
+        - 1.7.6 - Controls, Recovery & Drivetrain: jeep_lj/01-power-systems/07-wire-routing/06-harness-controls-recovery-drivetrain.md
       - 1.8 - Load Analysis:
         - jeep_lj/01-power-systems/08-load-analysis/index.md
         - 1.8.1 - Scenarios: jeep_lj/01-power-systems/08-load-analysis/01-scenarios.md

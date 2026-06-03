@@ -69,15 +69,14 @@ For protective wrap/loom, heat sleeve, abrasion sleeve, and P-clamp standards by
 
 Wrap preference for this build:
 
-- **Power runs use braided expandable sleeve** (PET, e.g. Techflex Flexo PET) over the full length, sized to the bundle OD. Braided sleeve is abrasion-resistant, flexes around the sill / trans-tunnel path, and lets you fan branches out without cutting the wrap.
-- **Tracers identify each power trunk.** Braided sleeve is sold plain or with a contrasting **tracer stripe** woven in. A per-harness tracer color makes bundles identifiable where several run together (e.g. in the cabin trunk). Suggested scheme — builder's choice, adjust to taste:
+- **Default is black braided expandable sleeve** (PET, e.g. Techflex Flexo PET) over the full length of power runs, sized to the bundle OD. Black is the base color; a contrasting **tracer stripe** woven into the sleeve identifies each power trunk where several run together (e.g. in the cabin trunk). Braided sleeve is abrasion-resistant, flexes around the sill / trans-tunnel path, and lets you fan branches out without cutting the wrap.
 
-| Harness | Sleeve | Suggested tracer | Carries |
-|:--------|:-------|:-----------------|:--------|
-| **H1** Passenger Rear Power Trunk | Red braided | Black | AUX forward feed + winch power/ground |
-| **H2** START Engine Bay Trunk | Red braided | Yellow | Alternator, starter, PMU feed |
-| **H3** BCDC Cross-Cab | Red braided | Green | BCDC input + cross-ground reference |
-| **H6** ARB Compressor (motor pair) | Red braided | Blue | 2× 6 AWG compressor motor cables |
+| Harness | Sleeve | Carries |
+|:--------|:-------|:--------|
+| **H1** Passenger Rear Power Trunk | Black braided, red tracer | AUX forward feed + winch power/ground |
+| **H2** START Engine Bay Trunk | Black braided, yellow tracer | Alternator, starter, PMU feed |
+| **H3** BCDC Cross-Cab | Black braided, green tracer | BCDC input + cross-ground reference |
+| **H6** ARB Compressor (motor pair) | Black braided, blue tracer | 2× 6 AWG compressor motor cables |
 
 - **Heat sleeve still applies** where any run enters the engine bay within ~12" of exhaust — over the braided sleeve as needed.
 - **Split loom** remains fine for the small-wire signal/lighting bundles (H4, H5, H7, H9) and for short, branchy, or frequently-accessed runs where braided sleeve is awkward; use a braided sleeve with a tracer instead if you prefer to color-code those too. H8 ships as a factory harness (no added wrap needed beyond loom through the tunnel).

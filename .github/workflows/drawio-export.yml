@@ -32,6 +32,18 @@ jobs:
           # Small breathing room around the diagram edges.
           border: 10
 
+      # Mirror selected export PNGs into docs/ so Zensical (Cloudflare Pages)
+      # serves them. Zensical does not support MkDocs `hooks:`, so the build
+      # cannot publish files from outside docs_dir at runtime — we commit the
+      # rendered copies instead. Source of truth remains the .drawio files.
+      - name: Mirror tub-map exports into docs/jeep_lj/images
+        run: |
+          set -euo pipefail
+          install -d docs/jeep_lj/images
+          cp "export/Jeep LJ Tub Map-Power-Distribution.png"            docs/jeep_lj/images/lj-tub-map-power-distribution.png
+          cp "export/Jeep LJ Tub Map-Lighting---SwitchPros.png"         docs/jeep_lj/images/lj-tub-map-lighting-switchpros.png
+          cp "export/Jeep LJ Tub Map-Controls--Recovery---Drivetrain.png" docs/jeep_lj/images/lj-tub-map-controls-recovery-drivetrain.png
+
       - name: Get author and committer info from HEAD commit
         uses: rlespinasse/git-commit-data-action@v1
         if: github.ref == 'refs/heads/main'
