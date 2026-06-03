@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # START battery Distribution - Navigation Guide
 
 ## What's Here

@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Agent Instructions: Jeep LJ Electrical System Documentation
 
 ## Your Role

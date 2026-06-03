@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # PMU24 - Navigation Guide
 
 ## What's Here

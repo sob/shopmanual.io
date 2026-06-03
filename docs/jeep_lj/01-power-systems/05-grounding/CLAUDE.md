@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Grounding Architecture - Navigation Guide
 
 ## What's Here

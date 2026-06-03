@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Section 1: Power Systems - Navigation Guide
 
 ## Section Overview
