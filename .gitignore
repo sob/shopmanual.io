@@ -35,3 +35,6 @@ Thumbs.db
 
 # Analysis files
 docs/ANALYZE/
+
+# Local preview server config (Claude Preview)
+.claude/launch.json
