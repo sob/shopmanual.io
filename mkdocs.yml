@@ -247,6 +247,10 @@ extra:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/tbd-tables.css
+  - https://cdn.jsdelivr.net/npm/simple-datatables@9/dist/style.css
 
 extra_javascript:
   - javascripts/external-links.js
+  - https://cdn.jsdelivr.net/npm/simple-datatables@9
+  - javascripts/tbd-tables.js

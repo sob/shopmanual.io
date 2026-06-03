@@ -1,0 +1,13 @@
+/* TBD table styling. Hidden rank span makes the Priority column sort in
+   critical->verify order instead of alphabetically. */
+.tbd-table .tbd-pri-rank { display: none; }
+.tbd-table .tbd-pri { font-weight: 600; white-space: nowrap; }
+.tbd-table .tbd-pri--critical { color: #b60205; }
+.tbd-table .tbd-pri--high     { color: #d93f0b; }
+.tbd-table .tbd-pri--medium   { color: #1d76db; }
+.tbd-table .tbd-pri--low      { color: #6a737d; }
+.tbd-table .tbd-pri--verify   { color: #5319e7; }
+
+/* Keep the filter box tidy within the docs content width. */
+.datatable-top { padding: 0 0 0.5rem; }
+.datatable-input { min-width: 14rem; }

@@ -17,9 +17,9 @@ hide:
 
 ## ⚡ Live from GitHub Issues (prototype)
 
-_Generated at build time from open issues labeled `tbd`. Grouped by priority for this vehicle._
+_Generated at build time from open issues labeled `tbd`. Click a column to sort (e.g. Priority or Area to group); type in the filter box to search._
 
-{{ tbds(scope='project', group_by='priority') }}
+{{ tbds(scope='project', layout='table') }}
 
 ---
 

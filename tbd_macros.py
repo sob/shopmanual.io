@@ -21,6 +21,7 @@ Issues are fetched once per build (lazy, cached) and filtered in memory. If the
 fetch fails (no gh / no token), pages render a notice instead of breaking.
 """
 
+import html
 import json
 import os
 import re
@@ -171,7 +172,8 @@ def define_env(env):
     @env.macro
     @jinja2.pass_context
     def tbds(ctx, project=None, area=None, priority=None,
-             scope=None, group_by="priority", show_empty=False):
+             scope=None, group_by="priority", show_empty=False,
+             layout="admonitions"):
         issues = _issues()
         if issues is None:
             return ('!!! failure "TBD tracker unavailable"\n\n'
@@ -199,6 +201,13 @@ def define_env(env):
                 continue
             sel.append(it)
 
+        # Table: one sortable/filterable table (grouping = sort by a column).
+        if layout == "table":
+            # Show a Project column only when the view spans vehicles.
+            return _table(sel, show_project=project is None) if (sel or show_empty) \
+                else _none_note()
+
+        # Admonitions grouped by priority (default).
         if group_by == "priority":
             blocks = []
             for lvl in PRIORITY_ORDER:
@@ -224,6 +233,48 @@ def _admonition(level, items):
     else:
         lines.append("    _No open items._")
     return "\n".join(lines)
+
+
+def _table(items, show_project=False):
+    """Render items as a raw HTML table that simple-datatables enhances client
+    side (click-to-sort headers + a live filter box). Grouping is achieved by
+    sorting on the Priority or Area column.
+
+    Rows are pre-sorted by priority so the default (pre-JS) view is grouped.
+    The Priority cell carries a hidden numeric rank span so sorting that column
+    follows critical->verify order rather than alphabetical.
+    """
+    def sort_key(it):
+        meta = PRIORITY_META.get(it["priority"])
+        rank = meta[3] if meta else 99
+        return (rank, ",".join(sorted(it["areas"])), it["number"])
+
+    headers = ["Priority"] + (["Project"] if show_project else []) + \
+        ["Area", "Item", "Description"]
+    out = ['<table class="tbd-table">', "<thead><tr>"]
+    out += [f"<th>{h}</th>" for h in headers]
+    out.append("</tr></thead>")
+    out.append("<tbody>")
+    for it in sorted(items, key=sort_key):
+        meta = PRIORITY_META.get(it["priority"])
+        rank = (meta[3] if meta else 99) + 1
+        label = meta[0] if meta else (it["priority"] or "—")
+        emoji = f"{meta[2]} " if (meta and meta[2]) else ""
+        slug = it["priority"] or "none"
+        pri = (f'<span class="tbd-pri-rank">{rank}</span>'
+               f'<span class="tbd-pri tbd-pri--{slug}">{emoji}{html.escape(label)}</span>')
+        link = (f'<a href="{html.escape(it["url"])}">'
+                f'{html.escape(it["title"])} (#{it["number"]})</a>')
+        cells = [f"<td>{pri}</td>"]
+        if show_project:
+            cells.append(f'<td>{html.escape(", ".join(sorted(it["projects"])) or "—")}</td>')
+        cells.append(f'<td>{html.escape(", ".join(sorted(it["areas"])) or "—")}</td>')
+        cells.append(f"<td>{link}</td>")
+        cells.append(f'<td>{html.escape(it["desc"] or "")}</td>')
+        out.append("<tr>" + "".join(cells) + "</tr>")
+    out.append("</tbody></table>")
+    # Surround with blank lines so the markdown processor treats it as a block.
+    return "\n" + "\n".join(out) + "\n"
 
 
 def _none_note():
