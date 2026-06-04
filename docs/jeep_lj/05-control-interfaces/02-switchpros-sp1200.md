@@ -198,27 +198,24 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 
 ## Build Tasks
 
-- [ ] Determine exact SwitchPros power module mounting location at firewall (passenger cabin side, near BODY PDU)
-- [ ] Determine SwitchPros control panel mounting location on dash
-- [ ] Route 4 AWG logic ground wire from SwitchPros power module to chassis ground at firewall (short run, per manufacturer spec)
-- [ ] Mount [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus) at firewall near SwitchPros power module for output load returns
-- [ ] Connect ignition signal from ignition switch RUN terminal to SwitchPros Pin 3 (IGNITION - LT BLUE)
-  - 18 AWG wire, splits from main ignition signal distribution (see [PMU24][pmu-inputs])
-- [ ] Determine parking lights signal source for SwitchPros Pin 4 (LIGHTS - WHITE) for DRL integration
-- [ ] Order 5 ft control panel cable (firewall power module to dash panel - short run)
-- [ ] Wire driver door switch + passenger door switch in parallel to TRIGGER-1 (Pin 7, PINK)
-- [ ] Configure Button 4 programming: OUTPUT-4 OR TRIGGER-1 activates dome lights
-- [ ] Install rear cargo rocker switch and wire to TRIGGER-2 (Pin 8, PINK)
-- [ ] Determine rear cargo rocker switch mounting location (accessible from tailgate)
-- [ ] Configure TRIGGER-2 programming: TRIGGER-2 → OUTPUT-13 (cargo light)
-- [ ] Route cargo light wiring from SwitchPros OUTPUT-13 to cargo area
-- [ ] Route ditch light wiring from SwitchPros OUTPUT-2 to A-pillar/hood mounts
-- [ ] Wire ARB pressure switch signal to TRIGGER-3 (Pin 17, PINK)
-  - 18 AWG wire from air manifold (under passenger seat) to SwitchPros TRIGGER-3
-  - Route through cabin or under vehicle to engine bay SwitchPros power module
-- [ ] Configure SwitchPros: TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor auto/manual control)
-- [ ] Test automatic pressure control: verify compressor activates at 135 PSI and stops at 150 PSI
-- [ ] Assign spare outputs: OUTPUT-9 (30A), OUTPUT-14, OUTPUT-15, OUTPUT-16 (all 15A)
+Check-off items only. Pin assignments and wire gauges live in the
+[Wiring Pinout](#wiring-pinout) section above; controller mounting, power feed,
+and ground bus install are tracked in the [Power Systems Checklist][power-checklist].
+
+**Triggers & Programming:**
+
+- [ ] Confirm ignition signal → SwitchPros Pin 3 (IGNITION)
+- [ ] Determine parking-lights signal source for Pin 4 (LIGHTS) for DRL integration
+- [ ] Order control panel cable (power module to dash)
+- [ ] Confirm driver + passenger door switches → TRIGGER-1
+- [ ] Program Button 4: OUTPUT-4 OR TRIGGER-1 → dome lights
+- [ ] Install rear cargo rocker switch → TRIGGER-2 (determine tailgate-accessible location)
+- [ ] Program TRIGGER-2 → OUTPUT-13 (cargo light)
+- [ ] Confirm cargo light wiring (OUTPUT-13) and ditch light wiring (OUTPUT-2)
+- [ ] Confirm ARB pressure switch → TRIGGER-3
+- [ ] Program TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor auto/manual)
+- [ ] Test automatic pressure control (compressor on/off at setpoints)
+- [ ] Assign spare outputs: OUTPUT-9, 14, 15, 16
 
 ## Related Documentation
 
@@ -230,7 +227,7 @@ Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [firewall-bus]: ../01-power-systems/03-aux-battery-distribution/02-constant-bus.md
 [air-system-arb-compressor-lockers]: ../08-exterior-systems/02-air-compressor.md
-[pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [control-interfaces-overview]: 01-overview.md
 [offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md
 [switchpros-ground-bus]: ../01-power-systems/05-grounding/03-switchpros-ground-bus.md
+[power-checklist]: ../09-installation/01-power-systems-checklist.md

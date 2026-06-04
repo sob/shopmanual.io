@@ -195,105 +195,58 @@ END
 
 ## Installation Checklist
 
-### Power & Ground
+Check-off items only. Wire gauges, pin assignments, and tail-light color codes
+live in the [Wiring](#wiring) section above and the linked light pages.
+Controller power feed (PMU Out 13) and ignition-signal distribution are tracked
+in the [Power Systems Checklist][power-checklist].
 
-- [ ] Route PMU Out 13 wire to steering column location (CT4 12V supply)
-- [ ] Connect CT4 ground to chassis ground or firewall ground stud
+### Power, Ground & Ignition
 
-### Ignition Signal
-
-- [ ] Connect CT4 ignition signal to ignition switch RUN output (Y-split shared with PMU Pin 7, SwitchPros)
-- [ ] Route ignition signal wire from ignition switch to steering column (18 AWG)
-- [ ] Verify SW3/SW4 (headlights) are disabled when ignition is off
+- [ ] Confirm CT4 12V supply (PMU Out 13) landed at steering column
+- [ ] Confirm CT4 ground connected
+- [ ] Confirm CT4 ignition signal connected (shared Y-split with PMU Pin 7, SwitchPros)
+- [ ] Verify SW3/SW4 (headlights) disabled when ignition off
 - [ ] Verify SW1/SW2 (turn signals/hazards) work with ignition off (safety feature)
 
-### Turn Signal Wiring
+### Lighting Wiring
 
-- [ ] Route CT4 SW1 (right turn) wire from steering column to:
-  - Front right 2" LED side marker
-  - Rear right Maxbilt tail light (YELLOW wire - brake/turn)
-- [ ] Route CT4 SW2 (left turn) wire from steering column to:
-  - Front left 2" LED side marker
-  - Rear left Maxbilt tail light (YELLOW wire - brake/turn)
-- [ ] Use 14 AWG wire from CT4 to junction points
-- [ ] Use 16 AWG wire from junction to each individual light
-- [ ] Wire Maxbilt tail lights per wiring table:
-  - BLACK wire → Ground (chassis ground)
-  - WHITE wire → Reverse lights (PMU Out 18)
-  - YELLOW wire → Brake/Turn (CT4 turn signal output + PMU Out 17 via diodes)
-  - RED wire → Marker/parking lights (PMU Out 23)
-- [ ] Verify turn signals flash front and rear simultaneously
-- [ ] Test lane change feature (< 0.5 sec press = 3 flashes)
-- [ ] Verify brake lights work independently of turn signals
+- [ ] Confirm CT4 SW1 (right turn) → front right marker + rear right tail light
+- [ ] Confirm CT4 SW2 (left turn) → front left marker + rear left tail light
+- [ ] Confirm Maxbilt tail lights wired per page wiring table
+- [ ] Confirm CT4 SW3 → LP6 low beam (both lights)
+- [ ] Confirm CT4 SW4 → LP6 high beam (both lights)
+- [ ] Confirm CT4 SW3 tapped to DRL cutoff relay coil
+- [ ] Confirm CT4 SW3 tapped to PMU In 7 (headlight status)
+- [ ] Confirm PMU Out 23 → DRL/parking junction (license plate, LP6 DRL, markers, tail markers)
 
-### Headlight Wiring
+### GPS Module
 
-- [ ] Route ignition signal from ignition switch RUN output (18 AWG) to CT4 ignition input (splits to PMU Pin 7, SwitchPros, CT4)
-- [ ] Route CT4 main power from PMU Out 13 to CT4 12V supply
-- [ ] Route CT4 SW3 output wire to LP6 Pin 1 (low beam, both lights in parallel, 14 AWG)
-- [ ] Route CT4 SW4 output wire to LP6 Pin 4 (high beam, both lights in parallel, 14 AWG)
-- [ ] Tap CT4 SW3 output wire to DRL cutoff relay coil (to disable DRL when headlights on)
-- [ ] Verify headlight control (SW3 pull to turn on/off low beams)
-- [ ] Test high beam control (SW4 push to switch between low and high beams)
-- [ ] Verify CT4 provides mutual exclusivity (high beam disables low beam automatically)
-- [ ] Verify headlights disabled when ignition off (ignition signal working correctly)
-- [ ] Verify turn signals/hazards work with ignition off (hazard safety feature)
-
-### DRL/Parking Light Wiring
-
-- [ ] Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
-- [ ] Configure PMU Out 23 DRL auto-off logic (see PMU programming section)
-- [ ] Route 14 AWG wire from PMU Out 23 to DRL junction
-- [ ] Route 16 AWG wire from junction to each light:
-  - License plate lights
-  - LP6 Headlight Pin 3 (DRL input) - both left and right
-  - Front 2" LED side markers (parking function) - both left and right
-  - Maxbilt tail light RED wire (marker/parking) - both left and right
-- [ ] Verify all DRL/parking lights illuminate when ignition is turned on
-- [ ] Verify DRL automatically turns off when headlights are activated (CT4 SW3)
-- [ ] Verify DRL turns back on when headlights are turned off
-- [ ] Test total current draw on DRL circuit via PMU diagnostics (should be ~2.6A)
-
-### GPS Module Installation
-
-- [ ] Mount GPS antenna on dash top or near windshield for clear sky view
-- [ ] Route GPS antenna cable to CT4 controller at steering column
-- [ ] Connect GPS antenna to CT4 GPS input port
-- [ ] Secure GPS antenna cable to prevent interference with controls
-- [ ] Verify GPS antenna has unobstructed view of sky
+- [ ] Determine GPS antenna mounting location (clear sky view)
+- [ ] Confirm GPS antenna connected to CT4 GPS input
+- [ ] Perform GPS calibration drive per CT4 manual
 
 ### Programming
 
-- [ ] Program CT4 to battery control mode (not ignition control) for all switches
-- [ ] Program CT4 to GPS turn signal mode (automatic cancellation based on speed/steering)
-- [ ] Program SW3 (Headlights) to ON-OFF latching mode
-- [ ] Program SW4 (High Beams) to momentary or ON-OFF (choose preferred behavior)
+- [ ] Program all switches to battery control mode
+- [ ] Program GPS turn signal mode (auto-cancel)
+- [ ] Program SW3 (Headlights) to ON-OFF latching
+- [ ] Program SW4 (High Beams) to preferred behavior
 - [ ] Enable low voltage disconnect for all switches
-- [ ] Disable flash/strobe (turn signals use built-in pattern, headlights should be solid)
-- [ ] Disable switch memory
-- [ ] Perform GPS calibration drive per CT4 manual instructions
+- [ ] Disable flash/strobe and switch memory
 
 ### Testing
 
-- [ ] Test hazard function works with ignition off (verify battery power configuration)
-- [ ] Verify turn signals flash at correct rate (front and rear synchronized)
-- [ ] Test built-in audio module sounds when turn signals are active
-- [ ] Test GPS auto-cancel by making several turns at various speeds
-- [ ] Verify manual cancel still works (move lever to center or opposite direction)
-- [ ] Test lane change mode (quick press <0.5 sec flashes 3 times, then auto-cancels)
-- [ ] Test headlight control (SW3 pull to turn on/off low beams)
-- [ ] Test high beam control (SW4 push to switch between low and high beams)
-- [ ] Verify DRL automatically turns off when headlights are activated
-- [ ] Verify DRL turns back on when headlights are turned off
-- [ ] Test low voltage disconnect prevents over-discharge
+- [ ] Verify turn signals flash front and rear in sync, at correct rate
+- [ ] Verify hazards work with ignition off
+- [ ] Verify lane-change mode (short press = 3 flashes, auto-cancel)
+- [ ] Verify GPS auto-cancel and manual cancel
+- [ ] Verify headlight control (SW3 low beam, SW4 high beam mutual exclusivity)
+- [ ] Verify DRL auto-off when headlights active, back on when off
+- [ ] Verify brake lights work independently of turn signals
 
 ## Outstanding Items
 
 {{ tbds() }}
-
-## Build Tasks
-
-- [ ] Determine GPS antenna mounting location (dash top or near windshield for best sky view)
 
 ## Related Documentation
 
@@ -305,3 +258,4 @@ END
 [vehicle-lighting-overview]: ../03-lighting-systems/01-lighting-overview.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [drl-parking]: ../03-lighting-systems/05-drl-parking.md
+[power-checklist]: ../09-installation/01-power-systems-checklist.md
