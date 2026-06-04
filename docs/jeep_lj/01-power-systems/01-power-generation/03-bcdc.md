@@ -37,14 +37,16 @@ tags:
 
 ## Wiring
 
-| Connection            | Terminal Label   | Terminal Size | Source/Destination            | Notes                                                            |
-| :-------------------- | :--------------- | :------------ | :---------------------------- | :--------------------------------------------------------------- |
-| Start Battery (+)     | Red              | M8            | START battery positive        | See [START Battery Distribution][starter-battery] for wire specs |
-| Auxiliary Battery (+) | Brown            | M8            | AUX battery positive          | See [AUX Battery Distribution][aux-battery] for wire specs       |
-| Solar (+)             | Yellow           | {{ tbd(108) }} | Cascadia 4x4 80W panel       | See [Solar Charging][solar]                                      |
-| Ground (-)            | Black            | M8            | AUX battery negative          | See [AUX Battery Distribution][aux-battery] for wire specs       |
-| Ignition              | Blue             | Spade         | PMU ignition sense tap        | 18 AWG - see [PMU Inputs][pmu-inputs]                            |
-| Battery Temp Sensor   | +/- (reversible) | 2-pin plug    | AUX battery positive terminal | **REQUIRED** - LiFePO4 temperature-compensated charging          |
+| Connection            | Terminal Label   | Terminal Size            | Source/Destination            | Notes                                                            |
+| :-------------------- | :--------------- | :----------------------- | :---------------------------- | :--------------------------------------------------------------- |
+| Start Battery (+)     | Red              | M5[^bcdc-terminals]      | START battery positive        | See [START Battery Distribution][starter-battery] for wire specs |
+| Auxiliary Battery (+) | Brown            | M5[^bcdc-terminals]      | AUX battery positive          | See [AUX Battery Distribution][aux-battery] for wire specs       |
+| Solar (+)             | Yellow           | M5[^bcdc-terminals]      | Cascadia 4x4 80W panel        | M5 lug on 10 AWG - see [Solar Charging][solar]                  |
+| Ground (-)            | Black            | M5[^bcdc-terminals]      | AUX battery negative          | See [AUX Battery Distribution][aux-battery] for wire specs       |
+| Ignition              | Blue             | Spade                    | PMU ignition sense tap        | 18 AWG - see [PMU Inputs][pmu-inputs]                            |
+| Battery Temp Sensor   | +/- (reversible) | 2-pin plug               | AUX battery positive terminal | **REQUIRED** - LiFePO4 temperature-compensated charging          |
+
+[^bcdc-terminals]: RedArc *BCDC Alpha 50R Installation Guide* (INST185-2), terminal-connection section: "For the Ground, Auxiliary, Start Battery and Solar terminals, use M5 lugs or equivalent, with a barrel size to suit the required cable gauge." Screws are supplied with the unit (M5×10mm for these four terminals; M3×8mm for ignition); a maximum of two lugs may be connected per main-unit terminal. Supersedes the earlier unsourced M8 figure listed for the Red/Brown/Black terminals.
 
 See [START Battery Distribution][starter-battery] and [AUX Battery Distribution][aux-battery] for complete wire specifications (gauge, distance, routing, circuit breakers).
 
