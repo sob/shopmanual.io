@@ -154,16 +154,6 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 {{ tbds() }}
 
-## Build Tasks
-
-- [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
-- [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
-- [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
-- [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
-- [ ] Select Start Button dash mounting position (within easy reach of driver)
-- [ ] Select Programming Button storage location (hidden but accessible)
-- [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
-
 ## Related Documentation
 
 - [Starter System][starter] - Cole Hersee 24213 and PBS-I PURPLE → WAIT-gate → coil chain

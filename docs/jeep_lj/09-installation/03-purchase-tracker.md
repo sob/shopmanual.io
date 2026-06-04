@@ -77,6 +77,7 @@ Major components - watch for sales, consider financing options.
 | JL Audio VXi-BTC JLid Bluetooth Communicator (010-13543-00) | JL Audio (Garmin) | ~$100 | Low | Wireless TüN tuning of MV800/8i from phone/tablet - [Bluetooth Tuning][bt-tuning] |
 | JL Audio MLC-RW LED Controller | JL Audio | ~$250 | Low | [LED Controller][led-controller] |
 | Rugged Radios STX Intercom (4-place) | Rugged Radios | ~$400 | Medium | [Intercom][intercom] |
+| Digital Guard Dawg PBS-I Keyless Ignition Kit | Digital Guard Dawg | ~$200 (est., confirm w/ vendor) | High | ICM + 2 iTag fobs + Start Button + Programming Button + Bypass Card - [Keyless Ignition][keyless] |
 | ARB Aluminum Air Tank (171507, 1-gal 4-port) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
@@ -209,6 +210,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [led-controller]: ../06-audio-systems/05-led-controller.md
 [bt-tuning]: ../06-audio-systems/06-bluetooth-tuning.md
 [intercom]: ../07-communication-systems/02-intercom.md
+[keyless]: ../05-control-interfaces/06-keyless-ignition.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [solar]: ../01-power-systems/01-power-generation/04-solar.md
 [dash-camera]: ../07-communication-systems/04-dash-camera.md
