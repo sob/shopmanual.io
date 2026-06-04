@@ -34,14 +34,8 @@ tags:
 
 ## Overview
 
-**Specifications:**
+**Additional Features:**
 
-- **Total Capacity:** 10A per switch output (~9A max actual load)
-- **Four Outputs:**
-  - SW1 (UP): Right Turn Signal (configured in turn signal mode)
-  - SW2 (DOWN): Left Turn Signal (configured in turn signal mode)
-  - SW3 (PULL): Headlights (low beam, latching on/off)
-  - SW4 (PUSH): High Beams (momentary or toggle)
 - **Built-in Hazard Switch:** Flashes all outputs in sync when pressed
 - **Built-in Audio Module:** Audible sound when turn signal is active
 - **Lane Change Feature:** Lever press <0.5 sec flashes turn signal 3 times
@@ -166,25 +160,6 @@ ELSE
   Out23_DRL = OFF
 END
 ```
-
-**How It Works:**
-
-1. **Ignition ON, Headlights OFF (CT4 SW3 off):**
-   - PMU Pin 7 = ON (ignition RUN)
-   - PMU In 7 = OFF (CT4 SW3 not active)
-   - PMU Out 23 = ON
-   - All DRL/parking lights illuminated
-
-2. **Ignition ON, Headlights ON (CT4 SW3 on):**
-   - PMU Pin 7 = ON (ignition RUN)
-   - PMU In 7 = ON (CT4 SW3 active)
-   - PMU Out 23 = OFF
-   - Headlights (low or high beam) active instead
-
-3. **Ignition OFF:**
-   - PMU Pin 7 = OFF
-   - PMU Out 23 = OFF (regardless of headlight status)
-   - All DRL/parking lights off
 
 **Installation Notes:**
 
