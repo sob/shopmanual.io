@@ -73,7 +73,7 @@ All wire runs require appropriate protection based on location and environment:
 | **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~232A max           | Protected by 300A CB at battery - feeds SwitchPros, BODY PDU, Fusion |
 | **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A CB at battery                                      |
 | **BCDC output**                        | 4 AWG      | Short    | FROM BCDC (local in wheel well)                   | 50A                 | Charging input to AUX battery                                        |
-| **Primary ground**                     | 2/0 AWG    | 3 ft     | TO Rear frame rail                                | 569A peak           | Winch + accessories return                                           |
+| **Primary ground**                     | 2/0 AWG    | 3 ft     | TO Rear frame rail                                | {{ tbd(124) }}      | Chassis-grounded accessory return only — winch returns via dedicated 1/0 H1 cable to AUX battery−, not chassis |
 | **Cross-ground reference**             | 1/0 AWG    | 5-6 ft   | FROM START battery- (driver)                      | BCDC reference      | Critical for BCDC operation                                          |
 
 **Routing:**

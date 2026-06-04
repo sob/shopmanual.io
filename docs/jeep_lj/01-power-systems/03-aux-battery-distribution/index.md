@@ -37,7 +37,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 
 | Circuit                          | Destination            | Wire Gauge | Distance | Current             | Voltage Drop  |
 | :------------------------------- | :--------------------- | :--------- | :------- | :------------------ | :------------ |
-| Rear Frame Rail                  | Local (chassis)        | 2/0 AWG    | ~3 ft    | 654A peak           | <0.1V @ 20°C  |
+| Rear Frame Rail (chassis bond)   | Local (chassis)        | 2/0 AWG    | ~3 ft    | {{ tbd(124) }}      | <0.1V @ 20°C  |
 | [BCDC Alpha 50][bcdc]            | Local                  | 4 AWG      | Short    | 50A                 | Negligible    |
 | [JL Audio MV800/8i Amp][audio]   | Under rear seat        | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 30°C  |
 | [START Battery][starter-battery] | Driver rear wheel well | 1/0 AWG    | 5-6 ft   | 75A max             | <0.05V @ 20°C |
