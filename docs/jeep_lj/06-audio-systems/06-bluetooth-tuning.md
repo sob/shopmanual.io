@@ -124,7 +124,7 @@ Press-and-hold the LED button 10 sec → Factory Reset (wipes paired-device list
 
 ## Build Tasks
 
-- [ ] Decide BTC mounting surface — trans-tunnel cover vs amp-mounting-plate standoff vs A-pillar/under-dash (whatever balances RF clearance with status-LED visibility)
+- [ ] Decide BTC mounting surface — trans-tunnel cover vs near-amp standoff vs A-pillar/under-dash (whatever balances RF clearance with status-LED visibility)
 - [ ] Source VXi-BTC product image (`docs/jeep_lj/images/jl-audio-vxi-btc.jpg`)
 
 ## Related Documentation
