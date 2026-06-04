@@ -213,6 +213,7 @@ Create 12 custom 2-pin Delphi harnesses at SwitchPros:
 
 - [ ] Confirm 14 AWG: PBS-I PINK IGN (cabin) → Ignition signal bus bar Stud 1
 - [ ] Confirm ignition signal bus bar Stud 2 → Deutsch connector Pin 12 (outbound to engine bay)
+- [ ] Install 5A inline fuse at ignition signal bus bar Stud 2 — Cummins-mandated ECM Pin 41 protection per 5504137 (the only overcurrent device between the PBS-I 60A relay and the ECM feed)
 - [ ] Confirm engine-bay junction off Pin 12 → ECM 12V supply + PMU Pin 7
 - [ ] Confirm bus bar terminals split to: CT4, SwitchPros, Fusion Radio, BCDC
 - [ ] Verify total ignition signal current <500mA for all bus bar taps
