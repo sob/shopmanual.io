@@ -202,6 +202,22 @@ The following high-current loads are **NOT** supplied by the alternator:
 
 **Architecture:** The dual battery system isolates high-current accessory loads (AUX battery) from engine/safety loads (START battery). The BCDC charger (50A max) is the only connection between batteries during normal operation.
 
+## Key-Off Parasitic Budget (START Battery)
+
+Loads on the **CONSTANT** (always-on) feed continue to draw with the ignition off. The BCDC isolates the AUX battery but does **not** offload the START side, so these draws come straight out of the 68 Ah Odyssey PC1500[^pc1500-cap] and set how long the vehicle can sit before cranking is at risk.
+
+| Load | Source | Key-Off Draw | Notes |
+| :--- | :----- | -----------: | :---- |
+| PBS-I keyless module | Critical Cabin PDU (CONSTANT) | ~50 mA[^pbs-i-standby] | RFID auto-arm standby (arms 60 s after fob leaves range) |
+| HDX + BIM cluster electronics | Critical Cabin PDU Slot 2 (CONSTANT) | not characterized | Dakota Digital keep-alive / sleep current — small, not yet measured |
+| ECM keep-alive | START battery (direct) | not characterized | Cummins R2.8 ECM sleep current |
+
+**Characterized draw:** ~50 mA (PBS-I) ≈ **1.2 Ah/day**.
+
+**Time to 50% SOC** (34 Ah usable[^pc1500-cap]) from the PBS-I alone: **~28 days**. The uncharacterized cluster and ECM sleep draws shorten this, so treat ~28 days as a ceiling, not a guarantee.
+
+**Recommendation:** No mitigation needed for daily/weekly use. For storage beyond ~3 weeks, use a battery maintainer or a START-side disconnect — the ~50 mA floor alone reaches 50% SOC in about a month, and the unmeasured loads only add to it.
+
 ## Related Documentation
 
 - [Alternator Specifications][alternator] - 270A capacity details
@@ -213,3 +229,10 @@ The following high-current loads are **NOT** supplied by the alternator:
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [aux-load-analysis]: 03-aux-battery.md
+[keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
+
+[^pc1500-cap]: Odyssey PC1500 capacity **68 Ah** (20-hr rate), 34 Ah usable at 50% DOD — see [Batteries][batteries] (Odyssey Extreme Series spec table, checked 2026-05-30).
+
+[^pbs-i-standby]: PBS-I ~50 mA standby is an **engineering estimate, not vendor-confirmed** (Digital Guard Dawg PBS-I, [Keyless Ignition][keyless-ignition]). Carried into this budget rather than chasing a vendor figure: at 1.2 Ah/day it changes no wire gauge or part selection. Field-verify with a clamp meter on the RED feed at first power-up if a precise number is ever needed.
+
+[batteries]: ../01-power-generation/01-batteries.md
