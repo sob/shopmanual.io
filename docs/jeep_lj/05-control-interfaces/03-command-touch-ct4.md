@@ -48,8 +48,6 @@ tags:
 
 ## Turn Signal and Lighting System Integration
 
-The CT4 provides complete turn signal and headlight control:
-
 ### Turn Signals {#ct4-turn-signals}
 
 - **Front Turn Signals:** Amber LED turn signal lights (dedicated turn signal only)
@@ -166,25 +164,6 @@ ELSE
   Out23_DRL = OFF
 END
 ```
-
-**How It Works:**
-
-1. **Ignition ON, Headlights OFF (CT4 SW3 off):**
-   - PMU Pin 7 = ON (ignition RUN)
-   - PMU In 7 = OFF (CT4 SW3 not active)
-   - PMU Out 23 = ON
-   - All DRL/parking lights illuminated
-
-2. **Ignition ON, Headlights ON (CT4 SW3 on):**
-   - PMU Pin 7 = ON (ignition RUN)
-   - PMU In 7 = ON (CT4 SW3 active)
-   - PMU Out 23 = OFF
-   - Headlights (low or high beam) active instead
-
-3. **Ignition OFF:**
-   - PMU Pin 7 = OFF
-   - PMU Out 23 = OFF (regardless of headlight status)
-   - All DRL/parking lights off
 
 **Installation Notes:**
 

@@ -43,7 +43,7 @@ tags:
 
 Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing.
 
-The factory master cylinder is discarded. The Back Bay Customs adapter mates a Wilwood Tandem Compact master (260-15542, 1.00" bore) directly to the iBooster — solving the vertical-firewall reservoir-angle problem and putting the hydraulics on Wilwood's remote-reservoir ecosystem.
+The Back Bay Customs adapter mates a Wilwood Tandem Compact master (260-15542, 1.00" bore) to the iBooster, solving the vertical-firewall reservoir-angle problem.
 
 **Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
 
