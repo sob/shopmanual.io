@@ -17,12 +17,6 @@ Automatic load management during ARB compressor operation to preserve AUX batter
 
 The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
 
-## Purpose
-
-Preserve AUX battery capacity during extended ARB compressor operation by shedding non-critical START battery loads. This maximizes BCDC charging rate and reduces overall system stress.
-
-**Secondary Goal:** Maintain comfortable voltage levels (>13.0V at START battery) for consistent PMU and accessory operation.
-
 ## Problem Statement
 
 **AUX Battery Depletion During Extended Air-Up:**
@@ -48,8 +42,6 @@ The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issu
 - Load shedding maximizes available margin for extended sessions
 
 ## Solution Overview
-
-Detect ARB compressor activation and disable non-critical START battery loads to maximize BCDC charging rate and maintain optimal system voltage.
 
 **Load Shedding Strategy:**
 
@@ -301,21 +293,6 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 2. Verify voltage stays >13.5V during ARB operation
 3. Confirm load shedding activates/deactivates correctly
 4. Identify any unexpected load combinations
-
-### Long-Term Monitoring
-
-**Track Over Time:**
-
-- Battery voltage during ARB use (should be consistent)
-- Frequency of load shedding activation
-- Any low-voltage warnings or failures
-- Battery state of charge recovery after ARB use
-
-**Adjust if Needed:**
-
-- Modify shed priority if testing shows different needs
-- Add/remove loads from shed list
-- Adjust temperature thresholds for cooler fans
 
 ## Related Documentation
 
