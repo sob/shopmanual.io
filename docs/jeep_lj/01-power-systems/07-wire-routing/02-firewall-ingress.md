@@ -75,13 +75,13 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 | 11 | Horn button trigger | 18 AWG | Steering wheel button | PMU In 1 | #16 |
 | 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
 | 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
-| 15 | WAIT-gated PURPLE START | 16 AWG | PBS-I via WAIT-gate relay | Cole Hersee 24213 coil | #16 |
+| 15 | PURPLE START | 16 AWG | PBS-I PURPLE START output | Cole Hersee 24213 coil | #16 |
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 
 ### Available (13 spare pins)
 
-Pins 18-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12) and WAIT-gated PURPLE START (pin 15).
+Pins 18-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12) and PURPLE START (pin 15).
 
 ---
 
@@ -183,7 +183,7 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 | Gauge | Count | Circuits |
 |:------|:-----:|:---------|
 | 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
-| 16 AWG | 4 | PMU lighting outputs (3), WAIT-gated PURPLE START (1) |
+| 16 AWG | 4 | PMU lighting outputs (3), PURPLE START (1) |
 | 18 AWG | 5 | Switch signals (3: horn, brake, A/C), winch control (2) |
 | **Main connector** | **16** | HDP24-24-29 (16 of 29 used, 13 spare; exact count pending final recount) |
 

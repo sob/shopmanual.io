@@ -22,9 +22,7 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 - [ ] Confirm starter battery post → Cole Hersee input
 - [ ] Confirm Cole Hersee output → starter switch post
 - [ ] Confirm PBS-I module mounted under-dash, powered from Critical Cabin PDU
-- [ ] Confirm PBS-I PURPLE START → WAIT-gate relay COM
-- [ ] Confirm WAIT-gate relay coil → ECM WAIT signal tap (shared with HDX WAIT/EX input)
-- [ ] Confirm WAIT-gate relay NC contact → firewall Pin 15 → Cole Hersee coil+
+- [ ] Confirm PBS-I PURPLE START → firewall Pin 15 → Cole Hersee coil+
 - [ ] Confirm Cole Hersee coil- grounded to engine bay ground bus
 - [ ] Confirm PBS-I PINK IGN → cabin ignition bus bar → firewall Pin 12 → ECM 12V + PMU Pin 7
 - [ ] Confirm Start Button mounted on dash, harness plugged into PBS-I
@@ -180,7 +178,7 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 - [ ] Verify starter does NOT crank when Start Button not pressed
 - [ ] Verify starter does NOT crank without valid iTag fob in range
 - [ ] Verify starter cranks when fob + Start Button + brake all asserted (warm engine)
-- [ ] Verify cold-start sequence: WAIT lamp illuminates → extinguishes → starter cranks
+- [ ] Verify cold-start sequence: IGN on → WAIT lamp illuminates → extinguishes → driver cranks (no auto-gate; driver waits for the lamp)
 - [ ] Verify engine shutoff: brake + button hold → engine stops
 - [ ] Verify Emergency Bypass: Programming Button + PIN authorizes start with fob absent
 - [ ] Verify fob auto-arm after fob leaves range

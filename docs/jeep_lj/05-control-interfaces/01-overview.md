@@ -30,7 +30,7 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 - **[Keyless Ignition][keyless-ignition]** - RFID + push-button start/stop replacing the factory keyswitch
   - Digital Guard Dawg PBS-I self-contained module with RFID iTag fobs
   - Single dash push-button included with kit
-  - WAIT-gate relay handles cold-start grid heater preheat automatically
+  - Cold-start grid heater preheat: driver waits for the WAIT-to-Start lamp before cranking
   - Emergency Bypass Card with 4-digit PIN (no hidden toggle)
 
 ## System Integration

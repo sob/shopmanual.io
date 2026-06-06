@@ -102,7 +102,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
 | **4x4/EX**               | 18 AWG ✓    | Transfer case switch         | HDX 4x4/EX input        | 4WD/4LO indicators                               |
 | GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
-| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity needs bench verification during install (HDX may invert internally, or LJ build docs may be mislabeled). Also tapped by WAIT-gate relay coil-, see [Keyless Ignition][keyless-link] |
+| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity needs bench verification during install (HDX may invert internally, or LJ build docs may be mislabeled). |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | WARN OUT                 | -           | -                            | -                       | Not used                                         |
@@ -139,7 +139,6 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 - [Ignition Signal Distribution][ignition-bus] - Ignition power source
 - [Command Touch CT4][ct4] - Lighting signal sources (turn, high beam, etc.)
 - [Cummins R2.8 ECM][ecm] - WAIT/EX (Pin 35 yellow) and ENGINE/MIL (Pin 22 white) signal sources
-- [Keyless Ignition][keyless-link] - WAIT-gate relay coil shares the Pin 35 signal tap
 
 [manual-link]: https://www.dakotadigital.com/pdf/HDX_manual_main.pdf
 [gauge-system]: index.md
@@ -149,4 +148,3 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 [ignition-bus]: ../../01-power-systems/06-ignition-signal/index.md
 [ct4]: ../../05-control-interfaces/03-command-touch-ct4.md
 [ecm]: ../index.md
-[keyless-link]: ../../05-control-interfaces/06-keyless-ignition.md

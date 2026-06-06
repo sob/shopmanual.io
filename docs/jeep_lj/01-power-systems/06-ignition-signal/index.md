@@ -35,7 +35,7 @@ The bus bar's outbound feed to engine-bay consumers (ECM 12V supply, PMU Pin 7) 
 
     - **PMU 12V Switched Input (Physical Pin 7):** Wire tapped from the bus bar engine-bay distribution stud - see [PMU Inputs][pmu-inputs]
     - **Cummins ECM 12V Supply:** Wire tapped from the same engine-bay distribution stud
-    - **Starter Control:** PBS-I PURPLE START output (separate firewall Pin 15) gates through WAIT-gate relay → Cole Hersee 24213 - see [Starter System][starter-system] and [Keyless Ignition][keyless-ignition]
+    - **Starter Control:** PBS-I PURPLE START output (separate firewall Pin 15) → Cole Hersee 24213 - see [Starter System][starter-system] and [Keyless Ignition][keyless-ignition]
 
     **Note:** PMU "Pin 7" (physical connector pin for 12V switched power) is different from PMU "In 7" (digital input channel #7 used for CT4 headlight status).
 
