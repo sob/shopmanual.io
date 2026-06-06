@@ -52,7 +52,7 @@ tags:
 
 **Control Solenoid:** Cole Hersee 24213 (200A continuous-duty)[^ch-24213]
 
-**Safety Interlock:** PBS-I keyless ignition module sources the crank signal (60A PURPLE START output). Brake interlock and RFID authorization are inside the PBS-I. A single external SPST WAIT-gate relay blocks cranking while the Cummins WAIT-to-Start lamp is on (cold-start grid heater preheat). See [Keyless Ignition][keyless-ignition] for the full architecture.
+**Safety Interlock:** The crank signal (60A PURPLE START) comes solely from the PBS-I keyless module, which owns RFID authorization, the brake interlock, ACC/IGN/START sequencing, and the cold-start WAIT-to-Start lamp procedure — see [Keyless Ignition][keyless-ignition]. (An automatic crank lockout was evaluated and deferred — see the [WAIT-to-Start Lockout Design Note][wait-lockout-note].)
 
 **Battery Requirement:** 800 CCA minimum (Odyssey PC1500 provides 850 CCA)
 
@@ -62,31 +62,25 @@ tags:
 | :-------------------- | :------------------------------ | :-------------------------------- | :--------- | :------- | :--------------------------------------------------------------- |
 | Main Power            | START battery+                  | Starter solenoid battery post     | 2/0 AWG    | 400-600A | See [START Battery Distribution][starter-battery] for wire specs |
 | Solenoid Power Tap    | START battery post              | Cole Hersee 24213 input           | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Start Signal (cabin)  | PBS-I PURPLE START output       | WAIT-gate relay COM (NC input)    | 14 AWG     | ~0.69A   | PBS-I output rated 60A but only Cole Hersee coil downstream[^ch-24213] |
-| Gated Start (firewall)| WAIT-gate relay NC contact      | Firewall Pin 15 → Cole Hersee coil+ | 16 AWG  | ~0.69A   | Open while WAIT-to-Start lamp on; closed otherwise               |
+| Start Signal          | PBS-I PURPLE START output       | Firewall Pin 15 → Cole Hersee coil+ | 16 AWG  | ~0.69A   | PBS-I output rated 60A but only Cole Hersee coil downstream[^ch-24213] |
 | Solenoid Coil Ground  | Cole Hersee 24213 coil-         | Engine bay ground bus             | 16 AWG     | ~0.69A   | ~3 ft                                                            |
 | Solenoid Output       | Cole Hersee 24213 output        | Starter solenoid switch post      | 10 AWG     | 30-75A   | ~2 ft                                                            |
 | Ground Return         | Starter case                    | Engine block → START battery-     | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
 
-See [Keyless Ignition][keyless-ignition] for PBS-I power, brake input, and WAIT-gate relay coil wiring.
+See [Keyless Ignition][keyless-ignition] for PBS-I power and brake input wiring.
 
 ## Control Flow
 
 ```text
-Driver presses brake + holds Start Button (PBS-I-mounted)
+PBS-I asserts PURPLE START  (fob auth + brake + sequence: see Keyless Ignition)
             ↓
-PBS-I (cabin) authenticates fob → asserts PINK IGN (ECM powers up) and PURPLE START
-            ↓
-WAIT-gate relay (NC): closed if WAIT lamp off → start signal passes through
-                       open  if WAIT lamp on  → wait for grid heater to finish
-            ↓
-PBS-I PURPLE START → Firewall Pin 15 → Cole Hersee 24213 coil → Ground
+PURPLE START → Firewall Pin 15 → Cole Hersee 24213 coil → Ground
             ↓
 Cole Hersee main contacts close
             ↓
 START battery → Cole Hersee output → Starter switch post → Bendix engages → cranks
             ↓
-Engine starts → driver releases button → Cole Hersee de-energizes → Bendix retracts
+Engine starts → button released → Cole Hersee de-energizes → Bendix retracts
 ```
 
 ## Starter Motor Terminals
@@ -117,7 +111,7 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 
 - Large Stud 1 (Input): 5/16"-24 copper power stud; from START battery post (10 AWG)
 - Large Stud 2 (Output): 5/16"-24 copper power stud; to starter switch post (10 AWG; starter post is 6.3mm push-on)
-- Small Stud 1 (Coil+): #10-32 steel stud; from WAIT-gate relay NC contact (16 AWG, gated PBS-I PURPLE START)
+- Small Stud 1 (Coil+): #10-32 steel stud; from Firewall Pin 15 (16 AWG, PBS-I PURPLE START)
 - Small Stud 2 (Coil-): #10-32 steel stud; to engine bay ground bus (16-18 AWG)
 
 [^ch-24213]: Littelfuse (Cole Hersee) 24213 continuous-duty SPST solenoid, [product page](https://www.littelfuse.com/products/relays-contactors-transformers/solenoids-relays/standard-high-current-relays/continuous-duty-spst/24213) / DigiKey #6347082. Rated **200A continuous** with two 5/16"-24 copper power studs + two #10-32 steel coil studs; coil ~0.69A @ 12V (17.5 Ω). Corrects the earlier unsourced "85A / M8 / 6.3mm-push-on" figures (validated 2026-05-30). 200A is comfortably oversized for the ~10A starter-trigger path.
@@ -135,7 +129,8 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 - [Engine Bay Ground Bus][engine-bay-ground-bus] - Ground connections
 - [Power Generation][power-generation] - Battery specifications
 - [Wire Distance Reference][wire-distance] - Starter to battery routing distances
-- [Keyless Ignition][keyless-ignition] - PBS-I sources PURPLE START; WAIT-gate relay gates on grid heater lamp
+- [Keyless Ignition][keyless-ignition] - PBS-I sources PURPLE START; cold-start wait via the WAIT-to-Start lamp
+- [WAIT-to-Start Lockout Design Note][wait-lockout-note] - Deferred automatic crank-lockout design, preserved for future revival
 
 [db-starter]: https://www.dbelectrical.com/products/starter-for-2-8-cummins-isf2-8-qsb3-9-30-qsb4-5-4996706-428000-7090.html
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
@@ -145,4 +140,5 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [keyless-ignition]: ../05-control-interfaces/06-keyless-ignition.md
+[wait-lockout-note]: wait-to-start-lockout-design-note.md
 [tbd-tracker]: ../tbd-tracker.md

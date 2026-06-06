@@ -7,7 +7,7 @@ hide:
 
 ## Project Overview
 
-This documentation covers the complete electrical system design for a 2006 Jeep LJ (Wrangler Unlimited) with a Cummins R2.8 Turbo Diesel engine swap. The factory wiring and TIPM are replaced with a modular architecture: dual isolated batteries, programmable power management (PMU24), a safety controller (SafetyHub), and split control surfaces for street lighting (Command Touch CT4) and offroad lighting (SwitchPros SP-1200). Brakes are converted to electro-hydraulic (Bosch iBooster + Wilwood master cylinder), and ignition is keyless via PBS-I with a WAIT-gate relay.
+This documentation covers the complete electrical system design for a 2006 Jeep LJ (Wrangler Unlimited) with a Cummins R2.8 Turbo Diesel engine swap. The factory wiring and TIPM are replaced with a modular architecture: dual isolated batteries, programmable power management (PMU24), a safety controller (SafetyHub), and split control surfaces for street lighting (Command Touch CT4) and offroad lighting (SwitchPros SP-1200). Brakes are converted to electro-hydraulic (Bosch iBooster + Wilwood master cylinder), and ignition is keyless via PBS-I.
 
 <div class="mobile-nav-only" markdown="1">
 
@@ -52,7 +52,7 @@ The electrical system is organized into zones for logical distribution and maint
 - **[SwitchPros SP-1200][switchpros]** - SwitchPros lighting controller
 - **[Command Touch CT4][ct4]** - Command Touch control panel
 - **[Dashboard Switches][dashboard-controls]** - Physical dashboard controls
-- **[Keyless Ignition][keyless-ignition]** - PBS-I keyless start with WAIT-gate relay
+- **[Keyless Ignition][keyless-ignition]** - PBS-I keyless start
 
 ### Stereo Systems
 
@@ -102,7 +102,7 @@ The factory TIPM is replaced with discrete, serviceable modules:
 ### Brake & Ignition
 
 - **[Bosch iBooster Gen 2 + Wilwood MC][brake-booster]:** Electro-hydraulic brake booster (Honda Accord Hybrid Gen 2 iBooster, Wilwood Tandem Compact master cylinder, Back Bay Customs adapter)
-- **[PBS-I Keyless Ignition][keyless-ignition]:** Pushbutton start, self-contained WAIT-gate relay (no PMU dependency)
+- **[PBS-I Keyless Ignition][keyless-ignition]:** Pushbutton start, self-contained RFID immobilizer (no PMU dependency)
 
 ### Major Systems
 

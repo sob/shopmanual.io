@@ -16,7 +16,7 @@ tags:
 
 **Model:** Bussmann LR-2
 
-**Part Number:** 301-1C-C-R1 (NSN: 6110-01-523-6374)
+**Part Number:** Bussmann LR-2 panel, NSN 6110-01-523-6374 (the `301-1C-C-R1` is the Song Chuan ISO 280 relay that populates it, not the panel)[^lr2-relay]
 
 **Manufacturer:** Bussmann (Eaton)
 
@@ -68,9 +68,9 @@ tags:
 | K27            | TRAILER BO STOP         | **\[Available\]**       | 12V     | -           | Future expansion                       |
 | K30            | TRAILER REAR LEFT       | **\[Available\]**       | 12V     | -           | Future expansion                       |
 | K31            | TRAILER REAR RIGHT      | **\[Available\]**       | 12V     | -           | Future expansion                       |
-| K53            | RADIO                   | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K40            | START DISABEL           | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
-| K42            | ENGINE PTO              | **\[Available\]**       | 24V→12V | -           | Replace with 12V relay                 |
+| K53            | RADIO                   | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
+| K40            | START DISABEL           | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
+| K42            | ENGINE PTO              | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
@@ -88,7 +88,6 @@ G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (STAR
 ## Build Tasks
 
 - [ ] Identify pinout for J301-J306 Metri-Pack connectors (military TM manual or reverse engineering)
-- [ ] Determine replacement 12V relay part numbers for K40, K42, K53 (currently 24V coils)
 
 **Design Notes:**
 
@@ -96,6 +95,8 @@ G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (STAR
 - Heated seat current: 5A peak, 2A sustained per seat (verified with vendor)
 - Military relays K21/K22 provide fault isolation and independent operation
 - J301-J306 connectors require custom harness fabrication
+
+[^lr2-relay]: The Bussmann **LR-2** is the panel; **`301-1C-C-R1`** is the **Song Chuan** ISO 280 (2.8 mm) relay that populates it, voltage-coded by suffix — **U01 = 12 V, U02 = 24 V**. K40/K42/K53 ship with 24 V (U02); the 12 V drop-in is the same relay in **U01** trim (`301-1C-C-R1-U01-12VDC` — SPDT, 35 A, ISO 280, resistor-suppressed). Sources: [ProWire 301-1C-C-R1-U01-12VDC](https://www.prowireusa.com/301-1C-C-R1-U01-12VDC), [eBay LR-2 listing](https://www.ebay.com/itm/224625878742) (U01/U02 = 12 V/24 V); accessed 2026-06-06.
 
 ## Related Documentation
 
