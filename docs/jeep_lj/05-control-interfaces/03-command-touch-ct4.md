@@ -109,17 +109,11 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 
 ## Programming Configuration
 
-The CT4 is highly programmable. Recommended configuration for this build:
+Recommended configuration for this build:
 
 1. **Turn Signal Mode:** GPS turn signal mode (automatic cancellation based on speed and steering angle)
-   - SW1 (UP) = Right Turn
-   - SW2 (DOWN) = Left Turn
-   - GPS module monitors vehicle speed and steering to detect turn completion
 
-2. **Ignition Control:** Ignition-aware mode
-   - SW1/SW2 (turn signals/hazards) work anytime, even when ignition is off (critical for safety)
-   - SW3/SW4 (headlights) disabled when ignition off (via ignition signal from ignition switch RUN)
-   - Prevents battery drain from headlights left on
+2. **Ignition Control:** Ignition-aware mode (SW1/SW2 always active; SW3/SW4 disabled when ignition off)
 
 3. **ON-OFF/Momentary:**
    - SW1/SW2: ON-OFF (latching turn signals with GPS auto-cancel)

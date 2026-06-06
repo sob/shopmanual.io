@@ -144,20 +144,6 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ### SwitchPros Integration
 
-**Control Architecture:**
-
-```text
-Air Tank Pressure Switch (ARB 180901)
-    ↓ (trigger signal when pressure < 135 PSI)
-SwitchPros TRIGGER-3 (Pin 17, PINK wire)
-    ↓
-SwitchPros Logic: TRIGGER-3 OR Button 11 → OUTPUT-11
-    ↓
-OUTPUT-11 activates compressor
-    ↓
-Compressor fills tank to 150 PSI → pressure switch opens → compressor stops
-```
-
 **SwitchPros Programming:**
 
 - **TRIGGER-3 Input:** Pressure switch signal (tank < 135 PSI activates trigger)
