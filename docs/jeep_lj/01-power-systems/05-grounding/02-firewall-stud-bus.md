@@ -57,8 +57,6 @@ tags:
 
 **Ground Path:** Bus → chassis ground (4 AWG, handles ~50A total load) → START battery negative bus (via 2/0 AWG main chassis ground)
 
-**Critical:** Clean metal-to-metal connection to firewall/chassis, protected from water/moisture
-
 ## Related Documentation
 
 - [Grounding Architecture Overview][grounding-architecture]

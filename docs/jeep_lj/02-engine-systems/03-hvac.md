@@ -39,16 +39,6 @@ Factory 2005 TJ HVAC system retained. Uses vacuum-operated mode doors, cable-ope
 
 See [PMU Outputs][pmu-outputs] for complete configuration.
 
-## Control Methods
-
-| Function                  | Control Type               | PMU Involvement     |
-| :------------------------ | :------------------------- | :------------------ |
-| Blower Speed              | Electrical (resistor pack) | OUT5 provides power |
-| A/C On/Off                | Electrical (PMU switched)  | In 9 triggers OUT17 |
-| Temperature               | Mechanical (cable)         | None                |
-| Mode (defrost/vent/floor) | Vacuum                     | None                |
-| Recirculation             | Vacuum                     | None                |
-
 ## Vacuum System
 
 **Source:** R2.8 intake manifold → check valve → reservoir → firewall → factory HVAC controls
