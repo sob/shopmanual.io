@@ -52,7 +52,7 @@ tags:
 
 **Control Solenoid:** Cole Hersee 24213 (200A continuous-duty)[^ch-24213]
 
-**Safety Interlock:** PBS-I keyless ignition module sources the crank signal (60A PURPLE START output). Brake interlock and RFID authorization are inside the PBS-I. On a cold start the driver waits for the Cummins WAIT-to-Start lamp to extinguish before cranking (grid heater preheat). See [Keyless Ignition][keyless-ignition] for the full architecture.
+**Safety Interlock:** PBS-I keyless ignition module sources the crank signal (60A PURPLE START output). Brake interlock and RFID authorization are inside the PBS-I. On a cold start the driver waits for the Cummins WAIT-to-Start lamp to extinguish before cranking (grid heater preheat); an automatic crank lockout was evaluated and deferred — see the [WAIT-to-Start Lockout Design Note][wait-lockout-note]. See [Keyless Ignition][keyless-ignition] for the full architecture.
 
 **Battery Requirement:** 800 CCA minimum (Odyssey PC1500 provides 850 CCA)
 
@@ -132,6 +132,7 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 - [Power Generation][power-generation] - Battery specifications
 - [Wire Distance Reference][wire-distance] - Starter to battery routing distances
 - [Keyless Ignition][keyless-ignition] - PBS-I sources PURPLE START; cold-start wait via the WAIT-to-Start lamp
+- [WAIT-to-Start Lockout Design Note][wait-lockout-note] - Deferred automatic crank-lockout design, preserved for future revival
 
 [db-starter]: https://www.dbelectrical.com/products/starter-for-2-8-cummins-isf2-8-qsb3-9-30-qsb4-5-4996706-428000-7090.html
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
@@ -141,4 +142,5 @@ Engine starts → driver releases button → Cole Hersee de-energizes → Bendix
 [power-generation]: ../01-power-systems/01-power-generation/index.md
 [wire-distance]: ../01-power-systems/01-power-generation/05-wire-distance-reference.md
 [keyless-ignition]: ../05-control-interfaces/06-keyless-ignition.md
+[wait-lockout-note]: wait-to-start-lockout-design-note.md
 [tbd-tracker]: ../tbd-tracker.md

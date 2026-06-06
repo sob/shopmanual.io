@@ -130,7 +130,7 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 
 - [Starter System][starter] - Cole Hersee 24213 and PBS-I PURPLE START → coil chain
 - [Ignition Signal Distribution][ignition-signal] - PBS-I PINK IGN feeds the bus bar
-- [HDX Control][hdx-control] - WAIT/EX signal source for the gate relay
+- [HDX Control][hdx-control] - ECM Pin 35 WAIT/EX signal (dash display)
 - [Grid Heater System][grid-heater] - R2.8 grid heater duty cycle (3-5 sec typical)
 - [Firewall Ingress][firewall-ingress] - PBS-I pin assignments
 
