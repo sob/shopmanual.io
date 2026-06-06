@@ -70,15 +70,6 @@ No external circuit breaker — per the [WARN ZEON 10-S installation manual][war
 - **Connection:** Plugs into winch control pack
 - **Use case:** Outside vehicle spotting (traditional winch operation with visual line of sight)
 
-**Control Architecture:**
-
-```text
-SafetyHub ATC-1 (15A) → Dash Rocker Switch ⟷ Handheld Remote (parallel) → Winch Contactor IN/OUT
-                              ↑                      ↑
-                           UP = OUT              Remote OUT button
-                           DOWN = IN             Remote IN button
-```
-
 ## Wiring
 
 **Main Power Wiring:**
@@ -115,25 +106,6 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
 
 - **Route:** Passenger rear wheel well → front bumper (~13 ft, exact path: {{ tbd(106) }} - avoid exposed frame rail per offroad protection requirement)
-- **Protection:** Split loom over entire run
-- **Securing:** P-clamps every 18" along the chosen path
-- **Grommets:** Rubber grommets with sealant at body penetrations
-- **Heat:** Route away from exhaust components (minimum 6" clearance)
-
-## Safety Considerations
-
-!!! warning "Winch Safety"
-    - Never exceed winch rated capacity (10,000 lbs)
-    - Always use proper recovery techniques and safety equipment
-    - Keep hands and body clear of winch line under tension
-    - Use tree savers and recovery equipment rated for load
-    - Monitor battery voltage during extended winch operations
-
-!!! warning "Electrical Safety"
-    - Winch power cables carry extremely high current (up to 409A)
-    - Ensure all connections are tight and properly crimped
-    - Never disconnect battery while winch is under load
-    - Check cable insulation regularly for damage
 
 ## Outstanding Items
 
