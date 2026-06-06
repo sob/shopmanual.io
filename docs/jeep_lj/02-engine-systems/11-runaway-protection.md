@@ -24,10 +24,10 @@ This is a deliberate departure from Cummins' Repower default (no air shutoff) be
 | :------------------------------------- | :---------------------- | :-------------- | :------------------------------------------------- |
 | Baffled oil catch can                  | MMOCC-CBT               | Mishimoto       | Compact, 13 oz capacity, petcock drain             |
 | Catch can mounting bracket             | MMOCC-UB                | Mishimoto       | Universal aluminum bracket                         |
-| Intake air shutoff valve (2.8")        | 4261M02A027-AA          | AMOT            | Manual/pneumatic cylinder, NPT, manual trip        |
+| Intake air shutoff valve (2.8")        | 4261M02A027-AA          | AMOT            | Wafer butterfly; sleeves into 2.8" intake duct. Tripped by manual cable (NPT port = unused pneumatic option) |
 | Push-pull cable + locking T-handle     | 30-144-TTL-BH-3         | Midwest Control | 144" cable, turn-to-lock T-handle, 3" travel, bulkhead mount |
 | Catch can hose                         | 5/8" oil-resistant      | User-supplied   | 2 ft typical; worm clamps both ends                |
-| AMOT-to-intake adapters                | NPT-to-hose, 2.8"       | User-supplied   | Match turbo inlet tube size (verify on R2.8)       |
+| Intake reducer couplers                | 2.8" → 2⅛" silicone     | User-supplied   | Step AMOT 2.8" duct connection to 2.125" OD turbo inlet tube; T-bolt clamps. Exact size pending [#129][adapter-tbd] |
 
 ## Catch Can: Crankcase Ventilation
 
@@ -72,6 +72,10 @@ The R2.8 routes crankcase blow-by vapor back to the pre-turbo intake (factory cl
 | Seals                    | Nitrile (200°F max intake temp)|
 | Mechanical pull-to-release | 67 N (15 lb)                 |
 | Operating mode           | Manually cocked open; spring-loaded; trips closed on cable pull or air-pressure loss |
+
+### Intake Connection
+
+The 4261M is a wafer butterfly valve with **no threaded air-path port** — it sleeves into the 2.8" (71 mm) nominal intake duct and is secured with hose clamps. The R2.8 turbo inlet tube measures **2.125" OD / 1.63" ID**.[^inlet-od] That is well below both the valve's 2.8" connection and its 2.4" bore, so the valve adds no flow restriction, but the turbo side needs reducer couplers stepping 2.8" → 2⅛". The NPT thread in part number `4261M02A027-AA` (actuator code 27) is the pneumatic control port, not the air path; this build trips the valve by manual cable, leaving that port unused. Exact reducer sizing pending confirmation of the valve's air-path connection OD — see [#129][adapter-tbd].
 
 ### Cable + Handle Specifications
 
@@ -160,8 +164,8 @@ Both upgrades preserve the manual cable as the always-available backup.
 
 ## Build Tasks
 
-- [ ] Verify R2.8 turbo inlet tube outside diameter (2.5" suspected; 2.8" AMOT body is closest available)
-- [ ] Source NPT-to-hose adapter fittings sized to match turbo inlet
+- [x] Measure R2.8 turbo inlet tube: **2.125" OD / 1.63" ID** (resolves #54). 2.8" AMOT is the smallest 4261M (2.4" bore) — oversized but adds no restriction; reducer couplers required.
+- [ ] Confirm AMOT 4261M 2.8" air-path connection OD and select reducer coupler to 2.125" intake tube ([#129][adapter-tbd])
 - [ ] Select dash T-handle mounting location (within reach belted, away from accidental contact)
 - [ ] Assign firewall grommet for AMOT cable pass-through (dedicated grommet required)
 - [ ] Determine catch can mounting bracket attachment point on engine bracketry
@@ -177,3 +181,6 @@ Both upgrades preserve the manual cable as the always-available backup.
 [checklist]: ../09-installation/02-engine-systems-checklist.md
 [tbd]: ../tbd-tracker.md
 [purchase]: ../09-installation/03-purchase-tracker.md
+[adapter-tbd]: https://github.com/sob/drawings/issues/129
+
+[^inlet-od]: R2.8 turbo inlet tube, first-party measurement (part in hand), 2026-06-05: 1.63" ID, 2.125" OD. Resolves issue #54; supersedes the earlier unsourced 2.5" estimate.
