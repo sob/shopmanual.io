@@ -52,7 +52,7 @@ tags:
 
 **Control Solenoid:** Cole Hersee 24213 (200A continuous-duty)[^ch-24213]
 
-**Safety Interlock:** PBS-I keyless ignition module sources the crank signal (60A PURPLE START output). Brake interlock and RFID authorization are inside the PBS-I. On a cold start the driver waits for the Cummins WAIT-to-Start lamp to extinguish before cranking (grid heater preheat); an automatic crank lockout was evaluated and deferred — see the [WAIT-to-Start Lockout Design Note][wait-lockout-note]. See [Keyless Ignition][keyless-ignition] for the full architecture.
+**Safety Interlock:** The crank signal (60A PURPLE START) comes solely from the PBS-I keyless module, which owns RFID authorization, the brake interlock, ACC/IGN/START sequencing, and the cold-start WAIT-to-Start lamp procedure — see [Keyless Ignition][keyless-ignition]. (An automatic crank lockout was evaluated and deferred — see the [WAIT-to-Start Lockout Design Note][wait-lockout-note].)
 
 **Battery Requirement:** 800 CCA minimum (Odyssey PC1500 provides 850 CCA)
 
@@ -72,17 +72,15 @@ See [Keyless Ignition][keyless-ignition] for PBS-I power and brake input wiring.
 ## Control Flow
 
 ```text
-Driver presses brake + holds Start Button (PBS-I-mounted)
+PBS-I asserts PURPLE START  (fob auth + brake + sequence: see Keyless Ignition)
             ↓
-PBS-I (cabin) authenticates fob → asserts PINK IGN (ECM powers up) and PURPLE START
-            ↓
-PBS-I PURPLE START → Firewall Pin 15 → Cole Hersee 24213 coil → Ground
+PURPLE START → Firewall Pin 15 → Cole Hersee 24213 coil → Ground
             ↓
 Cole Hersee main contacts close
             ↓
 START battery → Cole Hersee output → Starter switch post → Bendix engages → cranks
             ↓
-Engine starts → driver releases button → Cole Hersee de-energizes → Bendix retracts
+Engine starts → button released → Cole Hersee de-energizes → Bendix retracts
 ```
 
 ## Starter Motor Terminals
