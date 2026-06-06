@@ -35,6 +35,8 @@ The bus bar's outbound feed to engine-bay consumers (ECM 12V supply, PMU Pin 7) 
 
     - **PMU 12V Switched Input (Physical Pin 7):** Wire tapped from the bus bar engine-bay distribution stud - see [PMU Inputs][pmu-inputs]
     - **Cummins ECM 12V Supply:** Wire tapped from the same engine-bay distribution stud
+    - **Turbolamik TCU wake:** Low-current tap from the same engine-bay distribution stud - see [Transmission][transmission]
+    - **iBooster Enable:** ~5A on its own ignition-bus terminal + **own 7.5A fuse** (not the ECM 5A feed) and its own firewall pin - see [Brake Booster][brake-booster]
     - **Starter Control:** PBS-I PURPLE START output (separate firewall Pin 15) → Cole Hersee 24213 - see [Starter System][starter-system] and [Keyless Ignition][keyless-ignition]
 
     **Note:** PMU "Pin 7" (physical connector pin for 12V switched power) is different from PMU "In 7" (digital input channel #7 used for CT4 headlight status).
@@ -52,15 +54,15 @@ The bus bar's outbound feed to engine-bay consumers (ECM 12V supply, PMU Pin 7) 
 | Stud/Terminal           | Connection                | Wire Gauge   | Distance              | Max Current     | Notes                                              |
 | :---------------------- | :------------------------ | :----------- | :-------------------- | :-------------- | :------------------------------------------------- |
 | **Stud 1 (5/16")**      | **PBS-I PINK IGN (INPUT)** | **14 AWG ✓** | **~2 ft (cabin local)** | **~5A total**   | No firewall crossing; PBS-I onboard 60A relay protects |
-| Stud 2 (5/16")          | **Engine-bay outbound (OUTPUT)** | 14 AWG ✓     | Through firewall (HDP24 Pin 12) | ~5A peak     | **5A inline fuse required at this stud** per Cummins R2.8 install manual; feeds ECM Pin 41 (black, keyswitch) + PMU Pin 7 |
+| Stud 2 (5/16")          | **Engine-bay outbound (OUTPUT)** | 14 AWG ✓     | Through firewall (HDP24 Pin 12) | ~5A peak     | **5A inline fuse required at this stud** per Cummins R2.8 install manual; feeds ECM Pin 41 (black, keyswitch) + PMU Pin 7 + Turbolamik TCU wake (low current) |
 | Terminal 1 (#10-24)     | Command Touch CT4         | 18 AWG ✓     | ~3 ft                 | ~20mA           | Ignition sense for turn signal auto-cancel         |
 | Terminal 2 (#10-24)     | SwitchPros SP-1200        | 18 AWG ✓     | ~4 ft                 | ~20mA           | Pin 3 (Lt Blue) - ignition sense                   |
 | Terminal 3 (#10-24)     | Fusion MS-RA670 Radio     | 18 AWG ✓     | ~2 ft                 | ~20mA           | Yellow wire - ignition sense                       |
 | Terminal 4 (#10-24)     | BCDC Alpha 50             | 18 AWG ✓     | ~12 ft                | ~20mA           | Blue wire - activates charging when engine running |
-| Terminal 5 (#10-24)     | **\[Available\]**           | -            | -                     | -               | Future ignition-switched device                    |
+| Terminal 5 (#10-24)     | **iBooster Enable**       | 16 AWG ✓     | ~10 ft (own HDP24 pin) | ~5A             | iBooster ignition enable; **own 7.5A inline fuse** (not shared with the ECM 5A feed); crosses firewall |
 | Terminals 6-12 (#10-24) | **\[Available\]**           | -            | -                     | -               | Future expansion (7 terminals)                     |
 
-**Utilization:** 6 of 14 used (2 studs + 4 terminals used, 0 studs + 8 terminals available)
+**Utilization:** 7 of 14 used (2 studs + 5 terminals used, 0 studs + 7 terminals available)
 
 ## Mounting
 
@@ -82,3 +84,5 @@ The bus bar's outbound feed to engine-bay consumers (ECM 12V supply, PMU Pin 7) 
 [bcdc]: ../01-power-generation/03-bcdc.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [starter-system]: ../../02-engine-systems/01-starter.md
+[transmission]: ../../10-drivetrain/01-transmission.md
+[brake-booster]: ../../02-engine-systems/02-brake-booster.md

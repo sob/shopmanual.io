@@ -49,9 +49,21 @@ live in the linked source docs, not here.
 
 - [ ] Mount 250A circuit breaker (PMU main power) within reach of START battery
 - [ ] Mount 80A circuit breaker (BCDC input) within reach of START battery
+- [ ] Mount 150A circuit breaker (Forward Distribution Bus master) within reach of START battery
 - [ ] Confirm START battery+ → 250A CB → PMU main power
 - [ ] Confirm START battery+ → 80A CB → BCDC input
+- [ ] Confirm START battery+ → 150A CB → 2 AWG forward feed → START+ Forward Distribution Bus
 - [ ] Confirm PMU ground reference (Pin 25) → Engine Bay Ground Bus
+
+**START+ Forward Distribution Bus (engine bay):**
+
+- [ ] Mount START+ Forward Distribution Bus (Blue Sea 2105, {{ tbd(135) }}) in engine bay with insulated cover
+- [ ] Mount 60A / 50A / 25A load breakers on a bracket beside the bus
+- [ ] Confirm Forward Bus → 60A CB → radiator fan power (via relay)
+- [ ] Confirm Forward Bus → 50A CB → iBooster main
+- [ ] Confirm Forward Bus → 25A CB → Turbolamik TCU power
+- [ ] Confirm iBooster enable → Ignition bus Term 5 (7.5A fuse) → firewall Pin 18
+- [ ] Install dedicated radiator-fan controller + coolant sensor ({{ tbd(134) }}); verify fail-to-full-speed on lost sensor
 
 **Direct Battery Connections (No Circuit Breaker):**
 
@@ -191,8 +203,6 @@ live in the linked source docs, not here.
 
 ### PMU Output Wiring
 
-- [ ] Confirm iBooster main power → OUT1+10 (combined)
-- [ ] Confirm radiator fan → OUT2+3+4 (combined)
 - [ ] Confirm HVAC blower → OUT5
 - [ ] Confirm GMRS Radio → OUT6
 - [ ] Confirm oil cooler fan → OUT7
@@ -203,12 +213,11 @@ live in the linked source docs, not here.
 - [ ] Confirm winch contactor trigger → OUT15
 - [ ] Confirm A/C clutch → OUT17
 - [ ] Confirm horn → OUT18
-- [ ] Confirm iBooster ignition signal → OUT19
 - [ ] Confirm STX Intercom → OUT20
 - [ ] Confirm brake lights → OUT21
 - [ ] Confirm reverse lights → OUT22
 - [ ] Confirm DRL/parking → OUT23
-- [ ] OUT24 — reserved for future expansion (no wiring)
+- [ ] OUT1–4, 10, 16, 19, 24 — free (no wiring); radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus (see below)
 
 ### PMU CAN Bus Integration
 
@@ -259,8 +268,6 @@ live in the linked source docs, not here.
 
 ### PMU Programming
 
-- [ ] Configure iBooster output combining (OUT1+10)
-- [ ] Configure radiator fan output combining (OUT2+3+4, PWM)
 - [ ] Program DRL auto-off when headlights active
 - [ ] Program A/C clutch engagement logic
 - [ ] Program horn activation

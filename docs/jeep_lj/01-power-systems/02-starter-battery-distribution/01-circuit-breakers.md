@@ -15,13 +15,26 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 
 | Circuit        | Model                                            | Rating | Reset Type | Power Path                                                          | Max Load                                  | Sizing                                                             |
 | :------------- | :----------------------------------------------- | :----: | :--------- | :------------------------------------------------------------------ | :---------------------------------------- | :----------------------------------------------------------------- |
-| **PMU24**      | Mechanical Products<br/>([174-S2-250-2][mp-250]) |  250A  | Manual     | START battery+<br/>└→ 250A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24        | ~253A theoretical peak (140-170A typical) | 99% of max load (with all radios transmitting + full radiator fan) |
+| **PMU24**      | Mechanical Products<br/>([174-S2-250-2][mp-250]) |  250A  | Manual     | START battery+<br/>└→ 250A CB<br/>&nbsp;&nbsp;&nbsp;└→ PMU24        | 140-170A typical (radiator fan, iBooster + TCU no longer on PMU) | Protects 2/0 AWG (265A @ 60°C); now generously oversized after relocation |
+| **Fwd Dist Bus (master)** | Mechanical Products<br/>(174-S2-150-2, {{ tbd(135) }}) | 150A | Manual | START battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ [START+ Forward Distribution Bus][front-battery] | ~108A peak (~68A continuous) | Protects 2 AWG forward feed; selective with downstream load CBs |
 | **BCDC Input** | Mechanical Products<br/>([174-S2-080-2][mp-80])  |  80A   | Manual     | START battery+<br/>└→ 80A CB<br/>&nbsp;&nbsp;&nbsp;└→ BCDC Alpha 50 | 50-55A BCDC input                         | 145-160% of max load                                               |
 
-**Total Circuit Breakers:** 2 (PMU 250A, BCDC 80A)
+**Total battery-side Circuit Breakers:** 3 (PMU 250A, Forward Dist Bus master 150A, BCDC 80A)
 
 !!! info "PMU Circuit Breaker Sizing"
-250A CB sized to protect 2/0 AWG wire (265A @ 60°C). Typical PMU load is 140-170A (56-68% of CB rating). The 253A theoretical peak requires all loads maxed simultaneously - not realistic in practice.
+250A CB sized to protect 2/0 AWG wire (265A @ 60°C). With the radiator fan, iBooster, and TCU relocated to the [Forward Distribution Bus][front-battery], typical PMU load drops to ~85-115A (well under half the CB rating). The CB is left at 250A (no benefit to downsizing).
+
+## Forward Distribution Bus Breakers (engine bay)
+
+The three loads relocated off the PMU each get a breaker at the [START+ Forward Distribution Bus][front-battery] (engine bay), fed from the 150A master above. SKUs follow the Mechanical Products Series 17 S2 pattern — confirm via {{ tbd(135) }}.
+
+| Circuit | Model | Rating | Power Path | Max Load | Sizing |
+| :------ | :---- | :----: | :--------- | :------- | :----- |
+| **Radiator Fan** | Mechanical Products (174-S2-060-2) | 60A | Fwd Bus → 60A CB → fan | 53A continuous | 113% of max load (protects 4 AWG) |
+| **iBooster main** | Mechanical Products (174-S2-050-2) | 50A | Fwd Bus → 50A CB → iBooster | 40A brief peak / 0.25A idle | 125% of brief peak (protects 8 AWG) |
+| **Turbolamik TCU** | Mechanical Products (174-S2-025-2) | 25A | Fwd Bus → 25A CB → TCU | 15A continuous | 167% of max load (protects 12 AWG) |
+
+**Total Forward Bus Circuit Breakers:** 3 (fan 60A, iBooster 50A, TCU 25A)
 
 **All Circuit Breakers:**
 
@@ -34,7 +47,7 @@ All START battery positive circuits protected by Mechanical Products Series 17 c
 - Standards: Marine-rated (SAE J1171, ABYC E-11, UL1500, IP67, MIL-STD-202)
 - Mounting: Driver rear wheel well within 7" of battery positive terminal
 
-**Space Requirements:** 2 CBs side-by-side with wiring clearance for 2/0 AWG cables: ~7" × 4" (~28 sq in)
+**Space Requirements:** 3 battery-side CBs (PMU 250A, Forward Bus master 150A, BCDC 80A) side-by-side with wiring clearance: ~10" × 4" (~40 sq in). The 3 forward-bus load CBs (fan/iBooster/TCU) mount in the engine bay on a bracket beside the [Forward Distribution Bus][front-battery], not in the wheel well.
 
 ## Related Documentation
 

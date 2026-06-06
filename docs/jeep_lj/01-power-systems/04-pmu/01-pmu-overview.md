@@ -55,16 +55,16 @@ tags:
 
 | Outputs   |  Rating  | Total  |  Used  | Available |
 | :-------- | :------: | :----: | :----: | :-------: |
-| 1-10      | 25A each |   10   |   10   |     0     |
-| 11-16     | 15A each |   6    |   6    |     0     |
+| 1-10      | 25A each |   10   |   5    |     5     |
+| 11-16     | 15A each |   6    |   3    |     3     |
 | 17-24     | 7A each  |   8    |   6    |     2     |
-| **Total** |    -     | **24** | **23** |   **1**   |
+| **Total** |    -     | **24** | **14** |  **10**   |
 
-**Utilization:** 23 of 24 outputs used (96%)
+**Utilization:** 14 of 24 outputs used (58%) — 7 freed by relocating the radiator fan, iBooster, and TCU
 
-**Primary loads:** Radiator fan (OUT2+3+4: 3×25A combined), iBooster (OUT1+10: 2×25A non-adjacent), HVAC (OUT5: 25A), GMRS radio (OUT6: 25A), aux fans (OUT7+8: 2×15A), Dakota Digital (OUT9: 25A), wipers (OUT11: 15A), Ham radio (OUT12: 15A), CT4 (OUT13: 15A), winch trigger (OUT15: 15A), Turbolamik TCU (OUT16: 15A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), iBooster ignition (OUT19: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A)
+**Primary loads:** HVAC (OUT5: 25A), GMRS radio (OUT6: 25A), aux cooling fans (OUT7+8: 2×15A), Dakota Digital (OUT9: 25A), wipers (OUT11: 15A), CT4 (OUT13: 15A), winch trigger (OUT15: 15A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A). _Radiator fan (was OUT2+3+4), iBooster main + enable (was OUT1+10, OUT19), and Turbolamik TCU (was OUT16) relocated to the [START+ Forward Distribution Bus][start-fwd-bus] — OUT1–4, 10, 16, 19 now free._
 
-**Load:** ~253A theoretical peak (all radios transmitting + full radiator fan + iBooster braking), ~106A typical PMU circuits continuous (excluding radiator fan which varies 16-53A via PWM), total typical load ~140-170A (well within 300A PMU capacity)
+**Load:** With the radiator fan, iBooster, and TCU relocated to the START+ Forward Bus, PMU peak drops to ~145A theoretical (all radios transmitting), ~85-115A typical continuous — comfortably within the 300A PMU capacity, with 10 of 24 outputs now free.
 
 **Mounting:** Engine bay, accessible for LED diagnostics and USB configuration
 
@@ -80,6 +80,7 @@ tags:
 [pmu-outputs]: 03-pmu-outputs.md
 [pmu-programming]: 04-pmu-programming.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
+[start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
 [wire-distance]: ../01-power-generation/05-wire-distance-reference.md
 [ecumaster-pmu24]: https://www.ecumaster.com/products/pmu24/
 [pmu-manual]: https://www.ecumaster.com/files/PMU/PMU_Manual.pdf

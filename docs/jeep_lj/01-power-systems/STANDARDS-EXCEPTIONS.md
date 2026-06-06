@@ -413,6 +413,30 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 ---
 
+## START+ Forward Distribution Bus - Bus Bar Between Battery and Loads
+
+**Components:** START+ Forward Distribution Bus (engine bay) feeding the relocated radiator fan, iBooster, and TCU
+
+**Decision:** A single 150A master-protected 2 AWG feed runs from the START battery to an engine-bay busbar that fans out to three load breakers — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
+
+### Engineering Rationale
+
+- The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
+- Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
+- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
+- The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
+
+### Review Guidance
+
+**This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. See {{ tbd(135) }} for final busbar/breaker selection.
+
+**Documentation References:**
+
+- [START Battery Distribution][starter-battery-distribution] - Forward bus feed and load table
+- [START Battery Circuit Breakers][starter-cbs] - Master + load breakers
+
+---
+
 ## SwitchPros & SafetyHub - CB Sized for Device Capacity
 
 **Components:** SwitchPros RCR-Force 12, Blue Sea SafetyHub 150
@@ -544,6 +568,7 @@ Before flagging as issues, verify these intentional design choices:
 - [ ] **Grid Heater:** Direct battery connection with fusible link (brief high current)
 - [ ] **Alternator:** No CB on output (standard automotive practice)
 - [ ] **BCDC:** CB at battery terminal (no CB at BCDC end required)
+- [ ] **START+ Forward Bus:** 150A master + forward busbar between battery and fan/iBooster/TCU (intentional, mirrors AUX CONSTANT bus)
 - [ ] **SwitchPros/SafetyHub:** 150A CB with 2 AWG wire (actual loads 82-100A, within 130A wire rating)
 
 **If any of these are flagged as "missing protection" or "safety issues" in future reviews, refer to this document for complete justification.**

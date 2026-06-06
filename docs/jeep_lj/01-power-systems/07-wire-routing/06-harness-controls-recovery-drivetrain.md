@@ -130,7 +130,7 @@ See [Transmission][transmission] for shifter and TCU specs.
 
 | Wire | Gauge | Color | Function | Source | Destination |
 |:-----|:-----:|:-----:|:---------|:-------|:------------|
-| TCU power feed | 14 AWG | Red | PMU OUT16 (CONSTANT, 15A) → TCU power input | PMU OUT16 (engine bay) | TCU power terminal |
+| TCU power feed | 12 AWG | Red | START+ Forward Dist Bus (25A CB, CONSTANT, 15A) → TCU power input | START+ Forward Dist Bus (engine bay) | TCU power terminal |
 | J1939 CAN High | Twisted pair | Twisted pair (CAN) | Shared J1939 bus tap (same tap as PMU, Dakota Digital BIM-01-2) | CAN bus tap point | TCU CAN-H |
 | J1939 CAN Low | Twisted pair (paired with CAN High) | Twisted pair (CAN) | Shared J1939 bus tap | CAN bus tap point | TCU CAN-L |
 | Aux out (Reverse) | 18 AWG | Builder's choice | TCU aux output: 12V when shifter in R → PMU In 3 (drives PMU OUT22 reverse lights) | TCU aux Reverse pin | PMU In 3 |

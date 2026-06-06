@@ -91,7 +91,7 @@ tags:
 
 | Circuit            | Wire Gauge | Source   | Destination                  | Notes                           |
 | :----------------- | :--------- | :------- | :--------------------------- | :------------------------------ |
-| TCU Power          | 14 AWG     | PMU OUT16 | Turbolamik harness (1.8m)   | 15A, CONSTANT (must stay on)    |
+| TCU Power          | 12 AWG     | [START+ Forward Dist Bus][start-fwd-bus] (25A CB) | Turbolamik harness (1.8m)   | 15A, CONSTANT (must stay on); relocated off PMU OUT16 |
 | TCU Ignition       | 18 AWG     | Ignition bus | Turbolamik harness        | Wake-up signal                  |
 | TCU Ground         | 14 AWG     | Engine bay ground bus | Turbolamik harness | 700mm lead from harness         |
 
@@ -196,7 +196,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 
 - [ ] Order Turbolamik TCU 2.0 with basic wiring harness
 - [ ] Install Turbolamik TCU on 8HP70 mechatronic (soldering required)
-- [ ] Route TCU power from PMU OUT16 (14 AWG, CONSTANT)
+- [ ] Route TCU power from START+ Forward Distribution Bus (12 AWG, 25A CB, CONSTANT)
 - [ ] Connect TCU CAN to J1939 bus (same tap as PMU/Dakota Digital)
 - [ ] Install Kilduff shifter in center console
 - [ ] Wire drive mode rocker switch (dash panel) to TCU mode inputs
@@ -211,6 +211,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 - [Cummins R2.8][engine] - Engine CAN integration
 
 [transfer-case]: 02-transfer-case.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [engine]: ../02-engine-systems/index.md
 [starter]: ../02-engine-systems/01-starter.md

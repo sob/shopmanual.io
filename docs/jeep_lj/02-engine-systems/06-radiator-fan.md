@@ -22,44 +22,50 @@ tags:
 
 **Mounting:** Radiator shroud
 
-**Power Source:** PMU OUT2+3+4 combined (75A capacity)
+**Power Source:** [START+ Forward Distribution Bus][start-fwd-bus] (60A CB) — relocated off the PMU
+
+**Speed Control:** Dedicated brushless-fan controller + own coolant sensor ({{ tbd(134) }}) — independent of PMU/J1939
 
 ///
 
 ## Overview
 
-Brushless PWM electric fan with automatic temperature control via PMU24. J1939 CAN bus coolant temp (SPN 110) drives PMU PWM output.
+Brushless PWM electric fan. Power is START-direct (off the PMU); variable speed is set by a dedicated brushless-fan controller reading its own coolant temperature sensor — independent of the PMU and the J1939 bus. The controller commands **full speed on lost/invalid sensor signal**, so a CAN or PMU fault can no longer leave the engine without cooling.
 
 ## Specifications
 
 - **Current:** 53A @ full speed, 32A @ 60%, 16A @ 30% — ⚠️ unverified[^fan-specs]
 - **Airflow:** 4188 CFM installed, 5690 CFM free air — ⚠️ unverified[^fan-specs]
 
-[^fan-specs]: ⚠️ UNVERIFIED. Neither GM nor ACDelco publishes a current-draw or CFM figure for fan 84100128 (now superseded by 84790788), so the 53A / 4188 CFM values could not be confirmed against a manufacturer source (checked 2026-05-30). These drive PMU output sizing (OUT2+3+4) and wire gauge — confirm by clamp-meter measurement on the actual fan before finalizing, or treat as an engineering estimate.
+[^fan-specs]: ⚠️ UNVERIFIED. Neither GM nor ACDelco publishes a current-draw or CFM figure for fan 84100128 (now superseded by 84790788), so the 53A / 4188 CFM values could not be confirmed against a manufacturer source (checked 2026-05-30). These drive the 60A breaker / 4 AWG wire sizing and fan-controller selection ({{ tbd(134) }}) — confirm by clamp-meter measurement on the actual fan before finalizing, or treat as an engineering estimate.
 
 ## Temperature Control
 
-| Coolant Temp | Fan Speed    | PMU Duty Cycle | Current |
-| :----------- | :----------- | :------------- | :------ |
-| <185°F       | OFF          | 100%           | 0A      |
-| 185-195°F    | Low (30%)    | 70%            | ~16A    |
-| 195-205°F    | Medium (60%) | 40%            | ~32A    |
-| ≥205°F       | Full (100%)  | 10%            | 53A     |
+The dedicated fan controller maps coolant temp to fan speed (target curve below; exact setpoints tunable on the chosen controller, {{ tbd(134) }}):
+
+| Coolant Temp | Fan Speed       | PWM Duty Cycle | Current |
+| :----------- | :-------------- | :------------- | :------ |
+| <185°F       | OFF             | 100%           | 0A      |
+| 185-195°F    | Low (30%)       | 70%            | ~16A    |
+| 195-205°F    | Medium (60%)    | 40%            | ~32A    |
+| ≥205°F       | Full (100%)     | 10%            | 53A     |
+| sensor fault | **Full (100%)** | failsafe       | 53A     |
 
 !!! warning "Inverted Duty Cycle"
-GM brushless fans use **inverted duty cycle** - high duty cycle = low fan speed. PMU programming must account for this inversion.
+    GM brushless fans use **inverted duty cycle** — high duty cycle = low fan speed. The controller's PWM output must account for this inversion.
 
 ## Wiring
 
-| Circuit              | Wire Gauge | Source               | Destination     | Notes                          |
-| :------------------- | :--------- | :------------------- | :-------------- | :----------------------------- |
-| Fan Power (PMU side) | 12 AWG × 3 | PMU OUT2, OUT3, OUT4 | Splice near PMU | PMU 2.8mm terminals max 12 AWG |
-| Fan Power (load side)| 4 AWG      | Splice               | Fan motor (+)   | ~6 ft, ~1.2% drop @ 53A        |
-| Fan Ground           | 4 AWG      | Fan motor (-)        | Engine Bay Bus  | Short run                      |
+| Circuit             | Wire Gauge     | Source                                   | Destination         | Notes                                |
+| :------------------ | :------------- | :--------------------------------------- | :------------------ | :----------------------------------- |
+| Fan Power           | 4 AWG          | [START+ Forward Dist Bus][start-fwd-bus] (60A CB) → relay | Fan motor (+)       | Relay enabled by the fan controller  |
+| Fan PWM Signal      | 18 AWG         | Fan controller PWM output                | Fan control input   | Low-current speed signal (inverted)  |
+| Fan Ground          | 4 AWG          | Fan motor (−)                            | Engine Bay Bus      | Short run                            |
+| Controller / sensor | per controller | {{ tbd(134) }}                           | Coolant temp sensor | Sensor + sender-port location {{ tbd(134) }} |
 
-**Wire Transition:** PMU terminals accept max 12 AWG. Three 12 AWG wires from OUT2, OUT3, and OUT4 splice into a single 4 AWG wire **near the PMU** (not the fan) to minimize voltage drop - 4 AWG for the long run is better than 3× 12 AWG in parallel.
+Power is switched by a relay (or the controller's integral power stage) at the engine-bay Forward Distribution Bus; the controller sets fan speed via the PWM signal. No PMU outputs are involved.
 
-See [PMU Outputs][pmu-outputs] for complete configuration and [PMU Programming][pmu-programming] for control logic.
+See [START Battery Distribution][start-fwd-bus] for the forward-bus feed and breaker.
 
 ## Outstanding Items
 
@@ -67,12 +73,10 @@ See [PMU Outputs][pmu-outputs] for complete configuration and [PMU Programming][
 
 ## Related Documentation
 
-- [PMU Outputs][pmu-outputs] - OUT2+3+4 configuration
-- [PMU Programming][pmu-programming] - PWM control logic
+- [START+ Forward Distribution Bus][start-fwd-bus] - Power feed + 60A breaker
 - [Engine Bay Ground Bus][ground-bus] - Fan ground connection
 
 [gm-fan]: https://www.gmpartsdirect.com/oem-parts/gm-fan-84100128
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
-[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
-[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md

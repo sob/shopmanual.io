@@ -33,7 +33,7 @@ tags:
 
 **Mounting:** Direct firewall mount via booster's integral 4-stud flange (60×80mm M8, **80mm oriented vertical**) + SendCutSend cabin-side backing plate
 
-**Power Source:** PMU OUT1+10 (40A main), OUT19 (5A ignition signal)
+**Power Source:** [START+ Forward Distribution Bus][start-fwd-bus] (50A CB, 40A main) — relocated off the PMU; ignition **enable** from [Ignition Signal bus][ignition-signal] (~5A)
 
 **Wiring Harness:** {{ tbd(105) }} - [Tulay's Gen 2][tulays-harness] vs [EVcreate Gen 2 kit][evcreate-donors]
 
@@ -118,16 +118,15 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 
 ## Wiring
 
-| Circuit                | Wire Gauge | Source          | Destination             | Notes                          |
-| :--------------------- | :--------- | :-------------- | :---------------------- | :----------------------------- |
-| Main Power (PMU side)  | 12 AWG × 2 | PMU OUT1, OUT10 | Splice near PMU         | PMU 2.8mm terminals max 12 AWG |
-| Main Power (load side) | 10 AWG     | Splice          | iBooster main connector | CONSTANT (safety requirement)  |
-| Ignition Signal        | 20 AWG     | PMU OUT19       | iBooster ignition input | SWITCHED (ignition RUN)        |
-| Ground                 | 10 AWG     | iBooster ground | Engine Bay Bus Stud 7   | Same stud as main power ground |
+| Circuit         | Wire Gauge | Source                               | Destination             | Notes                                                       |
+| :-------------- | :--------- | :----------------------------------- | :---------------------- | :---------------------------------------------------------- |
+| Main Power      | 8 AWG      | [START+ Forward Dist Bus][start-fwd-bus] (50A CB) | iBooster main connector | CONSTANT (safety requirement); START-direct, off the PMU    |
+| Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | SWITCHED (ignition RUN); ~5A; own firewall pin              |
+| Ground          | 10 AWG     | iBooster ground                      | Engine Bay Bus Stud 7   | Dedicated/redundant ground recommended (a bad ground disables assist) |
 
-**Wire Transition:** PMU terminals accept max 12 AWG. Two 12 AWG wires from OUT1 and OUT10 splice into a single 10 AWG wire **near the PMU** to minimize voltage drop.
+**Relocated off the PMU:** Main power now comes from the [START+ Forward Distribution Bus][start-fwd-bus] (50A CB) instead of PMU OUT1+10, and the ignition enable from the [Ignition Signal bus][ignition-signal] instead of OUT19 — removing the brake booster's dependency on the PMU module. The booster retains its mechanical push-through, so a power loss is a hard pedal, not zero brakes.
 
-See [PMU Outputs][pmu-outputs] for complete PMU configuration and thermal analysis.
+See [START Battery Distribution][start-fwd-bus] for the forward-bus feed and breaker specs.
 
 ## Firewall Backing Plate
 
@@ -276,7 +275,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 ## Related Documentation
 
-- [PMU Outputs][pmu-outputs] - OUT1+10 and OUT19 configuration
+- [START+ Forward Distribution Bus][start-fwd-bus] - Main power feed + 50A breaker
+- [Ignition Signal Distribution][ignition-signal] - Ignition enable source
 - [Engine Bay Ground Bus][ground-bus] - Stud 7 ground connection
 - [Firewall Ingress][firewall-ingress] - Mounting and wire routing
 
@@ -293,6 +293,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [^body-neck]: ~62mm body-neck (firewall pass-through), corroborated by Back Bay Customs (vendor, 2026-05-30) and Gen 2 Accord iBooster retrofit measurements ([retrofit community](https://nastyz28.com/threads/ibooster-retrofit.343058/) / [EVcreate](https://www.evcreate.com/installing-the-ibooster/): 62mm center bore, ~6mm protrusion). Honda publishes no figure — measured, not datasheet. Confirm on the donor before the final firewall cut: the backing-plate bore is 64mm, ~2mm radial clearance over a 62mm neck. Checked 2026-05-30.
 
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
+[ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [ground-bus]: ../01-power-systems/05-grounding/01-engine-bay-ground-bus.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [tail-brake]: ../03-lighting-systems/04-tail-brake-reverse.md

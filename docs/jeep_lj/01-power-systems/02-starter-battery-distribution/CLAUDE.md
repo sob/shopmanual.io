@@ -19,11 +19,11 @@ Documents START battery power distribution from the driver rear wheel well (Odys
 
 ### `01-circuit-breakers.md` - Circuit Breakers
 
-**Contains:** All START battery circuit breaker specifications and ratings (250A → PMU, 80A → BCDC input)
+**Contains:** All START battery circuit breaker specifications and ratings (250A → PMU, 80A → BCDC input, 150A master → START+ Forward Distribution Bus, plus forward-bus load CBs 60A/50A/25A for fan/iBooster/TCU)
 
-**Use when:** Finding circuit breaker size for PMU, BCDC, or other loads
+**Use when:** Finding circuit breaker size for PMU, BCDC, the forward bus, or other loads
 
-Note: The START battery has no CONSTANT bus. All loads connect via inline CBs at the battery (within 7" per code) or direct (ECM, grid heater via integrated fusible link).
+Note: Most START loads connect via inline CBs at the battery (within 7" per code) or direct (ECM, grid heater via integrated fusible link). The radiator fan, iBooster, and TCU were relocated off the PMU onto a **START+ Forward Distribution Bus** (engine bay), fed by a single 150A master CB at the battery — see `index.md#start-forward-bus` and STANDARDS-EXCEPTIONS.md.
 
 ## Cross-Section References
 
