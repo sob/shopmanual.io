@@ -1,3 +1,8 @@
+---
+search:
+  exclude: true
+---
+
 # Dakota Digital HDX Gauge System - Navigation Guide
 
 ## What's Here

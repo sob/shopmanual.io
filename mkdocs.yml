@@ -111,7 +111,6 @@ nav:
     - TBD Tracker: jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
-      - Standards Exceptions: jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
       - 1.1 - Power Generation:
         - jeep_lj/01-power-systems/01-power-generation/index.md
         - 1.1.1 - Batteries: jeep_lj/01-power-systems/01-power-generation/01-batteries.md
@@ -153,6 +152,7 @@ nav:
         - 1.8.1 - Scenarios: jeep_lj/01-power-systems/08-load-analysis/01-scenarios.md
         - 1.8.2 - START Battery: jeep_lj/01-power-systems/08-load-analysis/02-start-battery.md
         - 1.8.3 - AUX Battery: jeep_lj/01-power-systems/08-load-analysis/03-aux-battery.md
+      - 1.9 - Standards Exceptions: jeep_lj/01-power-systems/STANDARDS-EXCEPTIONS.md
     - Critical Systems:
       - jeep_lj/02-engine-systems/index.md
       - 2.1 - Starter System: jeep_lj/02-engine-systems/01-starter.md

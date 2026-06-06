@@ -21,7 +21,7 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 
 **Type:** Self-contained RFID push-button start/stop; onboard 60A relays (IGN, START, ACC1, ACC2)
 
-**Mounting:** Cabin, under dash (vendor mandate: not in engine bay)
+**Mounting:** On the Dakota Digital HDPE panel under the dash, co-located with the HDX control module (vendor mandate: cabin only, never engine bay)
 
 **Product Page:** [Digital Guard Dawg PBS-I][pbs-i]
 
@@ -43,7 +43,7 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 | Auto-arm | 60 sec after fob leaves range |
 | Module Dimensions | ~5.5" × 3" × 1.25" |
 | Wiring | Heavy-duty Molex high-current connectors, 12 GA bus wiring |
-| Mounting | **Cabin, under dash** (vendor mandate: do NOT mount in engine bay) |
+| Mounting | **Dakota Digital HDPE panel, under dash** — co-located with the HDX control module (shares the ECM Pin 35 WAIT tap; panel detailed in the [HDX Control][hdx-control] plan). Vendor mandate: cabin only, never engine bay |
 | Kit Contents | ICM + 2 iTag fobs + Start Button (36" pre-wired harness) + Programming Button + Bypass Card + 4-digit PIN |
 
 ### WAIT-gate Relay
@@ -113,7 +113,7 @@ Unchanged from existing starter design. See [Starter System][starter].
 
 | Connector | Connection | Notes |
 | :-------- | :--------- | :---- |
-| Start Button | Pre-wired 36" harness → PBS-I side port | Dash mount; included in kit |
+| Start Button | Pre-wired 36" harness → PBS-I side port | Mounts at the factory keyswitch location on the dash (within the 36" harness reach of the panel); included in kit |
 | Programming Button | Pre-wired harness → PBS-I side port | Stash under dash or in trunk; needed only for fob-learn and emergency bypass PIN entry |
 
 ### WAIT-Gate Relay
@@ -153,16 +153,6 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 ## Outstanding Items
 
 {{ tbds() }}
-
-## Build Tasks
-
-- [ ] Confirm the WAIT-gate relay coil (~150 mA) in parallel with the dash WAIT lamp does not exceed the ECM lamp-driver sink rating (Pin 35 polarity itself is confirmed active-low per Cummins 5504137 — see [^wait-polarity]). If marginal, drive the relay from the lamp's keyswitch side or use a higher-impedance/solid-state relay
-- [ ] Order Digital Guard Dawg PBS-I kit (includes ICM, 2 fobs, Start Button, Programming Button, Bypass Card, harnesses)
-- [ ] Add 5A inline fuse on the ignition (keyswitch) feed to ECM Pin 41 — pink wire, per Cummins 5504137 (see [^ecm-fuse])
-- [ ] Select PBS-I module mounting location (cabin under-dash, away from heat and water)
-- [ ] Select Start Button dash mounting position (within easy reach of driver)
-- [ ] Select Programming Button storage location (hidden but accessible)
-- [ ] Verify PBS-I quiescent current draw to add to START battery parasitic budget
 
 ## Related Documentation
 

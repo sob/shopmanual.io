@@ -47,13 +47,15 @@ Wire gauges optimized for performance at measured routing distances:
 | **PMU24 Power Feed**           | 7 ft                          | 2/0 AWG    | 220A                    | 2.40% @ 60°C                     | Direct connection via 250A CB - upgraded from 1/0 AWG     |
 | **Starter Motor**              | 6 ft                          | 2/0 AWG    | 400-600A                | <3% @ 20°C                       | Brief cranking load - minimal temp effect                 |
 | **BCDC Inter-Battery**         | 5-6 ft                        | 4 AWG      | 50A                     | 0.94% @ 20°C                     | Rear wheel well to rear wheel well (H3 cross-cab, see [Wire Routing][wire-routing]) |
-| **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 400A peak | 6.3% @ 250A, 10.1% @ 400A @ 20°C | Passenger rear wheel well to front bumper routing — see {{ tbd(106) }} and [Wire Routing][wire-routing] |
+| **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 409A peak | 4.9% @ 250A, 7.9% @ 409A @ 13.8V[^winch-vdrop] | Passenger rear wheel well to front bumper routing — see {{ tbd(106) }} and [Wire Routing][wire-routing] |
 
 **Temperature Derating Notes:**
 
 - Engine bay circuits (alternator, PMU) calculated @ 60°C ambient
 - Wheel well circuits (starter, winch) calculated @ 20°C ambient
-- Voltage drop percentages shown at maximum rated current
+- Voltage drop percentages shown at maximum rated current (winch shown at both typical and peak)
+
+[^winch-vdrop]: 1/0 AWG flexible cable, ~0.103 Ω/1000 ft; **26 ft circuit** (13 ft supply + 13 ft dedicated ground return) = 0.00268 Ω. At **13.8 V** (engine running during winch ops): 250 A → 0.67 V (**4.9%**), 409 A → 1.10 V (**7.9%**). Calculated @ 20°C — winch is a brief peak load (seconds), so no engine-bay temperature derating per build standard. Winch feeders are not held to the 3% rule (brief, intermittent); 1/0 AWG is a deliberate upsize over WARN's 2 AWG service-lead spec — see [Winch][recovery].
 
 ## Measurements Needed
 

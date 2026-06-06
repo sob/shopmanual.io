@@ -31,17 +31,17 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | [Firewall CONSTANT Bus][constant-bus] | Firewall (cabin side, passenger) | 2/0 AWG    | ~13 ft   | ~152A max           | 1.3% @ 20°C     | 300A CB at battery (<7") |
 | [SafetyHub 150][aux-safetyhub]       | Local (rear wheel well)           | 2 AWG      | ~2 ft    | ~100A max           | <0.5% @ 20°C    | 150A CB at battery (<7") |
 | [JL Audio MV800/8i Amp][audio]       | Under rear seat                   | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 20°C    | 100A CB at battery (<7") |
-| [Winch][recovery]                    | Front bumper                      | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9-7.9% @ 20°C | [None][winch-protection] |
+| [Winch][recovery]                    | Front bumper                      | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9% @ 250A / 7.9% @ 409A | [None][winch-protection] |
 
 ## AUX battery Negative Terminal (5 connections)
 
 | Circuit                          | Destination            | Wire Gauge | Distance | Current             | Voltage Drop  |
 | :------------------------------- | :--------------------- | :--------- | :------- | :------------------ | :------------ |
-| Rear Frame Rail                  | Local (chassis)        | 2/0 AWG    | ~3 ft    | 654A peak           | <0.1V @ 20°C  |
+| Rear Frame Rail (chassis bond)   | Local (chassis)        | 2/0 AWG    | ~3 ft    | {{ tbd(124) }}      | <0.1V @ 20°C  |
 | [BCDC Alpha 50][bcdc]            | Local                  | 4 AWG      | Short    | 50A                 | Negligible    |
 | [JL Audio MV800/8i Amp][audio]   | Under rear seat        | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 30°C  |
 | [START Battery][starter-battery] | Driver rear wheel well | 1/0 AWG    | 5-6 ft   | 75A max             | <0.05V @ 20°C |
-| [Winch][recovery]                | Front bumper           | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9-7.9% @ 20°C |
+| [Winch][recovery]                | Front bumper           | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9% @ 250A / 7.9% @ 409A |
 
 ## Related Documentation
 
