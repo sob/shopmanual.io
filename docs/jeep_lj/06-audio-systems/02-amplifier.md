@@ -9,8 +9,6 @@ tags:
 
 # 6.2 Amplifier {#amplifier}
 
-8-channel Class-D marine amplifier with integrated DSP. Each subwoofer runs on its own bridged channel pair @ 4Ω; four remaining channels drive the four cabin speakers.
-
 /// html | div.product-info
 ![JL Audio MV800/8i](../images/jl-audio-mv800-8i.jpg){ loading=lazy }
 

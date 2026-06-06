@@ -42,8 +42,6 @@ tags:
 
 ## Turn Signal and Lighting System Integration
 
-The CT4 provides complete turn signal and headlight control:
-
 ### Turn Signals {#ct4-turn-signals}
 
 - **Front Turn Signals:** Amber LED turn signal lights (dedicated turn signal only)

@@ -37,8 +37,6 @@ tags:
 
 ## Overview
 
-The SwitchPros SP-1200 is the main lighting and accessory controller for the Jeep LJ build. It provides 17 total outputs controlled via a 12-button control panel with Bluetooth app integration.
-
 **Specifications:**
 
 - 150A total capacity on CONSTANT bus
@@ -123,8 +121,6 @@ See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CON
 ## Trigger Input Assignments
 
 ### TRIGGER-1: Door Switches → Dome Lights
-
-Factory door plunger switches retained and wired in parallel to activate dome lights when either door opens.
 
 **Switch Type:** Factory Jeep TJ/LJ door jamb plunger switch (normally open, closes to ground when door opens)
 

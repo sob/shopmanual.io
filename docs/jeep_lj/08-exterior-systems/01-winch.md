@@ -79,8 +79,6 @@ SafetyHub ATC-1 (15A) → Dash Rocker Switch ⟷ Handheld Remote (parallel) → 
                            DOWN = IN             Remote IN button
 ```
 
-**Both controls work simultaneously** - either dash rocker OR remote can trigger winch IN/OUT
-
 ## Wiring
 
 **Main Power Wiring:**
@@ -121,19 +119,6 @@ See [AUX Battery Distribution][aux-battery] for cable specs and routing path.
 - **Securing:** P-clamps every 18" along the chosen path
 - **Grommets:** Rubber grommets with sealant at body penetrations
 - **Heat:** Route away from exhaust components (minimum 6" clearance)
-
-**Winch Mounting:**
-
-- Zeon 10-S fits front bumper (verified compatible)
-- Factory contactor mounted on winch motor housing
-- Ensure contactor is protected from direct water spray
-- Verify all connections are tight and corrosion-free
-
-**Control Switch Location:**
-
-- Dash-mounted center-off momentary rocker switch
-- Easily accessible from driver's seat
-- Clear labeling: UP = OUT, DOWN = IN
 
 ## Safety Considerations
 

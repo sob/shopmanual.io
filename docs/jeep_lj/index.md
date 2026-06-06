@@ -112,31 +112,15 @@ The factory TIPM is replaced with discrete, serviceable modules:
 - **[Communication][communications]:** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
 - **[Recovery & Air][recovery-air]:** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
-## Documentation Notes
-
-!!! info "Outstanding Items"
-    Throughout this documentation, you'll find "Outstanding Items" checklists. These track design decisions, measurements, and tasks that need to be completed during installation.
-
-    **[View Global TBD Tracker][tbd-tracker]** - Centralized tracking of all To-Be-Determined items with priorities
-
-!!! warning "Work in Progress"
-    This is a living document that evolves as the build progresses. Some specifications may be marked as TBD (To Be Determined) and will be updated during the build process.
+**[TBD Tracker][tbd-tracker]** — Open items and unresolved specs.
 
 ## Print / Download
 
-Need a physical copy for the shop? Use the print page which combines all documentation into a single printable page optimized for 3-ring binder formatting (US Letter, duplex, with binding margins).
+Print page combines all docs into a single binder-ready page (US Letter, duplex, binding margins).
 
 <div class="print-hide" markdown="1">
 
-**[Open Print Page](/print_page/){target="_blank"}** - All Jeep LJ docs on one page
-
-**To print or save as PDF:**
-
-1. Click the Print Page link above
-2. Wait for the page to fully load
-3. Use your browser's print function (Ctrl+P / Cmd+P)
-4. Select "Save as PDF" or your printer
-5. For duplex printing, select "Print on both sides" with "Flip on long edge"
+**[Open Print Page](/print_page/){target="_blank"}**
 
 </div>
 
