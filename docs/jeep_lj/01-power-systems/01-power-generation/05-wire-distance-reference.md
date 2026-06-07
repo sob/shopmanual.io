@@ -48,6 +48,7 @@ Wire gauges optimized for performance at measured routing distances:
 | **Starter Motor**              | 6 ft                          | 2/0 AWG    | 400-600A                | <3% @ 20°C                       | Brief cranking load - minimal temp effect                 |
 | **BCDC Inter-Battery**         | 5-6 ft                        | 4 AWG      | 50A                     | 0.94% @ 20°C                     | Rear wheel well to rear wheel well (H3 cross-cab, see [Wire Routing][wire-routing]) |
 | **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 409A peak | 4.9% @ 250A, 7.9% @ 409A @ 13.8V[^winch-vdrop] | Passenger rear wheel well to front bumper routing — see {{ tbd(106) }} and [Wire Routing][wire-routing] |
+| **START+ Fwd Bus master feed** | ~8 ft ({{ tbd(136) }})        | 2 AWG      | ~108A peak / ~68A cont  | 1.3% @ 60°C                                    | Single feed to engine-bay busbar; relocated fan/iBooster/TCU fan out on short load runs |
 
 **Temperature Derating Notes:**
 

@@ -125,6 +125,10 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Item | Quantity | Est. Price | Priority | Notes |
 |:-----|:--------:|:-----------|:---------|:------|
 | Bussmann LR-2 Body PDU | 1 | ~$50-100 | Medium | eBay surplus - [BODY PDU][body-pdu] |
+| START+ Forward Distribution Busbar (Blue Sea 2105) | 1 | ~$40 | High | Engine-bay START+ fan-out for relocated fan/iBooster/TCU — {{ tbd(135) }} - [START Distribution][start-fwd-bus] |
+| Circuit breakers — 150A master + 60A / 50A / 25A (Mechanical Products S17) | 4 | ~$120 | High | Forward-bus master + fan/iBooster/TCU load CBs — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
+| Brushless fan controller + coolant temp sensor | 1 | ~$80-150 | High | Dedicated PWM controller w/ own sensor, fail-to-full-speed — {{ tbd(134) }} - [Radiator Fan][radiator-fan] |
+| Fan power relay (continuous-duty) | 1 | ~$20 | High | Switches fan power at the forward bus - [Radiator Fan][radiator-fan] |
 
 ---
 
@@ -237,6 +241,9 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
+[start-cbs]: ../01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
+[radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [tbd-tracker]: ../tbd-tracker.md
 [bd-site]: https://www.bajadesigns.com/

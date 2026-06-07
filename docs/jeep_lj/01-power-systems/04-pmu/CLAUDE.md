@@ -45,7 +45,7 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 **To START battery (1.2):** PMU power source via circuit breaker
 
-**To Engine Systems (2):** Radiator fan, HVAC blower, starter relay, wipers, horn
+**To Engine Systems (2):** HVAC blower, wipers, horn (radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus — no longer PMU)
 
 **To Lighting (3):** DRL, brake lights, reverse lights
 

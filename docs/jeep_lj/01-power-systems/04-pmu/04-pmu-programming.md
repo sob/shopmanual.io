@@ -49,23 +49,9 @@ ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
 
 10°F hysteresis prevents rapid cycling. Uses J1939 coolant temperature from ECM (SPN 110) as proxy for PS fluid temp.
 
-### Radiator Fan PWM Control (Output 2+3+4) - Variable Speed
+### Radiator Fan Control — relocated off the PMU
 
-```text
-// Temperature-based PWM curve for variable speed control
-IF (J1939_SPN110_CoolantTemp < 185°F) THEN Out234_RadiatorFan_PWM = 0%      // Fan OFF
-ELSEIF (J1939_SPN110_CoolantTemp < 195°F) THEN Out234_RadiatorFan_PWM = 30%  // Low speed
-ELSEIF (J1939_SPN110_CoolantTemp < 205°F) THEN Out234_RadiatorFan_PWM = 60%  // Medium speed
-ELSEIF (J1939_SPN110_CoolantTemp >= 205°F) THEN Out234_RadiatorFan_PWM = 100% // Full speed
-```
-
-**Benefits:**
-
-- **Variable speed:** 30% = ~16A, 60% = ~32A, 100% = 53A - reduces average electrical load
-- **PWM frequency:** 100-400 Hz (PMU supports 4-400 Hz on 25A outputs)
-- **Temperature source:** J1939 SPN 110 (coolant temp) - same as PS fan
-- **Quieter operation:** Low speed sufficient for highway cruising
-**Replaces:** Dakota Digital PAC-2800BT controller, BIM-01-2 adapter (for fan), external relay, 100A circuit breaker
+The radiator fan no longer runs on PMU outputs. It is powered START-direct from the [START+ Forward Distribution Bus][start-fwd-bus] and speed-controlled by a dedicated brushless-fan controller with its own coolant sensor, independent of the PMU and J1939 — see [Radiator Fan][radiator-fan]. The controller commands **full speed on lost/invalid sensor signal** (the former PMU/CAN PWM path defaulted the fan OFF on lost coolant-temp data — the failure mode this relocation closes).
 
 ### Sequential Load Startup
 
@@ -149,4 +135,6 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [pmu-outputs]: 03-pmu-outputs.md
 [arb-load-shedding]: 05-pmu-arb-load-shedding.md
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
+[start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
+[radiator-fan]: ../../02-engine-systems/06-radiator-fan.md
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md

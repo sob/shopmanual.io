@@ -61,9 +61,9 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 - [ ] Confirm flexlines installed: reservoir → MC
 - [ ] Confirm brake hardlines routed from MC to front/rear brakes
 - [ ] Confirm iBooster wiring harness connected ({{ tbd(105) }}: Tulay's or EVcreate)
-- [ ] Confirm iBooster main power connected (PMU OUT1+10)
-- [ ] Confirm iBooster ignition signal connected (PMU OUT19)
-- [ ] Confirm iBooster ground connected to engine bay ground bus
+- [ ] Confirm iBooster main power connected (START+ Forward Dist Bus, 50A CB)
+- [ ] Confirm iBooster ignition enable connected (Ignition bus Term 5, 7.5A fuse, firewall Pin 18)
+- [ ] Confirm iBooster ground connected to engine bay ground bus (dedicated/redundant ground recommended)
 - [ ] Bleed brake system; verify no leaks
 
 ---
@@ -100,9 +100,10 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 ## Phase 6: Radiator Fan
 
 - [ ] Confirm GM 84100128 fan mounted to radiator shroud
-- [ ] Confirm PMU OUT2+3+4 → fan motor
+- [ ] Confirm START+ Forward Dist Bus (60A CB) → relay → fan power
+- [ ] Confirm dedicated fan controller + coolant sensor installed ({{ tbd(134) }})
 - [ ] Confirm fan ground connected to engine bay ground bus
-- [ ] Confirm PMU programmed with temperature-based PWM control
+- [ ] Confirm fan controller fails to full speed on lost sensor signal
 
 ---
 
