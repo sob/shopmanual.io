@@ -30,7 +30,7 @@ tags:
 
 ## Overview
 
-Brushless PWM electric fan. Power is START-direct (off the PMU); variable speed is set by a **Lingenfelter VSFM-002** controller reading its own coolant temperature sensor (RTD/thermistor) — independent of the PMU and the J1939 bus.[^vsfm002] The VSFM-002 generates the fan's PWM speed signal (~0.75A); the heavy motor current comes from the forward bus. It must be configured (and confirmed) to command **full speed on lost/invalid sensor signal** ({{ tbd(134) }}), closing the prior "fan defaults OFF on CAN loss" failure mode so a CAN or PMU fault cannot leave the engine without cooling.
+The VSFM-002 must be configured (and confirmed) to command **full speed on lost/invalid sensor signal** ({{ tbd(134) }}), closing the prior "fan defaults OFF on CAN loss" failure mode so a CAN or PMU fault cannot leave the engine without cooling.
 
 ## Specifications
 
@@ -64,8 +64,6 @@ The VSFM-002 maps coolant temp to fan speed (target curve below; exact setpoints
 | Fan PWM Signal      | 18 AWG         | VSFM-002 PWM output (~0.75A)              | Fan control input   | Low-current speed signal (inverted)  |
 | Fan Ground          | 4 AWG          | Fan motor (−)                            | Engine Bay Bus      | Short run                            |
 | VSFM-002 + sensor   | per controller | START (ignition) / coolant RTD           | VSFM-002 + temp sensor | Controller = VSFM-002; sensor P/N + sender-port location {{ tbd(134) }} |
-
-Power is switched by a relay (or the controller's integral power stage) at the engine-bay Forward Distribution Bus; the controller sets fan speed via the PWM signal. No PMU outputs are involved.
 
 See [START Battery Distribution][start-fwd-bus] for the forward-bus feed and breaker.
 
