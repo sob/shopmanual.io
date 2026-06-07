@@ -27,7 +27,7 @@ import urllib.request
 DEFAULT_ROOT = "docs/jeep_lj"
 # Last-resort fallback for local runs only; CI/runtime resolves the repo from
 # $GITHUB_REPOSITORY (see main()), so a GitHub rename needs no edit here.
-DEFAULT_REPO = "sob/drawings"
+DEFAULT_REPO = "sob/shopmanual.io"
 REQUIRED_FACETS = ("tbd", "project/", "priority/", "area/")
 
 # Files within the doc root that intentionally talk *about* TBD tracking

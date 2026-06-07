@@ -335,7 +335,7 @@ def define_env(env):
                         f'<a href="{html.escape(it["url"])}" target="_blank" '
                         f'rel="noopener" title="Closed issue #{n}">#{n}</a>')
         # Not found in either list
-        repo = _repo_slug() or "sob/drawings"
+        repo = _repo_slug() or "sob/shopmanual.io"
         return (f'<a href="https://github.com/{repo}/issues/{n}" '
                 f'target="_blank" rel="noopener" '
                 f'title="Issue not found in tbd-labeled list">⚠️ {html.escape(label)} #{n}</a>')
