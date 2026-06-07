@@ -92,8 +92,6 @@ G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (STAR
 **Design Notes:**
 
 - **High-side switching:** BODY PDU switches positive power to loads; load current returns through each load's own ground wire, NOT through the PDU. The PDU ground connection (~3A) is only for relay coils and internal logic.
-- Heated seat current: 5A peak, 2A sustained per seat (verified with vendor)
-- Military relays K21/K22 provide fault isolation and independent operation
 - J301-J306 connectors require custom harness fabrication
 
 [^lr2-relay]: The Bussmann **LR-2** is the panel; **`301-1C-C-R1`** is the **Song Chuan** ISO 280 (2.8 mm) relay that populates it, voltage-coded by suffix — **U01 = 12 V, U02 = 24 V**. K40/K42/K53 ship with 24 V (U02); the 12 V drop-in is the same relay in **U01** trim (`301-1C-C-R1-U01-12VDC` — SPDT, 35 A, ISO 280, resistor-suppressed). Sources: [ProWire 301-1C-C-R1-U01-12VDC](https://www.prowireusa.com/301-1C-C-R1-U01-12VDC), [eBay LR-2 listing](https://www.ebay.com/itm/224625878742) (U01/U02 = 12 V/24 V); accessed 2026-06-06.

@@ -20,11 +20,11 @@ tags:
 
 **Power Wire:** 2 AWG, ~2 ft (Firewall CONSTANT Bus to power module — both at firewall cluster)
 
-**Power Module Location:** Firewall (cabin side, passenger area) — co-located with BODY PDU and Firewall CONSTANT Bus. Module is IP67 / 125°C-rated so wheel well placement is also valid, but firewall mounting minimizes total output wire length since most loads are forward/upper (~58% of outputs).
+**Power Module Location:** Firewall (cabin side, passenger area) — co-located with BODY PDU and Firewall CONSTANT Bus; firewall mounting minimizes total output wire length since most loads are forward/upper (~58% of outputs).
 
 **Control Panel Location:** Dash mount (4" L x 3" W x 0.375" H)
 
-**Control Cable:** Standard 5 ft cable (was 10.5 ft when module was rear-mounted — moving to firewall shortens this significantly)
+**Control Cable:** Standard 5 ft cable
 
 **Ground:** 4 AWG to chassis (per manufacturer spec - reference ground only, not load return)
 

@@ -62,7 +62,6 @@ _The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were 
 - **Non-adjacent terminals:** Each rated 23A @ 40°C individually = 46A combined capacity (much better thermal performance)
 - **Brief peak loads:** Thermal derating less critical for loads <5 seconds (e.g., brake booster)
 - **Load balancing:** Avoid placing heavily loaded outputs adjacent to each other - use non-adjacent combining for high-current loads
-- Use proper terminal crimping and wire gauge to maximize current capacity
 
 ## Thermal Analysis
 
@@ -75,8 +74,6 @@ _The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were 
 
 **Installation Notes:**
 
-- PMU thermal protection will shut down overloaded outputs
-- Monitor output temperatures during initial testing (PMU displays thermal status)
 - **Non-adjacent combining recommended** for all high-current loads (>30A) to maximize thermal margin
 - **Continuous loads** (HVAC, fans) require more conservative thermal margins than brief peaks
 
