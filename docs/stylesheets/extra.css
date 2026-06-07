@@ -551,29 +551,11 @@ a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
   color: var(--md-default-fg-color--light);
 }
 
-.sm-section__foot {
-  margin-top: 2rem;
-  text-align: center;
-  color: var(--md-default-fg-color--light);
-  font-size: 0.92rem;
-}
-
 /* Card grids */
 .sm-cards {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-}
-
-.sm-cards--features {
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-}
-
-/* Inline code inside card copy stays subtle and doesn't break the card width */
-.md-typeset .sm-card__desc code {
-  font-size: 0.82em;
-  padding: 0.1em 0.35em;
-  word-break: break-word;
 }
 
 .sm-card {
@@ -596,10 +578,6 @@ a.sm-card:hover {
 
 .sm-card--soon {
   opacity: 0.92;
-}
-
-.sm-card--static {
-  padding: 1.25rem;
 }
 
 .sm-card__icon {
