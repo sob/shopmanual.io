@@ -59,7 +59,9 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 ## H2 — START Engine Bay Trunk {#h2}
 
-**Build:** 3 conductors (all 2/0 AWG) · 6–8 ft per cable · ~1.5" OD black braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
+*Gained a 4th conductor on 2026-06-07 when the radiator fan, iBooster, and TCU were relocated off the PMU onto the [START+ Forward Distribution Bus][start-fwd-bus]. Its 2 AWG master feed runs the same driver-side rear-well → engine-bay path as the existing three cables, so it is fabricated and installed as part of this bundle.*
+
+**Build:** 4 conductors (3× 2/0 AWG + 1× 2 AWG) · 6–8 ft per cable · ~1.6" OD black braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
 
 **Route:** Driver rear wheel well (START battery) → up inside driver rear quarter sill → forward along **inside floor board / side wall** (driver side) → A-pillar area → driver firewall penetration → engine bay
 
@@ -72,20 +74,22 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 | Alternator charging input | 2/0 AWG | Red | Alternator → START battery+ | Lug to battery+ stud | Lug to alternator output stud |
 | Starter motor power | 2/0 AWG | Red | START battery+ → starter | Lug to battery+ stud | Lug to starter B+ stud |
 | PMU24 main feed | 2/0 AWG | Red | START battery+ → 250A CB → PMU24 | Lug to 250A CB output | Lug to PMU power stud |
+| START+ Forward Dist Bus master feed | 2 AWG | Red | START battery+ → 150A master CB → engine-bay busbar (fan / iBooster / TCU) | Lug to 150A CB output | Lug to [START+ Forward Distribution Bus][start-fwd-bus] busbar input stud |
 
 (BCDC input feed (4 AWG via 80A CB) takes the H3 cross-cab path instead — see [H3](#h3).)
 
-**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 3 cables with looms; expect ~1.5" OD final bundle.
+**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 4 cables with looms; expect ~1.6" OD final bundle. The 2 AWG forward-bus feed terminates at the engine-bay busbar, not at a load; the busbar's three short local feeds (fan, iBooster, TCU) are engine-bay-side and are **not** part of this harness — see [START+ Forward Distribution Bus][start-fwd-bus].
 
-**Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.5" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
+**Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.6" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
 
-**Firewall penetration:** Driver-side grommet for high-current cables — separate from the HDP24 (HDP24 is passenger-side, signal-only). Three 2/0 AWG cables need a grommet sized for ~1.5" bundle OD.
+**Firewall penetration:** Driver-side grommet for high-current cables — separate from the HDP24 (HDP24 is passenger-side, signal-only). Four cables (3× 2/0 AWG + 1× 2 AWG) need a grommet sized for ~1.6" bundle OD.
 
 **Notes:**
 
-- All 3 high-current cables share the same driver-side floor / side wall path
+- All 4 high-current cables share the same driver-side floor / side wall path
 - Path is fully inside the body (no exposed frame rail)
 - Driver-side firewall grommet is a new firewall penetration — separate from existing passenger-side HDP24 and SwitchPros bulkheads
+- The 2 AWG forward-bus master feed is the rear-to-front leg only; the engine-bay busbar fan-out to the radiator fan (4 AWG), iBooster (8 AWG), and TCU (12 AWG) lives on the engine-bay side — TCU's leg is harness [H9][controls-build]
 
 ---
 
@@ -137,4 +141,5 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 [firewall-ingress]: 02-firewall-ingress.md
 [aux-battery]: ../03-aux-battery-distribution/index.md
 [start-battery]: ../02-starter-battery-distribution/index.md
+[start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
 [recovery]: ../../08-exterior-systems/01-winch.md
