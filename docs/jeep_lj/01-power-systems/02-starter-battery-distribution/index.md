@@ -50,7 +50,7 @@ The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct
 | [iBooster][brake-booster] main | Firewall | 8 AWG | short | 40A peak / 0.25A idle | <0.5%[^fwd-bus-vdrop] | 50A |
 | [Turbolamik TCU][transmission] | Transmission | 12 AWG | short | 15A continuous | <0.5%[^fwd-bus-vdrop] | 25A |
 
-The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a dedicated brushless-fan controller ({{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
+The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a Lingenfelter VSFM-002 controller (sensor P/N + setpoints {{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
 
 !!! info "Shared forward feed — intentional tradeoff"
     The three loads share one master feed + busbar (a passive cable, breaker, and bus bar — no active electronics), versus three independent runs from the battery. This is the same tradeoff the [AUX side][constant-bus] accepts, and is far more robust than their former shared dependency on the PMU module. Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions].

@@ -51,7 +51,7 @@ ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
 
 ### Radiator Fan Control — relocated off the PMU
 
-The radiator fan no longer runs on PMU outputs. It is powered START-direct from the [START+ Forward Distribution Bus][start-fwd-bus] and speed-controlled by a dedicated brushless-fan controller with its own coolant sensor, independent of the PMU and J1939 — see [Radiator Fan][radiator-fan]. The controller commands **full speed on lost/invalid sensor signal** (the former PMU/CAN PWM path defaulted the fan OFF on lost coolant-temp data — the failure mode this relocation closes).
+The radiator fan no longer runs on PMU outputs. It is powered START-direct from the [START+ Forward Distribution Bus][start-fwd-bus] and speed-controlled by a **Lingenfelter VSFM-002** controller with its own coolant sensor, independent of the PMU and J1939 — see [Radiator Fan][radiator-fan]. The VSFM-002 is to be configured to command **full speed on lost/invalid sensor signal** (the former PMU/CAN PWM path defaulted the fan OFF on lost coolant-temp data — the failure mode this relocation closes).
 
 ### Sequential Load Startup
 

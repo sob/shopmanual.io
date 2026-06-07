@@ -127,7 +127,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Bussmann LR-2 Body PDU | 1 | ~$50-100 | Medium | eBay surplus - [BODY PDU][body-pdu] |
 | START+ Forward Distribution Busbar (Blue Sea 2105) | 1 | ~$40 | High | Engine-bay START+ fan-out for relocated fan/iBooster/TCU — {{ tbd(135) }} - [START Distribution][start-fwd-bus] |
 | Circuit breakers — 150A master + 60A / 50A / 25A (Mechanical Products S17) | 4 | ~$120 | High | Forward-bus master + fan/iBooster/TCU load CBs — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
-| Brushless fan controller + coolant temp sensor | 1 | ~$80-150 | High | Dedicated PWM controller w/ own sensor, fail-to-full-speed — {{ tbd(134) }} - [Radiator Fan][radiator-fan] |
+| Lingenfelter VSFM-002 fan controller + coolant temp sensor | 1 | ~$190 | High | PWM brushless controller w/ own sensor; sensor P/N + fail-to-full-speed confirm — {{ tbd(134) }} - [Radiator Fan][radiator-fan] |
 | Fan power relay (continuous-duty) | 1 | ~$20 | High | Switches fan power at the forward bus - [Radiator Fan][radiator-fan] |
 
 ---

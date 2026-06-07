@@ -30,7 +30,7 @@ All circuits powered by START battery (alternator charging):
 | OUT23            | DRL               |    2.6A |     2.6A | Daytime only           | Auto-off at night     |
 | **Fwd Dist Bus (START-direct)** | |       |          |                        | relocated off the PMU |
 | Fwd Bus          | iBooster main     |   0.25A |      40A | Seconds during braking | Brief peak            |
-| Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Dedicated fan controller |
+| Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Lingenfelter VSFM-002    |
 | Fwd Bus          | Turbolamik TCU    |     15A |      15A | Continuous             | Must stay on          |
 | Ign bus          | iBooster Enable   |      5A |       5A | Continuous             | Ignition-switched     |
 | **BCDC Charger** |                   |         |          |                        |                       |
