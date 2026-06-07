@@ -10,7 +10,7 @@ source TBD markers and open issues stay in sync.
 
 **Search Path:** `docs/jeep_lj/` (exclude `CLAUDE.md`, `tbd-tracker.md`, `.claude/`, `ANALYZE/`)
 
-**Issues:** `gh issue list -R sob/shopmanual.io --label tbd --state open --limit 300 --json number,title,body,labels`
+**Issues:** `gh issue list -R sob/drawings --label tbd --state open --limit 300 --json number,title,body,labels`
 
 ## Checks to Perform
 
@@ -70,14 +70,14 @@ Skip when scanning source:
 
 1. **Open issues** for untracked source TBDs:
    ```bash
-   gh issue create -R sob/shopmanual.io --title "<topic>" \
+   gh issue create -R sob/drawings --title "<topic>" \
      --body "<description>
 
    Source: <path>" \
      --label tbd --label project/jeep-lj --label priority/<level> --label area/<section>
    ```
-2. **Close** issues resolved in source: `gh issue close <n> -R sob/shopmanual.io -c "<resolution>"`
-3. **Fix labels:** `gh issue edit <n> -R sob/shopmanual.io --add-label area/<section>`
+2. **Close** issues resolved in source: `gh issue close <n> -R sob/drawings -c "<resolution>"`
+3. **Fix labels:** `gh issue edit <n> -R sob/drawings --add-label area/<section>`
 
 No markdown table to edit and no counts to update — the tracker page and the
 landing-page blocks refresh from issues on the next build.

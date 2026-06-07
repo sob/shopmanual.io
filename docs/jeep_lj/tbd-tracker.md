@@ -24,7 +24,7 @@ _Live from GitHub issues labeled `tbd`, generated at build time. Filter with Git
 ## Recently Resolved
 
 _Closed `tbd` issues from the last 90 days, rendered live. Full history lives in
-[closed GitHub issues](https://github.com/sob/shopmanual.io/issues?q=is%3Aissue+is%3Aclosed+label%3Atbd)._
+[closed GitHub issues](https://github.com/sob/drawings/issues?q=is%3Aissue+is%3Aclosed+label%3Atbd)._
 
 {{ tbds_resolved(scope='project', since='90d') }}
 
@@ -140,4 +140,4 @@ resolutions appear in the table above (rendered live from closed issues).
 
 [wire-routing]: 01-power-systems/07-wire-routing/index.md
 [section-1-install]: 09-installation/01-power-systems-checklist.md
-[i29]: https://github.com/sob/shopmanual.io/issues/29
+[i29]: https://github.com/sob/drawings/issues/29

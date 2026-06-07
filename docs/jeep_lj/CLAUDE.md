@@ -152,7 +152,7 @@ time — never hand-edit a list of items into it.
 **Create an issue (example):**
 
 ```bash
-gh issue create -R sob/shopmanual.io \
+gh issue create -R sob/drawings \
   --title "Alternator Output Terminal Size" \
   --body "Terminal size for 1/0 AWG lug selection.
 
@@ -167,7 +167,7 @@ Source: docs/jeep_lj/01-power-systems/01-power-generation/02-alternator.md" \
 grep -rn "TBD" docs/jeep_lj --include="*.md" | grep -v "tbd-tracker" | grep -v "PROMPT.md"
 
 # Open TBD issues
-gh issue list -R sob/shopmanual.io --label tbd --state open --limit 200
+gh issue list -R sob/drawings --label tbd --state open --limit 200
 ```
 
 Run `/verify-tbd` to reconcile source TBD markers against open issues, or run

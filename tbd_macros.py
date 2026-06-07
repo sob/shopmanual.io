@@ -54,7 +54,12 @@ def _http_headers():
 
 
 def _repo_slug():
-    """owner/name from mkdocs.yml repo_url (read from disk, engine-independent)."""
+    """owner/name of the repo: $GITHUB_REPOSITORY when set (so it follows the
+    live name across a rename), else mkdocs.yml repo_url (read from disk,
+    engine-independent)."""
+    env_slug = os.environ.get("GITHUB_REPOSITORY")
+    if env_slug:
+        return env_slug
     cfg = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mkdocs.yml")
     try:
         with open(cfg, encoding="utf-8") as fh:
@@ -330,7 +335,7 @@ def define_env(env):
                         f'<a href="{html.escape(it["url"])}" target="_blank" '
                         f'rel="noopener" title="Closed issue #{n}">#{n}</a>')
         # Not found in either list
-        repo = _repo_slug() or "sob/shopmanual.io"
+        repo = _repo_slug() or "sob/drawings"
         return (f'<a href="https://github.com/{repo}/issues/{n}" '
                 f'target="_blank" rel="noopener" '
                 f'title="Issue not found in tbd-labeled list">⚠️ {html.escape(label)} #{n}</a>')
