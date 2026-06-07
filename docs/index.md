@@ -1,45 +1,46 @@
 ---
 hide:
+  - navigation
   - toc
 ---
 
-# Technical Documentation
+<section class="sm-hero">
+  <div class="sm-hero__inner">
+    <p class="sm-hero__eyebrow">Project vehicle build manuals</p>
+    <h1 class="sm-hero__title">Every wire and every part, written down.</h1>
+    <p class="sm-hero__lede">shopmanual.io is a living build manual for my project vehicles — wiring diagrams, part numbers, and the reasoning behind every decision, kept in one searchable place.</p>
+    <p class="sm-hero__actions">
+      <a class="sm-btn sm-btn--primary" href="jeep_lj/">Explore the Jeep LJ build</a>
+      <a class="sm-btn sm-btn--ghost" href="#projects">See all projects</a>
+    </p>
+  </div>
+</section>
 
-Welcome to the technical documentation site for various in-depth projects.
+<section class="sm-mission">
+  <p class="sm-mission__text">Build knowledge has a way of vanishing — buried in forum threads, scribbled on receipts, or living only in your head until the moment you need it. This site is the fix: document it properly, once, and keep it current.</p>
+</section>
 
-## Projects
-
-### [Jeep LJ Cummins R2.8 Build](jeep_lj/index.md)
-
-Comprehensive electrical wiring documentation for a Jeep LJ with Cummins R2.8 Turbo Diesel engine swap, dual battery system, and extensive custom electronics.
-
-**Key Systems:**
-
-- Dual battery system (front/rear split architecture)
-- Complete TIPM replacement with custom RTMRs
-- SwitchPros SP-9100 lighting control
-- SafetyHub advanced safety system
-- Full stereo/communication system (Fusion MS-RA670 head unit, JL Audio MV800/8i amp + speakers, Rugged Radio)
-- ARB Twin Air Compressor
-- Warn 10,000 lb winch
-- Complete lighting package
-
----
-
-## Outstanding Items (all projects)
-
-Live from open GitHub issues labeled `tbd`, across every vehicle. Filter by `project:`, `area:`, `priority:`, or text.
-
-{{ tbds(scope='all', layout='github') }}
-
-## Getting Started
-
-Browse the navigation menu to explore detailed technical documentation for each project.
-
-All documentation is organized by system/zone for easy reference and includes:
-
-- Complete wiring diagrams
-- Parts specifications
-- Installation notes
-- Outstanding items and checklists
-- Power distribution architecture
+<section class="sm-section" id="projects">
+  <h2 class="sm-section__title">In the garage</h2>
+  <p class="sm-section__sub">Pick a build to dive in.</p>
+  <div class="sm-cards sm-cards--projects">
+    <a class="sm-card" href="jeep_lj/">
+      <span class="sm-card__icon">🚙</span>
+      <span class="sm-card__title">Jeep Wrangler LJ</span>
+      <span class="sm-card__desc">A 2006 LJ with a Cummins R2.8 turbo-diesel swap and a ground-up electrical rebuild: dual isolated batteries, programmable power management, keyless start, and a full lighting, audio, and recovery package.</span>
+      <span class="sm-card__cta">Explore the build →</span>
+    </a>
+    <a class="sm-card sm-card--soon" href="nissan_nv/">
+      <span class="sm-card__icon">🚐</span>
+      <span class="sm-card__title">Nissan NV 3500 <span class="sm-card__badge">Coming soon</span></span>
+      <span class="sm-card__desc">A van platform build. Just getting started — check back as the documentation comes together.</span>
+      <span class="sm-card__cta">Project home →</span>
+    </a>
+    <a class="sm-card sm-card--soon" href="jeep_jku/">
+      <span class="sm-card__icon">🚙</span>
+      <span class="sm-card__title">Jeep Wrangler JKU <span class="sm-card__badge">Coming soon</span></span>
+      <span class="sm-card__desc">Early notes and plans. Nothing wired up here yet.</span>
+      <span class="sm-card__cta">Project home →</span>
+    </a>
+  </div>
+</section>

@@ -1,5 +1,5 @@
-site_name: Technical Documentation
-site_description: In-depth technical documentation for various projects
+site_name: shopmanual.io
+site_description: Build manuals for my project vehicles — wiring, parts, and the decisions behind them
 site_author: Sean O'Brien
 
 theme:

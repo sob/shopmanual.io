@@ -420,3 +420,218 @@ a[href^="http"]:not([href*="localhost"]):not([href*="127.0.0.1"])::after {
   margin-top: 1.5rem;
   padding-top: 0.5rem;
 }
+
+/* ==========================================================================
+   LANDING PAGE (home) — hero, mission band, and card sections.
+   Self-contained styles (no dependency on Material grid-card CSS or icon
+   sets) so the home page renders identically under the Zensical build.
+   Markup lives in docs/index.md; the page hides nav + toc in frontmatter.
+   ========================================================================== */
+
+/* Full-bleed bands break out of the content's horizontal inset
+   (.md-content__inner has margin: 0 2rem). Sections center their own inner. */
+
+.sm-hero {
+  margin: -0.8rem -2rem 0;
+  padding: clamp(3.5rem, 9vw, 7rem) 1.5rem clamp(3rem, 7vw, 5rem);
+  text-align: center;
+  background:
+    radial-gradient(55rem 26rem at 50% -20%,
+      rgba(63, 81, 181, 0.22), transparent 70%);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.sm-hero__inner {
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+.sm-hero__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .sm-hero__title {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: none; /* override global uppercase h1 */
+}
+
+.sm-hero__lede {
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--md-default-fg-color--light);
+}
+
+.sm-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Buttons — fully self-styled (no reliance on theme .md-button) */
+.md-typeset .sm-btn {
+  display: inline-block;
+  padding: 0.7rem 1.45rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--md-primary-fg-color);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.08s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.md-typeset .sm-btn--primary {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+
+.md-typeset .sm-btn--primary:hover {
+  box-shadow: 0 6px 18px rgba(63, 81, 181, 0.35);
+  transform: translateY(-1px);
+}
+
+.md-typeset .sm-btn--ghost {
+  background: transparent;
+  color: var(--md-primary-fg-color);
+}
+
+.md-typeset .sm-btn--ghost:hover {
+  background: rgba(63, 81, 181, 0.08);
+}
+
+/* Mission band — opinionated one-liner on a subtle full-width band */
+.sm-mission {
+  margin: 0 -2rem;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+  background: var(--md-default-fg-color--lightest);
+}
+
+.sm-mission__text {
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: clamp(1.15rem, 2.6vw, 1.55rem);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Sections */
+.sm-section {
+  max-width: 62rem;
+  margin: clamp(3rem, 7vw, 4.5rem) auto 0;
+}
+
+.md-typeset .sm-section__title {
+  margin: 0 0 0.4rem;
+  padding: 0;
+  border: none; /* override docs h2 underline */
+  text-align: center;
+  text-transform: none; /* override docs h2 uppercase */
+  letter-spacing: -0.01em;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.sm-section__sub {
+  max-width: 34rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Card grids */
+.sm-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.sm-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.75rem;
+  background: var(--md-default-bg-color);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+a.sm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  border-color: var(--md-primary-fg-color);
+}
+
+.sm-card--soon {
+  opacity: 0.92;
+}
+
+.sm-card__icon {
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.sm-card__title {
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sm-card__desc {
+  flex: 1;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--md-default-fg-color--light);
+}
+
+.sm-card__cta {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+.sm-card__badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 1rem;
+  background: var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+/* Don't append the external-link icon inside hero/card links */
+.sm-hero a::after,
+.sm-card::after,
+.sm-card a::after {
+  content: none !important;
+}
+
+/* Keep the breakout bands from overflowing on very small viewports */
+@media screen and (max-width: 30rem) {
+  .sm-hero,
+  .sm-mission {
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+  }
+}
