@@ -101,9 +101,9 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 - [ ] Confirm GM 84100128 fan mounted to radiator shroud
 - [ ] Confirm START+ Forward Dist Bus (60A CB) → relay → fan power
-- [ ] Confirm dedicated fan controller + coolant sensor installed ({{ tbd(134) }})
+- [ ] Confirm Lingenfelter VSFM-002 + coolant sensor installed (sensor P/N + port {{ tbd(134) }})
 - [ ] Confirm fan ground connected to engine bay ground bus
-- [ ] Confirm fan controller fails to full speed on lost sensor signal
+- [ ] Confirm VSFM-002 commands full speed on lost sensor signal ({{ tbd(134) }})
 
 ---
 

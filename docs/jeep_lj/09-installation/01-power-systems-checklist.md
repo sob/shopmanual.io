@@ -63,7 +63,7 @@ live in the linked source docs, not here.
 - [ ] Confirm Forward Bus → 50A CB → iBooster main
 - [ ] Confirm Forward Bus → 25A CB → Turbolamik TCU power
 - [ ] Confirm iBooster enable → Ignition bus Term 5 (7.5A fuse) → firewall Pin 18
-- [ ] Install dedicated radiator-fan controller + coolant sensor ({{ tbd(134) }}); verify fail-to-full-speed on lost sensor
+- [ ] Install Lingenfelter VSFM-002 radiator-fan controller + coolant sensor (sensor P/N {{ tbd(134) }}); verify fail-to-full-speed on lost sensor
 
 **Direct Battery Connections (No Circuit Breaker):**
 
