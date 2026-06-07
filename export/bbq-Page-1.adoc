@@ -1,4 +1,0 @@
-= bbq Page-1
-
-image::bbq-Page-1.png[Page-1]
-

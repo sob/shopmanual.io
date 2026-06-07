@@ -40,7 +40,7 @@ theme:
     text: Roboto
     code: Roboto Mono
 
-repo_url: https://github.com/sob/drawings
+repo_url: https://github.com/sob/shopmanual.io
 edit_uri: edit/main/docs
 
 exclude_docs: |

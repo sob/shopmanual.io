@@ -25,7 +25,9 @@ import urllib.error
 import urllib.request
 
 DEFAULT_ROOT = "docs/jeep_lj"
-DEFAULT_REPO = "sob/drawings"
+# Last-resort fallback for local runs only; CI/runtime resolves the repo from
+# $GITHUB_REPOSITORY (see main()), so a GitHub rename needs no edit here.
+DEFAULT_REPO = "sob/shopmanual.io"
 REQUIRED_FACETS = ("tbd", "project/", "priority/", "area/")
 
 # Files within the doc root that intentionally talk *about* TBD tracking
@@ -116,7 +118,15 @@ def scan_source_tbds(root):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=DEFAULT_ROOT)
-    ap.add_argument("--repo", default=os.environ.get("TBD_REPO", DEFAULT_REPO))
+    # Resolve the repo from the live runtime so this follows the repo's actual
+    # name across a GitHub rename without any source edit: explicit override
+    # first, then the slug GitHub Actions injects, then the static fallback.
+    ap.add_argument(
+        "--repo",
+        default=os.environ.get("TBD_REPO")
+        or os.environ.get("GITHUB_REPOSITORY")
+        or DEFAULT_REPO,
+    )
     args = ap.parse_args(argv)
 
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")

@@ -181,6 +181,6 @@ Both upgrades preserve the manual cable as the always-available backup.
 [checklist]: ../09-installation/02-engine-systems-checklist.md
 [tbd]: ../tbd-tracker.md
 [purchase]: ../09-installation/03-purchase-tracker.md
-[adapter-tbd]: https://github.com/sob/drawings/issues/129
+[adapter-tbd]: https://github.com/sob/shopmanual.io/issues/129
 
 [^inlet-od]: R2.8 turbo inlet tube, first-party measurement (part in hand), 2026-06-05: 1.63" ID, 2.125" OD. Resolves issue #54; supersedes the earlier unsourced 2.5" estimate.
