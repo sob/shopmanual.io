@@ -25,7 +25,7 @@ import urllib.error
 import urllib.request
 
 DEFAULT_ROOT = "docs/jeep_lj"
-DEFAULT_REPO = "sob/drawings"
+DEFAULT_REPO = "sob/shopmanual.io"
 REQUIRED_FACETS = ("tbd", "project/", "priority/", "area/")
 
 # Files within the doc root that intentionally talk *about* TBD tracking
