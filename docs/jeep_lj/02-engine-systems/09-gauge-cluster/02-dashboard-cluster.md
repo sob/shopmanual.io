@@ -7,7 +7,7 @@ tags:
   - dashboard
 ---
 
-# 4.4.2 HDX Dashboard Cluster {#hdx-dashboard-cluster}
+# 2.9.2 HDX Dashboard Cluster {#hdx-dashboard-cluster}
 
 /// html | div.product-info
 ![Dakota Digital HDX-96J-TJ Dashboard Cluster](../../images/dakota-digital-hdx-96j-tj-cluster.jpg){ loading=lazy }

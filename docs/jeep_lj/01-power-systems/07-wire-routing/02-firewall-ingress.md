@@ -62,7 +62,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
 | 12 | PBS-I PINK IGN (ignition signal) | 14 AWG | PBS-I ICM | Ignition bus (cabin) | #16 |
 
-### Cabin → Engine Bay (10 wires)
+### Cabin → Engine Bay (11 wires)
 
 Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed when the PBS-I self-contained keyless system was adopted.
 
@@ -74,7 +74,7 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 | 10 | High beam headlights | 14 AWG | CT4 SW4 | LP6 Pin 4 (both) | #16 |
 | 11 | Horn button trigger | 18 AWG | Steering wheel button | PMU In 1 | #16 |
 | 13 | Brake switch | 18 AWG | Brake pedal switch | PMU In 2 | #16 |
-| 14 | A/C request | 18 AWG | HVAC controls | PMU In 9 | #16 |
+| 14 | A/C request | 18 AWG | Restomod Air control head (via trinary switch) | PMU In 9 | #16 |
 | 15 | PURPLE START | 16 AWG | PBS-I PURPLE START output | Cole Hersee 24213 coil | #16 |
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |

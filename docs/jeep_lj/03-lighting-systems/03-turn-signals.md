@@ -35,6 +35,7 @@ Each CT4 output (SW1 right, SW2 left) splices to three destinations:
 **Type:** Amber LED turn signals
 **Quantity:** 2 (left and right fenders)
 **Function:** Turn signal only (CT4 controlled)
+**Part #:** {{ tbd(153) }}
 **Size:** 0.8" × 0.8" × 1.1"
 **Draw:** ~0.2A each (~0.4A total, estimated)
 

@@ -9,7 +9,7 @@ tags:
   - temperature
 ---
 
-# 4.4.6 BIM-17-2 (Compass/Outside Temperature Module) {#bim-compass-temp-module}
+# 2.9.6 BIM-17-2 (Compass/Outside Temperature Module) {#bim-compass-temp-module}
 
 /// html | div.product-info
 ![Dakota Digital BIM-17-2 Compass/Temperature](../../images/dakota-digital-bim-17-2-compass.jpg){ loading=lazy }
@@ -52,7 +52,7 @@ tags:
 
 | Connection     | Wire Gauge  | Source                    | Destination            | Distance | Notes                      |
 | :------------- | :---------- | :------------------------ | :--------------------- | :------- | :------------------------- |
-| **Constant**   | 18 AWG ✓    | Critical Cabin PDU Slot 6 | BIM-17-2 power         | ~1-2 ft  | BIM CONSTANT power         |
+| **Constant**   | 18 AWG ✓    | Critical Cabin PDU Slot 6 ({{ tbd(144) }}) | BIM-17-2 power | ~1-2 ft | BIM CONSTANT power — may be bus-powered via BIM/IO cable instead |
 | **BIM/IO**     | Proprietary | HDX control box           | BIM-17-2 input         | Varies   | Data via daisy-chain       |
 | **Temp Probe** | Sensor wire | BIM-17-2                  | SEN-15-1 (grille area) | ~6-8 ft  | Through firewall Grommet 6 |
 

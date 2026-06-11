@@ -28,7 +28,7 @@ This page is the authoritative source for all AUX battery wire specs (gauge, dis
 | Circuit                              | Destination                       | Wire Gauge | Distance | Current             | Voltage Drop    | Protection               |
 | :----------------------------------- | :-------------------------------- | :--------- | :------- | :------------------ | :-------------- | :----------------------- |
 | [BCDC Alpha 50 output][bcdc]         | Local (rear wheel well)           | 4 AWG      | Short    | 50A                 | Negligible      | None (charging)          |
-| [Firewall CONSTANT Bus][constant-bus] | Firewall (cabin side, passenger) | 2/0 AWG    | ~13 ft   | ~152A max           | 1.3% @ 20°C     | 300A CB at battery (<7") |
+| [Firewall CONSTANT Bus][constant-bus] | Firewall (cabin side, passenger) | 2/0 AWG    | ~13 ft   | ~154A max           | 1.3% @ 20°C     | 300A CB at battery (<7") |
 | [SafetyHub 150][aux-safetyhub]       | Local (rear wheel well)           | 2 AWG      | ~2 ft    | ~100A max           | <0.5% @ 20°C    | 150A CB at battery (<7") |
 | [JL Audio MV800/8i Amp][audio]       | Under rear seat                   | 4 AWG      | ~3-4 ft  | 80A max (fuse)      | <0.5% @ 20°C    | 100A CB at battery (<7") |
 | [Winch][recovery]                    | Front bumper                      | 1/0 AWG    | 13 ft    | 250A typ, 409A peak | 4.9% @ 250A / 7.9% @ 409A | [None][winch-protection] |

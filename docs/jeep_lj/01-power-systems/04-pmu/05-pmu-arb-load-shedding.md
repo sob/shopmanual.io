@@ -48,7 +48,9 @@ The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issu
 - Shed cosmetic loads first (DRL)
 - Shed comfort loads second (A/C)
 - Conditionally shed cooling loads if temperatures allow (oil/PS cooler fans)
-- Maintain critical systems (iBooster, HVAC blower, lights, CT4)
+- Maintain critical PMU systems (HVAC blower, lights, CT4)
+
+_Note: the iBooster and radiator fan are no longer PMU loads — both relocated to the [START+ Forward Bus][start-fwd-bus] — so they are outside this PMU shed logic. They remain START-battery loads and still appear in the START-side totals below._
 
 ## Load Shedding Logic
 
@@ -321,3 +323,4 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [start-load-analysis]: ../08-load-analysis/02-start-battery.md
 [aux-load-analysis]: ../08-load-analysis/03-aux-battery.md
+[start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus

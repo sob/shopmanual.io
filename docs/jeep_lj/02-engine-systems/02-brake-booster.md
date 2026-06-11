@@ -164,12 +164,12 @@ flowchart LR
     SWITCH["Stop-lamp switch<br/>Mopar 56045043AB<br/>(closes when pedal pressed)"]
     PMU["PMU In 2<br/>via Deutsch Pin 13"]
     LIGHTS["PMU OUT21 (7A)<br/>Brake lights"]
-    STARTER["Crank chain tap<br/>via Firewall Pin 15"]
+    PBSI["PBS-I Brake input<br/>(T-tapped with PMU In 2<br/>and Turbolamik TCU)"]
     TCU["Turbolamik TCU<br/>brake input"]
 
     SUPPLY --> SWITCH
     SWITCH -->|"Pole 1 tap"| PMU
-    SWITCH -->|"Pole 1 tap"| STARTER
+    SWITCH -->|"Pole 1 tap"| PBSI
     SWITCH -->|"Pole 1 tap"| TCU
     PMU -->|"In 2 closes → OUT21 ON"| LIGHTS
 
@@ -177,13 +177,13 @@ flowchart LR
     style SWITCH fill:#d1d5db,color:#000
     style PMU fill:#a5d8ff,color:#000
     style LIGHTS fill:#d1d5db,color:#000
-    style STARTER fill:#d1d5db,color:#000
+    style PBSI fill:#d1d5db,color:#000
     style TCU fill:#d1d5db,color:#000
 ```
 
 - **PMU is sensor + brain, not load path:** PMU In 2 senses pedal-pressed; PMU OUT21 (7A) carries the actual brake-light current. Switch itself only handles logic-level (<1A).
-- **Single pole used:** TJ/LJ 03-06 stop-lamp switches are 2-pole (4 pins). Pole 1 routes to PMU/starter/TCU; Pole 2 was the factory cruise-deactivation pole — leave disconnected, not in this design.
-- **Splice location:** Pole 1 output splices in the cabin into three branches — one to each downstream consumer.
+- **Single pole used:** TJ/LJ 03-06 stop-lamp switches are 2-pole (4 pins). Pole 1 routes to PMU/PBS-I/TCU; Pole 2 was the factory cruise-deactivation pole — leave disconnected, not in this design.
+- **Splice location:** Pole 1 output splices in the cabin into three branches — PMU In 2, PBS-I Brake input, and Turbolamik TCU brake input. Crank comes solely from the PBS-I PURPLE START output — brake switch Pole 1 does NOT connect to Firewall Pin 15.
 
 See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chain), and [transmission][transmission] (TCU brake input) for the downstream details.
 

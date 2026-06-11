@@ -7,7 +7,7 @@ tags:
   - control-module
 ---
 
-# 4.4.1 HDX Control Module {#hdx-control-module}
+# 2.9.1 HDX Control Module {#hdx-control-module}
 
 /// html | div.product-info
 ![Dakota Digital HDX Control Module](../../images/dakota-digital-hdx-control-module.jpg){ loading=lazy }
@@ -28,7 +28,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 
 **Mounting:** HDPE panel on firewall behind dashboard
 
-**Power:** [PMU OUT9][pmu-outputs] (25A capacity, CONSTANT power)
+**Power:** [PMU OUT9][pmu-outputs] (25A capacity, CONSTANT power) — {{ tbd(144) }} (architecture decision: PMU OUT9 vs Critical Cabin PDU Slot 2)
 
 ## Specifications
 
@@ -93,16 +93,16 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | TACH WARN                | -           | -                            | -                       | Not used (J1939 provides tach via BIM-01-2)      |
 | TACH                     | -           | -                            | -                       | Not used (J1939 provides tach via BIM-01-2)      |
 | **IGNITION PWR**         | 16 AWG      | Ignition bus bar             | HDX ignition input      | Switched 12V for ignition-controlled features    |
-| **12 VDC CONSTANT**      | 16 AWG ✓    | Critical Cabin PDU Slot 2    | HDX power input         | 10A fuse, CONSTANT power, ~2 ft                  |
+| **12 VDC CONSTANT**      | 16 AWG ✓    | Critical Cabin PDU Slot 2 ({{ tbd(144) }}) | HDX power input | 10A fuse, CONSTANT power, ~2 ft                  |
 | **DIM**                  | 18 AWG ✓    | Tail light circuit           | HDX DIM input           | Dash dimming control (variable voltage)          |
 | **ENGINE**               | 18 AWG ✓    | ECM Pin 22 (white wire, MIL) | HDX ENGINE input        | Check engine light / MIL signal — sink-circuit (active low at wire) per Cummins R2.8 Installation Guide 5504137 |
 | **BRAKE**                | 18 AWG ✓    | Brake switch or CT4          | HDX BRAKE input         | Brake pedal indicator                            |
 | **HIGH**                 | 18 AWG ✓    | CT4 high beam output         | HDX HIGH input          | High beam indicator                              |
 | **LEFT**                 | 18 AWG ✓    | CT4 left turn output         | HDX LEFT input          | Left turn indicator                              |
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
-| **4x4/EX**               | 18 AWG ✓    | Transfer case switch         | HDX 4x4/EX input        | 4WD/4LO indicators                               |
+| 4x4/EX                   | -           | -                            | -                       | Not used — NV241 Command-Trac is cable-shifted with no electrical position switch; 4WD/4LO indicator omitted (lever position is visible). Retrofit a linkage switch later if dash indication is wanted. |
 | GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
-| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity needs bench verification during install (HDX may invert internally, or LJ build docs may be mislabeled). |
+| **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity bench-verification pending {{ tbd(150) }}. |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | EX                       | -           | -                            | -                       | Reserved                                         |
 | WARN OUT                 | -           | -                            | -                       | Not used                                         |
@@ -126,9 +126,8 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 
 ## Build Tasks
 
-- [ ] Determine 4WD/4LO indicator signal types (NP241 Rubicon transfer case outputs)
 - [ ] Determine brake indicator source (brake switch vs CT4 output)
-- [ ] Bench-verify WAIT/EX polarity at HDX input — Cummins manual specifies active-low sink-circuit, but HDX docs list "active high"; resolve before final wiring
+- [ ] Bench-verify WAIT/EX polarity at HDX input — {{ tbd(150) }}: Cummins specifies active-low, HDX docs list "active high"; resolve before final wiring
 
 ## Related Documentation
 

@@ -80,7 +80,7 @@ Accessories and high-draw auxiliary loads:
 
 - SwitchPros lighting (up to 68A full offroad lighting)
 - BODY PDU (audio, USB, heated seats)
-- Winch (400A peak)
+- Winch (409A peak)
 - ARB compressor (90A)
 
 ### Why LiFePO4

@@ -30,24 +30,23 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **SafetyHub 150**      |                          |         |      |                   |                           |
 | MIDI-1                 | ARB Compressor Motor 1   |      0A |  45A | Airing up         | Half of twin              |
 | MIDI-2                 | ARB Compressor Motor 2   |      0A |  45A | Airing up         | Half of twin              |
-| ATC-1                  | Winch Trigger            |      0A |  10A | Recovery only     | Contactor coil            |
 | **BODY PDU**           |                          |         |      |                   |                           |
 | CB30                   | Fusion Radio (memory)    |      1A |   1A | Continuous        | Clock/presets             |
-| CB44                   | Fusion Radio (head unit) |      0A |  15A | Audio playing     | Ignition-triggered        |
+| CB30                   | Fusion Radio (head unit) |      0A |  15A | Audio playing     | Ignition-triggered (consolidated on CB30) |
 | CB48                   | USB Charging (2x 75W)    |      2A |  13A | Devices charging  | Always on                 |
 | CB39                   | WolfBox Camera           |      2A |  10A | Continuous        | Dash + backup             |
 | CB45                   | Driver Heated Seat       |      0A |   5A | Winter            | Relay K21                 |
 | CB42                   | Passenger Heated Seat    |      0A |   5A | Winter            | Relay K22                 |
 | CB43                   | Winch Control (dash)     |      0A |   2A | Recovery only     | Rocker signal             |
 | **Direct**             |                          |         |      |                   |                           |
-| -                      | Winch Motor              |      0A | 400A | 10-30 sec bursts  | Recovery only             |
+| -                      | Winch Motor              |      0A | 409A | 10-30 sec bursts  | Recovery only             |
 
 ## Charging Source
 
 **BCDC Alpha 50:** Charges AUX battery at up to 50A from START battery/alternator
 
-- **Solar input:** Up to 6.7A additional (80W panel)
-- **Combined max:** ~57A charging rate (sunny day, engine running)
+- **Solar input:** Up to ~5.8A additional, battery-side (80W panel; see [Solar Charging][solar])
+- **Combined max:** ~56A charging rate (sunny day, engine running)
 - **Typical charging:** 30-50A depending on AUX battery SOC
 
 **AUX Battery:** Dakota Lithium DL+ 135Ah LiFePO4
@@ -189,17 +188,16 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Circuit                        |     Load | Reason         |
 | :----------------------------- | -------: | :------------- |
 | **Winch Motor**                | **250A** | Moderate pull  |
-| **Winch Trigger (ATC-1)**      |  **10A** | Contactor coil |
-| **Winch Control (CB43)**       |   **2A** | Dash rocker    |
+| **Winch Control (CB43)**       |   **2A** | Dash push, control signal via BODY PDU CB43 |
 | **Fusion Radio memory (CB30)** |   **1A** | Always on      |
 | **WolfBox Camera (CB39)**      |   **2A** | Recording      |
-| **TOTAL**                      | **265A** |                |
+| **TOTAL**                      | **255A** |                |
 
 **BCDC Charging:** 50A (full rate)
 
-**Net Battery Effect:** -215A (heavy discharge)
+**Net Battery Effect:** -205A (heavy discharge)
 
-**30-second pull:** 215A × (30/3600)h = **1.8Ah used** (1.7% of usable capacity)
+**30-second pull:** 205A × (30/3600)h = **1.7Ah used** (1.6% of usable capacity)
 
 **Assessment:** Winch operations have negligible battery impact. Can perform 50+ pulls before approaching 20% SOC.
 
@@ -221,7 +219,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **BCDC Charging:** 0A (engine off)
 
-**Solar (daytime):** ~5-6A (80W panel)
+**Solar (daytime):** ~5.8A battery-side (80W panel — see [Solar Charging][solar])
 
 **Net Battery Effect (day):** -21A
 
@@ -248,7 +246,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Night Offroad     | 45A        | 50A  | +5A        | N/A (charging)  | Excellent |
 | Air Up (5-10 min) | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
 | Air Up Extended   | 110A       | 50A  | -60A       | 108 minutes     | Excellent |
-| Winch Recovery    | 265A       | 50A  | -215A      | 50+ pulls       | Excellent |
+| Winch Recovery    | 255A       | 50A  | -205A      | 50+ pulls       | Excellent |
 | Camp Mode         | 27A        | 0A   | -27A       | **4 hours**     | Good      |
 
 **Key Insight:** With corrected XL Sport specs (2.2A/pod vs 6A), full night offroad lighting (45A) is now fully covered by 50A BCDC charging. The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for all driving scenarios including full lighting. Camp mode provides 4+ hours without engine.
@@ -263,6 +261,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 - [PMU ARB Load Shedding][arb-load-shedding] - Load management during ARB operation
 
 [bcdc]: ../01-power-generation/03-bcdc.md
+[solar]: ../01-power-generation/04-solar.md
 [safetyhub]: ../03-aux-battery-distribution/04-safetyhub.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [body-pdu]: ../03-aux-battery-distribution/03-body-pdu.md

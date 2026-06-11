@@ -50,14 +50,14 @@ tags:
 
 | Button |       Circuit       | Draw |                                  Details                                  |    Output Pin(s)     |
 | :----: | :-----------------: | :--: | :-----------------------------------------------------------------------: | :------------------: |
-|   1    |    Roof Lights      | 18A  |                  8x BD XL Sport (Linkable, single circuit)                |       OUTPUT-1       |
+|   1    |    Roof Lights      | 17.6A|                  8x BD XL Sport (Linkable, single circuit)                |       OUTPUT-1       |
 |   2    |    Ditch Lights     |  8A  |                   2x BD LP4 Pro (Driving/Combo Pattern)                   |       OUTPUT-2       |
 |   3    |      Fog Light      |  6A  |                   1x BD S8 10" (Amber, Wide Cornering)                    |       OUTPUT-3       |
 |   4    |     Dome Lights     |  2A  |                4x KC Cyclone V2 (manual + door-triggered)                 |       OUTPUT-4       |
 |   5    |   Interior LEDs     |  5A  |                   MLC-RW controller (speaker + footwell RGB)              |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
 |   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
-|   8    |     Navigation      |  2A  |                        Garmin Tread XL GPS                                |       OUTPUT-8       |
+|   8    |     Navigation      |  2A  |                  Garmin Tread 2 - Overland Edition GPS                     |       OUTPUT-8       |
 |   9    |    Front Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      | OUTPUT-17 (low-side) |
 |   10   |     Rear Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      |      OUTPUT-10       |
 |   11   |     Compressor      | 15A  | ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers]) |      OUTPUT-11       |
@@ -69,10 +69,9 @@ tags:
   - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
   - Either door opening or Button 4 press activates dome lights
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
-- **Buttons 5, 8:** Available for future use
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
-- **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13
-- Total lighting draw if all on simultaneously: 44A (within 150A capacity)
+- **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13 (power source conflict with BODY PDU CB20 — see {{ tbd(147) }})
+- Total lighting draw if all on simultaneously: 43.6A (within 150A capacity)
 
 ## Wiring Pinout
 
@@ -80,12 +79,12 @@ tags:
 
 | Pin |   Label   |    Color    | Gauge  |  Max Load   | Assigned Circuit                   | Load |                      Notes                      |
 | :-: | :-------: | :---------: | :----: | :---------: | ---------------------------------- | :--: | :---------------------------------------------: |
-|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | _AVAILABLE_                        |  —   |                                                 |
+|  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Interior LEDs (MLC-RW controller)  |  5A  |                                                 |
 |  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                        |  3A  |                                                 |
 |  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal         |  -   |              For auto-off features              |
 |  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights          |  -   |               For DRL integration               |
 |  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)                |  1A  |         RTL-S amber chase function only         |
-|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | _AVAILABLE_                        |  —   |                                                 |
+|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | Navigation (Garmin Tread 2)        |  2A  |                                                 |
 |  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) |  -   | Triggers OUTPUT-4 (dome lights) when doors open |
 |  8  | TRIGGER-2 |    PINK     |   -    |      -      | Rear cargo rocker switch           |  -   |        Triggers OUTPUT-13 (cargo light)         |
 |  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)           |  -   |                                                 |
@@ -105,7 +104,7 @@ tags:
 
 | Pin |  Label   | Color  | Gauge | Max Load | Assigned Circuit | Load |    Notes    |
 | :-: | :------: | :----: | :---: | :------: | ---------------- | :--: | :---------: |
-|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Lights (8x) | 18A  |             |
+|  1  | OUTPUT-1 | BROWN  | 10AWG |   35A    | Roof Lights (8x) | 17.6A|             |
 |  2  | OUTPUT-2 |  RED   | 10AWG |   35A    | Ditch Lights     |  8A  |             |
 |  3  | OUTPUT-3 | ORANGE | 10AWG |   35A    | Fog Light        |  6A  |             |
 |  4  | OUTPUT-4 | YELLOW | 10AWG |   35A    | Dome Lights      |  2A  |             |
@@ -207,7 +206,7 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 - [ ] Program Button 4: OUTPUT-4 OR TRIGGER-1 → dome lights
 - [ ] Install rear cargo rocker switch → TRIGGER-2 (determine tailgate-accessible location)
 - [ ] Program TRIGGER-2 → OUTPUT-13 (cargo light)
-- [ ] Confirm cargo light wiring (OUTPUT-13) and ditch light wiring (OUTPUT-2)
+- [ ] Confirm cargo light wiring (OUTPUT-13) — power-source conflict pending {{ tbd(147) }}
 - [ ] Confirm ARB pressure switch → TRIGGER-3
 - [ ] Program TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor auto/manual)
 - [ ] Test automatic pressure control (compressor on/off at setpoints)

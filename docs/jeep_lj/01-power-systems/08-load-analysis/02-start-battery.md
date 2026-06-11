@@ -21,7 +21,6 @@ All circuits powered by START battery (alternator charging):
 | OUT9             | Dakota Digital    |     25A |      25A | Continuous             | Gauges always on      |
 | OUT11            | Wiper Controller  |      0A |      15A | Intermittent           | Rain only             |
 | OUT13            | CT4 Controller    |     10A |      10A | Continuous             | Street lighting       |
-| OUT15            | Winch Trigger     |      0A |       1A | Recovery only          | Control signal only   |
 | OUT17            | A/C Clutch        |      0A |       5A | Summer only            | Seasonal              |
 | OUT18            | Horn              |      0A |     5.4A | Seconds                | Emergency only        |
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
@@ -30,7 +29,7 @@ All circuits powered by START battery (alternator charging):
 | OUT23            | DRL               |    2.6A |     2.6A | Daytime only           | Auto-off at night     |
 | **Fwd Dist Bus (START-direct)** | |       |          |                        | relocated off the PMU |
 | Fwd Bus          | iBooster main     |   0.25A |      40A | Seconds during braking | Brief peak            |
-| Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Lingenfelter VSFM-002    |
+| Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Controller {{ tbd(134) }} |
 | Fwd Bus          | Turbolamik TCU    |     15A |      15A | Continuous             | Must stay on          |
 | Ign bus          | iBooster Enable   |      5A |       5A | Continuous             | Ignition-switched     |
 | **BCDC Charger** |                   |         |          |                        |                       |
@@ -188,7 +187,7 @@ All circuits powered by START battery (alternator charging):
 | Emergency Braking | 165A       | 270A       | 61%         | Excellent |
 | Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Realistic Case:** 201A (offroad with hot engine), or ~216A including the now-itemized TCU = **54-69A margin**
+**Worst Realistic Case:** 201A (offroad with hot engine) = **69A margin** (74% utilization). Folding in the now-itemized TCU (~15A continuous) raises this to ~216A (54A margin) — still within capacity.
 
 **Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
 
@@ -200,8 +199,8 @@ The following high-current loads are **NOT** supplied by the alternator:
 | :----------------------- | :-------- | :------------ | :------------------------ |
 | SwitchPros (all outputs) | 127A max  | AUX battery   | BCDC-fed, isolated        |
 | ARB Compressor           | 90A       | AUX battery   | Via SafetyHub on AUX      |
-| Winch                    | 400A peak | AUX battery   | Direct connection         |
-| BODY PDU circuits        | 56A max   | AUX battery   | CONSTANT bus fed          |
+| Winch                    | 409A peak | AUX battery   | Direct connection         |
+| BODY PDU circuits        | 54A max   | AUX battery   | CONSTANT bus fed          |
 | Starter                  | 400-600A  | START battery | Cranking only, engine off |
 | Grid Heater              | 250A      | START battery | 3-5 sec cold start only   |
 

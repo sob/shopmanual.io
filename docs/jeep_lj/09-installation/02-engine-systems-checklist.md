@@ -46,7 +46,7 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 - [ ] Remove factory manual-trans pedal assembly
 - [ ] Verify donor auto pedal: stop-lamp switch + clip present, bushing OK, arm not bent
 - [ ] Install 03-06 auto brake pedal assembly
-- [ ] Reconnect stop-lamp switch wiring: PMU In 2, Pin 15 crank-chain tap, Turbolamik brake input
+- [ ] Reconnect stop-lamp switch wiring: PMU In 2, PBS-I Brake input, Turbolamik brake input (T-tap, cabin splice)
 - [ ] Plug clutch master cylinder firewall hole
 - [ ] Bench-measure pedal ratio vs factory pedal (confirm MC stroke + iBooster rod travel headroom)
 - [ ] Re-measure iBooster pushrod length after pedal install; adjust per harness vendor instructions
@@ -80,9 +80,10 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 ## Phase 4: HVAC
 
-- [ ] Confirm factory TJ HVAC system complete and functional
-- [ ] Confirm vacuum system installed: R2.8 manifold → check valve → reservoir → firewall → dash
-- [ ] Verify vacuum system holds vacuum
+- [ ] Confirm Restomod Air kit model/configuration against order on arrival ({{ tbd(146) }})
+- [ ] Install Restomod Air HVAC kit per included instructions (factory TJ HVAC assembly, vacuum lines, and cable linkage removed)
+- [ ] Verify Restomod Air blower draw ≤25A on PMU OUT5
+- [ ] Wire control head compressor request → trinary switch → PMU In 9 (verify wire colors against kit diagram)
 
 ---
 
@@ -155,7 +156,7 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 - [ ] Verify iBooster ground continuity to battery negative
 - [ ] Verify brake pedal feel with iBooster powered
 - [ ] Verify fail-safe mode (disconnect ignition signal, confirm basic assist)
-- [ ] Verify iBooster standby current within spec (ignition OFF)
+- [ ] Verify iBooster standby current within spec (ignition OFF) — {{ tbd(151) }}: standby spec not yet sourced
 - [ ] Road test: light braking, hard braking, engine-off coasting
 
 ### HVAC Testing

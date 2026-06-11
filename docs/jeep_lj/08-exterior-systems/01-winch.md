@@ -60,7 +60,7 @@ No external circuit breaker — per the [WARN ZEON 10-S installation manual][war
   - **UP (momentary):** Winch OUT (let out cable)
   - **CENTER:** Off (spring return to center)
   - **DOWN (momentary):** Winch IN (pull in cable)
-- **Power:** SafetyHub ATC-1 (15A fuse)
+- **Power:** BODY PDU CB43 (10A)
 - **Use case:** In-cab winch control (self-recovery, convenient operation from driver seat)
 
 **Handheld Remote:**

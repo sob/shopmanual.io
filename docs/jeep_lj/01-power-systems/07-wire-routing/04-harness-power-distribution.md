@@ -24,7 +24,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Build:** 3 conductors · longest run ~13 ft to firewall (+13 ft for the winch pair to the bumper) · ~1.5" OD black braided sleeve, red tracer · ring lugs both ends.
 
-**Route:** Passenger rear wheel well (AUX battery) → up inside passenger rear quarter sill → forward along **inside floor board / side wall** (passenger side) → A-pillar area → **3× bulkhead studs through firewall** → engine bay → forward along passenger inner fender → through grille area → front bumper (winch portion only)
+**Route:** Passenger rear wheel well (AUX battery) → up inside passenger rear quarter sill → forward along **inside floor board / side wall** (passenger side) → A-pillar area → **single sealed 2-piece grommet through firewall** (continuous cables, no firewall break) → engine bay → forward along passenger inner fender → through grille area → front bumper (winch portion only)
 
 **Length:** ~13 ft to firewall (all 3 cables); ~13 ft additional for winch cables continuing to bumper
 
@@ -32,9 +32,9 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 | Wire | Gauge | Color | Function | Termination at battery | Termination at firewall | Continues to |
 |:-----|:-----:|:-----:|:---------|:----------------------|:------------------------|:-------------|
-| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU + Fusion via Firewall CONSTANT bus | Ring lug to 300A CB output stud | Ring lug to bulkhead stud | (terminates at firewall — bus input stud on engine bay side via short jumper) |
-| Winch power (+) | 1/0 AWG | Red | AUX battery+ → winch contactor B+ | Ring lug to AUX battery+ stud | Ring lug to bulkhead stud | Lug to winch contactor B+ |
-| Winch ground (−) | 1/0 AWG | Black | AUX battery- → winch contactor B− | Ring lug to AUX battery- stud | Ring lug to bulkhead stud | Lug to winch motor / chassis at front |
+| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU via Firewall CONSTANT bus (Fusion head unit rides the BODY PDU via CB30) | Ring lug to 300A CB output stud | Continuous through grommet — no firewall break | Ring lug to Firewall CONSTANT bus input stud (cabin side) |
+| Winch power (+) | 1/0 AWG | Red | AUX battery+ → winch contactor B+ | Ring lug to AUX battery+ stud | Continuous through grommet — no firewall break | Lug to winch contactor B+ |
+| Winch ground (−) | 1/0 AWG | Black | AUX battery- → winch contactor B− | Ring lug to AUX battery- stud | Continuous through grommet — no firewall break | Lug to winch motor / chassis at front |
 
 **Firewall pass-through:** **Single sealed 2-piece rubber grommet** sized for the ~1.5" OD bundle (~1.75" firewall hole). Cables run continuously from rear wheel well to their respective destinations — no service break at the firewall. The grommet seals the firewall penetration only; the cables themselves are uninterrupted.
 
@@ -42,7 +42,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 - WARN install documentation references this approach as standard for winch firewall pass-through
 - No amperage limit at the pass-through (the cable is the conductor; grommet just seals the hole)
-- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous — borderline for the forward feed (232A) and underrated for the winch leg (400A peak)
+- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous and were underrated for the winch leg (409A peak); continuous cable + grommet sidesteps any pass-through current limit (the cable is the conductor; the grommet only seals the hole)
 - Anderson SB175 is undersized for the winch leg (175A continuous); SBE320/SB350 would work but adds complexity
 - Service is rare in practice — when needed, pulling the entire cable end-to-end is acceptable
 - Steele Rubber or similar 2-piece grommet, ~$5–15

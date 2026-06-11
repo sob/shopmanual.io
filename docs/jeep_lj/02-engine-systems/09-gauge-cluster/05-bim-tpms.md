@@ -8,7 +8,7 @@ tags:
   - tpms
 ---
 
-# 4.4.5 BIM-22-3 (Tire Pressure Monitoring System) {#bim-tpms-module}
+# 2.9.5 BIM-22-3 (Tire Pressure Monitoring System) {#bim-tpms-module}
 
 /// html | div.product-info
 ![Dakota Digital BIM-22-3 TPMS](../../images/dakota-digital-bim-22-3-tpms.jpg){ loading=lazy }
@@ -62,7 +62,7 @@ Wireless TPMS module displaying real-time tire pressure for all four wheels on H
 
 | Connection   | Source                    | Destination       | Wire Gauge  | Notes                        |
 | :----------- | :------------------------ | :---------------- | :---------- | :--------------------------- |
-| **Constant** | Critical Cabin PDU Slot 5 | BIM-22-3 power    | 18 AWG ✓    | BIM CONSTANT power           |
+| **Constant** | Critical Cabin PDU Slot 5 ({{ tbd(144) }}) | BIM-22-3 power | 18 AWG ✓ | BIM CONSTANT power — may be bus-powered via BIM/IO cable instead |
 | **BIM/IO**   | HDX control box           | BIM-22-3 input    | Proprietary | Data via daisy-chain         |
 | **Sensors**  | Wireless                  | BIM-22-3 receiver | -           | No wiring - RF communication |
 

@@ -50,14 +50,14 @@ The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct
 | [iBooster][brake-booster] main | Firewall | 8 AWG | short | 40A peak / 0.25A idle | <0.5%[^fwd-bus-vdrop] | 50A |
 | [Turbolamik TCU][transmission] | Transmission | 12 AWG | short | 15A continuous | <0.5%[^fwd-bus-vdrop] | 25A |
 
-The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a Lingenfelter VSFM-002 controller (sensor P/N + setpoints {{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
+The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a dedicated fan controller ({{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
 
 !!! info "Shared forward feed — intentional tradeoff"
     The three loads share one master feed + busbar (a passive cable, breaker, and bus bar — no active electronics), versus three independent runs from the battery. This is the same tradeoff the [AUX side][constant-bus] accepts, and is far more robust than their former shared dependency on the PMU module. Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions].
 
 [^fwd-bus-vdrop]: Master feed 2 AWG @ ~108A brief peak (~68A continuous), ~8 ft, 60°C-derated (×1.2) ≈ 1.3% — sized on the combined load. Load feeds are short from the engine-bay bus, so per-load drop is negligible: fan 4 AWG @ 53A, iBooster 8 AWG @ 40A brief, TCU 12 AWG @ 15A. Final master-feed length and breaker selective-coordination pending {{ tbd(136) }} and {{ tbd(135) }}.
 
-## START battery Negative Terminal (7 connections)
+## START battery Negative Terminal (6 connections)
 
 | Circuit                                    | Destination          | Wire Gauge  | Distance | Current    | Voltage Drop  |
 | :----------------------------------------- | :------------------- | :---------- | :------- | :--------- | :------------ |
@@ -69,6 +69,8 @@ The master feed carries the combined load (~68A continuous, ~108A brief peak); v
 | [STX Intercom][radios]                     | Dashboard            | 10 AWG      | ~8 ft    | 5A         | 0.4% @ 20°C   |
 
 Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cummins harness to isolate from starter spikes.
+
+START− intentionally has no local chassis bond — its chassis reference is the 2/0 AWG run to the [Engine Bay Ground Bus][engine-ground-bus] (the rear frame chassis bond lives on the AUX− side). The 6 connections above are the complete, final set; an earlier "7 connections" count was an error.
 
 ## Related Documentation
 

@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-05-30
+**Last Updated:** 2026-06-11
 
 ---
 
@@ -45,6 +45,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | ARB CKBLTA12 Brushless Twin Compressor | ARB | ~$900 | [Air Compressor][air-compressor] |
 | ARB Pressure Switch (180901) | ARB | ~$50 | [Air Compressor][air-compressor] |
 | 4-6 Port Air Manifold | Generic | ~$30 | [Air Compressor][air-compressor] |
+| Restomod Air Custom HVAC Kit | Restomod Air | — (confirm) | Ordered 2026-06; replaces factory TJ HVAC — model/config {{ tbd(146) }} - [HVAC][hvac] |
 
 ---
 
@@ -107,6 +108,7 @@ Major components - watch for sales, consider financing options.
 | Item | Quantity | Est. Unit Price | Est. Total | Priority | Notes |
 |:-----|:--------:|:----------------|:-----------|:---------|:------|
 | LED4Life RGBW Pods (Footwell) | 4 | ~$15 | ~$60 | Low | [Footwell Lights][footwell-lights] |
+| KC HiLiTES Dual Cyclone Dome Light Mount #6337 | 1 | — | — | Medium | ADC12 aluminum, roll cage mount; required by [Dome Lights][dome-lights] |
 
 ---
 
@@ -141,6 +143,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | PIAA 85115 Sports Horn | PIAA | ~$50 | Low | [Horn][horn] |
 | Overvoltage Protection Relay | Generic | ~$15-25 | Low | Solar protection - [Solar][solar] |
 | Deutsch HDP24-24-29 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
+| SwitchPros 2-pin Delphi connector hardware (~12 harnesses: bodies, terminals, seals) | SwitchPros | — | High | P/N {{ tbd(156) }}; plug-and-play output harnesses - [SwitchPros][switchpros-sp1200] |
 | ARB Air Line Installation Kit | ARB | ~$50 | Medium | [Air Lockers][air-lockers] |
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
@@ -211,6 +214,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [winch]: ../08-exterior-systems/01-winch.md
 [air-compressor]: ../08-exterior-systems/02-air-compressor.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
+[hvac]: ../02-engine-systems/03-hvac.md
 [tulays]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [batteries]: ../01-power-systems/01-power-generation/01-batteries.md
 [amplifier]: ../06-audio-systems/02-amplifier.md
@@ -230,6 +234,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
+[dome-lights]: ../03-lighting-systems/06-dome-lights.md
+[switchpros-sp1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [speakers]: ../06-audio-systems/03-speakers.md

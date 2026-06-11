@@ -90,7 +90,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 
 | From                      | To                          | Wire      | Distance | Purpose           |
 |:--------------------------|:----------------------------|:----------|:---------|:------------------|
-| SafetyHub (engine bay)    | ARB compressor (under seat) | 6 AWG × 2 | ~8 ft    | Compressor power (through firewall) |
+| SafetyHub (passenger rear wheel well) | ARB compressor (under seat) | 6 AWG × 2 | ~8 ft {{ tbd(154) }} | Compressor power (8/10/12 ft conflict — issue #154) |
 | ARB compressor            | Chassis ground              | 6 AWG     | ~2 ft    | Local ground      |
 | SwitchPros (firewall)   | Compressor control terminal | 14 AWG    | ~6 ft    | Control signal    |
 | Air manifold (under seat) | Front axle locker           | Air line  | ~6 ft    | Custom air line   |

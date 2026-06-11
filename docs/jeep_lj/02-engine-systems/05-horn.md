@@ -49,7 +49,7 @@ tags:
 ```text
 START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
                           ↑
-                      Horn Button → In 1 (trigger)
+                      Horn Button → In 1 (trigger)  [column path undefined — {{ tbd(152) }}]
 ```
 
 **Power Flow:**

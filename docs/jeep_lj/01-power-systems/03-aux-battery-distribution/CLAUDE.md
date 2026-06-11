@@ -29,7 +29,7 @@ Documents rear wheel well power distribution from the AUX battery (Dakota Lithiu
 
 **Use when:** Finding firewall CONSTANT bus capacity, available studs, or what connects to the bus
 
-Note: AUX battery itself has NO local CONSTANT bus. Battery has 4 stacked terminal lugs + 2 inline CBs (300A master forward feed + 150A SafetyHub local).
+Note: AUX battery itself has NO local CONSTANT bus. Battery has 5 stacked terminal lugs + 3 inline CBs (300A master forward feed + 150A SafetyHub local + 100A audio amp).
 
 ### `03-body-pdu.md` - BODY PDU
 
