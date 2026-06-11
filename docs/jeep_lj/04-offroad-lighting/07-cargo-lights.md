@@ -47,7 +47,7 @@ Interior cargo area lighting controlled by physical switch (Baja Designs Zone 7)
 
 **Switch Location:** Top of rear wheel well (accessible from tailgate)
 
-**Wiring:** BODY PDU CB20 (10A) → Switch → Cargo lights → Ground
+**Wiring:** BODY PDU CB20 (10A) → Switch → Cargo lights → Ground (power-source conflict with OUTPUT-13/TRIGGER-2 open — {{ tbd(147) }})
 
 | Spec | Value |
 | :--- | ----: |

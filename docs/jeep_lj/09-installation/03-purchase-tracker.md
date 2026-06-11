@@ -107,6 +107,7 @@ Major components - watch for sales, consider financing options.
 | Item | Quantity | Est. Unit Price | Est. Total | Priority | Notes |
 |:-----|:--------:|:----------------|:-----------|:---------|:------|
 | LED4Life RGBW Pods (Footwell) | 4 | ~$15 | ~$60 | Low | [Footwell Lights][footwell-lights] |
+| KC HiLiTES Dual Cyclone Dome Light Mount #6337 | 1 | — | — | Medium | ADC12 aluminum, roll cage mount; required by [Dome Lights][dome-lights] |
 
 ---
 
@@ -141,6 +142,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | PIAA 85115 Sports Horn | PIAA | ~$50 | Low | [Horn][horn] |
 | Overvoltage Protection Relay | Generic | ~$15-25 | Low | Solar protection - [Solar][solar] |
 | Deutsch HDP24-24-29 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
+| SwitchPros 2-pin Delphi connector hardware (~12 harnesses: bodies, terminals, seals) | SwitchPros | — | High | P/N {{ tbd(156) }}; plug-and-play output harnesses - [SwitchPros][switchpros-sp1200] |
 | ARB Air Line Installation Kit | ARB | ~$50 | Medium | [Air Lockers][air-lockers] |
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
@@ -230,6 +232,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [reverse-lights]: ../04-offroad-lighting/10-reverse-lights.md
 [rear-lights]: ../04-offroad-lighting/08-rear-lights.md
 [cargo-lights]: ../04-offroad-lighting/07-cargo-lights.md
+[dome-lights]: ../03-lighting-systems/06-dome-lights.md
+[switchpros-sp1200]: ../05-control-interfaces/02-switchpros-sp1200.md
 [chase-light]: ../04-offroad-lighting/04-chase-lights.md
 [footwell-lights]: ../04-offroad-lighting/09-footwell-lights.md
 [speakers]: ../06-audio-systems/03-speakers.md

@@ -210,7 +210,6 @@ live in the linked source docs, not here.
 - [ ] Confirm Dakota Digital system → OUT9
 - [ ] Confirm wipers (WS-51C) → OUT11
 - [ ] Confirm CT4 → OUT13
-- [ ] Confirm winch contactor trigger → OUT15
 - [ ] Confirm A/C clutch → OUT17
 - [ ] Confirm horn → OUT18
 - [ ] Confirm STX Intercom → OUT20
@@ -241,7 +240,6 @@ live in the linked source docs, not here.
 
 - [ ] Confirm ARB compressor motor 1 → MIDI-1
 - [ ] Confirm ARB compressor motor 2 → MIDI-2
-- [ ] Confirm winch contactor trigger → ATC-1
 
 ### Solar Panel Installation
 

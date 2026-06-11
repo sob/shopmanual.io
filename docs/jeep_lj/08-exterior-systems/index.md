@@ -36,7 +36,7 @@ Recovery equipment and air systems for offroad capability.
 | Component      | Power Source            | Protection      | Control            |
 | -------------- | ----------------------- | --------------- | ------------------ |
 | Winch Motor    | AUX battery direct      | None (internal) | Dash rocker/remote |
-| Winch Control  | SafetyHub ATC-1         | 15A ATC         | Dash rocker        |
+| Winch Control  | BODY PDU CB43           | 10A             | Dash rocker        |
 | Compressor     | SafetyHub MIDI-1/MIDI-2 | 2× 60A MIDI     | SwitchPros OUT-11  |
 | Front Locker   | SwitchPros OUTPUT-17    | Low-side driver | Button 9           |
 | Rear Locker    | SwitchPros OUTPUT-10    | 15A             | Button 10          |

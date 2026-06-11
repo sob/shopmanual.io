@@ -105,7 +105,7 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 | Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights)                                       | 10A output, 5.6A load, disabled when ignition off        |
 | Red (thick) | 12V Supply | Main power input        | PMU Out 13 (15A CONSTANT)                                                | Powers all SW outputs, allows hazards when ignition off  |
 | Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
-| White/Gray  | Ignition   | Ignition signal input   | Ignition switch RUN output (18 AWG, splits to PMU Pin 7, SwitchPros, CT4) | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
+| White/Gray  | Ignition   | Ignition signal input   | Cabin ignition bus bar Terminal 1 (18 AWG, ~20 mA, fused per bus doc)     | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
 
 ## Programming Configuration
 
@@ -171,7 +171,7 @@ in the [Power Systems Checklist][power-checklist].
 
 - [ ] Confirm CT4 12V supply (PMU Out 13) landed at steering column
 - [ ] Confirm CT4 ground connected
-- [ ] Confirm CT4 ignition signal connected (shared Y-split with PMU Pin 7, SwitchPros)
+- [ ] Confirm CT4 ignition signal connected (cabin ignition bus bar Terminal 1)
 - [ ] Verify SW3/SW4 (headlights) disabled when ignition off
 - [ ] Verify SW1/SW2 (turn signals/hazards) work with ignition off (safety feature)
 

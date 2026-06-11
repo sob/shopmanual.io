@@ -8,7 +8,7 @@ tags:
   - gps
 ---
 
-# 4.4.4 GPS-50-2 (GPS Speed/Compass Module) {#bim-gps-module}
+# 2.9.4 GPS-50-2 (GPS Speed/Compass Module) {#bim-gps-module}
 
 /// html | div.product-info
 ![Dakota Digital GPS-50-2 Module](../../images/dakota-digital-gps-50-2.jpg){ loading=lazy }
@@ -66,7 +66,7 @@ GPS speedometer is legally required for on-road operation. Ensure antenna has cl
 
 | Connection       | Source                    | Destination           | Wire Gauge  | Notes                       |
 | :--------------- | :------------------------ | :-------------------- | :---------- | :-------------------------- |
-| **Constant**     | Critical Cabin PDU Slot 4 | GPS-50-2 power        | 18 AWG ✓    | BIM CONSTANT power          |
+| **Constant**     | Critical Cabin PDU Slot 4 ({{ tbd(144) }}) | GPS-50-2 power | 18 AWG ✓ | BIM CONSTANT power — may be bus-powered via BIM/IO cable instead |
 | **BIM/IO**       | HDX control box           | GPS-50-2 input        | Proprietary | Data via daisy-chain        |
 | **GPS Antenna**  | GPS-50-2 module           | Dash/windshield mount | Coax cable  | Included antenna cable      |
 | **Outside Temp** | GPS-50-2 (optional)       | SEN-15-1 probe        | Sensor wire | If used instead of BIM-17-2 |

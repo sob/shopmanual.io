@@ -43,7 +43,7 @@ Lighting organized by [Baja Designs Zone System][bd-zones], optimized for specif
 | :--------------------------------------- | :--------------------------------------- | :--------------------------------- |
 | Roof, Ditch, Fog, Rock, Chase, Rear Work | [SwitchPros SP-1200][switchpros-sp-1200] | See controller for wiring          |
 | Cargo Lights                             | Physical switch                          | [Cargo Lights][cargo-lights]       |
-| Reverse Lights                           | [PMU Out 18][tail-brake-reverse]         | [Reverse Lights][reverse-lights]   |
+| Reverse Lights                           | [PMU Out 22][tail-brake-reverse]         | [Reverse Lights][reverse-lights]   |
 | RTL-S Brake/Running                      | PMU/OEM                                  | [Chase Lights][chase-lights]       |
 | Footwell                                 | [JL Audio MLC-RW][audio-systems]         | [Footwell Lights][footwell-lights] |
 

@@ -51,6 +51,9 @@ Physical switch on KC #6337 bracket for rear dome control independent of SwitchP
 - KC switch output: Rear dome lights positive (parallel with SwitchPros OUTPUT-4)
 - Either switch can turn on rear domes independently
 
+!!! warning "Backfeed risk — isolation design pending"
+    As drawn, the CONSTANT-fed override tap is wired in parallel with OUTPUT-4 with no isolation diode. When the override switch is on, 12V CONSTANT backfeeds into OUTPUT-4 regardless of the SwitchPros state. Isolation design is pending — {{ tbd(148) }}.
+
 ## Outstanding Items
 
 {{ tbds() }}

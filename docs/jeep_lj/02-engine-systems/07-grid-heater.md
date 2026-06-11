@@ -8,7 +8,7 @@ tags:
   - cummins
 ---
 
-# 2.9 Grid Heater System {#29-grid-heater-system}
+# 2.7 Grid Heater System {#27-grid-heater-system}
 
 /// html | div.product-info
 

@@ -35,7 +35,7 @@ Factory 2005 TJ HVAC system retained. Uses vacuum-operated mode doors, cable-ope
 | Circuit      | PMU        | Load     | Control            | Notes                                |
 | :----------- | :--------- | :------- | :----------------- | :----------------------------------- |
 | Blower Motor | OUT5 (25A) | ~20A max | Auto (ignition ON) | Factory resistor pack controls speed |
-| A/C Clutch   | OUT17 (7A) | 3-5A     | In 9 trigger       | Factory A/C button → PMU In 9        |
+| A/C Clutch   | OUT17 (7A) | 3-5A     | In 9 trigger       | Factory A/C button → PMU In 9 (12V source for button signal undefined post-PCM-delete — {{ tbd(146) }}) |
 
 See [PMU Outputs][pmu-outputs] for complete configuration.
 
