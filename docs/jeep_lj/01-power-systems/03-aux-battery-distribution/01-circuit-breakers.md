@@ -20,9 +20,9 @@ Mounted inline on a bracket within 7" of AUX battery+ terminal. Protect the thre
 
 | Circuit                              | Model                                            | Rating | Reset Type | Power Path                                                              | Max Load              | Sizing                         |
 | :----------------------------------- | :----------------------------------------------- | :----: | :--------- | :---------------------------------------------------------------------- | :-------------------- | :----------------------------- |
-| **Forward Feed (to Firewall Bus)**   | Mechanical Products<br/>([174-S2-300-2][mp-300]) |  300A  | Manual     | AUX battery+<br/>└→ 300A CB<br/>&nbsp;&nbsp;&nbsp;└→ Firewall CONSTANT Bus | ~152A combined max (SP + BODY PDU) | 197% of combined load (Fusion relocated to direct AUX feed) |
-| **SafetyHub 150 (Recovery)**         | Mechanical Products<br/>([174-S2-150-2][mp-150]) |  150A  | Manual     | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150        | ~100A (ARB 90A + Winch Trigger 10A) | 150% of max load (future-proofed) |
-| **JL Audio MV800/8i Amp**            | Blue Sea<br/>([187-100A][bs-100])                |  100A  | Manual     | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ JL Audio MV800/8i (under rear seat) | 80A max (fuse-limited) | 125% of fuse rating — wire protection (4 AWG short run); amp's 80A internal fuse is primary trip path |
+| **Forward Feed (to Firewall Bus)**   | Mechanical Products<br/>([174-S2-300-2][mp-300]) |  300A  | Manual     | AUX battery+<br/>└→ 300A CB<br/>&nbsp;&nbsp;&nbsp;└→ Firewall CONSTANT Bus | ~154A combined max (SP + BODY PDU) | 195% of combined load (Fusion head unit rides the forward feed through the BODY PDU on CB30; the JL Audio amp is the direct-AUX-feed device) |
+| **SafetyHub 150 (Recovery)**         | Mechanical Products<br/>([174-S2-150-2][mp-150]) |  150A  | Manual     | AUX battery+<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SafetyHub 150        | ~90A (ARB only — winch control on BODY PDU CB43) | 167% of max load (future-proofed) |
+| **JL Audio MV800/8i Amp**            | Blue Sea<br/>([187-100A][bs-100])                |  100A  | Manual     | AUX battery+<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ JL Audio MV800/8i (under rear seat) | 80A max (fuse-limited) | 125% of fuse rating — wire protection (4 AWG short run); amp's 80A internal fuse is primary trip path. CB-vs-4 AWG resize decision {{ tbd(149) }} |
 
 ## Firewall-Side CBs (Co-located with Firewall CONSTANT Bus)
 
@@ -31,10 +31,10 @@ Mounted within 7" of [Firewall CONSTANT Bus][constant-bus]. Protect each downstr
 | Circuit                      | Model                                            | Rating | Reset Type | Power Path                                                                         | Max Load                                                  | Sizing                              |
 | :--------------------------- | :----------------------------------------------- | :----: | :--------- | :--------------------------------------------------------------------------------- | :-------------------------------------------------------- | :---------------------------------- |
 | **SwitchPros RCR-Force 12**  | Mechanical Products<br/>([174-S2-150-2][mp-150]) |  150A  | Manual     | Firewall CONSTANT Bus<br/>└→ 150A CB<br/>&nbsp;&nbsp;&nbsp;└→ SwitchPros           | ~100A (all lighting outputs on)                           | 150% of max load                    |
-| **BODY PDU**                 | Mechanical Products<br/>([174-S2-100-2][mp-100]) |  100A  | Manual     | Firewall CONSTANT Bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU             | ~54A max (radio 16A, USB 13A, camera 10A, seats 10A peak) | 185% of max load (future expansion) |
+| **BODY PDU**                 | Mechanical Products<br/>([174-S2-100-2][mp-100]) |  100A  | Manual     | Firewall CONSTANT Bus<br/>└→ 100A CB<br/>&nbsp;&nbsp;&nbsp;└→ BODY PDU             | ~54A max (radio 15A, USB 13A, camera 10A, seats 10A peak, winch control 2A, cargo 4A) | 185% of max load (future expansion) |
 
 !!! info "Wire Sizing for CB Protection"
-Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (now carries only SP+BODY, ~152A max; 2/0 retained for upgrade headroom). Firewall-side outputs use 2 AWG (130A @ 20°C) for SwitchPros and BODY PDU. Audio amp uses 4 AWG (95A @ 20°C, JL Audio minimum spec) for the short ~3-4 ft run from AUX battery to under-seat amp location.
+Forward feed uses 2/0 AWG protected by the 300A CB for the 13-ft run to the firewall bus (now carries only SP+BODY, ~154A max; 2/0 retained for upgrade headroom). The 300A figure is the CB rating, not the wire's ampacity — 2/0 AWG copper is rated ~265A @ 60°C (project wire-ampacity reference), comfortably above the ~154A load. Firewall-side outputs use 2 AWG (130A @ 20°C) for SwitchPros and BODY PDU. Audio amp uses 4 AWG (95A @ 20°C, JL Audio minimum spec) for the short ~3-4 ft run from AUX battery to under-seat amp location.
 
 **Mechanical Products Series 17 (4 units):**
 
@@ -66,7 +66,7 @@ Forward feed uses 2/0 AWG (300A @ 20°C) for the 13-ft run to the firewall bus (
 - [AUX battery Distribution Overview][rear-battery]
 - [Firewall CONSTANT Bus][constant-bus] - Downstream distribution
 - [SwitchPros][switchpros] - Load details for SwitchPros circuit
-- [SafetyHub 150][safetyhub] - Load details for SafetyHub circuit (ARB compressor, winch trigger)
+- [SafetyHub 150][safetyhub] - Load details for SafetyHub circuit (ARB compressor)
 - [BODY PDU][body-rtmr] - Load details for BODY PDU circuit
 - [JL Audio MV800/8i Amp][audio] - Load details for amplifier circuit
 

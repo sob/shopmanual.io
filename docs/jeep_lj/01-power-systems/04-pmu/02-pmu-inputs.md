@@ -33,7 +33,7 @@ See [Ignition Signal Distribution][ignition-signal] for complete wiring architec
 | **In 6** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
 | **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 23 (DRL) logic      | 12V when headlights active, disables DRL |
 | **In 8** | **\[Available\]**      | -                            | -                       | Available for future expansion           |
-| **In 9** | A/C Request          | Factory TJ A/C button signal | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
+| **In 9** | A/C Request          | Factory TJ A/C button — 12V source {{ tbd(146) }} (undefined post-PCM-delete) | Out 17 (A/C Clutch)     | 12V when factory dash A/C button pressed |
 
 **Note:** Keyless ignition is handled entirely by the self-contained Digital Guard Dawg PBS-I module — PMU is not in the keyless logic path. See [Keyless Ignition][keyless-ignition].
 

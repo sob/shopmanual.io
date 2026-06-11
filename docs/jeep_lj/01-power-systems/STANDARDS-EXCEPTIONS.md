@@ -31,7 +31,7 @@ This document tracks intentional deviations from general electrical standards wh
 **Load Characteristics:**
 
 - Typical: 250A continuous during recovery
-- Peak: 400A brief (winch stall or heavy load)
+- Peak: 409A brief (winch stall or heavy load)
 - Duration: 10-30 seconds typical, 60 seconds maximum
 - Duty Cycle: Brief intermittent use (not continuous)
 
@@ -40,7 +40,7 @@ This document tracks intentional deviations from general electrical standards wh
 - Wire: 1/0 AWG copper (325A continuous rating @ 60°C)
 - Distance: 13 ft one-way (26 ft total circuit)
 - Voltage drop @ 250A: 5.32% (0.638V) - acceptable for brief accessory loads
-- Voltage drop @ 400A: 8.51% (1.021V) - acceptable for brief peak loads
+- Voltage drop @ 409A: 8.70% (1.044V) - acceptable for brief peak loads
 
 **Protection Mechanisms:**
 
@@ -56,7 +56,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 3. **Cable Self-Protection**
    - 1/0 AWG fuses open at ~800A+ (thermal runaway)
-   - Well above 400A operating peak
+   - Well above 409A operating peak
    - Adequate for brief loads per SAE J1128
 
 4. **Manual Battery Disconnect**
@@ -117,7 +117,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Normal Operating Conditions:**
 
-- 250-400A loads are within winch design parameters
+- 250-409A loads are within winch design parameters
 - Cable sizing adequate per voltage drop analysis
 - No fire hazard during normal recovery operations
 

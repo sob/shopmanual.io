@@ -62,7 +62,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
 | 12 | PBS-I PINK IGN (ignition signal) | 14 AWG | PBS-I ICM | Ignition bus (cabin) | #16 |
 
-### Cabin → Engine Bay (10 wires)
+### Cabin → Engine Bay (11 wires)
 
 Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed when the PBS-I self-contained keyless system was adopted.
 

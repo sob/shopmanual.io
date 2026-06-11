@@ -66,17 +66,19 @@ tags:
 
 ## Function
 
-80W panel maintains AUX battery during extended stops via BCDC solar input. Full sun output at optimal conditions: 80W (1.95A @ 40V), variable in partial sun/clouds.
+80W panel maintains AUX battery during extended stops via BCDC solar input. Full sun panel output at optimal conditions: 80W (1.95A @ 40V), variable in partial sun/clouds.
 
-**BCDC Green Power Priority:** Solar input used first when available, alternator supplements to reach 50A total charging current. In full sun, solar contributes ~1.95A, reducing alternator load by same amount.
+**Panel-side vs battery-side current:** The 1.95A figure is the panel-side current at the panel's ~40V operating voltage (40V × 1.95A ≈ 78W). The BCDC's MPPT steps that down to the battery charge voltage, so the battery-side contribution is higher: 78W ÷ ~13.4V ≈ **~5.8A to the AUX battery**.
 
-**Charging Contribution:**
+**BCDC Green Power Priority:** Solar input used first when available, alternator supplements to reach 50A total charging current. In full sun, solar contributes ~5.8A battery-side, reducing alternator load by the same amount.
 
-- **Full sun:** ~1.95A to AUX battery (reduces alternator load from 50A to ~48A)
-- **Partial sun:** Variable 0.8-1.5A depending on conditions
+**Charging Contribution (battery-side):**
+
+- **Full sun:** ~5.8A to AUX battery (78W ÷ ~13.4V; reduces alternator load from 50A to ~44A)
+- **Partial sun:** Variable, proportional to available irradiance
 - **Overcast/Night:** 0A (BCDC uses alternator only)
 
-**Alternator Load Relief:** Minimal but measurable - reduces worst-case alternator load by ~1.95A during sunny daytime operation
+**Alternator Load Relief:** Minimal but measurable — reduces worst-case alternator load by ~5.8A during sunny daytime operation
 
 See [BCDC Alpha 50][bcdc] for complete charging system details.
 

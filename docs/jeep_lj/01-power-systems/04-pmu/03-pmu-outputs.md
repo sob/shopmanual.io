@@ -21,7 +21,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 6**  | GMRS Radio (Midland G1)      | 15A      | [Direct START battery-][starter-battery-distribution] | CONSTANT           | RF noise isolation             |
 | **Out 7**  | Oil Cooler Fan               | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | Auto (CAN temp)    | SPN 175 oil temp trigger       |
 | **Out 8**  | PS Cooler Fan                | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | 180°F inline thermostat | Mishimoto PS cooler fan; thermostat-switched on PS fluid temp (not engine coolant) |
-| **Out 9**  | Dakota Digital System        | ~25A     | [Firewall Stud Bus][firewall-ground] T4-5             | CONSTANT           | Cluster + 4 BIM modules        |
+| **Out 9**  | Dakota Digital System        | ~25A     | [Firewall Stud Bus][firewall-ground] T4-5             | CONSTANT           | Cluster + 4 BIM modules; gauge power architecture (OUT9 vs Critical Cabin PDU) {{ tbd(144) }} |
 | **Out 10** | **[Available]**             | -        | -                                                     | -                  | Freed — iBooster relocated to [START+ Forward Bus][start-fwd-bus] |
 
 ### 15A High-Side Outputs (OUT11-OUT16)
@@ -32,7 +32,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 12** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
 | **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
-| **Out 15** | Winch Contactor Trigger   | 1A   | Via winch contactor                                   | Manual (dash rocker) | Control signal only                           |
+| **Out 15** | **[Available]**           | -    | -                                                     | -                    | (Was Winch Contactor Trigger — reallocated 2026-05-30 to BODY PDU CB43) |
 | **Out 16** | **[Available]**           | -    | -                                                     | -                    | Freed — TCU relocated to [START+ Forward Bus][start-fwd-bus] |
 
 ### 7A High-Side Outputs (OUT17-OUT24)
@@ -52,7 +52,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ## Combined Outputs
 
-_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT16, and OUT19 are now free (7 spare outputs). The combining rules below are retained for any future high-current output._
+_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT15, OUT16, and OUT19 are now free (8 spare outputs). The combining rules below are retained for any future high-current output._
 
 **Combining Rules:**
 

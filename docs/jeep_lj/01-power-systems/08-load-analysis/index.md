@@ -14,7 +14,7 @@ The Jeep LJ uses a dual battery architecture with isolated power domains:
 | Battery   | Location             | Charging                | Primary Loads                   |
 | :-------- | :------------------- | :---------------------- | :------------------------------ |
 | **START** | Driver rear wheel well    | Alternator (270A)       | PMU, engine systems, BCDC       |
-| **AUX**   | Passenger rear wheel well | BCDC (50A) + Solar (6A) | SwitchPros, SafetyHub, BODY PDU |
+| **AUX**   | Passenger rear wheel well | BCDC (50A) + Solar (~5.8A) | SwitchPros, SafetyHub, BODY PDU |
 
 **Key Principle:** The BCDC is the only connection between batteries during normal operation. AUX battery loads do NOT draw from the alternator directly.
 
@@ -76,7 +76,7 @@ These loads are **NOT** included in running alternator calculations:
 | :---------------- | :------- | :------------------------- |
 | Starter           | 400-600A | Cranking only (engine off) |
 | Grid Heater       | 250A     | 3-5 sec cold start only    |
-| Winch             | 400A     | AUX battery (isolated)     |
+| Winch             | 409A     | AUX battery (isolated)     |
 | ARB Compressor    | 90A      | AUX battery (isolated)     |
 | SwitchPros lights | 100A+    | AUX battery (isolated)     |
 
@@ -86,13 +86,13 @@ These loads are **NOT** included in running alternator calculations:
 
 | Scenario          | Total Load | Alternator | Utilization | Status    |
 | :---------------- | :--------- | :--------- | :---------- | :-------- |
-| Highway Driving   | 107A       | 270A       | 40%         | Excellent |
-| Hot City Driving  | 194A       | 270A       | 72%         | Good      |
-| Offroad Trail     | 207A       | 270A       | 77%         | Good      |
-| Emergency Braking | 166A       | 270A       | 61%         | Excellent |
-| Parked Idling     | 123A       | 270A       | 46%         | Excellent |
+| Highway Driving   | 101A       | 270A       | 37%         | Excellent |
+| Hot City Driving  | 188A       | 270A       | 70%         | Good      |
+| Offroad Trail     | 201A       | 270A       | 74%         | Good      |
+| Emergency Braking | 165A       | 270A       | 61%         | Excellent |
+| Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Case:** 207A (offroad) = 63A margin
+**Worst Case:** 201A (offroad) = 69A margin
 
 ### AUX Battery (BCDC-Charged)
 

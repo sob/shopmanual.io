@@ -74,12 +74,14 @@ tags:
 
 **Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
 
-**Total Load:** ~60A maximum (Radio 15A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A)
+**Total Load:** ~54A maximum (Radio 15A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A)
 
 **Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
 
 !!! info "Communication Devices"
-G1 GMRS Radio and STX Intercom are powered from [SafetyHub 150][safetyhub] (START battery) as critical infrastructure, with direct grounds to START battery to minimize RF noise.
+G1 GMRS Radio and STX Intercom are powered from the PMU — GMRS on OUT6, Intercom on OUT20 — with direct grounds to the START battery− to minimize RF noise. See [PMU Outputs][pmu-outputs]. SafetyHub is an AUX-side device and powers neither.
+
+[pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 
 ## Outstanding Items
 

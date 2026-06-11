@@ -23,17 +23,17 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 **Use when:** Finding PMU specs, capacity, or physical installation details
 
-### `02-pmu-outputs.md` - PMU Outputs
-
-**Contains:** Complete output assignment table for all 24 outputs
-
-**Use when:** Finding what load is assigned to which output
-
-### `03-pmu-inputs.md` - PMU Inputs
+### `02-pmu-inputs.md` - PMU Inputs
 
 **Contains:** Digital/analog input assignments, CAN bus integration
 
 **Use when:** Finding input configuration or CAN bus details
+
+### `03-pmu-outputs.md` - PMU Outputs
+
+**Contains:** Complete output assignment table for all 24 outputs
+
+**Use when:** Finding what load is assigned to which output
 
 ### `04-pmu-programming.md` - PMU Programming
 
@@ -55,27 +55,27 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 ## Navigation Scenarios
 
-**"What's connected to PMU OUT14?"** → `02-pmu-outputs.md` output table
+**"What's connected to PMU OUT14?"** → `03-pmu-outputs.md` output table
 
-**"How does PMU connect to J1939 CAN bus?"** → `03-pmu-inputs.md`
+**"How does PMU connect to J1939 CAN bus?"** → `02-pmu-inputs.md`
 
 **"What's the DRL auto-off logic?"** → `04-pmu-programming.md`
 
 **"Where does PMU get power?"** → START battery (1.2) circuit breakers
 
-**"What inputs does PMU use?"** → `03-pmu-inputs.md`
+**"What inputs does PMU use?"** → `02-pmu-inputs.md`
 
 ## When Updating
 
 **Changing output assignment:**
 
-1. Update `02-pmu-outputs.md` output table
+1. Update `03-pmu-outputs.md` output table
 2. Update affected system docs (Sections 2, 3, 4)
 3. Verify total load capacity
 
 **Adding new input:**
 
-1. Update `03-pmu-inputs.md` input table
+1. Update `02-pmu-inputs.md` input table
 2. Update programming logic in `04-pmu-programming.md` if needed
 
 **Adding logic example:**

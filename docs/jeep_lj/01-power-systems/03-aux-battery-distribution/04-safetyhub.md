@@ -33,7 +33,7 @@ Provides fused distribution for recovery and auxiliary systems powered by the AU
 **Note:** Communications systems (GMRS, Intercom) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 
 !!! note "Future-Proof Capacity"
-Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides 50A headroom for additional recovery or auxiliary systems.
+Wire and CB sized for full 150A SafetyHub capacity (current load 90A). Provides 60A headroom for additional recovery or auxiliary systems.
 
 ## Specifications
 
@@ -47,8 +47,8 @@ Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides
 
 | Slot   | Fuse | Circuit                              | Wire Gauge | Distance | Voltage @ Load | Load | Notes                                               |
 | :----- | :--- | :----------------------------------- | :--------- | :------- | :------------- | :--- | :-------------------------------------------------- |
-| MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
-| MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft   | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
+| MIDI-1 | 60A  | [ARB Compressor][air-system] Motor 1 | 6 AWG ✓    | ~12 ft {{ tbd(154) }} | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
+| MIDI-2 | 60A  | [ARB Compressor][air-system] Motor 2 | 6 AWG ✓    | ~12 ft {{ tbd(154) }} | 11.56V (3.6%)  | 45A  | Passenger rear wheel well → cargo → under passenger seat |
 | MIDI-3 | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
 | ATC-1  | -    | **\[Available\]**                      | -          | -        | -              | -    | (Was Winch Contactor Trigger - reallocated 2026-05-30 to BODY PDU CB43 for shorter routing; see [Winch][recovery-systems] and [Dashboard Controls][dashboard-controls]) |
 | ATC-2  | -    | **\[Available\]**                      | -          | -        | -              | -    | -                                                   |
@@ -57,14 +57,14 @@ Wire and CB sized for full 150A SafetyHub capacity (current load 100A). Provides
 
 **Slot Utilization:** 2 of 7 used (2 MIDI, 5 available — ATC-1 freed after winch trigger reallocated to BODY PDU CB43)
 
-**Total Load:** 100A maximum (ARB 90A + Winch Trigger 10A)
+**Total Load:** 90A maximum (ARB only — winch control reallocated to BODY PDU CB43)
 
-**Utilization:** 100A / 150A = 67%
+**Utilization:** 90A / 150A = 60%
 
-**Future Capacity:** 50A additional capacity available (150A max - 100A current = 50A headroom)
+**Future Capacity:** 60A additional capacity available (150A max - 90A current = 60A headroom)
 
 !!! info "Winch Main Power"
-Winch motor power (400A peak) connects directly to AUX battery positive terminal with no external circuit breaker per WARN manufacturer specifications. See [STANDARDS-EXCEPTIONS.md][standards-exceptions] and [Recovery Systems][recovery-systems] for complete protection strategy.
+Winch motor power (409A peak) connects directly to AUX battery positive terminal with no external circuit breaker per WARN manufacturer specifications. See [STANDARDS-EXCEPTIONS.md][standards-exceptions] and [Recovery Systems][recovery-systems] for complete protection strategy.
 
 ## Related Documentation
 

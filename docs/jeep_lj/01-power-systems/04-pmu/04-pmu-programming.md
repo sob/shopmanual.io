@@ -51,7 +51,7 @@ ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
 
 ### Radiator Fan Control — relocated off the PMU
 
-The radiator fan no longer runs on PMU outputs. It is powered START-direct from the [START+ Forward Distribution Bus][start-fwd-bus] and speed-controlled by a **Lingenfelter VSFM-002** controller with its own coolant sensor, independent of the PMU and J1939 — see [Radiator Fan][radiator-fan]. The VSFM-002 is to be configured to command **full speed on lost/invalid sensor signal** (the former PMU/CAN PWM path defaulted the fan OFF on lost coolant-temp data — the failure mode this relocation closes).
+The radiator fan no longer runs on PMU outputs. It is powered START-direct from the [START+ Forward Distribution Bus][start-fwd-bus] and speed-controlled by a dedicated fan controller ({{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939 — see [Radiator Fan][radiator-fan]. The controller must be configured to command **full speed on lost/invalid sensor signal** (the former PMU/CAN PWM path defaulted the fan OFF on lost coolant-temp data — the failure mode this relocation closes).
 
 ### Sequential Load Startup
 
@@ -93,9 +93,9 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 ### ARB Compressor Load Shedding
 
-**Purpose:** Automatically shed non-critical loads when ARB compressor runs (90A) to prevent exceeding 270A alternator capacity.
+**Purpose:** Automatically shed non-critical PMU loads when the ARB compressor runs (90A on the AUX side) to preserve AUX battery capacity and maximize BCDC charging headroom.
 
-**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each) to reduce total load from 266A to 243A, providing +27A alternator margin during tire inflation.
+**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each), shedding ~8-38A from the START-side PMU load. See [ARB Load Shedding Logic][arb-load-shedding] for the current full-scenario totals.
 
 **See:** [ARB Load Shedding Logic][arb-load-shedding] for complete implementation details, load analysis, testing procedures, and operator guidelines.
 

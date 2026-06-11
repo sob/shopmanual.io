@@ -72,7 +72,7 @@ All wire runs require appropriate protection based on location and environment:
 | :------------------------------------- | :--------- | :------- | :------------------------------------------------ | :------------------ | :------------------------------------------------------------------- |
 | **Warn ZEON 10-S Winch power**       | 1/0 AWG    | 13 ft    | TO Front bumper winch                             | 250A typ, 409A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
 | **Warn ZEON 10-S Winch ground**      | 1/0 AWG    | 13 ft    | TO Winch motor ground                             | 250A typ, 409A peak | Return path - routing {{ tbd(106) }}                                 |
-| **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~232A max           | Protected by 300A CB at battery - feeds SwitchPros, BODY PDU, Fusion |
+| **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~154A max           | Protected by 300A CB at battery - feeds SwitchPros + BODY PDU (Fusion head unit rides the BODY PDU via CB30) |
 | **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A CB at battery                                      |
 | **BCDC output**                        | 4 AWG      | Short    | FROM BCDC (local in wheel well)                   | 50A                 | Charging input to AUX battery                                        |
 | **Primary ground**                     | 2/0 AWG    | 3 ft     | TO Rear frame rail                                | {{ tbd(124) }}      | Chassis-grounded accessory return only — winch returns via dedicated 1/0 H1 cable to AUX battery−, not chassis |
@@ -80,7 +80,7 @@ All wire runs require appropriate protection based on location and environment:
 
 **Routing:**
 
-- **Forward feed (2/0 AWG) + Winch power/ground (2× 1/0 AWG) (H1):** Passenger rear wheel well → up inside passenger rear quarter sill → forward along **inside floor board / side wall (passenger side)** → A-pillar area → through passenger firewall (forward feed terminates at Firewall CONSTANT bus; winch cables continue to engine bay → grille → front bumper). Three heavy cables bundled together. Fully inside body, no exposed frame rail.
+- **Forward feed (2/0 AWG) + Winch power/ground (2× 1/0 AWG) (H1):** Passenger rear wheel well → up inside passenger rear quarter sill → forward along **inside floor board / side wall (passenger side)** → A-pillar area → through a **single sealed 2-piece grommet** at the passenger firewall (continuous cables, no firewall break) → forward feed terminates at Firewall CONSTANT bus; winch cables continue to engine bay → grille → front bumper. Three heavy cables bundled together. Fully inside body, no exposed frame rail.
 - **BCDC input + cross-ground reference (H3):** **Under the rear bench seat** cushion → passenger rear wheel well. Short, dry, physically protected.
 - **SafetyHub local feed (2 AWG):** ~2 ft local in wheel well, no routing concern.
 
@@ -115,7 +115,7 @@ All wire runs require appropriate protection based on location and environment:
 | **Bus → SwitchPros**                   | 2 AWG      | ~2 ft    | TO SwitchPros power module                 | Via 150A CB                                     |
 | **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
 | **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 100A CB at AUX battery (not via firewall bus) |
-| **SwitchPros Ground Bus**              | 1 AWG      | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
+| **SwitchPros Ground Bus**              | 1/0 AWG    | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
 | **SwitchPros control cable**           | Multi-pin  | ~5 ft    | TO SwitchPros panel on dash                | Standard SwitchPros cable                       |
 | **SwitchPros outputs (12 circuits)**   | Various    | {{ tbd(107) }} | TO various loads (front/cabin/rear/roof) | Mostly short forward fan-out from firewall      |
 
@@ -195,7 +195,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 | 🔋 **Passenger rear wheel well**   | Rear frame rail       | 2/0 AWG    | AUX battery-                                          | AUX battery ground point  |
 | 🏠 **Firewall (cabin side)**  | Firewall stud bus     | 4 AWG max  | Body electronics, sensors                             | Cabin electronics ground  |
 | ⚙️ **Firewall (engine side)** | Engine bay ground bus | Various    | PMU, controllers, accessories                         | Engine bay ground hub     |
-| 🌐 **SwitchPros controller**  | SwitchPros ground bus | 1 AWG      | Lighting/aux loads                                    | Dedicated lighting ground |
+| 🌐 **SwitchPros controller**  | SwitchPros ground bus | 1/0 AWG    | Lighting/aux loads                                    | Dedicated lighting ground |
 
 ---
 
