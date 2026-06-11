@@ -17,7 +17,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 2**  | **[Available]**             | -        | -                                                     | -                  | Freed — radiator fan relocated to [START+ Forward Bus][start-fwd-bus] |
 | **Out 3**  | **[Available]**             | -        | -                                                     | -                  | Freed — radiator fan relocated     |
 | **Out 4**  | **[Available]**             | -        | -                                                     | -                  | Freed — radiator fan relocated     |
-| **Out 5**  | HVAC Blower Motor            | ~20A     | Factory HVAC ground                                   | Auto (ignition ON) | See [HVAC System][hvac-system] |
+| **Out 5**  | HVAC Blower Motor            | ~20A     | Restomod Air kit ground (verify on arrival)           | Auto (ignition ON) | Restomod Air kit blower; draw verification {{ tbd(146) }} — see [HVAC System][hvac-system] |
 | **Out 6**  | GMRS Radio (Midland G1)      | 15A      | [Direct START battery-][starter-battery-distribution] | CONSTANT           | RF noise isolation             |
 | **Out 7**  | Oil Cooler Fan               | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | Auto (CAN temp)    | SPN 175 oil temp trigger       |
 | **Out 8**  | PS Cooler Fan                | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | 180°F inline thermostat | Mishimoto PS cooler fan; thermostat-switched on PS fluid temp (not engine coolant) |
@@ -41,7 +41,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 | Output     | Circuit                  | Load | Ground                                                | Control Type        | Notes                          |
 | :--------- | :----------------------- | :--- | :---------------------------------------------------- | :------------------ | :----------------------------- |
-| **Out 17** | A/C Clutch               | 3-5A | Factory A/C ground                                    | Auto (A/C request)  | See [HVAC System][hvac-system] |
+| **Out 17** | A/C Clutch               | 3-5A | Compressor clutch ground (Restomod Air kit — verify)  | Auto (A/C request)  | Request via Restomod Air control head → trinary → In 9 — see [HVAC System][hvac-system] |
 | **Out 18** | Horn                     | 5.4A | [Engine Bay Bus][engine-ground] Stud 6                | External input      | PIAA horns (2.7A × 2)          |
 | **Out 19** | **[Available]**          | -    | -                                                     | -                   | Freed — iBooster enable now on ignition bus    |
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |

@@ -11,7 +11,7 @@ Multi-point grounding strategy with high-current grounds to frame rails and low-
 
 | Ground Point              | Type                   | Location                   | Capacity            | Notes                                              |
 | :------------------------ | :--------------------- | :------------------------- | :------------------ | :------------------------------------------------- |
-| **START battery (-)**     | Battery Terminal       | Driver rear wheel well     | 6 connections ({{ tbd(155) }}: possible 7th rear chassis bond) | See [START Battery Distribution][starter-battery]  |
+| **START battery (-)**     | Battery Terminal       | Driver rear wheel well     | 6 connections (no local chassis bond — by design) | See [START Battery Distribution][starter-battery]  |
 | **AUX battery (-)**       | Battery Terminal       | Passenger rear wheel well  | 5 connections       | See [AUX Battery Distribution][aux-battery]        |
 | **Engine Bay Ground Bus** | Blue Sea 2107 PowerBar | Firewall (engine bay)      | 8 studs (600A)      | See [Engine Bay Ground Bus][engine-bay-ground-bus] |
 | **Firewall Stud Bus**     | Blue Sea 2105 MaxiBus  | Firewall (cabin side)      | 14 terminals (250A) | See [Firewall Stud Bus][firewall-stud-bus]         |

@@ -80,9 +80,10 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 ## Phase 4: HVAC
 
-- [ ] Confirm factory TJ HVAC system complete and functional
-- [ ] Confirm vacuum system installed: R2.8 manifold → check valve → reservoir → firewall → dash
-- [ ] Verify vacuum system holds vacuum
+- [ ] Confirm Restomod Air kit model/configuration against order on arrival ({{ tbd(146) }})
+- [ ] Install Restomod Air HVAC kit per included instructions (factory TJ HVAC assembly, vacuum lines, and cable linkage removed)
+- [ ] Verify Restomod Air blower draw ≤25A on PMU OUT5
+- [ ] Wire control head compressor request → trinary switch → PMU In 9 (verify wire colors against kit diagram)
 
 ---
 

@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-05-30
+**Last Updated:** 2026-06-11
 
 ---
 
@@ -45,6 +45,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | ARB CKBLTA12 Brushless Twin Compressor | ARB | ~$900 | [Air Compressor][air-compressor] |
 | ARB Pressure Switch (180901) | ARB | ~$50 | [Air Compressor][air-compressor] |
 | 4-6 Port Air Manifold | Generic | ~$30 | [Air Compressor][air-compressor] |
+| Restomod Air Custom HVAC Kit | Restomod Air | — (confirm) | Ordered 2026-06; replaces factory TJ HVAC — model/config {{ tbd(146) }} - [HVAC][hvac] |
 
 ---
 
@@ -213,6 +214,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [winch]: ../08-exterior-systems/01-winch.md
 [air-compressor]: ../08-exterior-systems/02-air-compressor.md
 [ibooster]: ../02-engine-systems/02-brake-booster.md
+[hvac]: ../02-engine-systems/03-hvac.md
 [tulays]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [batteries]: ../01-power-systems/01-power-generation/01-batteries.md
 [amplifier]: ../06-audio-systems/02-amplifier.md

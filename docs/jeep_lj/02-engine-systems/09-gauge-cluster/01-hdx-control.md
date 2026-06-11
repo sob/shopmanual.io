@@ -100,7 +100,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **HIGH**                 | 18 AWG ✓    | CT4 high beam output         | HDX HIGH input          | High beam indicator                              |
 | **LEFT**                 | 18 AWG ✓    | CT4 left turn output         | HDX LEFT input          | Left turn indicator                              |
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
-| **4x4/EX**               | 18 AWG ✓    | Transfer case switch ({{ tbd(145) }} — NV241 GenII Command-Trac has no position switch) | HDX 4x4/EX input | 4WD/4LO indicators                               |
+| 4x4/EX                   | -           | -                            | -                       | Not used — NV241 Command-Trac is cable-shifted with no electrical position switch; 4WD/4LO indicator omitted (lever position is visible). Retrofit a linkage switch later if dash indication is wanted. |
 | GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
 | **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity bench-verification pending {{ tbd(150) }}. |
 | EX                       | -           | -                            | -                       | Reserved                                         |
@@ -126,7 +126,6 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 
 ## Build Tasks
 
-- [ ] Determine 4WD/4LO indicator signal types (NV241 GenII Command-Trac (JK Sport) — {{ tbd(145) }}: has no position switch; solution TBD)
 - [ ] Determine brake indicator source (brake switch vs CT4 output)
 - [ ] Bench-verify WAIT/EX polarity at HDX input — {{ tbd(150) }}: Cummins specifies active-low, HDX docs list "active high"; resolve before final wiring
 

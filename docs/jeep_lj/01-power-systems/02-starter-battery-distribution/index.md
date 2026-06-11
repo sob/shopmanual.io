@@ -70,7 +70,7 @@ The master feed carries the combined load (~68A continuous, ~108A brief peak); v
 
 Radio grounds direct to battery for RF noise isolation. ECM/grid heater via Cummins harness to isolate from starter spikes.
 
-A possible 7th connection — a dedicated rear chassis bond at the START battery− — is under review ({{ tbd(155) }}).
+START− intentionally has no local chassis bond — its chassis reference is the 2/0 AWG run to the [Engine Bay Ground Bus][engine-ground-bus] (the rear frame chassis bond lives on the AUX− side). The 6 connections above are the complete, final set; an earlier "7 connections" count was an error.
 
 ## Related Documentation
 
