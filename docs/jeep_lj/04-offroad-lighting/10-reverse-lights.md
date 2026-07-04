@@ -11,7 +11,7 @@ tags:
 
 # 4.10 Reverse Lights {#reverse-lights}
 
-High-output reverse lights that activate automatically via PMU reverse circuit.
+Reverse lights (4,520 lumens combined) that activate automatically via PMU reverse circuit.
 
 /// html | div.product-info
 ![Baja Designs Squadron Sport](../images/baja-designs-squadron-sport.jpg){ loading=lazy }
@@ -50,14 +50,7 @@ High-output reverse lights that activate automatically via PMU reverse circuit.
 
 Wired in parallel with Maxbilt Round Trail Tail WHITE (reverse) and WolfBox camera trigger.
 
-See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit details.
-
-**Load Verification:**
-
-- Squadron Sport pair: 2.8A
-- Maxbilt WHITE: ~2A
-- WolfBox trigger: negligible
-- **Total: ~5A** (PMU Out 22 capacity: 7A, 71% utilization)
+See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit details and combined load verification.
 
 ## Related Documentation
 
