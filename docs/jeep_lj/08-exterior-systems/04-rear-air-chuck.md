@@ -21,13 +21,6 @@ External air access plate mounted in the tailgate area for tire inflation and ai
 
 ///
 
-## Purpose
-
-- External access to compressed air without opening the vehicle
-- Convenient tire inflation at each wheel
-- Air tool connection point
-- Trail-side air sharing with other vehicles
-
 ## Specifications
 
 | Spec           | Value                                    |
