@@ -50,7 +50,7 @@ tags:
 
 See [START Battery Distribution][starter-battery] and [AUX Battery Distribution][aux-battery] for complete wire specifications (gauge, distance, routing, circuit breakers).
 
-**Critical:** Verify solar input polarity before connection - reverse polarity damages unit.
+**Critical:** Solar input polarity — see [Solar Charging][solar] (negative goes to chassis, not this terminal).
 
 [starter-battery]: ../02-starter-battery-distribution/index.md
 [aux-battery]: ../03-aux-battery-distribution/index.md
@@ -104,11 +104,7 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 - Undercharging at low temps leads to sulfation
 - BCDC adjusts charge voltage based on sensor reading (temperature compensation)
 
-**Installation Notes:**
-
-1. Install ring terminal on AUX battery positive terminal bolt
-2. Route sensor cable to BCDC (short run - both in passenger rear wheel well)
-3. Plug into BCDC temperature sensor port (2-pin connector)
+**Installation:** Ring terminal at the AUX+ terminal bolt, short cable run to the BCDC (both in the passenger rear wheel well), plug into the 2-pin temperature sensor port.
 
 [redarc-bcdc]: https://www.redarcelectronics.com/products/the-manager30
 [bcdc-install]: https://cdn.intelligencebank.com/au/share/yE9N/zJpl/NNRlJ/original/Install+Guide+BCDC+Alpha+50R+EN

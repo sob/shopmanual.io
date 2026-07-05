@@ -15,7 +15,7 @@ Automatic load management during ARB compressor operation to preserve AUX batter
 - **BCDC Charging (50A max):** Replenishes AUX battery from alternator
 - **Net AUX battery drain:** 90A - 50A = 40A during compressor operation
 
-The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
+The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical.
 
 ## Problem Statement
 
