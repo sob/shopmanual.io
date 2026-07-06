@@ -541,16 +541,7 @@ The apparent CB > wire mismatch is intentional:
 
 ---
 
-## Summary of Intentional Design Decisions
-
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
+## Standards Applicability
 
 **Marine standards (ABYC E-11) are referenced selectively:**
 
