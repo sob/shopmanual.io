@@ -144,20 +144,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ### SwitchPros Integration
 
-**SwitchPros Programming:**
-
-- **TRIGGER-3 Input:** Pressure switch signal (tank < 135 PSI activates trigger)
-- **OUTPUT-11 Logic:** Button 11 OR TRIGGER-3 → OUTPUT-11 (compressor)
-- **Manual Override:** Press Button 11 anytime to force compressor on (e.g., for tire inflation)
-- **Automatic Mode:** TRIGGER-3 maintains tank pressure 135-150 PSI without user intervention
-
-**Operational Modes:**
-
-| Mode                | Control Method                | Use Case                                                   |
-| ------------------- | ----------------------------- | ---------------------------------------------------------- |
-| **Automatic**       | Pressure switch via TRIGGER-3 | Normal operation - system maintains pressure automatically |
-| **Manual Override** | Button 11 (latching mode)     | Tire inflation - keep compressor running continuously      |
-| **Off**             | Button 11 off + tank > 135 PSI | Compressor idle, tank maintains pressure for locker use   |
+Pressure switch (135 PSI cut-in / 150 PSI cut-out) triggers SwitchPros TRIGGER-3, which OR's with manual Button 11 to drive OUTPUT-11 (compressor). See [SwitchPros][switchpros] for the trigger/output logic and operational modes.
 
 ### Pressure Switch Wiring
 
