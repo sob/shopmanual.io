@@ -42,7 +42,7 @@ Both batteries under significant load simultaneously:
 - START: 198A / 270A = **73% alternator utilization**
 - AUX: 44A - 50A BCDC = **+6A net charge**
 
-**Verdict:** With corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC. Battery maintains charge even in worst realistic case.
+**Verdict:** Full night offroad lighting is now fully covered by BCDC. Battery maintains charge even in worst realistic case.
 
 ---
 
