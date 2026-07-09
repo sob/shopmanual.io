@@ -48,21 +48,6 @@ Rearview mirror replacement with integrated front dash camera and rear backup ca
 - Lane departure warnings (model dependent)
 - Parking mode (with CONSTANT power)
 
-## Components
-
-**Main Unit (Mirror):**
-
-- Replaces factory rearview mirror
-- Integrated front camera
-- Touchscreen for settings/playback
-- CONSTANT power enables parking mode recording
-
-**Rear Camera:**
-
-- Mounts above license plate
-- Powered via cable from main unit
-- Auto-displays when reverse gear engaged
-
 ## Wiring
 
 | Connection      | Wire           | Source                | Notes                     |

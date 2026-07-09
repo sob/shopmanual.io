@@ -353,7 +353,6 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 4. **Factory Practice**
    - No OEM vehicles use alternator output circuit breakers
-   - Proven safe over millions of vehicles
    - Industry standard approach
 
 ### Alternator Review Guidance
@@ -538,24 +537,6 @@ The apparent CB > wire mismatch is intentional:
 - [CONSTANT Bus Bar][constant-bus] - Wire specifications
 - [SwitchPros][switchpros] - Load assignments and totals
 - [SafetyHub][safetyhub] - Circuit assignments and loads
-
----
-
-## Summary of Intentional Design Decisions
-
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
-
-**Marine standards (ABYC E-11) are referenced selectively:**
-
-- Applied to: Dual battery architecture, accessory circuits, grounding
-- **NOT applied to:** Starter, alternator, winch, grid heater (automotive components)
 
 ---
 
