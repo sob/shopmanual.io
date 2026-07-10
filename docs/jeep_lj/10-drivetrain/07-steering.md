@@ -36,7 +36,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 
 ### Hydraulic Pump
 
-> **Pump is engine-specific — the kit pump does not fit.** The FHK400TJ kit ships a **PK40JP2-FH** pump kit built for the Jeep **4.0L** accessory drive. This build runs a **Cummins R2.8**, so the kit pump/bracket does not bolt up — a Cummins-compatible PSC pump must be sourced. The kit's orbital valve and cylinder are engine-agnostic and carry over unchanged.
+The kit's PK40JP2-FH pump/bracket is Jeep 4.0L-specific (see intro above) — a Cummins-compatible PSC pump must be sourced separately.
 
 | Specification | Value |
 | :------------ | :---- |
