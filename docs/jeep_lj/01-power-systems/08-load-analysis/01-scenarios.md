@@ -155,7 +155,7 @@ ARB compressor running with engine idling:
 | Extended Camp | —          | —       | -27A    | 76 min       | Limited   |
 | Airing Up     | 115A       | 43%     | -59A    | 10 min       | Excellent |
 
-**Key Insight:** With corrected XL Sport specs (2.2A/pod), the dual battery architecture now provides net positive charging even during full night offroad lighting. The 50A BCDC fully covers all lighting loads with margin to spare.
+**Key Insight:** The dual battery architecture provides net positive AUX charging even in the worst realistic case (see Night Offroad verdict above).
 
 ## Related Documentation
 
