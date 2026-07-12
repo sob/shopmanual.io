@@ -16,9 +16,7 @@ The AUX battery ([Dakota Lithium 135Ah LiFePO4][batteries]) in the passenger rea
 5. **Inline 100A CB** → 4 AWG short feed → [JL Audio MV800/8i Amp][audio] (mounted under rear seat)
 
 !!! info "Two-Stage Distribution Architecture"
-The AUX battery has **no local CONSTANT bus** — protected feeds run from inline CBs at the battery to two distribution points: the firewall CONSTANT bus (most loads) and SafetyHub (local). This places distribution near the loads, minimizes the cabin trunk to a single heavy cable, and keeps the rear wheel well compartment uncluttered.
-
-See [Firewall CONSTANT Bus][constant-bus] for downstream distribution, [SafetyHub][aux-safetyhub] for fused recovery circuits, and [Circuit Breakers][circuit-breakers] for full CB list.
+The AUX battery has **no local CONSTANT bus** — protected feeds run from inline CBs at the battery to two distribution points instead. See [Firewall CONSTANT Bus][constant-bus] for the full rationale and downstream distribution, [SafetyHub][aux-safetyhub] for fused recovery circuits, and [Circuit Breakers][circuit-breakers] for full CB list.
 
 !!! info "Single Source of Truth"
 This page is the authoritative source for all AUX battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].

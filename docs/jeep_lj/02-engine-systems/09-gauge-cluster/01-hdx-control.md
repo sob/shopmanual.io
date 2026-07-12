@@ -119,6 +119,7 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 - HDX Control → BIM-01-2-J1939 → GPS-50-2 → BIM-22-3 → BIM-17-2
 - Power and data carried over BIM/IO cables (no separate power wiring)
 - Modules auto-detect and configure via Bluetooth app
+- Dakota Digital publishes no per-module current draw for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure) — each module's draw is negligible and folds into the HDX system's overall current draw above (which sizes the 10A fuse)
 
 ## Outstanding Items
 
