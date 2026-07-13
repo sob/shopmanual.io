@@ -7,7 +7,7 @@ hide:
 
 ## System Overview
 
-Dual battery system with Odyssey PC1500 AGM (START) and Dakota Lithium 135Ah LiFePO4 (AUX), RedArc BCDC Alpha 50 isolation/charging, and 270A alternator. START battery powers critical engine systems, AUX battery powers accessories. Batteries operate independently when isolated, AUX battery can assist starting via BCDC jump start mode. 80W hood solar panel maintains AUX battery.
+See [Power Systems Overview][power-systems] for the START/AUX battery specs and dual-battery charging architecture. This section covers the battery hardware, alternator, BCDC, and solar charging in detail. Beyond isolated charging, the BCDC also supports a jump-start assist mode (AUX → START), and an 80W hood solar panel maintains AUX battery charge.
 
 ## Components
 
@@ -21,3 +21,4 @@ Dual battery system with Odyssey PC1500 AGM (START) and Dakota Lithium 135Ah LiF
 - **[Grounding Architecture][grounding]** - Battery ground connections and distributed grounding system (Section 1.5)
 
 [grounding]: ../05-grounding/index.md
+[power-systems]: ../index.md
