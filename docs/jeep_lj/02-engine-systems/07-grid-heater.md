@@ -84,22 +84,9 @@ flowchart LR
     style ELEMENT fill:#d1d5db,color:#000
 ```
 
-## Why Direct ECM Control
-
-- ECM has accurate engine temperature data
-- ECM knows optimal grid heater timing for cold starts
-- Eliminates unnecessary complexity of PMU passthrough
-- Frees PMU output slots for other critical systems
-
 ## Power Distribution
 
-**Bypasses all distribution systems:**
-
-- Does NOT use CONSTANT bus bar
-- Does NOT use PMU outputs
-- Direct battery connection with fusible link protection
-
-**Reason:** High current draw (40-80A) for very short duration (3-5 seconds). Direct connection minimizes voltage drop and connection complexity.
+Direct ECM control (no PMU passthrough) and direct battery connection (no CONSTANT bus) — the ECM has better real-time engine temperature data than an external controller, and skipping PMU frees a PMU output slot. The brief high-current pulse (40-80A, 3-5s) doesn't justify bus-bar routing; the integrated fusible link is adequate protection. See [Standards Exceptions][standards-exceptions] for the full no-CB justification.
 
 ## Outstanding Items
 
@@ -113,3 +100,4 @@ flowchart LR
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [starter-battery-distribution]: ../01-power-systems/02-starter-battery-distribution/index.md
+[standards-exceptions]: ../01-power-systems/STANDARDS-EXCEPTIONS.md
