@@ -37,6 +37,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 - **Fuse Requirement:** 5-20A max (per manufacturer specification)
 - **Recommended Fuse:** 10A (adequate for entire HDX system including BIM modules)
 - **Current Draw:** IGN Off ≈ 0.3mA, IGN On ≈ 250-750mA (confirms 10A fuse sizing)
+- **BIM Module Current Draw:** Negligible per module — bus-powered via BIM/IO cable, included in the OUT9 budget above. Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
 - **BIM Ports:** 3.5mm headphone jack (supports up to 16 BIM modules via daisy-chain)
 - **Display Output:** Proprietary cable to HDX dashboard cluster
 - **Configuration:** Bluetooth app (iOS/Android) for setup and diagnostics
