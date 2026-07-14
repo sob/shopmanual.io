@@ -41,7 +41,7 @@ GPS-based speedometer, compass, altimeter, and clock sync module. Eliminates nee
 - **Accuracy:** ±0.1 MPH (GPS-dependent)
 - **Output Signals:** 4k, 8k, 16k PPM (selectable)
 - **Signal Types:** Sine wave or square wave (configurable)
-- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT9 (25A cap, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable; see [HDX Control Module][hdx-control] for the module current-budget note.
 - **Antenna:** Integrated omni-directional (optional external antenna available)
 - **Warranty:** 2 years
 
@@ -99,3 +99,4 @@ GPS speedometer is legally required for on-road operation. Ensure antenna has cl
 [dashboard-cluster]: 02-dashboard-cluster.md
 [bim-compass]: 06-bim-compass.md
 [firewall-ingress]: ../../01-power-systems/07-wire-routing/02-firewall-ingress.md
+[hdx-control]: 01-hdx-control.md
