@@ -124,7 +124,7 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 | Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | SWITCHED (ignition RUN); ~5A; own firewall pin              |
 | Ground          | 10 AWG     | iBooster ground                      | Engine Bay Bus Stud 7   | Dedicated/redundant ground recommended (a bad ground disables assist) |
 
-**Relocated off the PMU:** Main power now comes from the [START+ Forward Distribution Bus][start-fwd-bus] (50A CB) instead of PMU OUT1+10, and the ignition enable from the [Ignition Signal bus][ignition-signal] instead of OUT19 — removing the brake booster's dependency on the PMU module. The booster retains its mechanical push-through, so a power loss is a hard pedal, not zero brakes.
+**Relocated off the PMU:** removes the brake booster's dependency on the PMU module. The booster retains its mechanical push-through, so a power loss is a hard pedal, not zero brakes.
 
 See [START Battery Distribution][start-fwd-bus] for the forward-bus feed and breaker specs.
 
@@ -202,7 +202,7 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 ## Installation Notes
 
-- **Firewall mounting strategy:** Factory LJ vacuum booster holes are abandoned. The Honda Gen 2 iBooster bolts directly to the firewall via its own integral 4-stud flange (60×80mm M8 pattern, **80mm dimension vertical** per Back Bay Customs; 62mm body neck through the firewall) — no separate steel bracket. Drill matching holes in the LJ firewall, then sandwich a SendCutSend 3/16" steel backing plate on the cabin side to distribute the cantilevered load and prevent fatigue cracking at the new holes. If an 80mm-horizontal orientation is ever required, Back Bay sells a re-orientation adapter (currently out of stock).
+- **Firewall mounting strategy:** Factory LJ vacuum booster holes are abandoned. The Honda Gen 2 iBooster bolts directly to the firewall via its own integral 4-stud flange (60×80mm M8 pattern, **80mm dimension vertical** per Back Bay Customs; 62mm body neck through the firewall) — no separate steel bracket. Drill matching holes in the LJ firewall, then sandwich a SendCutSend 3/16" steel backing plate on the cabin side to distribute the cantilevered load and prevent fatigue cracking at the new holes. (See Overview for the 80mm-horizontal fallback option.)
 - **Fallback paths:** If integral flange has engine-bay packaging conflicts, fall back to (a) SendCutSend custom one-off firewall plate that re-patterns mounting holes, or (b) Back Bay Customs one-off commission — *only worthwhile if they have access to an LJ for trial fit; without one, customer-measurement-blind design carries the same risk as SendCutSend at higher cost.*
 - **Reservoir height:** Mount reservoirs 4-6" above MC flange on firewall standoff for proper gravity feed. More than 6" risks hood clearance issues.
 - **Bench test before fab:** Apply 12V ignition signal to the iBooster and verify motor cycles + pedal rod assists. Used iBoosters fail frequently.

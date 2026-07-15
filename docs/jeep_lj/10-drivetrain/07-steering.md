@@ -17,7 +17,7 @@ tags:
 
 Full hydraulic steering with no mechanical linkage: a PSC pump feeds a PSC orbital steering control valve, which drives a double-ended ram. Ram stroke is limited to Dana 44 spec by Busted Knuckle Off-Road steering stops, and the ram mounts via an Artec Industries Dana 60 ram mount cut down to fit the Dana 44. A Mishimoto fluid cooler with fan (gated by a 180 °F inline thermostat) cools the circuit.[^steering-config]
 
-Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-2006 TJ/LJ Extreme Series full hydraulic kit with a 2.75" double-ended cylinder (PSC's 40"+ tire kit).[^psc-kit] The orbital valve and cylinder carry over directly; the kit **pump is the exception** — its PK40JP2-FH bracket is Jeep 4.0L-specific and does not fit this build's Cummins R2.8.
+Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-2006 TJ/LJ Extreme Series full hydraulic kit with a 2.75" double-ended cylinder (PSC's 40"+ tire kit).[^psc-kit] The kit pump does not fit this build — see Hydraulic Pump below.
 
 ## Specifications
 
