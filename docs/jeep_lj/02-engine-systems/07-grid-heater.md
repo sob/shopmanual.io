@@ -84,13 +84,6 @@ flowchart LR
     style ELEMENT fill:#d1d5db,color:#000
 ```
 
-## Why Direct ECM Control
-
-- ECM has accurate engine temperature data
-- ECM knows optimal grid heater timing for cold starts
-- Eliminates unnecessary complexity of PMU passthrough
-- Frees PMU output slots for other critical systems
-
 ## Power Distribution
 
 **Bypasses all distribution systems:**

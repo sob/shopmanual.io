@@ -113,7 +113,7 @@ tags:
 
 See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CONSTANT Bus][firewall-bus] for downstream distribution.
 
-- **Power:** AUX battery+ → 300A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
+- **Power:** ~13 ft of 2/0 AWG forward feed from AUX battery to Firewall CONSTANT Bus (see header for full power chain)
 - **Ground (logic reference):** 4 AWG wire from SwitchPros power module → chassis ground at firewall (short run, per manufacturer spec)
 - **Load returns:** Each output's ground wire returns to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
 
@@ -158,34 +158,19 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control
 
-ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
-
 **Wiring:**
 
 ```text
 ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 ```
 
-**Configuration:**
-
-Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
-
-**SwitchPros Logic:**
-
-- **TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)**
-- When tank pressure < 135 PSI: TRIGGER-3 closes → OUTPUT-11 activates → compressor runs
-- When tank pressure = 150 PSI: TRIGGER-3 opens → OUTPUT-11 deactivates → compressor stops
-- Manual override: Button 11 can force compressor on regardless of tank pressure
-
-**Signal Source:**
-
-- ARB Pressure Switch model 180901 (cut-in: 135 PSI, cut-out: 150 PSI)
 - Mounted on air manifold under passenger seat
 - Low current signal wire (18 AWG from manifold under passenger seat to SwitchPros TRIGGER-3 at firewall — short run)
+- **SwitchPros Logic:** TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)
 
 **Related Documentation:**
 
-- See [Air System][air-system-arb-compressor-lockers] for complete ARB compressor, tank, and pressure switch specifications
+- See [Air System][air-system-arb-compressor-lockers] for pressure switch setpoints, operational modes, and complete ARB compressor/tank specifications
 
 ## Outstanding Items
 

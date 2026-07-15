@@ -49,7 +49,7 @@ With the 8HP70's deep first gear, the shallower Sport low range still yields a u
 | Axle (Revolution) | 5.13 |
 | **Crawl ratio** | **≈ 65.8:1** (illustrative) |
 
-The deep 8HP70 first gear largely compensates for the 2.72:1 low range — a 4:1 Rock-Trac with the same gearing would give ≈96.7:1. ≈66:1 is a usable trail crawl ratio for this build.
+The deep 8HP70 first gear compensates for the shallower low range — see Selection Notes below for why ≈66:1 beats a 4:1 case here.
 
 ## Selection Notes
 
