@@ -13,6 +13,8 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 
 **Mounting:** Dashboard cluster in factory location, HDX control + BIM modules on HDPE firewall panel
 
+**BIM Module Current Draw:** All 4 BIM modules are bus-powered via the HDX BIM/IO daisy-chain (no separate feed); their draw is included in the HDX system budget above. Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+
 ## System Components
 
 **Core:**
