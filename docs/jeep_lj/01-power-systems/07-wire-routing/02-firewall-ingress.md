@@ -214,8 +214,6 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 ### HDP24-24-21 (original)
 
-Architectural changes (SwitchPros relocated to firewall, Firewall CONSTANT bus, keyless ignition) added new circuits that must penetrate the firewall. This section accounts for them against current connector capacity.
-
 ### Current usage
 
 | Bank | Capacity | Used | Spare |
@@ -250,16 +248,7 @@ Each SwitchPros output normally pairs a power wire (SP → load) with a ground w
 | **After 5 new circuits (chassis-gnd strategy)** | 21 of 21 (filling pin 2 + 4 size-12 reduced) | 0 | **NONE** |
 | **After 8 new circuits (separate-gnd strategy for SP outputs)** | 24 of 21 | -3 | **OVER CAPACITY** |
 
-### Verdict
-
-**Current HDP24-24-21 will work but leaves zero future headroom.**
-
-- The 1 size-16 spare (pin 2) + 4 size-12 reserved cavities can accommodate all 5 new circuits *only* if size-12 cavities accept 18 AWG wires via reducer crimps or 12 AWG dummy wires
-- Any future expansion (additional sensors, accessories, telematics) will require a connector change anyway
-
 ### Recommendation
-
-**Upsize to Deutsch HDP24-24-29** (same shell size, same firewall hole, 29 size-16 contacts).
 
 | Aspect | HDP24-24-21 (current) | HDP24-24-29 (proposed) |
 |:-------|:----------------------|:-----------------------|
@@ -275,13 +264,6 @@ Each SwitchPros output normally pairs a power wire (SP → load) with a ground w
 ### Alternative: Split into two connectors
 
 Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for keyless signals only, keeping HDP24-24-21 for current loads. Two penetrations, two sealing surfaces, more work. Not recommended unless HDP24-24-29 is unavailable.
-
-### Implementation order
-
-1. Order HDP24-24-29 receptacle + plug + 12 additional size-16 contacts (8 extra cavities require 8 pins + 8 sockets)
-2. Build harness with original 16 circuits + the 5 new circuits
-3. Plug-seal remaining 8 cavities for moisture protection
-4. Document pin assignments (update the [Pin Assignment](#pin-assignment) section above)
 
 ---
 
