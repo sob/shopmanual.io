@@ -43,21 +43,14 @@ Pair of 8" infinite baffle marine subwoofers with RGB LED lighting, mounted symm
 
 ## Wiring Configuration {#wiring}
 
-Each sub runs on its own dedicated bridged channel pair on the JL Audio MV800/8i — Sub A on Ch 1+2 bridged, Sub B on Ch 3+4 bridged, both at 4Ω. This is an exact RMS match to the sub's 200W @ 4Ω rating, with no series compromise and independent per-sub gain/EQ/delay via the amp's onboard DSP.
+Each sub runs on its own dedicated bridged pair (Sub A: Ch 1+2, Sub B: Ch 3+4) — see [Amplifier § Channel Configuration][amplifier] for the rationale and per-channel assignment.
 
 | Wiring                    |  Per-Sub Load  | MV800/8i Output | Per Sub  | Safe? |
 | :------------------------ | :------------: | :-------------: | :------: | :----: |
 | **Bridged @ 4Ω per sub**  |       4Ω       |      200W       | **200W** | ✅ 100% of RMS rating |
 | Parallel both on one pair |       2Ω       |  n/a (bridged minimum is 4Ω) |   n/a    | ❌ Below bridged minimum |
 
-**Wiring path (per sub, both pairs identical):**
-
-```
-Amp Ch 1+2 (+/−) bridged → Sub A (+/−)
-Amp Ch 3+4 (+/−) bridged → Sub B (+/−)
-```
-
-Total amp output 400W into the pair (200W per sub) — exact RMS match, no headroom waste from series resistance, independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
+Independent per-sub gain trim is available if the L/R quarter-panel locations end up acoustically asymmetric.
 
 ## Infinite Baffle Requirements
 
