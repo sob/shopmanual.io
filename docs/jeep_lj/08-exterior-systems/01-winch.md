@@ -74,10 +74,7 @@ No external circuit breaker — per the [WARN ZEON 10-S installation manual][war
 
 **Main Power Wiring:**
 
-See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing path).
-
-- **Positive (+):** AUX battery+ → winch contactor → winch motor (direct, no breaker)
-- **Negative (-):** AUX battery- → winch motor ground lug
+See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routing path); source and destination are in the table below.
 
 **Control Wiring:**
 
