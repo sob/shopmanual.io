@@ -123,16 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Intentional, not an oversight — do NOT flag in future reviews.** Adherence to WARN spec, SAE J1128, and factory precedent, per the analysis above.
 
 **Documentation References:**
 
@@ -241,17 +232,7 @@ It is intentional adherence to:
 
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
-
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+**Acceptable per SAE J1128 — do NOT flag as a critical safety issue.** Timer relay (Option 1 above) remains a recommended, non-critical enhancement for the stuck-solenoid scenario.
 
 **Documentation References:**
 
@@ -306,11 +287,7 @@ It is intentional adherence to:
 
 ### Grid Heater Review Guidance
 
-**This is intentional per manufacturer specifications.**
-
-Grid heater brief, high-current load characteristics make circuit breaker unnecessary - fusible link and ECM control provide adequate protection.
-
-**Do NOT flag as requiring circuit breaker.**
+**Intentional per Cummins spec — do NOT flag as requiring a circuit breaker.**
 
 **Documentation References:**
 
@@ -358,11 +335,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Standard automotive practice — do NOT flag as missing protection.** Alternators never use output circuit breakers, factory or aftermarket.
 
 **Documentation References:**
 
@@ -400,11 +373,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ### BCDC Review Guidance
 
-**Circuit breaker AT BATTERY TERMINAL is correct protection point.**
-
-No additional CB required at BCDC - entire circuit protected from battery terminal CB.
-
-**Do NOT flag as missing protection at BCDC.**
+**The battery-terminal CB is the correct, sole protection point — do NOT flag BCDC as missing protection.** It protects the entire run from battery to BCDC.
 
 **Documentation References:**
 
@@ -521,16 +490,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Not a safety issue — do NOT flag as requiring wire upgrade or CB downgrade.** The CB > wire mismatch is intentional, per the load, protection-strategy, and wire-sizing analysis above.
 
 **Documentation References:**
 

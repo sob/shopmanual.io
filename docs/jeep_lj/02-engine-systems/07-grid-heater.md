@@ -84,22 +84,10 @@ flowchart LR
     style ELEMENT fill:#d1d5db,color:#000
 ```
 
-## Why Direct ECM Control
+## Why Direct Connection (No PMU)
 
-- ECM has accurate engine temperature data
-- ECM knows optimal grid heater timing for cold starts
-- Eliminates unnecessary complexity of PMU passthrough
-- Frees PMU output slots for other critical systems
-
-## Power Distribution
-
-**Bypasses all distribution systems:**
-
-- Does NOT use CONSTANT bus bar
-- Does NOT use PMU outputs
-- Direct battery connection with fusible link protection
-
-**Reason:** High current draw (40-80A) for very short duration (3-5 seconds). Direct connection minimizes voltage drop and connection complexity.
+- ECM has the most accurate engine-temperature data and manages duty cycle itself — a PMU passthrough adds complexity with no benefit, and frees a PMU output slot for other systems.
+- High current (40-80A) for a brief 3-5s pulse: bypassing the CONSTANT bus and PMU for a direct battery connection with fusible link protection minimizes voltage drop and wiring complexity.
 
 ## Outstanding Items
 
