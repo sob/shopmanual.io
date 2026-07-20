@@ -33,13 +33,7 @@ Usable capacity (80% DOD):  108Ah
 Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
-
-**Impact Without Load Shedding:**
-
-- Minor: AUX battery still has comfortable margin at 50A BCDC
-- START battery loads reduce BCDC charging efficiency slightly
-- Load shedding maximizes available margin for extended sessions
+**Impact Without Load Shedding:** Minor — the 135Ah AUX battery retains comfortable margin at 50A BCDC charging; load shedding simply maximizes that margin for extended sessions.
 
 ## Solution Overview
 
@@ -219,10 +213,7 @@ ELSE:
 
 **Best Practices for ARB Use:**
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
+1. **Increase Engine RPM:** Run at 1500+ RPM during tire inflation for better voltage regulation and faster inflation (alternator output scales with RPM).
 
 2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
    - Normal: 14.0-14.4V (load shedding working)
