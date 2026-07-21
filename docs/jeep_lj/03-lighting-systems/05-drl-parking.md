@@ -32,42 +32,7 @@ PMU Out 23 splices to all running/marker lights:
 
 **Purpose:** Automatically turns off DRL when headlights activate
 
-**PMU Configuration:**
-
-```text
-PMU Input 7 (In 7): CT4 SW3 headlight status signal
-PMU Pin 7: Ignition RUN signal (12V switched input)
-PMU Output 23 (Out 23): DRL/Parking lights circuit
-
-Programming Logic:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out23_DRL = ON
-ELSE
-  Out23_DRL = OFF
-END
-```
-
-## Operation States
-
-**1. Ignition ON, Headlights OFF:**
-
-- PMU Pin 7 = ON (ignition RUN)
-- PMU In 7 = OFF (CT4 SW3 not active)
-- PMU Out 23 = ON
-- **Result:** All DRL/parking lights illuminated
-
-**2. Ignition ON, Headlights ON:**
-
-- PMU Pin 7 = ON (ignition RUN)
-- PMU In 7 = ON (CT4 SW3 active)
-- PMU Out 23 = OFF
-- **Result:** Headlights active, DRL off
-
-**3. Ignition OFF:**
-
-- PMU Pin 7 = OFF
-- PMU Out 23 = OFF (regardless of headlight status)
-- **Result:** All DRL/parking lights off
+See [PMU Programming][pmu-programming] for the auto-off logic (Pin 7 ignition + In 7 CT4 headlight status → Out 23 DRL).
 
 ## Wiring
 
@@ -101,5 +66,6 @@ END
 - [Tail/Brake/Reverse][tail-brake-reverse-lights] - Maxbilt RED wire (marker/parking)
 
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
+[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
 [headlights]: 02-headlights.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
