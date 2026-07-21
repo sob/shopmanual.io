@@ -219,10 +219,7 @@ ELSE:
 
 **Best Practices for ARB Use:**
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
+1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation — alternator output and voltage regulation both improve with RPM.
 
 2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
    - Normal: 14.0-14.4V (load shedding working)
