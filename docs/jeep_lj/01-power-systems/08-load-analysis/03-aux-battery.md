@@ -125,7 +125,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** +5A (battery charging!)
 
-**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
+**Assessment:** Excellent - full night offroad lighting is covered by BCDC charging with margin to spare; battery maintains charge even with all lights on.
 
 ---
 
@@ -249,7 +249,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Winch Recovery    | 255A       | 50A  | -205A      | 50+ pulls       | Excellent |
 | Camp Mode         | 27A        | 0A   | -27A       | **4 hours**     | Good      |
 
-**Key Insight:** With corrected XL Sport specs (2.2A/pod vs 6A), full night offroad lighting (45A) is now fully covered by 50A BCDC charging. The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for all driving scenarios including full lighting. Camp mode provides 4+ hours without engine.
+**Key Insight:** The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for every driving scenario above, including full night lighting — camp mode (no engine) is the only net-draw case, at 4+ hours to 20% SOC.
 
 ## Related Documentation
 

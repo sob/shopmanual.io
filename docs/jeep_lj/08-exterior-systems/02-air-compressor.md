@@ -57,11 +57,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ## Control System
 
-- **Control:** SwitchPros OUTPUT-11 (15A output, Button 11)
-  - OUTPUT-11 provides switched 12V control signal to compressor
-  - Compressor has internal relay/control that handles high-current motor switching
-  - 14 AWG wire from OUTPUT-11 to compressor control terminal
-- **Ground:** 6 AWG black wire from compressor to AUX battery negative (direct connection for 90A return current)
+Compressor has an internal relay handling high-current motor switching — SwitchPros OUTPUT-11 only carries a low-current control signal (see Wiring table below).
 
 ## Wiring
 
@@ -144,20 +140,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ### SwitchPros Integration
 
-**SwitchPros Programming:**
-
-- **TRIGGER-3 Input:** Pressure switch signal (tank < 135 PSI activates trigger)
-- **OUTPUT-11 Logic:** Button 11 OR TRIGGER-3 → OUTPUT-11 (compressor)
-- **Manual Override:** Press Button 11 anytime to force compressor on (e.g., for tire inflation)
-- **Automatic Mode:** TRIGGER-3 maintains tank pressure 135-150 PSI without user intervention
-
-**Operational Modes:**
-
-| Mode                | Control Method                | Use Case                                                   |
-| ------------------- | ----------------------------- | ---------------------------------------------------------- |
-| **Automatic**       | Pressure switch via TRIGGER-3 | Normal operation - system maintains pressure automatically |
-| **Manual Override** | Button 11 (latching mode)     | Tire inflation - keep compressor running continuously      |
-| **Off**             | Button 11 off + tank > 135 PSI | Compressor idle, tank maintains pressure for locker use   |
+Compressor is trigger-controlled by the pressure switch (Button 11 OR TRIGGER-3 → OUTPUT-11) — see [SwitchPros TRIGGER-3][switchpros] for the full on/off logic and manual override.
 
 ### Pressure Switch Wiring
 
