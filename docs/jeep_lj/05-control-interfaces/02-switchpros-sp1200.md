@@ -65,9 +65,7 @@ tags:
 
 **Notes:**
 
-- **Button 4:** Dome lights have dual control - manual button OR door-triggered via TRIGGER-1
-  - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
-  - Either door opening or Button 4 press activates dome lights
+- **Button 4:** Dome lights have dual control — manual button OR door-triggered (see TRIGGER-1 below)
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
 - **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13 (power source conflict with BODY PDU CB20 — see {{ tbd(147) }})
@@ -158,7 +156,7 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control
 
-ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
+ARB air tank pressure switch (model 180901, cut-in 135 PSI / cut-out 150 PSI) automatically activates the compressor to maintain tank pressure.
 
 **Wiring:**
 
@@ -168,18 +166,12 @@ ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 
 **Configuration:**
 
-Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
-
-**SwitchPros Logic:**
-
 - **TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)**
-- When tank pressure < 135 PSI: TRIGGER-3 closes → OUTPUT-11 activates → compressor runs
-- When tank pressure = 150 PSI: TRIGGER-3 opens → OUTPUT-11 deactivates → compressor stops
+- TRIGGER-3 closes below cut-in → OUTPUT-11 activates; opens at cut-out → OUTPUT-11 deactivates
 - Manual override: Button 11 can force compressor on regardless of tank pressure
 
 **Signal Source:**
 
-- ARB Pressure Switch model 180901 (cut-in: 135 PSI, cut-out: 150 PSI)
 - Mounted on air manifold under passenger seat
 - Low current signal wire (18 AWG from manifold under passenger seat to SwitchPros TRIGGER-3 at firewall — short run)
 

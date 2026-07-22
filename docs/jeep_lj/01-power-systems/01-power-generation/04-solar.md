@@ -70,15 +70,13 @@ tags:
 
 **Panel-side vs battery-side current:** The 1.95A figure is the panel-side current at the panel's ~40V operating voltage (40V × 1.95A ≈ 78W). The BCDC's MPPT steps that down to the battery charge voltage, so the battery-side contribution is higher: 78W ÷ ~13.4V ≈ **~5.8A to the AUX battery**.
 
-**BCDC Green Power Priority:** Solar input used first when available, alternator supplements to reach 50A total charging current. In full sun, solar contributes ~5.8A battery-side, reducing alternator load by the same amount.
+**BCDC Green Power Priority:** Solar input used first when available, alternator supplements to reach 50A total charging current.
 
 **Charging Contribution (battery-side):**
 
 - **Full sun:** ~5.8A to AUX battery (78W ÷ ~13.4V; reduces alternator load from 50A to ~44A)
 - **Partial sun:** Variable, proportional to available irradiance
 - **Overcast/Night:** 0A (BCDC uses alternator only)
-
-**Alternator Load Relief:** Minimal but measurable — reduces worst-case alternator load by ~5.8A during sunny daytime operation
 
 See [BCDC Alpha 50][bcdc] for complete charging system details.
 
@@ -122,13 +120,6 @@ Voltage Module Power: Self-powered from solar panel voltage
 | **Undervoltage Threshold** | Disabled or 10V | Don't disconnect at low voltage |
 | **Reconnect Hysteresis** | ~3V (44V reconnect) | Prevent rapid cycling |
 | **Trip Delay** | 1-2 seconds | Ignore brief voltage spikes |
-
-### Operation
-
-1. **Normal conditions (Voc < 47V):** Relay closed, solar charges normally
-2. **Cold weather (Voc > 47V):** Relay opens, disconnects solar from BCDC
-3. **Panel warms up (Voc drops < 44V):** Relay closes, charging resumes automatically
-4. **BCDC protected:** Never sees voltage above 47V
 
 ### Installation Notes
 
