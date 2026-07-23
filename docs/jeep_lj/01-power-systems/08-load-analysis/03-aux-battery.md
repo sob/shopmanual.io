@@ -99,8 +99,6 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Battery SOC Trend:** Rising - battery maintains full charge even with high accessory use
 
-**Assessment:** Excellent - 50A BCDC fully covers all night highway loads with margin to spare
-
 ---
 
 ### Scenario 3: Night Offroad (Full Lighting)
@@ -125,7 +123,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** +5A (battery charging!)
 
-**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
+**Assessment:** Covered by BCDC charging using the corrected XL Sport spec (2.2A/pod, not the original 6A estimate).
 
 ---
 
@@ -151,7 +149,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **10-minute air-up:** 60A × (10/60)h = **10Ah used** (9% of usable capacity)
 
-**Assessment:** Excellent - minimal battery impact. Full recovery in 10-20 minutes of driving.
+**Assessment:** Full recovery in 10-20 minutes of driving.
 
 ---
 
@@ -177,8 +175,6 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC:** 108Ah / 60A = **108 minutes** of continuous compressor operation
 
-**Assessment:** Extended air-up no longer a concern. Can run compressor for nearly 2 hours before reaching 20% SOC.
-
 ---
 
 ### Scenario 6: Winch Recovery (Brief High-Current)
@@ -199,7 +195,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **30-second pull:** 205A × (30/3600)h = **1.7Ah used** (1.6% of usable capacity)
 
-**Assessment:** Winch operations have negligible battery impact. Can perform 50+ pulls before approaching 20% SOC.
+**Assessment:** 50+ pulls possible before approaching 20% SOC.
 
 ---
 
@@ -229,7 +225,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC (with solar):** 108Ah / 21A = **5+ hours** (daytime only)
 
-**Assessment:** Camp mode now practical. 4+ hours of music, lights, and charging without engine. For extended camping:
+**Assessment:** For extended camping:
 
 - Solar extends daytime runtime significantly
 - Idle engine 30 min to recover ~25Ah
@@ -249,7 +245,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | Winch Recovery    | 255A       | 50A  | -205A      | 50+ pulls       | Excellent |
 | Camp Mode         | 27A        | 0A   | -27A       | **4 hours**     | Good      |
 
-**Key Insight:** With corrected XL Sport specs (2.2A/pod vs 6A), full night offroad lighting (45A) is now fully covered by 50A BCDC charging. The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for all driving scenarios including full lighting. Camp mode provides 4+ hours without engine.
+**Key Insight:** The Dakota Lithium 135Ah upgrade provides effectively unlimited runtime for every driving scenario above, including full lighting.
 
 ## Related Documentation
 

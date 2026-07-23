@@ -42,7 +42,7 @@ Both batteries under significant load simultaneously:
 - START: 198A / 270A = **73% alternator utilization**
 - AUX: 44A - 50A BCDC = **+6A net charge**
 
-**Verdict:** With corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC. Battery maintains charge even in worst realistic case.
+**Verdict:** AUX nets +6A even under full night lighting — worst realistic case still charges the battery.
 
 ---
 
@@ -154,8 +154,6 @@ ARB compressor running with engine idling:
 | Recovery      | 115A       | 43%     | -212A   | 30-sec pulls | Brief OK  |
 | Extended Camp | —          | —       | -27A    | 76 min       | Limited   |
 | Airing Up     | 115A       | 43%     | -59A    | 10 min       | Excellent |
-
-**Key Insight:** With corrected XL Sport specs (2.2A/pod), the dual battery architecture now provides net positive charging even during full night offroad lighting. The 50A BCDC fully covers all lighting loads with margin to spare.
 
 ## Related Documentation
 
