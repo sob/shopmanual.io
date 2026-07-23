@@ -66,22 +66,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Standards Comparison
 
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
+This build follows SAE J1128 (automotive), not ABYC E-11 (marine) — ABYC would require a 400A breaker, but automotive practice defers to manufacturer spec, which WARN gives as no external protection.
 
 ### Factory Vehicle Precedent
 
@@ -123,16 +108,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Do NOT flag as requiring correction in future reviews** — intentional per WARN spec, SAE J1128, factory winch precedent, and the analysis above.
 
 **Documentation References:**
 
@@ -226,32 +202,11 @@ It is intentional adherence to:
 - Manual battery disconnect available
 - **Status:** Acceptable per automotive practice, enhancement recommended
 
-### Starter Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- No CB required for starter circuits in factory vehicles ✓
-- Timer relay or slow-blow CB optional enhancement ✓
-
-**Marine (ABYC E-11):**
-
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
-
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
+**Do NOT flag as a critical safety issue** — cable sizing is adequate protection per SAE J1128 (ABYC E-11 would require a CB, but this isn't a marine application).
 
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+A timer relay (10s cutoff in the Cole Hersee control circuit) remains a recommended, non-critical enhancement for the stuck-solenoid scenario — low cost, common in heavy-duty trucks.
 
 **Documentation References:**
 
@@ -358,11 +313,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Do NOT flag as missing protection** — standard automotive practice; alternators don't use output circuit breakers in factory or aftermarket applications.
 
 **Documentation References:**
 
@@ -521,16 +472,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Do NOT flag as requiring wire upgrade or CB downgrade** — the apparent CB > wire mismatch is intentional: actual loads (82-100A) sit well within the 130A wire rating, the CB is sized for device capacity and inrush tolerance, and duty cycle is intermittent, not continuous.
 
 **Documentation References:**
 
@@ -542,15 +484,6 @@ The apparent CB > wire mismatch is intentional:
 ---
 
 ## Summary of Intentional Design Decisions
-
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
 
 **Marine standards (ABYC E-11) are referenced selectively:**
 
