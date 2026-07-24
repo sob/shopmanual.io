@@ -135,8 +135,7 @@ The 100A external CB is intentionally above the 80A internal fuse — the intern
 - Mounted on **vibration isolators** (rubber standoffs) into **rivnuts** set in the floor pan. The isolator standoff height raises the chassis off the floor, giving the convection air gap underneath; no fabricated mounting plate.
 - Allow a **14" × 8-3/8"** floor footprint (chassis L×W plus connector clearance)[^specs-manual] and **verify clearance from the seat slider rails** before drilling rivnuts.
 - Maintain at least **1" (2.5 cm) clear air space above the shell** (manual requirement for enclosed-compartment mounting); convection-cooled, no fan.
-- Power feed ~3-4 ft direct from AUX battery+ (short feed, low loss)
-- Ground return ~3-4 ft to AUX battery−. All system grounds (head unit + amp) should land at the same point per the manual to avoid ground loops.[^specs-manual]
+- All system grounds (head unit + amp) should land at the same point per the manual to avoid ground loops.[^specs-manual]
 - Centroid to all 4 speakers + 2 subs — minimizes speaker wire runs
 - RCA + remote bundled together from head unit through trans tunnel (~10-12 ft, high-quality shielded RCA required to avoid alternator whine)
 - Orient with connections pointing downward where practical (preserves IPX2 rating)

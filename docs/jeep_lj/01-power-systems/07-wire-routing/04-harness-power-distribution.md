@@ -41,8 +41,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 **Why continuous cables + grommet (not inline connectors or bulkhead studs):**
 
 - WARN install documentation references this approach as standard for winch firewall pass-through
-- No amperage limit at the pass-through (the cable is the conductor; grommet just seals the hole)
-- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous and were underrated for the winch leg (409A peak); continuous cable + grommet sidesteps any pass-through current limit (the cable is the conductor; the grommet only seals the hole)
+- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous and were underrated for the winch leg (409A peak); continuous cable + grommet sidesteps any pass-through current limit — the cable is the conductor, the grommet only seals the hole
 - Anderson SB175 is undersized for the winch leg (175A continuous); SBE320/SB350 would work but adds complexity
 - Service is rare in practice — when needed, pulling the entire cable end-to-end is acceptable
 - Steele Rubber or similar 2-piece grommet, ~$5–15
