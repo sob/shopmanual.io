@@ -83,17 +83,6 @@ This document tracks intentional deviations from general electrical standards wh
 - Direct battery connection specified ✓
 - Internal protection designed for fault scenarios ✓
 
-### Factory Vehicle Precedent
-
-**OEM winch installations do NOT use external circuit breakers:**
-
-- **Ford Super Duty** with factory winch prep: No CB on winch circuit
-- **RAM Power Wagon** factory winch: No external CB, direct battery connection
-- **Toyota TRD Pro** winch ready: No CB specified in prep package
-- **Jeep Rubicon** winch-capable: Power runs via relay, no CB
-
-**Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
-
 ### Winch Fault Scenarios Covered
 
 **Motor Stall (Extended Load):**
@@ -324,45 +313,16 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 **Decision:** No circuit breaker between alternator and battery
 
-### Alternator Industry Standard
-
-**All automotive alternators connect directly to battery without circuit breaker:**
-
-- Factory vehicle practice: No CB on alternator output
-- Alternator has internal voltage regulation
-- Charging circuit protected by battery capacity and cable sizing
-
 ### Alternator Engineering Analysis
 
-**Why No Circuit Breaker Required:**
-
-1. **Alternator Self-Limiting**
-   - Maximum output: 270A (design limit)
-   - Cannot exceed rated output regardless of load
-   - Internal voltage regulator prevents overcharge
-
-2. **Cable Sizing**
-   - Wire: 2/0 AWG (375A continuous rating)
-   - Adequate for 270A continuous output
-   - No thermal concerns at rated load
-
-3. **Battery Acts as Buffer**
-   - Absorbs brief load spikes
-   - Prevents alternator overload
-   - Natural load smoothing
-
-4. **Factory Practice**
-   - No OEM vehicles use alternator output circuit breakers
-   - Proven safe over millions of vehicles
-   - Industry standard approach
+- Self-limiting to 270A rated output; cannot exceed regardless of load, and the internal regulator prevents overcharge
+- 2/0 AWG output wire (375A continuous rating) has no thermal concern at rated output
+- Battery absorbs brief load spikes, buffering the alternator
+- No OEM vehicle uses an alternator output circuit breaker — standard automotive practice
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Standard automotive practice. Do NOT flag as missing protection.**
 
 **Documentation References:**
 
