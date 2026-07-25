@@ -52,14 +52,10 @@ No external circuit breaker — per the [WARN ZEON 10-S installation manual][war
 
 **Dual Control Setup:** Dash rocker switch + handheld remote (both work simultaneously)
 
-**Dash Rocker Switch:**
+**Dash Switch:**
 
-- **Type:** Center-off momentary rocker switch (SPDT or DPDT)
+- **Type:** [CH4X4-TOY-D-WINIO][ch4x4-winch] dual-momentary pushbutton, Toyota-style (see Wiring, below, for pinout)
 - **Location:** Dashboard physical switch panel
-- **Function:**
-  - **UP (momentary):** Winch OUT (let out cable)
-  - **CENTER:** Off (spring return to center)
-  - **DOWN (momentary):** Winch IN (pull in cable)
 - **Power:** BODY PDU CB43 (10A)
 - **Use case:** In-cab winch control (self-recovery, convenient operation from driver seat)
 
