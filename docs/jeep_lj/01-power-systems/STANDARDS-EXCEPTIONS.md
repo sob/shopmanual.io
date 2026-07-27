@@ -83,16 +83,7 @@ This document tracks intentional deviations from general electrical standards wh
 - Direct battery connection specified ✓
 - Internal protection designed for fault scenarios ✓
 
-### Factory Vehicle Precedent
-
-**OEM winch installations do NOT use external circuit breakers:**
-
-- **Ford Super Duty** with factory winch prep: No CB on winch circuit
-- **RAM Power Wagon** factory winch: No external CB, direct battery connection
-- **Toyota TRD Pro** winch ready: No CB specified in prep package
-- **Jeep Rubicon** winch-capable: Power runs via relay, no CB
-
-**Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
+**Factory Precedent:** OEM winch preps (Ford Super Duty, RAM Power Wagon, Toyota TRD Pro, Jeep Rubicon) also omit an external CB, running power via relay/direct connection instead — winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
 
 ### Winch Fault Scenarios Covered
 
@@ -541,21 +532,9 @@ The apparent CB > wire mismatch is intentional:
 
 ---
 
-## Summary of Intentional Design Decisions
+## Standards Note
 
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
-
-**Marine standards (ABYC E-11) are referenced selectively:**
-
-- Applied to: Dual battery architecture, accessory circuits, grounding
-- **NOT applied to:** Starter, alternator, winch, grid heater (automotive components)
+Marine standards (ABYC E-11) are referenced selectively: applied to dual battery architecture, accessory circuits, and grounding; **not** applied to starter, alternator, winch, or grid heater (automotive components, governed by SAE J1128 instead).
 
 ---
 

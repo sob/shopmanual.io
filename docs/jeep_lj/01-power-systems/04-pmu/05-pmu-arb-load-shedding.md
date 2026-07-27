@@ -7,15 +7,15 @@ hide:
 
 Automatic load management during ARB compressor operation to preserve AUX battery capacity and maintain system voltage.
 
-## Dual Battery Architecture
+## AUX-Isolated Draw
 
-**Critical Understanding:** ARB compressor draws from **AUX battery**, NOT directly from alternator:
+ARB compressor draws from **AUX battery**, not directly from the alternator (see [dual-battery architecture][load-analysis-architecture]):
 
 - **ARB Compressor (90A):** Powered by AUX battery via SafetyHub 150
 - **BCDC Charging (50A max):** Replenishes AUX battery from alternator
 - **Net AUX battery drain:** 90A - 50A = 40A during compressor operation
 
-The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
+The alternator is not overloaded during ARB operation; the 50A BCDC keeps net AUX discharge low enough to make extended air-up practical.
 
 ## Problem Statement
 
@@ -33,13 +33,7 @@ Usable capacity (80% DOD):  108Ah
 Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
-
-**Impact Without Load Shedding:**
-
-- Minor: AUX battery still has comfortable margin at 50A BCDC
-- START battery loads reduce BCDC charging efficiency slightly
-- Load shedding maximizes available margin for extended sessions
+The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue even without load shedding; shedding cosmetic and comfort loads below simply maximizes the margin for extended sessions.
 
 ## Solution Overview
 
@@ -324,3 +318,4 @@ LOG SwitchPros_OUT11_ARB (state or trigger input)
 [start-load-analysis]: ../08-load-analysis/02-start-battery.md
 [aux-load-analysis]: ../08-load-analysis/03-aux-battery.md
 [start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
+[load-analysis-architecture]: ../08-load-analysis/index.md#system-architecture
