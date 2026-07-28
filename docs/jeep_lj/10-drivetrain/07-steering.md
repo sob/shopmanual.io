@@ -17,7 +17,7 @@ tags:
 
 Full hydraulic steering with no mechanical linkage: a PSC pump feeds a PSC orbital steering control valve, which drives a double-ended ram. Ram stroke is limited to Dana 44 spec by Busted Knuckle Off-Road steering stops, and the ram mounts via an Artec Industries Dana 60 ram mount cut down to fit the Dana 44. A Mishimoto fluid cooler with fan (gated by a 180 °F inline thermostat) cools the circuit.[^steering-config]
 
-Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-2006 TJ/LJ Extreme Series full hydraulic kit with a 2.75" double-ended cylinder (PSC's 40"+ tire kit).[^psc-kit] The orbital valve and cylinder carry over directly; the kit **pump is the exception** — its PK40JP2-FH bracket is Jeep 4.0L-specific and does not fit this build's Cummins R2.8.
+Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-2006 TJ/LJ Extreme Series full hydraulic kit with a 2.75" double-ended cylinder (PSC's 40"+ tire kit).[^psc-kit] The orbital valve and cylinder carry over directly; the pump does not (see Hydraulic Pump below).
 
 ## Specifications
 
@@ -103,7 +103,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 - [ ] Confirm Mishimoto cooler fan current draw fits the PMU Out 8 (~15A) budget
 - [ ] Document hydraulic line routing
 
-[^steering-config]: Owner decision, 2026-05-30 — full-hydro kit is PSC pump + PSC orbital valve + PSC double-ended ram; Busted Knuckle Off-Road steering stops limit ram stroke to Dana 44 spec; Artec Industries Dana 60 ram mount cut down to the Dana 44; Mishimoto fluid cooler + fan on a 180 °F inline thermostat. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending.
+[^steering-config]: Owner decision, 2026-05-30. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending.
 [^psc-kit]: PSC Motorsports **FHK400TJ** — 1997-2006 Jeep TJ/LJ Extreme Series full hydraulic kit, 2.75" double-ended cylinder (PSC Motorsports / pscsteering.com, accessed 2026-05-31). Kit boxes: **FHA160-S** (160cc full-hydraulic accessory kit w/ orbital valve), **PK40JP2-FH** (high-flow pump kit — **Jeep 4.0L bracket**, not used here), **SC2227K1** (2.75" × 8.0" double-ended cylinder); fluid PSC/SWEPCO 715. Smaller-tire variant is **FHK100TJ** (2.5" bore / 125cc valve, 35-42"). Pump bracket is 4.0L-specific, so it does not fit this build's Cummins R2.8 — valve and cylinder carry over.
 
 ## Related Documentation

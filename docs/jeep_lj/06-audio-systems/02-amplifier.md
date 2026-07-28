@@ -73,7 +73,7 @@ All specs from the JL Audio MV800/8i Connection Guide unless otherwise noted.[^s
 | Ch 7     | Stereo @ 4Ω      |  75W RMS | Rear Left                          |
 | Ch 8     | Stereo @ 4Ω      |  75W RMS | Rear Right                         |
 
-Each sub gets a dedicated bridged pair at 4Ω — directly matches the JL M6-8IB-S-GmTi-i-4 RMS rating (200W @ 4Ω SVC). No series wiring, no impedance mismatch, independent per-sub gain/EQ/delay via onboard DSP.
+Each sub gets a dedicated bridged pair at 4Ω. See [Subwoofer Wiring Configuration][subwoofer-wiring] for the RMS-match rationale.
 
 ## Onboard DSP
 
@@ -130,16 +130,12 @@ The 100A external CB is intentionally above the 80A internal fuse — the intern
 
 ## Mounting Location
 
-**Under rear seat (driver side), bolted directly to the floor pan — no fab plate**
+Under rear seat (driver side), bolted directly to the floor pan — no fab plate. Mounted on **vibration isolators** (rubber standoffs) into **rivnuts** set in the floor pan; the isolator standoff height raises the chassis off the floor, giving the convection air gap underneath.
 
-- Mounted on **vibration isolators** (rubber standoffs) into **rivnuts** set in the floor pan. The isolator standoff height raises the chassis off the floor, giving the convection air gap underneath; no fabricated mounting plate.
 - Allow a **14" × 8-3/8"** floor footprint (chassis L×W plus connector clearance)[^specs-manual] and **verify clearance from the seat slider rails** before drilling rivnuts.
-- Maintain at least **1" (2.5 cm) clear air space above the shell** (manual requirement for enclosed-compartment mounting); convection-cooled, no fan.
-- Power feed ~3-4 ft direct from AUX battery+ (short feed, low loss)
-- Ground return ~3-4 ft to AUX battery−. All system grounds (head unit + amp) should land at the same point per the manual to avoid ground loops.[^specs-manual]
+- Ground return should land at the same point as the head unit ground per the manual, to avoid ground loops.[^specs-manual]
 - Centroid to all 4 speakers + 2 subs — minimizes speaker wire runs
-- RCA + remote bundled together from head unit through trans tunnel (~10-12 ft, high-quality shielded RCA required to avoid alternator whine)
-- Orient with connections pointing downward where practical (preserves IPX2 rating)
+- RCA + remote bundled together from head unit through trans tunnel — shielded RCA required to avoid alternator whine
 - USB access (front of chassis) needed for TüN DSP tuning — leave service loop
 
 ## Outstanding Items
@@ -162,6 +158,7 @@ The 100A external CB is intentionally above the 80A internal fuse — the intern
 [head-unit]: 01-head-unit.md
 [speakers]: 03-speakers.md
 [subwoofer]: 04-subwoofer.md
+[subwoofer-wiring]: 04-subwoofer.md#wiring
 [aux-distribution]: ../01-power-systems/03-aux-battery-distribution/index.md
 [bt-tuning]: 06-bluetooth-tuning.md
 [product-link]: https://www.garmin.com/en-US/p/1707541/pn/010-03339-00
