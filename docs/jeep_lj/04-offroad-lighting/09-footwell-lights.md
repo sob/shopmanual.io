@@ -55,17 +55,9 @@ Pods wire to MLC-RW outputs using multi-conductor cable, in parallel with JL Aud
 | B             | Blue            | Blue LED (−)        |
 | W             | _Not connected_ | White LED (unused)  |
 
-W channel capped off - MLC-RW is RGB only. RGB can produce white when all channels on.
-
 ## Control
 
-**Controller:** JL Audio MLC-RW (rotary encoder + WiFi app)
-
-- Press & hold 2 sec: Power ON
-- Press & hold 5 sec: Power OFF
-- Rotate: Color/brightness/speed
-
-See [Audio Systems][audio-systems] for MLC-RW details.
+**Controller:** JL Audio MLC-RW (rotary encoder + WiFi app). See [Audio Systems][audio-systems] for control options and W-channel behavior.
 
 ## Outstanding Items
 
