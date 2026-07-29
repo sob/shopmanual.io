@@ -214,8 +214,6 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 ### HDP24-24-21 (original)
 
-Architectural changes (SwitchPros relocated to firewall, Firewall CONSTANT bus, keyless ignition) added new circuits that must penetrate the firewall. This section accounts for them against current connector capacity.
-
 ### Current usage
 
 | Bank | Capacity | Used | Spare |
@@ -271,17 +269,6 @@ Each SwitchPros output normally pairs a power wire (SP → load) with a ground w
 | Crimping tool | HDT-48-00 | HDT-48-00 (same) |
 
 **Net change:** ~$20 extra, same install procedure, same hole, 8 pins of future headroom.
-
-### Alternative: Split into two connectors
-
-Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for keyless signals only, keeping HDP24-24-21 for current loads. Two penetrations, two sealing surfaces, more work. Not recommended unless HDP24-24-29 is unavailable.
-
-### Implementation order
-
-1. Order HDP24-24-29 receptacle + plug + 12 additional size-16 contacts (8 extra cavities require 8 pins + 8 sockets)
-2. Build harness with original 16 circuits + the 5 new circuits
-3. Plug-seal remaining 8 cavities for moisture protection
-4. Document pin assignments (update the [Pin Assignment](#pin-assignment) section above)
 
 ---
 

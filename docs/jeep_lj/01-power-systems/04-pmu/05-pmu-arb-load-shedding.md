@@ -206,37 +206,15 @@ ELSE:
 
 ### User Communication
 
-**Dashboard Indicator Options:**
-
-1. **Simple LED:** ARB button backlight changes color
-2. **Message:** "ARB MODE - DRL/AC OFF"
-3. **Dakota Digital Display:** Custom message via BIM module
-4. **No indicator:** Silent operation (driver may not notice DRL/AC disabled)
-
-**Recommended:** Backlight color change (green → amber when load shedding active)
+**Dashboard Indicator:** ARB button backlight changes color (green → amber) when load shedding is active.
 
 ## Operational Procedures (Supplemental)
 
-**Best Practices for ARB Use:**
+**Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use.
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
-
-2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
-   - Normal: 14.0-14.4V (load shedding working)
-   - Marginal: 13.5-14.0V (acceptable, brief periods)
-   - Low: <13.5V (increase RPM or reduce loads)
-
-3. **Hot Weather:** Avoid prolonged ARB use at idle when ambient temp >95°F
-   - Radiator fan + ARB + heat soak = high total load
-   - Let engine cool between inflation cycles
-
-4. **Avoid Simultaneous High Loads:**
-   - ❌ ARB + winch (both 90A+ loads)
-   - ❌ ARB + all accessories at idle
-   - ARB + normal driving loads at 1500+ RPM
+- Normal: 14.0-14.4V (load shedding working)
+- Marginal: 13.5-14.0V (acceptable, brief periods)
+- Low: <13.5V (increase RPM or reduce loads)
 
 ## Testing & Validation
 

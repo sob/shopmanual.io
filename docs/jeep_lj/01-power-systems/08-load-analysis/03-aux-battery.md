@@ -125,7 +125,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** +5A (battery charging!)
 
-**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
+**Assessment:** Excellent - full night offroad lighting is fully covered by BCDC charging, with margin to spare.
 
 ---
 
