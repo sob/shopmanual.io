@@ -130,7 +130,6 @@ Recommended configuration for this build:
 
 - **Manual Override:** Can still manually cancel by moving lever to center or opposite direction
 - **Mounting:** GPS antenna must have clear view of sky (mount on dash or near windshield)
-- **Calibration:** May require initial calibration drive for optimal performance
 
 ### PMU DRL Auto-Off Logic
 
