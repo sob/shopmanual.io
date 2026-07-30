@@ -64,25 +64,6 @@ This document tracks intentional deviations from general electrical standards wh
    - Emergency shutoff capability
    - Maintenance safety
 
-### Winch Standards Comparison
-
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
-
 ### Factory Vehicle Precedent
 
 **OEM winch installations do NOT use external circuit breakers:**
@@ -123,16 +104,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**This is NOT an oversight or safety issue.** Do NOT flag as requiring correction in future reviews — see the Summary section below.
 
 **Documentation References:**
 
@@ -226,32 +198,15 @@ It is intentional adherence to:
 - Manual battery disconnect available
 - **Status:** Acceptable per automotive practice, enhancement recommended
 
-### Starter Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- No CB required for starter circuits in factory vehicles ✓
-- Timer relay or slow-blow CB optional enhancement ✓
-
-**Marine (ABYC E-11):**
-
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
-
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
+**Current design (no CB) is acceptable per automotive standards. Do NOT flag as critical safety issue.**
 
 **Enhancement (timer relay) is recommended but not critical:**
 
 - Adds protection for stuck solenoid scenario
 - Low cost, simple implementation
 - Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
 
 **Documentation References:**
 
@@ -291,26 +246,9 @@ It is intentional adherence to:
 - Brief duration eliminates thermal concerns
 - Direct connection minimizes voltage drop for effective heating
 
-### Grid Heater Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Direct battery connection acceptable for brief high-current loads ✓
-- Manufacturer fusible link acceptable protection ✓
-- ECM control provides intelligent management ✓
-
-**Manufacturer (Cummins):**
-
-- Direct battery connection specified ✓
-- Integrated fusible link protection ✓
-
 ### Grid Heater Review Guidance
 
-**This is intentional per manufacturer specifications.**
-
-Grid heater brief, high-current load characteristics make circuit breaker unnecessary - fusible link and ECM control provide adequate protection.
-
-**Do NOT flag as requiring circuit breaker.**
+**This is intentional per manufacturer (Cummins) specifications — brief, high-current load characteristics make circuit breaker unnecessary; fusible link and ECM control provide adequate protection. Do NOT flag as requiring circuit breaker.**
 
 **Documentation References:**
 
@@ -358,11 +296,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**This is standard automotive practice — alternators do not use output circuit breakers in factory or aftermarket applications. Do NOT flag as missing protection.**
 
 **Documentation References:**
 
@@ -400,11 +334,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ### BCDC Review Guidance
 
-**Circuit breaker AT BATTERY TERMINAL is correct protection point.**
-
-No additional CB required at BCDC - entire circuit protected from battery terminal CB.
-
-**Do NOT flag as missing protection at BCDC.**
+**Circuit breaker at battery terminal is the correct protection point — entire circuit is protected from there. Do NOT flag as missing protection at BCDC.**
 
 **Documentation References:**
 
@@ -426,7 +356,7 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 - A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
 - The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
 
-### Review Guidance
+### START+ Forward Bus Review Guidance
 
 **This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. See {{ tbd(135) }} for final busbar/breaker selection.
 
@@ -519,18 +449,9 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 - CB sizing considers duty cycle and thermal time constants
 - Brief overloads acceptable if within wire thermal limits
 
-### Review Guidance
+### SwitchPros/SafetyHub Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**This is NOT a safety issue.** The apparent CB > wire mismatch is intentional — CB is sized for device capacity and inrush tolerance, actual loads stay well within wire rating, and fault protection trips before wire damage. **Do NOT flag as requiring wire upgrade or CB downgrade.**
 
 **Documentation References:**
 
