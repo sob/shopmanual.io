@@ -123,16 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**This is NOT an oversight or safety issue** — see Manufacturer Specification, Engineering Analysis, and Standards Comparison above. **Do NOT flag as requiring correction in future reviews.**
 
 **Documentation References:**
 
@@ -241,17 +232,7 @@ It is intentional adherence to:
 
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
-
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+**Current design (no CB) is acceptable per automotive standards — do NOT flag as a critical safety issue.** Timer relay remains a recommended (not critical) enhancement; see Option 1 above.
 
 **Documentation References:**
 
@@ -306,11 +287,7 @@ It is intentional adherence to:
 
 ### Grid Heater Review Guidance
 
-**This is intentional per manufacturer specifications.**
-
-Grid heater brief, high-current load characteristics make circuit breaker unnecessary - fusible link and ECM control provide adequate protection.
-
-**Do NOT flag as requiring circuit breaker.**
+**This is intentional per manufacturer specifications** — see Engineering Analysis above. **Do NOT flag as requiring circuit breaker.**
 
 **Documentation References:**
 
@@ -358,11 +335,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**This is standard automotive practice** — see Industry Standard and Engineering Analysis above. **Do NOT flag as missing protection.**
 
 **Documentation References:**
 
@@ -400,11 +373,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ### BCDC Review Guidance
 
-**Circuit breaker AT BATTERY TERMINAL is correct protection point.**
-
-No additional CB required at BCDC - entire circuit protected from battery terminal CB.
-
-**Do NOT flag as missing protection at BCDC.**
+**Circuit breaker at the battery terminal is the correct protection point** — see Engineering Analysis above. **Do NOT flag as missing protection at BCDC.**
 
 **Documentation References:**
 
