@@ -18,47 +18,7 @@ The Jeep LJ uses a dual battery architecture with isolated power domains:
 
 **Key Principle:** The BCDC is the only connection between batteries during normal operation. AUX battery loads do NOT draw from the alternator directly.
 
-## Analysis Methodology
-
-### Realistic Scenario Approach
-
-Load analysis uses realistic operating scenarios rather than theoretical worst-case sums:
-
-1. **Identify which battery** powers each circuit (START vs AUX)
-2. **Analyze each battery separately** with its own charging source
-3. **Use realistic scenarios** (daily driving, offroad, airing up, recovery)
-4. **Account for duty cycles** (brief peaks vs continuous loads)
-5. **Consider mutually exclusive activities** (can't brake hard while winching)
-
-### Why Not Sum All Loads?
-
-**Never create "theoretical worst case" scenarios:**
-
-- Do NOT sum all loads at peak simultaneously
-- Do NOT combine mutually exclusive activities (braking + winching + radio TX)
-- Do NOT add AUX battery loads to alternator calculations
-- Do NOT flag alternator "undersizing" based on impossible scenarios
-
-**Example - WRONG:**
-
-```text
-PMU max: 253A + SwitchPros max: 127A + ARB: 90A + Winch: 400A = 870A
-Alternator: 270A = CRITICAL UNDERSIZING ❌
-```
-
-**Example - CORRECT:**
-
-```text
-START Battery Scenario (Offroad):
-PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
-Alternator: 270A = 52A margin
-
-AUX Battery Scenario (Night Offroad):
-SwitchPros: 70A, BCDC charging: 50A
-Net drain: 20A, Time to 50% SOC: 102 minutes
-```
-
-### Load Categories
+## Load Categories
 
 | Category               | Characteristic           | Analysis Approach                      |
 | :--------------------- | :----------------------- | :------------------------------------- |

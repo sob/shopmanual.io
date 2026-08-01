@@ -46,7 +46,6 @@ tags:
 1. **ECM Control (Direct):**
    - ECM triggers grid heater relay directly via pins 46/21 (~0.5-1A)
    - ECM manages timing, temperature thresholds, and duty cycle
-   - No PMU involvement - ECM knows engine temperature better than external controller
 
 2. **Grid Heater Relay (Cummins 5467024):**
    - Coil Power: ECM pins 46/21 (~1A) - direct connection
