@@ -134,24 +134,7 @@ Recommended configuration for this build:
 
 ### PMU DRL Auto-Off Logic
 
-**Purpose:** Automatically turns off DRL when headlights are activated via CT4 SW3
-
-**Implementation:** PMU programming logic (no external relay needed)
-
-**PMU Configuration:**
-
-```text
-PMU Input 7 (In 7): CT4 SW3 headlight status signal (tapped from low beam circuit)
-PMU Pin 7: Ignition RUN signal (12V switched input)
-PMU Output 23 (Out 23): DRL/Parking lights circuit
-
-Programming Logic:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out23_DRL = ON
-ELSE
-  Out23_DRL = OFF
-END
-```
+**Purpose:** Automatically turns off DRL when headlights are activated via CT4 SW3 (PMU programming logic, no external relay needed). See [PMU Programming][pmu-programming] for the implementation logic.
 
 **Installation Notes:**
 
@@ -226,3 +209,4 @@ in the [Power Systems Checklist][power-checklist].
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [drl-parking]: ../03-lighting-systems/05-drl-parking.md
 [power-checklist]: ../09-installation/01-power-systems-checklist.md
+[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md

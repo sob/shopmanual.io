@@ -66,12 +66,6 @@ Wireless TPMS module displaying real-time tire pressure for all four wheels on H
 | **BIM/IO**   | HDX control box           | BIM-22-3 input    | Proprietary | Data via daisy-chain         |
 | **Sensors**  | Wireless                  | BIM-22-3 receiver | -           | No wiring - RF communication |
 
-**No External Wiring:**
-
-- Sensors communicate wirelessly with BIM-22-3 receiver module
-- BIM-22-3 powered via BIM harness from HDX control
-- Clean installation - no wiring to wheels or suspension
-
 ## Outstanding Items
 
 {{ tbds() }}

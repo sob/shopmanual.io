@@ -123,14 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
+**This is NOT an oversight or safety issue** — see Manufacturer Specification, Standards Comparison, and Factory Vehicle Precedent above.
 
 **Do NOT flag as requiring correction in future reviews.**
 
@@ -521,14 +514,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
+**This is NOT a safety issue** — the apparent CB > wire mismatch is intentional per the Engineering Analysis, Protection Strategy, and Wire Sizing Rationale above.
 
 **Do NOT flag as requiring wire upgrade or CB downgrade.**
 
@@ -541,21 +527,7 @@ The apparent CB > wire mismatch is intentional:
 
 ---
 
-## Summary of Intentional Design Decisions
-
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
-
-**Marine standards (ABYC E-11) are referenced selectively:**
-
-- Applied to: Dual battery architecture, accessory circuits, grounding
-- **NOT applied to:** Starter, alternator, winch, grid heater (automotive components)
+**Marine standards (ABYC E-11) are referenced selectively:** applied to dual battery architecture, accessory circuits, and grounding; **not** applied to starter, alternator, winch, or grid heater (automotive components).
 
 ---
 
