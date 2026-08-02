@@ -30,22 +30,7 @@ PMU Out 23 splices to all running/marker lights:
 
 ## PMU DRL Auto-Off Logic
 
-**Purpose:** Automatically turns off DRL when headlights activate
-
-**PMU Configuration:**
-
-```text
-PMU Input 7 (In 7): CT4 SW3 headlight status signal
-PMU Pin 7: Ignition RUN signal (12V switched input)
-PMU Output 23 (Out 23): DRL/Parking lights circuit
-
-Programming Logic:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out23_DRL = ON
-ELSE
-  Out23_DRL = OFF
-END
-```
+**Purpose:** Automatically turns off DRL when headlights activate. See [PMU Programming][pmu-programming] for the logic implementation.
 
 ## Operation States
 
@@ -103,3 +88,4 @@ END
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [headlights]: 02-headlights.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
+[pmu-programming]: ../01-power-systems/04-pmu/04-pmu-programming.md
