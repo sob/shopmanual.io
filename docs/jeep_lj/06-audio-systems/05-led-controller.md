@@ -86,9 +86,6 @@ RGB LED controller for speaker lighting and footwell pods, with WiFi app and rot
 | LED     | 4x 20 AWG OFC | RGB + common |
 
 - Single cable per speaker (audio + LED)
-- Marine-grade white PVC jacket
-- Stannum-plated for corrosion resistance
-- Available: 25 ft or 250 ft spools
 
 ## Footwell Integration
 

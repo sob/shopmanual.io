@@ -16,21 +16,6 @@ Recovery equipment and air systems for offroad capability.
 | [8.3][air-lockers] | ARB Air Lockers | RD116 front/rear Dana 44 lockers |
 | [8.4][rear-air-chuck] | Rear Air Chuck | External air access in tailgate area |
 
-## System Overview
-
-**Recovery:**
-
-- Warn Zeon 10-S winch (10,000 lb capacity, 409A peak)
-- Direct AUX battery connection (1/0 AWG, no external breaker)
-- Dash rocker switch + factory wired remote
-
-**Air System:**
-
-- ARB Twin Compressor (brushless, 90A draw)
-- 1-gallon air tank (135-150 PSI automatic pressure)
-- ARB front/rear air lockers (RD116)
-- Rear air chuck plate for tire inflation
-
 ## Power Distribution
 
 | Component      | Power Source            | Protection      | Control            |

@@ -41,13 +41,10 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 ## Features
 
-- AM/FM radio with RDS
 - Bluetooth audio streaming and hands-free calling
 - Multi-zone audio (3 zones + subwoofer)
 - DSP with presets
 - NMEA 2000 integration
-- PartyBus networking
-- USB audio playback
 
 ## RCA Pre-Outs
 
@@ -67,13 +64,6 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 | Ground (Black)    | 18 AWG   | Dash ground          | Same ground as MLC-RW        |
 | Antenna           | Motorola | Factory antenna      | Fender or windshield         |
 | Remote Out        | 18 AWG   | To amplifier         | Turn-on signal               |
-
-## Power Configuration
-
-Head unit uses single BODY PDU circuit with ignition sense:
-
-- **CB30 (15A, CONSTANT):** Yellow wire - main power (~15A max)
-- **Ignition sense (SWITCHED bus):** Red wire - tells head unit when to turn on/off
 
 Head unit has internal power management - draws full power when ignition sense is active, minimal standby current (~1A) when off for memory retention.
 
