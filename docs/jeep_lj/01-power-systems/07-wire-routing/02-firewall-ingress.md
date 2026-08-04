@@ -210,78 +210,9 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 ## Pin Budget Audit (Historical) {#pin-budget-audit}
 
-*This audit drove the decision to upsize to HDP24-24-29 + add dedicated SwitchPros HDP24-18-14. Final architecture documented above.*
+*Final architecture documented above. Kept for context on the upsize decision.*
 
-### HDP24-24-21 (original)
-
-Architectural changes (SwitchPros relocated to firewall, Firewall CONSTANT bus, keyless ignition) added new circuits that must penetrate the firewall. This section accounts for them against current connector capacity.
-
-### Current usage
-
-| Bank | Capacity | Used | Spare |
-|:-----|:--------:|:----:|:-----:|
-| Size 16 (14-20 AWG, 13A) | 17 | 16 | 1 (pin 2) |
-| Size 12 (12-14 AWG, 25A) | 4 | 0 | 4 (all reserved) |
-| **TOTAL** | **21** | **16** | **5** |
-
-### Pending additions
-
-| Circuit | Direction | Gauge | Pins | Source | Destination |
-|:--------|:----------|:-----:|:----:|:-------|:------------|
-| SwitchPros OUT-3 (fog light) | Cabin → EB → front bumper | 14 AWG | 1 (chassis ground at light) | SP at firewall | BD S8 fog |
-| SwitchPros OUT-17 (front locker, low-side) | Cabin → EB → front axle | 18 AWG | 1 (chassis ground at solenoid) | SP at firewall | Front ARB solenoid |
-| SwitchPros OUT-6 (front rocks subset) | Cabin → EB → front rocks | 14 AWG | 1 (chassis ground at lights) | SP at firewall | Front bumper rock + front wheel well rocks |
-| Boomerang fob present | Cabin → EB | 18 AWG | 1 | Bullet 230 (cabin) | PMU In 4 |
-| Gated start return | Cabin → EB | 18 AWG | 1 | Brake switch start tap | EB P/N relay |
-| **TOTAL NEW** | | | **5** | | |
-
-!!! note "Ground strategy for forward-going SwitchPros outputs"
-Each SwitchPros output normally pairs a power wire (SP → load) with a ground wire (load → SP Ground Bus). For loads forward of the firewall, this doubles the firewall pin count per output.
-
-    **Recommended:** Ground forward-mounted loads to chassis locally. The SwitchPros Ground Bus has a 1/0 AWG bond to chassis at the firewall, so chassis-grounded loads share the same reference. This halves the pin count for forward-going SP outputs (1 pin per output instead of 2).
-
-    Trade-off: relies on chassis ground continuity from front bumper / axle / wheel wells back to the firewall bond. Already required for engine and chassis safety, so no incremental risk.
-
-### Capacity analysis
-
-| Scenario | Size-16 pins used | Spare | Headroom |
-|:---------|:-----------------:|:-----:|:--------:|
-| **Today (no expansion)** | 16 of 17 | 1 | Minimal |
-| **After 5 new circuits (chassis-gnd strategy)** | 21 of 21 (filling pin 2 + 4 size-12 reduced) | 0 | **NONE** |
-| **After 8 new circuits (separate-gnd strategy for SP outputs)** | 24 of 21 | -3 | **OVER CAPACITY** |
-
-### Verdict
-
-**Current HDP24-24-21 will work but leaves zero future headroom.**
-
-- The 1 size-16 spare (pin 2) + 4 size-12 reserved cavities can accommodate all 5 new circuits *only* if size-12 cavities accept 18 AWG wires via reducer crimps or 12 AWG dummy wires
-- Any future expansion (additional sensors, accessories, telematics) will require a connector change anyway
-
-### Recommendation
-
-**Upsize to Deutsch HDP24-24-29** (same shell size, same firewall hole, 29 size-16 contacts).
-
-| Aspect | HDP24-24-21 (current) | HDP24-24-29 (proposed) |
-|:-------|:----------------------|:-----------------------|
-| Total contacts | 21 (17 size-16 + 4 size-12) | 29 (all size-16) |
-| Used after pending additions | 21 of 21 (full) | 21 of 29 |
-| Future headroom | 0 | 8 |
-| Firewall hole size | 1.5" diameter | 1.5" diameter (same) |
-| Approx connector cost | ~$60 (recpt + plug) | ~$80 (recpt + plug) |
-| Crimping tool | HDT-48-00 | HDT-48-00 (same) |
-
-**Net change:** ~$20 extra, same install procedure, same hole, 8 pins of future headroom.
-
-### Alternative: Split into two connectors
-
-Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for keyless signals only, keeping HDP24-24-21 for current loads. Two penetrations, two sealing surfaces, more work. Not recommended unless HDP24-24-29 is unavailable.
-
-### Implementation order
-
-1. Order HDP24-24-29 receptacle + plug + 12 additional size-16 contacts (8 extra cavities require 8 pins + 8 sockets)
-2. Build harness with original 16 circuits + the 5 new circuits
-3. Plug-seal remaining 8 cavities for moisture protection
-4. Document pin assignments (update the [Pin Assignment](#pin-assignment) section above)
+The original HDP24-24-21 (17 size-16 + 4 size-12) was at 16/17 size-16 capacity when SwitchPros relocation, the Firewall CONSTANT bus, and keyless ignition added 5 new circuits — leaving zero headroom even before accounting for the doubled pin cost of grounding forward SwitchPros loads back through the connector. A two-connector split (small secondary connector for keyless signals only) was considered and rejected as extra sealing surfaces for no real benefit. Upsizing to HDP24-24-29 (same shell size, same firewall hole, same crimping tool) cost ~$20 more than the 24-21 and bought 8 pins of headroom, which is why it was adopted.
 
 ---
 
