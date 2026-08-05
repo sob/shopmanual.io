@@ -106,8 +106,6 @@ These loads are **NOT** included in running alternator calculations:
 | Winch Recovery    | 265A       | 50A  | -215A      | 30-sec pulls   | Brief OK  |
 | Camp Mode         | 27A        | 0A   | -27A       | 76 min         | Limited   |
 
-**Key Insight:** 50A BCDC enables night highway charging and 102-minute night offroad runtime.
-
 ## Related Documentation
 
 - [Combined Scenarios][scenarios] - Multi-battery load analysis

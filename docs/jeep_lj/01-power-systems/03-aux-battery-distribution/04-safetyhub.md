@@ -61,8 +61,6 @@ Wire and CB sized for full 150A SafetyHub capacity (current load 90A). Provides 
 
 **Utilization:** 90A / 150A = 60%
 
-**Future Capacity:** 60A additional capacity available (150A max - 90A current = 60A headroom)
-
 !!! info "Winch Main Power"
 Winch motor power (409A peak) connects directly to AUX battery positive terminal with no external circuit breaker per WARN manufacturer specifications. See [STANDARDS-EXCEPTIONS.md][standards-exceptions] and [Recovery Systems][recovery-systems] for complete protection strategy.
 
