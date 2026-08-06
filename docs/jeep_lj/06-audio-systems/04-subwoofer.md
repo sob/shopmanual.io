@@ -57,7 +57,7 @@ Amp Ch 1+2 (+/−) bridged → Sub A (+/−)
 Amp Ch 3+4 (+/−) bridged → Sub B (+/−)
 ```
 
-Total amp output 400W into the pair (200W per sub) — exact RMS match, no headroom waste from series resistance, independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
+Total amp output: 400W into the pair (200W per sub), with independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
 
 ## Infinite Baffle Requirements
 
@@ -65,14 +65,6 @@ Total amp output 400W into the pair (200W per sub) — exact RMS match, no headr
 - **Installation type:** No dedicated enclosure required
 - **Ideal location:** Rear quarter panels above wheel wells, firing inward into cabin
 - **IB chamber:** Rear cargo area / behind quarter trim (effectively unlimited volume in an LJ)
-
-## Features
-
-- Transflective RGB LED lighting (via MLC-RW)
-- Gunmetal trim ring with titanium sport grille
-- Marine-grade construction
-- Mica-filled polypropylene cone
-- Synthetic rubber surround
 
 ## Wiring
 
