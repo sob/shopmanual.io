@@ -60,8 +60,7 @@ tags:
   - **Pull lever** → Activates headlights (low beam)
   - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW3 output
   - CT4 SW3 output → LP6 Pin 1 (low beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 3.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
+  - CT4 handles switching internally
   - Latching on/off control (pull once to turn on, pull again to turn off)
   - Wire gauge: 14 AWG from CT4 SW3 output to LP6 headlights
   - When active: Also triggers DRL cutoff relay to disable DRL circuit (SW3 output tapped to relay coil)
@@ -70,8 +69,7 @@ tags:
   - **Push lever** (while headlights on) → Activates high beams
   - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW4 output
   - CT4 SW4 output → LP6 Pin 4 (high beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 5.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
+  - CT4 handles switching internally
   - CT4 provides mutual exclusivity (high beam disables low beam automatically)
   - Momentary or latching toggle (programmable)
   - Wire gauge: 14 AWG from CT4 SW4 output to LP6 headlights
@@ -86,8 +84,6 @@ Automatic ignition-controlled circuit that powers:
 - Maxbilt tail light RED wire (marker/parking function)
 
 **Power Source:** PMU Out 23 (7A capacity, ~2.6A load, auto with ignition)
-
-**DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates (headlights on = DRL off)
 
 Wire gauge: 14 AWG from PMU to junction, 16 AWG to each light
 
@@ -155,10 +151,8 @@ END
 
 **Installation Notes:**
 
-- Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
 - Run wire from PMU Out 23 to DRL junction
 - Total DRL/parking circuit load: ~2.6A — see [DRL & Parking][drl-parking] for the itemized load breakdown and wiring
-- PMU Out 23 capacity: 7A (sufficient for the ~2.6A load)
 
 ## Installation Checklist
 

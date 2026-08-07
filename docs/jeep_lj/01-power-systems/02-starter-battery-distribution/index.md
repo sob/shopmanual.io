@@ -18,7 +18,7 @@ The START battery (driver rear wheel well) provides power for critical engine an
 3. **[START+ Forward Distribution Bus](#start-forward-bus)** (150A master CB → single feed → engine-bay busbar) → radiator fan (60A), iBooster main (50A), TCU (25A) — relocated off the PMU
 4. **Direct low-current** → ECM, grid heater (fusible link protection)
 
-See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs mounted in rear wheel well within 7" of battery (code compliant).
+See [Circuit Breakers][circuit-breakers] for complete CB specifications.
 
 !!! info "Single Source of Truth"
 This page is the authoritative source for all START battery wire specs (gauge, distance, voltage drop). Component pages reference here. For battery specs see [Section 1.1][batteries]. For ground bus bars see [Section 1.5][grounding].
@@ -53,7 +53,7 @@ The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct
 The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a dedicated fan controller ({{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
 
 !!! info "Shared forward feed — intentional tradeoff"
-    The three loads share one master feed + busbar (a passive cable, breaker, and bus bar — no active electronics), versus three independent runs from the battery. This is the same tradeoff the [AUX side][constant-bus] accepts, and is far more robust than their former shared dependency on the PMU module. Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions].
+    The three loads share one master feed + busbar (a passive cable, breaker, and bus bar — no active electronics), versus three independent runs from the battery. This is the same tradeoff the [AUX side][constant-bus] accepts, and removes the prior shared dependency on the PMU module (a single point of failure for all three loads). Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions].
 
 [^fwd-bus-vdrop]: Master feed 2 AWG @ ~108A brief peak (~68A continuous), ~8 ft, 60°C-derated (×1.2) ≈ 1.3% — sized on the combined load. Load feeds are short from the engine-bay bus, so per-load drop is negligible: fan 4 AWG @ 53A, iBooster 8 AWG @ 40A brief, TCU 12 AWG @ 15A. Final master-feed length and breaker selective-coordination pending {{ tbd(136) }} and {{ tbd(135) }}.
 

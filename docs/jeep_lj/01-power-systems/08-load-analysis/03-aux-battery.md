@@ -125,7 +125,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** +5A (battery charging!)
 
-**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
+**Assessment:** Excellent - full night offroad lighting stays within 50A BCDC charging; battery maintains charge even with all lights on.
 
 ---
 
@@ -177,7 +177,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC:** 108Ah / 60A = **108 minutes** of continuous compressor operation
 
-**Assessment:** Extended air-up no longer a concern. Can run compressor for nearly 2 hours before reaching 20% SOC.
+**Assessment:** Minimal battery impact - can run compressor for nearly 2 hours before reaching 20% SOC.
 
 ---
 
@@ -229,7 +229,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC (with solar):** 108Ah / 21A = **5+ hours** (daytime only)
 
-**Assessment:** Camp mode now practical. 4+ hours of music, lights, and charging without engine. For extended camping:
+**Assessment:** 4+ hours of music, lights, and charging without engine. For extended camping:
 
 - Solar extends daytime runtime significantly
 - Idle engine 30 min to recover ~25Ah
