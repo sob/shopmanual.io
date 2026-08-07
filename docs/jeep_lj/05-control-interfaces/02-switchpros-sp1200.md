@@ -114,8 +114,7 @@ tags:
 See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CONSTANT Bus][firewall-bus] for downstream distribution.
 
 - **Power:** AUX battery+ → 300A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
-- **Ground (logic reference):** 4 AWG wire from SwitchPros power module → chassis ground at firewall (short run, per manufacturer spec)
-- **Load returns:** Each output's ground wire returns to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
+- **Ground:** see callout above (logic reference only); load returns go to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
 
 ## Trigger Input Assignments
 
@@ -158,7 +157,7 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control
 
-ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
+ARB air tank pressure switch automatically activates the compressor to maintain tank pressure — see setpoints below.
 
 **Wiring:**
 
@@ -168,7 +167,7 @@ ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 
 **Configuration:**
 
-Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
+Program TRIGGER-3 to activate the compressor on pressure switch closure:
 
 **SwitchPros Logic:**
 
