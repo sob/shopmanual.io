@@ -86,25 +86,14 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 ### Engagement Sequence
 
-**Front Locker:**
+Press and hold the button to open the solenoid; pressurized air locks the differential **instantly** (no waiting for compressor). Release to disengage.
 
-1. Press Button 9 (OUTPUT-17)
-2. Solenoid opens, pressurized air from tank → front locker
-3. Front differential locks **instantly** (no waiting for compressor)
-4. Release Button 9 to disengage
+| Locker | Button    | SwitchPros Output |
+| ------ | --------- | ----------------- |
+| Front  | Button 9  | OUTPUT-17         |
+| Rear   | Button 10 | OUTPUT-10         |
 
-**Rear Locker:**
-
-1. Press Button 10 (OUTPUT-10)
-2. Solenoid opens, pressurized air from tank → rear locker
-3. Rear differential locks **instantly**
-4. Release Button 10 to disengage
-
-**Automatic Refill:**
-
-- After multiple locker uses, tank pressure drops below 135 PSI
-- Pressure switch automatically activates compressor to refill tank
-- No user action required
+Tank refill after locker use is automatic — see [Air Compressor: Automatic Pressure Control][air-compressor-auto] for the pressure switch logic.
 
 ## Safety Considerations
 
@@ -129,4 +118,5 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 - [SwitchPros][switchpros] - Locker control (OUTPUT-10, OUTPUT-17)
 
 [air-compressor]: 02-air-compressor.md
+[air-compressor-auto]: 02-air-compressor.md#automatic-pressure-control
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md

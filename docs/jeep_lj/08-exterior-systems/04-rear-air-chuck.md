@@ -9,7 +9,7 @@ tags:
 
 # 8.4 Rear Air Chuck {#rear-air-chuck}
 
-External air access plate mounted in the tailgate area for tire inflation and air tool use.
+External air access plate mounted in the tailgate area for tire inflation, air tool use, and trail-side air sharing with other vehicles.
 
 /// html | div.product-info
 
@@ -20,13 +20,6 @@ External air access plate mounted in the tailgate area for tire inflation and ai
 **Air Source:** [Air Compressor][air-compressor] via manifold (1/4" air line)
 
 ///
-
-## Purpose
-
-- External access to compressed air without opening the vehicle
-- Convenient tire inflation at each wheel
-- Air tool connection point
-- Trail-side air sharing with other vehicles
 
 ## Specifications
 
