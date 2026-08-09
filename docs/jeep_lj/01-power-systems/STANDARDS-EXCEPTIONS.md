@@ -44,25 +44,10 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Protection Mechanisms:**
 
-1. **Internal Thermal Cutoff**
-   - Winch motor has integrated thermal protection
-   - Trips before windings reach damage temperature
-   - Automatic reset when motor cools
-
-2. **Contactor Disconnect**
-   - Isolates winch when not in use
-   - Prevents parasitic drain
-   - Manual control provides emergency stop
-
-3. **Cable Self-Protection**
-   - 1/0 AWG fuses open at ~800A+ (thermal runaway)
-   - Well above 409A operating peak
-   - Adequate for brief loads per SAE J1128
-
-4. **Manual Battery Disconnect**
-   - Master disconnect at AUX battery terminal
-   - Emergency shutoff capability
-   - Maintenance safety
+1. **Internal thermal cutoff** - trips before winding damage, auto-resets when cool
+2. **Contactor disconnect** - isolates winch when not in use, prevents parasitic drain
+3. **Cable self-protection** - 1/0 AWG fuses open at ~800A+, well above the 409A peak
+4. **Manual battery disconnect** - master disconnect at AUX battery terminal for emergency shutoff
 
 ### Winch Standards Comparison
 
@@ -336,33 +321,14 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 **Why No Circuit Breaker Required:**
 
-1. **Alternator Self-Limiting**
-   - Maximum output: 270A (design limit)
-   - Cannot exceed rated output regardless of load
-   - Internal voltage regulator prevents overcharge
-
-2. **Cable Sizing**
-   - Wire: 2/0 AWG (375A continuous rating)
-   - Adequate for 270A continuous output
-   - No thermal concerns at rated load
-
-3. **Battery Acts as Buffer**
-   - Absorbs brief load spikes
-   - Prevents alternator overload
-   - Natural load smoothing
-
-4. **Factory Practice**
-   - No OEM vehicles use alternator output circuit breakers
-   - Proven safe over millions of vehicles
-   - Industry standard approach
+1. **Self-limiting output** - 270A design maximum, cannot exceed regardless of load; internal regulator prevents overcharge
+2. **Cable sizing** - 2/0 AWG (375A continuous) covers the 270A output with no thermal concern
+3. **Battery acts as buffer** - absorbs brief load spikes, smooths demand on the alternator
+4. **Factory practice** - no OEM vehicle uses an alternator output circuit breaker
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Standard automotive practice — do NOT flag as missing protection.**
 
 **Documentation References:**
 
@@ -421,10 +387,7 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 ### Engineering Rationale
 
-- The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
-- Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
-- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
-- The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
+Three independent feeds would need ~9 stacked lugs on the battery post — impractical to service. A single master feed + forward busbar instead mirrors the AUX-side two-stage architecture, keeping each load's breaker near its load; the bus itself is a passive bar, with the feed staying protected by a 150A master breaker within 7" of the battery. Full rationale: [START+ Forward Distribution Bus][starter-battery-distribution].
 
 ### Review Guidance
 

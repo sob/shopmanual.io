@@ -42,7 +42,7 @@ Push-button ignition for the Cummins R2.8 + 8HP70 build. Replaces the factory ke
 | Detection Range | ~10 ft (iTag fob) |
 | Auto-arm | 60 sec after fob leaves range |
 | Module Dimensions | ~5.5" × 3" × 1.25" |
-| Wiring | Heavy-duty Molex high-current connectors, 12 GA bus wiring |
+| Wiring | Molex high-current connectors, 12 GA bus wiring |
 | Mounting | **Dakota Digital HDPE panel, under dash** — co-located with the HDX control module (panel detailed in the [HDX Control][hdx-control] plan). Vendor mandate: cabin only, never engine bay |
 | Kit Contents | ICM + 2 iTag fobs + Start Button (36" pre-wired harness) + Programming Button + Bypass Card + 4-digit PIN |
 
