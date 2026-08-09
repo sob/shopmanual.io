@@ -33,7 +33,7 @@ Usable capacity (80% DOD):  108Ah
 Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
+The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue.
 
 **Impact Without Load Shedding:**
 
@@ -219,10 +219,7 @@ ELSE:
 
 **Best Practices for ARB Use:**
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
+1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation for more alternator headroom and faster fill
 
 2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
    - Normal: 14.0-14.4V (load shedding working)

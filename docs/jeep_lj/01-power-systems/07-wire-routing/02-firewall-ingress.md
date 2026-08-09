@@ -252,8 +252,6 @@ Each SwitchPros output normally pairs a power wire (SP → load) with a ground w
 
 ### Verdict
 
-**Current HDP24-24-21 will work but leaves zero future headroom.**
-
 - The 1 size-16 spare (pin 2) + 4 size-12 reserved cavities can accommodate all 5 new circuits *only* if size-12 cavities accept 18 AWG wires via reducer crimps or 12 AWG dummy wires
 - Any future expansion (additional sensors, accessories, telematics) will require a connector change anyway
 
@@ -269,8 +267,6 @@ Each SwitchPros output normally pairs a power wire (SP → load) with a ground w
 | Firewall hole size | 1.5" diameter | 1.5" diameter (same) |
 | Approx connector cost | ~$60 (recpt + plug) | ~$80 (recpt + plug) |
 | Crimping tool | HDT-48-00 | HDT-48-00 (same) |
-
-**Net change:** ~$20 extra, same install procedure, same hole, 8 pins of future headroom.
 
 ### Alternative: Split into two connectors
 
