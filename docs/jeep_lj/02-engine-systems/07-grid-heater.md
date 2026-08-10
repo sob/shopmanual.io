@@ -93,13 +93,7 @@ flowchart LR
 
 ## Power Distribution
 
-**Bypasses all distribution systems:**
-
-- Does NOT use CONSTANT bus bar
-- Does NOT use PMU outputs
-- Direct battery connection with fusible link protection
-
-**Reason:** High current draw (40-80A) for very short duration (3-5 seconds). Direct connection minimizes voltage drop and connection complexity.
+Bypasses the CONSTANT bus bar and PMU outputs (see Main Power above) — the 40-80A draw for 3-5 seconds is too brief to justify the added voltage drop and connection complexity of routing through them.
 
 ## Outstanding Items
 

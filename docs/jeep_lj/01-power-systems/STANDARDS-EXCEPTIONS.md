@@ -68,8 +68,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Marine (ABYC E-11):**
 
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
+- Would require 400A circuit breaker for all loads (not applicable — automotive standards apply; see Summary below)
 
 **Automotive (SAE J1128):**
 
@@ -82,17 +81,6 @@ This document tracks intentional deviations from general electrical standards wh
 - No external protection required ✓
 - Direct battery connection specified ✓
 - Internal protection designed for fault scenarios ✓
-
-### Factory Vehicle Precedent
-
-**OEM winch installations do NOT use external circuit breakers:**
-
-- **Ford Super Duty** with factory winch prep: No CB on winch circuit
-- **RAM Power Wagon** factory winch: No external CB, direct battery connection
-- **Toyota TRD Pro** winch ready: No CB specified in prep package
-- **Jeep Rubicon** winch-capable: Power runs via relay, no CB
-
-**Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
 
 ### Winch Fault Scenarios Covered
 
@@ -236,8 +224,7 @@ It is intentional adherence to:
 
 **Marine (ABYC E-11):**
 
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
+- Would require circuit breaker or fuse (not applicable — automotive standards apply; see Summary below)
 
 ### Starter Review Guidance
 
@@ -360,8 +347,6 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 **This is standard automotive practice.**
 
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
 **Do NOT flag as missing protection.**
 
 **Documentation References:**
@@ -426,7 +411,7 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 - A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
 - The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
 
-### Review Guidance
+### START+ Forward Bus Review Guidance
 
 **This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. See {{ tbd(135) }} for final busbar/breaker selection.
 
@@ -519,7 +504,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 - CB sizing considers duty cycle and thermal time constants
 - Brief overloads acceptable if within wire thermal limits
 
-### Review Guidance
+### SwitchPros/SafetyHub Review Guidance
 
 **This is NOT a safety issue.**
 
