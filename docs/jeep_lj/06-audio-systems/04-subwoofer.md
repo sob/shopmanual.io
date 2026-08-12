@@ -57,8 +57,6 @@ Amp Ch 1+2 (+/−) bridged → Sub A (+/−)
 Amp Ch 3+4 (+/−) bridged → Sub B (+/−)
 ```
 
-Total amp output 400W into the pair (200W per sub) — exact RMS match, no headroom waste from series resistance, independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
-
 ## Infinite Baffle Requirements
 
 - **Minimum air volume:** 0.75 cu ft per sub (1.5 cu ft pair)

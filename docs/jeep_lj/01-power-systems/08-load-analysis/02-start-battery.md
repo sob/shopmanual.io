@@ -204,7 +204,7 @@ The following high-current loads are **NOT** supplied by the alternator:
 | Starter                  | 400-600A  | START battery | Cranking only, engine off |
 | Grid Heater              | 250A      | START battery | 3-5 sec cold start only   |
 
-**Architecture:** The dual battery system isolates high-current accessory loads (AUX battery) from engine/safety loads (START battery). The BCDC charger (50A max) is the only connection between batteries during normal operation.
+**Architecture:** See [Load Analysis Overview][load-overview] for the dual-battery isolation architecture — AUX loads never draw from the alternator.
 
 ## Key-Off Parasitic Budget (START Battery)
 
@@ -235,6 +235,7 @@ Loads on the **CONSTANT** (always-on) feed continue to draw with the ignition of
 [bcdc]: ../01-power-generation/03-bcdc.md
 [aux-load-analysis]: 03-aux-battery.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
+[load-overview]: index.md
 
 [^pc1500-cap]: Odyssey PC1500 capacity **68 Ah** (20-hr rate), 34 Ah usable at 50% DOD — see [Batteries][batteries] (Odyssey Extreme Series spec table, checked 2026-05-30).
 
