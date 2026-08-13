@@ -91,12 +91,6 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 - **Cable Length:** ~6 ft (included with BCDC)
 - **Polarity:** Reversible - either orientation works
 
-**Installation Location:**
-
-- **Mount Position:** AUX battery positive terminal
-- **Attachment:** Ring terminal under battery terminal bolt
-- **Why Positive Terminal:** Measures both voltage and temperature at the battery for accurate charge control
-
 **Why Required:**
 
 - AGM batteries are temperature-sensitive during charging
@@ -104,9 +98,9 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 - Undercharging at low temps leads to sulfation
 - BCDC adjusts charge voltage based on sensor reading (temperature compensation)
 
-**Installation Notes:**
+**Installation:**
 
-1. Install ring terminal on AUX battery positive terminal bolt
+1. Install ring terminal under the AUX battery positive terminal bolt (measures voltage and temperature at the battery for accurate charge control)
 2. Route sensor cable to BCDC (short run - both in passenger rear wheel well)
 3. Plug into BCDC temperature sensor port (2-pin connector)
 

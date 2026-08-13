@@ -77,7 +77,6 @@ tags:
 
 ## Installation Notes
 
-- Direct battery ground recommended for best audio quality
 - PMU output has integrated 5A protection - no inline fuse needed
 
 ## Outstanding Items
