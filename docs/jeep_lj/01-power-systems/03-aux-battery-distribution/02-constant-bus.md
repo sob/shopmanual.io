@@ -29,12 +29,7 @@ Forward distribution bus mounted on the firewall (passenger cabin side). Receive
 **Location:** Firewall (cabin side, passenger area), co-located with SwitchPros power module, BODY PDU, and JL Audio amplifier.
 
 !!! info "Two-Stage Distribution Architecture"
-The AUX battery has no local CONSTANT bus. Loads are distributed in two stages:
-
-    1. **AUX battery+ → inline CBs → 3 protected feeds** (forward to this firewall bus, local to SafetyHub, local to audio amp)
-    2. **Firewall CONSTANT bus → per-load CBs → 2 distribution controllers** (SwitchPros + BODY PDU)
-
-    The firewall bus is fed by a 2/0 AWG cable through a 300A master CB at the AUX battery (within 7" of battery terminal). This places power distribution *near the loads* (most SwitchPros outputs are forward, BODY PDU is at firewall; audio amp is fed directly from the AUX battery, not from this bus) and keeps the cabin trunk to a single heavy cable instead of multiple medium-gauge feeds.
+This bus is stage two of the AUX battery's two-stage distribution (battery → inline CBs → this bus → per-load CBs). See [AUX Battery Distribution][rear-battery] for the full architecture and battery-side wiring.
 
 ## Specifications
 

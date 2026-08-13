@@ -358,11 +358,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Do NOT flag as missing protection** — standard automotive practice; see Engineering Analysis above.
 
 **Documentation References:**
 
@@ -400,11 +396,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ### BCDC Review Guidance
 
-**Circuit breaker AT BATTERY TERMINAL is correct protection point.**
-
-No additional CB required at BCDC - entire circuit protected from battery terminal CB.
-
-**Do NOT flag as missing protection at BCDC.**
+**Do NOT flag as missing protection at BCDC** — the battery-terminal CB protects the entire circuit; see Protection Location above.
 
 **Documentation References:**
 
@@ -521,16 +513,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Do NOT flag as requiring wire upgrade or CB downgrade** — the apparent CB > wire mismatch is intentional; see Engineering Analysis above.
 
 **Documentation References:**
 
