@@ -33,13 +33,12 @@ Usable capacity (80% DOD):  108Ah
 Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
+The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue.
 
 **Impact Without Load Shedding:**
 
-- Minor: AUX battery still has comfortable margin at 50A BCDC
+- AUX battery still has comfortable margin at 50A BCDC
 - START battery loads reduce BCDC charging efficiency slightly
-- Load shedding maximizes available margin for extended sessions
 
 ## Solution Overview
 
