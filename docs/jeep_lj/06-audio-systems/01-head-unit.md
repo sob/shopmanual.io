@@ -70,12 +70,7 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 
 ## Power Configuration
 
-Head unit uses single BODY PDU circuit with ignition sense:
-
-- **CB30 (15A, CONSTANT):** Yellow wire - main power (~15A max)
-- **Ignition sense (SWITCHED bus):** Red wire - tells head unit when to turn on/off
-
-Head unit has internal power management - draws full power when ignition sense is active, minimal standby current (~1A) when off for memory retention.
+Internal power management draws full power when ignition sense is active; standby current is ~1A when off, for memory retention.
 
 ## Outstanding Items
 
