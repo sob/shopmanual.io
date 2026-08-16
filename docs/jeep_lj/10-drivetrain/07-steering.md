@@ -36,8 +36,6 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 
 ### Hydraulic Pump
 
-> **Pump is engine-specific — the kit pump does not fit.** The FHK400TJ kit ships a **PK40JP2-FH** pump kit built for the Jeep **4.0L** accessory drive. This build runs a **Cummins R2.8**, so the kit pump/bracket does not bolt up — a Cummins-compatible PSC pump must be sourced. The kit's orbital valve and cylinder are engine-agnostic and carry over unchanged.
-
 | Specification | Value |
 | :------------ | :---- |
 | Manufacturer | PSC Motorsports |
@@ -104,7 +102,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 - [ ] Document hydraulic line routing
 
 [^steering-config]: Owner decision, 2026-05-30 — full-hydro kit is PSC pump + PSC orbital valve + PSC double-ended ram; Busted Knuckle Off-Road steering stops limit ram stroke to Dana 44 spec; Artec Industries Dana 60 ram mount cut down to the Dana 44; Mishimoto fluid cooler + fan on a 180 °F inline thermostat. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending.
-[^psc-kit]: PSC Motorsports **FHK400TJ** — 1997-2006 Jeep TJ/LJ Extreme Series full hydraulic kit, 2.75" double-ended cylinder (PSC Motorsports / pscsteering.com, accessed 2026-05-31). Kit boxes: **FHA160-S** (160cc full-hydraulic accessory kit w/ orbital valve), **PK40JP2-FH** (high-flow pump kit — **Jeep 4.0L bracket**, not used here), **SC2227K1** (2.75" × 8.0" double-ended cylinder); fluid PSC/SWEPCO 715. Smaller-tire variant is **FHK100TJ** (2.5" bore / 125cc valve, 35-42"). Pump bracket is 4.0L-specific, so it does not fit this build's Cummins R2.8 — valve and cylinder carry over.
+[^psc-kit]: PSC Motorsports **FHK400TJ** — 1997-2006 Jeep TJ/LJ Extreme Series full hydraulic kit, 2.75" double-ended cylinder (PSC Motorsports / pscsteering.com, accessed 2026-05-31). Kit boxes: **FHA160-S** (160cc full-hydraulic accessory kit w/ orbital valve), **PK40JP2-FH** (high-flow pump kit — **Jeep 4.0L bracket**, not used here), **SC2227K1** (2.75" × 8.0" double-ended cylinder); fluid PSC/SWEPCO 715. Smaller-tire variant is **FHK100TJ** (2.5" bore / 125cc valve, 35-42").
 
 ## Related Documentation
 
