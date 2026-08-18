@@ -52,12 +52,7 @@ Wired in parallel with Maxbilt Round Trail Tail WHITE (reverse) and WolfBox came
 
 See [Tail/Brake/Reverse Lights][tail-brake-reverse] for PMU reverse circuit details.
 
-**Load Verification:**
-
-- Squadron Sport pair: 2.8A
-- Maxbilt WHITE: ~2A
-- WolfBox trigger: negligible
-- **Total: ~5A** (PMU Out 22 capacity: 7A, 71% utilization)
+**Load Verification:** Shares PMU Out 22 with the Maxbilt WHITE reverse wire and WolfBox trigger — see [Tail/Brake/Reverse Lights][tail-brake-reverse] for the full load breakdown.
 
 ## Related Documentation
 
