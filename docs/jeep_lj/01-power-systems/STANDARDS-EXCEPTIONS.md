@@ -251,8 +251,6 @@ It is intentional adherence to:
 
 **Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
 
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
-
 **Documentation References:**
 
 - [Starter System][starter-system] - Complete starter specifications and wiring (line 1-125)
@@ -353,14 +351,9 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 4. **Factory Practice**
    - No OEM vehicles use alternator output circuit breakers
-   - Proven safe over millions of vehicles
    - Industry standard approach
 
 ### Alternator Review Guidance
-
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
 
 **Do NOT flag as missing protection.**
 
@@ -542,15 +535,6 @@ The apparent CB > wire mismatch is intentional:
 ---
 
 ## Summary of Intentional Design Decisions
-
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
 
 **Marine standards (ABYC E-11) are referenced selectively:**
 

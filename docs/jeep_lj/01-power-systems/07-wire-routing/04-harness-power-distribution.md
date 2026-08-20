@@ -26,8 +26,6 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Route:** Passenger rear wheel well (AUX battery) → up inside passenger rear quarter sill → forward along **inside floor board / side wall** (passenger side) → A-pillar area → **single sealed 2-piece grommet through firewall** (continuous cables, no firewall break) → engine bay → forward along passenger inner fender → through grille area → front bumper (winch portion only)
 
-**Length:** ~13 ft to firewall (all 3 cables); ~13 ft additional for winch cables continuing to bumper
-
 **Contains:**
 
 | Wire | Gauge | Color | Function | Termination at battery | Termination at firewall | Continues to |
@@ -36,13 +34,13 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 | Winch power (+) | 1/0 AWG | Red | AUX battery+ → winch contactor B+ | Ring lug to AUX battery+ stud | Continuous through grommet — no firewall break | Lug to winch contactor B+ |
 | Winch ground (−) | 1/0 AWG | Black | AUX battery- → winch contactor B− | Ring lug to AUX battery- stud | Continuous through grommet — no firewall break | Lug to winch motor / chassis at front |
 
-**Firewall pass-through:** **Single sealed 2-piece rubber grommet** sized for the ~1.5" OD bundle (~1.75" firewall hole). Cables run continuously from rear wheel well to their respective destinations — no service break at the firewall. The grommet seals the firewall penetration only; the cables themselves are uninterrupted.
+**Firewall pass-through:** **Single sealed 2-piece rubber grommet** sized for the ~1.5" OD bundle (~1.75" firewall hole).
 
 **Why continuous cables + grommet (not inline connectors or bulkhead studs):**
 
 - WARN install documentation references this approach as standard for winch firewall pass-through
 - No amperage limit at the pass-through (the cable is the conductor; grommet just seals the hole)
-- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous and were underrated for the winch leg (409A peak); continuous cable + grommet sidesteps any pass-through current limit (the cable is the conductor; the grommet only seals the hole)
+- Common feed-through marine bulkhead studs (Blue Sea 2203/2204, Cole Hersee 46211) max at 250A continuous and were underrated for the winch leg (409A peak); continuous cable + grommet sidesteps any pass-through current limit
 - Anderson SB175 is undersized for the winch leg (175A continuous); SBE320/SB350 would work but adds complexity
 - Service is rare in practice — when needed, pulling the entire cable end-to-end is acceptable
 - Steele Rubber or similar 2-piece grommet, ~$5–15
@@ -51,7 +49,6 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Notes:**
 
-- 3-cable bundle: ~1.5" OD final wrapped harness
 - Path is fully inside the body until firewall transition (no exposed frame rail)
 - Cables terminate as ring lugs at destinations (lug-to-stud at battery / CB / bus / contactor on each end). If a service break is ever desired, do it as a lug-to-lug junction inside the rear wheel well, not at the firewall.
 
@@ -65,8 +62,6 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Route:** Driver rear wheel well (START battery) → up inside driver rear quarter sill → forward along **inside floor board / side wall** (driver side) → A-pillar area → driver firewall penetration → engine bay
 
-**Length:** 6–8 ft per cable
-
 **Contains:**
 
 | Wire | Gauge | Color | Function | Termination at battery | Termination at engine bay |
@@ -78,7 +73,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 (BCDC input feed (4 AWG via 80A CB) takes the H3 cross-cab path instead — see [H3](#h3).)
 
-**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 4 cables with looms; expect ~1.6" OD final bundle. The 2 AWG forward-bus feed terminates at the engine-bay busbar, not at a load; the busbar's three short local feeds (fan, iBooster, TCU) are engine-bay-side and are **not** part of this harness — see [START+ Forward Distribution Bus][start-fwd-bus].
+**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 4 cables with looms; expect ~1.6" OD final bundle.
 
 **Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.6" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
 
@@ -99,8 +94,6 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 **Route:** Driver rear wheel well (START battery) → **under the rear bench seat cushion** → passenger rear wheel well (BCDC + AUX battery)
 
-**Length:** ~5–6 ft (straight cross-cab run under bench)
-
 **Contains:**
 
 | Wire | Gauge | Color | Function | Termination at driver well | Termination at passenger well |
@@ -108,13 +101,10 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 | BCDC input | 4 AWG | Red | START battery+ via 80A CB → BCDC input terminal | Lug to 80A CB output | Lug to BCDC input red terminal (M8) |
 | Cross-ground reference | 1/0 AWG | Black | START battery- → AUX battery- (critical for BCDC operation) | Lug to START battery- | Lug to AUX battery- |
 
-**Connectors:** Lug terminations both ends. No inline connectors needed for short run.
-
 **Protection:** Black braided expandable sleeve (green tracer) along the run. Bench cushion provides physical shielding from above; floor pan shields from below. P-clamps to body cross-member at 1–2 points.
 
 **Notes:**
 
-- Under-bench routing is short, dry, accessible, and physically protected (bench cushion above, floor pan below)
 - No frame rail exposure; no need to share the longer floor / side wall paths used by H1 / H2
 - BCDC sensor cable (~6 ft, 2-pin) is included with BCDC unit, runs to AUX battery+ terminal at the same wheel well — short, stays passenger-side, not part of this harness
 - Path is independent of cabin trunk runs (H1 passenger side, H2 driver side), so no cabin trunk congestion impact

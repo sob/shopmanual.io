@@ -54,16 +54,11 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 ### Wire Routing
 
 - **Front Locker (OUTPUT-17):** SwitchPros (passenger rear wheel well) → along driver frame rail → to front axle solenoid (~12 ft)
-  - Wire: 18 AWG (2A load, low-side driver output)
   - Protection: Split loom, P-clamps every 18", secure to frame rail
 - **Rear Locker (OUTPUT-10):** SwitchPros (passenger rear wheel well) → to rear axle solenoid (~6 ft)
-  - Wire: 18 AWG (2A load)
   - Protection: Split loom where exposed, secure to axle housing
 
 ## Air Line Routing
-
-!!! info "Air Line Installation"
-    Air lines from manifold must be routed to both axles with proper protection from heat, abrasion, and road debris.
 
 | Line         | Route                                                          | Length |
 | ------------ | -------------------------------------------------------------- | ------ |

@@ -60,8 +60,6 @@ tags:
 - **Routing:** Hood → Firewall → BCDC location in passenger rear wheel well
 - **Maximum Current:** 2.23A (Isc) - well within BCDC solar input capacity
 
-**VSS System Note:** VSS kit includes standalone MPPT controller - **not used**. BCDC has built-in MPPT on solar input, providing Green Power Priority and unified charge control.
-
 **Important:** Solar negative connects to chassis ground per REDARC specifications. The BCDC requires a common ground system where all batteries and components share the same ground reference (vehicle chassis).
 
 ## Function
@@ -77,8 +75,6 @@ tags:
 - **Full sun:** ~5.8A to AUX battery (78W ÷ ~13.4V; reduces alternator load from 50A to ~44A)
 - **Partial sun:** Variable, proportional to available irradiance
 - **Overcast/Night:** 0A (BCDC uses alternator only)
-
-**Alternator Load Relief:** Minimal but measurable — reduces worst-case alternator load by ~5.8A during sunny daytime operation
 
 See [BCDC Alpha 50][bcdc] for complete charging system details.
 
@@ -134,8 +130,6 @@ Voltage Module Power: Self-powered from solar panel voltage
 
 - Mount module in weatherproof location (near BCDC in passenger rear wheel well, or sealed enclosure)
 - Use MC4 inline connectors for easy solar disconnect during installation
-- Consider conformal coating on PCB for moisture protection
-- Test threshold settings before final installation
 
 ### Alternative: Series Diode Voltage Drop
 
