@@ -57,41 +57,27 @@ tags:
 ### Headlight Control
 
 - **Headlights (SW3 - PULL):** Baja Designs LP6 headlights (low beam)
-  - **Pull lever** → Activates headlights (low beam)
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW3 output
-  - CT4 SW3 output → LP6 Pin 1 (low beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 3.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - Latching on/off control (pull once to turn on, pull again to turn off)
+  - **Pull lever** → Activates headlights (low beam); pull again to turn off (latching)
   - Wire gauge: 14 AWG from CT4 SW3 output to LP6 headlights
   - When active: Also triggers DRL cutoff relay to disable DRL circuit (SW3 output tapped to relay coil)
 
 - **High Beams (SW4 - PUSH):** Switches to high beams
-  - **Push lever** (while headlights on) → Activates high beams
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW4 output
-  - CT4 SW4 output → LP6 Pin 4 (high beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 5.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - CT4 provides mutual exclusivity (high beam disables low beam automatically)
+  - **Push lever** (while headlights on) → Activates high beams; mutual exclusivity disables low beam automatically
   - Momentary or latching toggle (programmable)
   - Wire gauge: 14 AWG from CT4 SW4 output to LP6 headlights
 
 ### DRL/Parking Lights
 
-Automatic ignition-controlled circuit that powers:
+Automatic ignition-controlled circuit (PMU Out 23) that powers:
 
 - License plate lights
 - LP6 Headlight DRL function (Pin 3) - **via cutoff relay**
 - Front 2" LED side markers (parking function)
 - Maxbilt tail light RED wire (marker/parking function)
 
-**Power Source:** PMU Out 23 (7A capacity, ~2.6A load, auto with ignition)
-
-**DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates (headlights on = DRL off)
-
 Wire gauge: 14 AWG from PMU to junction, 16 AWG to each light
 
-See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete wiring.
+See [DRL & Parking][drl-parking] for power source, auto-off logic, and the full load breakdown.
 
 ## Wiring Pinout
 
@@ -134,31 +120,7 @@ Recommended configuration for this build:
 
 ### PMU DRL Auto-Off Logic
 
-**Purpose:** Automatically turns off DRL when headlights are activated via CT4 SW3
-
-**Implementation:** PMU programming logic (no external relay needed)
-
-**PMU Configuration:**
-
-```text
-PMU Input 7 (In 7): CT4 SW3 headlight status signal (tapped from low beam circuit)
-PMU Pin 7: Ignition RUN signal (12V switched input)
-PMU Output 23 (Out 23): DRL/Parking lights circuit
-
-Programming Logic:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out23_DRL = ON
-ELSE
-  Out23_DRL = OFF
-END
-```
-
-**Installation Notes:**
-
-- Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
-- Run wire from PMU Out 23 to DRL junction
-- Total DRL/parking circuit load: ~2.6A — see [DRL & Parking][drl-parking] for the itemized load breakdown and wiring
-- PMU Out 23 capacity: 7A (sufficient for the ~2.6A load)
+Automatically turns off DRL when headlights are activated via CT4 SW3, via PMU programming logic (no external relay needed). Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring. Full programming logic, wiring, and load breakdown: see [DRL & Parking][drl-parking].
 
 ## Installation Checklist
 

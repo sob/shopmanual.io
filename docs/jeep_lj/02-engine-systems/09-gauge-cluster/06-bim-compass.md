@@ -39,7 +39,7 @@ tags:
 - Directions: 8-point (N, NE, E, SE, S, SW, W, NW)
 - Internal Resolution: 1° (displayed as 8 directions)
 - Calibration: Automatic via internal accelerometers
-- Current Draw: Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT9 (25A cap, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+- Current Draw: Negligible — bus-powered via the HDX BIM/IO cable; included in the [system power budget][gauge-system].
 
 **Temperature (SEN-15-1 Sender Included):**
 
