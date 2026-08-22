@@ -50,14 +50,7 @@ Each sub runs on its own dedicated bridged channel pair on the JL Audio MV800/8i
 | **Bridged @ 4Ω per sub**  |       4Ω       |      200W       | **200W** | ✅ 100% of RMS rating |
 | Parallel both on one pair |       2Ω       |  n/a (bridged minimum is 4Ω) |   n/a    | ❌ Below bridged minimum |
 
-**Wiring path (per sub, both pairs identical):**
-
-```
-Amp Ch 1+2 (+/−) bridged → Sub A (+/−)
-Amp Ch 3+4 (+/−) bridged → Sub B (+/−)
-```
-
-Total amp output 400W into the pair (200W per sub) — exact RMS match, no headroom waste from series resistance, independent gain trim per side if the L/R quarter-panel locations end up acoustically asymmetric.
+Total amp output 400W into the pair (200W per sub) — exact RMS match.
 
 ## Infinite Baffle Requirements
 
@@ -82,7 +75,7 @@ Total amp output 400W into the pair (200W per sub) — exact RMS match, no headr
 | Sub B (+) / (−)       | 14 AWG | From amp Ch 3+4 bridged to Sub B voice coil        |
 | LED                   | 20 AWG | RGB from MLC-RW (one tap per sub)                  |
 
-Standard speaker wire (no XM-WHTMFC needed for subwoofer audio). No series jumper between subs — each sub returns directly to its own bridged channel pair.
+Standard speaker wire (no XM-WHTMFC needed for subwoofer audio).
 
 ## Why Two 8" vs Single 12"
 
