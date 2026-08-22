@@ -11,6 +11,8 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 
 **Power:** [PMU OUT9][pmu-outputs] (25A capacity, ~25A worst-case, ~12A typical)
 
+**Expansion module power:** BIM modules are bus-powered via the HDX control box's BIM/IO daisy-chain — no separate feed per module, and their draw is already included in the OUT9 budget above. Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+
 **Mounting:** Dashboard cluster in factory location, HDX control + BIM modules on HDPE firewall panel
 
 ## System Components

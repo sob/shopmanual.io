@@ -46,11 +46,11 @@ tags:
 1. **ECM Control (Direct):**
    - ECM triggers grid heater relay directly via pins 46/21 (~0.5-1A)
    - ECM manages timing, temperature thresholds, and duty cycle
-   - No PMU involvement - ECM knows engine temperature better than external controller
+   - No PMU involvement (see [Why Direct ECM Control](#why-direct-ecm-control))
 
 2. **Grid Heater Relay (Cummins 5467024):**
    - Coil Power: ECM pins 46/21 (~1A) - direct connection
-   - Main Power: Direct from START battery+ via fusible link (bypasses all bus bars and PMU)
+   - Main Power: Direct from START battery+ via fusible link (bypasses all bus bars and PMU — minimizes voltage drop for the 40-80A/3-5s draw)
    - Main Ground: START battery- or NEGATIVE bus
    - Output: 80A to grid heater element (design value - verify via resistance measurement during installation)
    - Protection: Integrated fusible link
@@ -90,16 +90,6 @@ flowchart LR
 - ECM knows optimal grid heater timing for cold starts
 - Eliminates unnecessary complexity of PMU passthrough
 - Frees PMU output slots for other critical systems
-
-## Power Distribution
-
-**Bypasses all distribution systems:**
-
-- Does NOT use CONSTANT bus bar
-- Does NOT use PMU outputs
-- Direct battery connection with fusible link protection
-
-**Reason:** High current draw (40-80A) for very short duration (3-5 seconds). Direct connection minimizes voltage drop and connection complexity.
 
 ## Outstanding Items
 
