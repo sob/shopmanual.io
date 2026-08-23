@@ -123,13 +123,6 @@ Voltage Module Power: Self-powered from solar panel voltage
 | **Reconnect Hysteresis** | ~3V (44V reconnect) | Prevent rapid cycling |
 | **Trip Delay** | 1-2 seconds | Ignore brief voltage spikes |
 
-### Operation
-
-1. **Normal conditions (Voc < 47V):** Relay closed, solar charges normally
-2. **Cold weather (Voc > 47V):** Relay opens, disconnects solar from BCDC
-3. **Panel warms up (Voc drops < 44V):** Relay closes, charging resumes automatically
-4. **BCDC protected:** Never sees voltage above 47V
-
 ### Installation Notes
 
 - Mount module in weatherproof location (near BCDC in passenger rear wheel well, or sealed enclosure)

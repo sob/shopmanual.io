@@ -83,17 +83,6 @@ This document tracks intentional deviations from general electrical standards wh
 - Direct battery connection specified ✓
 - Internal protection designed for fault scenarios ✓
 
-### Factory Vehicle Precedent
-
-**OEM winch installations do NOT use external circuit breakers:**
-
-- **Ford Super Duty** with factory winch prep: No CB on winch circuit
-- **RAM Power Wagon** factory winch: No external CB, direct battery connection
-- **Toyota TRD Pro** winch ready: No CB specified in prep package
-- **Jeep Rubicon** winch-capable: Power runs via relay, no CB
-
-**Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
-
 ### Winch Fault Scenarios Covered
 
 **Motor Stall (Extended Load):**
@@ -129,8 +118,7 @@ It is intentional adherence to:
 
 1. Manufacturer specifications (WARN)
 2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
+3. Engineering analysis (load, wire sizing, fault scenarios)
 
 **Do NOT flag as requiring correction in future reviews.**
 
