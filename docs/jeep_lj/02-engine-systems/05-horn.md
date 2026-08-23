@@ -47,22 +47,10 @@ tags:
 ## Wiring Configuration
 
 ```text
-START battery CONSTANT → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
-                          ↑
+START battery CONSTANT → 250A inline CB → PMU → Out 18 → PIAA Horns (5.4A) → Chassis Ground
+                                            ↑
                       Horn Button → In 1 (trigger)  [column path undefined — {{ tbd(152) }}]
 ```
-
-**Power Flow:**
-
-1. START battery+ → 250A inline CB → PMU
-2. Horn button (steering wheel) → PMU In 1 (trigger signal)
-3. PMU Out 18 activated when In 1 closes
-4. PMU Out 18 → PIAA horns (5.4A) → chassis ground (engine bay)
-
-**Notes:**
-
-- PMU Out 18 switches directly (no external relay needed)
-- Works with ignition off (CONSTANT power for safety)
 
 ## Outstanding Items
 

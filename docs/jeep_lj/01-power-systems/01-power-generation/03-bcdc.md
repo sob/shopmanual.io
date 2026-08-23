@@ -97,12 +97,7 @@ The BCDC includes a battery temperature sensor (2-pin, polarity reversible) that
 - **Attachment:** Ring terminal under battery terminal bolt
 - **Why Positive Terminal:** Measures both voltage and temperature at the battery for accurate charge control
 
-**Why Required:**
-
-- AGM batteries are temperature-sensitive during charging
-- Overcharging at high temps causes thermal runaway risk
-- Undercharging at low temps leads to sulfation
-- BCDC adjusts charge voltage based on sensor reading (temperature compensation)
+**Why Required:** Battery is temperature-sensitive during charging; the BCDC adjusts charge voltage based on the sensor reading (temperature compensation).
 
 **Installation Notes:**
 
