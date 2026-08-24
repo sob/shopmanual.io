@@ -95,9 +95,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Purpose:** Automatically shed non-critical PMU loads when the ARB compressor runs (90A on the AUX side) to preserve AUX battery capacity and maximize BCDC charging headroom.
 
-**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each), shedding ~8-38A from the START-side PMU load. See [ARB Load Shedding Logic][arb-load-shedding] for the current full-scenario totals.
-
-**See:** [ARB Load Shedding Logic][arb-load-shedding] for complete implementation details, load analysis, testing procedures, and operator guidelines.
+**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each), shedding ~8-38A from the START-side PMU load. See [ARB Load Shedding Logic][arb-load-shedding] for full-scenario totals, implementation details, and testing procedures.
 
 ## Configuration Software
 
