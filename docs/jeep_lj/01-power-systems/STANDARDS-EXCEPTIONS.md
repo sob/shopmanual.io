@@ -123,16 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Do NOT flag as requiring correction in future reviews** - intentional per WARN spec, SAE J1128, factory precedent, and the engineering analysis above.
 
 **Documentation References:**
 
@@ -306,11 +297,7 @@ It is intentional adherence to:
 
 ### Grid Heater Review Guidance
 
-**This is intentional per manufacturer specifications.**
-
-Grid heater brief, high-current load characteristics make circuit breaker unnecessary - fusible link and ECM control provide adequate protection.
-
-**Do NOT flag as requiring circuit breaker.**
+**Do NOT flag as requiring circuit breaker** - intentional per manufacturer spec; the brief load is covered by the fusible link and ECM control above.
 
 **Documentation References:**
 
@@ -358,11 +345,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Do NOT flag as missing protection** - standard automotive practice; see the self-limiting/cable/buffer/factory-precedent analysis above.
 
 **Documentation References:**
 
@@ -400,11 +383,7 @@ Alternators NEVER use circuit breakers on output circuits in factory or aftermar
 
 ### BCDC Review Guidance
 
-**Circuit breaker AT BATTERY TERMINAL is correct protection point.**
-
-No additional CB required at BCDC - entire circuit protected from battery terminal CB.
-
-**Do NOT flag as missing protection at BCDC.**
+**Do NOT flag as missing protection at BCDC** - the battery-terminal CB protects the entire run (see Protection Location above).
 
 **Documentation References:**
 
@@ -521,16 +500,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Do NOT flag as requiring wire upgrade or CB downgrade** - the CB > wire mismatch is intentional; actual loads stay well within wire rating and fault protection is adequate (see analysis above).
 
 **Documentation References:**
 
