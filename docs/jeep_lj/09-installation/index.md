@@ -24,16 +24,6 @@ Physical installation planning, tracking, and validation procedures.
 
 - [Section 1.7.2 - Firewall Ingress][firewall-ingress] - Deutsch HDP24-24-29 connector pinout and specifications
 
-## System Overview
-
-Installation planning and tracking includes:
-
-- Outstanding items tracking (TBD Tracker)
-- Installation checklists organized by section
-- Wire routing and bundling specifications
-- Firewall penetration planning
-- Testing and validation procedures
-
 [tbd-tracker]: ../tbd-tracker.md
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md

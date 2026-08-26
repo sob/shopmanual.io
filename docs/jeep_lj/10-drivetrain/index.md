@@ -19,30 +19,6 @@ Complete drivetrain system documentation for the Jeep LJ build.
 | [10.6][suspension] | Suspension | ORI struts - 14" front, 16" rear |
 | [10.7][steering] | Steering | PSC full hydraulic steering |
 
-## System Overview
-
-**Axles:**
-
-- Front: TJ Rubicon Dana 44 with ARB RD116 air locker, RCV Performance axle shafts
-- Rear: TJ Rubicon Dana 44 with ARB RD116 air locker
-
-**Drivetrain:**
-
-- Transmission: ZF 8HP70 (845RE) - 8-speed automatic from 2015-2019 RAM 1500 EcoDiesel 4x4
-- Transfer Case: NV241 GenII Command-Trac (2012 JK Sport) - 2.72:1 low range
-- Front Driveshaft: Custom (Tom Woods) - measure at final ride height
-- Rear Driveshaft: Custom (Tom Woods) - measure at final ride height
-
-**Suspension:**
-
-- Wheelbase: 110.5" (stretched ~7" from stock 103.4")
-- Front: ORI 14" bypass struts
-- Rear: ORI 16" bypass struts
-
-**Steering:**
-
-- PSC Motorsports full hydraulic steering
-
 ## Outstanding Items
 
 {{ tbds() }}

@@ -15,18 +15,6 @@ Driver control interfaces: switches, controllers, and input devices for vehicle 
 - **[Dakota Digital Gauge Cluster][dakota-digital-gauge-cluster]** - See Section 2.9
 - **[5.4 Dashboard Controls][dashboard-physical-controls]** - Physical dash-mounted switches (winch control, rear seat switch)
 
-## System Overview
-
-**Primary Controllers:**
-
-- **SwitchPros SP-1200:** Auxiliary lighting and accessories (AUX battery CONSTANT bus, 150A capacity)
-- **Command Touch CT4:** Turn signals and headlights (START battery, PMU integration)
-
-**Physical Controls:**
-
-- **Dashboard switches:** Winch 3-position switch, other dash controls
-- **Rear seat switch:** Dome light control for rear passengers
-
 [control-interfaces-overview]: 01-overview.md
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
 [command-touch-ct4]: 03-command-touch-ct4.md
