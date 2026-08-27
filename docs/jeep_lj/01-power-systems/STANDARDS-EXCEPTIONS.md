@@ -64,25 +64,6 @@ This document tracks intentional deviations from general electrical standards wh
    - Emergency shutoff capability
    - Maintenance safety
 
-### Winch Standards Comparison
-
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
-
 ### Factory Vehicle Precedent
 
 **OEM winch installations do NOT use external circuit breakers:**
@@ -123,16 +104,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Not an oversight.** Intentional per WARN manufacturer spec, SAE J1128 (automotive, not marine ABYC E-11), factory winch precedent, and the fault-scenario analysis above. Do NOT flag as requiring correction.
 
 **Documentation References:**
 
@@ -226,32 +198,11 @@ It is intentional adherence to:
 - Manual battery disconnect available
 - **Status:** Acceptable per automotive practice, enhancement recommended
 
-### Starter Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- No CB required for starter circuits in factory vehicles ✓
-- Timer relay or slow-blow CB optional enhancement ✓
-
-**Marine (ABYC E-11):**
-
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
-
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
+**Current design (no CB) is acceptable per SAE J1128** - cable sizing provides adequate protection for normal operation. This is not a marine (ABYC E-11) application. Do NOT flag as a critical safety issue.
 
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+**Timer relay remains a recommended (not critical) enhancement** for the stuck-solenoid scenario - low cost, common in heavy-duty truck applications.
 
 **Documentation References:**
 
@@ -421,12 +372,9 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 ### Engineering Rationale
 
-- The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
-- Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
-- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
-- The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
+See [START+ Forward Distribution Bus][start-forward-bus] for the full rationale (relocated loads, cable-count tradeoff, AUX-side precedent). The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
 
-### Review Guidance
+### Forward Bus Review Guidance
 
 **This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. See {{ tbd(135) }} for final busbar/breaker selection.
 
@@ -471,12 +419,6 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Protection Strategy
 
-**Normal Operation:**
-
-- Wire operates at 37-77% of its ampacity
-- No thermal stress, adequate safety margin
-- Wire temperature remains well below insulation rating
-
 **Fault Condition (Short Circuit):**
 
 - Fault current exceeds CB rating → CB trips
@@ -519,18 +461,9 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 - CB sizing considers duty cycle and thermal time constants
 - Brief overloads acceptable if within wire thermal limits
 
-### Review Guidance
+### SwitchPros/SafetyHub Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Not a safety issue.** The CB > wire mismatch above is intentional - actual loads (82-100A) are well within wire rating (130A), CB is sized for device capacity, and fault protection is adequate (CB trips before wire damage). Do NOT flag as requiring wire upgrade or CB downgrade.
 
 **Documentation References:**
 
@@ -582,6 +515,7 @@ Before flagging as issues, verify these intentional design choices:
 [wire-distance]: 01-power-generation/05-wire-distance-reference.md
 [starter-system]: ../02-engine-systems/01-starter.md
 [starter-battery-distribution]: 02-starter-battery-distribution/index.md
+[start-forward-bus]: 02-starter-battery-distribution/index.md#start-forward-bus
 [grid-heater]: ../02-engine-systems/07-grid-heater.md
 [alternator]: 01-power-generation/02-alternator.md
 [bcdc]: 01-power-generation/03-bcdc.md
