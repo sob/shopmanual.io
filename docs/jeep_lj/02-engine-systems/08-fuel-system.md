@@ -45,12 +45,6 @@ Return line → Fuel Tank
 
 The factory Jeep LJ in-tank electric fuel pump is **not used** in this configuration.
 
-## Installation Summary
-
-1. **Inlet:** Route fuel line from tank pickup → fuel filter/separator inlet
-2. **Filter to Pump:** Route from filter outlet → gear-driven pump inlet (back of block)
-3. **Return:** Route from engine return fitting → tank return
-
 ## Priming
 
 Use the manual hand pump on the fuel filter/water separator to prime the system before initial startup or after filter changes.
