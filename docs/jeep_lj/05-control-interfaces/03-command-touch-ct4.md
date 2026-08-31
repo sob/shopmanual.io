@@ -91,7 +91,7 @@ Automatic ignition-controlled circuit that powers:
 
 Wire gauge: 14 AWG from PMU to junction, 16 AWG to each light
 
-See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete wiring.
+See [PMU DRL Auto-Off Logic][drl-parking] for complete wiring.
 
 ## Wiring Pinout
 
@@ -131,34 +131,6 @@ Recommended configuration for this build:
 - **Manual Override:** Can still manually cancel by moving lever to center or opposite direction
 - **Mounting:** GPS antenna must have clear view of sky (mount on dash or near windshield)
 - **Calibration:** May require initial calibration drive for optimal performance
-
-### PMU DRL Auto-Off Logic
-
-**Purpose:** Automatically turns off DRL when headlights are activated via CT4 SW3
-
-**Implementation:** PMU programming logic (no external relay needed)
-
-**PMU Configuration:**
-
-```text
-PMU Input 7 (In 7): CT4 SW3 headlight status signal (tapped from low beam circuit)
-PMU Pin 7: Ignition RUN signal (12V switched input)
-PMU Output 23 (Out 23): DRL/Parking lights circuit
-
-Programming Logic:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
-  THEN Out23_DRL = ON
-ELSE
-  Out23_DRL = OFF
-END
-```
-
-**Installation Notes:**
-
-- Tap CT4 SW3 output (low beam circuit) to PMU In 7 for headlight status monitoring
-- Run wire from PMU Out 23 to DRL junction
-- Total DRL/parking circuit load: ~2.6A — see [DRL & Parking][drl-parking] for the itemized load breakdown and wiring
-- PMU Out 23 capacity: 7A (sufficient for the ~2.6A load)
 
 ## Installation Checklist
 
