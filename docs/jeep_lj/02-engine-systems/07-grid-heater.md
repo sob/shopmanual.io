@@ -55,10 +55,7 @@ tags:
    - Output: 80A to grid heater element (design value - verify via resistance measurement during installation)
    - Protection: Integrated fusible link
 
-3. **Grid Heater Element:**
-   - Location: Intake manifold
-   - Power: 80A from relay (design value)
-   - Duty Cycle: 3-5 seconds during cold start (ECM controlled)
+3. **Grid Heater Element:** Intake manifold
 
 ## Wiring Summary
 
@@ -93,13 +90,7 @@ flowchart LR
 
 ## Power Distribution
 
-**Bypasses all distribution systems:**
-
-- Does NOT use CONSTANT bus bar
-- Does NOT use PMU outputs
-- Direct battery connection with fusible link protection
-
-**Reason:** High current draw (40-80A) for very short duration (3-5 seconds). Direct connection minimizes voltage drop and connection complexity.
+**Reason for direct battery connection (bypassing CONSTANT bus and PMU):** High current draw (40-80A) for very short duration (3-5 seconds) — direct connection minimizes voltage drop and connection complexity.
 
 ## Outstanding Items
 
