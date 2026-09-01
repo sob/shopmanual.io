@@ -81,12 +81,9 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 
 **Control Wiring:**
 
-- **Power Source:** BODY PDU CB43 (10A fuse) - sourced from Firewall CONSTANT Bus (AUX battery)
-- **Dash Switch:** [CH4X4-TOY-D-WINIO][ch4x4-winch] dual-momentary push, Toyota-style (1.54" × 0.83" cutout) - see [Dashboard Controls][dashboard-controls]
-- **Signal Path:** BODY PDU CB43 → CH4X4 switch (push IN or OUT) → HDP24 pins 16/17 → winch contactor IN/OUT triggers
-- **Remote:** Wired in parallel with dash switch at contactor IN/OUT trigger terminals
-- **Wire Gauge:** 18 AWG (low-current trigger signals, ~2A max each direction)
-- **Routing:** BODY PDU (firewall cabin side) → ~3 ft to dash switch → out through HDP24 → engine bay → winch contactor (front bumper)
+Trigger signals are 18 AWG, ~2A max each direction, via the [CH4X4-TOY-D-WINIO][ch4x4-winch]
+dash switch. See [Dashboard Controls][dashboard-controls] for full signal path and routing.
+Circuit-level connections below.
 
 | Circuit         | Source             | Protection            | Wire Gauge                                                 | Destination             | Function            |
 | --------------- | ------------------ | --------------------- | ---------------------------------------------------------- | ----------------------- | ------------------- |
