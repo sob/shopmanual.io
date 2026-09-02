@@ -66,22 +66,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Standards Comparison
 
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
+Marine (ABYC E-11) would require a 400A CB — **this is not a marine application**. Automotive standards (SAE J1128) defer to the manufacturer spec above, which requires none.
 
 ### Factory Vehicle Precedent
 
@@ -123,16 +108,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Intentional — do not flag.** Per WARN manual + SAE J1128; see Manufacturer Specification and Engineering Analysis above.
 
 **Documentation References:**
 
@@ -358,11 +334,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**Standard automotive practice — no CB on alternator output.** Do not flag as missing protection; see Industry Standard and Engineering Analysis above.
 
 **Documentation References:**
 
@@ -419,16 +391,9 @@ No additional CB required at BCDC - entire circuit protected from battery termin
 
 **Decision:** A single 150A master-protected 2 AWG feed runs from the START battery to an engine-bay busbar that fans out to three load breakers — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
 
-### Engineering Rationale
-
-- The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
-- Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
-- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
-- The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
-
 ### Review Guidance
 
-**This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. See {{ tbd(135) }} for final busbar/breaker selection.
+**This is intentional.** Do NOT flag the START+ Forward Distribution Bus as violating the "no bus bar between battery and loads" rule — it is the same accepted tradeoff as the AUX CONSTANT bus, chosen to relocate three critical loads off the PMU. Full rationale in [START Battery Distribution][starter-battery-distribution]. See {{ tbd(135) }} for final busbar/breaker selection.
 
 **Documentation References:**
 
