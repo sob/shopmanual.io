@@ -39,7 +39,7 @@ All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Cir
 
 ## START+ Forward Distribution Bus {#start-forward-bus}
 
-The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct power. All three sit forward (engine bay / transmission) while the START battery is in the rear wheel well, so — mirroring the [AUX forward-feed architecture][constant-bus] — a **single master-protected feed** runs forward to an engine-bay busbar that fans out to the three loads on short local feeds. This keeps the long rear-to-front run to one heavy cable instead of three, and places each load's breaker near its load.
+The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct power. All three sit forward (engine bay / transmission) while the START battery is in the rear wheel well.
 
 **Busbar:** Blue Sea 2105 MaxiBus (250A), engine bay, insulated cover — recommended; confirm with {{ tbd(135) }}
 **Master feed:** 2 AWG, ~8 ft, 150A CB at battery post (<7")
