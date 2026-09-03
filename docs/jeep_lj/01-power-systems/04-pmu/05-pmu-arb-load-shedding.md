@@ -15,7 +15,7 @@ Automatic load management during ARB compressor operation to preserve AUX batter
 - **BCDC Charging (50A max):** Replenishes AUX battery from alternator
 - **Net AUX battery drain:** 90A - 50A = 40A during compressor operation
 
-The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
+The alternator is NOT overloaded during ARB operation — the 50A BCDC significantly reduces net AUX discharge rate.
 
 ## Problem Statement
 
@@ -219,10 +219,7 @@ ELSE:
 
 **Best Practices for ARB Use:**
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
+1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation — higher alternator output means faster inflation and steadier voltage.
 
 2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
    - Normal: 14.0-14.4V (load shedding working)
