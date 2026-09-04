@@ -166,15 +166,9 @@ ARB air tank pressure switch automatically activates compressor to maintain tank
 ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 ```
 
-**Configuration:**
-
-Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
-
 **SwitchPros Logic:**
 
 - **TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)**
-- When tank pressure < 135 PSI: TRIGGER-3 closes → OUTPUT-11 activates → compressor runs
-- When tank pressure = 150 PSI: TRIGGER-3 opens → OUTPUT-11 deactivates → compressor stops
 - Manual override: Button 11 can force compressor on regardless of tank pressure
 
 **Signal Source:**

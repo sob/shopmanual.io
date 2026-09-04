@@ -152,10 +152,6 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 | Connection    | Factory 8HP70 connector   |
 | Mounting      | Center console            |
 
-**Manual Mode (+/-):** Allows manual gear selection for rock crawling, engine braking on descents, and technical terrain.
-
-**Wiring:** Electronic shifter connects directly to transmission controller. No shift cables required.
-
 ### Drive Mode Switch
 
 | Specification | Value                              |
