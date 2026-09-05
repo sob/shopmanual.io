@@ -96,7 +96,7 @@ The factory TIPM is replaced with discrete, serviceable modules:
 
 - **[PMU24][pmu]:** Programmable 24-channel power management unit
 - **[BODY PDU][body-pdu]:** Body relay/fuse panel for cabin accessories
-- **[SafetyHub][safetyhub]:** 12-channel advanced safety controller
+- **[SafetyHub][safetyhub]:** 12-channel safety controller
 - **[Ron Francis WS-51C][wipers]:** Wiper control module
 
 ### Brake & Ignition
