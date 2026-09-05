@@ -68,8 +68,6 @@ Total amp output 400W into the pair (200W per sub) — exact RMS match, no headr
 
 ## Features
 
-- Transflective RGB LED lighting (via MLC-RW)
-- Gunmetal trim ring with titanium sport grille
 - Marine-grade construction
 - Mica-filled polypropylene cone
 - Synthetic rubber surround

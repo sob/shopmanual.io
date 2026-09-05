@@ -39,7 +39,7 @@ All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Cir
 
 ## START+ Forward Distribution Bus {#start-forward-bus}
 
-The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct power. All three sit forward (engine bay / transmission) while the START battery is in the rear wheel well, so — mirroring the [AUX forward-feed architecture][constant-bus] — a **single master-protected feed** runs forward to an engine-bay busbar that fans out to the three loads on short local feeds. This keeps the long rear-to-front run to one heavy cable instead of three, and places each load's breaker near its load.
+The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct power via a **single master-protected feed** that runs forward to an engine-bay busbar and fans out to the three loads on short local feeds. See [Standards Exceptions][standards-exceptions] for why this departs from the direct-battery-connection default.
 
 **Busbar:** Blue Sea 2105 MaxiBus (250A), engine bay, insulated cover — recommended; confirm with {{ tbd(135) }}
 **Master feed:** 2 AWG, ~8 ft, 150A CB at battery post (<7")
@@ -53,7 +53,7 @@ The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct
 The master feed carries the combined load (~68A continuous, ~108A brief peak); voltage drop and breaker sizing are set on that single cable.[^fwd-bus-vdrop] The iBooster's separate ignition **enable** (~5A) is sourced from the [Ignition Signal bus][ignition-signal], not this bus. Fan speed is set by a dedicated fan controller ({{ tbd(134) }}) with its own coolant sensor, independent of the PMU and J1939.
 
 !!! info "Shared forward feed — intentional tradeoff"
-    The three loads share one master feed + busbar (a passive cable, breaker, and bus bar — no active electronics), versus three independent runs from the battery. This is the same tradeoff the [AUX side][constant-bus] accepts, and is far more robust than their former shared dependency on the PMU module. Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions].
+    The three loads share one master feed + busbar instead of three independent battery runs — the same tradeoff the [AUX side][constant-bus] accepts. Each load keeps its own breaker. See [Standards Exceptions][standards-exceptions] for the full rationale.
 
 [^fwd-bus-vdrop]: Master feed 2 AWG @ ~108A brief peak (~68A continuous), ~8 ft, 60°C-derated (×1.2) ≈ 1.3% — sized on the combined load. Load feeds are short from the engine-bay bus, so per-load drop is negligible: fan 4 AWG @ 53A, iBooster 8 AWG @ 40A brief, TCU 12 AWG @ 15A. Final master-feed length and breaker selective-coordination pending {{ tbd(136) }} and {{ tbd(135) }}.
 
