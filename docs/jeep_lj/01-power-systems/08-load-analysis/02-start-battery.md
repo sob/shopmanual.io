@@ -189,8 +189,6 @@ All circuits powered by START battery (alternator charging):
 
 **Worst Realistic Case:** 201A (offroad with hot engine) = **69A margin** (74% utilization). Folding in the now-itemized TCU (~15A continuous) raises this to ~216A (54A margin) — still within capacity.
 
-**Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
-
 ## Load Exclusions (Not Alternator Loads)
 
 The following high-current loads are **NOT** supplied by the alternator:
@@ -204,7 +202,7 @@ The following high-current loads are **NOT** supplied by the alternator:
 | Starter                  | 400-600A  | START battery | Cranking only, engine off |
 | Grid Heater              | 250A      | START battery | 3-5 sec cold start only   |
 
-**Architecture:** The dual battery system isolates high-current accessory loads (AUX battery) from engine/safety loads (START battery). The BCDC charger (50A max) is the only connection between batteries during normal operation.
+See [Load Analysis Architecture][load-analysis] for the dual-battery isolation principle behind this split.
 
 ## Key-Off Parasitic Budget (START Battery)
 
@@ -234,6 +232,7 @@ Loads on the **CONSTANT** (always-on) feed continue to draw with the ignition of
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [bcdc]: ../01-power-generation/03-bcdc.md
 [aux-load-analysis]: 03-aux-battery.md
+[load-analysis]: index.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 
 [^pc1500-cap]: Odyssey PC1500 capacity **68 Ah** (20-hr rate), 34 Ah usable at 50% DOD — see [Batteries][batteries] (Odyssey Extreme Series spec table, checked 2026-05-30).
