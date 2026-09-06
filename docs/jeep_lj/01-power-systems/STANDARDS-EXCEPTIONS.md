@@ -353,8 +353,6 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 4. **Factory Practice**
    - No OEM vehicles use alternator output circuit breakers
-   - Proven safe over millions of vehicles
-   - Industry standard approach
 
 ### Alternator Review Guidance
 
