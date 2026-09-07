@@ -56,25 +56,11 @@ tags:
 
 ### Headlight Control
 
-- **Headlights (SW3 - PULL):** Baja Designs LP6 headlights (low beam)
-  - **Pull lever** → Activates headlights (low beam)
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW3 output
-  - CT4 SW3 output → LP6 Pin 1 (low beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 3.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - Latching on/off control (pull once to turn on, pull again to turn off)
-  - Wire gauge: 14 AWG from CT4 SW3 output to LP6 headlights
-  - When active: Also triggers DRL cutoff relay to disable DRL circuit (SW3 output tapped to relay coil)
+- **Headlights (SW3 - PULL):** Baja Designs LP6 low beam, both lights in parallel (LP6 Pin 1). Pull lever to latch on/off. Wire gauge: 14 AWG from CT4 SW3 to LP6. SW3 output also taps the DRL cutoff relay coil, disabling the DRL circuit while headlights are active — see [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic).
 
-- **High Beams (SW4 - PUSH):** Switches to high beams
-  - **Push lever** (while headlights on) → Activates high beams
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW4 output
-  - CT4 SW4 output → LP6 Pin 4 (high beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 5.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - CT4 provides mutual exclusivity (high beam disables low beam automatically)
-  - Momentary or latching toggle (programmable)
-  - Wire gauge: 14 AWG from CT4 SW4 output to LP6 headlights
+- **High Beams (SW4 - PUSH):** Push lever (while headlights on) for LP6 high beam, both lights in parallel (LP6 Pin 4). CT4 provides mutual exclusivity — SW4 disables SW3 automatically. Momentary or latching (programmable). Wire gauge: 14 AWG from CT4 SW4 to LP6.
+
+See [Wiring Pinout](#wiring-pinout) below for output capacity, load, and ignition-disable behavior on each switch.
 
 ### DRL/Parking Lights
 

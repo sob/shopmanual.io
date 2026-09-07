@@ -99,7 +99,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Battery SOC Trend:** Rising - battery maintains full charge even with high accessory use
 
-**Assessment:** Excellent - 50A BCDC fully covers all night highway loads with margin to spare
+**Assessment:** Excellent — margin to spare.
 
 ---
 

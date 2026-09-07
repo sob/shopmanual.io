@@ -219,19 +219,14 @@ ELSE:
 
 **Best Practices for ARB Use:**
 
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
+1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation — alternator output and voltage regulation both improve at higher RPM.
 
 2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
    - Normal: 14.0-14.4V (load shedding working)
    - Marginal: 13.5-14.0V (acceptable, brief periods)
    - Low: <13.5V (increase RPM or reduce loads)
 
-3. **Hot Weather:** Avoid prolonged ARB use at idle when ambient temp >95°F
-   - Radiator fan + ARB + heat soak = high total load
-   - Let engine cool between inflation cycles
+3. **Hot Weather:** Avoid prolonged ARB use at idle when ambient temp >95°F — radiator fan + ARB + heat soak stacks to a high total load.
 
 4. **Avoid Simultaneous High Loads:**
    - ❌ ARB + winch (both 90A+ loads)
