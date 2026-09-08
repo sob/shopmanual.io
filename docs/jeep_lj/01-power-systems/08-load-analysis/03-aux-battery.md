@@ -99,8 +99,6 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Battery SOC Trend:** Rising - battery maintains full charge even with high accessory use
 
-**Assessment:** Excellent - 50A BCDC fully covers all night highway loads with margin to spare
-
 ---
 
 ### Scenario 3: Night Offroad (Full Lighting)
@@ -125,7 +123,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** +5A (battery charging!)
 
-**Assessment:** Excellent - with corrected XL Sport specs (2.2A/pod), full night offroad lighting is now fully covered by BCDC charging. Battery maintains charge even with all lights on.
+**Assessment:** Battery maintains charge even with all lights on (see Key Insight below).
 
 ---
 
@@ -151,7 +149,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **10-minute air-up:** 60A × (10/60)h = **10Ah used** (9% of usable capacity)
 
-**Assessment:** Excellent - minimal battery impact. Full recovery in 10-20 minutes of driving.
+**Recovery:** Full recovery in 10-20 minutes of driving.
 
 ---
 
@@ -177,8 +175,6 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC:** 108Ah / 60A = **108 minutes** of continuous compressor operation
 
-**Assessment:** Extended air-up no longer a concern. Can run compressor for nearly 2 hours before reaching 20% SOC.
-
 ---
 
 ### Scenario 6: Winch Recovery (Brief High-Current)
@@ -197,9 +193,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Net Battery Effect:** -205A (heavy discharge)
 
-**30-second pull:** 205A × (30/3600)h = **1.7Ah used** (1.6% of usable capacity)
-
-**Assessment:** Winch operations have negligible battery impact. Can perform 50+ pulls before approaching 20% SOC.
+**30-second pull:** 205A × (30/3600)h = **1.7Ah used** (1.6% of usable capacity, 50+ pulls before 20% SOC)
 
 ---
 
@@ -229,7 +223,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 
 **Time to 20% SOC (with solar):** 108Ah / 21A = **5+ hours** (daytime only)
 
-**Assessment:** Camp mode now practical. 4+ hours of music, lights, and charging without engine. For extended camping:
+**For extended camping:**
 
 - Solar extends daytime runtime significantly
 - Idle engine 30 min to recover ~25Ah

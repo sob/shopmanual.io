@@ -23,7 +23,7 @@ Engine bay systems and critical vehicle subsystems required for safe vehicle ope
 
 ## System Overview
 
-Engine bay systems are powered primarily from the START battery via PMU24 programmable power distribution (see [PMU][pmu-power-distribution]). The PMU provides intelligent power management with ignition-triggered circuits, overcurrent protection, and diagnostic capabilities.
+Engine bay systems are powered primarily from the START battery via PMU24 programmable power distribution (see [PMU][pmu-power-distribution]). The PMU provides ignition-triggered circuits, overcurrent protection, and diagnostic capabilities.
 
 Critical safety systems (brake booster, starter) have direct battery connections for reliability.
 
