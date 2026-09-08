@@ -123,14 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
+**This is NOT an oversight or safety issue** — it follows WARN's manufacturer spec, SAE J1128 automotive standards, factory winch precedent, and the engineering analysis above.
 
 **Do NOT flag as requiring correction in future reviews.**
 
@@ -241,17 +234,9 @@ It is intentional adherence to:
 
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
+**Current design (no CB) is acceptable per automotive standards** - cable sizing provides adequate protection for normal operation per SAE J1128.
 
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+**Do NOT flag as critical safety issue.** The timer relay above remains a recommended enhancement (common in heavy-duty truck applications), not a critical requirement.
 
 **Documentation References:**
 
@@ -521,14 +506,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
+**This is NOT a safety issue.** The apparent CB > wire mismatch is intentional — see the Engineering Analysis and Wire Sizing Rationale above for the load, inrush, and fault-protection reasoning.
 
 **Do NOT flag as requiring wire upgrade or CB downgrade.**
 
@@ -543,14 +521,7 @@ The apparent CB > wire mismatch is intentional:
 
 ## Summary of Intentional Design Decisions
 
-**All decisions documented above are intentional and based on:**
-
-1. **Manufacturer Specifications** - Following OEM installation requirements
-2. **Automotive Standards (SAE J1128)** - Primary standard for automotive electrical systems
-3. **Industry Practice** - Factory vehicle precedents and proven approaches
-4. **Engineering Analysis** - Load characteristics, wire sizing, fault scenarios
-
-**These are NOT oversights, errors, or safety issues.**
+All decisions above rest on manufacturer specifications, SAE J1128 automotive standards, factory vehicle precedent, and engineering analysis — not oversights.
 
 **Marine standards (ABYC E-11) are referenced selectively:**
 
