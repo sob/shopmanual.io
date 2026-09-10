@@ -120,7 +120,7 @@ Earlier iterations of this design included a discrete engine-running lockout rel
 
 ## Diesel Runaway Note
 
-Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN output, cutting ECM power. However, ECM-only kill does not stop a runaway sustained by oil or hydrocarbon vapor. Independent mechanical protection is provided by the Mishimoto catch can (prevention) plus the AMOT 4261M air shutoff valve with dash-mounted manual cable (termination). See [Diesel Runaway Protection][runaway-protection].
+Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN output, cutting ECM power — but that alone can't stop a runaway sustained by oil or hydrocarbon vapor. See [Diesel Runaway Protection][runaway-protection] for the independent mechanical defense (catch can + AMOT air shutoff).
 
 ## Outstanding Items
 

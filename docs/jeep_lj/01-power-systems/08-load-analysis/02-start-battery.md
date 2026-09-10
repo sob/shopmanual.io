@@ -189,8 +189,6 @@ All circuits powered by START battery (alternator charging):
 
 **Worst Realistic Case:** 201A (offroad with hot engine) = **69A margin** (74% utilization). Folding in the now-itemized TCU (~15A continuous) raises this to ~216A (54A margin) — still within capacity.
 
-**Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
-
 ## Load Exclusions (Not Alternator Loads)
 
 The following high-current loads are **NOT** supplied by the alternator:
