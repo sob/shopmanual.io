@@ -70,7 +70,7 @@ Drop-in replacement for factory TJ gauge cluster. Combines analog gauges with di
 See [HDX Control Module wiring table][hdx-control] for complete signal routing.
 
 !!! warning "Speedometer Required for Legal Operation"
-Speedometer is legally required for on-road vehicle operation. GPS-50-2 module provides speed data - ensure GPS antenna has clear sky view for reliable operation.
+    Speedometer is legally required for on-road operation. See [GPS-50-2][bim-gps] for antenna sky-view requirements.
 
 ## Outstanding Items
 
