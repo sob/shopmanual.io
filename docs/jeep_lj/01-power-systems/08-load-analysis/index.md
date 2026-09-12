@@ -46,17 +46,7 @@ PMU max: 253A + SwitchPros max: 127A + ARB: 90A + Winch: 400A = 870A
 Alternator: 270A = CRITICAL UNDERSIZING ❌
 ```
 
-**Example - CORRECT:**
-
-```text
-START Battery Scenario (Offroad):
-PMU typical: 115A + Radiator fan: 53A + BCDC: 50A = 218A
-Alternator: 270A = 52A margin
-
-AUX Battery Scenario (Night Offroad):
-SwitchPros: 70A, BCDC charging: 50A
-Net drain: 20A, Time to 50% SOC: 102 minutes
-```
+The correct approach pairs each load with the battery that actually supplies it — see the worked scenarios in [START Battery Load Analysis][start-load] and [AUX Battery Load Analysis][aux-load].
 
 ### Load Categories
 
