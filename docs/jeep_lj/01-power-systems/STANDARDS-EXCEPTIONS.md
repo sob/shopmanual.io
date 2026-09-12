@@ -123,16 +123,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**This is NOT an oversight or safety issue** — it is intentional adherence to the WARN manufacturer spec, SAE J1128, and the fault analysis above. **Do NOT flag as requiring correction.**
 
 **Documentation References:**
 
@@ -226,32 +217,11 @@ It is intentional adherence to:
 - Manual battery disconnect available
 - **Status:** Acceptable per automotive practice, enhancement recommended
 
-### Starter Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- No CB required for starter circuits in factory vehicles ✓
-- Timer relay or slow-blow CB optional enhancement ✓
-
-**Marine (ABYC E-11):**
-
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
-
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
+Cable sizing (no external CB) is acceptable per SAE J1128 automotive practice, not the marine ABYC E-11 rule. **Do NOT flag as a critical safety issue.**
 
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+A timer relay for the stuck-solenoid scenario (Option 1 above) remains a recommended, non-critical enhancement.
 
 **Documentation References:**
 
@@ -358,11 +328,7 @@ Grid heater brief, high-current load characteristics make circuit breaker unnece
 
 ### Alternator Review Guidance
 
-**This is standard automotive practice.**
-
-Alternators NEVER use circuit breakers on output circuits in factory or aftermarket applications.
-
-**Do NOT flag as missing protection.**
+**This is standard automotive practice** — no OEM or aftermarket alternator uses an output circuit breaker. **Do NOT flag as missing protection.**
 
 **Documentation References:**
 
