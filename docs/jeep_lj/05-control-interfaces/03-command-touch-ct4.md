@@ -56,24 +56,11 @@ tags:
 
 ### Headlight Control
 
-- **Headlights (SW3 - PULL):** Baja Designs LP6 headlights (low beam)
-  - **Pull lever** → Activates headlights (low beam)
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW3 output
-  - CT4 SW3 output → LP6 Pin 1 (low beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 3.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - Latching on/off control (pull once to turn on, pull again to turn off)
+- **Headlights (SW3 - PULL):** Baja Designs LP6 low beam. Pull lever to latch on/off. See [Wiring Pinout](#wiring-pinout) for power source, LP6 pin, and load.
   - Wire gauge: 14 AWG from CT4 SW3 output to LP6 headlights
-  - When active: Also triggers DRL cutoff relay to disable DRL circuit (SW3 output tapped to relay coil)
+  - Also triggers the DRL cutoff relay (SW3 output tapped to relay coil) to disable DRL when headlights are on
 
-- **High Beams (SW4 - PUSH):** Switches to high beams
-  - **Push lever** (while headlights on) → Activates high beams
-  - Power: PMU Out 13 (CONSTANT) → CT4 internal switching → SW4 output
-  - CT4 SW4 output → LP6 Pin 4 (high beam, both lights in parallel)
-  - CT4 handles switching internally (10A output capacity, 5.6A actual load)
-  - Disabled when ignition off (via ignition signal from ignition switch RUN)
-  - CT4 provides mutual exclusivity (high beam disables low beam automatically)
-  - Momentary or latching toggle (programmable)
+- **High Beams (SW4 - PUSH):** Push lever while headlights on to activate; mutually exclusive with low beam (CT4 disables SW3 automatically). Momentary or latching toggle (programmable). See [Wiring Pinout](#wiring-pinout) for power source, LP6 pin, and load.
   - Wire gauge: 14 AWG from CT4 SW4 output to LP6 headlights
 
 ### DRL/Parking Lights
