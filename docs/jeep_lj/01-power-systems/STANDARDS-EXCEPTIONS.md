@@ -66,22 +66,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Standards Comparison
 
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
+**This is NOT a marine application.** ABYC E-11 (marine) would require a 400A CB; SAE J1128 (automotive) defers to the manufacturer, accepts cable sizing for brief peak loads, and treats WARN's internal protection as adequate for a factory-designed component.
 
 ### Factory Vehicle Precedent
 
@@ -94,45 +79,9 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Industry Standard Practice:** Winch manufacturers design internal protection for automotive fault scenarios, making external CBs redundant.
 
-### Winch Fault Scenarios Covered
-
-**Motor Stall (Extended Load):**
-
-- Internal thermal cutoff trips within 60-90 seconds
-- Prevents motor damage and fire hazard
-- Automatic protection without user intervention
-
-**Cable Short to Chassis:**
-
-- 1/0 AWG cable acts as self-fusing element
-- Fault current >800A required to fuse cable open
-- Short circuit current path through battery ground and chassis
-- Adequate protection for brief fault duration
-
-**Contactor Weld (Stuck Closed):**
-
-- Manual battery disconnect provides emergency stop
-- Winch will run until battery depletes or thermal cutoff trips
-- User can isolate at battery terminal
-
-**Normal Operating Conditions:**
-
-- 250-409A loads are within winch design parameters
-- Cable sizing adequate per voltage drop analysis
-- No fire hazard during normal recovery operations
-
 ### Winch Review Guidance
 
-**This is NOT an oversight or safety issue.**
-
-It is intentional adherence to:
-
-1. Manufacturer specifications (WARN)
-2. Automotive standards (SAE J1128)
-3. Industry standard practice (factory winch installations)
-4. Engineering analysis (load, wire sizing, fault scenarios)
-
-**Do NOT flag as requiring correction in future reviews.**
+**Not an oversight.** No external CB is intentional — per WARN's manufacturer spec, SAE J1128, and factory precedent (above); the internal thermal cutoff, contactor disconnect, cable self-fusing (>800A), and manual battery disconnect (see Protection Mechanisms) cover the stall, short, and stuck-contactor fault modes. Do not flag as requiring correction.
 
 **Documentation References:**
 
@@ -241,17 +190,7 @@ It is intentional adherence to:
 
 ### Starter Review Guidance
 
-**Current design (no CB) is acceptable per automotive standards.**
-
-**Enhancement (timer relay) is recommended but not critical:**
-
-- Adds protection for stuck solenoid scenario
-- Low cost, simple implementation
-- Common in heavy-duty truck applications
-
-**Do NOT flag as critical safety issue** - cable sizing provides adequate protection for normal operation per SAE J1128.
-
-**Consider implementing timer relay as build enhancement** - provides additional fault protection beyond baseline automotive practice.
+**Acceptable per automotive standards; not a critical safety issue.** Cable sizing alone is adequate for normal cranking per SAE J1128 — do not flag. The timer relay (Option 1 above) remains a recommended, low-cost enhancement for the stuck-solenoid scenario, not a required fix.
 
 **Documentation References:**
 
@@ -506,31 +445,11 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Standards Context
 
-**ABYC E-11 (Marine):**
-
-- Requires CB ≤ wire ampacity for continuous loads
-- **However:** Actual loads are not continuous at full capacity
-- SwitchPros lighting loads are intermittent (not 24/7 operation)
-- SafetyHub ARB compressor runs only during airing up (minutes, not hours)
-
-**SAE J1128 (Automotive):**
-
-- Wire sizing based on actual load, not theoretical maximum
-- CB sizing considers duty cycle and thermal time constants
-- Brief overloads acceptable if within wire thermal limits
+ABYC E-11 (marine) requires CB ≤ wire ampacity for continuous loads, but neither load is continuous at full capacity: SwitchPros lighting is intermittent and the SafetyHub ARB compressor only runs during airing up (minutes, not hours). SAE J1128 (automotive) sizes wire to actual load and duty cycle rather than theoretical maximum, and accepts brief overloads within the wire's thermal limits — both apply here.
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**Not a safety issue.** The CB > wire mismatch is intentional: actual loads (82-100A) sit well within the 130A wire rating, the CB is sized for device capacity and inrush tolerance, and duty cycle is intermittent — do not flag as requiring a wire upgrade or CB downgrade.
 
 **Documentation References:**
 
