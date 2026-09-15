@@ -39,16 +39,6 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 | Max Current    |                   15A |
 | Waterproof     |                  IPX7 |
 
-## Features
-
-- AM/FM radio with RDS
-- Bluetooth audio streaming and hands-free calling
-- Multi-zone audio (3 zones + subwoofer)
-- DSP with presets
-- NMEA 2000 integration
-- PartyBus networking
-- USB audio playback
-
 ## RCA Pre-Outs
 
 | Output     | Destination            | Amplifier      |
@@ -69,11 +59,6 @@ Marine-grade entertainment system with multi-zone audio, Bluetooth, and NMEA 200
 | Remote Out        | 18 AWG   | To amplifier         | Turn-on signal               |
 
 ## Power Configuration
-
-Head unit uses single BODY PDU circuit with ignition sense:
-
-- **CB30 (15A, CONSTANT):** Yellow wire - main power (~15A max)
-- **Ignition sense (SWITCHED bus):** Red wire - tells head unit when to turn on/off
 
 Head unit has internal power management - draws full power when ignition sense is active, minimal standby current (~1A) when off for memory retention.
 

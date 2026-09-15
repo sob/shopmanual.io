@@ -43,15 +43,6 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 | Sensitivity        |             89.5 dB @ 1W/1m |
 | Tweeter            | 0.8" silk dome (integrated) |
 
-### Front Speaker Features
-
-- Integrated 0.8" pure silk dome tweeter (no separate install)
-- Multi-order 2-way passive crossover (built-in)
-- Automatic solid-state tweeter protection
-- Transflective RGB LED lighting
-- Mica-filled polypropylene woofer
-- Gunmetal trim ring with titanium sport grille
-
 ---
 
 ## Rear Roll Bar Speakers
@@ -85,14 +76,6 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 | Frequency Response |              100-25,000 Hz |
 | Sensitivity        |                    89.5 dB |
 | Dimensions         | 7-1/16" × 7-5/16" × 6-1/4" |
-
-### Rear Speaker Features
-
-- Built-in RGB LED lights
-- 3/4" silk dome tweeters
-- Mica-filled polypropylene woofers
-- Enclosed weather-resistant design
-- Roll bar clamp mounting
 
 ## Wiring
 
