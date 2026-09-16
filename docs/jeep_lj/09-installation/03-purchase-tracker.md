@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-06-11
+**Last Updated:** 2026-09-16
 
 ---
 
@@ -26,8 +26,6 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Warn Zeon 10-S Winch | Warn | ~$1,200 | |
 | Fusion MS-RA670 Head Unit | Fusion (Garmin) | ~$400 | |
 | Rugged Radios G1-GMRS (50W) | Rugged Radios | ~$350 | |
-| ARB RD116 Air Locker (Front) | ARB | ~$400 | |
-| ARB RD116 Air Locker (Rear) | ARB | ~$400 | |
 | Cascadia 4x4 80W Solar Panel | Cascadia 4x4 | ~$350 | |
 | GM 84100128 Radiator Fan | General Motors | ~$200 | |
 | Dakota Digital HDX-96J-TJ Gauge Cluster | Dakota Digital | ~$900 | |
@@ -46,6 +44,14 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | ARB Pressure Switch (180901) | ARB | ~$50 | [Air Compressor][air-compressor] |
 | 4-6 Port Air Manifold | Generic | ~$30 | [Air Compressor][air-compressor] |
 | Restomod Air Custom HVAC Kit | Restomod Air | — (confirm) | Ordered 2026-06; replaces factory TJ HVAC — model/config {{ tbd(146) }} - [HVAC][hvac] |
+| Ford Super Duty Dana 60 front housing (2005-2010 F-350 SRW) | Ford | — | [Front Axle][front-axle] |
+| Ford Sterling 10.5 rear housing (2005-2010 F-350 SRW) | Ford | — | [Rear Axle][rear-axle] |
+| ARB RD166 Air Locker (Front) | ARB | — | 35 spline, 4.56 & up - [Front Axle][front-axle] |
+| American Iron ball joint delete kit | American Iron | — | [Front Axle][front-axle] |
+| Offroad Anonymous 05-16 SD60 full hydro high steer arms | Offroad Anonymous | — | Quantity per arm vs per pair {{ tbd(302) }} - [Front Axle][front-axle] |
+| Raceline RT233 Monster beadlocks | Raceline | — | 17x9.5, 8x170, -32 offset |
+| PSC 8" double-ended ram | PSC | — | Carried over from the Dana 44 build - [Steering][steering] |
+| Barnes 4WD universal DIY ram mount | Barnes 4WD | — | Carried over - [Front Axle][front-axle] |
 
 ---
 
@@ -67,7 +73,7 @@ Major components - watch for sales, consider financing options.
 | Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 ✅ purchased 2026-05-30 | High | Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 | 03-06 TJ/LJ Auto Brake Pedal Assembly | Mopar | ~$30-80 | **Ordered** | Auto-trans pedal w/ wider pad + stop-lamp switch - [iBooster][ibooster] |
 | Back Bay Customs Wilwood MC Adapter | Back Bay Customs | ~$165 | High | Replaces factory MC w/ Wilwood - [iBooster][ibooster] |
-| Wilwood 260-15542 Tandem Compact MC (1.00" bore) | Wilwood | ~$180-230 | High | ✅ Bore resolved — ready to order; black E-coat - [iBooster][ibooster] |
+| Wilwood Tandem Compact MC (1-1/8" bore; 260-15541, confirm) | Wilwood | ~$180-230 | High | Re-sized 2026-09-16 for Super Duty calipers - [Brakes][brakes] |
 | Wilwood 260-16392 Remote Reservoir (×2) | Wilwood | ~$260-320 | High | 4oz anodized, -3 AN port - [iBooster][ibooster] |
 | Wilwood 250-16393 Dual Reservoir Bracket | Wilwood | ~$45-65 | High | Anodized billet - [iBooster][ibooster] |
 | Wilwood 220-12993 -3 AN Flexline (×2) | Wilwood | ~$50-70 | High | 8" w/ 11/16-20 adapter - [iBooster][ibooster] |
@@ -83,6 +89,29 @@ Major components - watch for sales, consider financing options.
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
+
+---
+
+## Drivetrain - 1-Ton Axle Swap
+
+Parts for the Super Duty Dana 60 front and Sterling 10.5 rear. Prices unconfirmed except where noted; see [Front Axle][front-axle] and [Rear Axle][rear-axle].
+
+| Item | Manufacturer | Est. Price | Priority | Notes |
+| :--- | :----------- | :--------- | :------- | :---- |
+| ARB RD140 Air Locker (Rear) | ARB | ~$1,400 (vendor list) | High | 35 spline, all ratios - [Rear Axle][rear-axle] |
+| Revolution D60 reverse 5.13 ring & pinion, standard thickness | Revolution Gear | — | High | Not D60-513RT (thick) or REV-F350-513-K - [Front Axle][front-axle] |
+| Revolution D60 reverse master install kit | Revolution Gear | — | High | [Front Axle][front-axle] |
+| Revolution F10.25-513L 5.13 ring & pinion (long pinion) | Revolution Gear | — | High | Sourcing {{ tbd(297) }}; 10.25" gear run in the 10.5 housing - [Rear Axle][rear-axle] |
+| Revolution 35-2046 master install kit | Revolution Gear | — | High | 10.5 housing with F10.25 gear (not 35-2046A) - [Rear Axle][rear-axle] |
+| Revolution SK F10.5-Conv pinion spacer | Revolution Gear | — | High | Only if the rear donor housing is 2008-2010 - [Rear Axle][rear-axle] |
+| Yukon Hardcore YHC70011 locking hubs | Yukon | — | Medium | 35 spline - [Front Axle][front-axle] |
+| Spicer SPL55-3X u-joints (x4) | Spicer | — | Medium | 2 installed, 2 spare - [Front Axle][front-axle] |
+| American Iron AI-1900 trail hardware kit | American Iron | — | Medium | [Front Axle][front-axle] |
+| Motobilt truss, front and rear | Motobilt | — | Medium | Weld before internals - [Front Axle][front-axle], [Rear Axle][rear-axle] |
+| Motobilt differential cover, front and rear | Motobilt | — | Medium | [Front Axle][front-axle], [Rear Axle][rear-axle] |
+| PowerStop Z36 Truck & Tow kit, front and rear | PowerStop | — | Medium | Match to donor axle years - [Brakes][brakes] |
+| 1350 pinion yokes, strap style (29 spline front, 31 spline rear) | — | — | Medium | Set the driveshaft axle-end series - [Front Axle][front-axle], [Rear Axle][rear-axle] |
+| Tom Woods driveshafts, pair, 1350 CV | Tom Woods | — | Low | Measure at final ride height - [Driveshafts][driveshafts] |
 
 ---
 
@@ -171,7 +200,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
-| **TOTAL REMAINING** | **~$8,800-9,300** | |
+| 1-Ton Axle Swap (Dana 60 front, Sterling 10.5 rear) | — (unpriced) | High |
+| **TOTAL REMAINING** | **~$8,800-9,300** (excl. axle swap) | |
 
 ---
 
@@ -224,6 +254,11 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [intercom]: ../07-communication-systems/02-intercom.md
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
+[rear-axle]: ../10-drivetrain/05-rear-axle.md
+[front-axle]: ../10-drivetrain/04-front-axle.md
+[steering]: ../10-drivetrain/07-steering.md
+[driveshafts]: ../10-drivetrain/03-driveshafts.md
+[brakes]: ../10-drivetrain/08-brakes.md
 [solar]: ../01-power-systems/01-power-generation/04-solar.md
 [dash-camera]: ../07-communication-systems/04-dash-camera.md
 [starter]: ../02-engine-systems/01-starter.md

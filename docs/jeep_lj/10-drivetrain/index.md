@@ -14,17 +14,19 @@ Complete drivetrain system documentation for the Jeep LJ build.
 | [10.1][transmission] | Transmission | ZF 8HP70 (845RE), 8-speed automatic |
 | [10.2][transfer-case] | Transfer Case | NV241 GenII Command-Trac (2012 JK Sport), 2.72:1 low range |
 | [10.3][driveshafts] | Driveshafts | Front and rear driveshafts |
-| [10.4][front-axle] | Front Axle | TJ Rubicon Dana 44, ARB RD116 locker, RCV axle shafts |
-| [10.5][rear-axle] | Rear Axle | TJ Rubicon Dana 44, ARB RD116 locker |
+| [10.4][front-axle] | Front Axle | Super Duty Dana 60 high pinion (2005-2010 F-350 SRW), 5.13 Revolution, ARB RD166 locker, factory 35-spline shafts |
+| [10.5][rear-axle] | Rear Axle | Sterling 10.5 (2005-2010 F-350 SRW), 5.13 Revolution, ARB RD140 locker |
 | [10.6][suspension] | Suspension | ORI struts - 14" front, 16" rear |
 | [10.7][steering] | Steering | PSC full hydraulic steering |
+| [10.8][brakes] | Brakes | Super Duty discs at four corners, PowerStop Z36, Wilwood 1-1/8" master |
 
 ## System Overview
 
 **Axles:**
 
-- Front: TJ Rubicon Dana 44 with ARB RD116 air locker, RCV Performance axle shafts
-- Rear: TJ Rubicon Dana 44 with ARB RD116 air locker
+- Front: Ford Super Duty Dana 60 high pinion (2005-2010 F-350 SRW) with ARB RD166 air locker, factory 35-spline shafts, Yukon manual hubs
+- Rear: Ford Sterling 10.5 (2005-2010 F-350 Super Duty SRW) with ARB RD140 air locker, factory 35-spline full-float shafts
+- Gear ratio 5.13 both ends (Revolution Gear); bolt pattern 8x170
 
 **Drivetrain:**
 
@@ -42,6 +44,10 @@ Complete drivetrain system documentation for the Jeep LJ build.
 **Steering:**
 
 - PSC Motorsports full hydraulic steering
+
+**Brakes:**
+
+- Factory Super Duty discs at four corners, Bosch iBooster, Wilwood 1-1/8" master; see [Brakes][brakes]
 
 ## Outstanding Items
 
@@ -62,4 +68,5 @@ Complete drivetrain system documentation for the Jeep LJ build.
 [rear-axle]: 05-rear-axle.md
 [suspension]: 06-suspension.md
 [steering]: 07-steering.md
+[brakes]: 08-brakes.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md

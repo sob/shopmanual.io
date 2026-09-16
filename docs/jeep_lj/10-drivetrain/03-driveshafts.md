@@ -9,6 +9,8 @@ Both driveshafts are custom units built to measured length by Tom Woods Custom D
 | Type | Custom (Tom Woods Custom Drive Shafts) |
 | Length | {{ tbd(93) }} — measure at final ride height |
 | U-Joint | {{ tbd(93) }} — per Tom Woods build spec |
+| Series | 1350 CV[^series] |
+| Axle End | 1350 strap-style pinion yoke, 29 spline — see [Front Axle][front-axle] |
 
 ## Rear Driveshaft
 
@@ -17,6 +19,9 @@ Both driveshafts are custom units built to measured length by Tom Woods Custom D
 | Type | Custom (Tom Woods Custom Drive Shafts) |
 | Length | {{ tbd(94) }} — measure at final ride height |
 | U-Joint | {{ tbd(94) }} — per Tom Woods build spec |
+| Series | 1350 CV[^series] |
+| Axle End | 1350 strap-style pinion yoke, 31 spline — see [Rear Axle][rear-axle] |
+| Transfer Case End | CV; rear pinion aimed at the transfer case output |
 
 ## Outstanding Items
 
@@ -27,6 +32,7 @@ Both driveshafts are custom units built to measured length by Tom Woods Custom D
 - [ ] Measure front driveshaft length at final ride height and order from Tom Woods
 - [ ] Measure rear driveshaft length at final ride height and order from Tom Woods
 
+[^series]: Owner build notes, 2026-09-16 — both shafts 1350-series CV from Tom Woods, matched to the 1350 strap-style pinion yokes on the Super Duty axles.
 [^driveshaft-vendor]: Owner decision, 2026-05-30 — custom shafts sourced from Tom Woods Custom Drive Shafts; length and U-joint series are determined by Tom Woods from the measured working length at final ride height.
 
 ## Related Documentation
