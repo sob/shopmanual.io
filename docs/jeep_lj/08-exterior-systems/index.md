@@ -13,7 +13,7 @@ Recovery equipment and air systems for offroad capability.
 | :------ | :-------- | :---------- |
 | [8.1][winch] | Warn Zeon 10-S Winch | 10,000 lb winch, 409A peak |
 | [8.2][air-compressor] | ARB Twin Compressor | Brushless 90A compressor, 1-gallon tank, auto pressure control |
-| [8.3][air-lockers] | ARB Air Lockers | RD116 front (Dana 44), RD140 rear (Sterling 10.5) |
+| [8.3][air-lockers] | ARB Air Lockers | RD166 front (Dana 60), RD140 rear (Sterling 10.5) |
 | [8.4][rear-air-chuck] | Rear Air Chuck | External air access in tailgate area |
 
 ## System Overview
@@ -28,7 +28,7 @@ Recovery equipment and air systems for offroad capability.
 
 - ARB Twin Compressor (brushless, 90A draw)
 - 1-gallon air tank (135-150 PSI automatic pressure)
-- ARB front/rear air lockers (RD116 front, RD140 rear)
+- ARB front/rear air lockers (RD166 front, RD140 rear)
 - Rear air chuck plate for tire inflation
 
 ## Power Distribution

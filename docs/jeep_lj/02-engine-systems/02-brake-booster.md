@@ -23,9 +23,9 @@ tags:
 
 [^donor-year]: Part numbers confirmed against the secured donor — eBay listing #397546491129 (offer accepted 2026-05-30): OE/OEM `46680-T3Z-A00` + `01469-TWA-A58`, MC mfr # `46100-TWA-A550-M1`, Honda, made in Japan. Booster is the Bosch **Gen 2** unit (EVcreate lists the Honda Accord under Gen 2; Back Bay adapter is Honda-Accord-only). Model year not asserted — the listing states none, and the physical part (not a catalog-year lookup) is the fitment reference. Verified 2026-05-30.
 
-**Master Cylinder:** Wilwood 260-15542 Tandem Compact — **1.00" bore** (sized to TJ Rubicon front calipers; see Master Cylinder section)
+**Master Cylinder:** Wilwood Tandem Compact — **1-1/8" bore** (re-sized 2026-09-16 for the Super Duty calipers; see Master Cylinder section and [Brakes][brakes])
 
-**MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter] — Honda Accord iBooster only (not Tesla); confirmed compatible with Wilwood 260-15542 (vendor, 2026-05-30)
+**MC Adapter:** [Back Bay Customs Wilwood iBooster Adapter][backbay-adapter] — Honda Accord iBooster only (not Tesla); confirmed compatible with Wilwood 260-15542 (vendor, 2026-05-30); re-confirm against the 1-1/8" unit
 
 **Reservoirs:** 2× Wilwood 260-16392 (4 oz anodized, remote) — vendor-confirmed OK with adapter[^mc-reservoir]
 
@@ -43,7 +43,7 @@ tags:
 
 Electromechanical brake booster required for the Cummins R2.8 diesel (minimal manifold vacuum). The Honda Accord Hybrid donor delivers the same Bosch Gen 2 unit as the Tesla Model 3 with better DIY documentation and sourcing.
 
-The Back Bay Customs adapter mates a Wilwood Tandem Compact master (260-15542, 1.00" bore) to the iBooster, solving the vertical-firewall reservoir-angle problem.
+The Back Bay Customs adapter mates a Wilwood Tandem Compact master (1-1/8" bore; confirmed by the vendor against the 1.00" 260-15542) to the iBooster, solving the vertical-firewall reservoir-angle problem.
 
 **Vendor compatibility (Back Bay Customs / Adam, email 2026-05-30):**
 
@@ -58,26 +58,27 @@ The Back Bay Customs adapter mates a Wilwood Tandem Compact master (260-15542, 1
 
 ### Master Cylinder
 
-Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers and the exact part Back Bay confirmed the adapter against. Ready to order.[^mc-bore]
+Wilwood Tandem Compact, **1-1/8" bore** — re-sized 2026-09-16 for the Super Duty calipers on the 1-ton axles, for knockback margin rather than steady-state caliper volume. Wilwood lists the 1-1/8" Tandem Compact as 260-15541; confirm the part number and re-confirm the Back Bay adapter (vendor-confirmed against the 1.00" 260-15542) before ordering. Sizing rationale is on the [Brakes][brakes] page.[^mc-resize] The original 1.00" selection is kept for the record.[^mc-bore]
 
-- **Bore:** 1.00" — Wilwood 260-15542[^mc-bore]
-- **Stroke:** 1.10"[^mc-stroke]
+- **Bore:** 1-1/8" — Wilwood Tandem Compact (260-15541, confirm)[^mc-resize]
+- **Stroke:** 1.10" on the 260-15542; confirm for the 1-1/8" unit[^mc-stroke]
 - **Outlets:** tandem (independent front/rear); thread **1/2-20 IF**[^mc-ports]
 - **Reservoir/inlet ports:** remote feed; thread is an in-hand check, not a datasheet lookup[^mc-ports]
 
 [^ibooster-torque]: M8 studs (confirmed by [EVcreate](https://www.evcreate.com/installing-the-ibooster/)); Honda's power-brake-booster mounting-nut torque is **~115 in-lb / 13 Nm** across Accord generations ([TorqueSpec Database — Accord 2003-2007](https://torque-spec-database.com/honda-accord-2003-2007/)). Honda publishes no Gen 2 iBooster-specific figure. Not to be confused with the Bosch 16 Nm M12×1 brake-line nut. Verified 2026-05-30.
-[^mc-bore]: Wilwood [260-15542-BK](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) = **1.00" bore** (the 1.125" Tandem Compact is 260-15541). Sized to the brake hardware: TJ Rubicon front calipers (2.595" piston, ~5.29 sq in each) + rear disc, targeting standard/light pedal effort. The factory TJ master is itself a 1.00" bore Mopar matched to these calipers ([TJ community](https://www.jeepforum.com/threads/tj-brake-master-cylinder-upgrade.340389/)); at 1.00" × 1.10" stroke (0.86 cu in/circuit) worst-case caliper fill leaves ~50% stroke headroom. A 1.125" bore would raise pedal effort and only benefits high-volume multi-piston calipers (not used here). 1.00"/260-15542 is also the part Back Bay confirmed the adapter against. Pedal ratio is a bench geometry/travel check on assembly, not a bore input. Checked 2026-05-30.
+[^mc-resize]: Owner decision, 2026-09-16 — bore raised to 1-1/8" with the move to Ford Super Duty calipers front and rear (Dana 60 / Sterling 10.5 axles), sized for knockback margin. Supersedes the 1.00" selection recorded in the next footnote.
+[^mc-bore]: **Superseded 2026-09-16** (bore now 1-1/8"; see the Brakes page). Original 1.00" rationale: Wilwood [260-15542-BK](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) = **1.00" bore** (the 1.125" Tandem Compact is 260-15541). Sized to the brake hardware: TJ Rubicon front calipers (2.595" piston, ~5.29 sq in each) + rear disc, targeting standard/light pedal effort. The factory TJ master is itself a 1.00" bore Mopar matched to these calipers ([TJ community](https://www.jeepforum.com/threads/tj-brake-master-cylinder-upgrade.340389/)); at 1.00" × 1.10" stroke (0.86 cu in/circuit) worst-case caliper fill leaves ~50% stroke headroom. A 1.125" bore would raise pedal effort and only benefits high-volume multi-piston calipers (not used here). 1.00"/260-15542 is also the part Back Bay confirmed the adapter against. Pedal ratio is a bench geometry/travel check on assembly, not a bore input. Checked 2026-05-30.
 [^mc-stroke]: Wilwood 260-15542 official page lists **stroke 1.10"** (checked 2026-05-30).
 [^mc-ports]: Outlets **1/2-20 IF** per Wilwood's [260-15542-BK page](https://www.wilwood.com/MasterCylinders/MasterCylinderProd?itemno=260-15542-BK) (outlet 1: 3/8-24 IF or 1/2-20 IF; outlet 2: 3/8-24 IF or 9/16-18 IF). The 260-15542 is an integral-reservoir unit and Wilwood's datasheet leaves the inlet thread blank, so the reservoir-feed thread is verified on the part in hand. Back Bay confirmed the remote reservoirs work with the adapter (2026-05-30); the 220-12993 flexline is the kit described to them. Checked 2026-06-01.
 
 ### Brake Hardware (downstream — MC bore design inputs)
 
-- **Front calipers:** Jeep TJ Rubicon — single-piston floating, **2.595" piston** (~5.29 sq in each; ~10.6 sq in front total)[^brake-hw]
+- **Front calipers:** Ford Super Duty factory caliper on the Dana 60 [front axle][front-axle]; piston area to be confirmed[^brake-hw]
 - **Rear:** disc — Ford Super Duty factory disc with drum-in-hat park brake, on the Sterling 10.5 [rear axle][rear-axle]; caliper piston area to be confirmed[^brake-hw]
 - **Pedal:** 03-06 TJ/LJ auto pedal (ratio bench-measured on assembly)
-- These set the MC bore selection — see the Master Cylinder section and [^mc-bore].
+- These set the MC bore selection — see the Master Cylinder section and [Brakes][brakes].
 
-[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). The front calipers dominate the MC bore calc; the rear disc volume fits within the 1.00" bore's stroke headroom. Rear hardware changed 2026-09-16 with the move to the Sterling 10.5 rear axle (Ford Super Duty factory disc, drum-in-hat park brake); the earlier TJ rear disc + PowerStop rotor setup (seller-confirmed 2026-05-31) no longer applies. Confirm the Super Duty rear caliper piston area and re-check the 1.00" bore stroke headroom before ordering fittings.
+[^brake-hw]: Brake hardware changed 2026-09-16 with the move to Ford Super Duty axles front (Dana 60) and rear (Sterling 10.5): factory Super Duty calipers and rotors at all four corners with PowerStop Z36 pads and rotors, and a drum-in-hat park brake in the rear. The earlier inputs (TJ Rubicon front caliper, 2.595" piston per [replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30; TJ rear disc + PowerStop rotors, seller-confirmed 2026-05-31) no longer apply. Confirm the Super Duty caliper piston areas and check the 1-1/8" bore stroke headroom before ordering fittings.
 
 ### Plumbing
 
@@ -102,8 +103,8 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 | :--- | :----- | :----- | :----- | :---- |
 | iBooster + MC pull | Honda 46680-T3Z-A00 (+ 01469-TWA-A58) | eBay (listing #397546491129) | ✅ Purchased ($195, offer accepted 2026-05-30) | Honda Accord Hybrid Gen 2 donor; part #s confirmed on listing |
 | Auto brake pedal assembly | 03-06 TJ/LJ auto pedal | eBay / junkyard | **Ordered** | Wider pedal pad than manual; stop-lamp switch + connector included on donor |
-| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | ✅ Confirmed vs 260-15542 (vendor, 2026-05-30) — matches selected bore; ready to order | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
-| Master cylinder | Wilwood 260-15542 (1.00") | Summit / Jegs | ✅ Bore resolved — ready to order | Tandem Compact, 1.00" bore, black E-coat |
+| MC adapter | Back Bay Customs | [backbaycustoms.com][backbay] | Confirmed vs 260-15542 (vendor, 2026-05-30); re-confirm against the 1-1/8" unit | Steel plate + pushrod spacer + nyloc nuts; Honda iBooster only |
+| Master cylinder | Wilwood Tandem Compact 1-1/8" (260-15541, confirm) | Summit / Jegs | Re-sized 2026-09-16 for Super Duty calipers | Was 260-15542 1.00"; see [Brakes][brakes] |
 | Reservoir (×2) | Wilwood 260-16392 | Summit / Jegs | Ready to order (vendor-confirmed OK) | 4 oz anodized, includes -3 AN fitting |
 | Dual reservoir bracket | Wilwood 250-16393 | Summit / Jegs | Ready to order | Anodized billet, mounting screws incl. |
 | Flexline (×2) | Wilwood 220-12993 | Summit / Jegs | Ready to order | 8" -3 AN, includes 11/16-20 adapter |
@@ -255,17 +256,18 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 **Ordering:**
 
-- [ ] ✅ Order master cylinder — **Wilwood 260-15542 (1.00" bore)** — bore resolved, ready to order
+- [ ] Order master cylinder — **Wilwood Tandem Compact 1-1/8" bore** (260-15541, confirm part number) — re-sized for the Super Duty calipers
 - [ ] Order plumbing: 2× 260-16392 reservoirs + 250-16393 dual bracket + 2× 220-12993 flexlines (vendor-confirmed)
-- [ ] Order Back Bay Customs Wilwood MC adapter (confirmed vs 260-15542 — matches selected bore)
-- [ ] Verify the 260-15542 reservoir-feed port thread on the **actual MC in hand** before buying any extra inlet fittings — Wilwood's datasheet leaves the inlet field blank (it's an integral-reservoir unit), so this is an in-hand check, not a datasheet lookup. Back Bay confirmed the remote reservoirs work with the adapter (Adam, 2026-05-30) and the 220-12993 is the flexline kit described to them.
+- [ ] Order Back Bay Customs Wilwood MC adapter (confirmed vs 260-15542; re-confirm against the 1-1/8" unit)
+- [ ] Confirm outlet threads on the 1-1/8" unit (plumbing assumes 1/2-20 IF at the MC)
+- [ ] Verify the master cylinder reservoir-feed port thread on the **actual MC in hand** before buying any extra inlet fittings — Wilwood's datasheet leaves the inlet field blank (it's an integral-reservoir unit), so this is an in-hand check, not a datasheet lookup. Back Bay confirmed the remote reservoirs work with the adapter (Adam, 2026-05-30) and the 220-12993 is the flexline kit described to them.
 
 **Brake plumbing — caliper side (hybrid: copper-nickel hardline + axle flex):**
 
 - [ ] Order 3/16" copper-nickel hardline + inverted-flare fittings (1/2-20 IF at MC outlets) + stainless spring gravel-guard armor
 - [ ] 🔵 Select extended-length DOT (FMVSS 106) braided flex hoses — **blocked on axle + suspension selection** (Section 10); size to full droop, do not cut until ride height is fixed
 - [ ] Select adjustable proportioning valve for the rear circuit (iBooster has no integral proportioning) + any residual-pressure valves; size on assembly
-- [ ] Confirm Super Duty rear caliper piston area and re-check 1.00" MC stroke headroom (rear axle changed to Sterling 10.5)
+- [ ] Confirm Super Duty front and rear caliper piston areas and check 1-1/8" MC stroke headroom (both axles changed)
 - [ ] Plan routing: chassis runs inside the frame rail, bulkhead fittings at each axle for the hardline→flex transition
 
 **Fab + install:**
@@ -283,6 +285,8 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
 [rear-axle]: ../10-drivetrain/05-rear-axle.md
+[front-axle]: ../10-drivetrain/04-front-axle.md
+[brakes]: ../10-drivetrain/08-brakes.md
 [bosch-ibooster]: https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [backbay]: https://backbaycustoms.com/products/

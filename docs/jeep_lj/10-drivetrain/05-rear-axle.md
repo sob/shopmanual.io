@@ -43,7 +43,7 @@ tags:
 | :------------ | :---- |
 | Ratio | 5.13 |
 | Manufacturer | Revolution Gear |
-| Part | F10.25-513L (long spline)[^gearset] |
+| Part | F10.25-513L (long spline)[^gearset] — sourcing {{ tbd(297) }} |
 | Install Kit | Revolution 35-2046[^install-kit] |
 | 2008-2010 Housing | Add Revolution SK F10.5-Conv pinion spacer (sold separately)[^install-kit] |
 
@@ -54,7 +54,8 @@ tags:
     (not 35-2046A, which is for a factory 10.5 gear).[^gearset] Add
     approximately 0.120" to the pinion depth stack as a starting point, then
     adjust. A solid crush sleeve spacer works without modification despite not
-    being listed for the 10.5.[^owner-notes]
+    being listed for the 10.5.[^owner-notes] RD140 fitment with this gear:
+    {{ tbd(300) }}.
 
 ## Differential
 
@@ -73,9 +74,6 @@ solenoid and a 6 ft line. The e-locker has no published current draw, requires
 a housing pass-through and bulkhead connector, and its 12V-engage / 5V-hold
 profile is not reproducible on a SwitchPros output.[^locker-choice]
 
-The RD116 already purchased for the rear is a 30-spline Dana 44 unit and does
-not fit this housing; it is surplus (see [Purchase Tracker][purchase-tracker]).
-
 See [Air Lockers][air-lockers] for wiring, air line routing, and operation.
 
 ## Axle Shafts
@@ -91,12 +89,12 @@ See [Air Lockers][air-lockers] for wiring, air line routing, and operation.
 | Specification | Value |
 | :------------ | :---- |
 | Type | Factory Super Duty disc |
+| Pads and Rotors | PowerStop Z36 Truck & Tow |
 | Park Brake | 8.1" drum-in-hat, mechanical[^owner-notes] |
 
-Factory disc with integrated park brake. No conversion required. The rear
-caliper piston area is a master cylinder sizing input: the 1.00" Wilwood bore
-was sized against the TJ rear disc and needs a re-check against the Super Duty
-caliper. See [Brake Booster][brake-booster].
+Factory disc with integrated park brake. No conversion required. Master
+cylinder sizing, flex hoses, proportioning, and bias are on the
+[Brakes][brakes] page.
 
 ## Housing Preparation
 
@@ -124,13 +122,10 @@ All welding completed before internals installed.
 
 ## Build Tasks
 
-- [ ] Confirm 5.13 long spline gearset (F10.25-513L) availability before ordering
 - [ ] Verify no filler hole in OE inspection cover
 - [ ] Confirm donor housing year; a 2008-2010 housing needs the Revolution SK F10.5-Conv spacer in addition to kit 35-2046
-- [ ] Verify RD140 fitment against Revolution F10.25-513L in 10.5 housing
 - [ ] Confirm park brake hardware complete
 - [ ] Cite an OEM or vendor source for WMS width, 8x170 bolt pattern, and spline counts before bracket layout or wheel order
-- [ ] Confirm Super Duty rear caliper piston area and re-check 1.00" master cylinder stroke headroom
 
 ## Related Documentation
 
@@ -138,15 +133,15 @@ All welding completed before internals installed.
 - [Air Lockers][air-lockers] - Locker control, air lines, operation
 - [Air Compressor][air-compressor] - ARB Twin Compressor and tank
 - [Driveshafts][driveshafts] - Rear shaft yoke and CV
-- [Brake Booster][brake-booster] - Master cylinder sizing inputs, axle flex hoses, proportioning valve
+- [Brakes][brakes] - Master cylinder sizing, flex hoses, proportioning valve, park brake
 - [Suspension][suspension] - ORI strut and link bracket layout
-- [Purchase Tracker][purchase-tracker]
+- [Purchase Tracker][purchase-tracker] - Axle swap parts
 
 [front-axle]: 04-front-axle.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [air-compressor]: ../08-exterior-systems/02-air-compressor.md
 [driveshafts]: 03-driveshafts.md
-[brake-booster]: ../02-engine-systems/02-brake-booster.md
+[brakes]: 08-brakes.md
 [bim-gps]: ../02-engine-systems/09-gauge-cluster/04-bim-gps.md
 [suspension]: 06-suspension.md
 [purchase-tracker]: ../09-installation/03-purchase-tracker.md
