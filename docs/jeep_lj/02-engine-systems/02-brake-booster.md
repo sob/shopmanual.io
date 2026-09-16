@@ -73,11 +73,11 @@ Wilwood **260-15542**, **1.00" bore** — sized to the TJ Rubicon front calipers
 ### Brake Hardware (downstream — MC bore design inputs)
 
 - **Front calipers:** Jeep TJ Rubicon — single-piston floating, **2.595" piston** (~5.29 sq in each; ~10.6 sq in front total)[^brake-hw]
-- **Rear:** disc — factory TJ rear disc, **PowerStop drilled & slotted rotors**[^brake-hw]
+- **Rear:** disc — Ford Super Duty factory disc with drum-in-hat park brake, on the Sterling 10.5 [rear axle][rear-axle]; caliper piston area to be confirmed[^brake-hw]
 - **Pedal:** 03-06 TJ/LJ auto pedal (ratio bench-measured on assembly)
 - These set the MC bore selection — see the Master Cylinder section and [^mc-bore].
 
-[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). The front calipers dominate the MC bore calc; the rear disc volume fits within the 1.00" bore's stroke headroom. Rear-disc setup confirmed (seller, 2026-05-31): factory TJ rear disc + PowerStop drilled & slotted rotors (a friction-surface upgrade — no change to caliper piston area). Confirm actual rear caliper piston area when finalizing fittings.
+[^brake-hw]: Front caliper piston Ø **2.595"** is the TJ Wrangler/Rubicon front spec ([replacement-parts data](https://www.wranglerforum.com/threads/brake-piston-dimensions.761722/), checked 2026-05-30). The front calipers dominate the MC bore calc; the rear disc volume fits within the 1.00" bore's stroke headroom. Rear hardware changed 2026-09-16 with the move to the Sterling 10.5 rear axle (Ford Super Duty factory disc, drum-in-hat park brake); the earlier TJ rear disc + PowerStop rotor setup (seller-confirmed 2026-05-31) no longer applies. Confirm the Super Duty rear caliper piston area and re-check the 1.00" bore stroke headroom before ordering fittings.
 
 ### Plumbing
 
@@ -265,6 +265,7 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [ ] Order 3/16" copper-nickel hardline + inverted-flare fittings (1/2-20 IF at MC outlets) + stainless spring gravel-guard armor
 - [ ] 🔵 Select extended-length DOT (FMVSS 106) braided flex hoses — **blocked on axle + suspension selection** (Section 10); size to full droop, do not cut until ride height is fixed
 - [ ] Select adjustable proportioning valve for the rear circuit (iBooster has no integral proportioning) + any residual-pressure valves; size on assembly
+- [ ] Confirm Super Duty rear caliper piston area and re-check 1.00" MC stroke headroom (rear axle changed to Sterling 10.5)
 - [ ] Plan routing: chassis runs inside the frame rail, bulkhead fittings at each axle for the hardline→flex transition
 
 **Fab + install:**
@@ -281,6 +282,7 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 - [Firewall Ingress][firewall-ingress] - Mounting and wire routing
 
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
+[rear-axle]: ../10-drivetrain/05-rear-axle.md
 [bosch-ibooster]: https://www.bosch-mobility.com/en/solutions/driving-safety/ibooster/
 [tulays-harness]: https://tulayswirewerks.com/product/bosch-ibooster-gen-2-universal-wire-harness/
 [backbay]: https://backbaycustoms.com/products/

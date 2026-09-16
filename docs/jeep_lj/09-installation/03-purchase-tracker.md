@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-06-11
+**Last Updated:** 2026-09-16
 
 ---
 
@@ -27,7 +27,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Fusion MS-RA670 Head Unit | Fusion (Garmin) | ~$400 | |
 | Rugged Radios G1-GMRS (50W) | Rugged Radios | ~$350 | |
 | ARB RD116 Air Locker (Front) | ARB | ~$400 | |
-| ARB RD116 Air Locker (Rear) | ARB | ~$400 | |
+| ARB RD116 Air Locker (Rear) | ARB | ~$400 | Surplus — rear axle moved to Sterling 10.5, which takes the RD140 - [Rear Axle][rear-axle] |
 | Cascadia 4x4 80W Solar Panel | Cascadia 4x4 | ~$350 | |
 | GM 84100128 Radiator Fan | General Motors | ~$200 | |
 | Dakota Digital HDX-96J-TJ Gauge Cluster | Dakota Digital | ~$900 | |
@@ -83,6 +83,23 @@ Major components - watch for sales, consider financing options.
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
+
+---
+
+## Drivetrain - Rear Axle (Sterling 10.5)
+
+Parts for the 1-ton rear axle swap. Prices unconfirmed except where noted; see [Rear Axle][rear-axle].
+
+| Item | Manufacturer | Est. Price | Priority | Notes |
+| :--- | :----------- | :--------- | :------- | :---- |
+| Sterling 10.5 housing, 2005-2010 F-350 SRW (donor) | Ford | — | High | Full float, 35 spline; 2010 or earlier only - [Rear Axle][rear-axle] |
+| ARB RD140 Air Locker | ARB | ~$1,400 | High | 35 spline, all ratios; replaces the surplus RD116 (Rear) - [Rear Axle][rear-axle] |
+| Revolution F10.25-513L 5.13 Ring & Pinion (long pinion) | Revolution Gear | — | High | 10.25" gear run in the 10.5 housing - [Rear Axle][rear-axle] |
+| Revolution 35-2046 Master Install Kit | Revolution Gear | — | High | 10.5 housing with F10.25 gear (not 35-2046A) - [Rear Axle][rear-axle] |
+| Revolution SK F10.5-Conv Pinion Spacer | Revolution Gear | — | High | Only if the donor housing is 2008-2010 - [Rear Axle][rear-axle] |
+| Motobilt Sterling 10.5 Truss | Motobilt | — | High | Weld before internals - [Rear Axle][rear-axle] |
+| Motobilt Sterling 10.5 Differential Cover | Motobilt | — | Medium | [Rear Axle][rear-axle] |
+| 1350 Pinion Yoke, 31 spline, strap style | — | — | High | Sets the rear driveshaft axle-end series - [Rear Axle][rear-axle] |
 
 ---
 
@@ -171,7 +188,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
-| **TOTAL REMAINING** | **~$8,800-9,300** | |
+| Rear Axle (Sterling 10.5 build) | ~$1,400 + unpriced gears, kit, truss, cover, yoke | High |
+| **TOTAL REMAINING** | **~$8,800-9,300** (excl. rear axle) | |
 
 ---
 
@@ -224,6 +242,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [intercom]: ../07-communication-systems/02-intercom.md
 [keyless]: ../05-control-interfaces/06-keyless-ignition.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
+[rear-axle]: ../10-drivetrain/05-rear-axle.md
 [solar]: ../01-power-systems/01-power-generation/04-solar.md
 [dash-camera]: ../07-communication-systems/04-dash-camera.md
 [starter]: ../02-engine-systems/01-starter.md

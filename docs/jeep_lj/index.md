@@ -66,7 +66,7 @@ The electrical system is organized into zones for logical distribution and maint
 
 - **[Winch][winch]** - Warn Zeon 10-S winch (10,000 lb)
 - **[Air Compressor][air-compressor]** - ARB Twin Compressor and tank
-- **[Air Lockers][air-lockers]** - ARB RD116 front/rear lockers
+- **[Air Lockers][air-lockers]** - ARB RD116 front / RD140 rear lockers
 - **[Rear Air Chuck][rear-air-chuck]** - External air access
 
 ### Drivetrain

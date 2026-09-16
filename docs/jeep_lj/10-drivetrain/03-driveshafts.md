@@ -17,6 +17,8 @@ Both driveshafts are custom units built to measured length by Tom Woods Custom D
 | Type | Custom (Tom Woods Custom Drive Shafts) |
 | Length | {{ tbd(94) }} — measure at final ride height |
 | U-Joint | {{ tbd(94) }} — per Tom Woods build spec |
+| Axle End | 1350 strap-style pinion yoke, 31 spline — see [Rear Axle][rear-axle] |
+| Transfer Case End | CV shaft; rear pinion aimed at the transfer case output |
 
 ## Outstanding Items
 

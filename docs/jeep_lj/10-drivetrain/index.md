@@ -15,7 +15,7 @@ Complete drivetrain system documentation for the Jeep LJ build.
 | [10.2][transfer-case] | Transfer Case | NV241 GenII Command-Trac (2012 JK Sport), 2.72:1 low range |
 | [10.3][driveshafts] | Driveshafts | Front and rear driveshafts |
 | [10.4][front-axle] | Front Axle | TJ Rubicon Dana 44, ARB RD116 locker, RCV axle shafts |
-| [10.5][rear-axle] | Rear Axle | TJ Rubicon Dana 44, ARB RD116 locker |
+| [10.5][rear-axle] | Rear Axle | Sterling 10.5 (2005-2010 F-350 SRW), 5.13 Revolution, ARB RD140 locker |
 | [10.6][suspension] | Suspension | ORI struts - 14" front, 16" rear |
 | [10.7][steering] | Steering | PSC full hydraulic steering |
 
@@ -24,7 +24,8 @@ Complete drivetrain system documentation for the Jeep LJ build.
 **Axles:**
 
 - Front: TJ Rubicon Dana 44 with ARB RD116 air locker, RCV Performance axle shafts
-- Rear: TJ Rubicon Dana 44 with ARB RD116 air locker
+- Rear: Ford Sterling 10.5 (2005-2010 F-350 Super Duty SRW) with ARB RD140 air locker, factory 35-spline full-float shafts
+- Both axles are moving to 1-ton units; rear documented first, Dana 44 front page pending its update
 
 **Drivetrain:**
 

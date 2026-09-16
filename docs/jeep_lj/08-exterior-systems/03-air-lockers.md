@@ -10,13 +10,13 @@ tags:
 
 # 8.3 Air Lockers {#air-lockers}
 
-ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
+ARB air-operated locking differentials: RD116 in the Dana 44 front, RD140 in the Sterling 10.5 rear.
 
 /// html | div.product-info
 
-**Model:** ARB RD116 Air Locker
+**Front:** ARB RD116 Air Locker — Dana 44, 30 spline, 3.92 & up
 
-**Axle:** Dana 44, 30 spline, 3.92 & up
+**Rear:** ARB RD140 Air Locker — Sterling 10.5, 35 spline, all ratios
 
 **Front Locker Control:** SwitchPros OUTPUT-17 (low-side driver, 2A)
 
@@ -28,16 +28,16 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 **Product Image:**
 
-![ARB RD116 Air Locker (Dana 44, 30-spline)](../images/arb-rd116-air-locker.jpg)
+![ARB RD116 Air Locker (front — Dana 44, 30-spline)](../images/arb-rd116-air-locker.jpg)
 
 ## Specifications
 
 | Spec              | Front Locker          | Rear Locker           |
 | ----------------- | --------------------- | --------------------- |
-| Model             | ARB RD116             | ARB RD116             |
-| Axle              | Dana 44               | Dana 44               |
-| Spline Count      | 30                    | 30                    |
-| Gear Ratio        | 5.38                  | 5.38                  |
+| Model             | ARB RD116             | ARB RD140             |
+| Axle              | Dana 44               | Sterling 10.5         |
+| Spline Count      | 30                    | 35                    |
+| Gear Ratio        | 5.13                  | 5.13                  |
 | Solenoid Draw     | ~2A                   | ~2A                   |
 | SwitchPros Output | OUTPUT-17 (low-side)  | OUTPUT-10 (15A)       |
 | SwitchPros Button | Button 9              | Button 10             |
@@ -120,13 +120,16 @@ ARB RD116 air-operated locking differentials for front and rear Dana 44 axles.
 
 ## Build Tasks
 
-- [ ] Verify ARB RD116 compatibility with Dana 44 30-spline 5.38 gear ratio
 - [ ] Order ARB air line installation kit with 1/4" fittings for front/rear lockers
 
 ## Related Documentation
 
 - [Air Compressor][air-compressor] - ARB Twin Compressor and air tank
 - [SwitchPros][switchpros] - Locker control (OUTPUT-10, OUTPUT-17)
+- [Front Axle][front-axle] - Dana 44, RD116
+- [Rear Axle][rear-axle] - Sterling 10.5, RD140
 
 [air-compressor]: 02-air-compressor.md
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
+[front-axle]: ../10-drivetrain/04-front-axle.md
+[rear-axle]: ../10-drivetrain/05-rear-axle.md

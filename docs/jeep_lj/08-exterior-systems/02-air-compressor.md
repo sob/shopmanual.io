@@ -180,7 +180,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ## Related Documentation
 
-- [Air Lockers][air-lockers] - ARB RD116 front/rear lockers
+- [Air Lockers][air-lockers] - ARB RD116 front / RD140 rear lockers
 - [Rear Air Chuck][rear-air-chuck] - External air access plate
 - [SafetyHub][safetyhub] - Compressor power distribution
 - [SwitchPros][switchpros] - Compressor control (OUTPUT-11, TRIGGER-3)
