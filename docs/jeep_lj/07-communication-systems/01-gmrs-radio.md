@@ -73,8 +73,6 @@ tags:
 
 ## Installation Notes
 
-- Direct battery ground required for best RF performance
-- Route antenna coax away from power leads
 - Keep coax length <25 ft for minimal signal loss
 
 ## Outstanding Items

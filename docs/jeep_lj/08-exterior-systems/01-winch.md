@@ -50,18 +50,9 @@ No external circuit breaker — per the [WARN ZEON 10-S installation manual][war
 
 ## Control System
 
-**Dual Control Setup:** Dash rocker switch + handheld remote (both work simultaneously)
+**Dual Control Setup:** Dash switch + handheld remote (both work simultaneously)
 
-**Dash Rocker Switch:**
-
-- **Type:** Center-off momentary rocker switch (SPDT or DPDT)
-- **Location:** Dashboard physical switch panel
-- **Function:**
-  - **UP (momentary):** Winch OUT (let out cable)
-  - **CENTER:** Off (spring return to center)
-  - **DOWN (momentary):** Winch IN (pull in cable)
-- **Power:** BODY PDU CB43 (10A)
-- **Use case:** In-cab winch control (self-recovery, convenient operation from driver seat)
+**Dash Switch:** [CH4X4-TOY-D-WINIO][ch4x4-winch] dual-momentary push switch — see [Dashboard Controls][dashboard-controls] for switch spec, wiring, and signal path.
 
 **Handheld Remote:**
 
@@ -79,14 +70,7 @@ See [AUX Battery Distribution][aux-battery] for wire specs (gauge, length, routi
 - **Positive (+):** AUX battery+ → winch contactor → winch motor (direct, no breaker)
 - **Negative (-):** AUX battery- → winch motor ground lug
 
-**Control Wiring:**
-
-- **Power Source:** BODY PDU CB43 (10A fuse) - sourced from Firewall CONSTANT Bus (AUX battery)
-- **Dash Switch:** [CH4X4-TOY-D-WINIO][ch4x4-winch] dual-momentary push, Toyota-style (1.54" × 0.83" cutout) - see [Dashboard Controls][dashboard-controls]
-- **Signal Path:** BODY PDU CB43 → CH4X4 switch (push IN or OUT) → HDP24 pins 16/17 → winch contactor IN/OUT triggers
-- **Remote:** Wired in parallel with dash switch at contactor IN/OUT trigger terminals
-- **Wire Gauge:** 18 AWG (low-current trigger signals, ~2A max each direction)
-- **Routing:** BODY PDU (firewall cabin side) → ~3 ft to dash switch → out through HDP24 → engine bay → winch contactor (front bumper)
+**Control Wiring:** Switch spec and signal path are authoritative in [Dashboard Controls][dashboard-controls]; winch-side circuit is in the table below.
 
 | Circuit         | Source             | Protection            | Wire Gauge                                                 | Destination             | Function            |
 | --------------- | ------------------ | --------------------- | ---------------------------------------------------------- | ----------------------- | ------------------- |
