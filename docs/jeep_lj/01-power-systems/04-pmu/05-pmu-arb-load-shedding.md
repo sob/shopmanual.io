@@ -15,7 +15,7 @@ Automatic load management during ARB compressor operation to preserve AUX batter
 - **BCDC Charging (50A max):** Replenishes AUX battery from alternator
 - **Net AUX battery drain:** 90A - 50A = 40A during compressor operation
 
-The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical. Load shedding provides additional margin and maintains optimal voltage.
+The alternator is NOT overloaded during ARB operation. The 50A BCDC significantly reduces net discharge rate, making extended air-up practical.
 
 ## Problem Statement
 
@@ -33,13 +33,7 @@ Usable capacity (80% DOD):  108Ah
 Time to 20% SOC:           ~144 minutes continuous (2.4 hours)
 ```
 
-The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue. Load shedding provides additional margin and maintains optimal voltage for electronics.
-
-**Impact Without Load Shedding:**
-
-- Minor: AUX battery still has comfortable margin at 50A BCDC
-- START battery loads reduce BCDC charging efficiency slightly
-- Load shedding maximizes available margin for extended sessions
+The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issue; load shedding adds margin on the START side (below) rather than solving an AUX battery problem.
 
 ## Solution Overview
 
@@ -95,22 +89,7 @@ ELSE:
 
 ## AUX Battery Impact Analysis
 
-**See [AUX Battery Load Analysis][aux-load-analysis] for complete scenario details.**
-
-### WITHOUT Load Shedding
-
-```text
-ARB compressor draw:     90A   (from AUX battery)
-Other AUX loads:          5A   (camera, radio memory, USB)
-─────────────────────────────
-Total AUX draw:          95A
-
-BCDC charging:           50A   (to AUX battery)
-─────────────────────────────
-Net AUX drain:           45A
-
-Time to 50% SOC:         45 minutes
-```
+**See [AUX Battery Load Analysis][aux-load-analysis] for the without-shedding scenario** (Scenario 4/5 there matches the Problem Statement math above). AUX net drain stays ~45A regardless of PMU load shedding — shedding trades START-side margin, not AUX-side; see below.
 
 **Alternator Load (START battery):** See [START Battery Load Analysis][start-load-analysis]
 
@@ -131,13 +110,6 @@ BCDC at full rate:    50A   (maximized)
 START total:         178A
 Alternator:          270A
 Margin:              +92A
-
-AUX battery:
-ARB compressor:       90A
-Other AUX loads:       5A
-BCDC charging:        50A   (full rate maintained)
-─────────────────────────────
-Net AUX drain:        45A   (unchanged - BCDC still maxed)
 ```
 
 **Primary benefit:** Ensures BCDC maintains full 50A output even if START battery voltage sags.
@@ -155,9 +127,6 @@ BCDC at full rate:    50A
 START total:         148A
 Alternator:          270A
 Margin:             +122A   Excellent
-
-AUX battery:
-Net AUX drain:        45A   (unchanged)
 ```
 
 **Benefit:** Maximum alternator headroom, stable voltage for all electronics.
@@ -214,29 +183,6 @@ ELSE:
 4. **No indicator:** Silent operation (driver may not notice DRL/AC disabled)
 
 **Recommended:** Backlight color change (green → amber when load shedding active)
-
-## Operational Procedures (Supplemental)
-
-**Best Practices for ARB Use:**
-
-1. **Increase Engine RPM:** Run engine at 1500+ RPM during tire inflation
-   - Alternator output increases with RPM
-   - Better voltage regulation at higher speeds
-   - Faster tire inflation
-
-2. **Monitor Voltage:** Watch Dakota Digital voltage gauge during ARB use
-   - Normal: 14.0-14.4V (load shedding working)
-   - Marginal: 13.5-14.0V (acceptable, brief periods)
-   - Low: <13.5V (increase RPM or reduce loads)
-
-3. **Hot Weather:** Avoid prolonged ARB use at idle when ambient temp >95°F
-   - Radiator fan + ARB + heat soak = high total load
-   - Let engine cool between inflation cycles
-
-4. **Avoid Simultaneous High Loads:**
-   - ❌ ARB + winch (both 90A+ loads)
-   - ❌ ARB + all accessories at idle
-   - ARB + normal driving loads at 1500+ RPM
 
 ## Testing & Validation
 

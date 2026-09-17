@@ -203,7 +203,7 @@ The **cabin trunk** (trans tunnel / sill, firewall ↔ rear wheel wells) carries
 
 These were noted inline on the build sheets; consolidated here for review:
 
-1. ~~Old H4 + old H1 share rear-well → firewall path~~ **Resolved (2026-05-30):** Merged into single **H1 Passenger Rear Power Trunk**. Firewall transition uses a **single sealed 2-piece rubber grommet** (e.g., Steele Rubber) — cables run continuously, no service break. Bulkhead studs (Blue Sea 2203/2204) max at 250A and were underrated for the winch peaks (409A); Anderson SB175 was also undersized. Continuous-cable + grommet is WARN's documented standard for high-current firewall pass-through.
+1. ~~Old H4 + old H1 share rear-well → firewall path~~ **Resolved (2026-05-30):** Merged into single **H1 Passenger Rear Power Trunk**, continuous cables through a single sealed grommet (no bulkhead studs). Rationale for that choice: [Power Distribution Build Sheet][power-build].
 2. ~~Old H6 + old H7 + CT4 rear turn + old H8 SP signal wires share cabin trunk → rear~~ **Partially resolved (2026-05-30):** Old H6 + old H7 merged into **H5 Rear Cabin Trunk Bundle** with single multi-pin breakout (Deutsch DT15 or AMP CPC ~15-pin) at rear cargo bulkhead. CT4 rear turn signals and ARB control wires *could* still join — pending decision.
 3. **H5 sub-harness (firewall → rear breakout) is a single straight pull;** R&R of any individual rear light becomes a pigtail swap.
 4. **H6 motor cables only.** Move control/pressure wires into H5 since they originate at SwitchPros.

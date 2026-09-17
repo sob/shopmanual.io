@@ -95,19 +95,7 @@ Rear RD140 fitment with the 10.25" gear in the 10.5 housing: {{ tbd(300) }}.
 
 ### Engagement Sequence
 
-**Front Locker:**
-
-1. Press Button 9 (OUTPUT-17)
-2. Solenoid opens, pressurized air from tank → front locker
-3. Front differential locks **instantly** (no waiting for compressor)
-4. Release Button 9 to disengage
-
-**Rear Locker:**
-
-1. Press Button 10 (OUTPUT-10)
-2. Solenoid opens, pressurized air from tank → rear locker
-3. Rear differential locks **instantly**
-4. Release Button 10 to disengage
+Press and hold Button 9 (front, OUTPUT-17) or Button 10 (rear, OUTPUT-10): solenoid opens, pressurized air from tank locks the differential **instantly** — no waiting for the compressor. Release to disengage. Behavior is identical on both axles.
 
 **Automatic Refill:**
 
