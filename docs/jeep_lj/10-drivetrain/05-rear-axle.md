@@ -116,6 +116,26 @@ All welding completed before internals installed.
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
     [GPS-50-2][bim-gps]. Factory tone ring omitted, sensor port blocked off.
 
+## Service Provisions
+
+Breather and cover port locations are fixed before the truss is welded, since
+the truss can cover them.
+
+**Breather.** The factory push-in vent admits water on a rig that sees
+crossings. Replace it with a fitting and braided line routed high into the
+engine bay, terminating above any expected water line.
+
+**Cover ports.** Confirm the Motobilt cover's fill plug clears the truss, and
+whether the cover carries a drain plug. A fresh gearset wants early fluid
+changes and heat cycling, so a drain is the difference between a plug pull and
+a cover pull each time.
+
+**Differential temperature.** An optional sender port in the cover feeds the
+Dakota Digital cluster. Module input and sender selection: {{ tbd(309) }}.
+
+**Full float advantage.** The hub carries vehicle weight, so a broken shaft
+comes out without jacking the axle or unloading the wheel.
+
 ## Outstanding Items
 
 {{ tbds() }}
@@ -126,6 +146,9 @@ All welding completed before internals installed.
 - [ ] Confirm donor housing year; a 2008-2010 housing needs the Revolution SK F10.5-Conv spacer in addition to kit 35-2046
 - [ ] Confirm park brake hardware complete
 - [ ] Cite an OEM or vendor source for WMS width, 8x170 bolt pattern, and spline counts before bracket layout or wheel order
+- [ ] Locate and plumb the axle breather before the truss is welded
+- [ ] Confirm the Motobilt cover fill plug clears the truss, and whether it includes a drain plug
+- [ ] Adjust and verify park brake shoes before the axle goes under the vehicle
 
 ## Related Documentation
 

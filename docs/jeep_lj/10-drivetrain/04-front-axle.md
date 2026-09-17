@@ -114,6 +114,10 @@ weld-once-for-future-power principle. Revisit only with an engine change.[^bje]
 
 All welding completed before internals installed.
 
+!!! info "ABS and Tone Ring"
+    No ABS on this build; speed is GPS-sourced via the Dakota Digital
+    [GPS-50-2][bim-gps]. Factory tone ring omitted, sensor port blocked off.
+
 ## Steering
 
 | Specification | Value |
@@ -139,6 +143,23 @@ Ball joint delete clearance against the high steer arms: {{ tbd(299) }}.
 
 Factory Super Duty calipers and rotors. See [Brakes][brakes].
 
+## Service Provisions
+
+Breather and cover port locations are fixed before the truss is welded, since
+the truss can cover them.
+
+**Breather.** The factory push-in vent admits water on a rig that sees
+crossings. Replace it with a fitting and braided line routed high into the
+engine bay, terminating above any expected water line.
+
+**Cover ports.** Confirm the Motobilt cover's fill plug clears the truss, and
+whether the cover carries a drain plug. A fresh gearset wants early fluid
+changes and heat cycling, so a drain is the difference between a plug pull and
+a cover pull each time.
+
+**Differential temperature.** An optional sender port in the cover feeds the
+Dakota Digital cluster. Module input and sender selection: {{ tbd(309) }}.
+
 ## Outstanding Items
 
 {{ tbds() }}
@@ -149,6 +170,11 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 - [ ] Set and verify steering stops under load
 - [ ] Preheat knuckles before welding high steer arms
 - [ ] Cite an OEM or vendor source for WMS width, tube size, and spline counts before bracket layout or wheel order
+- [ ] Locate and plumb the axle breather before the truss is welded
+- [ ] Confirm the Motobilt cover fill plug clears the truss, and whether it includes a drain plug
+- [ ] Lay out link brackets and the ram mount before the truss is welded
+- [ ] Verify beadlock clearance to the ram and links at full lock and full droop
+- [ ] Add a spare unit bearing and locking hub to the trail spares
 
 ## Related Documentation
 
@@ -163,6 +189,7 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 [steering]: 07-steering.md
 [rear-axle]: 05-rear-axle.md
 [brakes]: 08-brakes.md
+[bim-gps]: ../02-engine-systems/09-gauge-cluster/04-bim-gps.md
 
 [^owner-notes]: Owner build notes, 2026-09-16 — donor range, WMS width, bolt pattern, spline counts, tube size, u-joint series, hub part number, and pinion yoke spline. Not yet backed by an OEM or vendor citation; see Build Tasks.
 [^rd166]: ARB **RD166** — Air Locker, Dana 60HD, 35 spline, 4.56 & up (4-series carrier); $1,399.95 list. [Revolution Gear listing](https://revolutiongear.com/arb-air-locker-rd166-for-dana-60hd-with-35-spline-axles-4-56-and-up/), accessed 2026-09-16. Supersedes the RD116 (30-spline Dana 44) previously specified for the front.

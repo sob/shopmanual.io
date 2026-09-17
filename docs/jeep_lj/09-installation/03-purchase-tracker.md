@@ -186,6 +186,9 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Heated Seat Switches (2× Toyota-style ON/OFF) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout; wire to BODY PDU CB45/CB42 via K21/K22 relays - [Dashboard][dashboard] |
 | Driver-side Firewall Grommet (heavy power) | Steele Rubber or equiv | ~$10-20 | High | ~1.5" OD bundle (3× 2/0 AWG H2 cables); new driver-side penetration - [Firewall Ingress][firewall-ingress] |
 | Passenger-side Firewall Grommet (H1) | Steele Rubber or equiv | ~$15-25 | High | Sealed 2-piece, ~1.5" OD H1 bundle (~1.75" hole), continuous run - [Firewall Ingress][firewall-ingress] |
+| Axle breather relocation kit + braided line (both axles) | Generic | — | High | Route high into the engine bay; locate before the truss weld - [Front Axle][front-axle], [Rear Axle][rear-axle] |
+| Magnetic differential drain plugs | Generic | — | Medium | Only if the Motobilt covers carry a drain port - [Front Axle][front-axle], [Rear Axle][rear-axle] |
+| Differential temperature senders (2) | Dakota Digital | — | Low | Module input and sender {{ tbd(309) }} - [Front Axle][front-axle] |
 
 ---
 
