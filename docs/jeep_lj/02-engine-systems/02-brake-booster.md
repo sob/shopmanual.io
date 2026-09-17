@@ -127,6 +127,8 @@ Wilwood Tandem Compact, **1-1/8" bore** — re-sized 2026-09-16 for the Super Du
 | Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | SWITCHED (ignition RUN); ~5A; own firewall pin              |
 | Ground          | 10 AWG     | iBooster ground                      | Engine Bay Bus Stud 7   | Dedicated/redundant ground recommended (a bad ground disables assist) |
 
+**No ABS or ESP module.** There is no hydraulic modulator downstream and nothing on CAN; the three circuits above are the whole electrical interface. The booster is expected to run on pedal position alone. That standalone behaviour comes from builder reports rather than a Bosch document, so confirm it with the harness vendor before committing to a harness ({{ tbd(105) }}).
+
 **Relocated off the PMU:** Main power now comes from the [START+ Forward Distribution Bus][start-fwd-bus] (50A CB) instead of PMU OUT1+10, and the ignition enable from the [Ignition Signal bus][ignition-signal] instead of OUT19 — removing the brake booster's dependency on the PMU module. The booster retains its mechanical push-through, so a power loss is a hard pedal, not zero brakes.
 
 See [START Battery Distribution][start-fwd-bus] for the forward-bus feed and breaker specs.

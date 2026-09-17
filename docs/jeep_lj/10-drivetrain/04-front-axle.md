@@ -117,7 +117,8 @@ All welding completed before internals installed.
 
 !!! info "ABS and Tone Ring"
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
-    [GPS-50-2][bim-gps]. Factory tone ring omitted, sensor port blocked off.
+    [GPS-50-2][bim-gps]. Tone rings omitted and the wheel-end sensor openings
+    plugged. Plug sizes: {{ tbd(310) }}.
 
 ## Steering
 
