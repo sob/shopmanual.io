@@ -1,0 +1,99 @@
+name: Auto-merge tidiness PRs
+
+# Closes the loop on the nightly tidiness routine: without this, its PRs never
+# merge, main never actually gets shorter, and the routine re-flags the same
+# "verbose" files night after night (see the 70-PR backlog cleanup around
+# 2026-09-17). Any open PR labeled `tidiness`, from a trusted author, gets
+# squash-merged automatically the moment all three of its checks
+# (verify-tbd, GitGuardian Security Checks, Cloudflare Pages) are green and it
+# has no merge conflict. Nothing merges on a red or pending check.
+
+on:
+  check_suite:
+    types: [completed]
+  pull_request:
+    types: [opened, reopened, labeled, synchronize]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+concurrency:
+  group: tidiness-automerge
+  cancel-in-progress: false
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const REQUIRED_CHECKS = ['verify-tbd', 'GitGuardian Security Checks', 'Cloudflare Pages'];
+            const TRUSTED_LOGINS = new Set(['sob']);
+
+            async function tryMergePR(prNumber) {
+              const { data: pr } = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+              });
+
+              if (pr.state !== 'open' || pr.draft) return;
+              if (!pr.labels.some((l) => l.name === 'tidiness')) return;
+              if (!TRUSTED_LOGINS.has(pr.user.login)) {
+                core.info(`PR #${prNumber}: author ${pr.user.login} not trusted for automerge, skipping`);
+                return;
+              }
+              if (pr.mergeable !== true) {
+                core.info(`PR #${prNumber}: not cleanly mergeable (mergeable=${pr.mergeable}), skipping`);
+                return;
+              }
+
+              const { data: checkRuns } = await github.rest.checks.listForRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: pr.head.sha,
+                per_page: 100,
+              });
+              const byName = {};
+              for (const run of checkRuns.check_runs) byName[run.name] = run;
+
+              for (const name of REQUIRED_CHECKS) {
+                const run = byName[name];
+                if (!run || run.status !== 'completed' || !['success', 'neutral'].includes(run.conclusion)) {
+                  core.info(`PR #${prNumber}: "${name}" not green yet (${run ? run.conclusion : 'missing'}), skipping`);
+                  return;
+                }
+              }
+
+              core.info(`PR #${prNumber}: all required checks green and mergeable, merging`);
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNumber,
+                merge_method: 'squash',
+                commit_title: `${pr.title} (#${pr.number})`,
+              });
+            }
+
+            let prNumbers = [];
+            if (context.eventName === 'pull_request') {
+              prNumbers = [context.payload.pull_request.number];
+            } else {
+              // check_suite / workflow_dispatch: re-scan every open tidiness PR,
+              // since a check_suite event doesn't carry a PR number directly.
+              const { data: prs } = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                per_page: 100,
+              });
+              prNumbers = prs.filter((p) => p.labels.some((l) => l.name === 'tidiness')).map((p) => p.number);
+            }
+
+            for (const n of prNumbers) {
+              await tryMergePR(n);
+            }

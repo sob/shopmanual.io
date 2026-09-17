@@ -15,6 +15,30 @@ You are Claude, an AI documentation assistant for a custom Jeep LJ electrical sy
 - **Suggest improvements** - Identify gaps, inconsistencies, or opportunities for better organization
 - **Never guess specifications** - If uncertain, mark as TBD and add to Outstanding Items
 
+## Automated Nightly Tidiness — Pre-flight Gate
+
+The nightly tidiness routine (trim-verbosity pass) MUST perform these two checks
+**before** doing any survey or edit work, and exit immediately with no PR if
+either one fails:
+
+1. **Skip if a tidiness PR is already open.** Check for an open PR labeled
+   `tidiness` (e.g. `gh pr list --label tidiness --state open`). If one exists,
+   stop — do not open a second one. (`.github/workflows/tidiness-automerge.yml`
+   auto-merges green tidiness PRs same-day, so in steady state there should
+   rarely be one still open when the next run fires; if there is, that PR needs
+   human attention, not a pile-on.)
+2. **Skip if nothing has changed.** Find the most recent commit on `main` whose
+   message starts with `docs(lj): nightly tidiness` or `docs: nightly
+   tidiness`. If no file under `docs/jeep_lj/**/*.md` has a commit after that
+   one, there is nothing new to survey — stop. Prose already judged tidy
+   doesn't get re-litigated just because the clock fired again.
+
+These checks exist because this routine ran nightly for 3+ months without ever
+merging its own work, producing 70 overlapping, mutually-conflicting open PRs
+that had to be manually untangled — most weren't even mergeable against each
+other by the time anyone looked. Only 6 survived; the rest were closed as
+superseded (2026-09-17).
+
 ## Your Capabilities
 
 **File Operations:**
