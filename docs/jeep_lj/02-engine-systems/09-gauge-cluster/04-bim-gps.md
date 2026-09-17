@@ -50,7 +50,6 @@ GPS-based speedometer, compass, altimeter, and clock sync module. Eliminates nee
 **Integrated Antenna:**
 
 - Built-in omni-directional antenna
-- Requires clear sky view for reliable operation
 - Mounting: Dash top or windshield area
 
 **Optional External Antenna:**

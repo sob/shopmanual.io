@@ -57,11 +57,7 @@ ARB Twin Compressor system with air tank and automatic pressure management for l
 
 ## Control System
 
-- **Control:** SwitchPros OUTPUT-11 (15A output, Button 11)
-  - OUTPUT-11 provides switched 12V control signal to compressor
-  - Compressor has internal relay/control that handles high-current motor switching
-  - 14 AWG wire from OUTPUT-11 to compressor control terminal
-- **Ground:** 6 AWG black wire from compressor to AUX battery negative (direct connection for 90A return current)
+SwitchPros OUTPUT-11 (Button 11) provides a switched 12V control signal; the compressor's internal relay handles the high-current motor switching, so only a light 14 AWG control wire is needed alongside the 6 AWG motor power/ground (see Wiring table below).
 
 ## Wiring
 

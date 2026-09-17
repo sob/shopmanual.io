@@ -44,16 +44,14 @@ tags:
 
 - **Control:** Pull CT4 lever (latching on/off)
 - **Power:** START battery (40A) → CT4 → SW3 output (10A internal fusing)
-- **Disabled:** When ignition off (via ignition signal)
-- **Load:** 3.6A total (both lights in parallel)
 
 ## High Beam
 
 - **Control:** Push CT4 lever (momentary or latching - programmable)
 - **Power:** START battery (40A) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
-- **Disabled:** When ignition off
-- **Load:** 5.6A total (both lights in parallel)
+
+Both beams disable when ignition is off (via ignition signal); current draw is per the pin table above.
 
 ## DRL (Daytime Running Light)
 
