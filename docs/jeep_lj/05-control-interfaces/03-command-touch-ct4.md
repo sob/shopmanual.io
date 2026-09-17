@@ -14,6 +14,8 @@ tags:
 
 **Model:** SwitchPros Command-Touch CT4
 
+**Status:** Purchased
+
 **Manual:** <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>
 
 **Type:** Programmable steering column-mounted turn signal and accessory controller

@@ -104,6 +104,7 @@ cylinder sizing, flex hoses, proportioning, and bias are on the
 | Differential Cover | Motobilt |
 | Pinion Yoke | 1350, 31 spline, strap style |
 | Brackets | TJ/LJ suspension brackets |
+| Breather | Relocated; braided line routed high into the engine bay |
 
 Pumpkin is offset to the passenger side with a longer driver-side tube. Lay
 out ORI lower mounts and link brackets before the truss goes on. Pinion
@@ -114,7 +115,10 @@ All welding completed before internals installed.
 
 !!! info "ABS and Tone Ring"
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
-    [GPS-50-2][bim-gps]. Factory tone ring omitted, sensor port blocked off.
+    [GPS-50-2][bim-gps]. Tone ring omitted and the sensor opening plugged; an
+    unplugged housing opening leaks gear oil. The arrangement depends on the
+    donor year, the same 2008 boundary as the gear install kit.[^abs-year]
+    Plug sizes: {{ tbd(310) }}.
 
 ## Outstanding Items
 
@@ -126,6 +130,9 @@ All welding completed before internals installed.
 - [ ] Confirm donor housing year; a 2008-2010 housing needs the Revolution SK F10.5-Conv spacer in addition to kit 35-2046
 - [ ] Confirm park brake hardware complete
 - [ ] Cite an OEM or vendor source for WMS width, 8x170 bolt pattern, and spline counts before bracket layout or wheel order
+- [ ] Locate and plumb the axle breather before the truss is welded
+- [ ] Confirm the Motobilt cover fill plug clears the truss, and whether it includes a drain plug
+- [ ] Adjust and verify park brake shoes before the axle goes under the vehicle
 
 ## Related Documentation
 
@@ -146,6 +153,7 @@ All welding completed before internals installed.
 [suspension]: 06-suspension.md
 [purchase-tracker]: ../09-installation/03-purchase-tracker.md
 
+[^abs-year]: Sterling 10.25/10.5 rear ABS: through 2007 the tone ring mounts to the differential carrier against the ring gear and the sensor reads it through a window in the axle housing; 2008 and later moved to a sensor at each hub with smaller rings. Vendor and service references via [Torque King](https://torqueking.com/products/560954-a560954-abs-tone-ring-for-1985-up-ford-sterling-10-25-or-10-5-rear-axles) and [DieselHub](https://www.dieselhub.com/maintenance/sterling-10.50-differential.html), accessed 2026-09-17. Confirm against the donor housing.
 [^owner-notes]: Owner build notes, 2026-09-16 — donor range, housing identification, WMS width, bolt pattern, spline counts, park brake size, pinion depth offset, and the solid spacer note. Not yet backed by an OEM or vendor citation; see Build Tasks.
 [^rd140]: ARB **RD140** — Air Locker, "Ford 10.25/10.5 Inch", 35 spline, all gear ratios; $1,399.95. [Revolution Gear listing](https://revolutiongear.com/arb-air-locker-rd140-for-ford-10-25-10-5-with-35-spline-axles-all-gear-ratios/), accessed 2026-09-16. Supersedes the RD116 (30-spline Dana 44) previously specified for the rear.
 [^gearset]: Revolution Gear **F10.25-513L** — Ford 10.25" long-pinion 5.13 ring & pinion. Revolution: "Ford 10.25 Inch (Long Pinion) Gear sets can be used in 10.25 Inch and 10.5 Inch Ford Differentials. Master Overhaul Kit P/N 35-2046 is required to use gears in a 10.5 Inch Differential." Revolution Gear dealer listings, accessed 2026-09-16.

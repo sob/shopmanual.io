@@ -111,8 +111,14 @@ weld-once-for-future-power principle. Revisit only with an engine change.[^bje]
 | Truss | Motobilt |
 | Differential Cover | Motobilt |
 | Pinion Yoke | 1350, 29 spline, strap style[^owner-notes] |
+| Breather | Relocated; braided line routed high into the engine bay |
 
 All welding completed before internals installed.
+
+!!! info "ABS and Tone Ring"
+    No ABS on this build; speed is GPS-sourced via the Dakota Digital
+    [GPS-50-2][bim-gps]. Tone rings omitted and the wheel-end sensor openings
+    plugged. Plug sizes: {{ tbd(310) }}.
 
 ## Steering
 
@@ -149,6 +155,10 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 - [ ] Set and verify steering stops under load
 - [ ] Preheat knuckles before welding high steer arms
 - [ ] Cite an OEM or vendor source for WMS width, tube size, and spline counts before bracket layout or wheel order
+- [ ] Locate and plumb the axle breather before the truss is welded
+- [ ] Confirm the Motobilt cover fill plug clears the truss, and whether it includes a drain plug
+- [ ] Lay out link brackets and the ram mount before the truss is welded
+- [ ] Verify beadlock clearance to the ram and links at full lock and full droop
 
 ## Related Documentation
 
@@ -163,6 +173,7 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 [steering]: 07-steering.md
 [rear-axle]: 05-rear-axle.md
 [brakes]: 08-brakes.md
+[bim-gps]: ../02-engine-systems/09-gauge-cluster/04-bim-gps.md
 
 [^owner-notes]: Owner build notes, 2026-09-16 — donor range, WMS width, bolt pattern, spline counts, tube size, u-joint series, hub part number, and pinion yoke spline. Not yet backed by an OEM or vendor citation; see Build Tasks.
 [^rd166]: ARB **RD166** — Air Locker, Dana 60HD, 35 spline, 4.56 & up (4-series carrier); $1,399.95 list. [Revolution Gear listing](https://revolutiongear.com/arb-air-locker-rd166-for-dana-60hd-with-35-spline-axles-4-56-and-up/), accessed 2026-09-16. Supersedes the RD116 (30-spline Dana 44) previously specified for the front.

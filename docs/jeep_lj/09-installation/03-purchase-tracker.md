@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-09-16
+**Last Updated:** 2026-09-17
 
 ---
 
@@ -10,8 +10,8 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 
 | Status | Count | Est. Total |
 |:-------|------:|-----------:|
-| Purchased | 20+ | ~$12,200+ |
-| To Purchase | 40+ | ~$8,800–9,300 |
+| Purchased | 30+ | ~$12,700+ |
+| To Purchase | 40+ | ~$8,100–8,600 |
 
 ---
 
@@ -52,6 +52,8 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Raceline RT233 Monster beadlocks | Raceline | — | 17x9.5, 8x170, -32 offset |
 | PSC 8" double-ended ram | PSC | — | Carried over from the Dana 44 build - [Steering][steering] |
 | Barnes 4WD universal DIY ram mount | Barnes 4WD | — | Carried over - [Front Axle][front-axle] |
+| Command Touch CT4 | SwitchPros | ~$500 | Purchased 2026-09 - [CT4][ct4] |
+| Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 | Purchased 2026-05-30; Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 
 ---
 
@@ -62,7 +64,6 @@ Major components - watch for sales, consider financing options.
 | Item | Manufacturer | Est. Price | Priority | Notes |
 |:-----|:-------------|:-----------|:---------|:------|
 | Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
-| Command Touch CT4 | SwitchPros | ~$500 | High | [CT4][ct4] |
 
 ---
 
@@ -70,7 +71,6 @@ Major components - watch for sales, consider financing options.
 
 | Item | Manufacturer | Est. Price | Priority | Notes |
 |:-----|:-------------|:-----------|:---------|:------|
-| Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 ✅ purchased 2026-05-30 | High | Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 | 03-06 TJ/LJ Auto Brake Pedal Assembly | Mopar | ~$30-80 | **Ordered** | Auto-trans pedal w/ wider pad + stop-lamp switch - [iBooster][ibooster] |
 | Back Bay Customs Wilwood MC Adapter | Back Bay Customs | ~$165 | High | Replaces factory MC w/ Wilwood - [iBooster][ibooster] |
 | Wilwood Tandem Compact MC (1-1/8" bore; 260-15541, confirm) | Wilwood | ~$180-230 | High | Re-sized 2026-09-16 for Super Duty calipers - [Brakes][brakes] |
@@ -186,6 +186,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | Heated Seat Switches (2× Toyota-style ON/OFF) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout; wire to BODY PDU CB45/CB42 via K21/K22 relays - [Dashboard][dashboard] |
 | Driver-side Firewall Grommet (heavy power) | Steele Rubber or equiv | ~$10-20 | High | ~1.5" OD bundle (3× 2/0 AWG H2 cables); new driver-side penetration - [Firewall Ingress][firewall-ingress] |
 | Passenger-side Firewall Grommet (H1) | Steele Rubber or equiv | ~$15-25 | High | Sealed 2-piece, ~1.5" OD H1 bundle (~1.75" hole), continuous run - [Firewall Ingress][firewall-ingress] |
+| Axle breather relocation kit + braided line (both axles) | Generic | — | High | Route high into the engine bay; locate before the truss weld - [Front Axle][front-axle], [Rear Axle][rear-axle] |
 
 ---
 
@@ -193,15 +194,14 @@ _(Most electrical distribution components already purchased - see Purchased Item
 
 | Category | Est. Total | Priority Items |
 |:---------|:-----------|:---------------|
-| Command Touch CT4 | ~$500 | Critical for lighting |
 | Alternator | ~$900 | Critical |
-| iBooster + Wilwood MC + plumbing | ~$1,100-1,600 | Critical for brakes |
+| Wilwood MC + adapter + plumbing (iBooster purchased) | ~$900-1,400 | Critical for brakes |
 | ARB 1-Gallon Tank + Pressure Gauge | ~$220 | Medium |
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
 | Misc Small Parts | ~$500 | Various |
 | 1-Ton Axle Swap (Dana 60 front, Sterling 10.5 rear) | — (unpriced) | High |
-| **TOTAL REMAINING** | **~$8,800-9,300** (excl. axle swap) | |
+| **TOTAL REMAINING** | **~$8,100-8,600** (excl. axle swap) | |
 
 ---
 

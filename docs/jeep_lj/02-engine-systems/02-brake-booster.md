@@ -17,6 +17,8 @@ tags:
 
 **iBooster:** Bosch iBooster Gen 2
 
+**Status:** iBooster purchased (donor secured 2026-05-30)
+
 **iBooster Donor:** Honda Accord Hybrid — Bosch iBooster **Gen 2**[^donor-year]
 
 **Honda OEM Part Numbers:** `46680-T3Z-A00` (booster module), `01469-TWA-A58` (MC/reservoir kit); MC mfr # `46100-TWA-A550-M1`[^donor-year]
@@ -124,6 +126,8 @@ Wilwood Tandem Compact, **1-1/8" bore** — re-sized 2026-09-16 for the Super Du
 | Main Power      | 8 AWG      | [START+ Forward Dist Bus][start-fwd-bus] (50A CB) | iBooster main connector | CONSTANT (safety requirement); START-direct, off the PMU    |
 | Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | SWITCHED (ignition RUN); ~5A; own firewall pin              |
 | Ground          | 10 AWG     | iBooster ground                      | Engine Bay Bus Stud 7   | Dedicated/redundant ground recommended (a bad ground disables assist) |
+
+**No ABS or ESP module.** There is no hydraulic modulator downstream and nothing on CAN; the three circuits above are the whole electrical interface. The booster is expected to run on pedal position alone. That standalone behaviour comes from builder reports rather than a Bosch document, so confirm it with the harness vendor before committing to a harness ({{ tbd(105) }}).
 
 **Relocated off the PMU:** Main power now comes from the [START+ Forward Distribution Bus][start-fwd-bus] (50A CB) instead of PMU OUT1+10, and the ignition enable from the [Ignition Signal bus][ignition-signal] instead of OUT19 — removing the brake booster's dependency on the PMU module. The booster retains its mechanical push-through, so a power loss is a hard pedal, not zero brakes.
 

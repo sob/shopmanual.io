@@ -21,6 +21,8 @@ tags:
 
 **Park Brake:** Factory drum-in-hat, mechanical lever
 
+**ABS:** None. Tone rings and wheel speed sensors omitted at both axles.
+
 ///
 
 Axle-side brake hardware and system sizing for the Super Duty axles. The
@@ -47,7 +49,7 @@ plumbing are documented on the [Brake Booster][brake-booster] page.
 | Pedal Ratio | Approximately 4:1; verification {{ tbd(301) }} |
 | Master Cylinder | Wilwood Tandem Compact, 1-1/8" bore[^mc-bore] |
 | MC Adapter | Back Bay Customs (see [Brake Booster][brake-booster]) |
-| Harness | Tulay's Gen 2 (see [Brake Booster][brake-booster]) |
+| Harness | {{ tbd(105) }} — Tulay's Gen 2 or EVcreate kit (see [Brake Booster][brake-booster]) |
 | Firewall Plate | 60x80mm pattern (see [Brake Booster][brake-booster]) |
 
 !!! info "Master Cylinder Sizing"
@@ -63,7 +65,7 @@ droop.[^owner-notes]
 ## Lines and Proportioning
 
 - Braided flex hoses at each axle, measured at full droop ({{ tbd(86) }}); plumbing on the [Brake Booster][brake-booster] page
-- Adjustable proportioning valve on the rear circuit ({{ tbd(60) }})
+- Adjustable proportioning valve on the rear circuit ({{ tbd(60) }}). With no ABS this valve is the only rear lockup control, so set it on a low-grip surface rather than by the bias figure alone
 - Front/rear bias starting point approximately 62/38[^owner-notes]
 
 ## Outstanding Items
