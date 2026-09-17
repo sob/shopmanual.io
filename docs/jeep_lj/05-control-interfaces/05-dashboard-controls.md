@@ -67,8 +67,6 @@ The CH4X4 has **two independent momentary push circuits** (not a polarity-revers
 
 This is the **correct** design for the Warn ZEON 10-S contactor, which has separate IN and OUT trigger inputs that internally handle the motor polarity reversal. Two discrete push buttons are safer than a single rocker (can't accidentally activate both directions at once).
 
-**Dual Control:** Dash push switch + handheld remote work simultaneously in parallel (both wired to the contactor's same trigger inputs).
-
 ### Wiring
 
 | Connection | Wire | Source | Destination |
