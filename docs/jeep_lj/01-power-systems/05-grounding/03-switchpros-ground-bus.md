@@ -56,8 +56,6 @@ tags:
 
 **Ground Path:** Bus → chassis ground (1/0 AWG, handles ~100A total lighting load) at firewall chassis point → main grounding network
 
-**Critical:** Clean metal-to-metal connection to chassis at firewall, accessible for lighting ground wires
-
 ## Related Documentation
 
 - [Grounding Architecture Overview][grounding-architecture]
