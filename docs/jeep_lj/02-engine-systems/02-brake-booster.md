@@ -17,6 +17,8 @@ tags:
 
 **iBooster:** Bosch iBooster Gen 2
 
+**Status:** iBooster purchased (donor secured 2026-05-30)
+
 **iBooster Donor:** Honda Accord Hybrid — Bosch iBooster **Gen 2**[^donor-year]
 
 **Honda OEM Part Numbers:** `46680-T3Z-A00` (booster module), `01469-TWA-A58` (MC/reservoir kit); MC mfr # `46100-TWA-A550-M1`[^donor-year]
