@@ -104,6 +104,7 @@ cylinder sizing, flex hoses, proportioning, and bias are on the
 | Differential Cover | Motobilt |
 | Pinion Yoke | 1350, 31 spline, strap style |
 | Brackets | TJ/LJ suspension brackets |
+| Breather | Relocated; braided line routed high into the engine bay |
 
 Pumpkin is offset to the passenger side with a longer driver-side tube. Lay
 out ORI lower mounts and link brackets before the truss goes on. Pinion
@@ -115,26 +116,6 @@ All welding completed before internals installed.
 !!! info "ABS and Tone Ring"
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
     [GPS-50-2][bim-gps]. Factory tone ring omitted, sensor port blocked off.
-
-## Service Provisions
-
-Breather and cover port locations are fixed before the truss is welded, since
-the truss can cover them.
-
-**Breather.** The factory push-in vent admits water on a rig that sees
-crossings. Replace it with a fitting and braided line routed high into the
-engine bay, terminating above any expected water line.
-
-**Cover ports.** Confirm the Motobilt cover's fill plug clears the truss, and
-whether the cover carries a drain plug. A fresh gearset wants early fluid
-changes and heat cycling, so a drain is the difference between a plug pull and
-a cover pull each time.
-
-**Differential temperature.** An optional sender port in the cover feeds the
-Dakota Digital cluster. Module input and sender selection: {{ tbd(309) }}.
-
-**Full float advantage.** The hub carries vehicle weight, so a broken shaft
-comes out without jacking the axle or unloading the wheel.
 
 ## Outstanding Items
 

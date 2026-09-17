@@ -111,6 +111,7 @@ weld-once-for-future-power principle. Revisit only with an engine change.[^bje]
 | Truss | Motobilt |
 | Differential Cover | Motobilt |
 | Pinion Yoke | 1350, 29 spline, strap style[^owner-notes] |
+| Breather | Relocated; braided line routed high into the engine bay |
 
 All welding completed before internals installed.
 
@@ -143,23 +144,6 @@ Ball joint delete clearance against the high steer arms: {{ tbd(299) }}.
 
 Factory Super Duty calipers and rotors. See [Brakes][brakes].
 
-## Service Provisions
-
-Breather and cover port locations are fixed before the truss is welded, since
-the truss can cover them.
-
-**Breather.** The factory push-in vent admits water on a rig that sees
-crossings. Replace it with a fitting and braided line routed high into the
-engine bay, terminating above any expected water line.
-
-**Cover ports.** Confirm the Motobilt cover's fill plug clears the truss, and
-whether the cover carries a drain plug. A fresh gearset wants early fluid
-changes and heat cycling, so a drain is the difference between a plug pull and
-a cover pull each time.
-
-**Differential temperature.** An optional sender port in the cover feeds the
-Dakota Digital cluster. Module input and sender selection: {{ tbd(309) }}.
-
 ## Outstanding Items
 
 {{ tbds() }}
@@ -174,7 +158,6 @@ Dakota Digital cluster. Module input and sender selection: {{ tbd(309) }}.
 - [ ] Confirm the Motobilt cover fill plug clears the truss, and whether it includes a drain plug
 - [ ] Lay out link brackets and the ram mount before the truss is welded
 - [ ] Verify beadlock clearance to the ram and links at full lock and full droop
-- [ ] Add a spare unit bearing and locking hub to the trail spares
 
 ## Related Documentation
 
