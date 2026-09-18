@@ -58,7 +58,7 @@ The 4:1 Rock-Trac was chosen over the 2.72:1 JK Sport Command-Trac for the deepe
 
 - **Ratio (primary reason):** 4:1 gives ≈96.7:1 geared versus ≈65.8:1 for the 2.72:1 case. The deeper range is the point — it trades the ability to hold momentum on fast terrain for genuine low-speed control on technical terrain.
 - **Converter multiplication — accepted:** paired with the 8HP70 automatic, the converter multiplies torque below stall, pushing effective crawl deeper than 96.7:1. An automatic needs less geared reduction than a manual because the converter handles creep, so this setup will be very slow in 4L-1st. Accepted deliberately.
-- **Native to the chassis:** the NP241OR is the factory TJ/LJ Rubicon case, so crossmember, floor shifter, linkage, and driveshaft geometry are native to this vehicle rather than adapted from a JK case. This is a real simplification over the previously spec'd JK unit.
+- **Native to the chassis:** the NP241OR is the factory TJ/LJ Rubicon case, so crossmember mounting and the floor shifter/linkage arrangement are the factory ones for this vehicle rather than adapted from a JK case. Note this does **not** extend to the driveshafts — both are custom Tom Woods units measured at the stretched 110.5" wheelbase regardless of which case is fitted (see [Driveshafts][driveshafts]). Confirm the case's driver's-side front output matches the Super Duty Dana 60's differential side before committing ({{ tbd(313) }}).
 - **Strength:** the Rock-Trac's reinforced 4:1 planetary is the heavier-duty variant of the NP241 family. The R2.8's torque is well within either case.
 
 ## Adapter (8HP70 → NP241OR)
@@ -128,8 +128,9 @@ The HDX 4x4 terminal is ground-activated and EXTRA(+) is 12V-activated, so the 4
 - [ ] Re-confirm the adapter path for the OR case with DomiWorks before ordering ({{ tbd(313) }})
 - [ ] Measure 8HP70 output-shaft protrusion (≤~96 mm, else order DomiWorks spacer plate or shorten)
 - [ ] Confirm the donor case's input spline and stickout against the DomiWorks requirement
-- [ ] **At teardown:** confirm the 5-position switch is fitted; record its connector/pinout ({{ tbd(145) }})
-- [ ] **At teardown:** measure switch resistance at each detent (2H / 4H / N / 4L) and record the table ({{ tbd(145) }})
+- [ ] Confirm the 5-position switch is fitted; record its connector/pinout ({{ tbd(145) }})
+- [ ] Measure switch resistance at each detent (2H / 4H / N / 4L) and record the table ({{ tbd(145) }}) — the switch is external, on top of the case, so this is done at its connector while moving the lever through the detents; no teardown required
+- [ ] Confirm the front output side matches the Super Duty Dana 60 front differential ({{ tbd(313) }})
 - [ ] Size the An 1 divider from the measured resistances; set PMU thresholds; verify 2H reads "no 4x4"
 - [ ] Cap and label the unused tailhousing VSS connector
 
