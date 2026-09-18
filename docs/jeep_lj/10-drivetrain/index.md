@@ -12,7 +12,7 @@ Complete drivetrain system documentation for the Jeep LJ build.
 | Section | Component | Description |
 | :------ | :-------- | :---------- |
 | [10.1][transmission] | Transmission | ZF 8HP70 (845RE), 8-speed automatic |
-| [10.2][transfer-case] | Transfer Case | NV241 GenII Command-Trac (2012 JK Sport), 2.72:1 low range |
+| [10.2][transfer-case] | Transfer Case | NP241OR Rock-Trac (TJ/LJ Rubicon), 4.0:1 low range |
 | [10.3][driveshafts] | Driveshafts | Front and rear driveshafts |
 | [10.4][front-axle] | Front Axle | Super Duty Dana 60 high pinion (2005-2010 F-350 SRW), 5.13 Revolution, ARB RD166 locker, factory 35-spline shafts |
 | [10.5][rear-axle] | Rear Axle | Sterling 10.5 (2005-2010 F-350 SRW), 5.13 Revolution, ARB RD140 locker |
@@ -31,7 +31,7 @@ Complete drivetrain system documentation for the Jeep LJ build.
 **Drivetrain:**
 
 - Transmission: ZF 8HP70 (845RE) - 8-speed automatic from 2015-2019 RAM 1500 EcoDiesel 4x4
-- Transfer Case: NV241 GenII Command-Trac (2012 JK Sport) - 2.72:1 low range
+- Transfer Case: NP241OR Rock-Trac (2003-2006 TJ/LJ Rubicon) - 4.0:1 low range (≈96.7:1 geared crawl)
 - Front Driveshaft: Custom (Tom Woods) - measure at final ride height
 - Rear Driveshaft: Custom (Tom Woods) - measure at final ride height
 

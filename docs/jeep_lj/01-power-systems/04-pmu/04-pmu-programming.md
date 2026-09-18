@@ -31,6 +31,22 @@ ELSE Out17_AC_Clutch = OFF
 
 A/C engages when requested and voltage adequate.
 
+### 4WD / 4LO Indicators (Outputs 19 + 24) - analog position
+
+```text
+IF (An1_TCasePosition WITHIN 4H_band OR An1_TCasePosition WITHIN 4L_band)
+  THEN Out19_4x4Relay = ON
+ELSE Out19_4x4Relay = OFF
+
+IF (An1_TCasePosition WITHIN 4L_band)
+  THEN Out24_4LO = ON
+ELSE Out24_4LO = OFF
+```
+
+Band edges come from the measured per-detent resistances of the NP241OR position switch — not yet taken ({{ tbd(145) }}). Set each band from the midpoints between adjacent measured values so a drifting contact cannot alias into the neighbouring detent, and confirm 2H (the highest-resistance position) falls outside both bands.
+
+OUT19 drives a relay coil because the HDX 4x4 input is ground-activated and the PMU switches high-side only; OUT24 feeds the HDX EXTRA(+) input directly. See [Transfer Case][transfer-case].
+
 ### Oil Cooler Fan Control (Output 7) - CAN-based
 
 ```text
@@ -138,3 +154,4 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
 [radiator-fan]: ../../02-engine-systems/06-radiator-fan.md
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md
+[transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing

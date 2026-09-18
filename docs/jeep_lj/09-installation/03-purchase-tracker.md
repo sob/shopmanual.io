@@ -177,6 +177,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
+| 4x4 indicator relay (SPST micro, 12V coil) | Generic | ~$10 | Medium | Sinks the HDX 4x4 input (PMU is high-side); mounts at the HDX - [Transfer Case][transfer-case] |
+| Transfer case 5-position switch (5083138AA / Omix 18676.52) | Mopar / Omix-Ada | ~$50 | Low | **Only if** the donor NP241OR arrives without one ({{ tbd(145) }}) - [Transfer Case][transfer-case] |
 | Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
 | Mishimoto MMOCC-UB Universal Mounting Bracket | Mishimoto | ~$40 | High | [Runaway Protection][runaway-protection] |
 | Midwest Control 30-144-TTL-BH-3 Push-Pull Cable | Midwest Control | ~$60-80 | High | 144" turn-to-lock T-handle, 3" travel - [Runaway Protection][runaway-protection] |
@@ -280,6 +282,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [rear-air-chuck]: ../08-exterior-systems/04-rear-air-chuck.md
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
+[transfer-case]: ../10-drivetrain/02-transfer-case.md#position-sensing
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
 [start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus

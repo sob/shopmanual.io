@@ -206,7 +206,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 
 ## Related Documentation
 
-- [Transfer Case][transfer-case] - NV241 GenII connection
+- [Transfer Case][transfer-case] - NP241OR connection (adapter re-spec pending)
 - [PMU Inputs][pmu-inputs] - J1939 CAN bus tap
 - [Cummins R2.8][engine] - Engine CAN integration
 

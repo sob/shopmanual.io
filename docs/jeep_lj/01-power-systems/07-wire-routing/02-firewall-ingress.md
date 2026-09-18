@@ -31,7 +31,7 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-29:** 29× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (29 available, ~16 used after PBS-I keyless, ~13 future headroom — exact used-count pending final pin-map recount, see [TBD Tracker][tbd-tracker])
+- Size 16 contacts: 14-20 AWG, 13A (29 available, ~18 used after PBS-I keyless and the 4x4/4LO indicator pair, ~11 future headroom — exact used-count pending final pin-map recount, see [TBD Tracker][tbd-tracker])
 
 **Mounting:** Single 1.5" diameter hole in firewall (same as previous 24-21 - shell size unchanged)
 
@@ -50,7 +50,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (6 wires)
+### Engine Bay → Cabin (8 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -61,6 +61,8 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
 | 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
 | 12 | PBS-I PINK IGN (ignition signal) | 14 AWG | PBS-I ICM | Ignition bus (cabin) | #16 |
+| 19 | 4x4 indicator relay coil | 18 AWG | PMU OUT19 | 4x4 relay coil (cabin, at HDX) | #16 |
+| 20 | 4LO indicator | 18 AWG | PMU OUT24 | HDX EXTRA(+) input | #16 |
 
 ### Cabin → Engine Bay (11 wires)
 
@@ -83,9 +85,9 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 !!! note "Relocated power feeds do NOT use this connector"
     The radiator fan (4 AWG), iBooster main (8 AWG), and TCU (12 AWG) feeds — relocated off the PMU — run from the [START+ Forward Distribution Bus][start-fwd-bus] in the engine bay to their loads, entirely engine-bay-side. Only the low-current **iBooster enable** (Pin 18 above) crosses the firewall.
 
-### Available (12 spare pins)
+### Available (10 spare pins)
 
-Pins 19-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
+Pins 21-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
 
 ---
 
