@@ -89,6 +89,8 @@ Major components - watch for sales, consider financing options.
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
+| DomiWorks 24004001 Transfer Case Adapter | DomiWorks (DriftHQ, US stock) | $1,005.90 | High | 8HP70 EcoDiesel → NP241 family; OR-variant + input-gear confirm pending {{ tbd(313) }} - [Transfer Case][transfer-case] |
+| 23-spline input gear (ZTNP22390 or equiv.) | Transmission parts supplier | — | High | Required by the adapter; may be satisfied by the OR's factory gear {{ tbd(313) }} - [Transfer Case][transfer-case] |
 
 ---
 

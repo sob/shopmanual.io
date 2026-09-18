@@ -25,6 +25,7 @@ tags:
 | :------------ | :---- |
 | Type | Dana 60, high pinion reverse rotation |
 | Source | 2005-2010 Ford F-350 Super Duty (SRW)[^owner-notes] |
+| Differential Drop | **Driver's side** (Ford convention)[^axle-drop] |
 | Width (WMS) | 69.25"[^owner-notes] |
 | Bolt Pattern | 8x170[^owner-notes] |
 | Spline Count | 35 inner, 35 outer[^owner-notes] |
@@ -174,8 +175,10 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 [rear-axle]: 05-rear-axle.md
 [brakes]: 08-brakes.md
 [bim-gps]: ../02-engine-systems/09-gauge-cluster/04-bim-gps.md
+[transfer-case]: 02-transfer-case.md
 
 [^owner-notes]: Owner build notes, 2026-09-16 — donor range, WMS width, bolt pattern, spline counts, tube size, u-joint series, hub part number, and pinion yoke spline. Not yet backed by an OEM or vendor citation; see Build Tasks.
+[^axle-drop]: Ford front Dana 60 axles are **driver's-side differential drop** with reverse-cut (high pinion) gears: "Ford versions are driver's side differential drop, reverse-cut gears" (Wikipedia, Dana 60 — Dodge and GM front 60s are passenger-side drop); "All these Ford front axles were drivers side differential, reverse-cut (high pinion) gears, and kingpin knuckles to 1991.5 and balljoints thereafter" (Blue Oval Trucks, "Ford Super Duty Dana 50 vs Dana 60"). Both accessed 2026-09-18. This matches the NP241OR transfer case's driver's-side front output — see [Transfer Case][transfer-case].
 [^rd166]: ARB **RD166** — Air Locker, Dana 60HD, 35 spline, 4.56 & up (4-series carrier); $1,399.95 list. [Revolution Gear listing](https://revolutiongear.com/arb-air-locker-rd166-for-dana-60hd-with-35-spline-axles-4-56-and-up/), accessed 2026-09-16. Supersedes the RD116 (30-spline Dana 44) previously specified for the front.
 [^ora]: Offroad Anonymous **05-16 Super Duty Dana 60 Weld-On High Steer Kit** (full hydro option) — ORA publishes "8″ steering travel provides 40° steering angle" for the 05-10 knuckle version. [offroadanonymous.com](https://offroadanonymous.com/product/05-16-super-duty-dana-60-weld-on-high-steer-kit/), accessed 2026-09-16. The 9"/45° and 10"/50° figures are owner notes from the same listing.
 [^shafts]: Owner decision, 2026-09-16 — factory Dana/Spicer 35-spline shafts retained; chromoly shafts and 1550-series joints deferred because the 40° steering cap set by the 8" ram is where the factory joints bind.
