@@ -43,16 +43,16 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | :--------- | :----------------------- | :--- | :---------------------------------------------------- | :------------------ | :----------------------------- |
 | **Out 17** | A/C Clutch               | 3-5A | Compressor clutch ground (Restomod Air kit — verify)  | Auto (A/C request)  | Request via Restomod Air control head → trinary → In 9 — see [HVAC System][hvac-system] |
 | **Out 18** | Horn                     | 5.4A | [Engine Bay Bus][engine-ground] Stud 6                | External input      | PIAA horns (2.7A × 2)          |
-| **Out 19** | **[Available]**          | -    | -                                                     | -                   | Freed — iBooster enable now on ignition bus    |
+| **Out 19** | 4x4 Indicator Relay      | <0.2A | Relay coil → [Firewall Stud Bus][firewall-ground]    | Auto (An 1 position) | Coil only; contacts ground the HDX 4x4 input (PMU is high-side). Active in 4H or 4L — see [Transfer Case][transfer-case] |
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
 | **Out 22** | Reverse Lights           | ~5A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Maxbilt + Squadron Sport       |
 | **Out 23** | DRL/Parking Lights       | ~2.6A | [SwitchPros Ground Bus][switchpros-ground]           | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
-| **Out 24** | **[Available]**          | -    | -                                                     | -                   | Available for future expansion (7A)                                                                                                                          |
+| **Out 24** | 4LO Indicator            | <0.1A | n/a (signal into HDX EXTRA(+))                       | Auto (An 1 position) | 12V direct to HDX EXTRA(+), label "4LO". Active in 4L only — see [Transfer Case][transfer-case] |
 
 ## Combined Outputs
 
-_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT15, OUT16, and OUT19 are now free (8 spare outputs). The combining rules below are retained for any future high-current output._
+_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT12, OUT14, OUT15, and OUT16 are free (9 spare outputs — OUT19 and OUT24 were taken by the 4x4/4LO indicators). The combining rules below are retained for any future high-current output._
 
 **Combining Rules:**
 
@@ -107,3 +107,4 @@ _The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were 
 [hvac-system]: ../../02-engine-systems/03-hvac.md
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
+[transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing

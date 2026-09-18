@@ -40,12 +40,14 @@ See [Ignition Signal Distribution][ignition-signal] for complete wiring architec
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [ignition-signal]: ../06-ignition-signal/index.md
 [hvac]: ../../02-engine-systems/03-hvac.md
+[transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
 
 ## Analog Inputs
 
 | Input       | Physical Pin | Range | Function                    | Notes                                          |
 | :---------- | :----------- | :---- | :-------------------------- | :--------------------------------------------- |
-| **An 1-8**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
+| **An 1**    | Dedicated    | 0-5V  | Transfer case position      | NP241OR 5-position switch (resistive) via divider — drives OUT19 (4x4) and OUT24 (4LO). Divider values + thresholds pending measurement ({{ tbd(145) }}). See [Transfer Case][transfer-case] |
+| **An 2-8**  | Dedicated    | 0-5V  | **[Available]**             | Future expansion                               |
 | **An 9-16** | OUT17-24     | 0-20V | **[Configured as outputs]** | Dual-purpose pins - currently used as OUT17-24 |
 
 **Current Configuration:** An 9-16 configured as outputs (OUT17-24). See [PMU Outputs][pmu-outputs] for output assignments.

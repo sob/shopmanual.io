@@ -100,11 +100,11 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **HIGH**                 | 18 AWG ✓    | CT4 high beam output         | HDX HIGH input          | High beam indicator                              |
 | **LEFT**                 | 18 AWG ✓    | CT4 left turn output         | HDX LEFT input          | Left turn indicator                              |
 | **RIGHT**                | 18 AWG ✓    | CT4 right turn output        | HDX RIGHT input         | Right turn indicator                             |
-| 4x4/EX                   | -           | -                            | -                       | Not used — NV241 Command-Trac is cable-shifted with no electrical position switch; 4WD/4LO indicator omitted (lever position is visible). Retrofit a linkage switch later if dash indication is wanted. |
+| **4x4/EX**               | 18 AWG ✓    | 4x4 relay contact (cabin), coil driven by [PMU OUT19][pmu-outputs] | HDX 4x4 input | **Ground-activated** — green 4x4 indicator on Home Screen. Relay sinks the input because the PMU is high-side only. Active in 4H or 4L; sensing per [Transfer Case][transfer-case] ({{ tbd(145) }}) |
 | GEAR                     | -           | BIM-01-2 J1939               | -                       | Gear position read from Turbolamik J1939 broadcast (no discrete input wiring) |
 | **WAIT/EX**              | 18 AWG ✓    | ECM Pin 35 (yellow wire, WAIT TO START) | HDX WAIT/EX input | Sink-circuit per Cummins R2.8 Installation Guide 5504137 (§2, ECM pin 35, yellow) — wire is active LOW (~0V when WAIT on, ~+12V when off). HDX input documented as "active high" — polarity bench-verification pending {{ tbd(150) }}. |
-| EX                       | -           | -                            | -                       | Reserved                                         |
-| EX                       | -           | -                            | -                       | Reserved                                         |
+| **EX (+)**               | 18 AWG ✓    | [PMU OUT24][pmu-outputs]     | HDX EXTRA(+) input      | **12V-activated** — custom label "4LO" (8 char max), active in 4L only ({{ tbd(145) }}) |
+| EX (−)                   | -           | -                            | -                       | Reserved (ground-activated spare; fallback 4LO input if the sensor path is dropped) |
 | WARN OUT                 | -           | -                            | -                       | Not used                                         |
 | SWITCH INPUT             | -           | -                            | -                       | Not used (capacitive touch buttons on cluster)   |
 | **DISPLAY CABLE**        | Proprietary | HDX control                  | Dashboard cluster       | Factory harness included, ~2 ft                  |
@@ -127,6 +127,9 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 ## Build Tasks
 
 - [ ] Determine brake indicator source (brake switch vs CT4 output)
+- [ ] Install 4x4 relay near the HDX; coil ← firewall pin 19, contacts between HDX 4x4 terminal and Firewall Stud Bus ground
+- [ ] Set the EXTRA(+) label to "4LO" in the HDX setup menu (8 char max)
+- [ ] Verify indicators against actual lever position: 2H = no 4x4, 4H = 4x4 only, 4L = 4x4 + 4LO ({{ tbd(145) }})
 - [ ] Bench-verify WAIT/EX polarity at HDX input — {{ tbd(150) }}: Cummins specifies active-low, HDX docs list "active high"; resolve before final wiring
 
 ## Related Documentation
@@ -138,8 +141,10 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 - [Ignition Signal Distribution][ignition-bus] - Ignition power source
 - [Command Touch CT4][ct4] - Lighting signal sources (turn, high beam, etc.)
 - [Cummins R2.8 ECM][ecm] - WAIT/EX (Pin 35 yellow) and ENGINE/MIL (Pin 22 white) signal sources
+- [Transfer Case][transfer-case] - 4WD position sensing chain feeding the 4x4 and EXTRA(+) inputs
 
 [manual-link]: https://www.dakotadigital.com/pdf/HDX_manual_main.pdf
+[transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
 [gauge-system]: index.md
 [dashboard-cluster]: 02-dashboard-cluster.md
 [bim-j1939]: 03-bim-j1939.md

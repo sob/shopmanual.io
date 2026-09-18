@@ -57,14 +57,14 @@ tags:
 | :-------- | :------: | :----: | :----: | :-------: |
 | 1-10      | 25A each |   10   |   5    |     5     |
 | 11-16     | 15A each |   6    |   2    |     4     |
-| 17-24     | 7A each  |   8    |   6    |     2     |
-| **Total** |    -     | **24** | **13** |  **11**   |
+| 17-24     | 7A each  |   8    |   8    |     0     |
+| **Total** |    -     | **24** | **15** |  **9**    |
 
-**Utilization:** 13 of 24 outputs used (54%) — 7 freed by relocating the radiator fan, iBooster, and TCU; OUT15 freed when the winch trigger was reallocated to BODY PDU CB43 (2026-05-30)
+**Utilization:** 15 of 24 outputs used (63%) — 7 freed by relocating the radiator fan, iBooster, and TCU; OUT15 freed when the winch trigger was reallocated to BODY PDU CB43 (2026-05-30); OUT19 and OUT24 taken by the 4x4/4LO indicators (2026-09-18). The 7A bank (OUT17-24) is now full — future low-current loads go on the 15A bank.
 
-**Primary loads:** HVAC (OUT5: ~20A load), GMRS radio (OUT6: ~15A load), aux cooling fans (OUT7+8: 2×15A), Dakota Digital (OUT9: ~25A), wipers (OUT11: 15A), CT4 (OUT13: ~9A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A). _Radiator fan (was OUT2+3+4), iBooster main + enable (was OUT1+10, OUT19), and Turbolamik TCU (was OUT16) relocated to the [START+ Forward Distribution Bus][start-fwd-bus]; the winch contactor trigger (was OUT15) reallocated to BODY PDU CB43 — OUT1–4, 10, 15, 16, 19 now free._
+**Primary loads:** HVAC (OUT5: ~20A load), GMRS radio (OUT6: ~15A load), aux cooling fans (OUT7+8: 2×15A), Dakota Digital (OUT9: ~25A), wipers (OUT11: 15A), CT4 (OUT13: ~9A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A), 4x4 indicator relay (OUT19: <0.2A), 4LO indicator (OUT24: <0.1A). _Radiator fan (was OUT2+3+4), iBooster main + enable (was OUT1+10, OUT19), and Turbolamik TCU (was OUT16) relocated to the [START+ Forward Distribution Bus][start-fwd-bus]; the winch contactor trigger (was OUT15) reallocated to BODY PDU CB43 — OUT1–4, 10, 15, 16, 19 now free._
 
-**Load:** With the radiator fan, iBooster, and TCU relocated to the START+ Forward Bus, PMU peak drops to ~145A theoretical (all radios transmitting), ~85-115A typical continuous — comfortably within the 170A continuous PMU capacity. **7 outputs were freed by the fan/iBooster/TCU relocation** and OUT15 by the winch-trigger reallocation; counting the always-spare outputs, **11 of 24 outputs are now unassigned**.
+**Load:** With the radiator fan, iBooster, and TCU relocated to the START+ Forward Bus, PMU peak drops to ~145A theoretical (all radios transmitting), ~85-115A typical continuous — comfortably within the 170A continuous PMU capacity. **7 outputs were freed by the fan/iBooster/TCU relocation** and OUT15 by the winch-trigger reallocation; after the 4x4/4LO indicators took OUT19 and OUT24, **9 of 24 outputs are unassigned**. The two indicator outputs are signal-level (<0.3A combined) and do not move the load figures.
 
 **Mounting:** Engine bay, accessible for LED diagnostics and USB configuration
 

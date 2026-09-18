@@ -89,6 +89,8 @@ Major components - watch for sales, consider financing options.
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
 | DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
+| DomiWorks 24004001 Transfer Case Adapter | DomiWorks (DriftHQ, US stock) | $1,005.90 | High | 8HP70 EcoDiesel → NP241 family; OR-variant + input-gear confirm pending {{ tbd(313) }} - [Transfer Case][transfer-case] |
+| 23-spline input gear (ZTNP22390 or equiv.) | Transmission parts supplier | — | High | Required by the adapter; may be satisfied by the OR's factory gear {{ tbd(313) }} - [Transfer Case][transfer-case] |
 
 ---
 
@@ -177,6 +179,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
+| 4x4 indicator relay (SPST micro, 12V coil) | Generic | ~$10 | Medium | Sinks the HDX 4x4 input (PMU is high-side); mounts at the HDX - [Transfer Case][transfer-case] |
+| Transfer case 5-position switch (5083138AA / Omix 18676.52) | Mopar / Omix-Ada | ~$50 | Low | **Only if** the donor NP241OR arrives without one ({{ tbd(145) }}) - [Transfer Case][transfer-case] |
 | Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
 | Mishimoto MMOCC-UB Universal Mounting Bracket | Mishimoto | ~$40 | High | [Runaway Protection][runaway-protection] |
 | Midwest Control 30-144-TTL-BH-3 Push-Pull Cable | Midwest Control | ~$60-80 | High | 144" turn-to-lock T-handle, 3" travel - [Runaway Protection][runaway-protection] |
@@ -280,6 +284,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [rear-air-chuck]: ../08-exterior-systems/04-rear-air-chuck.md
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
+[transfer-case]: ../10-drivetrain/02-transfer-case.md#position-sensing
 [power-checklist]: 01-power-systems-checklist.md
 [engine-checklist]: 02-engine-systems-checklist.md
 [start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
