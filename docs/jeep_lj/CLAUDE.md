@@ -39,6 +39,31 @@ that had to be manually untangled — most weren't even mergeable against each
 other by the time anyone looked. Only 6 survived; the rest were closed as
 superseded (2026-09-17).
 
+## Automated Nightly Health Digest — One Rolling Issue
+
+The nightly health digest routine (read-only audit pass) reports into **exactly one
+GitHub issue, forever**: the open issue labeled `health-digest`, titled
+`Nightly health digest` (no date). It MUST:
+
+1. **Update that issue's body in place**, replacing it with the current run's findings —
+   not append, so the issue always shows present state rather than a growing log. Keep the
+   rolling-issue note at the top of the body and put `**Last updated: YYYY-MM-DD**`
+   directly beneath it.
+2. **Never open a second digest issue, and never close the rolling one.** A dated
+   per-day digest (`Nightly health digest — YYYY-MM-DD`) is a bug, not a style choice.
+   This supersedes any dated title in the routine's own brief.
+3. If no open `health-digest` issue exists, recreate it with that exact title and say so
+   in the body. If more than one is open, update the lowest-numbered one and close the
+   rest as *not planned*.
+
+This exists because the routine opened a fresh dated issue every night for 3+ months: 79
+open digests accumulated between 2026-06-03 and 2026-09-18, burying every real `tbd` issue
+in the tracker. They were bulk-closed as duplicates of the rolling issue (2026-09-19).
+
+Note for the audit itself: the live TBD tracker is `docs/jeep_lj/tbd-tracker.md`
+(reconciled by `python3 hooks/verify_tbd.py`), not the
+`09-installation/00-tbd-tracker.md` path some older briefs cite.
+
 ## Your Capabilities
 
 **File Operations:**
