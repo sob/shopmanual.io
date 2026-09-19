@@ -49,8 +49,6 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 - Multi-order 2-way passive crossover (built-in)
 - Automatic solid-state tweeter protection
 - Transflective RGB LED lighting
-- Mica-filled polypropylene woofer
-- Gunmetal trim ring with titanium sport grille
 
 ---
 
@@ -90,9 +88,6 @@ Marine-grade coaxial speakers with integrated RGB LED lighting for front dash an
 
 - Built-in RGB LED lights
 - 3/4" silk dome tweeters
-- Mica-filled polypropylene woofers
-- Enclosed weather-resistant design
-- Roll bar clamp mounting
 
 ## Wiring
 

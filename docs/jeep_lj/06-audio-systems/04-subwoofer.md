@@ -69,10 +69,6 @@ Independent gain trim per side accommodates any L/R acoustic asymmetry between t
 ## Features
 
 - Transflective RGB LED lighting (via MLC-RW)
-- Gunmetal trim ring with titanium sport grille
-- Marine-grade construction
-- Mica-filled polypropylene cone
-- Synthetic rubber surround
 
 ## Wiring
 
