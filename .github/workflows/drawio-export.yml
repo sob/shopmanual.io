@@ -44,6 +44,15 @@ jobs:
           cp "export/Jeep LJ Tub Map-Lighting---SwitchPros.png"         docs/jeep_lj/images/lj-tub-map-lighting-switchpros.png
           cp "export/Jeep LJ Tub Map-Controls--Recovery---Drivetrain.png" docs/jeep_lj/images/lj-tub-map-controls-recovery-drivetrain.png
 
+      - name: Mirror van exports into docs/nissan_nv/images
+        run: |
+          set -euo pipefail
+          install -d docs/nissan_nv/images
+          cp "export/Van Electrical-Starlink-v3.png"   docs/nissan_nv/images/van-starlink-power.png
+          cp "export/Van Electrical-Devices.png"       docs/nissan_nv/images/van-devices.png
+          cp "export/Van Electrical-Current-State.png" docs/nissan_nv/images/van-current-state.png
+          cp "export/Van Electrical-Genesis.png"       docs/nissan_nv/images/van-genesis.png
+
       - name: Get author and committer info from HEAD commit
         uses: rlespinasse/git-commit-data-action@v1
         if: github.ref == 'refs/heads/main'
