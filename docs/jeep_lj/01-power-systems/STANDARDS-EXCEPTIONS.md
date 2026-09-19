@@ -66,22 +66,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Winch Standards Comparison
 
-**Marine (ABYC E-11):**
-
-- Would require 400A circuit breaker for all loads
-- **This is NOT a marine application** - automotive standards apply
-
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- Manufacturer specifications take precedence ✓
-- Internal protection acceptable for factory-designed components ✓
-
-**Manufacturer (WARN):**
-
-- No external protection required ✓
-- Direct battery connection specified ✓
-- Internal protection designed for fault scenarios ✓
+**Marine (ABYC E-11)** would require a 400A circuit breaker for all loads — **this is not a marine application**, so SAE J1128 (automotive) applies instead, deferring to the manufacturer spec above.
 
 ### Winch Fault Scenarios Covered
 
@@ -208,16 +193,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ### Starter Standards Comparison
 
-**Automotive (SAE J1128):**
-
-- Cable sizing acceptable for brief peak loads ✓
-- No CB required for starter circuits in factory vehicles ✓
-- Timer relay or slow-blow CB optional enhancement ✓
-
-**Marine (ABYC E-11):**
-
-- Would require circuit breaker or fuse
-- **This is NOT a marine application** - automotive standards apply
+**Marine (ABYC E-11)** would require a circuit breaker or fuse — **this is not a marine application**, so SAE J1128 (automotive) applies instead, per the practice and analysis above.
 
 ### Starter Review Guidance
 
@@ -260,19 +236,6 @@ This document tracks intentional deviations from general electrical standards wh
 - ECM manages duty cycle and temperature thresholds
 - Brief duration eliminates thermal concerns
 - Direct connection minimizes voltage drop for effective heating
-
-### Grid Heater Standards Comparison
-
-**Automotive (SAE J1128):**
-
-- Direct battery connection acceptable for brief high-current loads ✓
-- Manufacturer fusible link acceptable protection ✓
-- ECM control provides intelligent management ✓
-
-**Manufacturer (Cummins):**
-
-- Direct battery connection specified ✓
-- Integrated fusible link protection ✓
 
 ### Grid Heater Review Guidance
 
@@ -474,16 +437,7 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ### Review Guidance
 
-**This is NOT a safety issue.**
-
-The apparent CB > wire mismatch is intentional:
-
-1. Actual loads (82-100A) well within wire rating (130A)
-2. CB sized for device capacity and inrush tolerance
-3. Fault protection adequate (CB trips before wire damage)
-4. Intermittent duty cycle (not continuous operation)
-
-**Do NOT flag as requiring wire upgrade or CB downgrade.**
+**This is NOT a safety issue** — the apparent CB > wire mismatch is intentional; see Engineering Analysis, Wire Sizing Rationale, and Standards Context above. **Do NOT flag as requiring wire upgrade or CB downgrade.**
 
 **Documentation References:**
 
