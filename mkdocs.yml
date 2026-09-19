@@ -235,6 +235,11 @@ nav:
       - 10.8 - Brakes: jeep_lj/10-drivetrain/08-brakes.md
   - Nissan NV 3500:
     - nissan_nv/index.md
+    - Power Systems:
+      - nissan_nv/01-power-systems/index.md
+      - 1.1 - Starlink Power: nissan_nv/01-power-systems/01-starlink-power.md
+    - Diagrams:
+      - nissan_nv/02-diagrams/index.md
   - Jeep Wrangler JKU:
     - jeep_jku/index.md
 
