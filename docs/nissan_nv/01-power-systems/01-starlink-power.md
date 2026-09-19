@@ -104,8 +104,14 @@ UXG Lite.
 | Item | Location |
 | :--- | :------- |
 | Starlink High Performance dish | Roof, mounted at an angle |
-| 12 V USB-C outlet | Rear driver's door |
+| Starlink Advanced Power Supply | Rear driver's door, directly above the UXG Lite |
 | UXG Lite | Rear driver's door |
+| 12 V USB-C outlet | Rear driver's door |
+
+Everything except the dish lives in the rear driver's door, which is why the
+diagram groups them into one zone: the supply, the gateway it uplinks, and the
+outlet that powers the gateway are all within reach of each other. The only run
+leaving the door is the dish cable to the roof.
 
 ---
 
@@ -129,8 +135,7 @@ Both of these come out of the Starlink path:
 - [ ] Measure real-world draw at 12 V (idle, streaming, snow melt) and record it here
 - [ ] Record the wire gauge and run length for the circuit 6 feed - it must be rated for the PowerSwitch's 30 A output, not just the expected draw
 - [ ] Confirm the fuse on the Garmin PowerSwitch's own battery feed (Garmin's manual references a 125 A fuse on the supplied red power cable)
-- [ ] Record where the Advanced Power Supply itself is mounted
-- [ ] Confirm the re-terminated dish cable is wired to Starlink's pinout and that the run length is within spec
+- [ ] Confirm the re-terminated dish cable is wired to Starlink's pinout, and record its run length from the door to the roof mount
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4
 [spec-sheet]: https://starlink.com/public-files/specification_sheet_performance.pdf
