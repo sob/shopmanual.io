@@ -36,10 +36,10 @@ system that have been decided.
 
 | Area | State |
 | :--- | :---- |
-| **Starlink power** | Resolved - [Starlink Advanced Power Supply](01-power-systems/01-starlink-power.md) replaces the 1000 W inverter ([#4][issue-4]) |
+| **Starlink power** | Resolved - High Performance dish on a [Starlink Advanced Power Supply](01-power-systems/01-starlink-power.md), 12 V DC direct, replacing the 1000 W inverter ([#4][issue-4]) |
 | **House battery** | Two Odyssey AGM Group 34 (START + AUX), BCDC Alpha 50 |
 | **Entertainment** | 3x Nvidia Shield + 3x Alpine PKG-RES3HDMI headrest screens |
-| **Network** | UniFi UXG Lite gateway, USW-Flex-Mini switch |
+| **Network** | UniFi UXG Lite gateway in the rear driver's door, powered from a 12 V USB-C outlet on Rear Powerswitch (A) circuit 6; WAN from the Starlink supply's LAN port |
 | **Lighting** | KC light bar, bumper, rock, reverse, and fog lights on the engine bay panel |
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4

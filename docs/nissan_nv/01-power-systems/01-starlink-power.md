@@ -8,11 +8,12 @@ tags:
 
 # 1.1 Starlink Power {#starlink-power}
 
-Starlink runs off a **Starlink Advanced Power Supply** fed directly from the
-van's 12 V DC system. This replaces the 1000 W AC inverter the dish was
-originally powered through, and closes [#4][issue-4].
+The original **Starlink High Performance** dish runs off a **Starlink Advanced
+Power Supply** fed directly from the van's 12 V DC system. This replaces the
+1000 W AC inverter the dish was originally powered through, and closes
+[#4][issue-4].
 
-![Nissan NV 3500 Starlink power - Rear Powerswitch (B) feeding the Starlink Advanced Power Supply, which feeds the dish over the Starlink cable](../images/van-starlink-power.png)
+![Nissan NV 3500 Starlink power - Rear Powerswitch (A) circuit 6 feeding both the Starlink Advanced Power Supply and the 12 V USB-C outlet that runs the UXG Lite](../images/van-starlink-power.png)
 
 *Diagram source: `Van Electrical.drawio` (page "Starlink v3"); the image is regenerated from the draw.io file on each export.*
 
@@ -65,22 +66,46 @@ The alternatives worked through in [#4][issue-4] were all worse:
 
 ## Circuit {#circuit}
 
-The supply is switched from **Rear Powerswitch (B)**, alongside the Twinkle
-Lights and the two 5 V USB-C buck converters that run the UniFi gear.
+The supply is switched from **Rear Powerswitch (A), circuit 6** - a
+[Garmin PowerSwitch][garmin-spec]. That circuit is shared: it also triggers the
+**12 V USB-C outlet in the rear driver's door**, which is what powers the UniFi
+UXG Lite.
 
 | Item | Value |
 | :--- | :---- |
-| Source | Rear Powerswitch (B), AUX battery side |
+| Source | Rear Powerswitch (A), **circuit 6** (Garmin PowerSwitch) |
+| Shares the circuit with | 12 V USB-C outlet (rear driver's door) → UXG Lite (3 A) |
 | Nominal system voltage | 12 V DC |
-| Design current | Size the feed and breaker for **20 A** - the supply's own self-limit |
-| Supplied DC cable | 1.5 m, 2-pin (red +, black −) |
-| Output to dish | Starlink cable, PoE |
+| Overcurrent protection | **No separate breaker.** The Garmin PowerSwitch output is the limit: 30 A max per output, 100 A max system ([Garmin specs][garmin-spec]) |
+| Expected draw | Up to ~20 A - the supply's own self-limit at 12 V - plus the USB-C outlet |
+| Supplied DC cable | Starlink DC Power Cable, 1.5 m, 2-pin (red +, black −) |
+| Output to dish | Stock Starlink cable, cut and re-terminated with a Cat8 connector |
+| LAN port | → UXG Lite **WAN** input |
 
-!!! note "Size for 20 A, not for average draw"
-    The dish averages 75-100 W, which at 12 V is only 6-9 A. Do not size the
-    circuit on that number. The supply will pull up to its own ~20 A limit
-    during snow melt and cold-start, so the breaker, the wire, and the
-    Powerswitch circuit all need to carry 20 A continuously.
+!!! warning "Circuit 6 carries two loads and they switch together"
+    Because the Starlink supply and the 12 V USB-C outlet share circuit 6,
+    killing Starlink at the panel also kills the UXG Lite - the gateway and the
+    uplink drop together. That may be exactly what you want; it is worth knowing
+    it is not two independent switches.
+
+!!! note "Protection comes from the PowerSwitch, not a breaker"
+    There is no inline breaker on the circuit 6 run. The Garmin PowerSwitch
+    caps each output at **30 A**, which is what protects the branch. That is
+    comfortably above the supply's ~20 A self-limit plus the USB-C outlet, so
+    the arrangement works - but it means the **wire from the PowerSwitch to the
+    supply must itself be rated for 30 A**, since that is the most the output
+    will pass before shutting down. Size the conductor to the output rating, not
+    to the expected draw.
+
+---
+
+## Physical layout {#layout}
+
+| Item | Location |
+| :--- | :------- |
+| Starlink High Performance dish | Roof, mounted at an angle |
+| 12 V USB-C outlet | Rear driver's door |
+| UXG Lite | Rear driver's door |
 
 ---
 
@@ -92,20 +117,22 @@ Both of these come out of the Starlink path:
   diagrams](../02-diagrams/index.md), which document the system as it was
   before this change. It may still be wanted for other AC loads; that is a
   separate decision.
-- **Third-party PoE injector** - the Yaosheng 8 A injector and its modified
-  PoE cable, shown on the superseded "Starlink v2" page.
+- **Third-party PoE injector** - the Yaosheng 8 A injector, shown on the
+  superseded "Starlink v2" page. The dish cable is now the stock Starlink cable,
+  cut and re-terminated with a Cat8 connector so it lands properly on the
+  supply's PoE port.
 
 ---
 
 ## Outstanding Items
 
-- [ ] Confirm which dish is in the van (High Performance / Flat High Performance vs. Performance) and that the Advanced Power Supply is the supported supply for it
-- [ ] Confirm the dish-side cable - whether the existing run reuses the modified PoE cable or is replaced by a stock Starlink cable
 - [ ] Measure real-world draw at 12 V (idle, streaming, snow melt) and record it here
-- [ ] Pick the breaker size and wire gauge for the Rear Powerswitch (B) circuit and record the run length
-- [ ] Decide where the LAN port lands - UXG Lite WAN, or the USW-Flex-Mini
-- [ ] Record the mounting location and orientation of the supply
+- [ ] Record the wire gauge and run length for the circuit 6 feed - it must be rated for the PowerSwitch's 30 A output, not just the expected draw
+- [ ] Confirm the fuse on the Garmin PowerSwitch's own battery feed (Garmin's manual references a 125 A fuse on the supplied red power cable)
+- [ ] Record where the Advanced Power Supply itself is mounted
+- [ ] Confirm the re-terminated dish cable is wired to Starlink's pinout and that the run length is within spec
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4
 [spec-sheet]: https://starlink.com/public-files/specification_sheet_performance.pdf
 [dc-support]: https://starlink.com/support/article/d92539dd-f4f6-df83-284a-33cc48fe35b5
+[garmin-spec]: https://www8.garmin.com/manuals/webhelp/GUID-16B1D74D-857B-4FFB-8DE2-A0960FE0D090/EN-US/GUID-E9A53DAE-B84A-4E4F-9488-5536604B1779.html

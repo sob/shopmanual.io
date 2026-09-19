@@ -16,8 +16,10 @@ the image.
 
 ## Starlink Power (v3) {#starlink-v3}
 
-The current Starlink feed: Rear Powerswitch (B) → Starlink Advanced Power
-Supply → dish, on 12 V DC with no inverter. Written up in
+The Starlink feed as built: Rear Powerswitch (A) circuit 6 → Starlink Advanced
+Power Supply → High Performance dish, on 12 V DC with no inverter. The same
+circuit triggers the 12 V USB-C outlet that runs the UXG Lite, and the supply's
+LAN port feeds the UXG Lite WAN input. Written up in
 [Starlink Power](../01-power-systems/01-starlink-power.md).
 
 ![Starlink power v3 - Advanced Power Supply on 12 V DC](../images/van-starlink-power.png)
@@ -29,6 +31,12 @@ Supply → dish, on 12 V DC with no inverter. Written up in
 Device-level view of the power redesign: all four Powerswitch panels and
 everything hanging off them, with the legend counting how each load is
 controlled.
+
+!!! info "This is the plan, not the as-built"
+    The redesign groups Starlink and the UniFi gear on Rear Powerswitch (B) and
+    includes a USW-Flex-Mini switch. As built, Starlink and the UXG Lite are on
+    **Rear Powerswitch (A) circuit 6** and there is no Ethernet switch - see
+    [Starlink Power](../01-power-systems/01-starlink-power.md).
 
 ![Nissan NV 3500 power redesign, device level](../images/van-devices.png)
 
