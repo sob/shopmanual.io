@@ -47,8 +47,6 @@ tags:
 - CTCSS/DCS privacy codes
 - VOX (voice-activated transmission)
 - Channel scan function
-- All-aluminum chassis
-- RFI protection
 
 ## Antenna
 

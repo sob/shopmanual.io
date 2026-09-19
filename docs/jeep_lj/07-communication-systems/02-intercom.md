@@ -43,9 +43,6 @@ tags:
 
 - VOX or PTT mode per headset
 - Individual volume controls per headset
-- RADIO port for G1 GMRS integration
-- AUX port for Fusion head unit audio
-- EXT port for expansion modules
 - Music auto-mute when radio transmits
 
 ## Ports
