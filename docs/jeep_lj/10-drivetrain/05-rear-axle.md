@@ -116,9 +116,13 @@ All welding completed before internals installed.
 !!! info "ABS and Tone Ring"
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
     [GPS-50-2][bim-gps]. Tone ring omitted and the sensor opening plugged; an
-    unplugged housing opening leaks gear oil. The arrangement depends on the
-    donor year, the same 2008 boundary as the gear install kit.[^abs-year]
-    Plug sizes: {{ tbd(310) }}.
+    unplugged housing opening leaks gear oil. Which opening exists depends on
+    the donor year, the same 2008 boundary as the gear install kit[^abs-year]
+    — a through-2007 housing has one window to plug, a 2008-2010 housing has
+    wheel-end openings instead. Confirm the year on the housing in hand, then
+    size the plug: {{ tbd(310) }}. The front wheel ends are settled separately
+    (Riffraff RDPABS, see [Front Axle][front-axle]); that fitting does not
+    serve the rear.
 
 ## Outstanding Items
 
@@ -127,7 +131,7 @@ All welding completed before internals installed.
 ## Build Tasks
 
 - [ ] Verify no filler hole in OE inspection cover
-- [ ] Confirm donor housing year; a 2008-2010 housing needs the Revolution SK F10.5-Conv spacer in addition to kit 35-2046
+- [ ] Confirm donor housing year; it decides both the Revolution SK F10.5-Conv spacer (2008-2010, in addition to kit 35-2046) and which ABS opening needs plugging
 - [ ] Confirm park brake hardware complete
 - [ ] Cite an OEM or vendor source for WMS width, 8x170 bolt pattern, and spline counts before bracket layout or wheel order
 - [ ] Locate and plumb the axle breather before the truss is welded
