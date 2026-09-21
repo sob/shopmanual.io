@@ -118,8 +118,14 @@ All welding completed before internals installed.
 
 !!! info "ABS and Tone Ring"
     No ABS on this build; speed is GPS-sourced via the Dakota Digital
-    [GPS-50-2][bim-gps]. Tone rings omitted and the wheel-end sensor openings
-    plugged. Plug sizes: {{ tbd(310) }}.
+    [GPS-50-2][bim-gps]. Tone rings omitted. The wheel-end sensor openings take
+    Riffraff Diesel **RDPABS** grease-able block-off fittings, **two required**
+    — one per knuckle, sold individually.[^abs-plug] These open into the wheel
+    end rather than the gear oil, so they keep water and grit out instead of
+    sealing a leak path, and the zerk doubles as a grease port for the unit
+    bearing. Each is held by the factory ABS sensor bolt, so keep both bolts
+    from the donor. The rear housing is a different fitting entirely — see
+    [Rear Axle][rear-axle] and {{ tbd(310) }}.
 
 ## Steering
 
@@ -153,6 +159,7 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 ## Build Tasks
 
 - [ ] Confirm factory hub type before ordering (auto vs manual lockout)
+- [ ] Confirm the RDPABS bore matches the 05-10 knuckles in hand, and that both factory ABS sensor bolts came with the donor
 - [ ] Set and verify steering stops under load
 - [ ] Preheat knuckles before welding high steer arms
 - [ ] Cite an OEM or vendor source for WMS width, tube size, and spline counts before bracket layout or wheel order
@@ -183,3 +190,4 @@ Factory Super Duty calipers and rotors. See [Brakes][brakes].
 [^ora]: Offroad Anonymous **05-16 Super Duty Dana 60 Weld-On High Steer Kit** (full hydro option) — ORA publishes "8″ steering travel provides 40° steering angle" for the 05-10 knuckle version. [offroadanonymous.com](https://offroadanonymous.com/product/05-16-super-duty-dana-60-weld-on-high-steer-kit/), accessed 2026-09-16. The 9"/45° and 10"/50° figures are owner notes from the same listing.
 [^shafts]: Owner decision, 2026-09-16 — factory Dana/Spicer 35-spline shafts retained; chromoly shafts and 1550-series joints deferred because the 40° steering cap set by the 8" ram is where the factory joints bind.
 [^bje]: Owner decision, 2026-09-16 — American Iron ball joint delete (upper and lower, welded per AI instructions); factory inner Cs retained without gussets.
+[^abs-plug]: Riffraff Diesel **RDPABS**, "Front ABS Grease-able Block Off Fitting 99-16" — "This ABS grease tool will allow you to maintenance your front wheel bearing on the 1999-2016 Dana 50/60 axles. It can be permanently installed for those with only rear ABS or can be used just for greasing then removed." 6061 billet, hard anodized, grease zerk and USA-made Viton o-ring included, "Sold Individually"; $24.82 on sale, $28.33 list. [riffraffdiesel.com](https://www.riffraffdiesel.com/front-abs-grease-able-block-off-fitting-99-16/), accessed 2026-09-21. Riffraff disclaims fit across Dana applications, so confirm the bore against the knuckles in hand. Grease spec per the vendor: lithium-based, non-moly, NLGI #2, GC-LB.

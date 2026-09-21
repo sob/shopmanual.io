@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-09-17
+**Last Updated:** 2026-09-21
 
 ---
 
@@ -109,6 +109,8 @@ Parts for the Super Duty Dana 60 front and Sterling 10.5 rear. Prices unconfirme
 | Yukon Hardcore YHC70011 locking hubs | Yukon | — | Medium | 35 spline - [Front Axle][front-axle] |
 | Spicer SPL55-3X u-joints (x4) | Spicer | — | Medium | 2 installed, 2 spare - [Front Axle][front-axle] |
 | American Iron AI-1900 trail hardware kit | American Iron | — | Medium | [Front Axle][front-axle] |
+| Riffraff RDPABS ABS block-off fitting (x2) | Riffraff Diesel | ~$50 (~$24.82 ea) | Medium | Front wheel ends, one per knuckle; sold individually - [Front Axle][front-axle] |
+| Rear ABS opening plug | — | — | Medium | Size depends on donor housing year {{ tbd(310) }} - [Rear Axle][rear-axle] |
 | Motobilt truss, front and rear | Motobilt | — | Medium | Weld before internals - [Front Axle][front-axle], [Rear Axle][rear-axle] |
 | Motobilt differential cover, front and rear | Motobilt | — | Medium | [Front Axle][front-axle], [Rear Axle][rear-axle] |
 | PowerStop Z36 Truck & Tow kit, front and rear | PowerStop | — | Medium | Match to donor axle years - [Brakes][brakes] |
