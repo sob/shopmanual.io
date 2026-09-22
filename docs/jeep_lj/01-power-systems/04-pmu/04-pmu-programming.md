@@ -12,16 +12,16 @@ PMU configuration examples, logic sequences, and implementation checklist.
 ### DRL Auto-Off (Output 23) and Parking / Tail Markers (Output 12)
 
 ```text
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_LowBeam == OFF) AND (In5_CT4_HighBeam == OFF)
   THEN Out23_DRL = ON
 ELSE Out23_DRL = OFF
 
-IF (In4_ParkSwitch == ON) OR (In7_CT4_Headlights == ON)
+IF (In7_CT4_LowBeam == ON) OR (In5_CT4_HighBeam == ON)
   THEN Out12_Parking = ON
 ELSE Out12_Parking = OFF
 ```
 
-DRL on with ignition, off when headlights active. Parking/tail markers on with the dash switch or the headlights, with **no ignition term** — the PMU is CONSTANT-powered, so the vehicle can sit lit while parked (owner decision 2026-09-22). See [DRL & Parking][drl-parking].
+DRL on with ignition, off when either beam is on. Parking/tail markers follow the headlights (low **or** high — the CT4 drops SW3 when SW4 is on, so both are sensed) with **no ignition term** and no separate switch: pull the headlights on while parked and the vehicle is lit (owner decision 2026-09-22). See [DRL & Parking][drl-parking].
 
 **Note:** Pin 7 is the dedicated 12V switched input (physical pin), different from In 7 which is a digital input channel. See [PMU Inputs][pmu-inputs] for complete pin assignments.
 

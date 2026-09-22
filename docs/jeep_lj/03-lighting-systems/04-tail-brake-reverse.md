@@ -88,7 +88,7 @@ Maxbilt Round Trail Tail lights have **internal diode isolation** for combined b
 
 **Power:** PMU Out 12 (parking/tail circuit, ~2A)
 **Maxbilt Connection:** RED wire
-**Control:** Dash parking-light switch or headlights — works with the ignition off
+**Control:** Follows the headlights (low or high beam) — works with the ignition off
 **Shared Circuit:** RTL-S running light (the LP6 DRL is on its own output, Out 23)
 
 See [DRL/Parking Lights][drl-parking-lights] for circuit details.

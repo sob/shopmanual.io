@@ -26,7 +26,7 @@ All circuits powered by START battery (alternator charging):
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
 | OUT21            | Brake Lights      |      0A |       3A | Seconds during braking | Traffic-dependent     |
 | OUT22            | Reverse Lights    |      0A |       3A | Seconds in reverse     | Parking only          |
-| OUT12            | Parking/Tail      |      0A |       2A | Night / parked         | Switch or headlights  |
+| OUT12            | Parking/Tail      |      0A |       2A | Night / parked         | Follows headlights    |
 | OUT23            | DRL               |    0.8A |     0.8A | Daytime only           | Auto-off at night     |
 | **Fwd Dist Bus (START-direct)** | |       |          |                        | relocated off the PMU |
 | Fwd Bus          | iBooster main     |   0.25A |      40A | Seconds during braking | Brief peak            |
@@ -172,7 +172,7 @@ All circuits powered by START battery (alternator charging):
 | **iBooster Enable (ign bus)** |    **5A** | Always on             |
 | **STX Intercom (OUT20)**      |    **1A** | Standby               |
 | DRL (OUT23)                   |        0A | Off - parked          |
-| Parking/Tail (OUT12)          |        0A | Off unless switched   |
+| Parking/Tail (OUT12)          |        0A | Off - headlights off  |
 | **BCDC Charger**              |   **30A** | Normal rate           |
 | **TOTAL**                     |  **122A** |                       |
 

@@ -45,14 +45,14 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 - **Brake:** PMU Out 21 (3A) - trigger via brake pedal switch
 - **Reverse:** PMU Out 22 (5A) - trigger via transmission switch, also activates WolfBox camera
 - **Turn:** CT4 SW1/SW2 (internal diode isolation in Maxbilt)
-- **Marker/Parking:** PMU Out 12 (parking circuit — dash switch or headlights, works with ignition off)
+- **Marker/Parking:** PMU Out 12 (parking circuit — follows the headlights, works with ignition off)
 - **See:** [Tail, Brake & Reverse][tail-brake-reverse-lights] for complete specifications
 
 ### DRL & Parking Lights {#drl-parking-overview}
 
 - **DRL circuit:** PMU Out 23 (7A capacity, 0.8A load) — LP6 DRL only; on with ignition, off when headlights on
-- **Parking/tail circuit:** PMU Out 12 (15A capacity, ~2A load) — Maxbilt tail markers + RTL-S running; dash parking-light switch OR headlights, **ignition-independent** (lit while parked, like a production car)
-- **No external relay needed** - both handled by PMU programming (CT4 SW3 status on PMU In 7)
+- **Parking/tail circuit:** PMU Out 12 (15A capacity, ~2A load) — Maxbilt tail markers + RTL-S running; on whenever the headlights are on (low or high beam), **ignition-independent** — pull the headlights on while parked and the vehicle is lit, like a production car
+- **No external relay, no extra switch** - both handled by PMU programming (CT4 SW3/SW4 status on PMU In 7 / In 5)
 - **See:** [DRL & Parking Lights][drl-parking-lights] for complete specifications
 
 ## Power Sources

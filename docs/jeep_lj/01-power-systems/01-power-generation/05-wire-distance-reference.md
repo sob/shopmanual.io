@@ -76,6 +76,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | SwitchPros (firewall) | Roll bar dome lights     | 16 AWG | ~8 ft    | Low current, estimated              |
 | PBS-I PURPLE START      | Cole Hersee 24213 coil   | 16 AWG | ~10 ft ✓ | Via firewall Pin 15  |
 | CT4 SW3 output          | PMU In 7                 | 18 AWG | 3 ft ✓   | Same as steering column → PMU       |
+| CT4 SW4 output          | PMU In 5                 | 18 AWG | 3 ft ✓   | Engine-bay tap after HDP24 pin 10   |
 
 ### Offroad Lighting (Priority: Medium)
 

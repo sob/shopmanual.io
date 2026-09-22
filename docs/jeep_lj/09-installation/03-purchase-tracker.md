@@ -182,7 +182,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
-| Parking-light dash switch (Toyota-style ON/OFF, 1.54"×0.83") | Generic / CH4X4 | ~$15-25 | Medium | Switch-to-ground → PMU In 4; drives PMU Out 12 tail markers, works with ignition off - [DRL & Parking][drl-parking] |
 | 4x4 indicator relay (SPST micro, 12V coil) | Generic | ~$10 | Medium | Sinks the HDX 4x4 input (PMU is high-side); mounts at the HDX - [Transfer Case][transfer-case] |
 | Transfer case 5-position switch (5083138AA / Omix 18676.52) | Mopar / Omix-Ada | ~$50 | Low | **Only if** the donor NP241OR arrives without one ({{ tbd(145) }}) - [Transfer Case][transfer-case] |
 | Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
@@ -294,7 +293,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 [start-cbs]: ../01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
 [aux-cbs]: ../01-power-systems/03-aux-battery-distribution/01-circuit-breakers.md
-[drl-parking]: ../03-lighting-systems/05-drl-parking.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [tbd-tracker]: ../tbd-tracker.md

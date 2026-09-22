@@ -31,7 +31,7 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-29:** 29× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (29 available, 20 used, 9 spare — see [Pin Assignment](#pin-assignment))
+- Size 16 contacts: 14-20 AWG, 13A (29 available, 19 used, 10 spare — see [Pin Assignment](#pin-assignment))
 
 **Mounting:** Single 1.5" diameter hole in firewall (same as previous 24-21 - shell size unchanged)
 
@@ -64,7 +64,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 19 | 4x4 indicator relay coil | 18 AWG | PMU OUT19 | 4x4 relay coil (cabin, at HDX) | #16 |
 | 20 | 4LO indicator | 18 AWG | PMU OUT24 | HDX EXTRA(+) input | #16 |
 
-### Cabin → Engine Bay (12 wires)
+### Cabin → Engine Bay (11 wires)
 
 Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed when the PBS-I self-contained keyless system was adopted.
 
@@ -81,14 +81,13 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 | 16 | Winch control IN | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 18 | iBooster enable | 16 AWG | Ignition bus Term 5 (own 7.5A fuse) | iBooster ignition input | #16 |
-| 21 | Parking light switch | 18 AWG | Dash parking-light switch (switch-to-ground) | PMU In 4 | #16 |
 
 !!! note "Relocated power feeds do NOT use this connector"
     The radiator fan (4 AWG), iBooster main (8 AWG), and TCU (12 AWG) feeds — relocated off the PMU — run from the [START+ Forward Distribution Bus][start-fwd-bus] in the engine bay to their loads, entirely engine-bay-side. Only the low-current **iBooster enable** (Pin 18 above) crosses the firewall.
 
-### Available (9 spare pins)
+### Available (10 spare pins)
 
-Pins 22-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18) and pin 21 by the parking-light switch (2026-09-22). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
+Pins 21-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
 
 ---
 
@@ -191,8 +190,8 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 |:------|:-----:|:---------|
 | 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
 | 16 AWG | 5 | PMU lighting outputs (3), PURPLE START (1), iBooster enable (1) |
-| 18 AWG | 8 | Switch signals (4: horn, brake, A/C, parking), winch control (2), 4x4/4LO indicators (2) |
-| **Main connector** | **20** | HDP24-24-29 (20 of 29 used, 9 spare) |
+| 18 AWG | 7 | Switch signals (3: horn, brake, A/C), winch control (2), 4x4/4LO indicators (2) |
+| **Main connector** | **19** | HDP24-24-29 (19 of 29 used, 10 spare) |
 
 ### SwitchPros HDP24-18-14 (forward SP outputs)
 
@@ -296,9 +295,9 @@ Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for
 |:------------|:------------|:---:|:------:|
 | HDP24-24-29PE-L015 | 29-pin receptacle, flange mount | 1 | $45 |
 | HDP26-24-29SE | 29-pin plug | 1 | $35 |
-| 0460-202-16141 | Size 16 pin, solid, nickel | 20 | $0.50 ea |
-| 0462-201-16141 | Size 16 socket, solid, nickel | 20 | $0.55 ea |
-| 114018 | Sealing plug, size 16 cavity | 9 | $0.25 ea |
+| 0460-202-16141 | Size 16 pin, solid, nickel | 19 | $0.50 ea |
+| 0462-201-16141 | Size 16 socket, solid, nickel | 19 | $0.55 ea |
+| 114018 | Sealing plug, size 16 cavity | 10 | $0.25 ea |
 
 **Subtotal:** ~$105
 
@@ -324,13 +323,14 @@ Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for
 
 ## DRL Auto-Off Signal
 
-**Note:** The DRL cutoff signal does NOT require a separate wire through the firewall. The CT4 SW3 (low beam) wire is tapped on the engine bay side after it passes through the connector:
+**Note:** The headlight-status signals do NOT require separate wires through the firewall. The CT4 SW3 (low beam) and SW4 (high beam) wires are tapped on the engine bay side after they pass through the connector:
 
 ```text
-CT4 SW3 (cabin) → Pin 9 → [ENGINE BAY TAP to PMU In 7] → LP6 headlights
+CT4 SW3 (cabin) → Pin 9  → [ENGINE BAY TAP to PMU In 7] → LP6 Pin 1 (low beam)
+CT4 SW4 (cabin) → Pin 10 → [ENGINE BAY TAP to PMU In 5] → LP6 Pin 4 (high beam)
 ```
 
-PMU In 7 receives the headlight status signal from this tap, which turns the DRL (Out 23) off and the parking/tail markers (Out 12) on — see [DRL & Parking][drl-parking].
+PMU In 7 / In 5 receive the low/high-beam status; either one turns the DRL (Out 23) off and the parking/tail markers (Out 12) on. Both are needed because the CT4 drops SW3 while SW4 is active — see [DRL & Parking][drl-parking].
 
 ---
 

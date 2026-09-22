@@ -29,7 +29,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output     | Circuit                   | Load | Ground                                                | Control Type         | Notes                                         |
 | :--------- | :------------------------ | :--- | :---------------------------------------------------- | :------------------- | :-------------------------------------------- |
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
-| **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | In 4 switch OR headlights (ignition-independent) | Maxbilt RED + RTL-S running; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
+| **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | Auto: with headlights (In 7 OR In 5), ignition-independent | Maxbilt RED + RTL-S running; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
 | **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 15** | **[Available]**           | -    | -                                                     | -                    | (Was Winch Contactor Trigger — reallocated 2026-05-30 to BODY PDU CB43) |

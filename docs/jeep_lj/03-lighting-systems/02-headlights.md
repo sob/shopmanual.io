@@ -51,7 +51,7 @@ tags:
 - **Power:** PMU Out 13 (15A CONSTANT) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
 
-Both beams disable when ignition is off (via ignition signal); current draw is per the pin table above.
+Both beams stay active with the ignition off (CT4 programmed without ignition lockout, because the parking/tail markers follow the headlights); current draw is per the pin table above.
 
 ## DRL (Daytime Running Light)
 

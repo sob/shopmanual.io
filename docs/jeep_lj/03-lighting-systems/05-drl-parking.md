@@ -5,14 +5,14 @@ hide:
 
 # DRL & Parking Lights {#drl-parking-lights}
 
-Two circuits on two PMU outputs:
+Two circuits on two PMU outputs, both driven from the CT4 headlight status — no separate parking-light switch:
 
 | Circuit | PMU Output | Loads | Control |
 | :------ | :--------- | :---- | :------ |
-| **DRL** | Out 23 (7A) | LP6 headlight DRL (Pin 3, both lights) | Automatic: on with ignition, off when headlights are on |
-| **Parking / tail markers** | Out 12 (15A) | Maxbilt Round Trail Tail RED (both), RTL-S running (red) | Dash parking-light switch **or** headlights; works with the ignition off |
+| **DRL** | Out 23 (7A) | LP6 headlight DRL (Pin 3, both lights) | On with ignition, off when either beam is on |
+| **Parking / tail markers** | Out 12 (15A) | Maxbilt Round Trail Tail RED (both), RTL-S running (red) | On whenever the headlights are on (low or high beam); works with the ignition off |
 
-Parking lights are independent of the ignition so the vehicle can be lit while parked, like any production car (owner decision, 2026-09-22). That is why the two functions cannot share one output: the DRL auto-off logic would otherwise switch the tail markers off whenever the headlights are on.
+Parking lights follow the headlights and are independent of the ignition, so pulling the headlights on while parked lights the vehicle like any production car (owner decisions, 2026-09-22). That is why the two functions cannot share one output: the DRL auto-off logic would otherwise switch the tail markers off whenever the headlights are on.
 
 ## DRL Circuit (Out 23)
 
@@ -34,24 +34,33 @@ PMU Out 12 crosses the firewall on [HDP24 pin 6][firewall-ingress] and runs to t
 
 **Splice Location:** Rear of vehicle (accessible for service). The RTL-S white work section is currently drawn on this same splice (+1.3A) — see [Chase Light][chase-lights]; whether it stays on the parking circuit is an open question.
 
-**Parking-light switch:** Dash-mounted Toyota-style ON/OFF switch (1.54" × 0.83" cutout, see [Dashboard Controls][dashboard-controls]), wired switch-to-ground to [PMU In 4][pmu-inputs] via [HDP24 pin 21][firewall-ingress]. The PMU is CONSTANT-powered, so both the input and Out 12 work with the ignition off.
+## Headlight Status Inputs
+
+The PMU senses both CT4 headlight outputs, tapped on the engine-bay side of the firewall connector (no extra pins):
+
+| PMU Input | Source | Tap | Why |
+| :-------- | :----- | :-- | :-- |
+| **In 7** | CT4 SW3 (low beam) | After [HDP24 pin 9][firewall-ingress], 18 AWG | Headlights on |
+| **In 5** | CT4 SW4 (high beam) | After [HDP24 pin 10][firewall-ingress], 18 AWG | The CT4 drops SW3 while SW4 is active, so without In 5 the tail markers would go dark on high beam |
+
+**CT4 programming:** SW3/SW4 must remain active with the ignition off (the CT4 is CONSTANT-powered from PMU Out 13); see [Command Touch CT4][ct4]. The PMU is CONSTANT-powered too, so Out 12 works with the ignition off.
 
 ## PMU Logic
 
 ```text
-PMU In 4  (In4_ParkSwitch):     dash parking-light switch (switch-to-ground)
-PMU In 7  (In7_CT4_Headlights): CT4 SW3 headlight status (12V when low beam on)
-PMU Pin 7 (Pin7_IgnitionRUN):   ignition signal (12V switched input)
+PMU In 7  (In7_CT4_LowBeam):   CT4 SW3 status (12V when low beam on)
+PMU In 5  (In5_CT4_HighBeam):  CT4 SW4 status (12V when high beam on)
+PMU Pin 7 (Pin7_IgnitionRUN):  ignition signal (12V switched input)
 
-Parking / tail markers — ignition-independent:
-IF (In4_ParkSwitch == ON) OR (In7_CT4_Headlights == ON)
+Parking / tail markers — follow the headlights, ignition-independent:
+IF (In7_CT4_LowBeam == ON) OR (In5_CT4_HighBeam == ON)
   THEN Out12_Parking = ON
 ELSE
   Out12_Parking = OFF
 END
 
-DRL — ignition only, off with headlights:
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+DRL — ignition only, off with either beam:
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_LowBeam == OFF) AND (In5_CT4_HighBeam == OFF)
   THEN Out23_DRL = ON
 ELSE
   Out23_DRL = OFF
@@ -60,14 +69,13 @@ END
 
 ## Operation States
 
-| State | Ignition | Park switch | Headlights (In 7) | Out 23 DRL | Out 12 Parking |
-| :---- | :------: | :---------: | :---------------: | :--------: | :------------: |
+| State | Ignition | Low beam (In 7) | High beam (In 5) | Out 23 DRL | Out 12 Parking |
+| :---- | :------: | :-------------: | :--------------: | :--------: | :------------: |
 | Daytime driving | ON | OFF | OFF | ON | OFF |
-| Night driving | ON | any | ON | OFF | ON |
-| Parked, lit | OFF | ON | OFF | OFF | ON |
+| Night driving, low beam | ON | ON | OFF | OFF | ON |
+| Night driving, high beam | ON | OFF | ON | OFF | ON |
+| Parked, headlights pulled on | OFF | ON | OFF | OFF | ON |
 | Parked, dark | OFF | OFF | OFF | OFF | OFF |
-
-Headlights (CT4 SW3/SW4) are disabled with the ignition off, so In 7 cannot hold the parking circuit on when parked; only the switch does.
 
 ## Wiring
 
@@ -75,7 +83,7 @@ Headlights (CT4 SW3/SW4) are disabled with the ignition off, so In 7 cannot hold
 
 - **Pin 7:** Ignition signal from the engine-bay distribution off HDP24 Pin 12 (PBS-I PINK IGN) — see [PMU Inputs][pmu-inputs]
 - **In 7:** CT4 SW3 output, tapped in the engine bay after HDP24 pin 9 — see [Firewall Ingress][firewall-ingress]
-- **In 4:** Dash parking-light switch, switch-to-ground, via HDP24 pin 21
+- **In 5:** CT4 SW4 output, tapped in the engine bay after HDP24 pin 10
 
 **PMU Output Wiring:**
 
@@ -90,26 +98,24 @@ Headlights (CT4 SW3/SW4) are disabled with the ignition off, so In 7 cannot hold
 
 ## Build Tasks
 
-- [ ] Source the parking-light dash switch (Toyota-style ON/OFF) and add it to the [dash cutout layout][dashboard-controls]
-- [ ] Create PMU programming: Out 12 parking logic (In 4 OR In 7, no ignition term) and Out 23 DRL auto-off
-- [ ] Verify at test: parking lights on with ignition off; tail markers stay on with headlights on; DRL off with headlights on
+- [ ] Create PMU programming: Out 12 parking logic (In 7 OR In 5, no ignition term) and Out 23 DRL auto-off (off with either beam)
+- [ ] Program the CT4 so SW3/SW4 are not ignition-disabled (see [CT4 Programming Configuration][ct4])
+- [ ] Verify at test: parking/tail markers on with low beams, stay on with high beams, work with the ignition off; DRL off with either beam
 
 ## Related Documentation
 
 - [Headlights][headlights] - LP6 DRL function (Pin 3)
 - [Tail, Brake & Reverse][tail-brake-reverse-lights] - Maxbilt RED marker wire
 - [Chase Light][chase-lights] - RTL-S running function
-- [Command Touch CT4][ct4] - SW3 headlight status tap to PMU In 7
-- [Dashboard Controls][dashboard-controls] - Parking-light switch
+- [Command Touch CT4][ct4] - SW3/SW4 status taps to PMU In 7 / In 5; ignition-control programming
 - [PMU Power Distribution][pmu-power-distribution] - PMU Out 12 / Out 23 circuits and programming
-- [PMU Inputs][pmu-inputs] - In 4 / In 7 / Pin 7
-- [Firewall Ingress][firewall-ingress] - HDP24 pins 6 and 21
+- [PMU Inputs][pmu-inputs] - In 5 / In 7 / Pin 7
+- [Firewall Ingress][firewall-ingress] - HDP24 pin 6 and the engine-bay taps after pins 9/10
 
 [headlights]: 02-headlights.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [chase-lights]: ../04-offroad-lighting/04-chase-lights.md
 [ct4]: ../05-control-interfaces/03-command-touch-ct4.md
-[dashboard-controls]: ../05-control-interfaces/05-dashboard-controls.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

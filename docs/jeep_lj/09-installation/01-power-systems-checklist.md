@@ -175,11 +175,11 @@ live in the linked source docs, not here.
 - [ ] Drill firewall hole for bulkhead connector
 - [ ] Mount Deutsch HDP24-24-29 receptacle (engine side)
 - [ ] Assemble Deutsch plug (cabin side)
-- [ ] Crimp contacts for all 20 wires
+- [ ] Crimp contacts for all 19 wires
 - [ ] Install sealing plugs in unused cavities
 - [ ] Verify bulkhead connector seal engagement
 - [ ] Confirm Engine→Cabin pins (1, 3–6, 12, 19, 20): radio power, PMU lighting outputs, PINK IGN, 4x4/4LO indicators
-- [ ] Confirm Cabin→Engine pins (7–11, 13–18, 21): CT4 outputs, switch signals, winch control, iBooster enable, parking-light switch
+- [ ] Confirm Cabin→Engine pins (7–11, 13–18): CT4 outputs, switch signals, winch control, iBooster enable
 - [ ] Install ferrite chokes on radio power leads (RF mitigation)
 
 ### Ignition Signal Distribution
@@ -199,8 +199,8 @@ live in the linked source docs, not here.
 - [ ] Confirm reverse signal → PMU In 3 (Turbolamik aux output)
 - [ ] Confirm A/C request → PMU In 9
 - [ ] Confirm CT4 SW3 (headlight status) → PMU In 7
-- [ ] Confirm parking-light dash switch → PMU In 4 (switch-to-ground, via HDP24 pin 21)
-- [ ] PMU In 5, 6, 8 — reserved for future expansion (no wiring)
+- [ ] Confirm CT4 SW4 (high-beam status) → PMU In 5 (engine-bay tap after HDP24 pin 10)
+- [ ] PMU In 4, 6, 8 — reserved for future expansion (no wiring)
 
 ### PMU Output Wiring
 
@@ -269,7 +269,7 @@ live in the linked source docs, not here.
 ### PMU Programming
 
 - [ ] Program DRL auto-off when headlights active
-- [ ] Program parking/tail markers (OUT12): In 4 switch OR headlights, no ignition term
+- [ ] Program parking/tail markers (OUT12): on with low OR high beams (In 7 OR In 5), no ignition term
 - [ ] Program A/C clutch engagement logic
 - [ ] Program horn activation
 - [ ] Program brake light activation
@@ -283,7 +283,7 @@ live in the linked source docs, not here.
 
 - [ ] Verify J1939 communication and data accuracy
 - [ ] Test DRL auto-off logic
-- [ ] Test parking lights with ignition off; tail markers stay on with headlights
+- [ ] Test parking/tail markers: on with low beams, stay on with high beams, work with the ignition off
 - [ ] Test A/C clutch engagement
 - [ ] Test CAN-based fan controls at threshold temps
 - [ ] Test sequential load startup timing
