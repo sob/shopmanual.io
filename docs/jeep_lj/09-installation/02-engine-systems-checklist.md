@@ -16,7 +16,7 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 ## Phase 1: Starter System
 
-- [ ] Confirm starter motor mounted to engine block
+- [ ] Confirm factory starter (shipped mounted on the crate engine) is secure; record its P/N from the tag
 - [ ] Confirm START battery+ → starter battery post
 - [ ] Confirm Cole Hersee solenoid mounted on firewall (engine bay side)
 - [ ] Confirm starter battery post → Cole Hersee input

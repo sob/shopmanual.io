@@ -49,10 +49,10 @@ live in the linked source docs, not here.
 
 - [ ] Mount 250A circuit breaker (PMU main power) within reach of START battery
 - [ ] Mount 80A circuit breaker (BCDC input) within reach of START battery
-- [ ] Mount 150A circuit breaker (Forward Distribution Bus master) within reach of START battery
+- [ ] Mount 100A circuit breaker (Forward Distribution Bus master) within reach of START battery
 - [ ] Confirm START battery+ → 250A CB → PMU main power
 - [ ] Confirm START battery+ → 80A CB → BCDC input
-- [ ] Confirm START battery+ → 150A CB → 2 AWG forward feed → START+ Forward Distribution Bus
+- [ ] Confirm START battery+ → 100A CB → 2 AWG forward feed → START+ Forward Distribution Bus
 - [ ] Confirm PMU ground reference (Pin 25) → Engine Bay Ground Bus
 
 **START+ Forward Distribution Bus (engine bay):**
@@ -83,10 +83,10 @@ live in the linked source docs, not here.
 
 ### AUX Battery Inline CBs & Firewall CONSTANT Bus
 
-- [ ] Mount 300A circuit breaker (forward feed to firewall bus) within reach of AUX battery
+- [ ] Mount 250A circuit breaker (forward feed to firewall bus) within reach of AUX battery
 - [ ] Mount 150A circuit breaker (SafetyHub local feed) within reach of AUX battery
-- [ ] Confirm AUX battery+ ring lugs landed: Winch, BCDC output, 300A CB, 150A CB
-- [ ] Confirm AUX battery+ → 300A CB → Firewall CONSTANT Bus
+- [ ] Confirm AUX battery+ ring lugs landed: Winch, BCDC output, 250A CB, 150A CB, 80A CB (amp)
+- [ ] Confirm AUX battery+ → 250A CB → Firewall CONSTANT Bus
 - [ ] Confirm AUX battery+ → 150A CB → SafetyHub 150
 
 **Firewall CONSTANT Bus:**
@@ -95,10 +95,10 @@ live in the linked source docs, not here.
 - [ ] Confirm forward feed terminates at bus input stud
 - [ ] Mount 150A circuit breaker (SwitchPros) at Firewall CONSTANT Bus
 - [ ] Mount 100A circuit breaker (BODY PDU) at Firewall CONSTANT Bus
-- [ ] Mount 100A circuit breaker (JL Audio amp) at AUX battery bracket
+- [ ] Mount 80A circuit breaker (JL Audio amp) at AUX battery bracket
 - [ ] Confirm Firewall CONSTANT Bus → 150A CB → SwitchPros power module
 - [ ] Confirm Firewall CONSTANT Bus → 100A CB → BODY PDU power studs
-- [ ] Confirm AUX battery+ → 100A CB → JL Audio amp (direct AUX feed, not via firewall bus)
+- [ ] Confirm AUX battery+ → 80A CB → JL Audio amp (direct AUX feed, not via firewall bus)
 
 **Direct AUX Battery Connections (No Circuit Breaker):**
 
@@ -175,11 +175,11 @@ live in the linked source docs, not here.
 - [ ] Drill firewall hole for bulkhead connector
 - [ ] Mount Deutsch HDP24-24-29 receptacle (engine side)
 - [ ] Assemble Deutsch plug (cabin side)
-- [ ] Crimp contacts for all 17 wires
+- [ ] Crimp contacts for all 20 wires
 - [ ] Install sealing plugs in unused cavities
 - [ ] Verify bulkhead connector seal engagement
-- [ ] Confirm Pin 1-6 assignments (Engine→Cabin): radio power, PMU lighting outputs
-- [ ] Confirm Pin 7-17 assignments (Cabin→Engine): CT4 outputs, switch signals, winch control
+- [ ] Confirm Engine→Cabin pins (1, 3–6, 12, 19, 20): radio power, PMU lighting outputs, PINK IGN, 4x4/4LO indicators
+- [ ] Confirm Cabin→Engine pins (7–11, 13–18, 21): CT4 outputs, switch signals, winch control, iBooster enable, parking-light switch
 - [ ] Install ferrite chokes on radio power leads (RF mitigation)
 
 ### Ignition Signal Distribution
@@ -199,7 +199,8 @@ live in the linked source docs, not here.
 - [ ] Confirm reverse signal → PMU In 3 (Turbolamik aux output)
 - [ ] Confirm A/C request → PMU In 9
 - [ ] Confirm CT4 SW3 (headlight status) → PMU In 7
-- [ ] PMU In 4, 5, 6, 8 — reserved for future expansion (no wiring)
+- [ ] Confirm parking-light dash switch → PMU In 4 (switch-to-ground, via HDP24 pin 21)
+- [ ] PMU In 5, 6, 8 — reserved for future expansion (no wiring)
 
 ### PMU Output Wiring
 
@@ -215,8 +216,9 @@ live in the linked source docs, not here.
 - [ ] Confirm STX Intercom → OUT20
 - [ ] Confirm brake lights → OUT21
 - [ ] Confirm reverse lights → OUT22
-- [ ] Confirm DRL/parking → OUT23
-- [ ] OUT1–4, 10, 16, 19, 24 — free (no wiring); radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus (see below)
+- [ ] Confirm LP6 DRL → OUT23
+- [ ] Confirm parking/tail markers → OUT12 (via HDP24 pin 6; SwitchPros LIGHTS input tapped at firewall)
+- [ ] OUT1–4, 10, 14, 15, 16 — free (no wiring); OUT19/OUT24 are the 4x4/4LO indicators; radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus (see below)
 
 ### PMU CAN Bus Integration
 
@@ -267,6 +269,7 @@ live in the linked source docs, not here.
 ### PMU Programming
 
 - [ ] Program DRL auto-off when headlights active
+- [ ] Program parking/tail markers (OUT12): In 4 switch OR headlights, no ignition term
 - [ ] Program A/C clutch engagement logic
 - [ ] Program horn activation
 - [ ] Program brake light activation
@@ -280,6 +283,7 @@ live in the linked source docs, not here.
 
 - [ ] Verify J1939 communication and data accuracy
 - [ ] Test DRL auto-off logic
+- [ ] Test parking lights with ignition off; tail markers stay on with headlights
 - [ ] Test A/C clutch engagement
 - [ ] Test CAN-based fan controls at threshold temps
 - [ ] Test sequential load startup timing

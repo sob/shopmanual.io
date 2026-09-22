@@ -72,7 +72,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | CT4 (steering column)   | Right fender turn signal | 14 AWG | 9 ft ✓   | Same as passenger headlight         |
 | CT4 (steering column)   | Driver tail light        | 14 AWG | 11 ft ✓  | Turn signal rear                    |
 | CT4 (steering column)   | Passenger tail light     | 14 AWG | 16 ft ✓  | Turn signal rear                    |
-| PMU (engine bay)        | Rear tail lights         | 16 AWG | 13 ft ✓  | Brake/reverse/marker (Out 21/22/23) |
+| PMU (engine bay)        | Rear tail lights         | 16 AWG | 13 ft ✓  | Brake/reverse/marker (Out 21/22/12) |
 | SwitchPros (firewall) | Roll bar dome lights     | 16 AWG | ~8 ft    | Low current, estimated              |
 | PBS-I PURPLE START      | Cole Hersee 24213 coil   | 16 AWG | ~10 ft ✓ | Via firewall Pin 15  |
 | CT4 SW3 output          | PMU In 7                 | 18 AWG | 3 ft ✓   | Same as steering column → PMU       |
@@ -113,7 +113,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | SwitchPros control panel        | ✓ Dash mounted                              |
 | SwitchPros control cable length | 5 ft (firewall to dash, short run)          |
 | Firewall CONSTANT Bus           | ✓ Firewall (cabin side, passenger area)     |
-| Firewall CONSTANT Bus feed      | 2/0 AWG, ~13 ft from AUX battery+, 300A CB at battery |
+| Firewall CONSTANT Bus feed      | 2/0 AWG, ~13 ft from AUX battery+, 250A CB at battery |
 | CT4 GPS antenna                 | ✓ Integrated in CT4 unit                    |
 | Rear cargo rocker switch        | ✓ Blue Sea 4160 on rear wheel well top      |
 | Rear seat dome override switch  | ✓ Blue Sea 4160, rear passenger accessible  |

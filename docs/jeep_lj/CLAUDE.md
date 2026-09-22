@@ -331,6 +331,7 @@ Firewall pattern is 60×80mm, mounted 80mm vertical.[^firewall-pattern]
 - SwitchPros uses custom 2-pin Delphi harnesses (power + ground combined per output)
 - Each light connects via single Delphi plug - no individual wire routing
 - ~12 Delphi connectors at back of SwitchPros for plug-and-play
+- **Breaker vs wire:** when a breaker is rated above its conductor's ampacity, lower the breaker to the wire — never upsize the wire (owner preference, 2026-09-22: minimize wire size and weight). Manufacturer-specified breakers (SwitchPros, SafetyHub) are the documented exceptions.
 
 **Cross-Reference Rules:**
 

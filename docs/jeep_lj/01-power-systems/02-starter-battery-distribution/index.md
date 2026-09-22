@@ -15,7 +15,7 @@ The START battery (driver rear wheel well) provides power for critical engine an
 
 1. **Direct high-current** → Starter (no CB), alternator charging input (no CB)
 2. **Circuit breaker protected** → PMU (250A CB), BCDC (80A CB)
-3. **[START+ Forward Distribution Bus](#start-forward-bus)** (150A master CB → single feed → engine-bay busbar) → radiator fan (60A), iBooster main (50A), TCU (25A) — relocated off the PMU
+3. **[START+ Forward Distribution Bus](#start-forward-bus)** (100A master CB → single feed → engine-bay busbar) → radiator fan (60A), iBooster main (50A), TCU (25A) — relocated off the PMU
 4. **Direct low-current** → ECM, grid heater (fusible link protection)
 
 See [Circuit Breakers][circuit-breakers] for complete CB specifications. All CBs mounted in rear wheel well within 7" of battery (code compliant).
@@ -30,7 +30,7 @@ This page is the authoritative source for all START battery wire specs (gauge, d
 | [Alternator][alternator]   | Engine bay           | 2/0 AWG     | 8 ft     | 270A     | 2.81% @ 60°C    | None         |
 | [Starter][starter]         | Engine bay           | 2/0 AWG     | 6 ft     | 400-600A | 1.9-3.9% @ 20°C | None         |
 | [PMU24][pmu]               | Engine bay           | 2/0 AWG     | ~7 ft    | 250A max | 2.4% @ 60°C     | 250A CB      |
-| [START+ Forward Dist Bus](#start-forward-bus) | Engine bay | 2 AWG | ~8 ft | ~108A peak | 1.3% @ 60°C | 150A master CB |
+| [START+ Forward Dist Bus](#start-forward-bus) | Engine bay | 2 AWG | ~8 ft | ~108A peak | 1.3% @ 60°C | 100A master CB |
 | ECM                        | Engine bay           | Per Cummins | Short    | <5A      | Negligible      | Fusible link |
 | [Grid Heater][grid-heater] | Engine bay           | Per Cummins | Short    | ~80A     | Negligible      | Fusible link |
 | [BCDC Alpha 50][bcdc]      | Passenger rear wheel well | 4 AWG       | ~6 ft    | 50A      | 0.94% @ 20°C    | 80A CB       |
@@ -42,7 +42,7 @@ All circuit breakers mounted within 7" of battery (ABYC/NEC compliant). See [Cir
 The radiator fan, iBooster, and TCU were relocated off the PMU onto START-direct power. All three sit forward (engine bay / transmission) while the START battery is in the rear wheel well, so — mirroring the [AUX forward-feed architecture][constant-bus] — a **single master-protected feed** runs forward to an engine-bay busbar that fans out to the three loads on short local feeds. This keeps the long rear-to-front run to one heavy cable instead of three, and places each load's breaker near its load.
 
 **Busbar:** Blue Sea 2105 MaxiBus (250A), engine bay, insulated cover — recommended; confirm with {{ tbd(135) }}
-**Master feed:** 2 AWG, ~8 ft, 150A CB at battery post (<7")
+**Master feed:** 2 AWG, ~8 ft, 100A CB at battery post (<7") — downsized from 150A so the breaker sits at or below the 2 AWG ampacity (110A @ 60°C)
 
 | Load | Feed (from bus) | Wire Gauge | Distance | Current | Voltage Drop | Breaker |
 | :--- | :-------------- | :--------- | :------- | :------ | :----------- | :------ |

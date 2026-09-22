@@ -53,7 +53,7 @@ _Note: the iBooster and radiator fan are no longer PMU loads — both relocated 
 IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000):
 
   // Shed non-critical loads (priority order: lowest to highest impact)
-  Out23_DRL = OFF              // -2.6A: Daytime running lights (cosmetic)
+  Out23_DRL = OFF              // -0.8A: Daytime running lights (cosmetic)
   Out17_AC_Clutch = OFF        // -5A: Air conditioning (comfort)
 
   // Conditionally shed cooler fans if temperatures allow
@@ -81,7 +81,7 @@ ELSE:
 
 | Load Shed             | Current Saved | Impact                       | When Disabled         |
 | :-------------------- | :------------ | :--------------------------- | :-------------------- |
-| DRL (OUT23)           | 2.6A          | Low - cosmetic only          | Always when ARB runs  |
+| DRL (OUT23)           | 0.8A          | Low - cosmetic only          | Always when ARB runs  |
 | A/C Clutch (OUT17)    | 5A            | Medium - comfort loss        | Always when ARB runs  |
 | Oil Cooler Fan (OUT7) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
 | PS Cooler Fan (OUT8)  | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
@@ -114,11 +114,11 @@ Time to 50% SOC:         45 minutes
 
 ### WITH Load Shedding (Minimum - ~8A shed from START)
 
-Shedding DRL (~2.6A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
+Shedding DRL (~0.8A) and A/C clutch (5A) from PMU reduces START battery load, allowing maximum BCDC output:
 
 ```text
 START battery:
-PMU reduced:          93A   (was 101A, shed DRL + A/C)
+PMU reduced:          93A   (was 99A, shed DRL + A/C)
 Radiator fan:         35A   (moderate, stationary)
 BCDC at full rate:    50A   (maximized)
 ─────────────────────────────

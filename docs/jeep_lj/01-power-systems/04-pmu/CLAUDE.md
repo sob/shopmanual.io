@@ -47,7 +47,7 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 **To Engine Systems (2):** HVAC blower, wipers, horn (radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus — no longer PMU)
 
-**To Lighting (3):** DRL, brake lights, reverse lights
+**To Lighting (3):** DRL (OUT23), parking/tail markers (OUT12), brake lights, reverse lights
 
 **To Control Interfaces (4):** Dakota Digital cluster, Command Touch CT4 power
 

@@ -26,7 +26,8 @@ All circuits powered by START battery (alternator charging):
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
 | OUT21            | Brake Lights      |      0A |       3A | Seconds during braking | Traffic-dependent     |
 | OUT22            | Reverse Lights    |      0A |       3A | Seconds in reverse     | Parking only          |
-| OUT23            | DRL               |    2.6A |     2.6A | Daytime only           | Auto-off at night     |
+| OUT12            | Parking/Tail      |      0A |       2A | Night / parked         | Switch or headlights  |
+| OUT23            | DRL               |    0.8A |     0.8A | Daytime only           | Auto-off at night     |
 | **Fwd Dist Bus (START-direct)** | |       |          |                        | relocated off the PMU |
 | Fwd Bus          | iBooster main     |   0.25A |      40A | Seconds during braking | Brief peak            |
 | Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Controller {{ tbd(134) }} |
@@ -40,7 +41,7 @@ All circuits powered by START battery (alternator charging):
 | -                | Grid Heater       |      0A |     250A | 3-5 seconds            | Cold start only       |
 
 !!! info "Forward Distribution Bus relocation — totals unchanged"
-    The radiator fan, iBooster, and TCU now feed START-direct via the [Forward Distribution Bus][start-fwd-bus] instead of the PMU. Because they were *already* powered by the START battery through the PMU, the battery and alternator totals are unchanged — only the distribution path moved. The TCU (~15A continuous) is now itemized separately; folding it into the scenarios below raises the worst realistic case from 201A to ~216A (80% of the 270A alternator) — still within margin.
+    The radiator fan, iBooster, and TCU now feed START-direct via the [Forward Distribution Bus][start-fwd-bus] instead of the PMU. Because they were *already* powered by the START battery through the PMU, the battery and alternator totals are unchanged — only the distribution path moved. The TCU (~15A continuous) is now itemized separately; folding it into the scenarios below raises the worst realistic case from 199A to ~214A (79% of the 270A alternator) — still within margin.
 
 ## Scenario Analysis
 
@@ -61,11 +62,11 @@ All circuits powered by START battery (alternator charging):
 | **CT4 (OUT13)**               |   **10A** | Running lights              |
 | **iBooster Enable (ign bus)** |    **5A** | Always on                   |
 | **STX Intercom (OUT20)**      |    **1A** | Standby                     |
-| **DRL (OUT23)**               |    **2.6A** | Daytime                     |
+| **DRL (OUT23)**               |    **0.8A** | Daytime                     |
 | **BCDC Charger**              |   **30A** | Maintaining AUX             |
-| **TOTAL**                     |  **101A** |                             |
+| **TOTAL**                     |   **99A** |                             |
 
-**Alternator Load:** 101A of 270A capacity = **37% utilization** Excellent
+**Alternator Load:** 99A of 270A capacity = **37% utilization** Excellent
 
 ---
 
@@ -88,11 +89,11 @@ All circuits powered by START battery (alternator charging):
 | **iBooster Enable (ign bus)** |   **5A** | Always on                    |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                      |
 | **Brake Lights (OUT21)**      |   **1A** | Average - traffic            |
-| **DRL (OUT23)**               |   **2.6A** | Daytime                      |
+| **DRL (OUT23)**               |   **0.8A** | Daytime                      |
 | **BCDC Charger**              |  **40A** | Higher rate                  |
-| **TOTAL**                     | **188A** |                              |
+| **TOTAL**                     | **186A** |                              |
 
-**Alternator Load:** 188A of 270A capacity = **70% utilization** Good
+**Alternator Load:** 186A of 270A capacity = **69% utilization** Good
 
 ---
 
@@ -113,11 +114,11 @@ All circuits powered by START battery (alternator charging):
 | **CT4 (OUT13)**               |  **10A** | Running lights                    |
 | **iBooster Enable (ign bus)** |   **5A** | Always on                         |
 | **STX Intercom (OUT20)**      |   **3A** | Occasional TX                     |
-| **DRL (OUT23)**               |   **2.6A** | Daytime                           |
+| **DRL (OUT23)**               |   **0.8A** | Daytime                           |
 | **BCDC Charger**              |  **50A** | Full rate - supporting SwitchPros |
-| **TOTAL**                     | **201A** |                                   |
+| **TOTAL**                     | **199A** |                                   |
 
-**Alternator Load:** 201A of 270A capacity = **74% utilization** Good
+**Alternator Load:** 199A of 270A capacity = **74% utilization** Good
 
 **Note:** Offroad lighting (SwitchPros) draws from AUX battery, not alternator.
 
@@ -142,12 +143,13 @@ All circuits powered by START battery (alternator charging):
 | **STX Intercom (OUT20)**      |   **1A** | Standby                  |
 | **Brake Lights (OUT21)**      |   **3A** | Braking                  |
 | DRL (OUT23)                   |       0A | Off - headlights on      |
+| **Parking/Tail (OUT12)**      |   **2A** | On - with headlights     |
 | **BCDC Charger**              |  **30A** | Normal rate              |
-| **TOTAL**                     | **165A** |                          |
+| **TOTAL**                     | **167A** |                          |
 
 **Duration:** iBooster peak lasts 2-5 seconds only
 
-**Alternator Load:** 165A of 270A capacity = **61% utilization** Excellent
+**Alternator Load:** 167A of 270A capacity = **62% utilization** Excellent
 
 ---
 
@@ -170,6 +172,7 @@ All circuits powered by START battery (alternator charging):
 | **iBooster Enable (ign bus)** |    **5A** | Always on             |
 | **STX Intercom (OUT20)**      |    **1A** | Standby               |
 | DRL (OUT23)                   |        0A | Off - parked          |
+| Parking/Tail (OUT12)          |        0A | Off unless switched   |
 | **BCDC Charger**              |   **30A** | Normal rate           |
 | **TOTAL**                     |  **122A** |                       |
 
@@ -181,13 +184,13 @@ All circuits powered by START battery (alternator charging):
 
 | Scenario          | Total Load | Alternator | Utilization | Status    |
 | :---------------- | :--------- | :--------- | :---------- | :-------- |
-| Highway Driving   | 101A       | 270A       | 37%         | Excellent |
-| Hot City Driving  | 188A       | 270A       | 70%         | Good      |
-| Offroad Trail     | 201A       | 270A       | 74%         | Good      |
-| Emergency Braking | 165A       | 270A       | 61%         | Excellent |
+| Highway Driving   | 99A        | 270A       | 37%         | Excellent |
+| Hot City Driving  | 186A       | 270A       | 69%         | Good      |
+| Offroad Trail     | 199A       | 270A       | 74%         | Good      |
+| Emergency Braking | 167A       | 270A       | 62%         | Excellent |
 | Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Realistic Case:** 201A (offroad with hot engine) = **69A margin** (74% utilization). Folding in the now-itemized TCU (~15A continuous) raises this to ~216A (54A margin) — still within capacity.
+**Worst Realistic Case:** 199A (offroad with hot engine) = **71A margin** (74% utilization). Folding in the now-itemized TCU (~15A continuous) raises this to ~214A (56A margin) — still within capacity.
 
 **Key Insight:** All realistic scenarios stay well within alternator capacity. The 270A alternator provides adequate margin for all operating conditions.
 

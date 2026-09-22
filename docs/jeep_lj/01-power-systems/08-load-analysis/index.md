@@ -86,13 +86,13 @@ These loads are **NOT** included in running alternator calculations:
 
 | Scenario          | Total Load | Alternator | Utilization | Status    |
 | :---------------- | :--------- | :--------- | :---------- | :-------- |
-| Highway Driving   | 101A       | 270A       | 37%         | Excellent |
-| Hot City Driving  | 188A       | 270A       | 70%         | Good      |
-| Offroad Trail     | 201A       | 270A       | 74%         | Good      |
-| Emergency Braking | 165A       | 270A       | 61%         | Excellent |
+| Highway Driving   | 99A        | 270A       | 37%         | Excellent |
+| Hot City Driving  | 186A       | 270A       | 69%         | Good      |
+| Offroad Trail     | 199A       | 270A       | 74%         | Good      |
+| Emergency Braking | 167A       | 270A       | 62%         | Excellent |
 | Parked Idling     | 122A       | 270A       | 45%         | Excellent |
 
-**Worst Case:** 201A (offroad) = 69A margin
+**Worst Case:** 199A (offroad) = 71A margin
 
 ### AUX Battery (BCDC-Charged)
 

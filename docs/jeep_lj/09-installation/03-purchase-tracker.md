@@ -53,6 +53,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | PSC 8" double-ended ram | PSC | — | Carried over from the Dana 44 build - [Steering][steering] |
 | Barnes 4WD universal DIY ram mount | Barnes 4WD | — | Carried over - [Front Axle][front-axle] |
 | Command Touch CT4 | SwitchPros | ~$500 | Purchased 2026-09 - [CT4][ct4] |
+| Cummins R2.8 factory starter | Cummins | — | Shipped mounted on the crate engine; keeping it (2026-09-22) - [Starter][starter] |
 | Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 | Purchased 2026-05-30; Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 
 ---
@@ -87,7 +88,6 @@ Major components - watch for sales, consider financing options.
 | Digital Guard Dawg PBS-I Keyless Ignition Kit | Digital Guard Dawg | ~$200 (est., confirm w/ vendor) | High | ICM + 2 iTag fobs + Start Button + Programming Button + Bypass Card - [Keyless Ignition][keyless] |
 | ARB Aluminum Air Tank (171507, 1-gal 4-port) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |
-| DB Electrical 410-52442 Starter | DB Electrical | ~$200 | High | [Starter][starter] |
 | AMOT 4261M02A027-AA Air Shutoff Valve | AMOT | ~$400-500 | High | 2.8" manual/pneumatic, NPT - [Runaway Protection][runaway-protection] |
 | DomiWorks 24004001 Transfer Case Adapter | DomiWorks (DriftHQ, US stock) | $1,005.90 | High | 8HP70 EcoDiesel → NP241 family; OR-variant + input-gear confirm pending {{ tbd(313) }} - [Transfer Case][transfer-case] |
 | 23-spline input gear (ZTNP22390 or equiv.) | Transmission parts supplier | — | High | Required by the adapter; may be satisfied by the OR's factory gear {{ tbd(313) }} - [Transfer Case][transfer-case] |
@@ -161,7 +161,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 |:-----|:--------:|:-----------|:---------|:------|
 | Bussmann LR-2 Body PDU | 1 | ~$50-100 | Medium | eBay surplus - [BODY PDU][body-pdu] |
 | START+ Forward Distribution Busbar (Blue Sea 2105) | 1 | ~$40 | High | Engine-bay START+ fan-out for relocated fan/iBooster/TCU — {{ tbd(135) }} - [START Distribution][start-fwd-bus] |
-| Circuit breakers — 150A master + 60A / 50A / 25A (Mechanical Products S17) | 4 | ~$120 | High | Forward-bus master + fan/iBooster/TCU load CBs — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
+| Circuit breakers — 100A master + 60A / 50A / 25A (Mechanical Products S17) | 4 | ~$120 | High | Forward-bus master (downsized from 150A, 2026-09-22) + fan/iBooster/TCU load CBs — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
+| AUX forward-feed CB 250A (MP 174-S2-250-2) + amp CB 80A (Blue Sea 187-series) | 2 | ~$90 | High | Replace the 300A / 100A units in the plan (downsized 2026-09-22); skip if not yet bought - [AUX Circuit Breakers][aux-cbs] |
 | Lingenfelter VSFM-002 fan controller + coolant temp sensor | 1 | ~$190 | High | PWM brushless controller w/ own sensor; sensor P/N + fail-to-full-speed confirm — {{ tbd(134) }} - [Radiator Fan][radiator-fan] |
 | Fan power relay (continuous-duty) | 1 | ~$20 | High | Switches fan power at the forward bus - [Radiator Fan][radiator-fan] |
 
@@ -181,6 +182,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 0-200 PSI Pressure Gauge | Generic | ~$20 | Medium | [Air Compressor][air-compressor] |
 | Air Chuck Plate and Fittings | Generic | ~$30 | Low | [Rear Air Chuck][rear-air-chuck] |
 | Center-Off Momentary Rocker Switch | Generic | ~$15 | Medium | Winch control - [Dashboard][dashboard] |
+| Parking-light dash switch (Toyota-style ON/OFF, 1.54"×0.83") | Generic / CH4X4 | ~$15-25 | Medium | Switch-to-ground → PMU In 4; drives PMU Out 12 tail markers, works with ignition off - [DRL & Parking][drl-parking] |
 | 4x4 indicator relay (SPST micro, 12V coil) | Generic | ~$10 | Medium | Sinks the HDX 4x4 input (PMU is high-side); mounts at the HDX - [Transfer Case][transfer-case] |
 | Transfer case 5-position switch (5083138AA / Omix 18676.52) | Mopar / Omix-Ada | ~$50 | Low | **Only if** the donor NP241OR arrives without one ({{ tbd(145) }}) - [Transfer Case][transfer-case] |
 | Mishimoto MMOCC-CBT Compact Baffled Catch Can | Mishimoto | ~$150 | High | 13 oz, petcock drain - [Runaway Protection][runaway-protection] |
@@ -291,6 +293,8 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [engine-checklist]: 02-engine-systems-checklist.md
 [start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 [start-cbs]: ../01-power-systems/02-starter-battery-distribution/01-circuit-breakers.md
+[aux-cbs]: ../01-power-systems/03-aux-battery-distribution/01-circuit-breakers.md
+[drl-parking]: ../03-lighting-systems/05-drl-parking.md
 [radiator-fan]: ../02-engine-systems/06-radiator-fan.md
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [tbd-tracker]: ../tbd-tracker.md

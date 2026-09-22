@@ -30,6 +30,7 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 | 2 | **Drive mode select** (transmission) | {{ tbd(72) }} | 3-position mode select (Street / Default / Offroad) — exact action depends on TCU spec | {{ tbd(72) }} (likely BODY PDU) | Verify TCU input requirements before sourcing |
 | 3 | **Driver heated seat** | {{ tbd(73) }} | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
 | 4 | **Passenger heated seat** | {{ tbd(73) }} | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
+| 5 | **Parking lights** | To source (Toyota-style ON/OFF) | ON/OFF latching; works with ignition off | PMU In 4, switch-to-ground (via HDP24 pin 21) | Drives PMU Out 12 parking/tail markers — see [DRL & Parking][drl-parking] |
 
 **Excluded from this panel** (different aesthetic/form factor by design):
 
@@ -122,3 +123,4 @@ Wired in parallel with SwitchPros OUTPUT-4:
 [control-interfaces-overview]: 01-overview.md
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
 [bluesea-4160]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue
+[drl-parking]: ../03-lighting-systems/05-drl-parking.md

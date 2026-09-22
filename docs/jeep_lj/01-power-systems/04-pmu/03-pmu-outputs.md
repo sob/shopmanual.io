@@ -29,7 +29,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output     | Circuit                   | Load | Ground                                                | Control Type         | Notes                                         |
 | :--------- | :------------------------ | :--- | :---------------------------------------------------- | :------------------- | :-------------------------------------------- |
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
-| **Out 12** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
+| **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | In 4 switch OR headlights (ignition-independent) | Maxbilt RED + RTL-S running; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
 | **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
 | **Out 15** | **[Available]**           | -    | -                                                     | -                    | (Was Winch Contactor Trigger — reallocated 2026-05-30 to BODY PDU CB43) |
@@ -47,12 +47,12 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |
 | **Out 22** | Reverse Lights           | ~5A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Maxbilt + Squadron Sport       |
-| **Out 23** | DRL/Parking Lights       | ~2.6A | [SwitchPros Ground Bus][switchpros-ground]           | Auto (ignition)     | See [DRL & Parking][drl-parking-lights] |
+| **Out 23** | LP6 DRL                  | 0.8A | LP6 ground (Pin 2)                                    | Auto (ignition; off with headlights) | Tail markers moved to Out 12 (2026-09-22) — see [DRL & Parking][drl-parking-lights] |
 | **Out 24** | 4LO Indicator            | <0.1A | n/a (signal into HDX EXTRA(+))                       | Auto (An 1 position) | 12V direct to HDX EXTRA(+), label "4LO". Active in 4L only — see [Transfer Case][transfer-case] |
 
 ## Combined Outputs
 
-_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT12, OUT14, OUT15, and OUT16 are free (9 spare outputs — OUT19 and OUT24 were taken by the 4x4/4LO indicators). The combining rules below are retained for any future high-current output._
+_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT14, OUT15, and OUT16 are free (8 spare outputs — OUT19 and OUT24 were taken by the 4x4/4LO indicators, OUT12 by the parking/tail markers). The combining rules below are retained for any future high-current output._
 
 **Combining Rules:**
 

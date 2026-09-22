@@ -43,9 +43,9 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 | Wire   | Function     | Draw   | Source                                       |
 | :----- | :----------- | :----- | :------------------------------------------- |
 | Black  | Ground       | -      | Chassis ground                               |
-| Red    | Running      | 0.8A   | [Running light splice][drl-parking]          |
+| Red    | Running      | 0.8A   | [Parking/running splice][drl-parking] (PMU Out 12) |
 | Yellow | Brake        | 1.45A  | [Brake light splice][tail-brake-reverse]     |
-| Blue   | Work (White) | 1.3A   | [Running light splice][drl-parking] (shared) |
+| Blue   | Work (White) | 1.3A   | [Parking/running splice][drl-parking] (shared, PMU Out 12) |
 
 ### 2-Wire Connector (Amber Sections)
 
@@ -64,7 +64,7 @@ Multi-function rear safety light for convoy visibility, plus integrated brake, t
 - **Chase Mode:** SwitchPros Button 7 (OUTPUT-7) - both amber sections flash together
 - **Isolation:** Diodes prevent backfeed between CT4 and SwitchPros circuits
 - **Brake (Red):** Via [brake light splice][tail-brake-reverse]
-- **Running + Work (Red/White):** Via [running light splice][drl-parking]
+- **Running + Work (Red/White):** Via [parking/running splice][drl-parking] (PMU Out 12)
 
 ```
 CT4 Right Turn ──|>|──┬── Yellow (Right Amber)

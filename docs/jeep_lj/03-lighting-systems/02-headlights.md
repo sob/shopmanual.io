@@ -43,19 +43,19 @@ tags:
 ## Low Beam
 
 - **Control:** Pull CT4 lever (latching on/off)
-- **Power:** START battery (40A) → CT4 → SW3 output (10A internal fusing)
+- **Power:** PMU Out 13 (15A CONSTANT) → CT4 → SW3 output (10A internal fusing)
 
 ## High Beam
 
 - **Control:** Push CT4 lever (momentary or latching - programmable)
-- **Power:** START battery (40A) → CT4 → SW4 output (10A internal fusing)
+- **Power:** PMU Out 13 (15A CONSTANT) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
 
 Both beams disable when ignition is off (via ignition signal); current draw is per the pin table above.
 
 ## DRL (Daytime Running Light)
 
-- **Power:** PMU Out 23 (shared with Maxbilt tail markers)
+- **Power:** PMU Out 23 (dedicated — the Maxbilt tail markers moved to Out 12 on 2026-09-22)
 - **Auto-Off Logic:** PMU disables DRL when CT4 SW3 activates headlights
 - **Control:** Automatic with ignition (on when ignition on, off when headlights or ignition off)
 - **Load:** 0.8A total

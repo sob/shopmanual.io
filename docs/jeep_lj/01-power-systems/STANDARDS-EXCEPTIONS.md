@@ -109,7 +109,7 @@ This document tracks intentional deviations from general electrical standards wh
 
 ## Starter Circuit - No External Circuit Breaker
 
-**Component:** Cummins R2.8 Starter Motor (DB Electrical 410-52442)
+**Component:** Cummins R2.8 Starter Motor (factory unit shipped with the crate engine)
 
 **Decision:** No external circuit breaker (cable sizing as protection)
 
@@ -333,14 +333,14 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Components:** START+ Forward Distribution Bus (engine bay) feeding the relocated radiator fan, iBooster, and TCU
 
-**Decision:** A single 150A master-protected 2 AWG feed runs from the START battery to an engine-bay busbar that fans out to three load breakers — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
+**Decision:** A single 100A master-protected 2 AWG feed runs from the START battery to an engine-bay busbar that fans out to three load breakers — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
 
 ### Engineering Rationale
 
 - The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
 - Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
-- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (300A master → firewall CONSTANT bus), placing each load's breaker near its load.
-- The intermediate bus is a passive bar; the feed is protected by a 150A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
+- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (250A master → firewall CONSTANT bus), placing each load's breaker near its load.
+- The intermediate bus is a passive bar; the feed is protected by a 100A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
 
 ### Review Guidance
 
@@ -466,6 +466,18 @@ The CB is sized for _device capacity_, not actual load. Actual loads are well wi
 
 ---
 
+## Breaker-vs-Wire Preference (2026-09-22)
+
+Owner rule: **keep the smaller wire and drop the breaker to it.** When a review finds a breaker above its conductor's ampacity, the fix is a lower-rated breaker at or below the wire rating, not a heavier cable — the build is already carrying a lot of copper. Applied so far:
+
+| Circuit | Was | Now | Wire it protects |
+| :------ | :-- | :-- | :--------------- |
+| START+ Forward Distribution Bus master | 150A | 100A | 2 AWG (110A @ 60°C) |
+| AUX forward feed to Firewall CONSTANT Bus | 300A | 250A | 2/0 AWG (~265A @ 60°C); matches the 2105 bus rating |
+| JL Audio MV800/8i amp feed | 100A | 80A | 4 AWG (95A @ 20°C); equals the amp's recommended fuse |
+
+Manufacturer-specified breakers (SwitchPros 150A, SafetyHub 150A) keep their exception above.
+
 ## Review Checklist for Future Analysis
 
 Before flagging as issues, verify these intentional design choices:
@@ -475,7 +487,7 @@ Before flagging as issues, verify these intentional design choices:
 - [ ] **Grid Heater:** Direct battery connection with fusible link (brief high current)
 - [ ] **Alternator:** No CB on output (standard automotive practice)
 - [ ] **BCDC:** CB at battery terminal (no CB at BCDC end required)
-- [ ] **START+ Forward Bus:** 150A master + forward busbar between battery and fan/iBooster/TCU (intentional, mirrors AUX CONSTANT bus)
+- [ ] **START+ Forward Bus:** 100A master + forward busbar between battery and fan/iBooster/TCU (intentional, mirrors AUX CONSTANT bus)
 - [ ] **SwitchPros/SafetyHub:** 150A CB with 2 AWG wire (actual loads 82-100A, within 130A wire rating)
 
 **If any of these are flagged as "missing protection" or "safety issues" in future reviews, refer to this document for complete justification.**
