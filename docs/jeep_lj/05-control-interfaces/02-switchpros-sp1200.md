@@ -16,7 +16,7 @@ tags:
 
 **Manual:** <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf>
 
-**Power Source:** 150A breaker from [Firewall CONSTANT Bus][firewall-bus] (fed from AUX battery via 300A master CB + 2/0 AWG forward feed)
+**Power Source:** 150A breaker from [Firewall CONSTANT Bus][firewall-bus] (fed from AUX battery via 250A master CB + 2/0 AWG forward feed)
 
 **Power Wire:** 2 AWG, ~2 ft (Firewall CONSTANT Bus to power module — both at firewall cluster)
 
@@ -82,7 +82,7 @@ tags:
 |  1  | OUTPUT-5  |    GREEN    | 14 AWG |     15A     | Interior LEDs (MLC-RW controller)  |  5A  |                                                 |
 |  2  | OUTPUT-6  |    BLUE     | 14 AWG |     15A     | Rock Lights                        |  3A  |                                                 |
 |  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal         |  -   |              For auto-off features              |
-|  4  |  LIGHTS   |    WHITE    |   -    |      -      | Connect to parking lights          |  -   |               For DRL integration               |
+|  4  |  LIGHTS   |    WHITE    |   -    |      -      | PMU Out 12 parking/tail circuit (tap at firewall) |  -   | Parking-light sense — see [DRL & Parking][drl-parking] |
 |  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)                |  1A  |         RTL-S amber chase function only         |
 |  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | Navigation (Garmin Tread 2)        |  2A  |                                                 |
 |  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) |  -   | Triggers OUTPUT-4 (dome lights) when doors open |
@@ -113,7 +113,7 @@ tags:
 
 See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CONSTANT Bus][firewall-bus] for downstream distribution.
 
-- **Power:** AUX battery+ → 300A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
+- **Power:** AUX battery+ → 250A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
 - **Ground (logic reference):** 4 AWG wire from SwitchPros power module → chassis ground at firewall (short run, per manufacturer spec)
 - **Load returns:** Each output's ground wire returns to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
 
@@ -200,7 +200,7 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 **Triggers & Programming:**
 
 - [ ] Confirm ignition signal → SwitchPros Pin 3 (IGNITION)
-- [ ] Determine parking-lights signal source for Pin 4 (LIGHTS) for DRL integration
+- [x] ~~Determine parking-lights signal source for Pin 4 (LIGHTS)~~ → **Resolved 2026-09-22:** PMU Out 12 parking/tail circuit, tapped at the firewall
 - [ ] Order control panel cable (power module to dash)
 - [ ] Confirm driver + passenger door switches → TRIGGER-1
 - [ ] Program Button 4: OUTPUT-4 OR TRIGGER-1 → dome lights
@@ -226,3 +226,4 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 [offroad-auxiliary-lighting]: ../04-offroad-lighting/index.md
 [switchpros-ground-bus]: ../01-power-systems/05-grounding/03-switchpros-ground-bus.md
 [power-checklist]: ../09-installation/01-power-systems-checklist.md
+[drl-parking]: ../03-lighting-systems/05-drl-parking.md

@@ -26,7 +26,7 @@ tags:
 
 **Mounting:** Under rear seat — vibration isolators on floor rivnuts (standoff air gap for Class-D convection; no fab plate)
 
-**Power Source:** AUX battery+ direct via 100A inline CB (~3-4 ft, short feed)
+**Power Source:** AUX battery+ direct via 80A inline CB (~3-4 ft, short feed)
 
 ///
 
@@ -109,7 +109,7 @@ Ch 5/6 (front speakers) and Ch 7/8 (rear speakers) run stereo unbridged from har
 
 | Connection | Wire     | Source          | Notes                                                 |
 | :--------- | :------- | :-------------- | :---------------------------------------------------- |
-| Power (+)  | 4 AWG    | AUX battery+ direct | Via 100A inline CB at battery (~3-4 ft)            |
+| Power (+)  | 4 AWG    | AUX battery+ direct | Via 80A inline CB at battery (~3-4 ft)             |
 | Ground (−) | 4 AWG    | AUX battery (−)     | Direct to terminal (~3-4 ft)                       |
 | Remote     | 18 AWG   | MS-RA670        | Turn-on signal, bundled w/ RCA through trans tunnel   |
 | RCA Zone 1 | Shielded | MS-RA670        | Ch 5+6 (front), ~10-12 ft — high-quality shielded     |
@@ -122,11 +122,11 @@ Ch 5/6 (front speakers) and Ch 7/8 (rear speakers) run stereo unbridged from har
 
 The MV800/8i has an internal 80A fuse (primary amp protection). External protection at the AUX battery protects the supply wire:
 
-- **Breaker:** Blue Sea 187-100A (100A) thermal circuit breaker
-- Protects 4 AWG wiring (rated 95A continuous, 100A acceptable for ~3-4 ft run)
+- **Breaker:** Blue Sea 187-series, 80A thermal circuit breaker (matches JL Audio's recommended 80A fuse value; P/N to confirm at order)
+- Protects 4 AWG wiring (95A continuous @ 20°C)
 - Mount inline within 7" of AUX battery+ terminal (5th stacked lug)
 
-The 100A external CB is intentionally above the 80A internal fuse — the internal fuse remains the primary trip path under amp fault, while the external CB protects the wire from a short upstream of the amp.
+Downsized from 100A on 2026-09-22 ({{ tbd(149) }}): the project preference is to keep the smaller wire and bring the breaker down to it rather than upsize the cable. With the battery-side breaker equal to the amp's internal fuse, either may trip first under an amp fault; the breaker still protects the run against a short upstream of the amp.
 
 ## Mounting Location
 

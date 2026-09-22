@@ -31,7 +31,7 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-29:** 29× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (29 available, ~18 used after PBS-I keyless and the 4x4/4LO indicator pair, ~11 future headroom — exact used-count pending final pin-map recount, see [TBD Tracker][tbd-tracker])
+- Size 16 contacts: 14-20 AWG, 13A (29 available, 19 used, 10 spare — see [Pin Assignment](#pin-assignment))
 
 **Mounting:** Single 1.5" diameter hole in firewall (same as previous 24-21 - shell size unchanged)
 
@@ -59,7 +59,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 3 | STX Intercom power | 14 AWG | PMU OUT20 | STX intercom | #16 |
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
-| 6 | DRL/Parking | 16 AWG | PMU OUT23 | Rear tail lights | #16 |
+| 6 | Parking / tail markers | 16 AWG | PMU OUT12 | Rear tail lights (Maxbilt RED, RTL-S running); SwitchPros LIGHTS input tapped at firewall | #16 |
 | 12 | PBS-I PINK IGN (ignition signal) | 14 AWG | PBS-I ICM | Ignition bus (cabin) | #16 |
 | 19 | 4x4 indicator relay coil | 18 AWG | PMU OUT19 | 4x4 relay coil (cabin, at HDX) | #16 |
 | 20 | 4LO indicator | 18 AWG | PMU OUT24 | HDX EXTRA(+) input | #16 |
@@ -190,8 +190,8 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 |:------|:-----:|:---------|
 | 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
 | 16 AWG | 5 | PMU lighting outputs (3), PURPLE START (1), iBooster enable (1) |
-| 18 AWG | 5 | Switch signals (3: horn, brake, A/C), winch control (2) |
-| **Main connector** | **17** | HDP24-24-29 (17 of 29 used, 12 spare; exact count pending final recount) |
+| 18 AWG | 7 | Switch signals (3: horn, brake, A/C), winch control (2), 4x4/4LO indicators (2) |
+| **Main connector** | **19** | HDP24-24-29 (19 of 29 used, 10 spare) |
 
 ### SwitchPros HDP24-18-14 (forward SP outputs)
 
@@ -295,9 +295,9 @@ Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for
 |:------------|:------------|:---:|:------:|
 | HDP24-24-29PE-L015 | 29-pin receptacle, flange mount | 1 | $45 |
 | HDP26-24-29SE | 29-pin plug | 1 | $35 |
-| 0460-202-16141 | Size 16 pin, solid, nickel | 18 | $0.50 ea |
-| 0462-201-16141 | Size 16 socket, solid, nickel | 18 | $0.55 ea |
-| 114018 | Sealing plug, size 16 cavity | 11 | $0.25 ea |
+| 0460-202-16141 | Size 16 pin, solid, nickel | 19 | $0.50 ea |
+| 0462-201-16141 | Size 16 socket, solid, nickel | 19 | $0.55 ea |
+| 114018 | Sealing plug, size 16 cavity | 10 | $0.25 ea |
 
 **Subtotal:** ~$105
 
@@ -323,13 +323,14 @@ Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for
 
 ## DRL Auto-Off Signal
 
-**Note:** The DRL cutoff signal does NOT require a separate wire through the firewall. The CT4 SW3 (low beam) wire is tapped on the engine bay side after it passes through the connector:
+**Note:** The headlight-status signals do NOT require separate wires through the firewall. The CT4 SW3 (low beam) and SW4 (high beam) wires are tapped on the engine bay side after they pass through the connector:
 
 ```text
-CT4 SW3 (cabin) → Pin 9 → [ENGINE BAY TAP to PMU In 7] → LP6 headlights
+CT4 SW3 (cabin) → Pin 9  → [ENGINE BAY TAP to PMU In 7] → LP6 Pin 1 (low beam)
+CT4 SW4 (cabin) → Pin 10 → [ENGINE BAY TAP to PMU In 5] → LP6 Pin 4 (high beam)
 ```
 
-PMU In 7 receives the headlight status signal from this tap, enabling DRL auto-off logic.
+PMU In 7 / In 5 receive the low/high-beam status; either one turns the DRL (Out 23) off and the parking/tail markers (Out 12) on. Both are needed because the CT4 drops SW3 while SW4 is active — see [DRL & Parking][drl-parking].
 
 ---
 
@@ -346,6 +347,7 @@ PMU In 7 receives the headlight status signal from this tap, enabling DRL auto-o
 [wire-routing]: index.md
 [start-fwd-bus]: ../02-starter-battery-distribution/index.md#start-forward-bus
 [tbd-tracker]: ../../tbd-tracker.md
+[drl-parking]: ../../03-lighting-systems/05-drl-parking.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
 [pmu-inputs]: ../04-pmu/02-pmu-inputs.md

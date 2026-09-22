@@ -129,7 +129,7 @@ Wrap preference for this build:
        ┌─────────────────────┐         ┌────────────────────┐         │
        │ DRIVER REAR WELL    │         │ PASSENGER REAR WELL│         │
        │ • START battery     │◄────────│ • AUX battery      │         │
-       │ • 250A + 80A CBs    │  H3     │ • 300A + 150A CBs  │         │
+       │ • 250A + 80A CBs    │  H3     │ • 250A + 150A CBs  │         │
        │                     │ BCDC    │ • SafetyHub        │         │
        │                     │ cross   │ • BCDC             │         │
        │  H2 ↑ (4 cables)    │ (under  │  H1 ↑ (3 cables)   │         │

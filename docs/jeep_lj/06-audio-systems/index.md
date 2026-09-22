@@ -14,7 +14,7 @@ Marine-grade audio system with multi-zone control and RGB LED lighting integrati
 | Component                        | Model                          | Power | Control            |
 | :------------------------------- | :----------------------------- | ----: | :----------------- |
 | [Head Unit][head-unit]           | Fusion MS-RA670                |   15A | BODY PDU F2        |
-| [Amplifier][amplifier]           | JL Audio MV800/8i              |   80A internal fuse | AUX battery+ direct (100A inline CB) — mounted under rear seat |
+| [Amplifier][amplifier]           | JL Audio MV800/8i              |   80A internal fuse | AUX battery+ direct (80A inline CB) — mounted under rear seat |
 | [Front Speakers][speakers]       | JL Audio M6-650X-S-GmTi-i      |     — | Amp Ch 5+6         |
 | [Rear Speakers][speakers]        | JL Audio M6-650VEX-Mb-S-GmTi-i |     — | Amp Ch 7+8         |
 | [Subwoofers][subwoofer]          | 2× JL Audio M6-8IB-S-GmTi-i-4  | — | Sub A: Ch 1+2 bridged @ 4Ω; Sub B: Ch 3+4 bridged @ 4Ω |
@@ -46,7 +46,7 @@ MLC-RW LED Controller
 
 ## Related Documentation
 
-- [AUX Battery Distribution][aux-distribution] - Firewall CONSTANT Bus power source (via 300A master CB at AUX battery)
+- [AUX Battery Distribution][aux-distribution] - Firewall CONSTANT Bus power source (via 250A master CB at AUX battery)
 - [BODY PDU][body-pdu] - Head unit and LED controller power
 - [Footwell Lights][footwell-lights] - RGB lights controlled by MLC-RW
 

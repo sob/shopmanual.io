@@ -25,7 +25,7 @@ tags:
 
 **Mounting:** Rear quarter panels
 
-**Power Source:** CT4 (turn), PMU Out 21 (brake), PMU Out 22 (reverse), PMU Out 23 (marker)
+**Power Source:** CT4 (turn), PMU Out 21 (brake), PMU Out 22 (reverse), PMU Out 12 (marker)
 
 ///
 
@@ -36,7 +36,7 @@ tags:
 | BLACK  | Ground         | Chassis ground   | 16 AWG     | Clean metal-to-metal                 |
 | WHITE  | Reverse        | [Reverse splice][reverse-lights] | 16 AWG | Parallel with Squadron Sport reverse |
 | YELLOW | Brake/Turn     | [Turn splice][turn-signals] + [Brake splice][brake-lights] | 16 AWG | Combined function, internal diodes   |
-| RED    | Marker/Parking | [Running splice][drl-parking-lights] | 16 AWG | DRL/parking circuit                  |
+| RED    | Marker/Parking | [Parking splice][drl-parking-lights] | 16 AWG | Parking/tail circuit (PMU Out 12)    |
 
 ## Reverse Lights
 
@@ -86,10 +86,10 @@ Maxbilt Round Trail Tail lights have **internal diode isolation** for combined b
 
 ## Marker/Parking Lights
 
-**Power:** PMU Out 23 (DRL/parking circuit)
+**Power:** PMU Out 12 (parking/tail circuit, ~2A)
 **Maxbilt Connection:** RED wire
-**Control:** Automatic with ignition
-**Shared Circuit:** LP6 DRL
+**Control:** Follows the headlights (low or high beam) — works with the ignition off
+**Shared Circuit:** RTL-S running light (the LP6 DRL is on its own output, Out 23)
 
 See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 
@@ -104,7 +104,7 @@ See [DRL/Parking Lights][drl-parking-lights] for circuit details.
 
 ## Related Documentation
 
-- [PMU Power Distribution][pmu-power-distribution] - PMU Out 21, Out 22 circuits
+- [PMU Power Distribution][pmu-power-distribution] - PMU Out 21, Out 22, Out 12 circuits
 - [Command Touch CT4][command-touch-ct4] - Turn signal control
 - [DRL/Parking Lights][drl-parking-lights] - Marker/parking circuit (RED wire)
 - [Communication & Camera][communication-systems] - WolfBox camera reverse trigger

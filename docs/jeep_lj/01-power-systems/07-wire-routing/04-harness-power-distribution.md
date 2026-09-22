@@ -32,7 +32,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 | Wire | Gauge | Color | Function | Termination at battery | Termination at firewall | Continues to |
 |:-----|:-----:|:-----:|:---------|:----------------------|:------------------------|:-------------|
-| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU via Firewall CONSTANT bus (Fusion head unit rides the BODY PDU via CB30) | Ring lug to 300A CB output stud | Continuous through grommet — no firewall break | Ring lug to Firewall CONSTANT bus input stud (cabin side) |
+| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU via Firewall CONSTANT bus (Fusion head unit rides the BODY PDU via CB30) | Ring lug to 250A CB output stud | Continuous through grommet — no firewall break | Ring lug to Firewall CONSTANT bus input stud (cabin side) |
 | Winch power (+) | 1/0 AWG | Red | AUX battery+ → winch contactor B+ | Ring lug to AUX battery+ stud | Continuous through grommet — no firewall break | Lug to winch contactor B+ |
 | Winch ground (−) | 1/0 AWG | Black | AUX battery- → winch contactor B− | Ring lug to AUX battery- stud | Continuous through grommet — no firewall break | Lug to winch motor / chassis at front |
 
@@ -74,7 +74,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 | Alternator charging input | 2/0 AWG | Red | Alternator → START battery+ | Lug to battery+ stud | Lug to alternator output stud |
 | Starter motor power | 2/0 AWG | Red | START battery+ → starter | Lug to battery+ stud | Lug to starter B+ stud |
 | PMU24 main feed | 2/0 AWG | Red | START battery+ → 250A CB → PMU24 | Lug to 250A CB output | Lug to PMU power stud |
-| START+ Forward Dist Bus master feed | 2 AWG | Red | START battery+ → 150A master CB → engine-bay busbar (fan / iBooster / TCU) | Lug to 150A CB output | Lug to [START+ Forward Distribution Bus][start-fwd-bus] busbar input stud |
+| START+ Forward Dist Bus master feed | 2 AWG | Red | START battery+ → 100A master CB → engine-bay busbar (fan / iBooster / TCU) | Lug to 150A CB output | Lug to [START+ Forward Distribution Bus][start-fwd-bus] busbar input stud |
 
 (BCDC input feed (4 AWG via 80A CB) takes the H3 cross-cab path instead — see [H3](#h3).)
 

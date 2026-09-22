@@ -13,11 +13,12 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 - Turn signal control (left/right) with GPS auto-cancel
 - Headlight control (low/high beam)
-- Powered by START battery CONSTANT (40A fuse) + Ignition RUN signal
+- Powered by PMU Out 13 (15A CONSTANT) + ignition signal (cabin bus bar Terminal 1)
 
 **Power Distribution:** [PMU][pmu-power-distribution] - Programmable power management
 
-- DRL/Parking lights (Out 23)
+- DRL (Out 23)
+- Parking/tail markers (Out 12) — work with ignition off
 - Brake lights (Out 21)
 - Reverse lights (Out 22)
 
@@ -28,7 +29,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 - **Type:** Baja Designs LP6 DOT LED (complete replacement)
 - **Low Beam:** CT4 SW3 (3.6A total) - latching on/off
 - **High Beam:** CT4 SW4 (5.6A total) - momentary or latching
-- **DRL:** PMU Out 23 (0.8A total) - automatic with ignition, auto-off when headlights on
+- **DRL:** PMU Out 23 (0.8A total) - automatic with ignition, auto-off when headlights on (dedicated output; tail markers are on Out 12)
 - **See:** [Headlights][headlights] for complete specifications
 
 ### Turn Signals {#turn-signals-overview}
@@ -44,24 +45,24 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 - **Brake:** PMU Out 21 (3A) - trigger via brake pedal switch
 - **Reverse:** PMU Out 22 (5A) - trigger via transmission switch, also activates WolfBox camera
 - **Turn:** CT4 SW1/SW2 (internal diode isolation in Maxbilt)
-- **Marker/Parking:** PMU Out 23 (DRL/parking circuit)
+- **Marker/Parking:** PMU Out 12 (parking circuit — follows the headlights, works with ignition off)
 - **See:** [Tail, Brake & Reverse][tail-brake-reverse-lights] for complete specifications
 
 ### DRL & Parking Lights {#drl-parking-overview}
 
-- **Circuit:** PMU Out 23 (7A capacity, ~2.6A load)
-- **Components:** LP6 DRL, Maxbilt tail markers
-- **Control:** Automatic with ignition, PMU logic disables when headlights on
-- **No external relay needed** - handled by PMU programming
+- **DRL circuit:** PMU Out 23 (7A capacity, 0.8A load) — LP6 DRL only; on with ignition, off when headlights on
+- **Parking/tail circuit:** PMU Out 12 (15A capacity, ~2A load) — Maxbilt tail markers + RTL-S running; on whenever the headlights are on (low or high beam), **ignition-independent** — pull the headlights on while parked and the vehicle is lit, like a production car
+- **No external relay, no extra switch** - both handled by PMU programming (CT4 SW3/SW4 status on PMU In 7 / In 5)
 - **See:** [DRL & Parking Lights][drl-parking-lights] for complete specifications
 
 ## Power Sources
 
 | Circuit             | Power Source           | Capacity | Load    |
 | :------------------ | :--------------------- | :------- | :------ |
-| CT4 Controller      | START battery CONSTANT | 40A      | ~20A    |
+| CT4 Controller      | PMU Out 13 (CONSTANT)  | 15A      | ~9A     |
 | Headlights Low/High | CT4 SW3/SW4            | 10A each | 3.6/5.6A|
-| DRL/Parking         | PMU Out 23             | 7A       | ~2.6A   |
+| DRL                 | PMU Out 23             | 7A       | 0.8A    |
+| Parking/Tail Markers| PMU Out 12             | 15A      | ~2A     |
 | Brake Lights        | PMU Out 21             | 7A       | ~3A     |
 | Reverse Lights      | PMU Out 22             | 7A       | ~5A     |
 

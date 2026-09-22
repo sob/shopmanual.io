@@ -60,27 +60,21 @@ tags:
 
 Pin/gauge/load detail is in the [Wiring Pinout](#wiring-pinout) table below.
 
-- **Headlights (SW3 - PULL):** Latching on/off (pull once for on, again for off). Also trips the DRL cutoff relay (SW3 tapped to relay coil).
+- **Headlights (SW3 - PULL):** Latching on/off (pull once for on, again for off). SW3 is tapped in the engine bay to PMU In 7 (headlight status): DRL off, parking/tail markers on.
 - **High Beams (SW4 - PUSH):** Push while headlights on. CT4 enforces mutual exclusivity — high beam disables low beam automatically. Momentary or latching toggle (programmable).
 
-Both disabled when ignition off.
+Both stay active with the ignition off — the CT4 is CONSTANT-powered from PMU Out 13 — so the headlights, and the parking/tail markers that follow them, can be lit while parked.
 
 ### DRL/Parking Lights
 
-Automatic ignition-controlled circuit that powers:
+Two PMU circuits, neither switched by the CT4 directly — the CT4 only reports headlight status (SW3 → PMU In 7):
 
-- License plate lights
-- LP6 Headlight DRL function (Pin 3) - **via cutoff relay**
-- Front 2" LED side markers (parking function)
-- Maxbilt tail light RED wire (marker/parking function)
+- **DRL — PMU Out 23 (0.8A):** LP6 headlight DRL function (Pin 3). On with ignition, off when SW3 headlights are on.
+- **Parking/tail markers — PMU Out 12 (~2A):** Maxbilt tail light RED wire, RTL-S running section. On whenever the headlights are on (SW3 low **or** SW4 high, sensed on PMU In 7 / In 5); no separate switch; works with the ignition off. Any license-plate lamp or front side markers, if added, belong on this circuit.
 
-**Power Source:** PMU Out 23 (7A capacity, ~2.6A load, auto with ignition)
+Wire gauge: 16 AWG from PMU to each splice.
 
-**DRL Auto-Off:** PMU programming logic disables when CT4 SW3 activates (headlights on = DRL off)
-
-Wire gauge: 14 AWG from PMU to junction, 16 AWG to each light
-
-See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete wiring.
+See [DRL & Parking][drl-parking] for the PMU logic, operation states, and load breakdown.
 
 ## Wiring Pinout
 
@@ -90,11 +84,11 @@ See [PMU DRL Auto-Off Logic](#pmu-drl-auto-off-logic) section below for complete
 | :---------- | :--------- | :---------------------- | :----------------------------------------------------------------------- | :------------------------------------------------------- |
 | Brown       | SW1, UP    | Right Turn (CT4 output) | Front/rear right turn signals                                            | 10A max per output                                       |
 | Red         | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals                                             | 10A max per output                                       |
-| Orange      | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights) + DRL cutoff relay coil                | 10A output, 3.6A load, disabled when ignition off        |
-| Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights)                                       | 10A output, 5.6A load, disabled when ignition off        |
+| Orange      | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights); tapped to PMU In 7 in the engine bay  | 10A output, 3.6A load, active with ignition off          |
+| Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights); tapped to PMU In 5 in the engine bay | 10A output, 5.6A load, active with ignition off          |
 | Red (thick) | 12V Supply | Main power input        | PMU Out 13 (15A CONSTANT)                                                | Powers all SW outputs, allows hazards when ignition off  |
 | Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
-| White/Gray  | Ignition   | Ignition signal input   | Cabin ignition bus bar Terminal 1 (18 AWG, ~20 mA, fused per bus doc)     | Disables SW3/SW4 when ignition off, keeps SW1/SW2 active |
+| White/Gray  | Ignition   | Ignition signal input   | Cabin ignition bus bar Terminal 1 (18 AWG, ~20 mA, fused per bus doc)     | Ignition status only — no switch is ignition-disabled (see Programming Configuration) |
 
 ## Programming Configuration
 
@@ -102,7 +96,7 @@ Recommended configuration for this build:
 
 1. **Turn Signal Mode:** GPS turn signal mode (automatic cancellation based on speed and steering angle)
 
-2. **Ignition Control:** Ignition-aware mode (SW1/SW2 always active; SW3/SW4 disabled when ignition off)
+2. **Ignition Control:** All switches active with the ignition off. SW3/SW4 must work while parked because the parking/tail markers follow the headlights (there is no separate parking switch); the low-voltage disconnect below is the battery protection. If the CT4 only offers ignition-awareness as a global mode, leave it off.
 
 3. **ON-OFF/Momentary:**
    - SW1/SW2: ON-OFF (latching turn signals with GPS auto-cancel)
@@ -123,12 +117,12 @@ Recommended configuration for this build:
 
 ### PMU DRL Auto-Off Logic
 
-CT4 SW3 (low beam) taps to PMU In 7; the PMU turns Out 23 (DRL/parking) off whenever SW3 is active. See [DRL & Parking][drl-parking] for the full PMU logic, operation-state table, and itemized ~2.6A load breakdown (Out 23 capacity: 7A).
+CT4 SW3 (low beam) taps to PMU In 7 and SW4 (high beam) to PMU In 5; the PMU turns Out 23 (DRL) off and Out 12 (parking/tail markers) on whenever either is active. See [DRL & Parking][drl-parking] for the full PMU logic, operation-state table, and load breakdown.
 
 ## Installation Checklist
 
 Check-off items only. Wire gauges, pin assignments, and tail-light color codes
-live in the [Wiring](#wiring) section above and the linked light pages.
+live in the [Wiring Pinout](#wiring-pinout) section above and the linked light pages.
 Controller power feed (PMU Out 13) and ignition-signal distribution are tracked
 in the [Power Systems Checklist][power-checklist].
 
@@ -137,7 +131,7 @@ in the [Power Systems Checklist][power-checklist].
 - [ ] Confirm CT4 12V supply (PMU Out 13) landed at steering column
 - [ ] Confirm CT4 ground connected
 - [ ] Confirm CT4 ignition signal connected (cabin ignition bus bar Terminal 1)
-- [ ] Verify SW3/SW4 (headlights) disabled when ignition off
+- [ ] Verify SW3/SW4 (headlights) work with the ignition off (parking/tail markers follow them)
 - [ ] Verify SW1/SW2 (turn signals/hazards) work with ignition off (safety feature)
 
 ### Lighting Wiring
@@ -147,9 +141,8 @@ in the [Power Systems Checklist][power-checklist].
 - [ ] Confirm Maxbilt tail lights wired per page wiring table
 - [ ] Confirm CT4 SW3 → LP6 low beam (both lights)
 - [ ] Confirm CT4 SW4 → LP6 high beam (both lights)
-- [ ] Confirm CT4 SW3 tapped to DRL cutoff relay coil
 - [ ] Confirm CT4 SW3 tapped to PMU In 7 (headlight status)
-- [ ] Confirm PMU Out 23 → DRL/parking junction (license plate, LP6 DRL, markers, tail markers)
+- [ ] Confirm PMU Out 23 → LP6 DRL (Pin 3) and PMU Out 12 → parking/tail splice (Maxbilt RED, RTL-S running)
 
 ### GPS Module
 
@@ -174,6 +167,7 @@ in the [Power Systems Checklist][power-checklist].
 - [ ] Verify GPS auto-cancel and manual cancel
 - [ ] Verify headlight control (SW3 low beam, SW4 high beam mutual exclusivity)
 - [ ] Verify DRL auto-off when headlights active, back on when off
+- [ ] Verify tail markers stay on with headlights on, and parking lights work with the ignition off
 - [ ] Verify brake lights work independently of turn signals
 
 ## Outstanding Items

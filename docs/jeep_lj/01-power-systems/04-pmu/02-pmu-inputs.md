@@ -29,9 +29,9 @@ See [Ignition Signal Distribution][ignition-signal] for complete wiring architec
 | **In 2** | Brake Switch         | Brake pedal switch           | Out 21 (Brake Lights)   | Normally open, closes when pedal pressed |
 | **In 3** | Reverse Signal       | Turbolamik aux output (Reverse) | Out 22 (Reverse Lights) | 12V from TCU when 8HP70 in Reverse       |
 | **In 4** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
-| **In 5** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
+| **In 5** | CT4 SW4 (High Beams) | CT4 lever push, tapped after HDP24 pin 10 | Out 23 (DRL) off, Out 12 (parking) on | 12V when high beams active; needed because the CT4 drops SW3 when SW4 is on — see [DRL & Parking][drl-parking] |
 | **In 6** | **\[Available\]**    | -                            | -                       | Available for future expansion           |
-| **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 23 (DRL) logic      | 12V when headlights active, disables DRL |
+| **In 7** | CT4 SW3 (Headlights) | CT4 lever pull               | Out 23 (DRL) off, Out 12 (parking) on | 12V when headlights active, disables DRL |
 | **In 8** | **\[Available\]**      | -                            | -                       | Available for future expansion           |
 | **In 9** | A/C Request          | Restomod Air control head compressor output, via trinary switch ({{ tbd(146) }} — verify kit wiring on arrival) | Out 17 (A/C Clutch)     | 12V when A/C commanded and refrigerant pressure in range — see [HVAC][hvac] |
 
@@ -40,6 +40,7 @@ See [Ignition Signal Distribution][ignition-signal] for complete wiring architec
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [ignition-signal]: ../06-ignition-signal/index.md
 [hvac]: ../../02-engine-systems/03-hvac.md
+[drl-parking]: ../../03-lighting-systems/05-drl-parking.md
 [transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
 
 ## Analog Inputs

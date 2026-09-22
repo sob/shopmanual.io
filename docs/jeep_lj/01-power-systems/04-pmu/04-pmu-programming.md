@@ -9,15 +9,19 @@ PMU configuration examples, logic sequences, and implementation checklist.
 
 ## Programming Examples
 
-### DRL Auto-Off Logic (Output 23)
+### DRL Auto-Off (Output 23) and Parking / Tail Markers (Output 12)
 
 ```text
-IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_Headlights == OFF)
+IF (Pin7_IgnitionRUN == ON) AND (In7_CT4_LowBeam == OFF) AND (In5_CT4_HighBeam == OFF)
   THEN Out23_DRL = ON
 ELSE Out23_DRL = OFF
+
+IF (In7_CT4_LowBeam == ON) OR (In5_CT4_HighBeam == ON)
+  THEN Out12_Parking = ON
+ELSE Out12_Parking = OFF
 ```
 
-DRL on with ignition, off when headlights active.
+DRL on with ignition, off when either beam is on. Parking/tail markers follow the headlights (low **or** high — the CT4 drops SW3 when SW4 is on, so both are sensed) with **no ignition term** and no separate switch: pull the headlights on while parked and the vehicle is lit (owner decision 2026-09-22). See [DRL & Parking][drl-parking].
 
 **Note:** Pin 7 is the dedicated 12V switched input (physical pin), different from In 7 which is a digital input channel. See [PMU Inputs][pmu-inputs] for complete pin assignments.
 
@@ -111,7 +115,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Purpose:** Automatically shed non-critical PMU loads when the ARB compressor runs (90A on the AUX side) to preserve AUX battery capacity and maximize BCDC charging headroom.
 
-**Summary:** Detects ARB activation and disables DRL (~2.6A), A/C (5A), and conditionally oil/PS cooler fans (15A each), shedding ~8-38A from the START-side PMU load. See [ARB Load Shedding Logic][arb-load-shedding] for the current full-scenario totals.
+**Summary:** Detects ARB activation and disables DRL (~0.8A), A/C (5A), and conditionally oil/PS cooler fans (15A each), shedding ~8-38A from the START-side PMU load. See [ARB Load Shedding Logic][arb-load-shedding] for the current full-scenario totals.
 
 **See:** [ARB Load Shedding Logic][arb-load-shedding] for complete implementation details, load analysis, testing procedures, and operator guidelines.
 
@@ -155,3 +159,4 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [radiator-fan]: ../../02-engine-systems/06-radiator-fan.md
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md
 [transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
+[drl-parking]: ../../03-lighting-systems/05-drl-parking.md

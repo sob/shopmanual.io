@@ -74,7 +74,7 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 | **SwitchPros** TRIGGER-2 | Cargo rocker switch return | 18 AWG | Per SP pigtail | Rear cargo rocker (rear wheel well top) |
 | **PMU** OUT-21 | Brake signal | 16 AWG | Builder's choice | Tail clusters (L+R) + 3rd brake |
 | **PMU** OUT-22 | Reverse signal | 16 AWG | Builder's choice | Tail clusters (L+R) |
-| **PMU** OUT-23 | Running/parking signal | 16 AWG | Builder's choice | Tail clusters (L+R) + license plate |
+| **PMU** OUT-12 | Parking/tail marker signal (was OUT-23) | 16 AWG | Builder's choice | Tail clusters (L+R) + license plate; SwitchPros LIGHTS input tapped at firewall |
 | **PMU** ground return | Common tail cluster ground | 16 AWG | Black | SwitchPros GND bus at firewall |
 
 **Connectors:**

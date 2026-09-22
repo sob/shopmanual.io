@@ -37,7 +37,7 @@ This section documents all control interfaces in the Jeep LJ build - the switche
 
 All control interfaces integrate with the dual-battery electrical system:
 
-- **SwitchPros SP-1200:** Powered by Firewall CONSTANT Bus (sourced from AUX battery via 300A master CB + 2/0 AWG forward feed)
+- **SwitchPros SP-1200:** Powered by Firewall CONSTANT Bus (sourced from AUX battery via 250A master CB + 2/0 AWG forward feed)
 - **Command Touch CT4:** Powered by PMU OUT 13 (15A CONSTANT, sourced from START battery), integrates with PMU
 - **Dashboard switches:** Various power sources depending on function
 

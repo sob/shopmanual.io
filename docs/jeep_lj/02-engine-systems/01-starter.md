@@ -10,39 +10,25 @@ tags:
 # 2.1 Starter System {#starter-system-cummins-r28}
 
 /// html | div.product-info
-![DB Electrical 410-52442 Starter](../images/db-electrical-410-52442-starter.jpg){ loading=lazy }
+**Type:** 12V Diesel Starter Motor
 
-**Type:** High-Torque Diesel Starter
+**Model:** Cummins factory starter — shipped mounted on the R2.8 crate engine[^kit-starter]
 
-**Model:** DB Electrical 410-52442
+**Status:** In hand (owner decision 2026-09-22: keep the factory unit)
 
-**Manufacturer:** DB Electrical
-
-**Product Page:** [DB Electrical 410-52442][db-starter]
+**Manufacturer:** Cummins (supplier unit)
 
 **Voltage:** 12V
 
-**Power:** 2.7 kW
-
-**Rotation:** Clockwise (CW)
-
-**Teeth:** 10-tooth pinion
-
-**Mount Type:** PLGR (Planetary Gear Reduction)
-
-**Weight:** 19 lbs
-
-**Mounting:** Engine block (PLGR mount)
+**Mounting:** Engine block (as shipped)
 
 **Power Source:** START battery+ direct connection (2/0 AWG)
 
-**OEM Cross-Reference:**
-
-- Cummins: 4996706
-- Denso: 428000-7090, 438000-3110
-- Isuzu: 5-128000-980
+**Replacement reference (not purchased):** [DB Electrical 410-52442][db-starter] — aftermarket cross-reference to Cummins 4996706 / Denso 428000-7090; useful only if the factory unit ever needs replacing.
 
 ///
+
+[^kit-starter]: Cummins Repower R2.8 Installation Guide (Bulletin 5504137), §1 "Starter", p. 1-36: "The engine kit includes an engine mounted 12 volt starting motor." Local copy: `resources/cummins-r2.8-installation-guide.pdf`.
 
 ## System Configuration
 
@@ -119,6 +105,10 @@ Engine starts → button released → Cole Hersee de-energizes → Bendix retrac
 ## Outstanding Items
 
 {{ tbds() }}
+
+## Build Tasks
+
+- [ ] Record the factory starter's part number from its tag (the terminal posts and current figures below were taken from the aftermarket cross-reference; confirm on the unit)
 
 [install-checklist]: ../09-installation/02-engine-systems-checklist.md
 
