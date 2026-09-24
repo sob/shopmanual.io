@@ -238,6 +238,8 @@ nav:
     - Power Systems:
       - nissan_nv/01-power-systems/index.md
       - 1.1 - Starlink Power: nissan_nv/01-power-systems/01-starlink-power.md
+      - 1.2 - Batteries & Charging: nissan_nv/01-power-systems/02-batteries-charging.md
+      - 1.3 - Switch Panels: nissan_nv/01-power-systems/03-switch-panels.md
     - Diagrams:
       - nissan_nv/02-diagrams/index.md
   - Jeep Wrangler JKU:
