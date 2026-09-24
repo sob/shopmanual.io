@@ -244,6 +244,10 @@ nav:
       - nissan_nv/02-diagrams/index.md
   - Jeep Wrangler JKU:
     - jeep_jku/index.md
+    - Power Systems:
+      - jeep_jku/01-power-systems/index.md
+      - 1.1 - Dual Battery System: jeep_jku/01-power-systems/01-dual-battery.md
+      - 1.2 - SwitchPros SP-9100: jeep_jku/01-power-systems/02-switchpros-sp9100.md
 
 extra:
   social:

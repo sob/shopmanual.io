@@ -39,7 +39,7 @@ hide:
     <a class="sm-card sm-card--soon" href="jeep_jku/">
       <span class="sm-card__icon">🚙</span>
       <span class="sm-card__title">Jeep Wrangler JKU <span class="sm-card__badge">Coming soon</span></span>
-      <span class="sm-card__desc">Early notes and plans. Nothing wired up here yet.</span>
+      <span class="sm-card__desc">A JK Unlimited. Documentation is starting with the power system: a Genesis Offroad dual battery kit and a SwitchPros SP-9100 switch panel.</span>
       <span class="sm-card__cta">Project home →</span>
     </a>
   </div>
