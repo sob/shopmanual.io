@@ -48,6 +48,7 @@ jobs:
         run: |
           set -euo pipefail
           install -d docs/nissan_nv/images
+          cp "export/Van Electrical-As-Built.png"      docs/nissan_nv/images/van-as-built.png
           cp "export/Van Electrical-Starlink-v3.png"   docs/nissan_nv/images/van-starlink-power.png
           cp "export/Van Electrical-Devices.png"       docs/nissan_nv/images/van-devices.png
           cp "export/Van Electrical-Current-State.png" docs/nissan_nv/images/van-current-state.png

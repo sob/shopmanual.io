@@ -119,10 +119,10 @@ leaving the door is the dish cable to the roof.
 
 Both of these come out of the Starlink path:
 
-- **1000 W inverter** - still shown on the [Current State and Genesis
-  diagrams](../02-diagrams/index.md), which document the system as it was
-  before this change. It may still be wanted for other AC loads; that is a
-  separate decision.
+- **1000 W inverter** - removed from the van. It is still shown on the
+  [Current State and Genesis diagrams](../02-diagrams/index.md), which record
+  the system before this change. The SGP32 relay that switched it now feeds
+  the rear panels (see [Batteries & Charging](02-batteries-charging.md#sgp32-relay)).
 - **Third-party PoE injector** - the Yaosheng 8 A injector, shown on the
   superseded "Starlink v2" page. The dish cable is now the stock Starlink cable,
   cut and re-terminated with a Cat8 connector so it lands properly on the
@@ -134,7 +134,8 @@ Both of these come out of the Starlink path:
 
 - [ ] Measure real-world draw at 12 V (idle, streaming, snow melt) and record it here
 - [ ] Record the wire gauge and run length for the circuit 6 feed - it must be rated for the PowerSwitch's 30 A output, not just the expected draw
-- [ ] Confirm the fuse on the Garmin PowerSwitch's own battery feed (Garmin's manual references a 125 A fuse on the supplied red power cable)
+- [ ] Confirm the fuse on the Garmin PowerSwitch's own battery feed (Garmin's manual references a 125 A fuse on the supplied red power cable) - tracked in [Batteries & Charging](02-batteries-charging.md#sgp32-relay)
+- [ ] Starlink only runs with the key on, because the rear panels are fed through the ignition-switched SGP32 relay - decide whether that is acceptable
 - [ ] Confirm the re-terminated dish cable is wired to Starlink's pinout, and record its run length from the door to the roof mount
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4
