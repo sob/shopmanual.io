@@ -89,7 +89,7 @@ backlight stays at one fixed brightness.
 | Input | Wire | Signal | App setup | Outputs it turns on |
 | :---- | :--- | :----- | :-------- | :------------------ |
 | Trigger 1 | Pink | Reverse lamp | Enable. Active high, to be confirmed with a meter. | Switch 3, reverse lights |
-| Trigger 2 | White | High beam | Lights/T2 set to Enable, converting it to a trigger. Active high, to be confirmed with a meter. | Switch 1, light bar (proposed) |
+| Trigger 2 | White | High beam | Lights/T2 set to Enable, converting it to a trigger. Active high, to be confirmed with a meter. | None assigned. The light bar does **not** follow the high beams (owner, 2026-09-24). |
 
 Outputs that a trigger turns on can still be switched on and off from the
 panel[^m-p5].
@@ -119,11 +119,11 @@ changed[^m-p8].
 
 | Switch | Rating | Load | Draw | Current limit | Mode | Trigger |
 | :----: | :----: | :--- | :--: | :-----------: | :--- | :------ |
-| 1 | 20 A | Light bar | Not recorded | - | Ignition | Trigger 2, high beam (proposed) |
+| 1 | 20 A | Light bar | Not recorded | - | Ignition | - (manual only) |
 | 2 | 20 A | Rock lights | Not recorded | - | Ignition | - |
 | 3 | 20 A | Reverse lights | Not recorded | - | Ignition | Trigger 1, reverse |
-| 4 | 20 A | Front locker | Not recorded | - | Ignition | - |
-| 5 | 35 A | Rear locker | Not recorded | - | Ignition | - |
+| 4 | 20 A | Front locker (Rubicon e-locker, see below) | Not recorded | - | Ignition | - |
+| 5 | 35 A | Rear locker (Rubicon e-locker, see below) | Not recorded | - | Ignition | - |
 | 6 | 35 A | Spare | - | - | - | - |
 | 7 | 35 A | Spare | - | - | - | - |
 | 8 | 35 A | Spare | - | - | - | - |
@@ -138,17 +138,38 @@ changed[^m-p8].
   one wire is enough[^m-p3]. Insulate the unused wire, since it is live
   whenever the switch is on.
 
+!!! warning "Swapped Rubicon lockers with no factory control"
+    This JK is not a Rubicon. Its front and rear axles came from a donor
+    Rubicon, so the lockers are Rubicon **electric** locking
+    differentials[^stellantis-2012], not air or vacuum. There is no factory
+    AXLE LOCK switch or locker control, so switches 4 and 5 drive the
+    lockers directly (owner, 2026-09-24).
+
+**No factory interlocks.** On a Rubicon, Jeep lets the lockers engage only
+with the key in, the transfer case in 4L, and the vehicle at 10 mph or
+less. It unlocks them when the transfer case leaves 4L or the ignition
+turns off[^om-axle]. The SP-9100 can do only the last of these: in
+Ignition mode with Memory off, the lockers drop out at key-off and stay
+unlocked at the next start[^m-p8]. The exception is a phone connected over
+Bluetooth, which overrides the ignition input[^m-p7]. Following the other
+rules is up to the driver.
+
+The panel switch LED shows what the switch is commanding, not whether the
+locker has actually engaged.
+
 ---
 
 ## Outstanding Items
 
 - [ ] Record each load's part number and maximum draw, then set each output's current limit. Move the light bar to switch 6-8 if it draws more than about 17 A.
-- [ ] Record the make and type of both lockers, since that sets how each one is wired and what it draws (for example, an air locker needs a compressor and solenoid)
+- [ ] Record the donor Rubicon's model year
+- [ ] Identify the coil and indicator-switch pins on each locker's axle connector, and confirm the coil polarity
+- [ ] Measure each locker coil's current draw, then set the current limits on switches 4 and 5
 - [ ] Choose the power module location, within 2 ft of the AUX battery, vertical, connectors facing outward, clear of the exhaust
 - [ ] Plan how the 4 AWG cable and the 18 AWG ground reach the AUX posts under the Genesis top lid. The kit includes extra grommets for accessory wires.
 - [ ] Order the SwitchPros A-pillar replacement panel (PSPLH-1), and confirm which A-pillar, driver or passenger, it replaces
 - [ ] Pick the ignition-switched fuse in the 2012 JK's TIPM for the light blue wire's add-a-circuit. The wire must read 0 V with the key off.
-- [ ] Confirm that Trigger 2 (high beam) should turn on the light bar (switch 1)
+- [ ] Decide what Trigger 2 (high beam) turns on. If nothing, consider restoring backlight dimming on the white wire.
 - [ ] Find the reverse-lamp and high-beam tap points on the 2012 JK, and meter each one to set active high or active low
 - [ ] Set the low-voltage disconnect threshold (11.0, 11.5, or 12.0 V) to suit the AUX battery type
 - [ ] Plan the 10.5 ft control cable route from the power module, through the firewall, to the A-pillar. Removing the black 4-pin connector is allowed; the white connector is not serviceable.
@@ -176,4 +197,6 @@ changed[^m-p8].
 [^m-p9]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), p. 9, §7.7 "Set Auto Sleep Settings".
 [^m-p10]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), pp. 9-10, §7.8 "External Trigger Setup".
 [^motobilt]: Motobilt, "Dash Mount for Jeep JK/JKU 07-11 for Switch-Pros Unit", MB8002, <https://motobilt.com/products/dash-mount-for-switch-pros-controller-for-jeep-jk-jku> (accessed 2026-09-24). The page lists 2007-2011 fitment only, and Motobilt's switch panel mount collection (<https://motobilt.com/collections/switch-panel-mount>) has no JK mount for 2012 or later.
+[^stellantis-2012]: Stellantis (Chrysler Group) press release, "New 2012 Jeep® Wrangler: A New Heart, the Same Soul", 2011-08-20, <https://media.stellantisnorthamerica.com/newsrelease.do?id=11187> (accessed 2026-09-24): "Rubicon also includes electric front and rear locking differentials". This covers the 2012 model year; the donor axles' year is not recorded.
+[^om-axle]: 2012 Jeep Wrangler Owner's Manual, "Axle Lock (Tru-Lok) — Rubicon Models", pp. 400-401 (via ManualsLib, <https://www.manualslib.com/manual/739413/Jeep-Wrangler-2012.html?page=400>, accessed 2026-09-24).
 [^sp-apillar]: Switch-Pros, "A-pillar replacement panel", <https://store.switchpros.com/a-pillar-replacement-panel/> (accessed 2026-09-24). "Black, fits 2011-2017 Jeep Wrangler JK"; "Compatible with SP8100-B and SP9100 systems"; switch panel not included. The part number PSPLH-1 comes from the Offroad Alliance listing, "Jeep JK Switch-Pros A-Pillar Replacement Panel - PSPLH-1", <https://offroadalliance.com/Jeep-JK-APillar-Replacement-Panel/> (accessed 2026-09-24).
