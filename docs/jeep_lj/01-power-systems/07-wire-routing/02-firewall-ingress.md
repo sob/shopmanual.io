@@ -31,7 +31,7 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-29:** 29× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (29 available, 19 used, 10 spare — see [Pin Assignment](#pin-assignment))
+- Size 16 contacts: 14-20 AWG, 13A (29 available, 20 used, 9 spare — see [Pin Assignment](#pin-assignment))
 
 **Mounting:** Single 1.5" diameter hole in firewall (same as previous 24-21 - shell size unchanged)
 
@@ -50,7 +50,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (8 wires)
+### Engine Bay → Cabin (9 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
@@ -63,6 +63,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 12 | PBS-I PINK IGN (ignition signal) | 14 AWG | PBS-I ICM | Ignition bus (cabin) | #16 |
 | 19 | 4x4 indicator relay coil | 18 AWG | PMU OUT19 | 4x4 relay coil (cabin, at HDX) | #16 |
 | 20 | 4LO indicator | 18 AWG | PMU OUT24 | HDX EXTRA(+) input | #16 |
+| 21 | GPS power (+) | 18 AWG | PMU OUT14 | Garmin Tread 2 (dash) | #16 |
 
 ### Cabin → Engine Bay (11 wires)
 
@@ -85,9 +86,9 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 !!! note "Relocated power feeds do NOT use this connector"
     The radiator fan (4 AWG), iBooster main (8 AWG), and TCU (12 AWG) feeds — relocated off the PMU — run from the [START+ Forward Distribution Bus][start-fwd-bus] in the engine bay to their loads, entirely engine-bay-side. Only the low-current **iBooster enable** (Pin 18 above) crosses the firewall.
 
-### Available (10 spare pins)
+### Available (9 spare pins)
 
-Pins 21-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
+Pins 22-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18); pin 21 by the GPS power feed when the GPS moved to PMU OUT14 (2026-09-24). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
 
 ---
 
@@ -104,7 +105,7 @@ Dedicated bulkhead for SwitchPros forward-going outputs. Separate from main HDP2
 
 **Insert Arrangement 18-14:** 14× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (14 available, 6 used today, 8 future headroom)
+- Size 16 contacts: 14-20 AWG, 13A (14 available, 4 used today, 10 future headroom)
 
 **Mounting:** Single 1.25" diameter hole in firewall (shell size 18, smaller than main HDP24-24)
 
@@ -122,12 +123,10 @@ Each SwitchPros output uses **2 pins** (power out + ground return) — load grou
 | 2 | OUT-3 fog light (−) | 14 AWG | EB → Cabin | Light ground | SP Ground Bus |
 | 3 | OUT-6 front rocks (+) | 14 AWG | Cabin → EB | SP output | Front bumper rock + 2× front wheel well rocks (splice in EB) |
 | 4 | OUT-6 front rocks (−) | 14 AWG | EB → Cabin | Lights ground | SP Ground Bus |
-| 5 | OUT-17 front locker (+) | 18 AWG | Cabin → EB | SP low-side output | Front ARB solenoid |
-| 6 | OUT-17 front locker (−) | 18 AWG | EB → Cabin | Solenoid ground | SP Ground Bus |
 
-### Available (8 spare pins)
+### Available (10 spare pins)
 
-Pins 7-14 reserved for future SwitchPros forward outputs. Likely candidates:
+Pins 5-14 reserved for future SwitchPros forward outputs. Pins 5-6 carried the front locker (OUT-17) until 2026-09-24, when the lockers moved to cabin dash switches with their solenoids at the air manifold. Likely candidates:
 
 - OUT-2 ditch lights (2 pins) — if routed through firewall instead of A-pillar
 - OUT-1 roof lights (2 pins) — if routed through firewall instead of A-pillar (10 AWG fits size-16)
@@ -190,16 +189,15 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 |:------|:-----:|:---------|
 | 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
 | 16 AWG | 5 | PMU lighting outputs (3), PURPLE START (1), iBooster enable (1) |
-| 18 AWG | 7 | Switch signals (3: horn, brake, A/C), winch control (2), 4x4/4LO indicators (2) |
-| **Main connector** | **19** | HDP24-24-29 (19 of 29 used, 10 spare) |
+| 18 AWG | 8 | Switch signals (3: horn, brake, A/C), winch control (2), 4x4/4LO indicators (2), GPS power (1) |
+| **Main connector** | **20** | HDP24-24-29 (20 of 29 used, 9 spare) |
 
 ### SwitchPros HDP24-18-14 (forward SP outputs)
 
 | Gauge | Count | Circuits |
 |:------|:-----:|:---------|
 | 14 AWG | 4 | OUT-3 fog (power + ground), OUT-6 front rocks (power + ground) |
-| 18 AWG | 2 | OUT-17 front locker (power + ground) |
-| **SP connector** | **6** | HDP24-18-14 (6 of 14 used, 8 spare for future SP) |
+| **SP connector** | **4** | HDP24-18-14 (4 of 14 used, 10 spare for future SP) |
 
 ### Separate Routing (Not Through Bulkheads)
 

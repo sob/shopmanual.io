@@ -61,7 +61,7 @@ See [START Battery Distribution][starter-battery] for complete wire specificatio
 
 **Alternator Capacity:** 270A continuous
 
-**Worst Realistic Load:** 199A (offroad scenario) = 71A margin (26% headroom)
+**Worst Realistic Load:** 201A (offroad scenario) = 69A margin (26% headroom)
 
 The alternator supplies START battery loads plus BCDC charging. AUX battery loads (SwitchPros, ARB compressor, winch) do NOT draw from alternator.
 

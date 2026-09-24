@@ -22,9 +22,9 @@ Workbench specs for the SwitchPros lighting harnesses: **H4** SwitchPros Front B
 
 *Previously numbered H5. Renumbered 2026-05-31 when the catalog was compacted after the H1+H4 and H6+H7 merges.*
 
-**Build:** 3 SwitchPros outputs (6 conductors) · 4–8 ft depending on destination · Delphi 2-pin at SP side, HDP24-18-14 at firewall · split loom forward.
+**Build:** 2 SwitchPros outputs (4 conductors) · 4–8 ft depending on destination · Delphi 2-pin at SP side, HDP24-18-14 at firewall · split loom forward.
 
-**Route:** SwitchPros (firewall, cabin side) → **dedicated SwitchPros HDP24-18-14 firewall bulkhead** → engine bay → grille / front bumper / front axle
+**Route:** SwitchPros (firewall, cabin side) → **dedicated SwitchPros HDP24-18-14 firewall bulkhead** → engine bay → grille / front bumper
 
 **Length:** 4–8 ft (depending on destination)
 
@@ -34,19 +34,17 @@ Workbench specs for the SwitchPros lighting harnesses: **H4** SwitchPros Front B
 |:-----------------:|:-----:|:-----:|:---------|:------------|:----------------:|
 | OUT-3 (35A circuit) | 14 AWG | Per SP pigtail | Fog light | Front bumper (BD S8 amber) | 1 (+) / 2 (−) |
 | OUT-6 (front rocks subset, 15A circuit, shared with rear) | 14 AWG | Per SP pigtail | Front bumper rock light + 2x front wheel well rock lights | Splice at front for 3 lights | 3 (+) / 4 (−) |
-| OUT-17 (low-side 2A) | 18 AWG | Per SP pigtail | Front ARB locker solenoid | Front axle (~12 ft from SP) | 5 (+) / 6 (−) |
 
-**Connectors:** Custom 2-pin Delphi at SwitchPros output side (per SP harness convention); harness terminates at HDP24-18-14 cabin-side plug at firewall. Engine-bay side picks up at HDP24-18-14 receptacle and re-terminates as 2-pin Delphi at each light/solenoid.
+**Connectors:** Custom 2-pin Delphi at SwitchPros output side (per SP harness convention); harness terminates at HDP24-18-14 cabin-side plug at firewall. Engine-bay side picks up at HDP24-18-14 receptacle and re-terminates as 2-pin Delphi at each light.
 
-**Ground strategy:** Each output's load ground returns through the SP bulkhead (pins 2, 4, 6) to the SwitchPros Ground Bus on cabin side. Clean SP-native architecture; no reliance on chassis ground at forward loads.
+**Ground strategy:** Each output's load ground returns through the SP bulkhead (pins 2 and 4) to the SwitchPros Ground Bus on cabin side. Clean SP-native architecture; no reliance on chassis ground at forward loads.
 
 **Notes:**
 
-- 3 forward-going SwitchPros circuits in this bundle, 6 pins through dedicated SP bulkhead (HDP24-18-14)
-- Front locker wire (18 AWG) is the longest run — passes through front fender well and along front axle
+- 2 forward-going SwitchPros circuits in this bundle, 4 pins through dedicated SP bulkhead (HDP24-18-14)
+- The front locker wire (OUT-17) left this bundle on 2026-09-24: the lockers now run from dash switches, and their solenoids sit at the air manifold under the passenger seat (see [Air Lockers][air-lockers])
 - Front rock lights (4 in front wheel wells + 1 front bumper) all share OUT-6 with rear rocks
-- Could be split into "front bumper sub-harness" (fog + front rock + front bumper) and "front axle sub-harness" (front locker) if those routings diverge
-- **8 spare pins** on SP bulkhead accommodate future ditch/roof additions if A-pillar routing becomes impractical
+- **10 spare pins** on SP bulkhead accommodate future ditch/roof additions if A-pillar routing becomes impractical
 
 See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pinout.
 
@@ -56,7 +54,7 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 
 *Formed 2026-05-30 by merging the prior H6 (SwitchPros rear outputs) and H7 (PMU rear lighting). The two shared the firewall-to-rear cabin trunk path, so they are fabricated as a single multi-conductor bundle with a rear cargo bulkhead breakout connector.*
 
-**Build:** ~10 conductors (mostly 14 AWG) · 8–14 ft (PMU portion ~11–16 ft incl. engine-bay leg) · single multi-pin breakout at rear cargo bulkhead · split loom + wrapped sleeve through trans tunnel.
+**Build:** ~9 conductors (mostly 14 AWG) · 8–14 ft (PMU portion ~11–16 ft incl. engine-bay leg) · single multi-pin breakout at rear cargo bulkhead · split loom + wrapped sleeve through trans tunnel.
 
 **Route:** SwitchPros (firewall, cabin side) + PMU24 outputs (via HDP24 pins 4/5/6 from engine bay) → converge at firewall → cabin trunk (trans tunnel) → rear cargo bulkhead breakout → fans out to rear destinations
 
@@ -68,7 +66,6 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 |:-------|:------------------|:-----:|:-----:|:------------|
 | **SwitchPros** OUT-6 (shared with front) | Rear rocks (rear bumper + 2× rear wheel well) | 14 AWG | Per SP pigtail | Splice at rear for 3 lights |
 | **SwitchPros** OUT-7 | Chase light (BD RTL-S 30") | 14 AWG | Per SP pigtail | Rear bumper |
-| **SwitchPros** OUT-10 | Rear ARB locker solenoid | 14 AWG | Per SP pigtail | Rear axle |
 | **SwitchPros** OUT-12 | Rear work lights (2× BD S1) | 14 AWG | Per SP pigtail | Above license plate |
 | **SwitchPros** OUT-13 | Cargo lights (2× flush in rear wheel wells) | 14 AWG | Per SP pigtail | Triggered by rear cargo rocker |
 | **SwitchPros** TRIGGER-2 | Cargo rocker switch return | 18 AWG | Per SP pigtail | Rear cargo rocker (rear wheel well top) |
@@ -80,14 +77,14 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 **Connectors:**
 
 - **Firewall (cabin side):** SwitchPros outputs originate as Delphi 2-pin pigtails at SP module; PMU outputs enter the cabin via HDP24 pins 4/5/6. Both join the trunk wrap aft of firewall.
-- **Rear cargo bulkhead breakout:** Single multi-pin connector — **Deutsch DT15-XX (15-pin)** or **AMP CPC ~15-pin**. All ~10 conductors mate at this single service point.
-- **Rear-side pigtails:** Short individual harnesses from breakout to each destination (chase, work, cargo, rocks, locker, tail clusters).
+- **Rear cargo bulkhead breakout:** Single multi-pin connector — **Deutsch DT15-XX (15-pin)** or **AMP CPC ~15-pin**. All ~9 conductors mate at this single service point.
+- **Rear-side pigtails:** Short individual harnesses from breakout to each destination (chase, work, cargo, rocks, tail clusters).
 
 **Protection:** Split loom + wrapped harness sleeve through cabin trunk. P-clamps every 12–18".
 
 **Notes:**
 
-- ~10 conductors in the cabin trunk bundle (mostly 14 AWG + a few 16/18 AWG)
+- ~9 conductors in the cabin trunk bundle (the rear locker wire left on 2026-09-24) (mostly 14 AWG + a few 16/18 AWG)
 - **Service model:** R&R any rear light by swapping its pigtail at the rear bulkhead breakout. The cabin trunk pull stays in place.
 - Splices needed for the tail clusters: each PMU output feeds both driver and passenger sides + 3rd brake/license — can be done at the breakout or with Y-splices closer to lights
 - CT4 rear turn signals could also join this bundle through the cabin trunk; tracked separately because they originate at CT4 (steering column) not firewall
@@ -113,3 +110,4 @@ See [SwitchPros Firewall Bulkhead][firewall-ingress] for connector spec and pino
 [firewall-ingress]: 02-firewall-ingress.md
 [switchpros]: ../../05-control-interfaces/02-switchpros-sp1200.md
 [pmu-outputs]: ../04-pmu/03-pmu-outputs.md
+[air-lockers]: ../../08-exterior-systems/03-air-lockers.md

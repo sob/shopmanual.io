@@ -57,17 +57,17 @@ tags:
 |   5    |   Interior LEDs     |  5A  |                   MLC-RW controller (speaker + footwell RGB)              |       OUTPUT-5       |
 |   6    |     Rock Lights     |  3A  |                          6x KC Cyclone V2 Lights                          |       OUTPUT-6       |
 |   7    |     Chase Light     |  1A  |                      BD RTL-S 30" (Amber chase mode)                      |       OUTPUT-7       |
-|   8    |     Navigation      |  2A  |                  Garmin Tread 2 - Overland Edition GPS                     |       OUTPUT-8       |
-|   9    |    Front Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      | OUTPUT-17 (low-side) |
-|   10   |     Rear Locker     |  2A  |     ARB Locker (see [Air System][air-system-arb-compressor-lockers])      |      OUTPUT-10       |
+|   8    |      *Spare*        |  -   |          Freed 2026-09-24: GPS moved to [PMU OUT14][pmu-outputs] (ignition)          |  OUTPUT-8 (spare)    |
+|   9    |      *Spare*        |  -   |  Freed 2026-09-24: front locker moved to a [dash switch][dashboard-controls]   | OUTPUT-17 (spare, low-side) |
+|   10   |      *Spare*        |  -   |   Freed 2026-09-24: rear locker moved to a [dash switch][dashboard-controls]   |  OUTPUT-10 (spare)   |
 |   11   |     Compressor      | 15A  | ARB Twin Compressor (see [Air System][air-system-arb-compressor-lockers]) |      OUTPUT-11       |
 |   12   |  Rear Work Lights   |  5A  |                   2x BD S1 Black (Above License Plate)                    |      OUTPUT-12       |
 
 **Notes:**
 
-- **Button 4:** Dome lights have dual control - manual button OR door-triggered via TRIGGER-1
-  - Driver door switch + Passenger door switch (wired in parallel) → TRIGGER-1 → OUTPUT-4
-  - Either door opening or Button 4 press activates dome lights
+- **Button 4:** Dome lights have dual control - Button 4 OR the rear-seat switch via TRIGGER-1
+  - Rear-seat switch (latching, closes to ground) → TRIGGER-1 → OUTPUT-4
+  - Either one turns the dome lights on. There are no door switches: the Jeep has none, and it runs half doors or no doors (owner, 2026-09-24).
 - **Button 7:** RTL-S amber chase function only - brake/running/work functions powered separately
 - **Button 11:** OUTPUT-11 provides control signal to ARB compressor (main power is separate: CONSTANT bus → dual 60A fuses → compressor)
 - **Cargo Light:** Not assigned to button - controlled by rear rocker switch via TRIGGER-2 → OUTPUT-13 (power source conflict with BODY PDU CB20 — see {{ tbd(147) }})
@@ -84,19 +84,19 @@ tags:
 |  3  | IGNITION  |   LT BLUE   |   -    |      -      | Connect to ignition signal         |  -   |              For auto-off features              |
 |  4  |  LIGHTS   |    WHITE    |   -    |      -      | PMU Out 12 parking/tail circuit (tap at firewall) |  -   | Parking-light sense — see [DRL & Parking][drl-parking] |
 |  5  | OUTPUT-7  |   PURPLE    | 14 AWG |     15A     | Chase Light (amber)                |  1A  |         RTL-S amber chase function only         |
-|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | Navigation (Garmin Tread 2)        |  2A  |                                                 |
-|  7  | TRIGGER-1 |    PINK     |   -    |      -      | Door switches (driver + passenger) |  -   | Triggers OUTPUT-4 (dome lights) when doors open |
+|  6  | OUTPUT-8  |    GREY     | 14 AWG |     15A     | SPARE                              |  -   | GPS moved to PMU OUT14 (2026-09-24)             |
+|  7  | TRIGGER-1 |    PINK     |   -    |      -      | Rear-seat dome switch (Blue Sea 4160) |  -   | Active low; triggers OUTPUT-4 (dome lights)  |
 |  8  | TRIGGER-2 |    PINK     |   -    |      -      | Rear cargo rocker switch           |  -   |        Triggers OUTPUT-13 (cargo light)         |
 |  9  | OUTPUT-9  |    WHITE    | 14 AWG | 30A (2x15A) | SPARE (can combine 9+10)           |  -   |                                                 |
 | 10  | OUTPUT-9B |    WHITE    | 14 AWG |      -      | SPARE (fused with 9)               |  -   |                                                 |
-| 11  | OUTPUT-10 |     TAN     | 14 AWG |     15A     | Rear Locker                        |  2A  |                                                 |
+| 11  | OUTPUT-10 |     TAN     | 14 AWG |     15A     | SPARE                              |  -   | Rear locker moved to a dash switch (2026-09-24) |
 | 12  | OUTPUT-11 |    BROWN    | 14 AWG |     15A     | Compressor control                 | 15A  |          Control signal to compressor           |
 | 13  | OUTPUT-12 |     RED     | 14 AWG |     15A     | Rear Work Lights                   |  5A  |                                                 |
 | 14  |  GROUND   |    BLACK    |   -    |      -      | Direct to battery negative         |  -   |          Critical - direct connection           |
 | 15  | OUTPUT-13 |   ORANGE    | 14 AWG |     15A     | Cargo Light                        |  5A  |   Triggered by rear rocker switch (TRIGGER-2)   |
 | 16  | OUTPUT-14 |   YELLOW    | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
 | 17  | TRIGGER-3 |    PINK     |   -    |      -      | ARB pressure switch                |  -   |             Auto compressor control             |
-| 18  | OUTPUT-17 |  LT GREEN   |   -    |     2A      | Front Locker (low-side)            |  2A  |              Low-side switch only               |
+| 18  | OUTPUT-17 |  LT GREEN   |   -    |     2A      | SPARE (low-side)                   |  -   | Front locker moved to a dash switch (2026-09-24) |
 | 19  | OUTPUT-15 | GREEN/BLACK | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
 | 20  | OUTPUT-16 | BLUE/BLACK  | 14 AWG |     15A     | SPARE                              |  -   |                                                 |
 
@@ -119,27 +119,27 @@ See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CON
 
 ## Trigger Input Assignments
 
-### TRIGGER-1: Door Switches → Dome Lights
+### TRIGGER-1: Rear-Seat Switch → Dome Lights
 
-**Switch Type:** Factory Jeep TJ/LJ door jamb plunger switch (normally open, closes to ground when door opens)
+**Switch Type:** Blue Sea 4160 latching push button, used as a signal switch. It closes TRIGGER-1 to ground and carries no lamp current.
+
+**Why not door switches:** the Jeep has no door switches and runs half doors or no doors (owner, 2026-09-24).
 
 **Wiring:**
 
 ```text
-Factory Driver Door Plunger (NO) ──┬──→ TRIGGER-1 (Pin 7, PINK)
-Factory Passenger Door Plunger (NO)─┘
+Rear-seat switch (latching, SPST) → TRIGGER-1 (Pin 7, PINK)
+Other side of switch → chassis ground
 ```
 
-**Wire Routing:**
-- Driver door: Door jamb → under dash → firewall SwitchPros (short run)
-- Passenger door: Door jamb → under dash → firewall SwitchPros (short run)
-- Wire gauge: 18 AWG (trigger signal only, no current load)
+**Wire Routing:** Rear-seat switch location ({{ tbd(77) }}) → cabin → firewall SwitchPros. 18 AWG (signal only).
 
 **Configuration:**
 
-- Program Button 4 to control OUTPUT-4 OR TRIGGER-1 → OUTPUT-4
+- Set TRIGGER-1 to active low in the app. The RCR-Force 12 triggers can be set to active high or active low.[^rcr12-trigger]
+- Program TRIGGER-1 → OUTPUT-4. Button 4 still switches OUTPUT-4 by hand.
 
-**Note:** Rear tailgate replaced factory rear door - no rear door switch needed
+This replaces the parallel, CONSTANT-fed override that would have backfed OUTPUT-4. See [Dome Lights][dome-lights].
 
 ### TRIGGER-2: Rear Rocker Switch → Cargo Light
 
@@ -202,7 +202,7 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 - [ ] Confirm ignition signal → SwitchPros Pin 3 (IGNITION)
 - [x] ~~Determine parking-lights signal source for Pin 4 (LIGHTS)~~ → **Resolved 2026-09-22:** PMU Out 12 parking/tail circuit, tapped at the firewall
 - [ ] Order control panel cable (power module to dash)
-- [ ] Confirm driver + passenger door switches → TRIGGER-1
+- [ ] Install rear-seat dome switch → TRIGGER-1 (active low)
 - [ ] Program Button 4: OUTPUT-4 OR TRIGGER-1 → dome lights
 - [ ] Install rear cargo rocker switch → TRIGGER-2 (determine tailgate-accessible location)
 - [ ] Program TRIGGER-2 → OUTPUT-13 (cargo light)
@@ -210,13 +210,13 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 - [ ] Confirm ARB pressure switch → TRIGGER-3
 - [ ] Program TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor auto/manual)
 - [ ] Test automatic pressure control (compressor on/off at setpoints)
-- [ ] Assign spare outputs: OUTPUT-9, 14, 15, 16
+- [ ] Assign spare outputs: OUTPUT-8, 9, 10, 14, 15, 16 and low-side OUTPUT-17 (buttons 8, 9, 10 are free)
 
 ## Related Documentation
 
 - [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
 - [Offroad Lighting][offroad-auxiliary-lighting] - Complete wiring details for all lighting circuits controlled by SwitchPros
-- [Air System][air-system-arb-compressor-lockers] - ARB locker and compressor wiring details
+- [Air System][air-system-arb-compressor-lockers] - ARB compressor wiring details (the lockers now run from [dash switches][dashboard-controls])
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros
 
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
@@ -227,3 +227,8 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 [switchpros-ground-bus]: ../01-power-systems/05-grounding/03-switchpros-ground-bus.md
 [power-checklist]: ../09-installation/01-power-systems-checklist.md
 [drl-parking]: ../03-lighting-systems/05-drl-parking.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
+[dashboard-controls]: 05-dashboard-controls.md
+[dome-lights]: ../03-lighting-systems/06-dome-lights.md
+
+[^rcr12-trigger]: SwitchPros RCR-Force 12 installation guide (Rev 1.9), pp. 4 and 7: trigger inputs "can be programmed to trigger on an active high (>4.5V) or active low" signal. <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf> (accessed 2026-09-24).

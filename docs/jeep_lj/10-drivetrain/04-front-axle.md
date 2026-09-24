@@ -53,7 +53,7 @@ tags:
 | Locker | ARB RD166 Air Locker[^rd166] |
 | Spline | 35 |
 | Carrier Series | 4-series (4.56 & up)[^rd166] |
-| Control | SwitchPros Button 9, OUTPUT-17 |
+| Control | Front locker dash switch (fed from the rear switch) |
 
 See [Air Lockers][air-lockers] for wiring, air line routing, and operation.
 

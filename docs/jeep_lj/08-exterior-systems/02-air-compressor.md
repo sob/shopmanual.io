@@ -128,11 +128,13 @@ SwitchPros OUTPUT-11 (Button 11) provides a switched 12V control signal; the com
 **Port Assignments:**
 
 1. **Input:** Compressor output → manifold input
-2. **Output 1:** Manifold → Front locker solenoid (1/4" air line)
-3. **Output 2:** Manifold → Rear locker solenoid (1/4" air line)
+2. **Output 1:** Manifold → front locker solenoid, mounted at the manifold → 1/4" air line to the front axle
+3. **Output 2:** Manifold → rear locker solenoid, mounted at the manifold → 1/4" air line to the rear axle
 4. **Output 3:** Manifold → [Rear Air Chuck Plate][rear-air-chuck] (1/4" air line)
 5. **Output 4:** Manifold → Pressure gauge (0-200 PSI, panel-mounted)
 6. **Output 5:** Manifold → Pressure switch (ARB 180901)
+
+The locker solenoids mount at the manifold, near the air supply, as ARB specifies. Their switches are on the dash; see [Air Lockers][air-lockers].
 
 ---
 

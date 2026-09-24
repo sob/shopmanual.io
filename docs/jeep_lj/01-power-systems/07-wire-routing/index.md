@@ -168,7 +168,7 @@ J1939 CAN High/Low wires tap into Cummins harness at firewall punch-through, the
 
 | Routing Path                     | Circuits                         | Method         | Notes                         |
 | :------------------------------- | :------------------------------- | :------------- | :---------------------------- |
-| **Cab → Cargo**                       | Rear lights, compressor, lockers | {{ tbd(63) }} | Under seats or floor channels |
+| **Cab → Cargo**                       | Rear lights, compressor          | {{ tbd(63) }} | Under seats or floor channels |
 | **Passenger rear wheel well → Cargo** | SwitchPros rear outputs          | {{ tbd(63) }} | Rear auxiliary power (avoid exposed frame rail) |
 
 ---

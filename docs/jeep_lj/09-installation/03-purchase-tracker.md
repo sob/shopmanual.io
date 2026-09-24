@@ -191,6 +191,7 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | NPT-to-Hose Adapter Fittings (AMOT to intake) | Generic | ~$25 | High | Size per measured turbo inlet - [Runaway Protection][runaway-protection] |
 | 3/16" Copper-Nickel Brake Hardline + Fittings + Armor | Generic / AGS | ~$60-90 | High | Caliper-side hybrid: armored hardline routed inside frame rail + 1/2-20 IF inverted-flare fittings at MC; axle-side flex length separate ({{ tbd(86) }}) - [iBooster][ibooster] |
 | Heated Seat Switches (2× Toyota-style ON/OFF) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout; wire to BODY PDU CB45/CB42 via K21/K22 relays - [Dashboard][dashboard] |
+| Air Locker Switches (2× Toyota-style latching ON/OFF, front + rear) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout (not ARB's 21×36.5 mm); BODY PDU CB44 via K27, front fed from rear per ARB - [Dashboard][dashboard] |
 | Driver-side Firewall Grommet (heavy power) | Steele Rubber or equiv | ~$10-20 | High | ~1.5" OD bundle (3× 2/0 AWG H2 cables); new driver-side penetration - [Firewall Ingress][firewall-ingress] |
 | Passenger-side Firewall Grommet (H1) | Steele Rubber or equiv | ~$15-25 | High | Sealed 2-piece, ~1.5" OD H1 bundle (~1.75" hole), continuous run - [Firewall Ingress][firewall-ingress] |
 | Axle breather relocation kit + braided line (both axles) | Generic | — | High | Route high into the engine bay; locate before the truss weld - [Front Axle][front-axle], [Rear Axle][rear-axle] |

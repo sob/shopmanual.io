@@ -25,6 +25,16 @@ DRL on with ignition, off when either beam is on. Parking/tail markers follow th
 
 **Note:** Pin 7 is the dedicated 12V switched input (physical pin), different from In 7 which is a digital input channel. See [PMU Inputs][pmu-inputs] for complete pin assignments.
 
+### GPS Power (Output 14)
+
+```text
+IF (Pin7_IgnitionRUN == ON)
+  THEN Out14_GPS = ON
+ELSE Out14_GPS = OFF
+```
+
+The Garmin Tread 2 follows the ignition, with no switch (owner decision 2026-09-24). Its internal battery covers short key-off stops. See [Navigation][navigation].
+
 ### A/C Clutch Logic (Output 17)
 
 ```text
@@ -160,3 +170,4 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [gauge-cluster]: ../../02-engine-systems/09-gauge-cluster/index.md
 [transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
 [drl-parking]: ../../03-lighting-systems/05-drl-parking.md
+[navigation]: ../../07-communication-systems/05-navigation.md
