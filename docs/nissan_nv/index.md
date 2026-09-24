@@ -12,7 +12,7 @@ factory wiring. The van runs a **12 V** system: an Odyssey AGM Group 34 START
 battery and a second Odyssey AGM Group 34 as the AUX house battery, in a
 Genesis Offroad dual battery tray with a Redarc BCDC Alpha 50 DC-DC charger
 between them. The AUX battery feeds two switch panels, Rear Powerswitch (A)
-and (B), through a 200 A SGP32 relay on ignition. An Engine Bay Powerswitch for
+and (B), through a 200 A SGP32 relay, and can run with the key off. An Engine Bay Powerswitch for
 the KC exterior lighting is planned.
 
 Documentation for this build started as draw.io drawings rather than written

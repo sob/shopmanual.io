@@ -14,8 +14,9 @@ protection, so **every branch conductor must be sized for 30 A**, not for the
 load's expected draw.
 
 Two panels are installed today, **Rear Powerswitch (A)** and **Rear
-Powerswitch (B)**. Both are fed from the AUX battery through the SGP32 relay,
-which is ignition-switched (see [Batteries & Charging](02-batteries-charging.md#sgp32-relay)).
+Powerswitch (B)**. Both are fed from the AUX battery through the SGP32 relay
+(see [Batteries & Charging](02-batteries-charging.md#sgp32-relay)), and their
+circuits can run with the key off.
 A third panel, the **Engine Bay Powerswitch**, is planned.
 
 ![Nissan NV 3500 as built - Rear Powerswitch (A) and (B) circuit assignments](../images/van-as-built.png)

@@ -135,7 +135,6 @@ Both of these come out of the Starlink path:
 - [ ] Measure real-world draw at 12 V (idle, streaming, snow melt) and record it here
 - [ ] Record the wire gauge and run length for the circuit 6 feed - it must be rated for the PowerSwitch's 30 A output, not just the expected draw
 - [ ] Confirm the fuse on the Garmin PowerSwitch's own battery feed (Garmin's manual references a 125 A fuse on the supplied red power cable) - tracked in [Batteries & Charging](02-batteries-charging.md#sgp32-relay)
-- [ ] Starlink only runs with the key on, because the rear panels are fed through the ignition-switched SGP32 relay - decide whether that is acceptable
 - [ ] Confirm the re-terminated dish cable is wired to Starlink's pinout, and record its run length from the door to the roof mount
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4

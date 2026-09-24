@@ -22,7 +22,7 @@ Where they disagree with As Built, As Built wins.
 
 What is in the van today. Two Odyssey AGM Group 34 batteries sit in a Genesis
 Offroad dual tray with the BCDC Alpha 50. AUX feeds Rear Powerswitch (A) and
-(B) through the SGP32 relay on ignition. The AUX isolator, the Engine Bay
+(B) through the SGP32 relay; the rear circuits run key-off. The AUX isolator, the Engine Bay
 Powerswitch, and power for the Nvidia Shields are shown dashed as planned or
 TBD. Written up in [Batteries & Charging](../01-power-systems/02-batteries-charging.md)
 and [Switch Panels](../01-power-systems/03-switch-panels.md).

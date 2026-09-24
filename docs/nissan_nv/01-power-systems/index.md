@@ -10,7 +10,7 @@ hide:
 The van is a **12 V** system. Two Odyssey AGM Group 34 batteries, one START and
 one AUX, sit in a Genesis Offroad dual battery tray with a Redarc BCDC Alpha 50
 DC-DC charger between them. The AUX battery feeds the rear switch panels
-through a 200 A SGP32 relay on ignition.
+through a 200 A SGP32 relay. The rear circuits can run with the key off.
 
 ![Nissan NV 3500 as built - batteries, SGP32 relay, and both rear switch panels](../images/van-as-built.png)
 
@@ -32,7 +32,7 @@ the expected load.
 | **Rear Powerswitch (B)** | Installed | Rear | 1 radar detector; 2-6 spare |
 | **Engine Bay Powerswitch** | Planned | Engine bay | KC 50" light bar, reverse, bumper (x2), rock, and fog lights |
 
-Both rear panels are fed from AUX through the ignition-switched SGP32 relay.
+Both rear panels are fed from AUX through the SGP32 relay and can run key-off.
 The **Front Powerswitch** on the *Devices* drawing does not exist. The
 circuit-by-circuit detail is in [Switch Panels](03-switch-panels.md).
 
