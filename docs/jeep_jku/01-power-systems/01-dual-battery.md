@@ -11,7 +11,7 @@ tags:
 
 /// html | div.product-info
 
-**Vehicle:** 2012 Jeep Wrangler JKU, 3.6L
+**Vehicle:** 2012 Jeep Wrangler JKU Rubicon, 3.6L
 
 **Kit:** Genesis Offroad JK Dual Battery Kit, an **older generation** (earlier than the current Gen 3), with the Genesis smart isolator
 

@@ -7,7 +7,7 @@ hide:
 
 ## Project Overview
 
-A 2012 Jeep Wrangler JK Unlimited with the 3.6L. Documentation starts with
+A 2012 Jeep Wrangler JK Unlimited Rubicon with the 3.6L, with factory electric front and rear lockers. Documentation starts with
 the power system:
 
 - A **Genesis Offroad dual battery system**, an older-generation kit with Genesis's own smart isolator, holding two Odyssey AGM Group 34 batteries. There is no DC-DC charger.
