@@ -11,94 +11,85 @@ tags:
 
 /// html | div.product-info
 
-**Kit:** Genesis Offroad JK Dual Battery Kit, with the Genesis smart combiner (generation to be confirmed)
+**Vehicle:** 2012 Jeep Wrangler JKU, 3.6L
 
-**Part Number:** 131-JKDBK2AG3 is the current Gen 3 kit[^genesis-gen3]. Confirm this against the installed kit.
+**Kit:** Genesis Offroad JK Dual Battery Kit, an **older generation** (earlier than the current Gen 3), with the Genesis smart isolator
 
-**Product Page:** [Gen 3 JK Dual Battery Kit][genesis-gen3]
+**Part Number:** Not recorded
 
 **Install Video:** [Genesis Offroad installation videos][genesis-install]
 
-**Charging Between Batteries:** Genesis smart combiner only. There is **no DC-DC charger**. The Nissan NV's Genesis tray pairs with a REDARC BCDC Alpha 50 ([NV Batteries & Charging][nv-batteries]), but the JK does not use one.
+**Charging Between Batteries:** Genesis smart isolator only. There is **no DC-DC charger**. The Nissan NV's Genesis tray pairs with a REDARC BCDC Alpha 50 ([NV Batteries & Charging][nv-batteries]), but the JK does not use one.
 
-**Batteries:** Two matching Group 34 (make and model not yet recorded)
+**Batteries:** Two Odyssey AGM Group 34, the same as the [Nissan NV][nv-batteries]
 
 ///
 
 ## How It Works {#how-it-works}
 
-The combiner links the two batteries while charging and separates them when
-voltage falls. Genesis says it separates the batteries once voltage stays
-below ~12.7 V for about a minute[^genesis-gen3]. With the engine off,
-accessories on the power bus bar then draw only from the AUX battery, and the
-cranking battery is held in reserve.
+The older kit's smart isolator connects the batteries once the cranking
+battery reaches 13.2 V, so the alternator charges both batteries. It
+separates them when the cranking battery falls to 12.7 V, which keeps enough
+charge in the cranking battery to start the engine[^tft].
 
-The power bus bar is on the **AUX** side. Genesis's solar FAQ says a charger
-on the bus bars charges the auxiliary battery first, and reaches the cranking
-battery only once the combiner links them[^genesis-gen3].
+Accessories on the kit's power and ground bus bars run from the AUX
+battery[^tft].
 
-| Boost switch mode | Behavior[^genesis-gen3] |
-| :---------------- | :---------------------- |
-| **Auto** | Links the batteries automatically based on their voltage |
-| **On** | Links the batteries manually, like jumper cables, to help start the engine |
-| **Off** | Separates the batteries manually |
+**Start Boost button:** pressing it connects both batteries for 1 minute,
+like built-in jumper cables. The system then returns to automatic
+mode[^tft].
 
 ---
 
 ## Specifications {#specifications}
 
-| Item | Value | Source |
-| :--- | :---- | :----- |
-| Combiner rating, current Gen 3 | 300 A continuous; 500 A for 5 min; 2,000 A for 5 s | [^genesis-gen3] |
-| Combiner rating, older listing | "200 Amp Isolator" in a reseller listing for the same P/N | [^dales] |
-| Inter-battery cable | 2 AWG pure copper welding cable, tin-plated copper lugs | [^genesis-gen3] |
-| Bus bars | Positive and negative, each with 3/8", 5/16", and 1/4" studs plus three #10 screws | [^genesis-gen3] |
-| Batteries | Matching Group 34 required, not included. Optima is not compatible. | [^genesis-gen3] |
-| Battery orientation | Group 34R has its posts in the wrong orientation | [^genesis-diy] |
-| Fitment | 2007-2011 and 2012-2018 variants | [^genesis-gen3] |
+These figures are for the older kit, from a reseller listing[^tft].
 
-!!! warning "Two combiner ratings in circulation"
-    Genesis's current page rates the combiner at 300 A continuous. A reseller
-    listing for the same part number still says 200 A. The power hub has
-    changed across revisions, so read the rating off the label on the
-    installed unit before relying on either figure (see Outstanding Items).
+| Item | Value |
+| :--- | :---- |
+| Isolator rating | Sold with either a **standard 85 A** or an **upgraded 200 A** isolator. Which one this JK has is not yet known. |
+| Isolator connect / separate | Connects at 13.2 V; separates at 12.7 V (cranking battery) |
+| Inter-battery cable | Flexible 2 AWG |
+| Bus bars | Power and ground. High-amp loads such as a winch go on the large center post; smaller loads go on the screw terminals. |
+| Batteries | Any Group 34 |
+| Kit contents | Tray, top lid, smart isolator, boost switch, power and ground bus bars, all wiring, fuse box mount, evap solenoid mount and hoses |
 
-**Maintenance charging:** Genesis says to connect a charger to the factory
-positive cable on the cranking battery and the factory negative cable on the
-AUX battery[^genesis-gen3].
+!!! note "Current Gen 3 specs do not apply"
+    The current Gen 3 kit (P/N 131-JKDBK2AG3) has a 300 A combiner and an
+    Auto/On/Off boost switch[^genesis-gen3]. This JK has the older kit, so
+    use the 85 A or 200 A rating printed on the installed isolator instead.
 
 ---
 
-## Loads on the Bus Bars {#loads}
+## Loads {#loads}
 
-| Load | Bus bar | State | Notes |
-| :--- | :------ | :---- | :---- |
-| SwitchPros SP-9100 | Power (AUX), proposed | Planned | 125 A in-line fuse on the SwitchPros battery cable. See [SwitchPros SP-9100][sp9100] |
-| Existing accessories | - | Not yet inventoried | See Outstanding Items |
+| Load | Connection | State | Notes |
+| :--- | :--------- | :---- | :---- |
+| SwitchPros SP-9100 | **Direct to the AUX battery posts**, not the bus bars | Planned | Supplied 4 AWG cable with a 125 A in-line fuse. See [SwitchPros SP-9100][sp9100] |
+| Power and ground bus bars | - | Nothing connected (2026-09-24) | - |
+
+The SP-9100 connects to the AUX battery, not to the isolator, so its load
+never passes through the isolator.
 
 ---
 
 ## Outstanding Items
 
-- [ ] Confirm the installed kit's generation and part number
-- [ ] Read the combiner's continuous rating off the installed unit's label (300 A current Gen 3, or 200 A older listing)
-- [ ] Record the JK's model year and engine. The kit ships in 2007-2011 and 2012-2018 variants.
-- [ ] Record both batteries' make, model, and Ah rating
-- [ ] Record where the boost switch is mounted, and confirm it is wired
-- [ ] Inventory everything already landed on the power and ground bus bars, with each wire's gauge and fuse
+- [ ] Read the isolator's rating (85 A or 200 A) off its label, and record the kit's part number if it is marked
+- [ ] Record the exact Odyssey model number and Ah rating of both batteries
+- [ ] Record where the Start Boost button is mounted, and confirm it works
+- [ ] Identify which physical battery in the tray is AUX, so the SP-9100 lands on the correct posts
 
 ## Related Documentation
 
 - [Power Systems][power-systems] - System overview
-- [SwitchPros SP-9100][sp9100] - Main accessory load on the AUX side
-- [Nissan NV Batteries & Charging][nv-batteries] - The same Genesis tray, run with a BCDC Alpha 50
+- [SwitchPros SP-9100][sp9100] - Main accessory load, wired directly to the AUX battery
+- [Nissan NV Batteries & Charging][nv-batteries] - The same Genesis tray and batteries, run with a BCDC Alpha 50
 
-[genesis-gen3]: https://www.genesisoffroad.com/products/gen3-jk-dual-battery-kit
 [genesis-install]: https://www.genesisoffroad.com/pages/installation-video
 [power-systems]: index.md
 [sp9100]: 02-switchpros-sp9100.md
 [nv-batteries]: ../../nissan_nv/01-power-systems/02-batteries-charging.md
 
-[^genesis-gen3]: Genesis Offroad, "2007-2018 Jeep Wrangler JK Gen 3 Dual Battery System" product page, SKU 131-JKDBK2AG3, <https://www.genesisoffroad.com/products/gen3-jk-dual-battery-kit> (accessed 2026-09-24). Sources the combiner rating, the ~12.7 V separation behavior, the boost switch modes, cable, bus bar, battery, and fitment details, and the solar and maintenance-charger FAQs.
-[^dales]: Dale's Super Store listing, "Genesis Offroad Gen 3 Dual Battery System 200 Amp Isolator 131-JKDBK2AG3" (accessed 2026-09-24): <https://dalessuperstore.com/i-23914212-genesis-offroad-gen-3-dual-battery-system-200-amp-isolator-131-jkdbk2ag3-2012-2018-jeep-wrangler-jk-3-6l.html>. The 200 A figure appears only in the listing title.
-[^genesis-diy]: Genesis Offroad, "2007-2018 Jeep Wrangler JK DIY Kit" product page, SKU 131-JKDIY, <https://www.genesisoffroad.com/products/jk-diy-dual-battery-kit> (accessed 2026-09-24).
+[^tft]: Toys For Trucks listing, "JK Dual Battery Kit 200 Amp Isolator 07-11 Wrangler JK Genesis Offroad" (P/N GEN-131-JKDBKE2A-FWMW), <https://www.toysfortrucksofficial.com/product/jk_dual_battery_kit_200_amp_isolator_07_11_wrangler_jk_genesis_offroad> (accessed 2026-09-24). This is the older, pre-Gen 3 kit in its 2007-2011 fitment. It is the source for the 85 A and 200 A isolator options, the 13.2 V and 12.7 V thresholds, the 1-minute Start Boost, the AUX-side bus bars, the 2 AWG inter-battery cable, and the kit contents. The 2012+ version was not checked separately.
+[^genesis-gen3]: Genesis Offroad, "2007-2018 Jeep Wrangler JK Gen 3 Dual Battery System" product page, SKU 131-JKDBK2AG3, <https://www.genesisoffroad.com/products/gen3-jk-dual-battery-kit> (accessed 2026-09-24).

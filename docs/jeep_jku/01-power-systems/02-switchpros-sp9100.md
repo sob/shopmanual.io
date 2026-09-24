@@ -17,15 +17,15 @@ tags:
 
 **Manual:** [SP9100 Rev 2.1 (Nov 2024)][manual-rev21]. An older [Rev 1.6][manual-rev16] also exists.
 
-**Power Source:** Proposed: the power bus bar (AUX side) of the [Genesis dual battery system][dual-battery]. Not yet confirmed.
+**Power Source:** Direct to the AUX battery positive post of the [Genesis dual battery system][dual-battery], not the bus bar (owner decision, 2026-09-24)
 
 **Power Wire:** Supplied battery cable, 2.5 ft 4 AWG welding cable with a 125 A in-line fuse at the battery end[^m-p5]
 
-**Ground:** Supplied 18 AWG black wire, run directly to the battery negative terminal[^m-p4]
+**Ground:** Supplied 18 AWG black wire, run directly to the AUX battery negative post[^m-p4]
 
 **Power Module Location:** Not yet chosen. The module must be within 2 ft of the battery, mounted vertically with the connectors facing outward[^m-p3].
 
-**Switch Panel Location:** Not yet chosen
+**Switch Panel Location:** Center dash or A-pillar, not yet decided. See [Switch Panel Mount](#panel-mount).
 
 **Control Cable:** 10.5 ft, shielded. **Do not cut or splice it**; SwitchPros sells other lengths[^m-p6].
 
@@ -56,11 +56,11 @@ tags:
 
 | Connection | Wire | Source / Destination | Notes |
 | :--------- | :--- | :------------------- | :---- |
-| Battery cable | 4 AWG, supplied, 125 A fuse | Proposed: Genesis power bus bar (AUX) → module stud | **Nothing else may land on the module stud**[^m-p1] |
-| Ground | Black, 18 AWG | Module → battery negative terminal | Must go directly to the battery negative to keep the communications bus quiet[^m-p1]. Whether the Genesis ground bus bar counts as the battery negative is open. |
+| Battery cable | 4 AWG, supplied, 125 A fuse | AUX battery positive post → module stud. The fuse holder sits at the battery end. | **Nothing else may land on the module stud**[^m-p1] |
+| Ground | Black, 18 AWG | Module → AUX battery negative post | Must go directly to the battery negative to keep the communications bus quiet[^m-p1] |
 | Ignition | Light blue | Open: an ignition- or accessory-switched fuse tap | Enables switches programmed as Ignition (the default), and turns on the panel backlight[^m-p4] [^m-p8] |
-| Lights / Trigger 2 | White | Open: parking/marker light circuit | Dims the backlight with the dash lights. It can instead be set up as a second trigger for up to 4 outputs[^m-p4] [^m-p10]. Optional. |
-| Trigger 1 | Pink | Unassigned | Turns on up to 4 outputs from an external signal, active high or low[^m-p5]. Optional. |
+| Lights / Trigger 2 | White | Wanted: parking/marker light circuit, to dim the backlight | Dims the backlight with the dash lights. It can instead be set up as a second trigger for up to 4 outputs[^m-p4] [^m-p10]. See [Trigger Inputs](#trigger-inputs). |
+| Trigger 1 | Pink | Wanted: reverse or high beam | Turns on up to 4 outputs from an external signal, active high or low[^m-p5]. See [Trigger Inputs](#trigger-inputs). |
 | Outputs 1-8 | 14 AWG | Module → loads | Load grounds go to the frame or the battery negative[^m-p3] |
 
 !!! note "Ignition input and Bluetooth"
@@ -74,6 +74,37 @@ tags:
     runs at full current, SwitchPros recommends 12 or 10 AWG[^m-p3]. Size each
     run to its actual load, and set that output's current limit to protect
     the wire. This matches the owner's minimal-wire preference from the LJ build.
+
+---
+
+## Trigger Inputs {#trigger-inputs}
+
+The owner wants three things from the inputs: a **reverse** trigger, a
+**high-beam** trigger, and **backlight dimming**. The SP-9100 has only two
+inputs. Pink is Trigger 1. White is either the backlight dimmer or Trigger 2,
+not both: SwitchPros says Lights/T2 must stay disabled as a trigger if it is
+used to dim the backlight, and the backlight can only be adjusted while the
+white wire sees 12 V[^m-p5] [^m-p10].
+
+| Option | Pink (Trigger 1) | White (Lights/T2) | Given up |
+| :----- | :--------------- | :---------------- | :------- |
+| A | Reverse | Backlight dimming | High-beam trigger |
+| B | High beam | Backlight dimming | Reverse trigger |
+| C | Reverse | High beam (as Trigger 2) | Backlight dimming. The backlight stays at its fixed brightness. |
+
+Whichever function is given up can still run from a panel switch by hand.
+
+---
+
+## Switch Panel Mount {#panel-mount}
+
+| Location | Mount | Fitment | Notes |
+| :------- | :---- | :------ | :---- |
+| Center, top of dash | Motobilt MB8002 Dash Mount | Listed as "Custom Fit for 07-11 Jeep JK/JKU"[^motobilt]. **A 2012 is outside the listed fitment.** | Confirm with Motobilt that it fits a 2012 before buying |
+| A-pillar | SwitchPros A-pillar replacement panel | "fits 2011-2017 Jeep Wrangler JK", and works with the SP9100[^sp-apillar] | Replaces the A-pillar trim panel. Comes pre-machined for the switch panel. |
+
+The 10.5 ft control cable cannot be shortened or lengthened[^m-p6]. Check
+that it reaches the chosen location from the power module before committing.
 
 ---
 
@@ -97,19 +128,18 @@ Any load over 20 A must go on switches 5-8.
 ## Outstanding Items
 
 - [ ] Assign loads to switches 1-8, recording each load's draw, then set each output's current limit and its Battery or Ignition mode
-- [ ] Confirm the feed: the Genesis power bus bar (AUX) or the AUX positive post
-- [ ] Decide whether the 18 AWG ground lands on the AUX negative post or the Genesis ground bus bar
-- [ ] Choose the power module location, within 2 ft of the battery, vertical, connectors facing outward, clear of the exhaust
-- [ ] Choose the switch panel location and the mount type (surface or recessed)
-- [ ] Pick the ignition-switched fuse for the light blue wire's add-a-circuit. The wire must read 0 V with the key off.
-- [ ] Decide whether the white wire dims the backlight from the parking lights or serves as Trigger 2
-- [ ] Decide whether Trigger 1 is used, and for what (for example high beams or reverse)
+- [ ] Choose the power module location, within 2 ft of the AUX battery, vertical, connectors facing outward, clear of the exhaust
+- [ ] Plan how the 4 AWG cable and the 18 AWG ground reach the AUX posts under the Genesis top lid. The kit includes extra grommets for accessory wires.
+- [ ] Choose the switch panel location: center dash (Motobilt MB8002, confirm 2012 fit first) or A-pillar (SwitchPros replacement panel)
+- [ ] Pick the ignition-switched fuse in the 2012 JK's TIPM for the light blue wire's add-a-circuit. The wire must read 0 V with the key off.
+- [ ] Choose trigger option A, B, or C (see [Trigger Inputs](#trigger-inputs)), and pick which outputs each trigger turns on
+- [ ] Find the tap points on the 2012 JK for the chosen signals (reverse lamp, high beam, parking lamp), and confirm each one is +12 V when active
 - [ ] Set the low-voltage disconnect threshold (11.0, 11.5, or 12.0 V) to suit the AUX battery type
 - [ ] Choose the firewall pass-through for the 10.5 ft control cable. Removing the black 4-pin connector is allowed; the white connector is not serviceable.
 
 ## Related Documentation
 
-- [Dual Battery System][dual-battery] - Genesis kit and the proposed power source
+- [Dual Battery System][dual-battery] - Genesis kit and the AUX battery that feeds the SP-9100
 - [Power Systems][power-systems] - System overview
 - [LJ SwitchPros SP-1200][lj-sp1200] - The larger RCR-Force 12 on the LJ build
 
@@ -129,3 +159,5 @@ Any load over 20 A must go on switches 5-8.
 [^m-p8]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), p. 8, §7.1 "Configure Switches" (Low Voltage Disconnect).
 [^m-p9]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), p. 9, §7.7 "Set Auto Sleep Settings".
 [^m-p10]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), pp. 9-10, §7.8 "External Trigger Setup".
+[^motobilt]: Motobilt, "Dash Mount for Jeep JK/JKU 07-11 for Switch-Pros Unit", MB8002, <https://motobilt.com/products/dash-mount-for-switch-pros-controller-for-jeep-jk-jku> (accessed 2026-09-24). The page lists 2007-2011 fitment only, and Motobilt's switch panel mount collection (<https://motobilt.com/collections/switch-panel-mount>) has no JK mount for 2012 or later.
+[^sp-apillar]: Switch-Pros, "A-pillar replacement panel", <https://store.switchpros.com/a-pillar-replacement-panel/> (accessed 2026-09-24). "Black, fits 2011-2017 Jeep Wrangler JK"; "Compatible with SP8100-B and SP9100 systems"; switch panel not included.
