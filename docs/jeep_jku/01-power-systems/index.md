@@ -20,7 +20,7 @@ the main accessory switch panel, will wire directly to the AUX battery.
 
 | Device | State | Feed | Controls |
 | :----- | :---- | :--- | :------- |
-| **SwitchPros SP-9100** | Purchased, not installed | Direct to the AUX battery posts, 4 AWG with a 125 A fuse | 8 switched outputs: 4 × 20 A, 4 × 35 A, 125 A total. Loads not yet assigned. |
+| **SwitchPros SP-9100** | Purchased, not installed | Direct to the AUX battery posts, 4 AWG with a 125 A fuse | 8 switched outputs: 4 × 20 A, 4 × 35 A, 125 A total. Light bar, rock lights, reverse lights, and front and rear lockers; 3 spare. |
 | **Genesis bus bars** | Nothing connected | AUX battery, through the kit | - |
 
 ---
@@ -28,7 +28,7 @@ the main accessory switch panel, will wire directly to the AUX battery.
 ## Sub-sections
 
 - **[1.1 - Dual Battery System](01-dual-battery.md)** - Older Genesis Offroad kit, smart isolator, Start Boost, Odyssey batteries
-- **[1.2 - SwitchPros SP-9100](02-switchpros-sp9100.md)** - 8-switch panel: specs, wiring, trigger options, mounts, switch assignments
+- **[1.2 - SwitchPros SP-9100](02-switchpros-sp9100.md)** - 8-switch panel: specs, wiring, triggers, A-pillar mount, switch assignments
 
 ---
 

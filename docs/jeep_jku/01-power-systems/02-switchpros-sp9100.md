@@ -25,7 +25,7 @@ tags:
 
 **Power Module Location:** Not yet chosen. The module must be within 2 ft of the battery, mounted vertically with the connectors facing outward[^m-p3].
 
-**Switch Panel Location:** Center dash or A-pillar, not yet decided. See [Switch Panel Mount](#panel-mount).
+**Switch Panel Location:** A-pillar, in the SwitchPros A-pillar replacement panel (owner decision, 2026-09-24). See [Switch Panel Mount](#panel-mount).
 
 **Control Cable:** 10.5 ft, shielded. **Do not cut or splice it**; SwitchPros sells other lengths[^m-p6].
 
@@ -88,8 +88,8 @@ backlight stays at one fixed brightness.
 
 | Input | Wire | Signal | App setup | Outputs it turns on |
 | :---- | :--- | :----- | :-------- | :------------------ |
-| Trigger 1 | Pink | Reverse lamp | Enable. Active high, to be confirmed with a meter. | Not yet assigned (up to 4) |
-| Trigger 2 | White | High beam | Lights/T2 set to Enable, converting it to a trigger. Active high, to be confirmed with a meter. | Not yet assigned (up to 4) |
+| Trigger 1 | Pink | Reverse lamp | Enable. Active high, to be confirmed with a meter. | Switch 3, reverse lights |
+| Trigger 2 | White | High beam | Lights/T2 set to Enable, converting it to a trigger. Active high, to be confirmed with a meter. | Switch 1, light bar (proposed) |
 
 Outputs that a trigger turns on can still be switched on and off from the
 panel[^m-p5].
@@ -98,44 +98,60 @@ panel[^m-p5].
 
 ## Switch Panel Mount {#panel-mount}
 
-| Location | Mount | Fitment | Notes |
-| :------- | :---- | :------ | :---- |
-| Center, top of dash | Motobilt MB8002 Dash Mount | Listed as "Custom Fit for 07-11 Jeep JK/JKU"[^motobilt]. **A 2012 is outside the listed fitment.** | Confirm with Motobilt that it fits a 2012 before buying |
-| A-pillar | SwitchPros A-pillar replacement panel | "fits 2011-2017 Jeep Wrangler JK", and works with the SP9100[^sp-apillar] | Replaces the A-pillar trim panel. Comes pre-machined for the switch panel. |
+**Chosen: the SwitchPros A-pillar replacement panel, P/N PSPLH-1** (owner
+decision, 2026-09-24). It is listed as "fits 2011-2017 Jeep Wrangler JK" and
+works with the SP9100[^sp-apillar]. It replaces the A-pillar trim panel and
+comes pre-machined for the switch panel. The switch panel itself is not
+included.
+
+The alternative was Motobilt's MB8002 center dash mount, which is listed for
+2007-2011 JKs only[^motobilt].
 
 The 10.5 ft control cable cannot be shortened or lengthened[^m-p6]. Check
-that it reaches the chosen location from the power module before committing.
+that it reaches the A-pillar before fixing the power module's location.
 
 ---
 
 ## Switch Assignments {#switch-assignments}
 
-| Switch | Rating | Load | Draw | Current limit | Mode |
-| :----: | :----: | :--- | :--: | :-----------: | :--- |
-| 1 | 20 A | Unassigned | - | - | - |
-| 2 | 20 A | Unassigned | - | - | - |
-| 3 | 20 A | Unassigned | - | - | - |
-| 4 | 20 A | Unassigned | - | - | - |
-| 5 | 35 A | Unassigned | - | - | - |
-| 6 | 35 A | Unassigned | - | - | - |
-| 7 | 35 A | Unassigned | - | - | - |
-| 8 | 35 A | Unassigned | - | - | - |
+Assigned by the owner, 2026-09-24. Mode is the SwitchPros default until
+changed[^m-p8].
 
-Any load over 20 A must go on switches 5-8.
+| Switch | Rating | Load | Draw | Current limit | Mode | Trigger |
+| :----: | :----: | :--- | :--: | :-----------: | :--- | :------ |
+| 1 | 20 A | Light bar | Not recorded | - | Ignition | Trigger 2, high beam (proposed) |
+| 2 | 20 A | Rock lights | Not recorded | - | Ignition | - |
+| 3 | 20 A | Reverse lights | Not recorded | - | Ignition | Trigger 1, reverse |
+| 4 | 20 A | Front locker | Not recorded | - | Ignition | - |
+| 5 | 35 A | Rear locker | Not recorded | - | Ignition | - |
+| 6 | 35 A | Spare | - | - | - | - |
+| 7 | 35 A | Spare | - | - | - | - |
+| 8 | 35 A | Spare | - | - | - | - |
+
+- **Loads over about 17 A go on switches 5-8.** Switches 1-4 top out at
+  20 A, and SwitchPros recommends setting the current limit 15-20% above the
+  load's maximum draw[^m-p2] [^m-p3]. Check the light bar's draw first. If
+  it is more than about 17 A, move it to switch 6, 7, or 8.
+- **Lockers: leave Memory off (the default).** With Memory on, a switch that
+  was on at shutdown turns itself back on when the ignition returns[^m-p8].
+- **Switch 5 has two output wires.** If the rear locker draws under 17 A,
+  one wire is enough[^m-p3]. Insulate the unused wire, since it is live
+  whenever the switch is on.
 
 ---
 
 ## Outstanding Items
 
-- [ ] Assign loads to switches 1-8, recording each load's draw, then set each output's current limit and its Battery or Ignition mode
+- [ ] Record each load's part number and maximum draw, then set each output's current limit. Move the light bar to switch 6-8 if it draws more than about 17 A.
+- [ ] Record the make and type of both lockers, since that sets how each one is wired and what it draws (for example, an air locker needs a compressor and solenoid)
 - [ ] Choose the power module location, within 2 ft of the AUX battery, vertical, connectors facing outward, clear of the exhaust
 - [ ] Plan how the 4 AWG cable and the 18 AWG ground reach the AUX posts under the Genesis top lid. The kit includes extra grommets for accessory wires.
-- [ ] Choose the switch panel location: center dash (Motobilt MB8002, confirm 2012 fit first) or A-pillar (SwitchPros replacement panel)
+- [ ] Order the SwitchPros A-pillar replacement panel (PSPLH-1), and confirm which A-pillar, driver or passenger, it replaces
 - [ ] Pick the ignition-switched fuse in the 2012 JK's TIPM for the light blue wire's add-a-circuit. The wire must read 0 V with the key off.
-- [ ] Pick which outputs Trigger 1 (reverse) and Trigger 2 (high beam) each turn on
+- [ ] Confirm that Trigger 2 (high beam) should turn on the light bar (switch 1)
 - [ ] Find the reverse-lamp and high-beam tap points on the 2012 JK, and meter each one to set active high or active low
 - [ ] Set the low-voltage disconnect threshold (11.0, 11.5, or 12.0 V) to suit the AUX battery type
-- [ ] Choose the firewall pass-through for the 10.5 ft control cable. Removing the black 4-pin connector is allowed; the white connector is not serviceable.
+- [ ] Plan the 10.5 ft control cable route from the power module, through the firewall, to the A-pillar. Removing the black 4-pin connector is allowed; the white connector is not serviceable.
 
 ## Related Documentation
 
@@ -160,4 +176,4 @@ Any load over 20 A must go on switches 5-8.
 [^m-p9]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), p. 9, §7.7 "Set Auto Sleep Settings".
 [^m-p10]: SwitchPros SP9100 installation manual, Rev 2.1 (Nov 2024), pp. 9-10, §7.8 "External Trigger Setup".
 [^motobilt]: Motobilt, "Dash Mount for Jeep JK/JKU 07-11 for Switch-Pros Unit", MB8002, <https://motobilt.com/products/dash-mount-for-switch-pros-controller-for-jeep-jk-jku> (accessed 2026-09-24). The page lists 2007-2011 fitment only, and Motobilt's switch panel mount collection (<https://motobilt.com/collections/switch-panel-mount>) has no JK mount for 2012 or later.
-[^sp-apillar]: Switch-Pros, "A-pillar replacement panel", <https://store.switchpros.com/a-pillar-replacement-panel/> (accessed 2026-09-24). "Black, fits 2011-2017 Jeep Wrangler JK"; "Compatible with SP8100-B and SP9100 systems"; switch panel not included.
+[^sp-apillar]: Switch-Pros, "A-pillar replacement panel", <https://store.switchpros.com/a-pillar-replacement-panel/> (accessed 2026-09-24). "Black, fits 2011-2017 Jeep Wrangler JK"; "Compatible with SP8100-B and SP9100 systems"; switch panel not included. The part number PSPLH-1 comes from the Offroad Alliance listing, "Jeep JK Switch-Pros A-Pillar Replacement Panel - PSPLH-1", <https://offroadalliance.com/Jeep-JK-APillar-Replacement-Panel/> (accessed 2026-09-24).

@@ -30,4 +30,4 @@ the power system:
 | Area | State |
 | :--- | :---- |
 | **Dual batteries** | Older [Genesis Offroad kit](01-power-systems/01-dual-battery.md) installed with two Odyssey AGM Group 34 batteries. Isolator rating (85 A or 200 A) still to be read off its label. |
-| **Switch panel** | [SwitchPros SP-9100](01-power-systems/02-switchpros-sp9100.md) purchased, to be fed directly from the AUX battery. Triggers: reverse on the pink wire, high beam on the white wire, no backlight dimming. Still open: center-dash or A-pillar mount, and switch assignments. |
+| **Switch panel** | [SwitchPros SP-9100](01-power-systems/02-switchpros-sp9100.md) purchased, to be fed directly from the AUX battery. Mounts in the SwitchPros A-pillar panel. Switch 1 is the light bar, 2 rock lights, 3 reverse lights, 4 front locker, 5 rear locker, and 6-8 are spare. Reverse (pink) and high beam (white) are triggers, with no backlight dimming. Load draws are not yet recorded. |
