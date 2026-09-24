@@ -59,8 +59,8 @@ tags:
 | Battery cable | 4 AWG, supplied, 125 A fuse | AUX battery positive post → module stud. The fuse holder sits at the battery end. | **Nothing else may land on the module stud**[^m-p1] |
 | Ground | Black, 18 AWG | Module → AUX battery negative post | Must go directly to the battery negative to keep the communications bus quiet[^m-p1] |
 | Ignition | Light blue | Open: an ignition- or accessory-switched fuse tap | Enables switches programmed as Ignition (the default), and turns on the panel backlight[^m-p4] [^m-p8] |
-| Lights / Trigger 2 | White | Wanted: parking/marker light circuit, to dim the backlight | Dims the backlight with the dash lights. It can instead be set up as a second trigger for up to 4 outputs[^m-p4] [^m-p10]. See [Trigger Inputs](#trigger-inputs). |
-| Trigger 1 | Pink | Wanted: reverse or high beam | Turns on up to 4 outputs from an external signal, active high or low[^m-p5]. See [Trigger Inputs](#trigger-inputs). |
+| Lights / Trigger 2 | White | High-beam signal | Set up as **Trigger 2**, turning on up to 4 outputs, so it no longer dims the backlight[^m-p10]. See [Trigger Inputs](#trigger-inputs). |
+| Trigger 1 | Pink | Reverse lamp signal | Turns on up to 4 outputs from an external signal, active high or low[^m-p5]. See [Trigger Inputs](#trigger-inputs). |
 | Outputs 1-8 | 14 AWG | Module → loads | Load grounds go to the frame or the battery negative[^m-p3] |
 
 !!! note "Ignition input and Bluetooth"
@@ -79,20 +79,20 @@ tags:
 
 ## Trigger Inputs {#trigger-inputs}
 
-The owner wants three things from the inputs: a **reverse** trigger, a
-**high-beam** trigger, and **backlight dimming**. The SP-9100 has only two
-inputs. Pink is Trigger 1. White is either the backlight dimmer or Trigger 2,
-not both: SwitchPros says Lights/T2 must stay disabled as a trigger if it is
-used to dim the backlight, and the backlight can only be adjusted while the
-white wire sees 12 V[^m-p5] [^m-p10].
+Both inputs are used as triggers, and backlight dimming is dropped (owner
+decision, 2026-09-24). The white wire can either dim the backlight or act as
+Trigger 2, not both. SwitchPros says Lights/T2 must stay disabled as a trigger
+if it dims the backlight, and the backlight can only be adjusted while the
+white wire sees 12 V[^m-p5] [^m-p10]. With white used as a trigger, the
+backlight stays at one fixed brightness.
 
-| Option | Pink (Trigger 1) | White (Lights/T2) | Given up |
-| :----- | :--------------- | :---------------- | :------- |
-| A | Reverse | Backlight dimming | High-beam trigger |
-| B | High beam | Backlight dimming | Reverse trigger |
-| C | Reverse | High beam (as Trigger 2) | Backlight dimming. The backlight stays at its fixed brightness. |
+| Input | Wire | Signal | App setup | Outputs it turns on |
+| :---- | :--- | :----- | :-------- | :------------------ |
+| Trigger 1 | Pink | Reverse lamp | Enable. Active high, to be confirmed with a meter. | Not yet assigned (up to 4) |
+| Trigger 2 | White | High beam | Lights/T2 set to Enable, converting it to a trigger. Active high, to be confirmed with a meter. | Not yet assigned (up to 4) |
 
-Whichever function is given up can still run from a panel switch by hand.
+Outputs that a trigger turns on can still be switched on and off from the
+panel[^m-p5].
 
 ---
 
@@ -132,8 +132,8 @@ Any load over 20 A must go on switches 5-8.
 - [ ] Plan how the 4 AWG cable and the 18 AWG ground reach the AUX posts under the Genesis top lid. The kit includes extra grommets for accessory wires.
 - [ ] Choose the switch panel location: center dash (Motobilt MB8002, confirm 2012 fit first) or A-pillar (SwitchPros replacement panel)
 - [ ] Pick the ignition-switched fuse in the 2012 JK's TIPM for the light blue wire's add-a-circuit. The wire must read 0 V with the key off.
-- [ ] Choose trigger option A, B, or C (see [Trigger Inputs](#trigger-inputs)), and pick which outputs each trigger turns on
-- [ ] Find the tap points on the 2012 JK for the chosen signals (reverse lamp, high beam, parking lamp), and confirm each one is +12 V when active
+- [ ] Pick which outputs Trigger 1 (reverse) and Trigger 2 (high beam) each turn on
+- [ ] Find the reverse-lamp and high-beam tap points on the 2012 JK, and meter each one to set active high or active low
 - [ ] Set the low-voltage disconnect threshold (11.0, 11.5, or 12.0 V) to suit the AUX battery type
 - [ ] Choose the firewall pass-through for the 10.5 ft control cable. Removing the black 4-pin connector is allowed; the white connector is not serviceable.
 
