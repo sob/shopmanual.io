@@ -6,6 +6,7 @@ This repository contains comprehensive technical documentation for various in-de
 
 - **Jeep LJ Cummins R2.8 Build** - Complete electrical system documentation for engine swap with dual battery system
 - **Nissan NV 3500 Van Build** - 12V accessory electrical system: dual AGM batteries, four switch panels, and Starlink on a DC-fed Advanced Power Supply
+- **Jeep Wrangler JKU** - Early documentation: Genesis Offroad dual battery system and a SwitchPros SP-9100 switch panel
 
 ## Setup
 
