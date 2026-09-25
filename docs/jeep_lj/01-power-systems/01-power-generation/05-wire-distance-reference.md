@@ -99,12 +99,12 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 
 ### Communication (Priority: Low)
 
-| Location/Route             | Purpose                      |
-|:---------------------------|:-----------------------------|
-| STX intercom mounting      | ✓ Dash/behind dash           |
-| GMRS radio mounting        | ✓ Dash (~6 ft to A-pillar antenna) |
-| Ham antenna position       | ✓ Passenger A-pillar (~4 ft to dash) |
-| Rear camera cable path     | ~11 ft (windshield → A-pillar → rear center) |
+| Location/Route         | Purpose                                                                                  |
+| :--------------------- | :--------------------------------------------------------------------------------------- |
+| STX intercom mounting  | ✓ Remote head in the dash; box behind the dash (39 in cable)                             |
+| GMRS radio mounting    | ✓ Overhead, centered on the roll cage (coax to the driver A-pillar antenna not measured) |
+| Ham antenna position   | ✓ Passenger A-pillar (~4 ft to dash)                                                     |
+| Rear camera cable path | ~11 ft (windshield → A-pillar → rear center)                                             |
 
 ### Mounting Locations (Priority: Medium)
 

@@ -25,7 +25,7 @@ tags:
 
 **Manual:** [User Manual][manual-link]
 
-**Mounting:** Behind dash, next to STX intercom
+**Mounting:** Overhead, centered on the roll cage (owner, 2026-09-25), on the U-bracket that comes with the radio
 
 **Power Source:** PMU OUT6 (25A capacity, CONSTANT)
 
@@ -62,16 +62,22 @@ tags:
 
 ## Wiring
 
-| Connection | Wire              | Source            | Notes                                |
-| :--------- | :---------------- | :---------------- | :----------------------------------- |
-| Power (+)  | 14 AWG            | PMU OUT6          | Via firewall grommet                 |
-| Ground (−) | 14 AWG            | START battery neg | Direct connection for RF performance |
-| Antenna    | RG58 coax         | Roof antenna      | Route away from power leads          |
-| Intercom   | Integration cable | STX RADIO port    | Audio/PTT/mute                       |
+| Connection | Wire        | Source                                           | Notes                                                          |
+| :--------- | :---------- | :----------------------------------------------- | :------------------------------------------------------------- |
+| Power (+)  | 14 AWG      | PMU OUT6                                         | Via firewall grommet, then up to the cage; length not measured |
+| Ground (−) | 14 AWG      | START battery neg                                | Direct connection for RF performance; length not measured      |
+| Antenna    | RG58 coax   | Driver A-pillar antenna                          | Route away from power leads                                    |
+| Intercom   | Radio cable | STX-RS RADIO port (intercom box behind the dash) | Audio/PTT/mute                                                 |
 
 ## Installation Notes
 
 - Keep coax length <25 ft for minimal signal loss
+- The hand mic does not work through the intercom. Rugged recommends keeping it in the Jeep for emergencies and powering off the intercom to use it (see [Intercom][intercom]).
+
+## Build Tasks
+
+- [ ] Choose a roll-cage clamp for the G1's U-bracket, centered on the overhead cage tube
+- [ ] Measure the power, ground and coax runs to the overhead mount
 
 ## Outstanding Items
 

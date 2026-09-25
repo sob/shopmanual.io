@@ -109,7 +109,7 @@ The factory TIPM is replaced with discrete, serviceable modules:
 - **[Lighting Control][switchpros]:** SwitchPros SP-1200 for offroad and auxiliary lighting
 - **[Command Touch CT4][ct4]:** Street-legal lighting and turn signal control
 - **[Audio System][audio]:** JL Audio MV800/8i 8-channel amp w/ DSP, JL Audio marine speakers and 2× 8" subs with RGB LED
-- **[Communication][communications]:** Rugged Radio G1 GMRS, STX 4-place intercom, WolfBox dash camera
+- **[Communication][communications]:** Rugged Radio G1 GMRS (overhead on the roll cage), STX Remote Head intercom (knob on the dash), WolfBox dash camera
 - **[Recovery & Air][recovery-air]:** Warn 10,000 lb winch, ARB air lockers, ARB Twin Air Compressor
 
 **[TBD Tracker][tbd-tracker]** — Open items and unresolved specs.

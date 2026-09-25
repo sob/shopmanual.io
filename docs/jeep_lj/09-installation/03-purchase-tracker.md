@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-09-21
+**Last Updated:** 2026-09-25
 
 ---
 
@@ -62,9 +62,10 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 
 Major components - watch for sales, consider financing options.
 
-| Item | Manufacturer | Est. Price | Priority | Notes |
-|:-----|:-------------|:-----------|:---------|:------|
-| Premier Power Welder HO-C28 Alternator (270A) | Premier Power Welder | $899.95 | High | [Product Page][alternator] |
+| Item                                            | Manufacturer         | Est. Price                    | Priority | Notes                                                                    |
+| :---------------------------------------------- | :------------------- | :---------------------------- | :------- | :----------------------------------------------------------------------- |
+| Premier Power Welder HO-C28 Alternator (270A)   | Premier Power Welder | $899.95                       | High     | [Product Page][alternator]                                               |
+| Rugged Radios STX Remote Head intercom (STX-RS) | Rugged Radios        | ~$744 ($875 list, 2026-09-25) | Medium   | Knob on the dash; replaces the ~$400 standard STX - [Intercom][intercom] |
 
 ---
 
@@ -84,7 +85,6 @@ Major components - watch for sales, consider financing options.
 | JL Audio M6-8IB-S-GmTi-i-4 Subwoofer (×2) | JL Audio | ~$700 (pair) | Low | Replaces single M7-12IB plan - [Subwoofer][subwoofer] |
 | JL Audio VXi-BTC JLid Bluetooth Communicator (010-13543-00) | JL Audio (Garmin) | ~$100 | Low | Wireless TüN tuning of MV800/8i from phone/tablet - [Bluetooth Tuning][bt-tuning] |
 | JL Audio MLC-RW LED Controller | JL Audio | ~$250 | Low | [LED Controller][led-controller] |
-| Rugged Radios STX Intercom (4-place) | Rugged Radios | ~$400 | Medium | [Intercom][intercom] |
 | Digital Guard Dawg PBS-I Keyless Ignition Kit | Digital Guard Dawg | ~$200 (est., confirm w/ vendor) | High | ICM + 2 iTag fobs + Start Button + Programming Button + Bypass Card - [Keyless Ignition][keyless] |
 | ARB Aluminum Air Tank (171507, 1-gal 4-port) | ARB | ~$200 | Medium | [Air Compressor][air-compressor] |
 | WolfBox G900 TriPro Dash Camera | WolfBox | ~$200 | Low | [Dash Camera][dash-camera] |

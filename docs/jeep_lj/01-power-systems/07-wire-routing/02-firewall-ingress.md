@@ -54,7 +54,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
-| 1 | GMRS Radio power (+) | 14 AWG | PMU OUT6 | Midland G1 | #16 |
+| 1 | GMRS Radio power (+) | 14 AWG | PMU OUT6 | Rugged G1 | #16 |
 | 2 | **[Available]** | - | - | - | #16 |
 | 3 | STX Intercom power | 14 AWG | PMU OUT20 | STX intercom | #16 |
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
@@ -174,7 +174,7 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 | Circuit | Gauge | Source | Destination |
 |:--------|:-----:|:-------|:------------|
-| GMRS Radio ground (-) | 14 AWG | Midland G1 | START battery negative |
+| GMRS Radio ground (-) | 14 AWG | Rugged G1 | START battery negative |
 | STX Intercom ground (-) | 14 AWG | STX | START battery negative |
 
 **Routing:** Radios (cabin) → under seat/floor → START battery negative (driver rear wheel well) - exact path: {{ tbd(82) }} (avoid exposed frame rail)

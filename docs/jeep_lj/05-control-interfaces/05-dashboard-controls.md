@@ -38,6 +38,7 @@ Heated seats stay in the build (owner, 2026-09-24). With the lockers added, the 
 **Excluded from this panel** (different aesthetic/form factor by design):
 
 - Keyless ignition push button — round illuminated momentary (Otto/Apem 19-22mm), separate dash location
+- Intercom remote head — Rugged STX-RS, with the volume and VOX knob, in a standard 0.83" × 1.45" rocker-switch hole. See [Intercom][intercom]
 - Hidden bypass toggle — under-dash, intentionally not visible
 - AMOT runaway shutoff T-handle — mechanical push-pull cable handle, dash bezel mount
 
@@ -159,6 +160,7 @@ There are no door switches on this Jeep, so TRIGGER-1 is free for this. See [Swi
 [bluesea-4160]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue
 [purchase-tracker]: ../09-installation/03-purchase-tracker.md
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
+[intercom]: ../07-communication-systems/02-intercom.md
 
 [^arb-switch]: ARB, "Dana 60HD, 35 Spline, 4.56 & Up Air Operated Locking Differential Installation Guide" (RD166), §5.1 "Mounting the Actuator Switch(es)", p. 31: 21 mm × 36.5 mm [0.83" × 1.44"] cutout; ON/OFF rocker; mounting guidance; warning sticker 210101. §6.3 "Testing the Air Locker Actuation", p. 37: switch ON locks the axle (both wheels turn together), switch OFF releases it. <https://store.arbusa.com/content/RD166.pdf> (accessed 2026-09-24).
 [^arb-dual]: ARB RD166 Installation Guide, §5.2.2.2 "Dual Air Locker System", p. 35: "For safety reasons, this configuration allows SOLENOID 2 to be actuated only if SOLENOID 1 is already on", with SWITCH 1 / SOLENOID 1 = rear and SWITCH 2 / SOLENOID 2 = front.

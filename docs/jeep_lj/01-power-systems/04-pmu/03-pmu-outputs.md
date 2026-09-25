@@ -18,7 +18,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 3**  | **[Available]**             | -        | -                                                     | -                  | Freed — radiator fan relocated     |
 | **Out 4**  | **[Available]**             | -        | -                                                     | -                  | Freed — radiator fan relocated     |
 | **Out 5**  | HVAC Blower Motor            | ~20A     | Restomod Air kit ground (verify on arrival)           | Auto (ignition ON) | Restomod Air kit blower; draw verification {{ tbd(146) }} — see [HVAC System][hvac-system] |
-| **Out 6**  | GMRS Radio (Midland G1)      | 15A      | [Direct START battery-][starter-battery-distribution] | CONSTANT           | RF noise isolation             |
+| **Out 6**  | GMRS Radio (Rugged G1)       | 15A      | [Direct START battery-][starter-battery-distribution] | CONSTANT           | RF noise isolation             |
 | **Out 7**  | Oil Cooler Fan               | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | Auto (CAN temp)    | SPN 175 oil temp trigger       |
 | **Out 8**  | PS Cooler Fan                | ~15A     | [Engine Bay Bus][engine-ground] Stud 8                | 180°F inline thermostat | Mishimoto PS cooler fan; thermostat-switched on PS fluid temp (not engine coolant) |
 | **Out 9**  | Dakota Digital System        | ~25A     | [Firewall Stud Bus][firewall-ground] T4-5             | CONSTANT           | Cluster + 4 BIM modules; gauge power architecture (OUT9 vs Critical Cabin PDU) {{ tbd(144) }} |
