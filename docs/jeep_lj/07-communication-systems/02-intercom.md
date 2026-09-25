@@ -62,7 +62,7 @@ From the STX-RS user manual:[^stx-rs-manual]
 - Music dims when VOX opens a mic.
 - Driver and co-driver push-to-talk (PTT) transmit over the connected radio. Each PTT keys only its own mic.
 - Received radio audio is set by the radio's volume knob, not the intercom's.
-- The radio's hand mic does not work through the intercom. Rugged recommends keeping it in the vehicle for emergencies and powering off the intercom to use it.
+- The radio works through the intercom: headsets hear it, and the PTT buttons transmit on it. Only the radio's own hand mic is not used with the intercom. Rugged recommends keeping it in the vehicle for emergencies and powering off the intercom to use it.
 
 ## Ports
 
@@ -91,11 +91,11 @@ The intercom box's ports, from the wiring diagram in the STX-RS user manual (p. 
 
 ## Wiring
 
-| Connection | Wire        | Source                        | Notes                                                                       |
-| :--------- | :---------- | :---------------------------- | :-------------------------------------------------------------------------- |
-| Power (+)  | 14 AWG      | PMU OUT20                     | Via firewall grommet                                                        |
-| Ground (−) | 14 AWG      | START battery neg             | Direct for audio quality                                                    |
-| G1 Radio   | Radio cable | G1, overhead on the roll cage | Audio/PTT/mute. Runs from the cage down to the intercom box behind the dash |
+| Connection | Wire                             | Source                                           | Notes                                                                       |
+| :--------- | :------------------------------- | :----------------------------------------------- | :-------------------------------------------------------------------------- |
+| Power (+)  | 14 AWG                           | PMU OUT20                                        | Via firewall grommet                                                        |
+| Ground (−) | 14 AWG                           | START battery neg                                | Direct for audio quality                                                    |
+| G1 Radio   | Intercom cable + 5-pin extension | G1 rear intercom port, overhead on the roll cage | Audio/PTT/mute. Runs from the cage down to the intercom box behind the dash |
 
 ## Installation Notes
 
@@ -107,7 +107,7 @@ The intercom box's ports, from the wiring diagram in the STX-RS user manual (p. 
 
 - [ ] Choose the dash position for the remote head and cut a 0.83 x 1.45 in rocker-switch hole
 - [ ] Mount the intercom box behind the dash within 39 in of the remote head
-- [ ] Measure the radio cable run from the overhead G1 to the intercom box, and get a cable that long
+- [ ] Measure the run from the overhead G1 to the intercom box and buy a 5-pin extension that long. Rugged says one is needed when the radio is more than 1 ft from the intercom body ([GMRS Radio][gmrs-radio])
 
 ## Outstanding Items
 

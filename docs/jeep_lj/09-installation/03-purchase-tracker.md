@@ -25,7 +25,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | RedArc BCDC Alpha 50 | RedArc Electronics | ~$600 | |
 | Warn Zeon 10-S Winch | Warn | ~$1,200 | |
 | Fusion MS-RA670 Head Unit | Fusion (Garmin) | ~$400 | |
-| Rugged Radios G1-GMRS (50W) | Rugged Radios | ~$350 | |
+| Rugged Radios G1-GMRS (40W) | Rugged Radios | ~$350 | |
 | Cascadia 4x4 80W Solar Panel | Cascadia 4x4 | ~$350 | |
 | GM 84100128 Radiator Fan | General Motors | ~$200 | |
 | Dakota Digital HDX-96J-TJ Gauge Cluster | Dakota Digital | ~$900 | |
