@@ -11,7 +11,7 @@ This section documents physical switches mounted in the dashboard area (separate
 
 All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" × 0.83" (39 mm × 21 mm)**. This is the de facto "Toyota-style" switch dimension used by Tacoma / 4Runner / FJ Cruiser / Tundra OEM, and supported by multiple aftermarket switch vendors (CH4X4, STEDI, sPOD, etc.).
 
-**Orientation:** every rocker and push switch on the dash mounts **portrait** (owner, 2026-09-25): the Toyota-style switches at 0.83" wide × 1.54" tall, and the [intercom][intercom] remote head in its 0.83" × 1.45" rocker hole. CH4X4 shows its switches landscape, so check that the etched legends read upright in portrait before ordering, or order CH4X4's custom-etched faces. On the dual switches the two buttons stack, one above the other.
+**Orientation:** every rocker and push switch on the dash mounts **portrait** (owner, 2026-09-25): the Toyota-style switches at 0.83" wide × 1.54" tall, and the [intercom][intercom] remote head in its 0.83" × 1.45" rocker hole. CH4X4 makes its Toyota push switches portrait, so their etched legends read upright this way. On the duals the two buttons stack: the front/rear locker switch has FRONT LOCKER on top, and the winch switch has IN on top.[^ch4x4-faces]
 
 **Why this standard:**
 
@@ -164,5 +164,6 @@ There are no door switches on this Jeep, so TRIGGER-1 is free for this. See [Swi
 [air-lockers]: ../08-exterior-systems/03-air-lockers.md
 [intercom]: ../07-communication-systems/02-intercom.md
 
+[^ch4x4-faces]: CH4X4 product photos, all shown portrait with upright legends: "Push Switch for Toyota – Seat Heater Symbol" (CH4X4-TOY-SEATH) <https://ch4x4.com/product/ch4x4-push-switch-for-toyota-seat-heater-symbol/>, "Dual Push Switch for Toyota – Front & Rear Locker Symbol 2" (CH4X4-TOY-D-FRLOCK2) <https://ch4x4.com/product/ch4x4-dual-push-switch-for-toyota-front-rear-locker-symbol-2/>, and "Momentary Dual Push Switch for Toyota – Winch IN/OUT Symbol" (CH4X4-TOY-D-WINIO) <https://ch4x4.com/product/ch4x4-momentary-dual-push-switch-for-toyota-winch-in-out-symbol/> (accessed 2026-09-25).
 [^arb-switch]: ARB, "Dana 60HD, 35 Spline, 4.56 & Up Air Operated Locking Differential Installation Guide" (RD166), §5.1 "Mounting the Actuator Switch(es)", p. 31: 21 mm × 36.5 mm [0.83" × 1.44"] cutout; ON/OFF rocker; mounting guidance; warning sticker 210101. §6.3 "Testing the Air Locker Actuation", p. 37: switch ON locks the axle (both wheels turn together), switch OFF releases it. <https://store.arbusa.com/content/RD166.pdf> (accessed 2026-09-24).
 [^arb-dual]: ARB RD166 Installation Guide, §5.2.2.2 "Dual Air Locker System", p. 35: "For safety reasons, this configuration allows SOLENOID 2 to be actuated only if SOLENOID 1 is already on", with SWITCH 1 / SOLENOID 1 = rear and SWITCH 2 / SOLENOID 2 = front.
