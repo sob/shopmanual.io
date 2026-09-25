@@ -65,7 +65,7 @@ tags:
 | Spline | 35 |
 | Ratio Coverage | All ratios (no carrier break)[^rd140] |
 | Solenoid Draw | ~2A |
-| Control | SwitchPros Button 10, OUTPUT-10 |
+| Control | Rear locker dash switch (BODY PDU CB44 via K27) |
 | Air Source | [ARB Twin Compressor][air-compressor] via manifold |
 
 Air locker selected over the Ford factory electric locker (BC3Z-4026-B). The

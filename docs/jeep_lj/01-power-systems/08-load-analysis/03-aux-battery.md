@@ -22,11 +22,9 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | OUTPUT-6               | Rock Lights (6x Cyclone) |      0A |   3A | Night offroad     | Under vehicle             |
 | OUTPUT-7               | Chase Light (RTL-S)      |      0A |   1A | Night offroad     | Amber chase only          |
 | OUTPUT-8               | Available                |      0A |   0A | —                 | Footwell lights on MLC-RW |
-| OUTPUT-10              | Rear Locker              |      0A |   2A | Technical terrain | Solenoid                  |
 | OUTPUT-11              | Compressor Control       |      0A |  15A | Control signal    | To ARB                    |
 | OUTPUT-12              | Rear Lights (2x S1 Pro)  |      0A |   5A | Night driving     | License plate             |
 | OUTPUT-13              | Cargo Light              |      0A |   5A | Loading/unloading | Trigger-2                 |
-| OUTPUT-17              | Front Locker             |      0A |   2A | Technical terrain | Low-side                  |
 | **SafetyHub 150**      |                          |         |      |                   |                           |
 | MIDI-1                 | ARB Compressor Motor 1   |      0A |  45A | Airing up         | Half of twin              |
 | MIDI-2                 | ARB Compressor Motor 2   |      0A |  45A | Airing up         | Half of twin              |
@@ -38,6 +36,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | CB45                   | Driver Heated Seat       |      0A |   5A | Winter            | Relay K21                 |
 | CB42                   | Passenger Heated Seat    |      0A |   5A | Winter            | Relay K22                 |
 | CB43                   | Winch Control (dash)     |      0A |   2A | Recovery only     | Rocker signal             |
+| CB44                   | Air Lockers (2 solenoids) |     0A |   4A | Technical terrain | Dash switches via K27 (ignition) |
 | **Direct**             |                          |         |      |                   |                           |
 | -                      | Winch Motor              |      0A | 409A | 10-30 sec bursts  | Recovery only             |
 
@@ -86,7 +85,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Fog Light (OUTPUT-3)**         |  **6A** | Visibility         |
 | **Rear Lights (OUTPUT-12)**      |  **5A** | License plate area |
 | **Fusion Radio memory (CB30)**   |  **1A** | Always on          |
-| **Fusion head unit (CB44)**      | **10A** | Music moderate     |
+| **Fusion head unit (CB30)**      | **10A** | Music moderate     |
 | **USB Charging (CB48)**          |  **5A** | Devices            |
 | **WolfBox Camera (CB39)**        |  **2A** | Always recording   |
 | **Driver Heated Seat (CB45)**    |  **3A** | Cycling            |
@@ -114,8 +113,8 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Fog Light (OUTPUT-3)**       |  **6A** | Close range        |
 | **Rock Lights (OUTPUT-6)**     |  **3A** | Obstacle spotting  |
 | **Chase Light (OUTPUT-7)**     |  **1A** | Following vehicles |
-| **Front Locker (OUTPUT-17)**   |  **2A** | Engaged            |
-| **Rear Locker (OUTPUT-10)**    |  **2A** | Engaged            |
+| **Front Locker (CB44)**        |  **2A** | Engaged            |
+| **Rear Locker (CB44)**         |  **2A** | Engaged            |
 | **Fusion Radio memory (CB30)** |  **1A** | Always on          |
 | **USB Charging (CB48)**        |  **2A** | Phone              |
 | **WolfBox Camera (CB39)**      |  **2A** | Recording          |
@@ -213,7 +212,7 @@ All circuits powered by AUX battery (charged by BCDC at 50A max):
 | **Rock Lights (OUTPUT-6)**     |  **3A** | Ground lighting  |
 | **Footwell Lights (MLC-RW)**   |  **1A** | Ambiance         |
 | **Fusion Radio memory (CB30)** |  **1A** | Always on        |
-| **Fusion head unit (CB44)**    |  **8A** | Music            |
+| **Fusion head unit (CB30)**    |  **8A** | Music            |
 | **USB Charging (CB48)**        | **10A** | Multiple devices |
 | **TOTAL**                      | **27A** |                  |
 

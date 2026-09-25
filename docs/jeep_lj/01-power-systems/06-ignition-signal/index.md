@@ -60,9 +60,10 @@ The bus bar's outbound feed to engine-bay consumers (ECM 12V supply, PMU Pin 7) 
 | Terminal 3 (#10-24)     | Fusion MS-RA670 Radio     | 18 AWG ✓     | ~2 ft                 | ~20mA           | Yellow wire - ignition sense                       |
 | Terminal 4 (#10-24)     | BCDC Alpha 50             | 18 AWG ✓     | ~12 ft                | ~20mA           | Blue wire - activates charging when engine running |
 | Terminal 5 (#10-24)     | **iBooster Enable**       | 16 AWG ✓     | ~10 ft (own HDP24 pin) | ~5A             | iBooster ignition enable; **own 7.5A inline fuse** (not shared with the ECM 5A feed); crosses firewall |
-| Terminals 6-12 (#10-24) | **\[Available\]**           | -            | -                     | -               | Future expansion (7 terminals)                     |
+| Terminal 6 (#10-24)     | BODY PDU relay K27 coil   | 18 AWG ✓     | ~3 ft                 | relay coil      | Air locker enable — lockers only work with the ignition on |
+| Terminals 7-12 (#10-24) | **\[Available\]**           | -            | -                     | -               | Future expansion (6 terminals)                     |
 
-**Utilization:** 7 of 14 used (2 studs + 5 terminals used, 0 studs + 7 terminals available)
+**Utilization:** 8 of 14 used (2 studs + 6 terminals used, 0 studs + 6 terminals available)
 
 ## Mounting
 

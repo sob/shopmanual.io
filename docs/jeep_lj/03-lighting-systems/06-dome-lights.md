@@ -32,7 +32,11 @@ Roll bar-mounted interior lighting for cabin illumination.
 **Controller:** SwitchPros Button 4 (OUTPUT-4)
 
 - Manual: Button 4 press
-- Automatic: Door switches via TRIGGER-1
+- Rear-seat switch via TRIGGER-1 (see below)
+
+There are no door switches: the Jeep has none, and it runs half doors or no doors (owner, 2026-09-24).
+
+Dome lights are interior convenience lights, not required street lighting, so they run from the SwitchPros rather than the CT4.
 
 See [SwitchPros SP-1200][switchpros-sp-1200] for wiring and trigger configuration.
 
@@ -41,18 +45,18 @@ See [SwitchPros SP-1200][switchpros-sp-1200] for wiring and trigger configuratio
 - 2x front roll bar (above driver/passenger seats)
 - 2x rear roll bar (above rear cargo area)
 
-## Rear Seat Override
+## Rear Seat Switch
 
-Physical switch on KC #6337 bracket for rear dome control independent of SwitchPros panel.
+A rear-seat switch turns the dome lights on through the SwitchPros, independent of Button 4 (resolved 2026-09-24, {{ tbd(148) }}).
 
-**Wiring:** KC bracket switch wired in parallel with SwitchPros OUTPUT-4:
+**Wiring:** the switch is a signal switch on the SwitchPros trigger input, not a power path:
 
-- KC switch input: 12V CONSTANT (tap from SwitchPros power input or BODY PDU)
-- KC switch output: Rear dome lights positive (parallel with SwitchPros OUTPUT-4)
-- Either switch can turn on rear domes independently
+- Blue Sea 4160 latching push button, closing SwitchPros TRIGGER-1 to ground
+- TRIGGER-1 (set active low) turns on OUTPUT-4, which feeds all four dome pods
+- No CONSTANT tap and nothing in parallel with OUTPUT-4, so nothing backfeeds the output
+- The KC #6337 bracket's own switch is not used for this
 
-!!! warning "Backfeed risk — isolation design pending"
-    As drawn, the CONSTANT-fed override tap is wired in parallel with OUTPUT-4 with no isolation diode. When the override switch is on, 12V CONSTANT backfeeds into OUTPUT-4 regardless of the SwitchPros state. Isolation design is pending — {{ tbd(148) }}.
+Mounting location: {{ tbd(77) }}. Trigger setup: [SwitchPros SP-1200][switchpros-sp-1200].
 
 ## Outstanding Items
 

@@ -38,8 +38,8 @@ Recovery equipment and air systems for offroad capability.
 | Winch Motor    | AUX battery direct      | None (internal) | Dash rocker/remote |
 | Winch Control  | BODY PDU CB43           | 10A             | Dash rocker        |
 | Compressor     | SafetyHub MIDI-1/MIDI-2 | 2× 60A MIDI     | SwitchPros OUT-11  |
-| Front Locker   | SwitchPros OUTPUT-17    | Low-side driver | Button 9           |
-| Rear Locker    | SwitchPros OUTPUT-10    | 15A             | Button 10          |
+| Rear Locker    | BODY PDU CB44 via K27 (ignition) | 10A    | Rear dash switch   |
+| Front Locker   | Rear locker switch output | CB44 (shared) | Front dash switch (only with rear ON) |
 
 ## Outstanding Items
 
@@ -49,7 +49,8 @@ Recovery equipment and air systems for offroad capability.
 
 - [AUX Battery Distribution][aux-battery] - Winch and compressor power
 - [SafetyHub][safetyhub] - Winch trigger and compressor fuses
-- [SwitchPros][switchpros] - Compressor and locker control
+- [SwitchPros][switchpros] - Compressor control
+- [Dashboard Controls][dashboard-controls] - Locker switches
 
 [winch]: 01-winch.md
 [air-compressor]: 02-air-compressor.md
@@ -58,3 +59,4 @@ Recovery equipment and air systems for offroad capability.
 [aux-battery]: ../01-power-systems/03-aux-battery-distribution/index.md
 [safetyhub]: ../01-power-systems/03-aux-battery-distribution/04-safetyhub.md
 [switchpros]: ../05-control-interfaces/02-switchpros-sp1200.md
+[dashboard-controls]: ../05-control-interfaces/05-dashboard-controls.md

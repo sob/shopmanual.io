@@ -55,9 +55,9 @@ tags:
 | CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
 | CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on rear wheel well top               |
 | CB43        | TRANS ECU               | Winch Control (CH4X4 dual-push) | 10A  | 18AWG | ~3A peak per direction | -    | CH4X4-TOY-D-WINIO dual-momentary push at dash → HDP24 pins 16/17 → contactor; Warn remote parallel at contactor |
-| CB44        | TRLR LIGHT              | **\[Available\]**             | -    | -     | -                     | -     | Future expansion                            |
+| CB44        | TRLR LIGHT              | ARB Air Lockers (dash switches) | 10A  | 18AWG | ~4A (~2A per solenoid) | K27   | K27 closes with the ignition; rear locker switch feeds the front switch (ARB interlock) — see [Dashboard Controls][dashboard] |
 
-**Circuit Breaker Utilization:** 7 of 8 used (1 available)
+**Circuit Breaker Utilization:** 8 of 8 used (0 available)
 
 ## Relay Configuration
 
@@ -65,18 +65,18 @@ tags:
 | :------------- | :---------------------- | :-------------------- | :------ | :---------- | :------------------------------------- |
 | K21            | REAR LEFT LIGHT         | Driver Heated Seat    | 12V     | Dash switch | Controls CB45 output to driver seat    |
 | K22            | REAR RIGHT LIGHT        | Passenger Heated Seat | 12V     | Dash switch | Controls CB42 output to passenger seat |
-| K27            | TRAILER BO STOP         | **\[Available\]**       | 12V     | -           | Future expansion                       |
+| K27            | TRAILER BO STOP         | Air locker enable     | 12V     | Ignition bus Terminal 6 | Feeds CB44 to the locker switches only with the ignition on, so the lockers drop out at key-off |
 | K30            | TRAILER REAR LEFT       | **\[Available\]**       | 12V     | -           | Future expansion                       |
 | K31            | TRAILER REAR RIGHT      | **\[Available\]**       | 12V     | -           | Future expansion                       |
 | K53            | RADIO                   | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
 | K40            | START DISABEL           | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
 | K42            | ENGINE PTO              | **\[Available\]**       | 24V→12V | -           | Swap 24V (U02) → 12V Song Chuan `301-1C-C-R1-U01`[^lr2-relay] |
 
-**Relay Utilization:** 2 of 8 used, 6 available (3 require 12V relay replacement)
+**Relay Utilization:** 3 of 8 used, 5 available (3 require 12V relay replacement)
 
-**Total Load:** ~54A maximum (Radio 15A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A)
+**Total Load:** ~58A maximum (Radio 15A + USB 13A + Camera 10A + Seats 10A peak + Winch control 2A + Cargo lights 4A + Air lockers 4A)
 
-**Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off
+**Control:** All circuits on CONSTANT power with trigger-wire or manual switch control for on/off, except CB44 (air lockers), which K27 enables only with the ignition on
 
 !!! info "Communication Devices"
 G1 GMRS Radio and STX Intercom are powered from the PMU — GMRS on OUT6, Intercom on OUT20 — with direct grounds to the START battery− to minimize RF noise. See [PMU Outputs][pmu-outputs]. SafetyHub is an AUX-side device and powers neither.

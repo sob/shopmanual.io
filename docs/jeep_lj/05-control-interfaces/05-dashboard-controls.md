@@ -30,6 +30,10 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 | 2 | **Drive mode select** (transmission) | {{ tbd(72) }} | 3-position mode select (Street / Default / Offroad) — exact action depends on TCU spec | {{ tbd(72) }} (likely BODY PDU) | Verify TCU input requirements before sourcing |
 | 3 | **Driver heated seat** | {{ tbd(73) }} | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
 | 4 | **Passenger heated seat** | {{ tbd(73) }} | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
+| 5 | **Rear air locker** | Part not chosen ([Purchase Tracker][purchase-tracker]) | ON/OFF latching | BODY PDU CB44 via relay K27 (ignition) | Moved off SwitchPros button 10 (2026-09-24). See [Locker Switches](#locker-switches) |
+| 6 | **Front air locker** | Part not chosen ([Purchase Tracker][purchase-tracker]) | ON/OFF latching | Rear locker switch output | Works only while the rear locker is on. Moved off SwitchPros button 9 |
+
+Heated seats stay in the build (owner, 2026-09-24). With the lockers added, the panel needs **6 cutouts** ({{ tbd(76) }}).
 
 **Excluded from this panel** (different aesthetic/form factor by design):
 
@@ -91,34 +95,70 @@ This is the **correct** design for the Warn ZEON 10-S contactor, which has separ
 
 [ch4x4-winch]: https://ch4x4.com/product/ch4x4-momentary-dual-push-switch-for-toyota-winch-in-out-symbol/
 
+## Locker Switches
+
+The ARB air lockers moved from SwitchPros buttons 9 and 10 to two latching dash switches (owner, 2026-09-24). ARB's own locker switches are ON/OFF rockers; the locker stays engaged while its switch is ON.[^arb-switch]
+
+### Locker Wiring
+
+Wired the way ARB recommends for two lockers: the front switch is fed from the rear switch's output, so "SOLENOID 2 [front] can be actuated only if SOLENOID 1 [rear] is already on".[^arb-dual]
+
+| Connection | Wire | Source | Destination |
+|:-----------|:-----|:-------|:------------|
+| Feed | 18 AWG | BODY PDU CB44 (10A) → relay K27 (closes with the ignition) | Rear locker switch input |
+| Rear locker | 18 AWG | Rear locker switch output | Rear locker solenoid (at the air manifold, under the passenger seat); also feeds the front switch input |
+| Front locker | 18 AWG | Front locker switch output | Front locker solenoid (at the air manifold) |
+| Solenoid grounds | 18 AWG | Each solenoid | Chassis ground near the manifold |
+
+All of this stays in the cabin: dash → BODY PDU (firewall, cabin side) → under the passenger seat. Nothing crosses the firewall. See [Air Lockers][air-lockers] for the solenoids and air lines.
+
+### Switch Choice
+
+ARB's switches need a 21 mm × 36.5 mm cutout[^arb-switch], not this panel's 1.54" × 0.83" Toyota standard. Use Toyota-style latching switches instead, so every dash switch shares one cutout size.
+
+ARB's placement guidance: within the driver's reach and line of sight so the ON/OFF state is visible, positioned to avoid accidental operation, with at least 2" (50 mm) of clearance behind the cutout. ARB also recommends its Air Locker warning sticker (part 210101) near the switches.[^arb-switch]
+
+### Locker Switch Outstanding Items
+
+- [ ] Choose the two Toyota-style latching locker switches and add them to the [Purchase Tracker][purchase-tracker]
+- [ ] Wire each switch's LED to match the part chosen
+
 ## Rear Seat Switch
 
 **Type:** [Blue Sea 4160 Push Button Switch][bluesea-4160] (10A latching, OFF-ON)
-**Location:** Rear seat area (for rear passenger control)
-**Function:** Controls rear roll bar dome lights (4x KC Cyclone)
-**Wire Gauge:** 16 AWG
+**Location:** Rear seat area (for rear passenger control), {{ tbd(77) }}
+**Function:** Turns on the dome lights (4x KC Cyclone) through the SwitchPros
+**Wire Gauge:** 18 AWG (signal only)
 
-### Wiring
+### Rear Seat Switch Wiring
 
-Wired in parallel with SwitchPros OUTPUT-4:
+The switch is a signal switch on SwitchPros TRIGGER-1, not a power path (2026-09-24, replacing the in-line design that could only turn the lights off):
 
-- SwitchPros OUTPUT-4 → Splice → Blue Sea 4160 → Dome lights
-- Allows rear passenger to turn on/off dome lights independently
-- Both SwitchPros Button 4 and rear switch can control the same lights
-- Switch rating (10A) exceeds dome light load (4A)
+- Blue Sea 4160 closes SwitchPros TRIGGER-1 (Pin 7) to ground
+- TRIGGER-1 is set active low and turns on OUTPUT-4 (dome lights)
+- Button 4 still works on its own; either one turns the dome lights on
+- No lamp current flows through the switch, and nothing backfeeds OUTPUT-4
+
+There are no door switches on this Jeep, so TRIGGER-1 is free for this. See [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12].
 
 ### Rear Seat Switch Outstanding Items
 
 - [ ] Determine rear seat switch mounting location
-- [ ] Route 16 AWG wire from SwitchPros OUTPUT-4 splice to rear seat switch location
+- [ ] Route 18 AWG signal wire from the rear seat switch to SwitchPros TRIGGER-1 (Pin 7) and a chassis ground
 
 ## Related Documentation
 
 - [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
 - [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Main lighting controller
+- [Air Lockers][air-lockers] - ARB lockers, solenoids, and air lines
 - [Recovery Systems][recovery-systems] - Winch system complete documentation
 
 [recovery-systems]: ../08-exterior-systems/01-winch.md
 [control-interfaces-overview]: 01-overview.md
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md
 [bluesea-4160]: https://www.bluesea.com/products/4160/10A_Push_Button_LED_Ring_Switch_OFF-ON_Blue
+[purchase-tracker]: ../09-installation/03-purchase-tracker.md
+[air-lockers]: ../08-exterior-systems/03-air-lockers.md
+
+[^arb-switch]: ARB, "Dana 60HD, 35 Spline, 4.56 & Up Air Operated Locking Differential Installation Guide" (RD166), §5.1 "Mounting the Actuator Switch(es)", p. 31: 21 mm × 36.5 mm [0.83" × 1.44"] cutout; ON/OFF rocker; mounting guidance; warning sticker 210101. §6.3 "Testing the Air Locker Actuation", p. 37: switch ON locks the axle (both wheels turn together), switch OFF releases it. <https://store.arbusa.com/content/RD166.pdf> (accessed 2026-09-24).
+[^arb-dual]: ARB RD166 Installation Guide, §5.2.2.2 "Dual Air Locker System", p. 35: "For safety reasons, this configuration allows SOLENOID 2 to be actuated only if SOLENOID 1 is already on", with SWITCH 1 / SOLENOID 1 = rear and SWITCH 2 / SOLENOID 2 = front.

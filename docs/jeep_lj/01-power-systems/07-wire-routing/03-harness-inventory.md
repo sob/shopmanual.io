@@ -207,7 +207,7 @@ These were noted inline on the build sheets; consolidated here for review:
 2. ~~Old H6 + old H7 + CT4 rear turn + old H8 SP signal wires share cabin trunk → rear~~ **Partially resolved (2026-05-30):** Old H6 + old H7 merged into **H5 Rear Cabin Trunk Bundle** with single multi-pin breakout (Deutsch DT15 or AMP CPC ~15-pin) at rear cargo bulkhead. CT4 rear turn signals and ARB control wires *could* still join — pending decision.
 3. **H5 sub-harness (firewall → rear breakout) is a single straight pull;** R&R of any individual rear light becomes a pigtail swap.
 4. **H6 motor cables only.** Move control/pressure wires into H5 since they originate at SwitchPros.
-5. **Front lockers + rock lights + fog in one bundle** through SwitchPros firewall bulkhead to engine bay → grille area. Splice/breakout at front for fan-out.
+5. **Rock lights + fog in one bundle** through SwitchPros firewall bulkhead to engine bay → grille area. Splice/breakout at front for fan-out. (The front locker wire left this bundle on 2026-09-24; the lockers now run from dash switches in the cabin.)
 6. ~~HDP20 firewall connector pin budget~~ **Resolved (2026-05-30):** Split into two dedicated bulkheads — HDP24-24-29 for non-SP traffic (18/29 used, 11 spare) + HDP24-18-14 for SwitchPros forward outputs (6/14 used, 8 spare). SP harness stays Delphi-native end-to-end. See [Pin Budget Audit][firewall-ingress].
 
 ---
@@ -220,7 +220,6 @@ These were noted inline on the build sheets; consolidated here for review:
 
 - [ ] Decide front bumper breakout connector style (Deutsch DT, AMP CPC, etc.)
 - [ ] Decide rear cargo bulkhead breakout connector style and pin count
-- [ ] Confirm SwitchPros front locker wire routing (front axle access)
 - [ ] Decide if ARB control wires merge into H5 (recommended) or run as H6 signal pair
 - [ ] Source connector + lug + heat shrink BOM totals
 - [ ] Confirm braided-sleeve sizes and per-harness tracer colors for the power runs (see [Protective Sleeve & Tracers](#sleeve-convention)); decide split loom vs braided for the small-wire bundles per zone

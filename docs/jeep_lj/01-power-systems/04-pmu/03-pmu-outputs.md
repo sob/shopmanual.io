@@ -31,7 +31,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
 | **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | Auto: with headlights (In 7 OR In 5), ignition-independent | Maxbilt RED + RTL-S running; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
-| **Out 14** | **[Available]**           | -    | -                                                     | -                    | Future expansion (15A)                        |
+| **Out 14** | Garmin Tread 2 GPS        | ~2A  | Chassis, local to the dash mount                      | Auto (ignition ON)   | Moved off SwitchPros button 8 (2026-09-24); HDP24 pin 21 — see [Navigation][navigation] |
 | **Out 15** | **[Available]**           | -    | -                                                     | -                    | (Was Winch Contactor Trigger — reallocated 2026-05-30 to BODY PDU CB43) |
 | **Out 16** | **[Available]**           | -    | -                                                     | -                    | Freed — TCU relocated to [START+ Forward Bus][start-fwd-bus] |
 
@@ -52,7 +52,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 
 ## Combined Outputs
 
-_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT14, OUT15, and OUT16 are free (8 spare outputs — OUT19 and OUT24 were taken by the 4x4/4LO indicators, OUT12 by the parking/tail markers). The combining rules below are retained for any future high-current output._
+_The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were relocated to the [START+ Forward Distribution Bus][start-fwd-bus]. No PMU outputs are currently combined; OUT1–4, OUT10, OUT15, and OUT16 are free (7 spare outputs — OUT19 and OUT24 were taken by the 4x4/4LO indicators, OUT12 by the parking/tail markers, OUT14 by the GPS). The combining rules below are retained for any future high-current output._
 
 **Combining Rules:**
 
@@ -108,3 +108,4 @@ _The radiator fan (formerly OUT2+3+4) and iBooster main (formerly OUT1+10) were 
 [windshield-wiper-control-system]: ../../02-engine-systems/04-wipers.md
 [drl-parking-lights]: ../../03-lighting-systems/05-drl-parking.md
 [transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
+[navigation]: ../../07-communication-systems/05-navigation.md
