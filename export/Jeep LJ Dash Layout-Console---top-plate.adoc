@@ -1,0 +1,4 @@
+= Jeep LJ Dash Layout Console - top plate
+
+image::Jeep LJ Dash Layout-Console---top-plate.png[Console - top plate]
+
