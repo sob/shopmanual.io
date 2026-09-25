@@ -64,7 +64,8 @@ A third panel, the **Engine Bay Powerswitch**, is planned.
     Twinkle Lights are not planned. The Devices drawing also shows a **Front
     Powerswitch** (Midland MXTX575, rearview mirror, radar detector) that does
     not exist. The mirror is on Rear (A) circuit 5 and the radar detector on
-    Rear (B) circuit 1.
+    Rear (B) circuit 1. The radio is a Midland **MXT575**, moving over from the
+    Jeep LJ (owner, 2026-09-25); which circuit powers it is not decided.
 
 ---
 

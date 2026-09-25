@@ -163,7 +163,7 @@ live in the linked source docs, not here.
 - [ ] Mount SwitchPros Ground Bus at firewall near power module
 - [ ] Confirm Firewall CONSTANT Bus → 150A CB → SwitchPros power input
 - [ ] Confirm SwitchPros logic ground → chassis ground at firewall
-- [ ] Mount SwitchPros control panel on dash; order control cable
+- [ ] Mount SwitchPros control panel on the center console behind the Kilduff shifter; measure the cable route and order the control cable
 - [ ] Build custom 2-pin Delphi harnesses for each output (plug-and-play lighting)
 
 ---

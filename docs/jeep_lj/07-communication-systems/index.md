@@ -11,28 +11,30 @@ Radio communication and camera systems for vehicle-to-vehicle coordination and s
 
 ## System Components
 
-| Component                  | Model               |  Power | Control              |
-| :------------------------- | :------------------ | -----: | :------------------- |
-| [GMRS Radio][gmrs-radio]   | Rugged Radio G1     | 15A TX | PMU OUT6             |
-| [Intercom][intercom]       | Rugged Radio STX    |     2A | PMU OUT20            |
-| [Dash Camera][dash-camera] | WolfBox G900 TriPro |     5A | BODY PDU CB39        |
-| [Navigation][navigation]   | Garmin Tread 2 Overland |     2A | PMU OUT14 (ignition) |
+| Component                  | Model                                                   |  Power | Control              |
+| :------------------------- | :------------------------------------------------------ | -----: | :------------------- |
+| [GMRS Radio][gmrs-radio]   | Rugged Radio G1, overhead on the roll cage              | 15A TX | PMU OUT6             |
+| [Intercom][intercom]       | Rugged Radio STX Remote Head (STX-RS), knob on the dash |     2A | PMU OUT20            |
+| [Dash Camera][dash-camera] | WolfBox G900 TriPro                                     |     5A | BODY PDU CB39        |
+| [Navigation][navigation]   | Garmin Tread 2 Overland                                 |     2A | PMU OUT14 (ignition) |
 
 **Total System Power:** ~24A peak (radio transmitting + intercom + camera + navigation)
 
 ## Signal Flow
 
 ```text
-Rugged Radio G1 GMRS
+Rugged Radio G1 GMRS (overhead, roll cage)
     │
-    └─► RADIO port ──► STX Intercom RADIO port
+    └─► Radio cable ──► STX-RS intercom box RADIO port (behind dash)
                             │
-                            ├─► Headset Port 1 ──► Driver headset
-                            ├─► Headset Port 2 ──► Front passenger headset
-                            ├─► Headset Port 3 ──► Rear left headset
-                            ├─► Headset Port 4 ──► Rear right headset
+                            ├─► Remote head (dash knob) ── 39 in cable
+                            ├─► Driver headset + PTT
+                            ├─► Co-driver headset + PTT ──► Front passenger
+                            ├─► CREW 1 ──► Rear left headset
+                            ├─► CREW 2 ──► Rear right headset
+                            ├─► CREW 3 ──► Spare
                             │
-                            └─► AUX port ◄── Fusion MS-RA670 audio
+                            └─◄ Bluetooth ── phone (music and calls)
 
 WolfBox Mirror Camera
     │
@@ -48,7 +50,7 @@ WolfBox Mirror Camera
 
 - [PMU Outputs][pmu-outputs] - Radio and intercom power circuits
 - [BODY PDU][body-pdu] - Camera power circuit
-- [Audio Systems][audio-systems] - Fusion head unit for intercom AUX input
+- [Audio Systems][audio-systems] - Fusion head unit and speakers
 - [Command Touch CT4][ct4] - Turn signal and horn controller
 
 [gmrs-radio]: 01-gmrs-radio.md

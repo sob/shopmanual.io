@@ -116,7 +116,7 @@ All wire runs require appropriate protection based on location and environment:
 | **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
 | **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 80A CB at AUX battery  (not via firewall bus) |
 | **SwitchPros Ground Bus**              | 1/0 AWG    | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
-| **SwitchPros control cable**           | Multi-pin  | ~5 ft    | TO SwitchPros panel on dash                | Standard SwitchPros cable                       |
+| **SwitchPros control cable**           | Multi-pin  | Measure  | TO SwitchPros panel on center console      | SwitchPros cable, sold in 5 ft steps            |
 | **SwitchPros outputs (12 circuits)**   | Various    | {{ tbd(107) }} | TO various loads (front/cabin/rear/roof) | Mostly short forward fan-out from firewall      |
 
 ---
