@@ -22,9 +22,9 @@ tags:
 
 **Power Module Location:** Firewall (cabin side, passenger area) — co-located with BODY PDU and Firewall CONSTANT Bus. Module is IP67 / 125°C-rated so wheel well placement is also valid, but firewall mounting minimizes total output wire length since most loads are forward/upper (~58% of outputs).
 
-**Control Panel Location:** Dash mount (4" L x 3" W x 0.375" H)
+**Control Panel Location:** Center console top plate, directly behind the [Kilduff shifter][kilduff-shifter] (owner, 2026-09-25). The panel is 4.0 x 3.0 x 0.375 in. It mounts either in a 3.875 x 2.875 in bezel cutout with 0.237 in corners, or on a flat surface on its 6-32 studs.[^rcr12-mount]
 
-**Control Cable:** Standard 5 ft cable (was 10.5 ft when module was rear-mounted — moving to firewall shortens this significantly)
+**Control Cable:** Not yet ordered. The 5 ft size was picked for a firewall-to-dash run, and the run from the firewall to the console is longer. SwitchPros sells the cable in 5 ft steps from 5 to 50 ft and says to add 6 in for strain relief.[^rcr12-cable] Measure the route before ordering.
 
 **Ground:** 4 AWG to chassis (per manufacturer spec - reference ground only, not load return)
 
@@ -201,7 +201,7 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 
 - [ ] Confirm ignition signal → SwitchPros Pin 3 (IGNITION)
 - [x] ~~Determine parking-lights signal source for Pin 4 (LIGHTS)~~ → **Resolved 2026-09-22:** PMU Out 12 parking/tail circuit, tapped at the firewall
-- [ ] Order control panel cable (power module to dash)
+- [ ] Measure the control cable route (power module on the firewall to the console) and order the cable
 - [ ] Install rear-seat dome switch → TRIGGER-1 (active low)
 - [ ] Program Button 4: OUTPUT-4 OR TRIGGER-1 → dome lights
 - [ ] Install rear cargo rocker switch → TRIGGER-2 (determine tailgate-accessible location)
@@ -230,5 +230,8 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 [pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [dashboard-controls]: 05-dashboard-controls.md
 [dome-lights]: ../03-lighting-systems/06-dome-lights.md
+[kilduff-shifter]: ../10-drivetrain/01-transmission.md#shifter
 
 [^rcr12-trigger]: SwitchPros RCR-Force 12 installation guide (Rev 1.9), pp. 4 and 7: trigger inputs "can be programmed to trigger on an active high (>4.5V) or active low" signal. <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf> (accessed 2026-09-24).
+[^rcr12-mount]: SwitchPros RCR-Force 12 installation guide (Rev 1.9), p. 9 (flat-surface mount on the 6-32 studs, or a 3.875" x 2.875" bezel opening with a 0.237" corner radius) and p. 14 (switch panel size: width 3.0", length 4.0", height 0.375"). <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf> (accessed 2026-09-25).
+[^rcr12-cable]: SwitchPros, "RCR-Force 12 Twelve Switch Remote Panel System" store page: cable lengths 5' to 50' in 5' steps, "add a 6 inch allowance for strain relief". <https://store.switchpros.com/rcr-force-12-twelve-switch-remote-panel-system/> (accessed 2026-09-25).

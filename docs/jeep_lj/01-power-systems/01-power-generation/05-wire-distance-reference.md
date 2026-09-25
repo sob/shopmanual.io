@@ -111,8 +111,8 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | Component                       | Status                                      |
 |:--------------------------------|:--------------------------------------------|
 | SwitchPros power module         | ✓ Firewall (cabin side, passenger area, with BODY PDU + Firewall CONSTANT Bus) |
-| SwitchPros control panel        | ✓ Dash mounted                              |
-| SwitchPros control cable length | 5 ft (firewall to dash, short run)          |
+| SwitchPros control panel        | ✓ Console, behind the Kilduff shifter       |
+| SwitchPros control cable length | Not measured yet (firewall to console)      |
 | Firewall CONSTANT Bus           | ✓ Firewall (cabin side, passenger area)     |
 | Firewall CONSTANT Bus feed      | 2/0 AWG, ~13 ft from AUX battery+, 250A CB at battery |
 | CT4 GPS antenna                 | ✓ Integrated in CT4 unit                    |
