@@ -11,6 +11,8 @@ This section documents physical switches mounted in the dashboard area (separate
 
 All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" × 0.83" (39 mm × 21 mm)**. This is the de facto "Toyota-style" switch dimension used by Tacoma / 4Runner / FJ Cruiser / Tundra OEM, and supported by multiple aftermarket switch vendors (CH4X4, STEDI, sPOD, etc.).
 
+**Orientation:** every rocker and push switch on the dash mounts **portrait** (owner, 2026-09-25): the Toyota-style switches at 0.83" wide × 1.54" tall, and the [intercom][intercom] remote head in its 0.83" × 1.45" rocker hole. CH4X4 shows its switches landscape, so check that the etched legends read upright in portrait before ordering, or order CH4X4's custom-etched faces. On the dual switches the two buttons stack, one above the other.
+
 **Why this standard:**
 
 - Single consistent dash cutout dimension across all custom switches
@@ -18,7 +20,7 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 - LED-backlit OEM-look aesthetic
 - Switches snap-lock into their own cutout — no fascia/bezel required
 
-**Mounting:** Cutouts machined directly into the existing **Genright dash** at chosen positions — no separate fascia panel. Each switch snap-locks into its 1.54" × 0.83" rectangular cutout.
+**Mounting:** Cutouts machined directly into the existing **Genright dash** at chosen positions — no separate fascia panel. Each switch snap-locks into its rectangular cutout, 0.83" wide × 1.54" tall.
 
 ---
 

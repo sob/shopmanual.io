@@ -43,5 +43,7 @@ now the reference for what is in the van; the older drawings are kept on the
 | **Entertainment** | 3x Alpine PKG-RES3HDMI headrest screens on Rear Powerswitch (A) 1-3; power for the 3x Nvidia Shields is TBD now the inverter is out |
 | **Network** | UniFi UXG Lite gateway in the rear driver's door below the Starlink supply, powered from a 12 V USB-C outlet on Rear Powerswitch (A) circuit 6; WAN from the supply's LAN port |
 | **Lighting** | KC light bar, bumper, rock, reverse, and fog lights on a [planned Engine Bay Powerswitch](01-power-systems/03-switch-panels.md#engine-bay) |
+| **GMRS radio** | [Midland MXT575][mxt575], 50 W, moving over from the Jeep LJ (owner, 2026-09-25). Where it mounts and what powers it are not decided; Rear Powerswitch (B) has five spare circuits |
 
 [issue-4]: https://github.com/sob/shopmanual.io/issues/4
+[mxt575]: https://midlandusa.com/products/mxt575-micromobile-gmrs-two-way-radio
