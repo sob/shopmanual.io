@@ -242,6 +242,14 @@ nav:
       - 1.3 - Switch Panels: nissan_nv/01-power-systems/03-switch-panels.md
     - Diagrams:
       - nissan_nv/02-diagrams/index.md
+    - Body Electrical:
+      - nissan_nv/03-body-electrical/index.md
+      - 3.1 - Viper SmartStart: nissan_nv/03-body-electrical/01-viper-smartstart.md
+      - 3.2 - Exterior Lighting: nissan_nv/03-body-electrical/02-exterior-lighting.md
+    - Service & Maintenance:
+      - nissan_nv/04-service/index.md
+      - 4.1 - Service History: nissan_nv/04-service/01-service-history.md
+      - 4.2 - Procedures: nissan_nv/04-service/02-procedures.md
   - Jeep Wrangler JKU:
     - jeep_jku/index.md
     - Power Systems:
