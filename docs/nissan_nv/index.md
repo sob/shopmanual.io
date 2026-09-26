@@ -7,13 +7,16 @@ hide:
 
 ## Project Overview
 
-A Nissan NV 3500 with an accessory electrical system built on top of the
-factory wiring. The van runs a **12 V** system: an Odyssey AGM Group 34 START
-battery and a second Odyssey AGM Group 34 as the AUX house battery, in a
-Genesis Offroad dual battery tray with a Redarc BCDC Alpha 50 DC-DC charger
-between them. The AUX battery feeds two switch panels, Rear Powerswitch (A)
-and (B), through a 200 A SGP32 relay, and can run with the key off. An Engine Bay Powerswitch for
-the KC exterior lighting is planned.
+A 2018 Nissan NV 3500 (5.6 L V8, lifted, on 285/65R18 Mickey Thompson Baja
+Boss tires) with an accessory electrical system built on top of the factory
+wiring. The van runs a **12 V** system: an Odyssey AGM Group 34 START battery
+and a second Odyssey AGM Group 34 as the AUX house battery, in a Genesis
+Offroad dual battery tray with a Redarc BCDC Alpha 50 DC-DC charger between
+them. The AUX battery feeds two switch panels, Rear Powerswitch (A) and (B),
+through a 200 A SGP32 relay, and can run with the key off. An Engine Bay
+Powerswitch for the KC exterior lighting is planned. A Viper alarm with
+SmartStart remote start is tapped into the factory wiring through T-harnesses
+behind the driver-side dash.
 
 Documentation for this build started as draw.io drawings rather than written
 pages. The *As Built* page of `Van Electrical.drawio` and the pages below are
@@ -29,6 +32,7 @@ now the reference for what is in the van; the older drawings are kept on the
 - **[Batteries & Charging](01-power-systems/02-batteries-charging.md)** - Genesis dual battery tray, BCDC Alpha 50, SGP32 rear feed
 - **[Switch Panels](01-power-systems/03-switch-panels.md)** - Circuit assignments for Rear Powerswitch (A) and (B)
 - **[Diagrams](02-diagrams/index.md)** - The full set of van drawings, rendered from `Van Electrical.drawio`
+- **[Vehicle](03-vehicle/index.md)** - Base vehicle, tires, factory-side aftermarket equipment, and service parts
 
 </div>
 
