@@ -17,7 +17,9 @@ electrical system outside the accessory build in
 | :--- | :---- |
 | Model | 2018 Nissan NV3500 |
 | Engine | 5.6 L V8 (VK56 family) |
-| Suspension | Lifted - kit and height **TBD** |
+| Lift kit | Weldtec Designs - lift height **TBD** |
+| Front suspension | King coilovers |
+| Rear shocks | Bilstein 5100 |
 | Batteries | Odyssey AGM Group 34, START + AUX (see [Batteries & Charging](../01-power-systems/02-batteries-charging.md)) |
 
 ---
@@ -67,6 +69,6 @@ electrical system outside the accessory build in
 
 ## Outstanding Items
 
-- [ ] Record the lift kit and lift height
+- [ ] Record the lift height and the King coilover model
 - [ ] Record the wheel make, size, and offset
 - [ ] Record the Viper brain, SmartStart, and bypass module models, and the brain's power feed and fuse
