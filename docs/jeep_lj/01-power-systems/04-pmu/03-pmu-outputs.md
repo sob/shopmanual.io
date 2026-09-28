@@ -29,7 +29,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output     | Circuit                   | Load | Ground                                                | Control Type         | Notes                                         |
 | :--------- | :------------------------ | :--- | :---------------------------------------------------- | :------------------- | :-------------------------------------------- |
 | **Out 11** | WS-51C Wiper Controller   | 15A  | [Firewall Stud Bus][firewall-ground] T2               | Auto (ignition ON)   | See [Wipers][windshield-wiper-control-system] |
-| **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | Auto: with headlights (In 7 OR In 5), ignition-independent | Maxbilt RED + RTL-S running; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
+| **Out 12** | Parking / Tail Markers    | ~2A  | [SwitchPros Ground Bus][switchpros-ground] T5          | Auto: with headlights (In 7 OR In 5), ignition-independent | Maxbilt RED + RTL-S running + license-plate lamp; also feeds the SwitchPros LIGHTS input — see [DRL & Parking][drl-parking-lights] |
 | **Out 13** | Command Touch CT4         | ~9A  | [Firewall Stud Bus][firewall-ground] T1               | CONSTANT             | Turn signals, headlights, hazards             |
 | **Out 14** | Garmin Tread 2 GPS        | ~2A  | Chassis, local to the dash mount                      | Auto (ignition ON)   | Moved off SwitchPros button 8 (2026-09-24); HDP24 pin 21 — see [Navigation][navigation] |
 | **Out 15** | **[Available]**           | -    | -                                                     | -                    | (Was Winch Contactor Trigger — reallocated 2026-05-30 to BODY PDU CB43) |
@@ -42,7 +42,7 @@ Complete configuration of all 24 PMU outputs, load allocations, and combined out
 | Output     | Circuit                  | Load | Ground                                                | Control Type        | Notes                          |
 | :--------- | :----------------------- | :--- | :---------------------------------------------------- | :------------------ | :----------------------------- |
 | **Out 17** | A/C Clutch               | 3-5A | Compressor clutch ground (Restomod Air kit — verify)  | Auto (A/C request)  | Request via Restomod Air control head → trinary → In 9 — see [HVAC System][hvac-system] |
-| **Out 18** | Horn                     | 5.4A | [Engine Bay Bus][engine-ground] Stud 6                | External input      | PIAA horns (2.7A × 2)          |
+| **Out 18** | Horn                     | 5.4A | [Engine Bay Bus][engine-ground] Stud 6                | External input      | CT4 kit horn ({{ tbd(326) }})  |
 | **Out 19** | 4x4 Indicator Relay      | <0.2A | Relay coil → [Firewall Stud Bus][firewall-ground]    | Auto (An 1 position) | Coil only; contacts ground the HDX 4x4 input (PMU is high-side). Active in 4H or 4L — see [Transfer Case][transfer-case] |
 | **Out 20** | STX Intercom             | ~5A  | [Direct START battery-][starter-battery-distribution] | Auto (ignition ON)  | RF noise isolation             |
 | **Out 21** | Brake Lights             | ~3A  | [SwitchPros Ground Bus][switchpros-ground]            | External input      | Shared tail light ground       |

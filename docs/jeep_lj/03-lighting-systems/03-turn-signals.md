@@ -21,30 +21,28 @@ Each CT4 output (SW1 right, SW2 left) splices to three destinations:
 
 | Destination | Load | Wire | Notes |
 | :---------- | :--- | :--- | :---- |
-| Front turn signal | ~0.2A | 14 AWG | Fender-mounted LED |
+| Front turn signal | {{ tbd(328) }} | 14 AWG | CT4 kit amber LED, fender-mounted |
 | Maxbilt rear turn | ~0.3A | 16 AWG | Integrated tail light |
 | RTL-S amber | 0.36A | Per RTL-S harness | Chase light turn function |
-| **Total per side** | **~0.9A** | | Well under 10A CT4 output capacity |
+| **Total per side** | **~0.7A + front LED** | | Well under 10A CT4 output capacity |
 
 **Splice Location:** Behind dash (accessible for service)
 
 ## Front Turn Signals
 
-![LED Side Marker](../images/led-side-marker.jpg){ loading=lazy width=200 }
-
-**Type:** Amber LED turn signals
+**Type:** Amber LED turn signals, 400 lumens[^kit-led]
+**Part:** Supplied with the [CT4 Turn Signal & Accessory Kit][command-touch-ct4] (purchased)
 **Quantity:** 2 (left and right fenders)
 **Function:** Turn signal only (CT4 controlled)
-**Part #:** {{ tbd(153) }}
-**Size:** 0.8" × 0.8" × 1.1"
-**Draw:** ~0.2A each (~0.4A total, estimated)
+**Mounting:** ¾" hole in each fender; LED is pulled into a rubber grommet[^kit-led]
+**DOT compliance / draw:** {{ tbd(328) }}
 
 ### Wiring
 
-| Function   | Source  | Wire          | Current | Ampacity @60°C | Utilization |
-| :--------- | :------ | :------------ | :------ | :------------- | :---------- |
-| Right Turn | CT4 SW1 | BROWN, 14 AWG | ~0.2A   | 20A            | 1%          |
-| Left Turn  | CT4 SW2 | RED, 14 AWG   | ~0.2A   | 20A            | 1%          |
+| Function   | Source  | Wire          | Current         | Ampacity @60°C | Utilization |
+| :--------- | :------ | :------------ | :-------------- | :------------- | :---------- |
+| Right Turn | CT4 SW1 | BROWN, 14 AWG | {{ tbd(328) }}  | 20A            | Low         |
+| Left Turn  | CT4 SW2 | RED, 14 AWG   | {{ tbd(328) }}  | 20A            | Low         |
 
 **Routing:** CT4 (steering column) → firewall grommet → engine bay → fenders
 
@@ -75,3 +73,5 @@ Rear turn signals are fed from the CT4 splice (see distribution table above):
 [command-touch-ct4]: ../05-control-interfaces/03-command-touch-ct4.md
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [chase-lights]: ../04-offroad-lighting/04-chase-lights.md
+
+[^kit-led]: SwitchPros *Command-Touch CT4* manual, Rev. 1.0091524 — p.1 ("turn signal LED's are amber and 400 Lumens") and p.5 (drill two ¾" holes in the front fenders; seat the grommet, then pull the LED into it). <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>
