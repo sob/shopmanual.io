@@ -10,7 +10,7 @@ Two circuits on two PMU outputs, both driven from the CT4 headlight status — n
 | Circuit | PMU Output | Loads | Control |
 | :------ | :--------- | :---- | :------ |
 | **DRL** | Out 23 (7A) | LP6 headlight DRL (Pin 3, both lights) | On with ignition, off when either beam is on |
-| **Parking / tail markers** | Out 12 (15A) | Maxbilt Round Trail Tail RED (both), RTL-S running (red) | On whenever the headlights are on (low or high beam); works with the ignition off |
+| **Parking / tail markers** | Out 12 (15A) | Maxbilt Round Trail Tail RED (both), RTL-S running (red), license-plate lamp | On whenever the headlights are on (low or high beam); works with the ignition off |
 
 Parking lights follow the headlights and are independent of the ignition, so pulling the headlights on while parked lights the vehicle like any production car (owner decisions, 2026-09-22). That is why the two functions cannot share one output: the DRL auto-off logic would otherwise switch the tail markers off whenever the headlights are on.
 
@@ -29,8 +29,11 @@ PMU Out 12 crosses the firewall on [HDP24 pin 6][firewall-ingress] and runs to t
 | :---------- | :--- | :--- | :---- |
 | Maxbilt Round Trail Tail (RED) | ~1A | 16 AWG | Both tail lights |
 | RTL-S Running (Red) | 0.8A | Per RTL-S harness | Chase light running function |
+| License-plate lamp | {{ tbd(329) }} | 16 AWG | Lamp in the CT4 kit's plate frame, spliced here instead of into the CT4 rear harness |
 | SwitchPros LIGHTS input (Pin 4) | ~0A | 18 AWG | Parking-light sense for SwitchPros auto-off / DRL integration — tap at the firewall |
-| **Total** | **~2A** | | PMU Out 12 capacity: 15A (13%) |
+| **Total** | **~2A + plate lamp** | | PMU Out 12 capacity: 15A (13%+) |
+
+**License-plate lamp:** In the kit, the plate-frame lamp plugs into the CT4 rear light harness and lights with the ignition.[^kit-plate] Here it goes on Out 12 instead, so it follows the headlights like the tail markers.
 
 **Splice Location:** Rear of vehicle (accessible for service). The RTL-S white work section is currently drawn on this same splice (+1.3A) — see [Chase Light][chase-lights]; whether it stays on the parking circuit is an open question.
 
@@ -88,7 +91,7 @@ END
 **PMU Output Wiring:**
 
 - **Out 23:** 16 AWG from PMU (engine bay) to LP6 Pin 3 (DRL) on each headlight (0.8A total)
-- **Out 12:** 16 AWG from PMU (engine bay) → HDP24 pin 6 → H5 cabin trunk → rear splice: Maxbilt RED (each tail light) + RTL-S running; SwitchPros LIGHTS input tapped at the firewall
+- **Out 12:** 16 AWG from PMU (engine bay) → HDP24 pin 6 → H5 cabin trunk → rear splice: Maxbilt RED (each tail light) + RTL-S running + license-plate lamp; SwitchPros LIGHTS input tapped at the firewall
 
 **Wiring Method:** Simple inline splices; no junction box required at these loads.
 
@@ -120,3 +123,5 @@ END
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [harness-h5]: ../01-power-systems/07-wire-routing/05-harness-lighting-switchpros.md#h5
+
+[^kit-plate]: SwitchPros *Command-Touch CT4* manual, Rev. 1.0091524 — p.6 (step 9: plug the license-plate frame light connector into the harness; "The plate will automatically illuminate when the ignition is turned on"; wiring diagram shows the plate lamp on the rear light harness). <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>

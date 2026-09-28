@@ -110,9 +110,9 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 ## Phase 7: Horn
 
-- [ ] Confirm PIAA 85115 horns mounted in engine bay
-- [ ] Confirm PMU OUT18 → horns
-- [ ] Confirm horns grounded to engine bay ground bus
+- [ ] Confirm CT4 kit horn mounted in engine bay (kit bracket)
+- [ ] Confirm PMU OUT18 → horn
+- [ ] Confirm horn grounded to engine bay ground bus
 - [ ] Confirm horn button trigger routed through firewall to PMU In 1
 - [ ] Confirm PMU programmed: In 1 → OUT18
 

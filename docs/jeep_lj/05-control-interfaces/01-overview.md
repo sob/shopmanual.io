@@ -46,7 +46,7 @@ All control interfaces integrate with the dual-battery electrical system:
 - **[Vehicle Lighting][vehicle-lighting-overview]** - Complete vehicle lighting circuits controlled by these interfaces
 - **[Offroad Lighting][offroad-auxiliary-lighting]** - Auxiliary and offroad lighting controlled by SwitchPros
 - **[Engine Systems][pmu-power-distribution]** - PMU power distribution and engine bay subsystems
-- **[Horn][horn]** - PIAA horn system (engine bay component)
+- **[Horn][horn]** - CT4 kit horn on PMU Out 18 (engine bay component)
 - **[Wipers][windshield-wiper-control-system]** - Ron Francis WS-51C wiper controller (engine bay component)
 
 [switchpros-sp-1200-rcr-force-12]: 02-switchpros-sp1200.md

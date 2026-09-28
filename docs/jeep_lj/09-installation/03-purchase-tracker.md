@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-09-25
+**Last Updated:** 2026-09-27
 
 ---
 
@@ -52,7 +52,7 @@ Components organized by estimated cost for purchase planning (Black Friday, sale
 | Raceline RT233 Monster beadlocks | Raceline | — | 17x9.5, 8x170, -32 offset |
 | PSC 8" double-ended ram | PSC | — | Carried over from the Dana 44 build - [Steering][steering] |
 | Barnes 4WD universal DIY ram mount | Barnes 4WD | — | Carried over - [Front Axle][front-axle] |
-| Command Touch CT4 | SwitchPros | ~$500 | Purchased 2026-09 - [CT4][ct4] |
+| Command Touch CT4 Turn Signal & Accessory Kit (GPS) | SwitchPros | ~$500 | Purchased 2026-09; kit includes horn, front/rear turn LEDs, lit plate frame, harnesses, mounts. Plus Axia Alloys 1.125" column clamp - [CT4][ct4] |
 | Cummins R2.8 factory starter | Cummins | — | Shipped mounted on the crate engine; keeping it (2026-09-22) - [Starter][starter] |
 | Bosch iBooster Gen 2 (with MC pull) | Bosch / Honda | $195 | Purchased 2026-05-30; Honda Accord Hybrid donor (listing #397546491129); OEM 46680-T3Z-A00 + 01469-TWA-A58 confirmed - [iBooster][ibooster] |
 
@@ -174,7 +174,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 |:-----|:-------------|:-----------|:---------|:------|
 | Barnes 4WD Battery Box (Group 24) | Barnes 4WD | ~$67 | High | Backorder - [Batteries][batteries] |
 | Ron Francis WS-51C Wiper Controller | Ron Francis | ~$80 | Medium | [Wipers][wipers] |
-| PIAA 85115 Sports Horn | PIAA | ~$50 | Low | [Horn][horn] |
 | Overvoltage Protection Relay | Generic | ~$15-25 | Low | Solar protection - [Solar][solar] |
 | Deutsch HDP24-24-29 Connector Kit | Deutsch | ~$80 | High | [Firewall Ingress][firewall-ingress] |
 | SwitchPros 2-pin Delphi connector hardware (~12 harnesses: bodies, terminals, seals) | SwitchPros | — | High | P/N {{ tbd(156) }}; plug-and-play output harnesses - [SwitchPros][switchpros-sp1200] |
@@ -207,9 +206,9 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | ARB 1-Gallon Tank + Pressure Gauge | ~$220 | Medium |
 | Baja Designs Lighting | ~$5,000 | Medium-Low |
 | Audio (Amp, Sub, Front Speakers) | ~$1,350 | Low |
-| Misc Small Parts | ~$500 | Various |
+| Misc Small Parts | ~$450 | Various |
 | 1-Ton Axle Swap (Dana 60 front, Sterling 10.5 rear) | — (unpriced) | High |
-| **TOTAL REMAINING** | **~$8,100-8,600** (excl. axle swap) | |
+| **TOTAL REMAINING** | **~$8,050-8,550** (excl. axle swap) | |
 
 ---
 
@@ -284,7 +283,6 @@ _(Most electrical distribution components already purchased - see Purchased Item
 [speakers]: ../06-audio-systems/03-speakers.md
 [body-pdu]: ../01-power-systems/03-aux-battery-distribution/03-body-pdu.md
 [wipers]: ../02-engine-systems/04-wipers.md
-[horn]: ../02-engine-systems/05-horn.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
 [rear-air-chuck]: ../08-exterior-systems/04-rear-air-chuck.md
 [dashboard]: ../05-control-interfaces/05-dashboard-controls.md
