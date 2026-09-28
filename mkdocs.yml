@@ -242,6 +242,8 @@ nav:
       - 1.3 - Switch Panels: nissan_nv/01-power-systems/03-switch-panels.md
     - Diagrams:
       - nissan_nv/02-diagrams/index.md
+    - Vehicle:
+      - nissan_nv/03-vehicle/index.md
   - Jeep Wrangler JKU:
     - jeep_jku/index.md
     - Power Systems:
