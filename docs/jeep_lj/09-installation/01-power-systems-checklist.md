@@ -27,8 +27,8 @@ live in the linked source docs, not here.
 
 - [ ] Confirm front frame rail ground point located
 - [ ] Confirm rear frame rail ground point located
-- [ ] Confirm START battery- → Engine Bay Ground Bus
-- [ ] Confirm Engine Bay Ground Bus → engine block
+- [ ] Confirm START battery- (2/0) → engine block ground stud (starter return)
+- [ ] Confirm engine block ground stud → Engine Bay Ground Bus (short 2/0 jumper)
 - [ ] Confirm Engine Bay Ground Bus → front frame rail
 - [ ] Confirm AUX battery- → rear frame rail
 - [ ] Confirm Firewall Stud Bus → chassis ground
@@ -45,23 +45,25 @@ live in the linked source docs, not here.
 
 ## Phase 2: Power Distribution
 
-### START Battery Circuit Breakers
+### START Battery MRBF Terminal Fuses
 
-- [ ] Mount 250A circuit breaker (PMU main power) within reach of START battery
-- [ ] Mount 80A circuit breaker (BCDC input) within reach of START battery
-- [ ] Mount 100A circuit breaker (Forward Distribution Bus master) within reach of START battery
-- [ ] Confirm START battery+ → 250A CB → PMU main power
-- [ ] Confirm START battery+ → 80A CB → BCDC input
-- [ ] Confirm START battery+ → 100A CB → 2 AWG forward feed → START+ Forward Distribution Bus
-- [ ] Confirm PMU ground reference (Pin 25) → Engine Bay Ground Bus
+- [ ] Mount dual MRBF terminal fuse block on START battery+ post; fit 150A (PMU main power) and 100A (Forward Distribution Bus master) fuses
+- [ ] Mount single MRBF terminal fuse block on START battery+ post; fit 80A (BCDC input) fuse
+- [ ] Confirm START battery+ ring lugs landed: alternator, starter, dual MRBF block, single MRBF block, ECM, grid heater
+- [ ] Confirm START battery+ → 150A MRBF → 1 AWG → PMU main power stud
+- [ ] Confirm START battery+ → 80A MRBF → BCDC input
+- [ ] Confirm START battery+ → 100A MRBF → 2 AWG forward feed → START+ Forward Distribution Bus
+- [ ] Confirm PMU ground reference (Pin 25, 12 AWG) → Engine Bay Ground Bus stud 5
+- [ ] Stock spare MRBF fuses (150A, 100A, 80A) — not resettable
 
 **START+ Forward Distribution Bus (engine bay):**
 
 - [ ] Mount START+ Forward Distribution Bus (Blue Sea 2105, {{ tbd(135) }}) in engine bay with insulated cover
-- [ ] Mount 60A / 50A / 25A load breakers on a bracket beside the bus
+- [ ] Mount 60A / 50A load breakers on a bracket beside the bus; mount 15A and 5A inline fuse holders at the bus
 - [ ] Confirm Forward Bus → 60A CB → radiator fan power (via relay)
 - [ ] Confirm Forward Bus → 50A CB → iBooster main
-- [ ] Confirm Forward Bus → 25A CB → Turbolamik TCU power
+- [ ] Confirm Forward Bus → 15A fuse → 14 AWG → HDP24 pin 2 → CT4 12V supply
+- [ ] Confirm Forward Bus → 5A fuse → 14 AWG → HDP24 pin 22 → PBS-I RED +12V battery
 - [ ] Confirm iBooster enable → Ignition bus Term 5 (7.5A fuse) → firewall Pin 18
 - [ ] Install Lingenfelter VSFM-002 radiator-fan controller + coolant sensor (sensor P/N {{ tbd(134) }}); verify fail-to-full-speed on lost sensor
 
@@ -81,13 +83,14 @@ live in the linked source docs, not here.
 - [ ] Verify PMU main power always on
 - [ ] Verify main power cable voltage drop within spec under load
 
-### AUX Battery Inline CBs & Firewall CONSTANT Bus
+### AUX Battery MRBF Terminal Fuses & Firewall CONSTANT Bus
 
-- [ ] Mount 250A circuit breaker (forward feed to firewall bus) within reach of AUX battery
-- [ ] Mount 150A circuit breaker (SafetyHub local feed) within reach of AUX battery
-- [ ] Confirm AUX battery+ ring lugs landed: Winch, BCDC output, 250A CB, 150A CB, 80A CB (amp)
-- [ ] Confirm AUX battery+ → 250A CB → Firewall CONSTANT Bus
-- [ ] Confirm AUX battery+ → 150A CB → SafetyHub 150
+- [ ] Mount dual MRBF terminal fuse block on AUX battery+ post; fit 250A (forward feed to firewall bus) and 150A (SafetyHub local feed) fuses
+- [ ] Mount single MRBF terminal fuse block on AUX battery+ post; fit 80A (JL Audio amp) fuse
+- [ ] Confirm AUX battery+ ring lugs landed: Winch, BCDC output, dual MRBF block, single MRBF block
+- [ ] Confirm AUX battery+ → 250A MRBF → Firewall CONSTANT Bus
+- [ ] Confirm AUX battery+ → 150A MRBF → SafetyHub 150
+- [ ] Stock spare MRBF fuses (250A, 150A, 80A) — not resettable
 
 **Firewall CONSTANT Bus:**
 
@@ -95,10 +98,9 @@ live in the linked source docs, not here.
 - [ ] Confirm forward feed terminates at bus input stud
 - [ ] Mount 150A circuit breaker (SwitchPros) at Firewall CONSTANT Bus
 - [ ] Mount 100A circuit breaker (BODY PDU) at Firewall CONSTANT Bus
-- [ ] Mount 80A circuit breaker (JL Audio amp) at AUX battery bracket
 - [ ] Confirm Firewall CONSTANT Bus → 150A CB → SwitchPros power module
 - [ ] Confirm Firewall CONSTANT Bus → 100A CB → BODY PDU power studs
-- [ ] Confirm AUX battery+ → 80A CB → JL Audio amp (direct AUX feed, not via firewall bus)
+- [ ] Confirm AUX battery+ → 80A MRBF → JL Audio amp (direct AUX feed, not via firewall bus)
 
 **Direct AUX Battery Connections (No Circuit Breaker):**
 
@@ -109,7 +111,7 @@ live in the linked source docs, not here.
 ### BCDC Alpha 50 Installation
 
 - [ ] Mount BCDC in passenger rear wheel well (water-protected, LED visible)
-- [ ] Confirm START battery+ → 80A CB → BCDC input
+- [ ] Confirm START battery+ → 80A MRBF → BCDC input
 - [ ] Confirm BCDC output → AUX battery+
 - [ ] Confirm BCDC negative → AUX battery-
 - [ ] Confirm ignition signal → PMU ignition sense tap
@@ -138,12 +140,12 @@ live in the linked source docs, not here.
 ### PMU24
 
 - [ ] Mount PMU on firewall or inner fender (accessible for LED/USB diagnostics)
-- [ ] Confirm PMU ground reference (Pin 25) → Engine Bay Ground Bus
+- [ ] Confirm PMU ground reference (Pin 25, 12 AWG) → Engine Bay Ground Bus stud 5
 
 ### SafetyHub 150
 
 - [ ] Mount SafetyHub 150 in passenger rear wheel well (co-located with AUX battery)
-- [ ] Confirm AUX battery+ → 150A CB → SafetyHub input
+- [ ] Confirm AUX battery+ → 150A MRBF → SafetyHub input
 - [ ] Confirm SafetyHub ground bus → chassis ground
 
 ### BODY PDU
@@ -175,10 +177,10 @@ live in the linked source docs, not here.
 - [ ] Drill firewall hole for bulkhead connector
 - [ ] Mount Deutsch HDP24-24-29 receptacle (engine side)
 - [ ] Assemble Deutsch plug (cabin side)
-- [ ] Crimp contacts for all 19 wires
+- [ ] Crimp contacts for all 22 wires
 - [ ] Install sealing plugs in unused cavities
 - [ ] Verify bulkhead connector seal engagement
-- [ ] Confirm Engine→Cabin pins (1, 3–6, 12, 19, 20): radio power, PMU lighting outputs, PINK IGN, 4x4/4LO indicators
+- [ ] Confirm Engine→Cabin pins (1–6, 12, 19–22): radio power, CT4 12V supply, PMU lighting outputs, PINK IGN, 4x4/4LO indicators, GPS power, PBS-I battery feed
 - [ ] Confirm Cabin→Engine pins (7–11, 13–18): CT4 outputs, switch signals, winch control, iBooster enable
 - [ ] Install ferrite chokes on radio power leads (RF mitigation)
 
@@ -206,11 +208,12 @@ live in the linked source docs, not here.
 
 - [ ] Confirm HVAC blower → OUT5
 - [ ] Confirm GMRS Radio → OUT6
-- [ ] Confirm oil cooler fan → OUT7
-- [ ] Confirm PS cooler fan → OUT8
-- [ ] Confirm Dakota Digital system → OUT9
+- [ ] Confirm oil cooler fan → OUT1
+- [ ] Confirm PS cooler fan → OUT16
+- [ ] Confirm Dakota Digital system → OUT3
 - [ ] Confirm wipers (WS-51C) → OUT11
-- [ ] Confirm CT4 → OUT13
+- [ ] Confirm Turbolamik TCU → OUT15 (12 AWG)
+- [ ] Confirm CT4 12V supply from START+ Forward Bus (15A fuse, HDP24 pin 2) — not a PMU output
 - [ ] Confirm A/C clutch → OUT17
 - [ ] Confirm horn → OUT18
 - [ ] Confirm STX Intercom → OUT20
@@ -218,7 +221,7 @@ live in the linked source docs, not here.
 - [ ] Confirm reverse lights → OUT22
 - [ ] Confirm LP6 DRL → OUT23
 - [ ] Confirm parking/tail markers → OUT12 (via HDP24 pin 6; SwitchPros LIGHTS input tapped at firewall)
-- [ ] OUT1–4, 10, 14, 15, 16 — free (no wiring); OUT19/OUT24 are the 4x4/4LO indicators; radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus (see below)
+- [ ] OUT2, 4, 7–10, 13 — free (no wiring); OUT19/OUT24 are the 4x4/4LO indicators; radiator fan, iBooster, CT4, and PBS-I are fed from the START+ Forward Distribution Bus (see above)
 
 ### PMU CAN Bus Integration
 
@@ -276,6 +279,7 @@ live in the linked source docs, not here.
 - [ ] Program reverse light activation
 - [ ] Program oil cooler fan from SPN 175
 - [ ] Program PS cooler fan from SPN 110
+- [ ] Configure PMU Delayed turn off so OUT15 (TCU) stays up after key-off
 - [ ] Configure sequential load startup delays
 - [ ] Export/backup configuration to git repository
 

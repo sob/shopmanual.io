@@ -23,7 +23,7 @@ Dakota Digital HDX instrumentation: control module, dashboard cluster, and 4 BIM
 
 ## Cross-Section References
 
-**Power:** PMU OUT9 (25A) → See `01-power-systems/04-pmu/03-pmu-outputs.md`
+**Power:** PMU OUT3 (25 A) → See `01-power-systems/04-pmu/03-pmu-outputs.md`
 
 **Ground:** Firewall Stud Bus T4-5 → See `01-power-systems/05-grounding/02-firewall-stud-bus.md`
 

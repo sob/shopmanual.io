@@ -91,11 +91,11 @@ tags:
 
 | Circuit            | Wire Gauge | Source   | Destination                  | Notes                           |
 | :----------------- | :--------- | :------- | :--------------------------- | :------------------------------ |
-| TCU Power          | 12 AWG     | [START+ Forward Dist Bus][start-fwd-bus] (25A CB) | Turbolamik harness (1.8m)   | 15A, CONSTANT (must stay on); relocated off PMU OUT16 |
+| TCU Power          | 12 AWG     | [PMU OUT15][pmu-outputs] (25 A output) | Turbolamik harness (1.8m)   | 15A continuous; kept on after key-off by the PMU Delayed turn off window, maximum = TCU sleep time ({{ tbd(332) }}); moved back from the START+ Forward Bus (2026-10-17) |
 | TCU Ignition       | 18 AWG     | Ignition bus | Turbolamik harness        | Wake-up signal                  |
 | TCU Ground         | 14 AWG     | Engine bay ground bus | Turbolamik harness | 700mm lead from harness         |
 
-**Note:** TCU power must remain active at all times - if power is cut before TCU goes to sleep, adaptations won't save.
+**Note:** TCU power must stay on until the TCU goes to sleep - if power is cut first, adaptations won't save. The PMU's Delayed turn off keeps OUT15 live for that window; its maximum must be at least the TCU sleep time ({{ tbd(332) }}).
 
 ### CAN Bus Integration
 
@@ -196,7 +196,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 
 - [ ] Order Turbolamik TCU 2.0 with basic wiring harness
 - [ ] Install Turbolamik TCU on 8HP70 mechatronic (soldering required)
-- [ ] Route TCU power from START+ Forward Distribution Bus (12 AWG, 25A CB, CONSTANT)
+- [ ] Route TCU power from PMU OUT15 (12 AWG); set the PMU Delayed turn off maximum once Turbolamik confirms the TCU sleep time ({{ tbd(332) }})
 - [ ] Connect TCU CAN to J1939 bus (same tap as PMU/Dakota Digital)
 - [ ] Install Kilduff shifter in center console
 - [ ] Wire drive mode rocker switch (dash panel) to TCU mode inputs
@@ -211,7 +211,7 @@ The Turbolamik communicates with the Cummins R2.8 ECM via J1939 CAN for:
 - [Cummins R2.8][engine] - Engine CAN integration
 
 [transfer-case]: 02-transfer-case.md
-[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [engine]: ../02-engine-systems/index.md
 [starter]: ../02-engine-systems/01-starter.md

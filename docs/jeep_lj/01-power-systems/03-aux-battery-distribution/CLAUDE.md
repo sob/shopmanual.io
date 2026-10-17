@@ -17,11 +17,11 @@ Documents rear wheel well power distribution from the AUX battery (Dakota Lithiu
 
 **Use when:** Finding what connects to AUX battery positive terminal
 
-### `01-circuit-breakers.md` - Circuit Breakers
+### `01-circuit-breakers.md` - Circuit Protection
 
-**Contains:** All AUX battery circuit breaker specifications and ratings
+**Contains:** AUX battery-post MRBF terminal fuse specifications (forward feed, SafetyHub, audio amp) and firewall-side circuit breakers (SwitchPros, BODY PDU)
 
-**Use when:** Finding circuit breaker size for SwitchPros, BODY PDU, or other loads
+**Use when:** Finding the fuse or circuit breaker size for SwitchPros, BODY PDU, SafetyHub, the amp, or other loads
 
 ### `02-constant-bus.md` - Firewall CONSTANT Bus Bar
 
@@ -29,7 +29,7 @@ Documents rear wheel well power distribution from the AUX battery (Dakota Lithiu
 
 **Use when:** Finding firewall CONSTANT bus capacity, available studs, or what connects to the bus
 
-Note: AUX battery itself has NO local CONSTANT bus. Battery has 5 stacked terminal lugs + 3 inline CBs (250A master forward feed + 150A SafetyHub local + 80A audio amp).
+Note: AUX battery itself has NO local CONSTANT bus. Battery post carries 4 lugs (winch, BCDC output, dual MRBF block, single MRBF block); the three protected feeds (forward feed, SafetyHub, audio amp) leave through MRBF terminal fuses on the post.
 
 ### `03-body-pdu.md` - BODY PDU
 
@@ -51,7 +51,7 @@ Note: AUX battery itself has NO local CONSTANT bus. Battery has 5 stacked termin
 
 ## Navigation Scenarios
 
-**"What circuit breaker protects SwitchPros?"** → `01-circuit-breakers.md`
+**"What protects SwitchPros / the forward feed / the amp?"** → `01-circuit-breakers.md`
 
 **"What connects to AUX battery positive terminal?"** → `index.md` terminal table
 
@@ -67,7 +67,7 @@ Note: AUX battery itself has NO local CONSTANT bus. Battery has 5 stacked termin
 
 1. Determine if direct battery connection or CONSTANT bus connection
 2. Update `index.md` terminal table OR `02-constant-bus.md` stud table
-3. Add circuit breaker in `01-circuit-breakers.md` if needed
+3. Add the fuse or circuit breaker in `01-circuit-breakers.md` if needed
 4. Update grounding files (Section 1.5)
 
 **Changing wire gauge or distance for a circuit:**

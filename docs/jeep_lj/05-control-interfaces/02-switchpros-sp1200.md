@@ -16,7 +16,7 @@ tags:
 
 **Manual:** <https://www.switchpros.com/wp-content/uploads/RCR-force-12-installation-guide-REV-1.9.pdf>
 
-**Power Source:** 150A breaker from [Firewall CONSTANT Bus][firewall-bus] (fed from AUX battery via 250A master CB + 2/0 AWG forward feed)
+**Power Source:** 150A breaker from [Firewall CONSTANT Bus][firewall-bus] (fed from AUX battery via 250A MRBF terminal fuse at the post + 2/0 AWG forward feed)
 
 **Power Wire:** 2 AWG, ~2 ft (Firewall CONSTANT Bus to power module — both at firewall cluster)
 
@@ -113,7 +113,7 @@ tags:
 
 See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CONSTANT Bus][firewall-bus] for downstream distribution.
 
-- **Power:** AUX battery+ → 250A master CB → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
+- **Power:** AUX battery+ → 250A MRBF terminal fuse → 2/0 AWG forward (~13 ft) → Firewall CONSTANT Bus → 150A CB → SwitchPros power module
 - **Ground (logic reference):** 4 AWG wire from SwitchPros power module → chassis ground at firewall (short run, per manufacturer spec)
 - **Load returns:** Each output's ground wire returns to the [SwitchPros Ground Bus][switchpros-ground-bus] (Blue Sea 2105 MaxiBus), co-located with the power module at the firewall
 

@@ -42,7 +42,7 @@ Each build sheet embeds the matching tub-map diagram and the workbench specs for
 | # | Harness | Build sheet | Conductors | Largest gauge | Length |
 |:--|:--------|:------------|:----------:|:-------------:|:-------|
 | H1 | Passenger Rear Power Trunk (AUX fwd + winch) | [Power][power-build] | 3 | 2/0 AWG | ~13 ft (+13 ft winch to bumper) |
-| H2 | START Engine Bay Trunk (alt + starter + PMU feed + START+ fwd-bus feed) | [Power][power-build] | 4 | 2/0 AWG | 6–8 ft |
+| H2 | START Engine Bay Trunk (alt + starter + PMU feed + START+ fwd-bus feed + START− return) | [Power][power-build] | 5 | 2/0 AWG | 6–8 ft |
 | H3 | BCDC Cross-Cab | [Power][power-build] | 2 | 1/0 AWG | ~5–6 ft |
 | H4 | SwitchPros Front Bundle | [Lighting][lighting-build] | 3 outputs | 14 AWG | 4–8 ft |
 | H5 | Rear Cabin Trunk Bundle (SP rear + PMU rear) | [Lighting][lighting-build] | ~10 | 14 AWG | 8–14 ft |
@@ -54,7 +54,7 @@ Each build sheet embeds the matching tub-map diagram and the workbench specs for
 !!! note "Engine-bay distribution nodes (not cabin harnesses)"
     Two busbars fan power out to local loads and so are **not** catalogued as fabricatable cabin harnesses — like the Firewall CONSTANT bus, they are distribution points, and their short local feeds are built in place:
 
-    - **START+ Forward Distribution Bus** (Blue Sea 2105 MaxiBus, engine bay) — fed by H2's 2 AWG forward-bus master feed; fans out on short engine-bay local feeds to the radiator fan (4 AWG), iBooster main (8 AWG), and TCU (12 AWG). The TCU's leg is carried by [H9][controls-build]; the fan and iBooster legs are short engine-bay runs. See [START+ Forward Distribution Bus][start-fwd-bus].
+    - **START+ Forward Distribution Bus** (Blue Sea 2105 MaxiBus, engine bay) — fed by H2's 2 AWG forward-bus master feed (100A MRBF at the START post); fans out to the radiator fan (4 AWG, 60A CB), iBooster main (8 AWG, 50A CB), CT4 (14 AWG, 15A fuse, via HDP24 pin 2), and PBS-I (14 AWG, 5A fuse, via HDP24 pin 22). The TCU is back on PMU OUT15 (12 AWG; its leg is [H9][controls-build]); the fan and iBooster legs are short engine-bay runs. See [START+ Forward Distribution Bus][start-fwd-bus].
     - **Firewall CONSTANT bus** (cabin side) — fed by H1's 2/0 AWG forward feed; fans out to SwitchPros, BODY PDU, and Fusion. See [AUX Battery Distribution][aux-battery].
 
 ## Wire Color Convention {#wire-color-convention}
@@ -80,7 +80,7 @@ Wrap preference for this build:
 | Harness | Sleeve | Carries |
 |:--------|:-------|:--------|
 | **H1** Passenger Rear Power Trunk | Black braided, red tracer | AUX forward feed + winch power/ground |
-| **H2** START Engine Bay Trunk | Black braided, yellow tracer | Alternator, starter, PMU feed, START+ forward-bus feed |
+| **H2** START Engine Bay Trunk | Black braided, yellow tracer | Alternator, starter, PMU feed, START+ forward-bus feed, START− return |
 | **H3** BCDC Cross-Cab | Black braided, green tracer | BCDC input + cross-ground reference |
 | **H6** ARB Compressor (motor pair) | Black braided, blue tracer | 2× 6 AWG compressor motor cables |
 
@@ -96,7 +96,8 @@ Wrap preference for this build:
                   │                  ENGINE BAY                       │
                   │                                                   │
   H2 START trunk ─►──┐                                                │
-                     │ alt, starter, PMU feed, START+ fwd-bus feed    │
+                     │ alt, starter, PMU feed, START+ fwd-bus feed,   │
+                     │ START− return                                  │
                      │                                                │
                      ▼                                                │
                   ┌─────┐                                             │
@@ -129,10 +130,10 @@ Wrap preference for this build:
        ┌─────────────────────┐         ┌────────────────────┐         │
        │ DRIVER REAR WELL    │         │ PASSENGER REAR WELL│         │
        │ • START battery     │◄────────│ • AUX battery      │         │
-       │ • 250A + 80A CBs    │  H3     │ • 250A + 150A CBs  │         │
+       │ • 150/100/80A MRBF  │  H3     │ • 250/150/80A MRBF │         │
        │                     │ BCDC    │ • SafetyHub        │         │
        │                     │ cross   │ • BCDC             │         │
-       │  H2 ↑ (4 cables)    │ (under  │  H1 ↑ (3 cables)   │         │
+       │  H2 ↑ (5 cables)    │ (under  │  H1 ↑ (3 cables)   │         │
        │  driver floor/wall  │  rear   │  passenger         │         │
        │  to engine bay      │  bench) │  floor/wall to     │         │
        │                     │         │  sealed grommet    │         │
@@ -184,14 +185,14 @@ The **cabin trunk** (trans tunnel / sill, firewall ↔ rear wheel wells) carries
 |:----------|:--------|:-----------:|:-------------:|:---------:|
 | Forward (rear → firewall) | **H1** Passenger Rear Power Trunk (AUX fwd + winch power+gnd) | 3 | 2/0 AWG | Passenger sill/floor |
 | Cross-cab | H3 (BCDC inter-battery + cross-gnd) | 2 | 1/0 AWG | Under rear bench |
-| Forward (driver rear → engine bay) | H2 (alt, starter, PMU feed, START+ fwd-bus feed) | 4 | 2/0 AWG | Driver sill/floor |
+| Forward (driver rear → engine bay) | H2 (alt, starter, PMU feed, START+ fwd-bus feed, START− return) | 5 | 2/0 AWG | Driver sill/floor |
 | Rearward (firewall → rear) | **H5** Rear Cabin Trunk Bundle (SP rear outputs + PMU rear lighting) | ~10 | 14 AWG | Trans tunnel |
 | Rearward (firewall → rear) | CT4 rear turn signals | 2 | 14 AWG | Trans tunnel (could merge into H5) |
 | Rearward (firewall → under pass seat) | SwitchPros control + pressure (ARB) | 2 | 14–18 AWG | Trans tunnel (per H6 optimization) |
 
 **Passenger sill/floor (H1):** ~3 cables, ~1.5" OD bundle, continuous through a sealed 2-piece grommet at the firewall (no bulkhead studs — see optimization note below)
 
-**Driver sill/floor (H2):** ~4 cables (3× 2/0 AWG + 1× 2 AWG), ~1.6" OD bundle, terminates at heavy power grommet at firewall
+**Driver sill/floor (H2):** 5 cables (2× 2/0 AWG + 1× 1 AWG + 1× 2 AWG + 1× 2/0 ground), ~1.8" OD bundle, terminates at heavy power grommet at firewall
 
 **Trans tunnel rearward (H5 + CT4 + ARB signal):** ~14 conductors of small wire (14–18 AWG)
 
@@ -208,7 +209,7 @@ These were noted inline on the build sheets; consolidated here for review:
 3. **H5 sub-harness (firewall → rear breakout) is a single straight pull;** R&R of any individual rear light becomes a pigtail swap.
 4. **H6 motor cables only.** Move control/pressure wires into H5 since they originate at SwitchPros.
 5. **Rock lights + fog in one bundle** through SwitchPros firewall bulkhead to engine bay → grille area. Splice/breakout at front for fan-out. (The front locker wire left this bundle on 2026-09-24; the lockers now run from dash switches in the cabin.)
-6. ~~HDP20 firewall connector pin budget~~ **Resolved (2026-05-30):** Split into two dedicated bulkheads — HDP24-24-29 for non-SP traffic (18/29 used, 11 spare) + HDP24-18-14 for SwitchPros forward outputs (6/14 used, 8 spare). SP harness stays Delphi-native end-to-end. See [Pin Budget Audit][firewall-ingress].
+6. ~~HDP20 firewall connector pin budget~~ **Resolved (2026-05-30):** Split into two dedicated bulkheads — HDP24-24-29 for non-SP traffic (22/29 used as of 2026-10-17) + HDP24-18-14 for SwitchPros forward outputs (4/14 used). SP harness stays Delphi-native end-to-end. See [Pin Budget Audit][firewall-ingress].
 
 ---
 

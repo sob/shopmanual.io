@@ -13,10 +13,10 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 
 | Connection         | Source            | Wire Gauge             | Protection | Notes                                                                                                            |
 | :----------------- | :---------------- | :--------------------- | :--------- | :--------------------------------------------------------------------------------------------------------------- |
-| **Main Power**     | START battery+    | 2/0 AWG                | 250A CB    | Optimized for 220A max load with proper protection coordination - See [Circuit Breakers][front-circuit-breakers] |
-| **Ground**         | START battery-    | 2/0 AWG                | N/A        | Matches power wire gauge for 220A max load - See [Grounding Architecture][grounding]                             |
-| **Ignition Sense** | Ignition signal bus bar (engine bay distribution off HDP24 Pin 12) | 18 AWG         | N/A        | Sourced from PBS-I PINK IGN via the cabin ignition bus bar - see [PMU Inputs][pmu-inputs] and [Keyless Ignition][keyless-ignition] |
-| **CAN Bus**        | Cummins ECM J1939 | 18-20 AWG twisted pair | N/A        | Stub tap - see [PMU Inputs][pmu-inputs]                                                                          |
+| **Main Power**     | START battery+    | 1 AWG, ~7 ft           | 150A MRBF terminal fuse at the START post | PMU battery stud is 150 A max constant[^pmu-pinout]; ≈2.6% drop at 150A (60°C-derated), ≈2.0% at 115A typical. Downsized from 2/0 + 250A CB (2026-10-17) - See [Circuit Breakers][front-circuit-breakers] |
+| **Ground**         | Engine Bay Ground Bus stud 5 | 12 AWG (connector pin 25) | N/A | Logic reference only, as short as possible; load current returns through each load's own ground - See [Grounding Architecture][grounding] |
+| **Ignition Sense** | Ignition signal bus bar (engine bay distribution off HDP24 Pin 12) | 18 AWG (16 AWG pigtail at PMU) | N/A        | Sourced from PBS-I PINK IGN via the cabin ignition bus bar; PMU switches off when it drops, except for the Delayed turn off window that keeps the TCU (OUT15) alive - see [PMU Inputs][pmu-inputs], [PMU Programming][pmu-programming] and [Keyless Ignition][keyless-ignition] |
+| **CAN Bus**        | Cummins ECM J1939 | 18-20 AWG twisted pair (16 AWG pigtail at PMU) | N/A        | Stub tap - see [PMU Inputs][pmu-inputs]                                                                          |
 
 ## System Components
 
@@ -27,7 +27,7 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 
 ## Related Documentation
 
-- [START battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source and MRBF terminal fuse
 - [Grounding Architecture][grounding] - PMU ground connection
 - [Firewall Ingress][firewall-ingress] - Wire routing through firewall
 
@@ -40,3 +40,5 @@ Engine bay power distribution handled by ECUMaster PMU24, a programmable power m
 [starter-battery-distribution]: ../02-starter-battery-distribution/index.md
 [firewall-ingress]: ../07-wire-routing/02-firewall-ingress.md
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
+
+[^pmu-pinout]: ECUMaster, *PMU-24 DL Pinout v1.1* (2023-10-06): battery stud "Maximum constant current: 150 A"; O1–O5, O12–O16 25 A; O6–O11 15 A; O17–O24 7 A; terminals 211CC2S2160P 13–17 AWG, 211CC3S2120 14–16 AWG, 211CC3S3120 10–12 AWG. https://www.ecumaster.com/files/PMU/PMU-24_Pinout_v1.1.pdf (accessed 2026-10-17).

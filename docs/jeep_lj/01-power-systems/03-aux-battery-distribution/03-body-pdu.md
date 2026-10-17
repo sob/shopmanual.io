@@ -26,7 +26,7 @@ tags:
 
 **Mounting:** Firewall - body side (cabin), passenger side
 
-**Power Source:** Firewall CONSTANT bus via 100A CB (2 AWG, ~2 ft local — bus is fed from AUX battery through 300A master CB and 2/0 AWG forward feed)
+**Power Source:** Firewall CONSTANT bus via 100A CB (2 AWG, ~2 ft local — bus is fed from AUX battery through a 250A MRBF terminal fuse at the AUX post and 2/0 AWG forward feed)
 
 **Ground:** [Firewall Stud Bus][firewall-stud-bus] Terminal 3 (14 AWG) - relay coil/logic reference only
 
@@ -51,8 +51,8 @@ tags:
 | CB30        | CHEM DETECT             | Fusion Head Unit            | 15A  | 14AWG | ~15A                  | -     | CONSTANT power, ignition sense from bus bar |
 | CB48        | ARCT CRAN               | USB Charging Ports          | 20A  | 14AWG | ~13A                  | -     | 2x Powerwerx PanelUSB-75W (78W each, 7.5A fuse ea) |
 | CB39        | TRLR BO STOP            | WolfBox Camera/Mirror       | 10A  | 16AWG | ~10A                  | -     | Dash cam + backup camera                    |
-| CB45        | IGNITION                | Driver Heated Seat          | 15A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element    |
-| CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 20A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element    |
+| CB45        | IGNITION                | Driver Heated Seat          | 10A  | 14AWG | 5A peak, 2A sustained | K21   | Manual switch → relay K21 → seat element (dropped from 15A to match the 5A seat load, 2026-10-17) |
+| CB42        | 2WAY INTRCM             | Passenger Heated Seat       | 10A  | 14AWG | 5A peak, 2A sustained | K22   | Manual switch → relay K22 → seat element (dropped from 20A to match the 5A seat load, 2026-10-17) |
 | CB20        | RADIO                   | Cargo Lights                | 10A  | 16AWG | 4A                    | -     | Switch on rear wheel well top               |
 | CB43        | TRANS ECU               | Winch Control (CH4X4 dual-push) | 10A  | 18AWG | ~3A peak per direction | -    | CH4X4-TOY-D-WINIO dual-momentary push at dash → HDP24 pins 16/17 → contactor; Warn remote parallel at contactor |
 | CB44        | TRLR LIGHT              | ARB Air Lockers (dash switches) | 10A  | 18AWG | ~4A (~2A per solenoid) | K27   | K27 closes with the ignition; rear locker switch feeds the front switch (ARB interlock) — see [Dashboard Controls][dashboard] |

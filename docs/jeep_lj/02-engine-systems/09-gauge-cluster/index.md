@@ -9,7 +9,7 @@ hide:
 
 Complete digital instrumentation system replacing factory TJ gauge cluster. HDX control module processes sensor inputs and BIM module data to drive analog/digital hybrid dashboard display.
 
-**Power:** [PMU OUT9][pmu-outputs] (25A capacity, ~25A worst-case, ~12A typical)
+**Power:** [PMU OUT3][pmu-outputs] (25 A output, 12 AWG from the PMU; ~12A typical, ~25A worst-case), on while the PMU is on
 
 **Mounting:** Dashboard cluster in factory location, HDX control + BIM modules on HDPE firewall panel
 
@@ -29,7 +29,7 @@ Complete digital instrumentation system replacing factory TJ gauge cluster. HDX 
 
 ## Related Documentation
 
-- [PMU Outputs][pmu-outputs] - Power source (OUT9, 25A)
+- [PMU Outputs][pmu-outputs] - Power source (OUT3, 25 A)
 - [Grounding Architecture][grounding] - Ground connections
 - [Firewall Ingress][firewall-ingress] - Wire routing
 - [Cummins R2.8 ECM][ecm] - J1939 integration

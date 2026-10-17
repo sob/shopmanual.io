@@ -140,9 +140,10 @@ This document tracks intentional deviations from general electrical standards wh
 **Wire Sizing:**
 
 - Wire: 2/0 AWG copper (375A continuous rating @ 60°C)
-- Distance: 6 ft one-way (12 ft total circuit)
-- Voltage drop @ 400A: 3.75% (0.450V) - adequate for brief cranking
-- Voltage drop @ 600A: 5.61% (0.673V) - adequate for brief cranking
+- Loop: 6 ft supply + 8 ft START− return to the engine block ground stud ≈ 14 ft of 2/0 (~1.1 mΩ, cable only; the block→ground-bus jumper is outside the loop)
+- Voltage drop @ 400A: ~3.6% - adequate for brief cranking
+- Voltage drop @ 600A: ~5.5% - adequate for brief cranking
+- START− is landed at the engine block stud rather than the ground bus (2026-10-17) so the cranking loop does not include the extra block→bus run — see [Starter System][starter-system]
 
 **Protection Strategy:**
 
@@ -294,53 +295,53 @@ This document tracks intentional deviations from general electrical standards wh
 
 **Component:** RedArc BCDC Alpha 50 DC-DC Charger
 
-**Decision:** 80A circuit breaker at START battery terminal (not at BCDC)
+**Decision:** 80A MRBF terminal fuse on the START battery post (not at BCDC)
 
 ### BCDC Manufacturer Specification
 
 **RedArc Installation:**
 
-- Circuit breaker required within 7" of battery positive
-- No requirement for CB at BCDC input
-- 80A CB adequate for 50A charging current + inrush
+- Overcurrent protection required within 7" of battery positive
+- No requirement for protection at BCDC input
+- 80A adequate for 50A charging current + inrush
 
 ### BCDC Engineering Analysis
 
 **Protection Location:**
 
-- CB at battery terminal (compliant with 7" requirement) ✓
+- MRBF fuse on the battery post (satisfies the 7" requirement) ✓
 - Protects entire cable run from battery to BCDC ✓
-- No additional CB needed at BCDC end
+- No additional protection needed at BCDC end
 
 **Load Characteristics:**
 
 - Normal: 50A DC-DC charging
 - Peak: 50-55A (manufacturer spec)
-- 80A CB sized at 145-160% of max load (appropriate margin)
+- 80A fuse sized at 145-160% of max load (appropriate margin)
 
 ### BCDC Review Guidance
 
-**Circuit breaker at the battery terminal is the correct protection point** — see Engineering Analysis above. **Do NOT flag as missing protection at BCDC.**
+**Protection at the battery post is the correct protection point** — see Engineering Analysis above. **Do NOT flag as missing protection at BCDC.**
 
 **Documentation References:**
 
 - [BCDC Alpha 50][bcdc] - BCDC installation and protection requirements
-- [START Battery Circuit Breakers][starter-cbs] - 80A CB specification
+- [START Battery Circuit Protection][starter-cbs] - 80A MRBF specification
 
 ---
 
 ## START+ Forward Distribution Bus - Bus Bar Between Battery and Loads
 
-**Components:** START+ Forward Distribution Bus (engine bay) feeding the relocated radiator fan, iBooster, and TCU
+**Components:** START+ Forward Distribution Bus (engine bay) feeding the relocated radiator fan and iBooster plus the key-off loads (CT4, PBS-I)
 
-**Decision:** A single 100A master-protected 2 AWG feed runs from the START battery to an engine-bay busbar that fans out to three load breakers — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
+**Decision:** A single 2 AWG feed, protected by a 100A MRBF terminal fuse on the START post, runs from the START battery to an engine-bay busbar that fans out to per-load breakers and fuses — a deliberate departure from the START-side "direct lugs, no bus bar between battery and loads" principle.
 
 ### Engineering Rationale
 
-- The radiator fan, iBooster, and TCU were moved off the PMU and all sit forward (engine bay / transmission), while the START battery is in the rear wheel well.
-- Three independent feeds would mean three long rear-to-front cables and ~9 stacked lugs on the battery post (impractical, hard to service).
-- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (250A master → firewall CONSTANT bus), placing each load's breaker near its load.
-- The intermediate bus is a passive bar; the feed is protected by a 100A master breaker within 7" of the battery (the cable is never unprotected), with selective coordination to the downstream load breakers.
+- The radiator fan and iBooster were moved off the PMU, and the CT4 and PBS-I (the only loads that must stay live at key-off) cannot be on the PMU; all sit forward (engine bay / dash), while the START battery is in the rear wheel well.
+- Independent feeds would mean several long rear-to-front cables and many stacked lugs on the battery post (impractical, hard to service).
+- A single master feed + forward busbar mirrors the proven AUX-side two-stage architecture (250A MRBF → firewall CONSTANT bus), placing each load's protection near its load.
+- The intermediate bus is a passive bar; the feed is protected by a 100A MRBF terminal fuse on the battery post (the cable is never unprotected), with selective coordination to the downstream load breakers and fuses.
 
 ### Review Guidance
 
@@ -349,7 +350,7 @@ This document tracks intentional deviations from general electrical standards wh
 **Documentation References:**
 
 - [START Battery Distribution][starter-battery-distribution] - Forward bus feed and load table
-- [START Battery Circuit Breakers][starter-cbs] - Master + load breakers
+- [START Battery Circuit Protection][starter-cbs] - Master MRBF + load breakers/fuses
 
 ---
 
@@ -472,9 +473,10 @@ Owner rule: **keep the smaller wire and drop the breaker to it.** When a review 
 
 | Circuit | Was | Now | Wire it protects |
 | :------ | :-- | :-- | :--------------- |
-| START+ Forward Distribution Bus master | 150A | 100A | 2 AWG (110A @ 60°C) |
-| AUX forward feed to Firewall CONSTANT Bus | 300A | 250A | 2/0 AWG (~265A @ 60°C); matches the 2105 bus rating |
-| JL Audio MV800/8i amp feed | 100A | 80A | 4 AWG (95A @ 20°C); equals the amp's recommended fuse |
+| START+ Forward Distribution Bus master | 150A | 100A (now an MRBF terminal fuse) | 2 AWG (110A @ 60°C) |
+| AUX forward feed to Firewall CONSTANT Bus | 300A | 250A (now an MRBF terminal fuse) | 2/0 AWG (~265A @ 60°C); matches the 2105 bus rating |
+| JL Audio MV800/8i amp feed | 100A | 80A (now an MRBF terminal fuse) | 4 AWG (95A @ 20°C); equals the amp's recommended fuse |
+| PMU24 feed | 2/0 AWG + 250A CB | 1 AWG + 150A MRBF | 1 AWG; 150A is the PMU battery-stud constant limit (2026-10-17) |
 
 Manufacturer-specified breakers (SwitchPros 150A, SafetyHub 150A) keep their exception above.
 
@@ -486,8 +488,8 @@ Before flagging as issues, verify these intentional design choices:
 - [ ] **Starter:** Direct battery connection, cable sizing as protection (timer relay optional enhancement)
 - [ ] **Grid Heater:** Direct battery connection with fusible link (brief high current)
 - [ ] **Alternator:** No CB on output (standard automotive practice)
-- [ ] **BCDC:** CB at battery terminal (no CB at BCDC end required)
-- [ ] **START+ Forward Bus:** 100A master + forward busbar between battery and fan/iBooster/TCU (intentional, mirrors AUX CONSTANT bus)
+- [ ] **BCDC:** MRBF fuse at battery post (no protection at BCDC end required)
+- [ ] **START+ Forward Bus:** 100A MRBF master + forward busbar between battery and fan/iBooster/CT4/PBS-I (intentional, mirrors AUX CONSTANT bus)
 - [ ] **SwitchPros/SafetyHub:** 150A CB with 2 AWG wire (actual loads 82-100A, within 130A wire rating)
 
 **If any of these are flagged as "missing protection" or "safety issues" in future reviews, refer to this document for complete justification.**

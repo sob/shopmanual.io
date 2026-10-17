@@ -63,8 +63,8 @@ SwitchPros OUTPUT-11 (Button 11) provides a switched 12V control signal; the com
 
 | Circuit       | Source                       | Destination                 | Wire  | Protection | Notes                         |
 | ------------- | ---------------------------- | --------------------------- | ----- | ---------- | ----------------------------- |
-| Motor 1 Power | SafetyHub MIDI-1 (60A)       | Compressor motor 1 positive | 6 AWG | 60A MIDI   | Via SafetyHub 150A CB         |
-| Motor 2 Power | SafetyHub MIDI-2 (60A)       | Compressor motor 2 positive | 6 AWG | 60A MIDI   | Via SafetyHub 150A CB         |
+| Motor 1 Power | SafetyHub MIDI-1 (60A)       | Compressor motor 1 positive | 6 AWG | 60A MIDI   | Via SafetyHub (150A MRBF at AUX post) |
+| Motor 2 Power | SafetyHub MIDI-2 (60A)       | Compressor motor 2 positive | 6 AWG | 60A MIDI   | Via SafetyHub (150A MRBF at AUX post) |
 | Ground        | Compressor negative terminal | AUX battery negative        | 6 AWG | None       | Direct for 90A return current |
 | Control       | SwitchPros OUTPUT-11         | Compressor control terminal | 14 AWG | 15A        | Auto or manual activation     |
 

@@ -13,7 +13,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 - Turn signal control (left/right) with GPS auto-cancel
 - Headlight control (low/high beam)
-- Powered by PMU Out 13 (15A CONSTANT) + ignition signal (cabin bus bar Terminal 1)
+- Powered by the START+ Forward Distribution Bus (15A inline fuse, CONSTANT) + ignition signal (cabin bus bar Terminal 1)
 
 **Power Distribution:** [PMU][pmu-power-distribution] - Programmable power management
 
@@ -59,7 +59,7 @@ This section covers all street-legal DOT-required lighting circuits controlled b
 
 | Circuit             | Power Source           | Capacity | Load    |
 | :------------------ | :--------------------- | :------- | :------ |
-| CT4 Controller      | PMU Out 13 (CONSTANT)  | 15A      | ~9A     |
+| CT4 Controller      | START+ Fwd Bus (15A fuse, CONSTANT) | 15A | ~9A |
 | Headlights Low/High | CT4 SW3/SW4            | 10A each | 3.6/5.6A|
 | DRL                 | PMU Out 23             | 7A       | 0.8A    |
 | Parking/Tail Markers| PMU Out 12             | 15A      | ~2A     |

@@ -19,7 +19,7 @@ Multi-point grounding strategy with high-current grounds to frame rails and low-
 
 ## Ground Bus Bars
 
-- **[1.5.1 - Engine Bay Ground Bus][engine-bay-ground-bus]** - Primary infrastructure hub (frame, engine, PMU)
+- **[1.5.1 - Engine Bay Ground Bus][engine-bay-ground-bus]** - Primary infrastructure hub (frame, engine block, START−, PMU 12 AWG logic reference)
 - **[1.5.2 - Firewall Stud Bus][firewall-stud-bus]** - Cabin electronics (BODY PDU, cluster, audio, camera)
 - **[1.5.3 - SwitchPros Ground Bus][switchpros-ground-bus]** - Lighting and accessories (headlights, aux lights)
 

@@ -43,12 +43,12 @@ tags:
 ## Low Beam
 
 - **Control:** Pull CT4 lever (latching on/off)
-- **Power:** PMU Out 13 (15A CONSTANT) → CT4 → SW3 output (10A internal fusing)
+- **Power:** START+ Forward Bus (15A fuse, HDP24 pin 2) → CT4 → SW3 output (10A internal fusing)
 
 ## High Beam
 
 - **Control:** Push CT4 lever (momentary or latching - programmable)
-- **Power:** PMU Out 13 (15A CONSTANT) → CT4 → SW4 output (10A internal fusing)
+- **Power:** START+ Forward Bus (15A fuse, HDP24 pin 2) → CT4 → SW4 output (10A internal fusing)
 - **Mutual Exclusivity:** CT4 automatically disables low beam when high beam activates
 
 Both beams stay active with the ignition off (CT4 programmed without ignition lockout, because the parking/tail markers follow the headlights); current draw is per the pin table above.

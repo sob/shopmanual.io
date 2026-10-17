@@ -44,11 +44,11 @@ Wire gauges optimized for performance at measured routing distances:
 | Circuit                        | Distance                      | Wire Gauge | Max Current             | Voltage Drop @ Temp              | Notes                                                     |
 | :----------------------------- | :---------------------------- | :--------- | :---------------------- | :------------------------------- | :-------------------------------------------------------- |
 | **Alternator → START battery** | 8 ft                          | 2/0 AWG    | 270A                    | 2.81% @ 60°C                     | Charging system - temp derating applied                   |
-| **PMU24 Power Feed**           | 7 ft                          | 2/0 AWG    | 220A                    | 2.40% @ 60°C                     | Direct connection via 250A CB - upgraded from 1/0 AWG     |
-| **Starter Motor**              | 6 ft                          | 2/0 AWG    | 400-600A                | <3% @ 20°C                       | Brief cranking load - minimal temp effect                 |
+| **PMU24 Power Feed**           | 7 ft                          | 1 AWG      | 150A                    | 2.6% @ 60°C                      | Via 150A MRBF terminal fuse at the START post — downsized from 2/0 (2026-10-17); 150A is the PMU battery-stud limit |
+| **Starter Motor**              | 6 ft                          | 2/0 AWG    | 400-600A                | ~3.6% @ 400A / ~5.5% @ 600A (loop) | Brief cranking load - minimal temp effect. Loop = 6 ft supply + 8 ft START− to the engine block stud ≈ 14 ft of 2/0 (block→ground-bus jumper is outside the loop) — see [Starter][starter] |
 | **BCDC Inter-Battery**         | 5-6 ft                        | 4 AWG      | 50A                     | 0.94% @ 20°C                     | Rear wheel well to rear wheel well (H3 cross-cab, see [Wire Routing][wire-routing]) |
 | **Winch → AUX battery**        | 13 ft one-way (26 ft circuit) | 1/0 AWG    | 250A typical, 409A peak | 4.9% @ 250A, 7.9% @ 409A @ 13.8V[^winch-vdrop] | Passenger rear wheel well to front bumper routing — see {{ tbd(106) }} and [Wire Routing][wire-routing] |
-| **START+ Fwd Bus master feed** | ~8 ft ({{ tbd(136) }})        | 2 AWG      | ~108A peak / ~68A cont  | 1.3% @ 60°C                                    | Single feed to engine-bay busbar; relocated fan/iBooster/TCU fan out on short load runs |
+| **START+ Fwd Bus master feed** | ~8 ft ({{ tbd(136) }})        | 2 AWG      | ~102A peak / ~62A cont  | 1.2% @ 60°C                                    | Via 100A MRBF terminal fuse at the START post; single feed to engine-bay busbar — fan, iBooster, CT4, and PBS-I fan out on short load runs |
 
 **Temperature Derating Notes:**
 
@@ -114,7 +114,7 @@ Distances required for voltage drop calculations and wire purchases. Measure act
 | SwitchPros control panel        | ✓ Console, behind the Kilduff shifter       |
 | SwitchPros control cable length | Not measured yet (firewall to console)      |
 | Firewall CONSTANT Bus           | ✓ Firewall (cabin side, passenger area)     |
-| Firewall CONSTANT Bus feed      | 2/0 AWG, ~13 ft from AUX battery+, 250A CB at battery |
+| Firewall CONSTANT Bus feed      | 2/0 AWG, ~13 ft from AUX battery+, 250A MRBF terminal fuse at AUX post |
 | CT4 GPS antenna                 | ✓ Integrated in CT4 unit                    |
 | Rear cargo rocker switch        | ✓ Blue Sea 4160 on rear wheel well top      |
 | Rear seat dome override switch  | ✓ Blue Sea 4160, rear passenger accessible  |

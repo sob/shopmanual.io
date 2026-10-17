@@ -85,7 +85,7 @@ The electrical system is organized into zones for logical distribution and maint
 ### Dual Battery System
 
 - **START battery:** Driver rear wheel well - powers critical engine systems via PMU and SafetyHub
-- **AUX battery:** Passenger rear wheel well - powers accessories via inline CBs + Firewall CONSTANT bus (cabin distribution cluster)
+- **AUX battery:** Passenger rear wheel well - powers accessories via MRBF terminal fuses at the post + Firewall CONSTANT bus (cabin distribution cluster)
 - **Battery Isolation:** RedArc BCDC Alpha 50 DC-DC charger with automatic jump-start assist
 
 See [Power Generation][power-generation] for complete battery and charging system details.

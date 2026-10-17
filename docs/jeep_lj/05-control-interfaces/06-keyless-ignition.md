@@ -78,7 +78,7 @@ Unchanged from existing starter design. See [Starter System][starter].
 
 | Wire | Function | Source | Destination | Notes |
 | :--- | :------- | :----- | :---------- | :---- |
-| RED | +12V Battery | Critical Cabin PDU (CONSTANT) | PBS-I module | 14 AWG; ~50 mA standby ({{ tbd(84) }}) |
+| RED | +12V Battery | [START+ Forward Distribution Bus][start-fwd-bus] (CONSTANT) via 5A inline fuse at the bus, HDP24 pin 22 | PBS-I module | 14 AWG; ~50 mA standby ({{ tbd(84) }}) |
 | BLACK | Chassis Ground | Cabin ground bus | PBS-I module | 14 AWG |
 | PINK | 1st Ignition Out (60A) | PBS-I module | Ignition signal bus bar (cabin), Stud 1 | Does NOT drop during crank; bus bar Stud 2 outbounds to ECM Pin 41 via 5A inline fuse[^ecm-fuse] |
 | PURPLE | Starter Out (60A) | PBS-I module | Firewall Pin 15 → Cole Hersee 24213 coil+ | Cranks while button held |
@@ -146,6 +146,7 @@ Normal engine shutdown (press brake + 2 sec button hold) drops PBS-I's PINK IGN 
 [starter]: ../02-engine-systems/01-starter.md
 [ignition-signal]: ../01-power-systems/06-ignition-signal/index.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 [runaway-protection]: ../02-engine-systems/11-runaway-protection.md
 [hdx-control]: ../02-engine-systems/09-gauge-cluster/01-hdx-control.md
 [grid-heater]: ../02-engine-systems/07-grid-heater.md

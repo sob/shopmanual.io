@@ -46,7 +46,7 @@ The PMU senses both CT4 headlight outputs, tapped on the engine-bay side of the 
 | **In 7** | CT4 SW3 (low beam) | After [HDP24 pin 9][firewall-ingress], 18 AWG | Headlights on |
 | **In 5** | CT4 SW4 (high beam) | After [HDP24 pin 10][firewall-ingress], 18 AWG | The CT4 drops SW3 while SW4 is active, so without In 5 the tail markers would go dark on high beam |
 
-**CT4 programming:** SW3/SW4 must remain active with the ignition off (the CT4 is CONSTANT-powered from PMU Out 13); see [Command Touch CT4][ct4]. The PMU is CONSTANT-powered too, so Out 12 works with the ignition off.
+**CT4 programming:** SW3/SW4 must remain active with the ignition off (the CT4 is CONSTANT-powered from the START+ Forward Distribution Bus); see [Command Touch CT4][ct4]. The PMU itself switches off at key-off apart from its Delayed turn off window, so Out 12 is lit with the ignition off only inside that window — see [PMU Outputs][pmu-outputs].
 
 ## PMU Logic
 
@@ -119,6 +119,7 @@ END
 [tail-brake-reverse-lights]: 04-tail-brake-reverse.md
 [chase-lights]: ../04-offroad-lighting/04-chase-lights.md
 [ct4]: ../05-control-interfaces/03-command-touch-ct4.md
+[pmu-outputs]: ../01-power-systems/04-pmu/03-pmu-outputs.md
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [pmu-inputs]: ../01-power-systems/04-pmu/02-pmu-inputs.md
 [firewall-ingress]: ../01-power-systems/07-wire-routing/02-firewall-ingress.md

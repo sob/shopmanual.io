@@ -18,10 +18,11 @@ parts to buy live in the [Purchase Tracker][purchase-tracker].
 
 - [ ] Confirm factory starter (shipped mounted on the crate engine) is secure; record its P/N from the tag
 - [ ] Confirm START battery+ → starter battery post
+- [ ] Confirm START battery− (2/0) → engine block ground stud (starter return; short 2/0 jumper to engine bay ground bus)
 - [ ] Confirm Cole Hersee solenoid mounted on firewall (engine bay side)
 - [ ] Confirm starter battery post → Cole Hersee input
 - [ ] Confirm Cole Hersee output → starter switch post
-- [ ] Confirm PBS-I module mounted under-dash, powered from Critical Cabin PDU
+- [ ] Confirm PBS-I module mounted under-dash, powered from START+ Forward Bus via 5A fuse (HDP24 pin 22)
 - [ ] Confirm PBS-I PURPLE START → firewall Pin 15 → Cole Hersee coil+
 - [ ] Confirm Cole Hersee coil- grounded to engine bay ground bus
 - [ ] Confirm PBS-I PINK IGN → cabin ignition bus bar → firewall Pin 12 → ECM 12V + PMU Pin 7

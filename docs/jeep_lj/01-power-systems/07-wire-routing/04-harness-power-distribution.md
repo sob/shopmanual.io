@@ -32,7 +32,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 | Wire | Gauge | Color | Function | Termination at battery | Termination at firewall | Continues to |
 |:-----|:-----:|:-----:|:---------|:----------------------|:------------------------|:-------------|
-| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU via Firewall CONSTANT bus (Fusion head unit rides the BODY PDU via CB30) | Ring lug to 250A CB output stud | Continuous through grommet — no firewall break | Ring lug to Firewall CONSTANT bus input stud (cabin side) |
+| Forward feed (+) | 2/0 AWG | Red | Powers SwitchPros + BODY PDU via Firewall CONSTANT bus (Fusion head unit rides the BODY PDU via CB30) | Ring lug to 250A MRBF at AUX post | Continuous through grommet — no firewall break | Ring lug to Firewall CONSTANT bus input stud (cabin side) |
 | Winch power (+) | 1/0 AWG | Red | AUX battery+ → winch contactor B+ | Ring lug to AUX battery+ stud | Continuous through grommet — no firewall break | Lug to winch contactor B+ |
 | Winch ground (−) | 1/0 AWG | Black | AUX battery- → winch contactor B− | Ring lug to AUX battery- stud | Continuous through grommet — no firewall break | Lug to winch motor / chassis at front |
 
@@ -53,15 +53,15 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 - 3-cable bundle: ~1.5" OD final wrapped harness
 - Path is fully inside the body until firewall transition (no exposed frame rail)
-- Cables terminate as ring lugs at destinations (lug-to-stud at battery / CB / bus / contactor on each end). If a service break is ever desired, do it as a lug-to-lug junction inside the rear wheel well, not at the firewall.
+- Cables terminate as ring lugs at destinations (lug-to-stud at battery / MRBF block / bus / contactor on each end). If a service break is ever desired, do it as a lug-to-lug junction inside the rear wheel well, not at the firewall.
 
 ---
 
 ## H2 — START Engine Bay Trunk {#h2}
 
-*Gained a 4th conductor on 2026-06-07 when the radiator fan, iBooster, and TCU were relocated off the PMU onto the [START+ Forward Distribution Bus][start-fwd-bus]. Its 2 AWG master feed runs the same driver-side rear-well → engine-bay path as the existing three cables, so it is fabricated and installed as part of this bundle.*
+*Gained a 4th conductor on 2026-06-07 when the radiator fan and iBooster were relocated off the PMU onto the [START+ Forward Distribution Bus][start-fwd-bus]. Its 2 AWG master feed runs the same driver-side rear-well → engine-bay path as the existing three cables, so it is fabricated and installed as part of this bundle. On 2026-10-17 the PMU feed was downsized to 1 AWG (150A MRBF), battery-side CBs were replaced by MRBF terminal fuses at the START post, and the START battery− 2/0 return was added as the 5th conductor, re-landed at the engine block ground stud (starter return).*
 
-**Build:** 4 conductors (3× 2/0 AWG + 1× 2 AWG) · 6–8 ft per cable · ~1.6" OD black braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
+**Build:** 5 conductors (2× 2/0 AWG + 1× 1 AWG + 1× 2 AWG + 1× 2/0 ground) · 6–8 ft per cable · ~1.8" OD black braided sleeve, yellow tracer · lug terminations both ends · heat sleeve at engine-bay entry.
 
 **Route:** Driver rear wheel well (START battery) → up inside driver rear quarter sill → forward along **inside floor board / side wall** (driver side) → A-pillar area → driver firewall penetration → engine bay
 
@@ -73,23 +73,25 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 |:-----|:-----:|:-----:|:---------|:----------------------|:--------------------------|
 | Alternator charging input | 2/0 AWG | Red | Alternator → START battery+ | Lug to battery+ stud | Lug to alternator output stud |
 | Starter motor power | 2/0 AWG | Red | START battery+ → starter | Lug to battery+ stud | Lug to starter B+ stud |
-| PMU24 main feed | 2/0 AWG | Red | START battery+ → 250A CB → PMU24 | Lug to 250A CB output | Lug to PMU power stud |
-| START+ Forward Dist Bus master feed | 2 AWG | Red | START battery+ → 100A master CB → engine-bay busbar (fan / iBooster / TCU) | Lug to 150A CB output | Lug to [START+ Forward Distribution Bus][start-fwd-bus] busbar input stud |
+| PMU24 main feed | 1 AWG | Red | START battery+ → 150A MRBF terminal fuse → PMU24 | Lug to 150A MRBF (dual block on START+ post) | Lug to PMU power stud |
+| START+ Forward Dist Bus master feed | 2 AWG | Red | START battery+ → 100A MRBF terminal fuse → engine-bay busbar (fan / iBooster / CT4 / PBS-I) | Lug to 100A MRBF (dual block on START+ post) | Lug to [START+ Forward Distribution Bus][start-fwd-bus] busbar input stud |
+| START battery− return | 2/0 AWG | Black | START battery− → engine block ground stud (starter return; short 2/0 jumper block → Engine Bay Ground Bus) | Lug to battery− post | Lug to engine block ground stud |
 
-(BCDC input feed (4 AWG via 80A CB) takes the H3 cross-cab path instead — see [H3](#h3).)
+(BCDC input feed (4 AWG via 80A MRBF) takes the H3 cross-cab path instead — see [H3](#h3).)
 
-**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 4 cables with looms; expect ~1.6" OD final bundle. The 2 AWG forward-bus feed terminates at the engine-bay busbar, not at a load; the busbar's three short local feeds (fan, iBooster, TCU) are engine-bay-side and are **not** part of this harness — see [START+ Forward Distribution Bus][start-fwd-bus].
+**Connectors:** Lug terminations at both ends. Heat sleeve required where bundle enters engine bay (>12" from exhaust). Bundle 5 cables with looms; expect ~1.8" OD final bundle. The 2 AWG forward-bus feed terminates at the engine-bay busbar, not at a load; the busbar's local feeds (fan, iBooster, CT4, PBS-I) are built at the bus and are **not** part of this harness — see [START+ Forward Distribution Bus][start-fwd-bus].
 
-**Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.6" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
+**Protection:** Black braided expandable sleeve (yellow tracer) over the cabin / sill run, sized to the ~1.8" OD bundle. Heat sleeve in engine bay. P-clamps every 12–18".
 
-**Firewall penetration:** Driver-side grommet for high-current cables — separate from the HDP24 (HDP24 is passenger-side, signal-only). Four cables (3× 2/0 AWG + 1× 2 AWG) need a grommet sized for ~1.6" bundle OD.
+**Firewall penetration:** Driver-side grommet for high-current cables — separate from the HDP24 (HDP24 is passenger-side, signal-only). Five cables (2× 2/0 AWG + 1× 1 AWG + 1× 2 AWG + 1× 2/0 ground) need a grommet sized for ~1.8" bundle OD.
 
 **Notes:**
 
-- All 4 high-current cables share the same driver-side floor / side wall path
+- All 5 high-current cables share the same driver-side floor / side wall path
+- The START− return lands on the engine block ground stud so the cranking loop is battery → starter → block → battery (~14 ft of 2/0); the ~3 ft block → Engine Bay Ground Bus jumper is outside that loop
 - Path is fully inside the body (no exposed frame rail)
 - Driver-side firewall grommet is a new firewall penetration — separate from existing passenger-side HDP24 and SwitchPros bulkheads
-- The 2 AWG forward-bus master feed is the rear-to-front leg only; the engine-bay busbar fan-out to the radiator fan (4 AWG), iBooster (8 AWG), and TCU (12 AWG) lives on the engine-bay side — TCU's leg is harness [H9][controls-build]
+- The 2 AWG forward-bus master feed is the rear-to-front leg only; the engine-bay busbar fan-out to the radiator fan (4 AWG), iBooster (8 AWG), CT4 (14 AWG, HDP24 pin 2), and PBS-I (14 AWG, HDP24 pin 22) is built at the bus. The TCU is fed from PMU OUT15 (12 AWG) — its leg is harness [H9][controls-build]
 
 ---
 
@@ -105,7 +107,7 @@ Workbench specs for the high-current power harnesses: **H1** Passenger Rear Powe
 
 | Wire | Gauge | Color | Function | Termination at driver well | Termination at passenger well |
 |:-----|:-----:|:-----:|:---------|:--------------------------|:------------------------------|
-| BCDC input | 4 AWG | Red | START battery+ via 80A CB → BCDC input terminal | Lug to 80A CB output | Lug to BCDC input red terminal (M8) |
+| BCDC input | 4 AWG | Red | START battery+ via 80A MRBF terminal fuse → BCDC input terminal | Lug to 80A MRBF (single block on START+ post) | Lug to BCDC input red terminal (M8) |
 | Cross-ground reference | 1/0 AWG | Black | START battery- → AUX battery- (critical for BCDC operation) | Lug to START battery- | Lug to AUX battery- |
 
 **Connectors:** Lug terminations both ends. No inline connectors needed for short run.

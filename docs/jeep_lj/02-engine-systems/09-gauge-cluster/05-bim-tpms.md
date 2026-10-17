@@ -41,7 +41,7 @@ Wireless TPMS module displaying real-time tire pressure for all four wheels on H
 - **Communication:** Wireless RF (sensors → BIM-22-3 receiver)
 - **Display:** Dashboard message center shows all 4 tire pressures
 - **Programming:** Sensors easily reprogrammed via Bluetooth app
-- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT9 (25A cap, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT3 (25 A output, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
 - **Compatibility:** HDX, RTX, GRFX systems (limited VFD3/VHX compatibility)
 
 ## Display Integration
@@ -62,7 +62,7 @@ Wireless TPMS module displaying real-time tire pressure for all four wheels on H
 
 | Connection   | Source                    | Destination       | Wire Gauge  | Notes                        |
 | :----------- | :------------------------ | :---------------- | :---------- | :--------------------------- |
-| **Constant** | Critical Cabin PDU Slot 5 ({{ tbd(144) }}) | BIM-22-3 power | 18 AWG ✓ | BIM CONSTANT power — may be bus-powered via BIM/IO cable instead |
+| **Power**    | HDX control box (BIM/IO cable) | BIM-22-3 power | Proprietary | Bus-powered via BIM/IO cable (no separate feed) |
 | **BIM/IO**   | HDX control box           | BIM-22-3 input    | Proprietary | Data via daisy-chain         |
 | **Sensors**  | Wireless                  | BIM-22-3 receiver | -           | No wiring - RF communication |
 

@@ -36,14 +36,14 @@ tags:
 
 | Stud | Connection                      | Wire Gauge  | Current   | Notes                                                  |
 | :--- | :------------------------------ | :---------- | :-------- | :----------------------------------------------------- |
-| 1    | START battery-                  | 2/0 AWG     | 600A+     | See [START Battery Distribution][front-battery-ground] |
-| 2    | Engine block ground             | 2/0 AWG     | 600A+     | Starter/alternator return path                         |
+| 1    | START battery− (via engine block stud; 2/0 jumper from block) | 2/0 AWG | 600A+ | The START− 2/0 lands at the engine block ground stud (starter return) and reaches this bus through the stud-2 jumper (2026-10-17) — see [START Battery Distribution][front-battery-ground] |
+| 2    | Engine block ground (jumper)    | 2/0 AWG     | 600A+     | ~3 ft jumper, block stud → bus; starter/alternator return path |
 | 3    | Front frame rail (main chassis) | 2/0 AWG     | 600A+     | Primary infrastructure ground                          |
 | 4    | AUX battery reference           | 1/0 AWG     | 75A       | See [START Battery Distribution][front-battery-ground] |
-| 5    | PMU ground reference (Pin 25)   | Per harness | <100mA    | Logic/CAN reference only                               |
+| 5    | PMU ground (pin 25)             | 12 AWG      | <1A       | Logic/CAN reference only, as short as possible; load current returns through each load's own ground |
 | 6    | Horn + relay coil grounds       | 14-18 AWG   | ~10A      | Horn (5.4A), starter solenoid coil                     |
 | 7    | iBooster (main + enable)        | 10 AWG      | ~45A peak | Brake booster (START-direct, off PMU); dedicated/redundant ground recommended |
-| 8    | Aux cooling fans (OUT7+8)       | 12 AWG      | ~30A      | Oil cooler + PS cooler fans                            |
+| 8    | Aux cooling fans (OUT1+OUT16)   | 12 AWG      | ~30A      | Oil cooler + PS cooler fans                            |
 
 **Utilization:** 8 of 8 studs used (0 available)
 

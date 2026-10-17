@@ -26,7 +26,7 @@ Intercom for driver and passenger communication with two-way radio and Bluetooth
 
 **Mounting:** Remote head in a standard rocker-switch hole on the dash; intercom box behind the dash, within reach of the remote head's 39 in cable[^stx-rs-page]
 
-**Power Source:** PMU OUT20 (5A capacity, CONSTANT)
+**Power Source:** PMU OUT20 (7 A output), on with the ignition
 
 ///
 
@@ -99,7 +99,7 @@ The intercom box's ports, from the wiring diagram in the STX-RS user manual (p. 
 
 ## Installation Notes
 
-- PMU output has integrated 5A protection - no inline fuse needed
+- PMU output has integrated overcurrent protection - no inline fuse needed
 - Rugged's manual says to run the intercom's power straight to the battery and not inline with other components. It warns that tying power to ignition, lights or other sources can cause a ground loop and noise.[^stx-rs-manual] This build switches it from PMU OUT20 and runs its ground straight to the START battery−. If noise shows up, Rugged's fix in the same manual is its optional Active Filter, with the radio and intercom power leads connected to the filter instead of the battery.
 - Rugged: do not mount the radio or intercom near an ignition box, and route the antenna cable away from power and headset cables.[^stx-rs-manual]
 

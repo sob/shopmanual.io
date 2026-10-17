@@ -61,20 +61,20 @@ Band edges come from the measured per-detent resistances of the NP241OR position
 
 OUT19 drives a relay coil because the HDX 4x4 input is ground-activated and the PMU switches high-side only; OUT24 feeds the HDX EXTRA(+) input directly. See [Transfer Case][transfer-case].
 
-### Oil Cooler Fan Control (Output 7) - CAN-based
+### Oil Cooler Fan Control (Output 1) - CAN-based
 
 ```text
-IF (J1939_SPN175_OilTemp > 230°F) THEN Out7_OilFan = ON
-ELSEIF (J1939_SPN175_OilTemp < 220°F) THEN Out7_OilFan = OFF
+IF (J1939_SPN175_OilTemp > 230°F) THEN Out1_OilFan = ON
+ELSEIF (J1939_SPN175_OilTemp < 220°F) THEN Out1_OilFan = OFF
 ```
 
 10°F hysteresis prevents rapid cycling. Uses J1939 engine oil temperature from ECM (SPN 175).
 
-### PS Cooler Fan Control (Output 8) - CAN-based
+### PS Cooler Fan Control (Output 16) - CAN-based
 
 ```text
-IF (J1939_SPN110_CoolantTemp > 220°F) THEN Out8_PSFan = ON
-ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out8_PSFan = OFF
+IF (J1939_SPN110_CoolantTemp > 220°F) THEN Out16_PSFan = ON
+ELSEIF (J1939_SPN110_CoolantTemp < 210°F) THEN Out16_PSFan = OFF
 ```
 
 10°F hysteresis prevents rapid cycling. Uses J1939 coolant temperature from ECM (SPN 110) as proxy for PS fluid temp.
@@ -87,11 +87,15 @@ The radiator fan no longer runs on PMU outputs. It is powered START-direct from 
 
 ```text
 DELAY Out5_HVAC = 0.5s
-DELAY Out7_OilFan = 1.0s
-DELAY Out8_PSFan = 1.5s
+DELAY Out1_OilFan = 1.0s
+DELAY Out16_PSFan = 1.5s
 ```
 
 Prevents voltage sag during ignition-on by staggering high-current load activation.
+
+### Delayed turn off (Output 15, TCU)
+
+By default the PMU switches off immediately when Pin 7 (ignition) drops.[^pmu-manual] Delayed turn off (manual §16.7) is **enabled**, with its maximum time set to the Turbolamik TCU sleep time ({{ tbd(332) }}), so OUT15 stays live until the TCU has saved its adaptations and gone to sleep — see [Transmission][transmission]. Every other output follows the ignition inside the same window; nothing on the PMU is CONSTANT, which is why the CT4 and PBS-I are fed from the [START+ Forward Distribution Bus][start-fwd-bus].
 
 ### Battery Load Monitoring
 
@@ -150,6 +154,10 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 
 **Installation & Testing:** See [Section 1 Installation Checklist][installation]
 
+## Build Tasks
+
+- [ ] Set PMU Delayed turn off maximum once Turbolamik confirms TCU sleep time ({{ tbd(332) }})
+
 [installation]: ../../09-installation/01-power-systems-checklist.md#phase-3-controllers-physical-installation-main-power
 
 ## Related Documentation
@@ -157,7 +165,7 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 - [PMU Overview][pmu-overview] - Product specifications and capacity
 - [PMU Inputs][pmu-inputs] - Input configuration and CAN bus integration
 - [PMU Outputs][pmu-outputs] - Output configuration and load details
-- [START battery Distribution][starter-battery-distribution] - PMU power source and circuit breaker
+- [START battery Distribution][starter-battery-distribution] - PMU power source and MRBF terminal fuse
 - [Gauge Cluster][gauge-cluster] - Dakota Digital J1939 CAN bus tap location
 
 [pmu-overview]: 01-pmu-overview.md
@@ -171,3 +179,6 @@ IF (BatteryVoltage < 12.5V) AND (EngineRPM > 1000)
 [transfer-case]: ../../10-drivetrain/02-transfer-case.md#position-sensing
 [drl-parking]: ../../03-lighting-systems/05-drl-parking.md
 [navigation]: ../../07-communication-systems/05-navigation.md
+[transmission]: ../../10-drivetrain/01-transmission.md
+
+[^pmu-manual]: ECUMaster, *PMU User Manual* 122.3.1 (2026-09-21): §2.13 connector current capacity (2.8 mm terminal 25 A @ 23°C with 12 AWG, 23 A @ 40°C, two adjacent 38 A; 1.5 mm terminal 19 A @ 23°C with 14 AWG); §16.7 Delayed turn off ("By default, the PMU switches off immediately when the ignition is switched off"); wire table p.137. https://www.ecumaster.com/files/PMU/PMU_Manual.pdf (accessed 2026-10-17).

@@ -78,8 +78,8 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 | Unit | Mishimoto fluid cooler |
 | Fan | Mishimoto (matched to cooler) |
 | Control | 180 °F inline thermostat |
-| Fan Current Draw | {{ tbd(101) }} (confirm fits PMU Out 8 ~15A budget) |
-| Fan Power Source | PMU Out 8 (~15A, thermostat-switched) — see [PMU Outputs][pmu-outputs] |
+| Fan Current Draw | {{ tbd(101) }} (confirm fits PMU Out 16 ~15A budget) |
+| Fan Power Source | PMU Out 16 (~15A, thermostat-switched) — see [PMU Outputs][pmu-outputs] |
 
 ## Fluid Specifications
 
@@ -98,7 +98,7 @@ Component part numbers below come from the PSC **FHK400TJ** kit — the 1997-200
 - [ ] Confirm pump drive type (belt vs Cummins gear-drive), flow rate, and pressure
 - [ ] Confirm remote reservoir model and mounting location
 - [ ] Confirm fluid system fill quantity
-- [ ] Confirm Mishimoto cooler fan current draw fits the PMU Out 8 (~15A) budget
+- [ ] Confirm Mishimoto cooler fan current draw fits the PMU Out 16 (~15A) budget
 - [ ] Document hydraulic line routing
 
 [^steering-config]: Owner decision, 2026-05-30 — full-hydro kit is PSC pump + PSC orbital valve + PSC double-ended ram; Busted Knuckle Off-Road steering stops limit ram stroke to Dana 44 spec; Artec Industries Dana 60 ram mount cut down to the Dana 44; Mishimoto fluid cooler + fan on a 180 °F inline thermostat. Model numbers, bore/stroke values, flow/pressure, and fluid specs remain pending. Updated 2026-09-16 with the Dana 60 front: the Busted Knuckle stops and the cut-down Artec mount are superseded by the Barnes 4WD universal mount and ORA high steer arms (see Front Axle).
