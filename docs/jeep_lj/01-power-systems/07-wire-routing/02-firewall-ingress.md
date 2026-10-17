@@ -31,7 +31,7 @@ Single weatherproof bulkhead connector for all custom wiring through firewall.
 
 **Insert Arrangement 24-29:** 29× size 16 contacts
 
-- Size 16 contacts: 14-20 AWG, 13A (29 available, 20 used, 9 spare — see [Pin Assignment](#pin-assignment))
+- Size 16 contacts: 14-20 AWG, 13A (29 available, 22 used, 7 spare — see [Pin Assignment](#pin-assignment))
 
 **Mounting:** Single 1.5" diameter hole in firewall (same as previous 24-21 - shell size unchanged)
 
@@ -50,12 +50,12 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 
 ## Pin Assignment
 
-### Engine Bay → Cabin (9 wires)
+### Engine Bay → Cabin (11 wires)
 
 | Pin | Circuit | Gauge | Source | Destination | Contact |
 |:---:|:--------|:-----:|:-------|:------------|:-------:|
 | 1 | GMRS Radio power (+) | 14 AWG | PMU OUT6 | Rugged G1 | #16 |
-| 2 | **[Available]** | - | - | - | #16 |
+| 2 | CT4 12V supply | 14 AWG | START+ Forward Bus (15A inline fuse at bus) | CT4 (steering column) | #16 |
 | 3 | STX Intercom power | 14 AWG | PMU OUT20 | STX intercom | #16 |
 | 4 | Brake lights | 16 AWG | PMU OUT21 | Rear tail lights | #16 |
 | 5 | Reverse lights | 16 AWG | PMU OUT22 | Rear tail lights | #16 |
@@ -64,6 +64,7 @@ RF interference analysis determined that with ferrite chokes on radio power lead
 | 19 | 4x4 indicator relay coil | 18 AWG | PMU OUT19 | 4x4 relay coil (cabin, at HDX) | #16 |
 | 20 | 4LO indicator | 18 AWG | PMU OUT24 | HDX EXTRA(+) input | #16 |
 | 21 | GPS power (+) | 18 AWG | PMU OUT14 | Garmin Tread 2 (dash) | #16 |
+| 22 | PBS-I RED +12V battery | 14 AWG | START+ Forward Bus (5A inline fuse at bus) | PBS-I ICM | #16 |
 
 ### Cabin → Engine Bay (11 wires)
 
@@ -83,12 +84,12 @@ Pin 12 carries the PBS-I PINK IGN ignition signal; the keyswitch was removed whe
 | 17 | Winch control OUT | 18 AWG | Dash rocker switch | Winch contactor | #16 |
 | 18 | iBooster enable | 16 AWG | Ignition bus Term 5 (own 7.5A fuse) | iBooster ignition input | #16 |
 
-!!! note "Relocated power feeds do NOT use this connector"
-    The radiator fan (4 AWG), iBooster main (8 AWG), and TCU (12 AWG) feeds — relocated off the PMU — run from the [START+ Forward Distribution Bus][start-fwd-bus] in the engine bay to their loads, entirely engine-bay-side. Only the low-current **iBooster enable** (Pin 18 above) crosses the firewall.
+!!! note "High-current forward-bus feeds do NOT use this connector"
+    The radiator fan (4 AWG) and iBooster main (8 AWG) feeds run from the [START+ Forward Distribution Bus][start-fwd-bus] in the engine bay to their loads, entirely engine-bay-side; the TCU is fed from PMU OUT15 (12 AWG, engine-bay side). Only the low-current **iBooster enable** (Pin 18), the **CT4 12V supply** (Pin 2, 15A fuse), and the **PBS-I battery feed** (Pin 22, 5A fuse) cross the firewall.
 
-### Available (9 spare pins)
+### Available (7 spare pins)
 
-Pins 22-29 + pin 2 (legacy spare) reserved for future non-SwitchPros circuits. Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18); pin 21 by the GPS power feed when the GPS moved to PMU OUT14 (2026-09-24). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), and the iBooster enable (pin 18).
+Pins 23-29 reserved for future non-SwitchPros circuits. Pin 2 (legacy spare) took the CT4 12V supply and pin 22 the PBS-I RED battery feed when both moved to the START+ Forward Distribution Bus (2026-10-17). Pins 19-20 were taken by the 4x4/4LO indicator signals (2026-09-18); pin 21 by the GPS power feed when the GPS moved to PMU OUT14 (2026-09-24). The former Boomerang fob-present and gated-start pins were dropped when the PBS-I self-contained keyless system replaced the Boomerang/PMU keyless approach — PBS-I needs no firewall pins beyond PINK IGN (pin 12), PURPLE START (pin 15), its RED battery feed (pin 22), and the iBooster enable (pin 18).
 
 ---
 
@@ -129,7 +130,7 @@ Each SwitchPros output uses **2 pins** (power out + ground return) — load grou
 Pins 5-14 reserved for future SwitchPros forward outputs. Pins 5-6 carried the front locker (OUT-17) until 2026-09-24, when the lockers moved to cabin dash switches with their solenoids at the air manifold. Likely candidates:
 
 - OUT-2 ditch lights (2 pins) — if routed through firewall instead of A-pillar
-- OUT-1 roof lights (2 pins) — if routed through firewall instead of A-pillar (10 AWG fits size-16)
+- OUT-1 roof lights — **not** a candidate: 17.6A exceeds the 13A size-16 contact, so they would need two 14 AWG pins per polarity (4 pins); keep them on the A-pillar route
 - Additional front-mounted accessories (2 pins each)
 
 ### Why Dedicated SP Bulkhead
@@ -187,10 +188,10 @@ Radio grounds do NOT go through firewall - they route through cab floor to START
 
 | Gauge | Count | Circuits |
 |:------|:-----:|:---------|
-| 14 AWG | 7 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1) |
+| 14 AWG | 9 | Radio power (2), CT4 outputs (4), PBS-I PINK IGN (1), CT4 12V supply (1), PBS-I RED battery (1) |
 | 16 AWG | 5 | PMU lighting outputs (3), PURPLE START (1), iBooster enable (1) |
 | 18 AWG | 8 | Switch signals (3: horn, brake, A/C), winch control (2), 4x4/4LO indicators (2), GPS power (1) |
-| **Main connector** | **20** | HDP24-24-29 (20 of 29 used, 9 spare) |
+| **Main connector** | **22** | HDP24-24-29 (22 of 29 used, 7 spare) |
 
 ### SwitchPros HDP24-18-14 (forward SP outputs)
 
@@ -293,9 +294,9 @@ Adding a small secondary connector (e.g., HDP20-9-4 with 4 size-20 contacts) for
 |:------------|:------------|:---:|:------:|
 | HDP24-24-29PE-L015 | 29-pin receptacle, flange mount | 1 | $45 |
 | HDP26-24-29SE | 29-pin plug | 1 | $35 |
-| 0460-202-16141 | Size 16 pin, solid, nickel | 19 | $0.50 ea |
-| 0462-201-16141 | Size 16 socket, solid, nickel | 19 | $0.55 ea |
-| 114018 | Sealing plug, size 16 cavity | 10 | $0.25 ea |
+| 0460-202-16141 | Size 16 pin, solid, nickel | 22 | $0.50 ea |
+| 0462-201-16141 | Size 16 socket, solid, nickel | 22 | $0.55 ea |
+| 114018 | Sealing plug, size 16 cavity | 7 | $0.25 ea |
 
 **Subtotal:** ~$105
 

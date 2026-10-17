@@ -51,9 +51,11 @@ tags:
 | Start Signal          | PBS-I PURPLE START output       | Firewall Pin 15 → Cole Hersee coil+ | 16 AWG  | ~0.69A   | PBS-I output rated 60A but only Cole Hersee coil downstream[^ch-24213] |
 | Solenoid Coil Ground  | Cole Hersee 24213 coil-         | Engine bay ground bus             | 16 AWG     | ~0.69A   | ~3 ft                                                            |
 | Solenoid Output       | Cole Hersee 24213 output        | Starter solenoid switch post      | 10 AWG     | 30-75A   | ~2 ft                                                            |
-| Ground Return         | Starter case                    | Engine block → START battery-     | 2/0 AWG    | 400-600A | Via engine bay ground bus                                        |
+| Ground Return         | Starter case                    | Engine block ground stud → START battery− | 2/0 AWG | 400-600A | START− 2/0 (~8 ft) lands at the engine block stud; a short 2/0 jumper ties the block to the [Engine Bay Ground Bus][engine-bay-ground-bus] (re-landed 2026-10-17) |
 
 See [Keyless Ignition][keyless-ignition] for PBS-I power and brake input wiring.
+
+**Cranking voltage drop:** with START− landed at the engine block stud, the cranking loop is 6 ft (supply) + 8 ft (return) ≈ 14 ft of 2/0 AWG ≈ 1.1 mΩ → ~3.6% @ 400A, ~5.5% @ 600A.[^crank-loop] Landed at the ground bus instead, the loop would also include the block→bus link (6 + 8 + 8 ft ≈ 22 ft ≈ 1.7 mΩ plus joints → ~6–7% @ 400A, ~10% @ 600A), which is why the return was re-landed at the block (2026-10-17).
 
 ## Control Flow
 
@@ -132,3 +134,5 @@ Engine starts → button released → Cole Hersee de-energizes → Bendix retrac
 [keyless-ignition]: ../05-control-interfaces/06-keyless-ignition.md
 [wait-lockout-note]: wait-to-start-lockout-design-note.md
 [tbd-tracker]: ../tbd-tracker.md
+
+[^crank-loop]: Cable resistance only: 2/0 AWG ≈ 0.0779 mΩ/ft @ 20°C; 14 ft ≈ 1.09 mΩ, 22 ft ≈ 1.71 mΩ; percentages at 12.6 V. Joint and terminal resistance not measured and not included.

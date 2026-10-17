@@ -11,7 +11,7 @@ tags:
 
 **Controller:** [Command Touch CT4][command-touch-ct4] (SW1 = right turn, SW2 = left turn)
 
-**Power Source:** PMU Out 13 (CONSTANT, via CT4)
+**Power Source:** START+ Forward Distribution Bus (15A fuse, CONSTANT, via CT4)
 
 **Features:** GPS auto-cancel, lane change mode, hazard function
 

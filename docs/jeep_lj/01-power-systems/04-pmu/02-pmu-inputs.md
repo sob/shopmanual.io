@@ -9,13 +9,15 @@ PMU input configuration including digital inputs, analog inputs, CAN bus integra
 
 ## 12V Switched Input (Pin 7)
 
-**Source:** Dedicated 18 AWG wire tapped from the ignition signal bus bar (which is fed by PBS-I PINK IGN output — see [Keyless Ignition][keyless-ignition] and [Ignition Signal Distribution][ignition-signal])
+**Source:** Dedicated 18 AWG wire tapped from the ignition signal bus bar (which is fed by PBS-I PINK IGN output — see [Keyless Ignition][keyless-ignition] and [Ignition Signal Distribution][ignition-signal]), with a 16 AWG pigtail at the PMU connector (18 AWG is below the 1.5 mm terminal's wire range)[^pmu-manual]
 
 **Function:** Provides switched power reference for PMU logic
 
 **Implementation:** Dedicated wire through firewall (Grommet 2) direct to PMU Pin 7
 
 **Load:** ~50mA
+
+**Key-off:** The PMU switches off as soon as Pin 7 drops unless Delayed turn off is configured (manual §16.7), so no PMU output is CONSTANT.[^pmu-manual] Delayed turn off is enabled here so the TCU on OUT15 can finish its sleep cycle — see [PMU Programming][pmu-programming].
 
 See [Ignition Signal Distribution][ignition-signal] for complete wiring architecture.
 
@@ -36,6 +38,8 @@ See [Ignition Signal Distribution][ignition-signal] for complete wiring architec
 | **In 9** | A/C Request          | Restomod Air control head compressor output, via trinary switch ({{ tbd(146) }} — verify kit wiring on arrival) | Out 17 (A/C Clutch)     | 12V when A/C commanded and refrigerant pressure in range — see [HVAC][hvac] |
 
 **Note:** Keyless ignition is handled entirely by the self-contained Digital Guard Dawg PBS-I module — PMU is not in the keyless logic path. See [Keyless Ignition][keyless-ignition].
+
+**Pigtails:** Input, CAN and Pin 7 wires under 16 AWG get a 16 AWG pigtail at the PMU connector — see the terminal table in [PMU Overview][pmu-overview].[^pmu-manual]
 
 [keyless-ignition]: ../../05-control-interfaces/06-keyless-ignition.md
 [ignition-signal]: ../06-ignition-signal/index.md
@@ -72,7 +76,7 @@ PMU24 taps into existing J1939 CAN bus as stub connection (no termination).
 ### Physical Connection
 
 - **Tap Location:** Cummins body harness (same as Dakota Digital tap)
-- **Wire Gauge:** 18-20 AWG twisted pair
+- **Wire Gauge:** 18-20 AWG twisted pair, 16 AWG pigtail at the PMU connector
 - **Stub Length:** <12" from tap to PMU (keep as short as possible, ideally <6")
 - **Termination:** None - bus already terminated at ECM + harness end
 - **PMU Setting:** Disable internal CAN termination in software
@@ -81,8 +85,8 @@ PMU24 taps into existing J1939 CAN bus as stub connection (no termination).
 
 |   SPN   | Parameter           | PMU Use                        |
 | :-----: | :------------------ | :----------------------------- |
-| **175** | Engine Oil Temp     | Oil cooler fan control (OUT 7) |
-| **110** | Engine Coolant Temp | PS cooler fan control (OUT 8)  |
+| **175** | Engine Oil Temp     | Oil cooler fan control (OUT 1) |
+| **110** | Engine Coolant Temp | PS cooler fan control (OUT 16) |
 | **190** | Engine Speed (RPM)  | Data logging                   |
 | **100** | Engine Oil Pressure | Data logging                   |
 
@@ -90,13 +94,15 @@ See [PMU Programming][pmu-programming] for CAN-based logic examples.
 
 ## Ignition Signal Distribution
 
-**PMU Pin 7:** 18 AWG wire tapped from the engine-bay distribution off HDP24 Pin 12 (which crosses the firewall from the ignition signal bus bar, fed by PBS-I PINK IGN)
+**PMU Pin 7:** 18 AWG wire tapped from the engine-bay distribution off HDP24 Pin 12 (which crosses the firewall from the ignition signal bus bar, fed by PBS-I PINK IGN); 16 AWG pigtail at the PMU connector
 
 **Routing:** Engine bay (firewall Pin 12 junction → PMU Pin 7)
 
 **Purpose:** Shares the same switched supply path as the Cummins ECM 12V — both energize whenever the PBS-I asserts PINK IGN.
 
 **Non-critical devices** (CT4, SwitchPros, radio, BCDC, camera) tap directly off the cabin-mounted ignition signal bus bar - see [Ignition Signal][ignition-signal] for details.
+
+[^pmu-manual]: ECUMaster, *PMU User Manual* 122.3.1 (2026-09-21): §2.13 connector current capacity (2.8 mm terminal 25 A @ 23°C with 12 AWG, 23 A @ 40°C, two adjacent 38 A; 1.5 mm terminal 19 A @ 23°C with 14 AWG); §16.7 Delayed turn off ("By default, the PMU switches off immediately when the ignition is switched off"); wire table p.137. https://www.ecumaster.com/files/PMU/PMU_Manual.pdf (accessed 2026-10-17).
 
 ## Related Documentation
 

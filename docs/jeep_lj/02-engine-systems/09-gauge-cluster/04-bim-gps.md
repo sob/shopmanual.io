@@ -41,7 +41,7 @@ GPS-based speedometer, compass, altimeter, and clock sync module. Eliminates nee
 - **Accuracy:** ±0.1 MPH (GPS-dependent)
 - **Output Signals:** 4k, 8k, 16k PPM (selectable)
 - **Signal Types:** Sine wave or square wave (configurable)
-- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT9 (25A cap, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
+- **Current Draw:** Negligible — bus-powered via the HDX BIM/IO cable (no separate feed); draw is included in the HDX system budget on PMU OUT3 (25 A output, ~12A typ). Dakota Digital publishes no per-module current for these data modules (only power modules like the BIM-RGB, 7.4A, list a figure).
 - **Antenna:** Integrated omni-directional (optional external antenna available)
 - **Warranty:** 2 years
 
@@ -65,7 +65,7 @@ GPS speedometer is legally required for on-road operation. Ensure antenna has cl
 
 | Connection       | Source                    | Destination           | Wire Gauge  | Notes                       |
 | :--------------- | :------------------------ | :-------------------- | :---------- | :-------------------------- |
-| **Constant**     | Critical Cabin PDU Slot 4 ({{ tbd(144) }}) | GPS-50-2 power | 18 AWG ✓ | BIM CONSTANT power — may be bus-powered via BIM/IO cable instead |
+| **Power**        | HDX control box (BIM/IO cable) | GPS-50-2 power    | Proprietary | Bus-powered via BIM/IO cable (no separate feed) |
 | **BIM/IO**       | HDX control box           | GPS-50-2 input        | Proprietary | Data via daisy-chain        |
 | **GPS Antenna**  | GPS-50-2 module           | Dash/windshield mount | Coax cable  | Included antenna cable      |
 | **Outside Temp** | GPS-50-2 (optional)       | SEN-15-1 probe        | Sensor wire | If used instead of BIM-17-2 |

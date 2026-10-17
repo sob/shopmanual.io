@@ -27,7 +27,7 @@ tags:
 
 **Mounting:** Overhead, centered on the roll cage (owner, 2026-09-25), on the U-bracket that comes with the radio
 
-**Power Source:** PMU OUT6 (25A capacity, CONSTANT)
+**Power Source:** PMU OUT6 (15 A output), on while the PMU is on (ignition, plus the Delayed turn off window)
 
 ///
 

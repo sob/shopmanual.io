@@ -17,7 +17,7 @@ tags:
 
 **Mounting:** Engine bay, on the kit's bracket
 
-**Power Source:** PMU Out 18 (7A capacity, CONSTANT)
+**Power Source:** PMU Out 18 (7A capacity, on while the PMU is on)
 
 ///
 
@@ -38,7 +38,7 @@ The kit wires this horn to CT4 SW3. This build uses SW3 for the low beams, so th
 - Input: In 1 (horn button signal)
 - Output: Out 18 (7A capacity, powers horns directly)
 - Logic: When In 1 closes, Out 18 activates (no external relay needed)
-- Power: CONSTANT (works with ignition off for safety)
+- Power: on while the PMU is on — the PMU shuts off at key-off (Delayed turn off window aside), so the horn is not available with the ignition off; see [PMU Outputs][pmu-outputs]
 
 ## Wiring Configuration
 
@@ -57,7 +57,7 @@ START battery CONSTANT → PMU → Out 18 → CT4 kit horn → Chassis Ground
 ## Related Documentation
 
 - [PMU Outputs][pmu-outputs] - PMU Out 18 circuit and programming
-- [START Battery Distribution][starter-battery-distribution] - Inline CBs (250A PMU, 80A BCDC)
+- [START Battery Distribution][starter-battery-distribution] - MRBF terminal fuses at the post (150A PMU, 80A BCDC)
 - [Firewall Ingress][firewall-ingress] - Horn button trigger wire routing
 
 [ct4]: ../05-control-interfaces/03-command-touch-ct4.md

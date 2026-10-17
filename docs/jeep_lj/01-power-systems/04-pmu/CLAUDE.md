@@ -43,13 +43,15 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 ## Cross-Section References
 
-**To START battery (1.2):** PMU power source via circuit breaker
+**To START battery (1.2):** PMU power source via MRBF terminal fuse at the START post
 
-**To Engine Systems (2):** HVAC blower, wipers, horn (radiator fan, iBooster, and TCU relocated to the START+ Forward Distribution Bus — no longer PMU)
+**To Engine Systems (2):** HVAC blower, wipers, horn, oil/PS cooler fans, Dakota Digital cluster (radiator fan and iBooster relocated to the START+ Forward Distribution Bus — no longer PMU)
 
 **To Lighting (3):** DRL (OUT23), parking/tail markers (OUT12), brake lights, reverse lights
 
-**To Control Interfaces (4):** Dakota Digital cluster, Command Touch CT4 power
+**To Control Interfaces (5):** CT4 headlight status inputs only (CT4 power moved to the START+ Forward Distribution Bus so hazards work with the PMU off)
+
+**To Drivetrain (10):** Turbolamik TCU power, kept alive after key-off by Delayed turn off
 
 **To Grounding (1.5):** PMU ground connection
 
@@ -61,7 +63,7 @@ Documents ECUMaster PMU24 programmable power management unit configuration and a
 
 **"What's the DRL auto-off logic?"** → `04-pmu-programming.md`
 
-**"Where does PMU get power?"** → START battery (1.2) circuit breakers
+**"Where does PMU get power?"** → START battery (1.2) MRBF terminal fuses
 
 **"What inputs does PMU use?"** → `02-pmu-inputs.md`
 

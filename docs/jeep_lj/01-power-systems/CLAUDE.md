@@ -9,7 +9,7 @@ search:
 
 Power generation and distribution architecture for the Jeep LJ build.
 
-**Key Principle:** Direct battery connections via circuit breakers - no intermediate bus bars between batteries and major loads.
+**Key Principle:** Direct battery connections via MRBF terminal fuses at the posts (circuit breakers downstream) - no intermediate bus bars between batteries and major loads.
 
 ## File Organization
 
@@ -45,9 +45,9 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 
 | Section                | Power Connection                               | Find In                     |
 | :--------------------- | :--------------------------------------------- | :-------------------------- |
-| Engine Systems (2)     | HVAC→OUT5; Fan/iBooster/TCU→START+ Fwd Bus; Starter direct | `02-engine-systems/`        |
+| Engine Systems (2)     | HVAC→OUT5; Fan/iBooster→START+ Fwd Bus; TCU→PMU OUT15; Starter direct | `02-engine-systems/`        |
 | Lighting (3)           | DRL→OUT23, Brake→OUT21, Reverse→OUT22          | `03-lighting-systems/`      |
-| Control Interfaces (4) | CT4→OUT13, Dakota→OUT9, SwitchPros→AUX 150A CB | `05-control-interfaces/`    |
+| Control Interfaces (4) | CT4→START+ Fwd Bus, Dakota→OUT3, SwitchPros→AUX 150A CB | `05-control-interfaces/`    |
 | Audio (5)              | Fusion→BODY PDU                                | `06-audio-systems/`         |
 | Communication (6)      | Radios→PMU OUT6/20, GPS→PMU OUT14              | `07-communication-systems/` |
 | Exterior (7)           | Winch→AUX direct, ARB→SafetyHub MIDI           | `08-exterior-systems/`      |

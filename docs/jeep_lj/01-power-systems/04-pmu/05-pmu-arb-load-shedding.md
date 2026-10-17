@@ -42,7 +42,7 @@ The Dakota Lithium 135Ah combined with 50A BCDC makes extended air-up a non-issu
 - Shed cosmetic loads first (DRL)
 - Shed comfort loads second (A/C)
 - Conditionally shed cooling loads if temperatures allow (oil/PS cooler fans)
-- Maintain critical PMU systems (HVAC blower, lights, CT4)
+- Maintain critical PMU systems (HVAC blower, lights, TCU)
 
 _Note: the iBooster and radiator fan are no longer PMU loads — both relocated to the [START+ Forward Bus][start-fwd-bus] — so they are outside this PMU shed logic. They remain START-battery loads and still appear in the START-side totals below._
 
@@ -58,10 +58,10 @@ IF (SwitchPros_OUT11_ARB == ON) OR (BatteryVoltage < 13.0V AND EngineRPM > 1000)
 
   // Conditionally shed cooler fans if temperatures allow
   IF (J1939_SPN175_OilTemp < 220°F):
-    Out7_OilFan = OFF          // -15A: Oil cooler fan (temp-dependent)
+    Out1_OilFan = OFF          // -15A: Oil cooler fan (temp-dependent)
 
   IF (J1939_SPN110_CoolantTemp < 210°F):
-    Out8_PSFan = OFF           // -15A: PS cooler fan (temp-dependent)
+    Out16_PSFan = OFF          // -15A: PS cooler fan (temp-dependent)
 
   // Total load reduction: ~8-38A depending on temperatures
 
@@ -72,8 +72,8 @@ ELSE:
   // Restore normal operation when ARB stops
   Out23_DRL = (Per DRL auto-off logic)
   Out17_AC_Clutch = (Per A/C request logic)
-  Out7_OilFan = (Per oil temp thresholds)
-  Out8_PSFan = (Per coolant temp thresholds)
+  Out1_OilFan = (Per oil temp thresholds)
+  Out16_PSFan = (Per coolant temp thresholds)
   Out_ARB_Active_Indicator = OFF
 ```
 
@@ -83,8 +83,8 @@ ELSE:
 | :-------------------- | :------------ | :--------------------------- | :-------------------- |
 | DRL (OUT23)           | 0.8A          | Low - cosmetic only          | Always when ARB runs  |
 | A/C Clutch (OUT17)    | 5A            | Medium - comfort loss        | Always when ARB runs  |
-| Oil Cooler Fan (OUT7) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
-| PS Cooler Fan (OUT8)  | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
+| Oil Cooler Fan (OUT1) | 15A           | Low - if oil temp <220°F     | Temperature-dependent |
+| PS Cooler Fan (OUT16) | 15A           | Low - if coolant temp <210°F | Temperature-dependent |
 | **Total Saved**       | **~8-38A**    | -                            | -                     |
 
 ## AUX Battery Impact Analysis
@@ -185,15 +185,15 @@ Net AUX drain:        45A   (unchanged)
 ```text
 // Oil Cooler Fan
 IF (J1939_SPN175_OilTemp < 220°F):
-  Safe to disable Out7_OilFan
+  Safe to disable Out1_OilFan
 ELSE:
-  KEEP Out7_OilFan = ON (engine protection priority)
+  KEEP Out1_OilFan = ON (engine protection priority)
 
 // PS Cooler Fan
 IF (J1939_SPN110_CoolantTemp < 210°F):
-  Safe to disable Out8_PSFan
+  Safe to disable Out16_PSFan
 ELSE:
-  KEEP Out8_PSFan = ON (engine protection priority)
+  KEEP Out16_PSFan = ON (engine protection priority)
 ```
 
 **Hysteresis:** Use 10°F hysteresis to prevent rapid cycling when temps hover near threshold.
@@ -278,8 +278,8 @@ LOG TotalCurrent_PMU (1 Hz)
 LOG EngineRPM (J1939_SPN190)
 LOG Out23_DRL (state)
 LOG Out17_AC_Clutch (state)
-LOG Out7_OilFan (state)
-LOG Out8_PSFan (state)
+LOG Out1_OilFan (state)
+LOG Out16_PSFan (state)
 LOG SwitchPros_OUT11_ARB (state or trigger input)
 ```
 

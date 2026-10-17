@@ -27,7 +27,7 @@ tags:
 
 **Mounting:** Dash mount via included magnet-assist locking cradle (AMPS plate, 1.5" RAM B-ball)
 
-**Power Source:** [PMU][pmu-outputs] OUT14 (15A output), on with the ignition. No switch; the unit powers up and down with the vehicle (owner decision 2026-09-24). 12V cig plug cut off, hardwired.
+**Power Source:** [PMU][pmu-outputs] OUT14 (25 A output), on with the ignition. No switch; the unit powers up and down with the vehicle (owner decision 2026-09-24). 12V cig plug cut off, hardwired.
 
 ///
 
@@ -70,7 +70,7 @@ The Tread 2 Overland has built-in inReach hardware but it is not activated — s
 
 | Connection | Wire   | Source           | Notes                                   |
 | :--------- | :----- | :--------------- | :-------------------------------------- |
-| Power (+)  | 18 AWG | PMU OUT14 | ~2A load; engine bay → firewall HDP24 pin 21 → dash. Cig-plug cut from OEM cable |
+| Power (+)  | 18 AWG | PMU OUT14 | ~2A load; 16 AWG pigtail at the PMU connector (18 AWG is below the terminal range); engine bay → firewall HDP24 pin 21 → dash. Cig-plug cut from OEM cable |
 | Ground (−) | 18 AWG | Chassis          | Local ground near mount                 |
 
 ## Outstanding Items

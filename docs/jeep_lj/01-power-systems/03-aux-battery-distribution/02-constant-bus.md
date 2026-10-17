@@ -31,10 +31,10 @@ Forward distribution bus mounted on the firewall (passenger cabin side). Receive
 !!! info "Two-Stage Distribution Architecture"
 The AUX battery has no local CONSTANT bus. Loads are distributed in two stages:
 
-    1. **AUX battery+ → inline CBs → 3 protected feeds** (forward to this firewall bus, local to SafetyHub, local to audio amp)
+    1. **AUX battery+ → MRBF terminal fuses → 3 protected feeds** (forward to this firewall bus, local to SafetyHub, local to audio amp)
     2. **Firewall CONSTANT bus → per-load CBs → 2 distribution controllers** (SwitchPros + BODY PDU)
 
-    The firewall bus is fed by a 2/0 AWG cable through a 250A master CB at the AUX battery (within 7" of battery terminal). This places power distribution *near the loads* (most SwitchPros outputs are forward, BODY PDU is at firewall; audio amp is fed directly from the AUX battery, not from this bus) and keeps the cabin trunk to a single heavy cable instead of multiple medium-gauge feeds.
+    The firewall bus is fed by a 2/0 AWG cable through a 250A MRBF terminal fuse on the AUX battery post. This places power distribution *near the loads* (most SwitchPros outputs are forward, BODY PDU is at firewall; audio amp is fed directly from the AUX battery, not from this bus) and keeps the cabin trunk to a single heavy cable instead of multiple medium-gauge feeds.
 
 ## Specifications
 
@@ -48,13 +48,13 @@ The AUX battery has no local CONSTANT bus. Loads are distributed in two stages:
 
 | From                    | Cable     | Distance | Protection                | Voltage Drop @ 200A | Notes                                          |
 | :---------------------- | :-------- | :------- | :------------------------ | :------------------ | :--------------------------------------------- |
-| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 250A CB at battery (<7") | ~2.0% @ 20°C        | Routed via cabin trunk — see {{ tbd(75) }}     |
+| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 250A MRBF terminal fuse at AUX post | ~2.0% @ 20°C        | Routed via cabin trunk — see {{ tbd(75) }}     |
 
 ## Load Distribution
 
 | Connection                 | Wire Gauge | Distance | Voltage Drop  | Protection | Load      | Notes                           |
 | :------------------------- | :--------- | :------- | :------------ | :--------- | :-------- | :------------------------------ |
-| **Feed INPUT**             | 2/0 AWG    | ~13 ft   | <1.5% @ 20°C  | 250A CB (at battery) | ~154A max | From AUX battery via cabin trunk |
+| **Feed INPUT**             | 2/0 AWG    | ~13 ft   | <1.5% @ 20°C  | 250A MRBF (at AUX post) | ~154A max | From AUX battery via cabin trunk |
 | [SwitchPros][switchpros]   | 2 AWG      | ~2 ft    | <0.5% @ 20°C  | 150A CB    | ~100A max | Auxiliary lighting              |
 | [BODY PDU][body-rtmr]      | 2 AWG      | ~2 ft    | <0.5% @ 20°C  | 100A CB    | ~54A max  | Cabin circuits                  |
 
@@ -71,14 +71,14 @@ Both per-load CBs mount within 7" of the bus on a small bracket near the cluster
 | SwitchPros | 150A | Mechanical Products 174-S2-150-2 | 150% of max load |
 | BODY PDU | 100A | Mechanical Products 174-S2-100-2 | 185% of max load |
 
-See [Circuit Breakers][circuit-breakers] for full specs.
+See [Circuit Protection][circuit-breakers] for full specs.
 
 ## Related Documentation
 
 **Power Systems:**
 
-- [AUX battery Distribution][rear-battery] - Battery terminal connections and inline CBs
-- [Circuit Breakers][circuit-breakers] - Full CB list (battery side + firewall side)
+- [AUX battery Distribution][rear-battery] - Battery terminal connections and MRBF terminal fuses
+- [Circuit Protection][circuit-breakers] - Full fuse/CB list (battery post + firewall side)
 
 **Connected Systems:**
 

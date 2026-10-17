@@ -16,12 +16,12 @@ All circuits powered by START battery (alternator charging):
 | **PMU Outputs**  |                   |         |          |                        |                       |
 | OUT5             | HVAC Blower       |     10A |      20A | Continuous when on     | Speed-dependent       |
 | OUT6             | GMRS Radio        |      1A |      15A | Brief TX bursts        | Standby vs transmit   |
-| OUT7             | Oil Cooler Fan    |      0A |      15A | Temp-triggered         | Off unless hot        |
-| OUT8             | PS Cooler Fan     |      0A |      15A | Temp-triggered         | Off unless hot        |
-| OUT9             | Dakota Digital    |     25A |      25A | Continuous             | Gauges always on      |
+| OUT1             | Oil Cooler Fan    |      0A |      15A | Temp-triggered         | Off unless hot        |
+| OUT16            | PS Cooler Fan     |      0A |      15A | Temp-triggered         | Off unless hot        |
+| OUT3             | Dakota Digital    |     25A |      25A | Continuous             | Gauges always on      |
 | OUT11            | Wiper Controller  |      0A |      15A | Intermittent           | Rain only             |
-| OUT13            | CT4 Controller    |     10A |      10A | Continuous             | Street lighting       |
 | OUT14            | Garmin GPS        |      2A |       2A | Continuous             | On with ignition      |
+| OUT15            | Turbolamik TCU    |     15A |      15A | Continuous             | Must stay on (Delayed turn off) |
 | OUT17            | A/C Clutch        |      0A |       5A | Summer only            | Seasonal              |
 | OUT18            | Horn              |      0A |     5.4A | Seconds                | Emergency only        |
 | OUT20            | STX Intercom      |      1A |       5A | Brief TX bursts        | Standby vs transmit   |
@@ -32,7 +32,8 @@ All circuits powered by START battery (alternator charging):
 | **Fwd Dist Bus (START-direct)** | |       |          |                        | relocated off the PMU |
 | Fwd Bus          | iBooster main     |   0.25A |      40A | Seconds during braking | Brief peak            |
 | Fwd Bus          | Radiator Fan      |     20A |      53A | Variable (own controller) | Controller {{ tbd(134) }} |
-| Fwd Bus          | Turbolamik TCU    |     15A |      15A | Continuous             | Must stay on          |
+| Fwd Bus          | CT4 Controller    |     10A |      10A | Continuous             | Street lighting; 15A fuse |
+| Fwd Bus          | PBS-I keyless     |   0.05A |    0.05A | Continuous             | Key-off standby; 5A fuse |
 | Ign bus          | iBooster Enable   |      5A |       5A | Continuous             | Ignition-switched     |
 | **BCDC Charger** |                   |         |          |                        |                       |
 | -                | BCDC to AUX       |     30A |      50A | Continuous             | Charges AUX battery   |
@@ -42,7 +43,7 @@ All circuits powered by START battery (alternator charging):
 | -                | Grid Heater       |      0A |     250A | 3-5 seconds            | Cold start only       |
 
 !!! info "Forward Distribution Bus relocation — totals unchanged"
-    The radiator fan, iBooster, and TCU now feed START-direct via the [Forward Distribution Bus][start-fwd-bus] instead of the PMU. Because they were *already* powered by the START battery through the PMU, the battery and alternator totals are unchanged — only the distribution path moved. The TCU (~15A continuous) is now itemized separately; folding it into the scenarios below raises the worst realistic case from 201A to ~216A (80% of the 270A alternator) — still within margin.
+    The radiator fan, iBooster, CT4 and PBS-I feed START-direct via the [Forward Distribution Bus][start-fwd-bus] instead of the PMU; the TCU moved back onto PMU OUT15 (2026-10-17). All were *already* powered by the START battery, so the battery and alternator totals are unchanged — only the distribution path moved. The TCU (~15A continuous) is itemized separately; folding it into the scenarios below raises the worst realistic case from 201A to ~216A (80% of the 270A alternator) — still within margin.
 
 ## Scenario Analysis
 
@@ -56,11 +57,11 @@ All circuits powered by START battery (alternator charging):
 | **Radiator Fan (Fwd Bus)**   |   **16A** | Low speed - highway airflow |
 | **HVAC Blower (OUT5)**        |   **10A** | Medium speed                |
 | **GMRS Radio (OUT6)**         |    **1A** | Standby                     |
-| Oil Cooler Fan (OUT7)         |        0A | Temp normal                 |
-| PS Cooler Fan (OUT8)          |        0A | Temp normal                 |
-| **Dakota Digital (OUT9)**     |   **25A** | Always on                   |
+| Oil Cooler Fan (OUT1)         |        0A | Temp normal                 |
+| PS Cooler Fan (OUT16)          |        0A | Temp normal                 |
+| **Dakota Digital (OUT3)**     |   **25A** | Always on                   |
 | Wiper (OUT11)                 |        0A | Dry weather                 |
-| **CT4 (OUT13)**               |   **10A** | Running lights              |
+| **CT4 (Fwd Bus)**               |   **10A** | Running lights              |
 | **iBooster Enable (ign bus)** |    **5A** | Always on                   |
 | **STX Intercom (OUT20)**      |    **1A** | Standby                     |
 | **Garmin GPS (OUT14)**        |    **2A** | On with ignition            |
@@ -82,11 +83,11 @@ All circuits powered by START battery (alternator charging):
 | **Radiator Fan (Fwd Bus)**   |  **42A** | High speed - no airflow, hot |
 | **HVAC Blower (OUT5)**        |  **20A** | Max speed for A/C            |
 | **GMRS Radio (OUT6)**         |   **1A** | Standby                      |
-| **Oil Cooler Fan (OUT7)**     |  **15A** | Hot - active                 |
-| **PS Cooler Fan (OUT8)**      |  **15A** | Hot - active                 |
-| **Dakota Digital (OUT9)**     |  **25A** | Always on                    |
+| **Oil Cooler Fan (OUT1)**     |  **15A** | Hot - active                 |
+| **PS Cooler Fan (OUT16)**      |  **15A** | Hot - active                 |
+| **Dakota Digital (OUT3)**     |  **25A** | Always on                    |
 | Wiper (OUT11)                 |       0A | Dry weather                  |
-| **CT4 (OUT13)**               |  **10A** | Running lights               |
+| **CT4 (Fwd Bus)**               |  **10A** | Running lights               |
 | **A/C Clutch (OUT17)**        |   **5A** | A/C on                       |
 | **iBooster Enable (ign bus)** |   **5A** | Always on                    |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                      |
@@ -110,11 +111,11 @@ All circuits powered by START battery (alternator charging):
 | **Radiator Fan (Fwd Bus)**   |  **53A** | Max speed - no airflow            |
 | **HVAC Blower (OUT5)**        |  **15A** | Moderate                          |
 | **GMRS Radio (OUT6)**         |   **5A** | Occasional TX                     |
-| **Oil Cooler Fan (OUT7)**     |  **15A** | Hot - active                      |
-| **PS Cooler Fan (OUT8)**      |  **15A** | Hot - active                      |
-| **Dakota Digital (OUT9)**     |  **25A** | Always on                         |
+| **Oil Cooler Fan (OUT1)**     |  **15A** | Hot - active                      |
+| **PS Cooler Fan (OUT16)**      |  **15A** | Hot - active                      |
+| **Dakota Digital (OUT3)**     |  **25A** | Always on                         |
 | Wiper (OUT11)                 |       0A | Dry                               |
-| **CT4 (OUT13)**               |  **10A** | Running lights                    |
+| **CT4 (Fwd Bus)**               |  **10A** | Running lights                    |
 | **iBooster Enable (ign bus)** |   **5A** | Always on                         |
 | **STX Intercom (OUT20)**      |   **3A** | Occasional TX                     |
 | **Garmin GPS (OUT14)**        |    **2A** | On with ignition            |
@@ -138,11 +139,11 @@ All circuits powered by START battery (alternator charging):
 | **Radiator Fan (Fwd Bus)**   |  **20A** | Normal - highway airflow |
 | **HVAC Blower (OUT5)**        |  **15A** | Defrost                  |
 | **GMRS Radio (OUT6)**         |   **1A** | Standby                  |
-| Oil Cooler Fan (OUT7)         |       0A | Temp normal              |
-| PS Cooler Fan (OUT8)          |       0A | Temp normal              |
-| **Dakota Digital (OUT9)**     |  **25A** | Always on                |
+| Oil Cooler Fan (OUT1)         |       0A | Temp normal              |
+| PS Cooler Fan (OUT16)          |       0A | Temp normal              |
+| **Dakota Digital (OUT3)**     |  **25A** | Always on                |
 | **Wiper (OUT11)**             |  **15A** | High speed               |
-| **CT4 (OUT13)**               |  **10A** | Headlights               |
+| **CT4 (Fwd Bus)**               |  **10A** | Headlights               |
 | **iBooster Enable (ign bus)** |   **5A** | Always on                |
 | **STX Intercom (OUT20)**      |   **1A** | Standby                  |
 | **Garmin GPS (OUT14)**        |    **2A** | On with ignition            |
@@ -168,11 +169,11 @@ All circuits powered by START battery (alternator charging):
 | **Radiator Fan (Fwd Bus)**   |   **35A** | Moderate - no airflow |
 | **HVAC Blower (OUT5)**        |   **10A** | Comfortable           |
 | **GMRS Radio (OUT6)**         |    **1A** | Standby               |
-| Oil Cooler Fan (OUT7)         |        0A | Temp stable           |
-| PS Cooler Fan (OUT8)          |        0A | Temp stable           |
-| **Dakota Digital (OUT9)**     |   **25A** | Always on             |
+| Oil Cooler Fan (OUT1)         |        0A | Temp stable           |
+| PS Cooler Fan (OUT16)          |        0A | Temp stable           |
+| **Dakota Digital (OUT3)**     |   **25A** | Always on             |
 | Wiper (OUT11)                 |        0A | Off                   |
-| **CT4 (OUT13)**               |   **10A** | Parking lights        |
+| **CT4 (Fwd Bus)**               |   **10A** | Parking lights        |
 | **A/C Clutch (OUT17)**        |    **5A** | If summer             |
 | **iBooster Enable (ign bus)** |    **5A** | Always on             |
 | **STX Intercom (OUT20)**      |    **1A** | Standby               |
@@ -221,8 +222,9 @@ Loads on the **CONSTANT** (always-on) feed continue to draw with the ignition of
 
 | Load | Source | Key-Off Draw | Notes |
 | :--- | :----- | -----------: | :---- |
-| PBS-I keyless module | Critical Cabin PDU (CONSTANT) | ~50 mA[^pbs-i-standby] | RFID auto-arm standby (arms 60 s after fob leaves range) |
-| HDX + BIM cluster electronics | Critical Cabin PDU Slot 2 (CONSTANT) | not characterized | Dakota Digital keep-alive / sleep current — small, not yet measured |
+| PBS-I keyless module | START+ Forward Bus (CONSTANT, 5A fuse) | ~50 mA[^pbs-i-standby] | RFID auto-arm standby (arms 60 s after fob leaves range) |
+| HDX + BIM cluster electronics | PMU OUT3 | ~0 | PMU output is off after the Delayed turn off window; HDX IGN-off draw is ≈0.3 mA while powered |
+| Turbolamik TCU | PMU OUT15 (Delayed turn off) | ~0 after sleep | Draws only during the Delayed turn off window ({{ tbd(332) }}) |
 | ECM keep-alive | START battery (direct) | not characterized | Cummins R2.8 ECM sleep current |
 
 **Characterized draw:** ~50 mA (PBS-I) ≈ **1.2 Ah/day**.

@@ -2,7 +2,7 @@
 
 Components organized by estimated cost for purchase planning (Black Friday, sales, etc.).
 
-**Last Updated:** 2026-09-27
+**Last Updated:** 2026-10-17
 
 ---
 
@@ -161,8 +161,10 @@ _(Most electrical distribution components already purchased - see Purchased Item
 |:-----|:--------:|:-----------|:---------|:------|
 | Bussmann LR-2 Body PDU | 1 | ~$50-100 | Medium | eBay surplus - [BODY PDU][body-pdu] |
 | START+ Forward Distribution Busbar (Blue Sea 2105) | 1 | ~$40 | High | Engine-bay START+ fan-out for relocated fan/iBooster/TCU — {{ tbd(135) }} - [START Distribution][start-fwd-bus] |
-| Circuit breakers — 100A master + 60A / 50A / 25A (Mechanical Products S17) | 4 | ~$120 | High | Forward-bus master (downsized from 150A, 2026-09-22) + fan/iBooster/TCU load CBs — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
-| AUX forward-feed CB 250A (MP 174-S2-250-2) + amp CB 80A (Blue Sea 187-series) | 2 | ~$90 | High | Replace the 300A / 100A units in the plan (downsized 2026-09-22); skip if not yet bought - [AUX Circuit Breakers][aux-cbs] |
+| Circuit breakers — 60A / 50A (Mechanical Products S17) | 2 | ~$60 | High | Forward-bus fan / iBooster load CBs (the 100A master CB became a 100A MRBF and the 25A TCU CB was dropped, 2026-10-17) — {{ tbd(135) }} - [Circuit Breakers][start-cbs] |
+| Inline ATO/ATC fuse holders + 15A / 5A fuses (CT4, PBS-I at forward bus) | 2 | ~$15 | High | 14 AWG feeds through HDP24 pins 2 / 22 - [START Distribution][start-fwd-bus] |
+| Blue Sea MRBF terminal fuse blocks — 5191 single (×2) + 2151 dual (×2) | 4 | ~$80 | High | START post: dual (150A PMU + 100A fwd bus) + single (80A BCDC); AUX post: dual (250A fwd feed + 150A SafetyHub) + single (80A amp). Replaces the battery-side Series 17 CBs (174-S2-250/100/080) and the Blue Sea 187 amp CB (2026-10-17) — P/N {{ tbd(331) }} - [Circuit Breakers][start-cbs], [AUX Circuit Breakers][aux-cbs] |
+| Blue Sea MRBF fuses — 150, 100, 80 A (START) + 250, 150, 80 A (AUX) + spares | 6+ | ~$90 | High | Not resettable; carry spares — {{ tbd(331) }} - [Circuit Breakers][start-cbs] |
 | Lingenfelter VSFM-002 fan controller + coolant temp sensor | 1 | ~$190 | High | PWM brushless controller w/ own sensor; sensor P/N + fail-to-full-speed confirm — {{ tbd(134) }} - [Radiator Fan][radiator-fan] |
 | Fan power relay (continuous-duty) | 1 | ~$20 | High | Switches fan power at the forward bus - [Radiator Fan][radiator-fan] |
 
@@ -189,9 +191,9 @@ _(Most electrical distribution components already purchased - see Purchased Item
 | 5/8" Oil-Resistant Hose (2 ft) + Worm Clamps | Generic | ~$15 | High | Catch can plumbing - [Runaway Protection][runaway-protection] |
 | NPT-to-Hose Adapter Fittings (AMOT to intake) | Generic | ~$25 | High | Size per measured turbo inlet - [Runaway Protection][runaway-protection] |
 | 3/16" Copper-Nickel Brake Hardline + Fittings + Armor | Generic / AGS | ~$60-90 | High | Caliper-side hybrid: armored hardline routed inside frame rail + 1/2-20 IF inverted-flare fittings at MC; axle-side flex length separate ({{ tbd(86) }}) - [iBooster][ibooster] |
-| Heated Seat Switches (2× Toyota-style ON/OFF) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout; wire to BODY PDU CB45/CB42 via K21/K22 relays - [Dashboard][dashboard] |
+| Heated Seat Switches (2× Toyota-style ON/OFF) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout; wire to BODY PDU CB45/CB42 (both 10A, 2026-10-17) via K21/K22 relays - [Dashboard][dashboard] |
 | Air Locker Switches (2× Toyota-style latching ON/OFF, front + rear) | Generic | ~$20-30 | Medium | 1.54"×0.83" cutout (not ARB's 21×36.5 mm); BODY PDU CB44 via K27, front fed from rear per ARB - [Dashboard][dashboard] |
-| Driver-side Firewall Grommet (heavy power) | Steele Rubber or equiv | ~$10-20 | High | ~1.5" OD bundle (3× 2/0 AWG H2 cables); new driver-side penetration - [Firewall Ingress][firewall-ingress] |
+| Driver-side Firewall Grommet (heavy power) | Steele Rubber or equiv | ~$10-20 | High | ~1.8" OD bundle (5 H2 cables: 2× 2/0 + 1 AWG + 2 AWG + 2/0 ground); new driver-side penetration - [Firewall Ingress][firewall-ingress] |
 | Passenger-side Firewall Grommet (H1) | Steele Rubber or equiv | ~$15-25 | High | Sealed 2-piece, ~1.5" OD H1 bundle (~1.75" hole), continuous run - [Firewall Ingress][firewall-ingress] |
 | Axle breather relocation kit + braided line (both axles) | Generic | — | High | Route high into the engine bay; locate before the truss weld - [Front Axle][front-axle], [Rear Axle][rear-axle] |
 

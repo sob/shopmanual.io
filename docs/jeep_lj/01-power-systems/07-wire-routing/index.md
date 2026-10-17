@@ -38,7 +38,7 @@ All wire runs require appropriate protection based on location and environment:
 | Circuit                    | Wire Gauge | Protection Required                           |
 | :------------------------- | :--------- | :-------------------------------------------- |
 | Alternator → START battery | 2/0 AWG    | Heat sleeve (engine bay) → split loom (frame) |
-| PMU power feed             | 2/0 AWG    | Heat sleeve entire run (engine bay exposure)  |
+| PMU power feed             | 1 AWG      | Heat sleeve entire run (engine bay exposure)  |
 | START+ forward-bus feed    | 2 AWG      | Heat sleeve (engine bay) → braided sleeve (cabin run, H2) |
 | BCDC inter-battery         | 4 AWG      | Split loom + P-clamps (under vehicle)         |
 | Winch cables               | 1/0 AWG    | Split loom + abrasion sleeve (frame contact)  |
@@ -54,13 +54,14 @@ All wire runs require appropriate protection based on location and environment:
 | :---------------------------- | :--------- | :------- | :---------------------------------- | :------------- | :--------------------------------------------------- |
 | **Alternator charging input** | 2/0 AWG    | 8 ft     | FROM Alternator (engine bay)        | 270A           | Charges START battery - see [Alternator][alternator] |
 | **Starter motor power**       | 2/0 AWG    | 6 ft     | TO Starter motor (engine bay)       | 400-600A       | Brief cranking load - see [Starter][starter]         |
-| **PMU24 power feed**          | 2/0 AWG    | 7 ft     | TO PMU24 (engine bay)               | 220A max       | Via 250A CB - see [PMU][pmu]                         |
-| **START+ Forward Dist Bus feed** | 2 AWG   | ~8 ft    | TO engine-bay busbar (fan/iBooster/TCU) | ~108A peak | Via 100A master CB - see [START+ Forward Distribution Bus][start-fwd-bus] |
-| **BCDC input feed**           | 4 AWG      | 5-6 ft   | TO BCDC (passenger rear wheel well) | 50-55A         | Via 80A CB - see [BCDC][bcdc]                        |
+| **PMU24 power feed**          | 1 AWG      | ~7 ft    | TO PMU24 (engine bay)               | 150A max       | Via 150A MRBF terminal fuse at START post (downsized from 2/0 + 250A CB, 2026-10-17) - see [PMU][pmu] |
+| **START+ Forward Dist Bus feed** | 2 AWG   | ~8 ft    | TO engine-bay busbar (fan/iBooster/CT4/PBS-I) | ~102A peak | Via 100A MRBF terminal fuse at START post - see [START+ Forward Distribution Bus][start-fwd-bus] |
+| **BCDC input feed**           | 4 AWG      | 5-6 ft   | TO BCDC (passenger rear wheel well) | 50-55A         | Via 80A MRBF terminal fuse at START post - see [BCDC][bcdc] |
+| **Starter ground return**     | 2/0 AWG    | ~8 ft    | TO engine block ground stud (engine bay) | 400-600A  | START battery− → engine block ground stud (starter return); short 2/0 jumper block → Engine Bay Ground Bus (re-landed 2026-10-17) |
 | **Primary ground**            | 2/0 AWG    | 3 ft     | TO Rear frame rail                  | 600A+ peak     | Primary return path                                  |
 | **Battery cross-ground**      | 1/0 AWG    | 5-6 ft   | TO AUX battery- (passenger)         | BCDC reference | Critical for BCDC operation                          |
 
-**Routing:** Driver rear wheel well → up inside driver rear quarter sill → forward along **inside floor board / side wall (driver side)** → driver A-pillar area → driver-side firewall grommet → engine bay. Path is fully inside the body (no exposed frame rail). The PMU feed and the START+ Forward Dist Bus master feed (2 AWG) share this driver-side path as part of harness [H2][power-build]. BCDC input (4 AWG) takes the H3 cross-cab path instead (under rear bench seat to passenger side).
+**Routing:** Driver rear wheel well → up inside driver rear quarter sill → forward along **inside floor board / side wall (driver side)** → driver A-pillar area → driver-side firewall grommet → engine bay. Path is fully inside the body (no exposed frame rail). The PMU feed (1 AWG), the START+ Forward Dist Bus master feed (2 AWG), and the START− return (2/0 AWG) share this driver-side path as part of harness [H2][power-build]. BCDC input (4 AWG) takes the H3 cross-cab path instead (under rear bench seat to passenger side).
 
 ---
 
@@ -72,8 +73,8 @@ All wire runs require appropriate protection based on location and environment:
 | :------------------------------------- | :--------- | :------- | :------------------------------------------------ | :------------------ | :------------------------------------------------------------------- |
 | **Warn ZEON 10-S Winch power**       | 1/0 AWG    | 13 ft    | TO Front bumper winch                             | 250A typ, 409A peak | Direct connection (no CB) - see [Recovery Systems][recovery-systems] |
 | **Warn ZEON 10-S Winch ground**      | 1/0 AWG    | 13 ft    | TO Winch motor ground                             | 250A typ, 409A peak | Return path - routing {{ tbd(106) }}                                 |
-| **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~154A max           | Protected by 250A CB at battery - feeds SwitchPros + BODY PDU (Fusion head unit rides the BODY PDU via CB30) |
-| **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A CB at battery                                      |
+| **Forward feed (Firewall CONSTANT bus)** | 2/0 AWG  | ~13 ft   | TO Firewall CONSTANT Bus (cabin trunk)            | ~154A max           | Protected by 250A MRBF terminal fuse at AUX post - feeds SwitchPros + BODY PDU (Fusion head unit rides the BODY PDU via CB30) |
+| **SafetyHub local feed**               | 2 AWG      | ~2 ft    | TO SafetyHub 150 (local in wheel well)            | ~100A max           | Protected by 150A MRBF terminal fuse at AUX post                     |
 | **BCDC output**                        | 4 AWG      | Short    | FROM BCDC (local in wheel well)                   | 50A                 | Charging input to AUX battery                                        |
 | **Primary ground**                     | 2/0 AWG    | 3 ft     | TO Rear frame rail                                | {{ tbd(124) }}      | Chassis-grounded accessory return only — winch returns via dedicated 1/0 H1 cable to AUX battery−, not chassis |
 | **Cross-ground reference**             | 1/0 AWG    | 5-6 ft   | FROM START battery- (driver)                      | BCDC reference      | Critical for BCDC operation                                          |
@@ -94,11 +95,14 @@ All wire runs require appropriate protection based on location and environment:
 | :------------------------ | :--------- | :------- | :-------------------- | :-------------------- | :--------- | :---------------------------- |
 | **Alternator to battery** | 2/0 AWG    | 8 ft     | Alternator            | START battery+        | 270A       | See Driver Rear Wheel Well section |
 | **Starter motor**         | 2/0 AWG    | 6 ft     | START battery+        | Starter motor         | 400-600A   | See Driver Rear Wheel Well section |
-| **START+ Fwd Bus feed**   | 2 AWG      | ~8 ft    | START battery+ (100A CB) | Engine-bay busbar  | ~108A peak | Rear-to-front master feed (H2) - see [START+ Forward Distribution Bus][start-fwd-bus] |
+| **START+ Fwd Bus feed**   | 2 AWG      | ~8 ft    | START battery+ (100A MRBF) | Engine-bay busbar | ~102A peak | Rear-to-front master feed (H2) - see [START+ Forward Distribution Bus][start-fwd-bus] |
 | **Busbar → Radiator fan** | 4 AWG      | short    | Engine-bay busbar     | Radiator fan          | 53A        | Via 60A CB (local engine-bay feed) |
 | **Busbar → iBooster main**| 8 AWG      | short    | Engine-bay busbar     | iBooster              | 40A peak   | Via 50A CB (local engine-bay feed) |
-| **Busbar → TCU**          | 12 AWG     | short    | Engine-bay busbar     | Turbolamik TCU (trans)| 15A        | Via 25A CB; TCU leg is harness [H9][controls-build] |
-| **Engine block ground**   | 2/0 AWG    | 8 ft     | Engine block          | Engine bay ground bus | 600A+ peak | Starter/alternator return     |
+| **Busbar → CT4**          | 14 AWG     | ~6 ft    | Engine-bay busbar     | CT4 (steering column, cabin) | ~9A  | Via 15A inline fuse at bus; crosses firewall at HDP24 pin 2 |
+| **Busbar → PBS-I**        | 14 AWG     | ~6 ft    | Engine-bay busbar     | PBS-I ICM (cabin)     | <0.1A      | Via 5A inline fuse at bus; crosses firewall at HDP24 pin 22 |
+| **PMU OUT15 → TCU**       | 12 AWG     | short    | PMU OUT15             | Turbolamik TCU (trans)| 15A        | Moved back from the busbar (2026-10-17); TCU leg is harness [H9][controls-build] |
+| **START battery− return** | 2/0 AWG    | ~8 ft    | START battery−        | Engine block ground stud | 600A+ peak | Starter return (H2); re-landed at the block 2026-10-17 |
+| **Engine block ground jumper** | 2/0 AWG | ~3 ft   | Engine block ground stud | Engine bay ground bus | 600A+ peak | Alternator/accessory return; not in the cranking loop |
 | **Frame ground**          | 2/0 AWG    | 3 ft     | Engine bay ground bus | Front frame rail      | 600A+ peak | Chassis ground point          |
 
 **BCDC Location:** Passenger rear wheel well (near AUX battery) - charges AUX battery from START battery/alternator
@@ -111,10 +115,10 @@ All wire runs require appropriate protection based on location and environment:
 
 | Component                              | Wire Gauge | Distance | Source/Destination                         | Notes                                           |
 | :------------------------------------- | :--------- | :------- | :----------------------------------------- | :---------------------------------------------- |
-| **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 250A master CB       | Heavy feed via H1: passenger floor/side wall → A-pillar → firewall (resolved 2026-05-30) |
+| **Firewall CONSTANT Bus (input)**      | 2/0 AWG    | ~13 ft   | FROM AUX battery+ via 250A MRBF terminal fuse | Heavy feed via H1: passenger floor/side wall → A-pillar → firewall (resolved 2026-05-30) |
 | **Bus → SwitchPros**                   | 2 AWG      | ~2 ft    | TO SwitchPros power module                 | Via 150A CB                                     |
 | **Bus → BODY PDU**                     | 2 AWG      | ~2 ft    | TO BODY PDU                                | Via 100A CB                                     |
-| **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 80A CB at AUX battery  (not via firewall bus) |
+| **AUX bat → JL Audio MV800/8i Amp**    | 4 AWG      | ~3-4 ft  | TO MV800/8i amp (under rear seat)          | Via 80A MRBF at AUX post (not via firewall bus) |
 | **SwitchPros Ground Bus**              | 1/0 AWG    | ~3 ft    | TO chassis ground at firewall              | Lighting/aux load returns                       |
 | **SwitchPros control cable**           | Multi-pin  | Measure  | TO SwitchPros panel on center console      | SwitchPros cable, sold in 5 ft steps            |
 | **SwitchPros outputs (12 circuits)**   | Various    | {{ tbd(107) }} | TO various loads (front/cabin/rear/roof) | Mostly short forward fan-out from firewall      |
@@ -128,7 +132,7 @@ All wire runs require appropriate protection based on location and environment:
 | Penetration | Location | Direction | Circuits | Wire Count | Notes |
 |:------------|:---------|:----------|:---------|:-----------|:------|
 | **Cummins Harness** | Factory location | Engine ↔ Cabin | Engine harness, J1939 CAN | Factory | Dedicated bulkhead connector |
-| **Deutsch HDP24-24-29** | {{ tbd(61) }} (near PMU) | Bidirectional | All custom wiring | 17 | Single weatherproof connector |
+| **Deutsch HDP24-24-29** | {{ tbd(61) }} (near PMU) | Bidirectional | All custom wiring | 22 | Single weatherproof connector |
 | **Temp Probe Grommet** | Near grille | Cabin → Grille | BIM-17-2 temp sensor | 2 (22 AWG) | Small grommet, twisted pair |
 
 !!! info "J1939 CAN Bus"

@@ -33,8 +33,8 @@ tags:
 
 **Outputs:**
 
-- 24 programmable high-side outputs (10×25A, 6×15A, 8×7A)
-- **Total capacity:** 170A continuous (power supply limited, not sum of outputs)
+- 24 programmable high-side outputs: 10×25A (OUT1–5, OUT12–16; 2.8 mm terminals), 6×15A (OUT6–11; 1.5 mm terminals), 8×7A (OUT17–24)[^pmu-pinout]
+- **Total capacity:** 150A max constant at the battery stud (power supply limited, not sum of outputs)[^pmu-pinout]
 - **Constraint:** Only same-rated outputs can be combined (e.g., 25A + 25A ✓, 25A + 15A ✗)
 - **Out 17-24:** Dual-purpose - configurable as 7A outputs OR 0-20V analog inputs
 
@@ -47,24 +47,36 @@ tags:
 
 **Physical:** 131×112×33mm, 385g, -40°C to +125°C operating range
 
-**Grounding Note:** PMU is **high-side switching only** - it switches the positive wire to loads. Each load must have its own ground path back to the battery/chassis. The PMU's ground connection (14 AWG) is only for internal electronics reference, not load current return. This is why PMU doesn't require a heavy ground wire matching the 2/0 AWG power feed.
+**Grounding Note:** PMU is **high-side switching only** - it switches the positive wire to loads. Each load must have its own ground path back to the battery/chassis. The PMU's ground connection (12 AWG from connector pin 25, 2.8 mm terminal 211CC3S3120, to Engine Bay Ground Bus stud 5, as short as possible) is only for internal electronics reference, not load current return. This is why PMU doesn't require a heavy ground wire matching the 1 AWG power feed.
+
+## Connector Terminals
+
+Wire ranges for the PMU connector terminals and ECUMaster's wire table (5A → 18 AWG, 10A → 16, 15A → 14, 25A → 12):[^pmu-manual]
+
+| Terminal | Part          | Wire range  | Rating                                                        | Used on              |
+| :------- | :------------ | :---------- | :------------------------------------------------------------ | :------------------- |
+| 1.5 mm   | 211CC2S2160P  | 14–17 AWG   | 19 A @ 23°C with 14 AWG                                       | OUT6–11, inputs, CAN, Pin 7 |
+| 2.8 mm   | 211CC3S2120   | 14–16 AWG   | -                                                             | 25 A outputs, light loads |
+| 2.8 mm   | 211CC3S3120   | 10–12 AWG   | 25 A @ 23°C with 12 AWG, 23 A @ 40°C; two adjacent = 38 A total | 25 A outputs, pin 25 ground |
+
+**Pigtail rule:** any PMU connector wire under 16 AWG (GPS, 4x4 relay, 4LO, +12V sw Pin 7, inputs, CAN) gets a 16 AWG pigtail at the PMU connector — 18 AWG is below the terminal range.[^pmu-manual]
 
 **Configuration Software:** [PMU Setup v101.2.1][pmu-setup] | **Full Specs:** [PMU Manual][pmu-manual]
 
 ## Capacity Analysis
 
-| Outputs   |  Rating  | Total  |  Used  | Available |
-| :-------- | :------: | :----: | :----: | :-------: |
-| 1-10      | 25A each |   10   |   5    |     5     |
-| 11-16     | 15A each |   6    |   4    |     2     |
-| 17-24     | 7A each  |   8    |   8    |     0     |
-| **Total** |    -     | **24** | **17** |  **7**    |
+| Outputs        |  Rating  | Total  |  Used  | Available |
+| :------------- | :------: | :----: | :----: | :-------: |
+| 1-5, 12-16     | 25A each |   10   |   7    |     3     |
+| 6-11           | 15A each |   6    |   2    |     4     |
+| 17-24          | 7A each  |   8    |   8    |     0     |
+| **Total**      |    -     | **24** | **17** |  **7**    |
 
-**Utilization:** 17 of 24 outputs used (71%) — 7 freed by relocating the radiator fan, iBooster, and TCU; OUT15 freed when the winch trigger was reallocated to BODY PDU CB43 (2026-05-30); OUT19 and OUT24 taken by the 4x4/4LO indicators (2026-09-18); OUT12 taken by the parking/tail markers when they were split off the DRL circuit (2026-09-22); OUT14 taken by the Garmin GPS when it moved off the SwitchPros (2026-09-24). The 7A bank (OUT17-24) is full — future low-current loads go on the 15A bank.
+**Utilization:** 17 of 24 outputs used (71%). OUT15 freed when the winch trigger was reallocated to BODY PDU CB43 (2026-05-30); OUT19 and OUT24 taken by the 4x4/4LO indicators (2026-09-18); OUT12 taken by the parking/tail markers when they were split off the DRL circuit (2026-09-22); OUT14 taken by the Garmin GPS when it moved off the SwitchPros (2026-09-24). Re-mapped to the pinout's true ratings on 2026-10-17: fans to OUT1/OUT16 (25 A, flyback), Dakota Digital to OUT3 (25 A), TCU back onto OUT15 (25 A, kept alive by Delayed turn off), CT4 off the PMU to the START+ Forward Bus. The 7A bank (OUT17-24) is full — future low-current loads go on the 15A bank.
 
-**Primary loads:** HVAC (OUT5: ~20A load), GMRS radio (OUT6: ~15A load), aux cooling fans (OUT7+8: 2×15A), Dakota Digital (OUT9: ~25A), wipers (OUT11: 15A), parking/tail markers (OUT12: ~2A), CT4 (OUT13: ~9A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL/parking (OUT23: 7A), 4x4 indicator relay (OUT19: <0.2A), 4LO indicator (OUT24: <0.1A), Garmin GPS (OUT14: ~2A). _Radiator fan (was OUT2+3+4), iBooster main + enable (was OUT1+10, OUT19), and Turbolamik TCU (was OUT16) relocated to the [START+ Forward Distribution Bus][start-fwd-bus]; the winch contactor trigger (was OUT15) reallocated to BODY PDU CB43 — OUT1–4, 10, 15, 16 now free (OUT14 went to the GPS)._
+**Primary loads:** oil cooler fan (OUT1: ~15A), Dakota Digital HDX (OUT3: ~12A typ / 25A worst), HVAC (OUT5: ~20A load), GMRS radio (OUT6: ~15A load), wipers (OUT11: 15A), parking/tail markers (OUT12: ~2A), Garmin GPS (OUT14: ~2A), Turbolamik TCU (OUT15: 15A continuous), PS cooler fan (OUT16: ~15A), A/C clutch (OUT17: 7A), horn (OUT18: 7A), intercom (OUT20: 7A), brake lights (OUT21: 7A), reverse lights (OUT22: 7A), DRL (OUT23: 7A), 4x4 indicator relay (OUT19: <0.2A), 4LO indicator (OUT24: <0.1A). _Radiator fan (was OUT2+3+4), iBooster main + enable (was OUT1+10, OUT19) and the CT4 (was OUT13) are on the [START+ Forward Distribution Bus][start-fwd-bus]; the winch contactor trigger (was OUT15) went to BODY PDU CB43 — OUT2, 4, 13 (25 A) and OUT7–10 (15 A) are free._
 
-**Load:** With the radiator fan, iBooster, and TCU relocated to the START+ Forward Bus, PMU peak drops to ~147A theoretical (all radios transmitting), ~87-117A typical continuous — comfortably within the 170A continuous PMU capacity. **7 outputs were freed by the fan/iBooster/TCU relocation** and OUT15 by the winch-trigger reallocation; after the 4x4/4LO indicators took OUT19 and OUT24 and the GPS took OUT14, **7 of 24 outputs are unassigned**. The two indicator outputs are signal-level (<0.3A combined) and do not move the load figures.
+**Load:** With the radiator fan, iBooster and CT4 on the START+ Forward Bus and the TCU back on OUT15, the PMU's theoretical all-on load is ~146A (all radios transmitting, both fans running), ~85-115A typical continuous — within the 150A stud limit.[^pmu-pinout] **7 of 24 outputs are unassigned.** The two indicator outputs are signal-level (<0.3A combined) and do not move the load figures.
 
 **Mounting:** Engine bay, accessible for LED diagnostics and USB configuration
 
@@ -73,7 +85,7 @@ tags:
 - [PMU Inputs][pmu-inputs] - Input configuration and CAN bus integration
 - [PMU Outputs][pmu-outputs] - 24-output configuration and load details
 - [PMU Programming][pmu-programming] - Logic examples and configuration
-- [START battery Distribution][starter-battery-distribution] - PMU power source (2/0 AWG, 7 ft) and circuit breaker (250A)
+- [START battery Distribution][starter-battery-distribution] - PMU power source (1 AWG, ~7 ft) and 150A MRBF terminal fuse
 - [Wire Distance Reference][wire-distance] - PMU to battery routing distance
 
 [pmu-inputs]: 02-pmu-inputs.md
@@ -87,3 +99,6 @@ tags:
 [pmu-pinout]: https://www.ecumaster.com/files/PMU/PMU-24_Pinout_v1.1.pdf
 [usb-to-can]: https://www.ecumaster.com/products/usb-to-can/
 [pmu-setup]: https://www.ecumaster.com/files/PMU/PMUSetup_101_2_1.exe
+
+[^pmu-pinout]: ECUMaster, *PMU-24 DL Pinout v1.1* (2023-10-06): battery stud "Maximum constant current: 150 A"; O1–O5, O12–O16 25 A; O6–O11 15 A; O17–O24 7 A; terminals 211CC2S2160P 13–17 AWG, 211CC3S2120 14–16 AWG, 211CC3S3120 10–12 AWG. https://www.ecumaster.com/files/PMU/PMU-24_Pinout_v1.1.pdf (accessed 2026-10-17).
+[^pmu-manual]: ECUMaster, *PMU User Manual* 122.3.1 (2026-09-21): §2.13 connector current capacity (2.8 mm terminal 25 A @ 23°C with 12 AWG, 23 A @ 40°C, two adjacent 38 A; 1.5 mm terminal 19 A @ 23°C with 14 AWG); §16.7 Delayed turn off ("By default, the PMU switches off immediately when the ignition is switched off"); wire table p.137. https://www.ecumaster.com/files/PMU/PMU_Manual.pdf (accessed 2026-10-17).

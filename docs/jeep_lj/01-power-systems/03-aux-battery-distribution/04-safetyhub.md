@@ -26,14 +26,14 @@ tags:
 
 Provides fused distribution for recovery and auxiliary systems powered by the AUX battery.
 
-**Location:** Passenger rear wheel well (co-located with AUX battery and circuit breakers)
+**Location:** Passenger rear wheel well (co-located with AUX battery)
 
-**Power Source:** AUX battery+ via inline 150A CB (~2 ft, local in rear wheel well) - see [Circuit Breakers][circuit-breakers]
+**Power Source:** AUX battery+ via 150A MRBF terminal fuse at the AUX post (2 AWG, ~2 ft, local in rear wheel well) - see [Circuit Protection][circuit-breakers]
 
 **Note:** Communications systems (GMRS, Intercom) are powered via PMU outputs - see [PMU Outputs][pmu-outputs]
 
 !!! note "Future-Proof Capacity"
-Wire and CB sized for full 150A SafetyHub capacity (current load 90A). Provides 60A headroom for additional recovery or auxiliary systems.
+Wire and MRBF fuse sized for full 150A SafetyHub capacity (current load 90A). Provides 60A headroom for additional recovery or auxiliary systems.
 
 ## Specifications
 
@@ -71,7 +71,7 @@ Winch motor power (409A peak) connects directly to AUX battery positive terminal
 **Power Systems:**
 
 - [AUX Battery Distribution Overview][aux-battery]
-- [Circuit Breakers][circuit-breakers] - 150A CB protection
+- [Circuit Protection][circuit-breakers] - 150A MRBF terminal fuse
 - [PMU Outputs][pmu-outputs] - Communications system power (GMRS, Intercom)
 - [Standards Exceptions][standards-exceptions] - Winch protection strategy documentation
 

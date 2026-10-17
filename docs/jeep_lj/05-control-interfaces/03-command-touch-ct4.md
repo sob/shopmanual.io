@@ -22,7 +22,7 @@ tags:
 
 **Function:** Turn signals (left/right), headlight control, and auxiliary accessories
 
-**Power Source:** PMU Out 13 (15A, programmed CONSTANT for hazards when ignition off)
+**Power Source:** [START+ Forward Distribution Bus][start-fwd-bus] (engine bay) via 15A inline fuse at the bus, 14 AWG, HDP24 pin 2 — CONSTANT, so hazards work with the key off. Moved off PMU Out 13 (2026-10-17): the PMU switches off at key-off.[^pmu-manual]
 
 **Mounting Location:** Steering column, on the Axia Alloys 1.125" clamp (the kit's 1.5" clamp is sized for UTV columns)[^ct4-clamp]
 
@@ -95,7 +95,7 @@ Pin/gauge/load detail is in the [Wiring Pinout](#wiring-pinout) table below.
 - **Headlights (SW3 - PULL):** Latching on/off (pull once for on, again for off). SW3 is tapped in the engine bay to PMU In 7 (headlight status): DRL off, parking/tail markers on.
 - **High Beams (SW4 - PUSH):** Push while headlights on. CT4 enforces mutual exclusivity — high beam disables low beam automatically. Momentary or latching toggle (programmable).
 
-Both stay active with the ignition off — the CT4 is CONSTANT-powered from PMU Out 13 — so the headlights, and the parking/tail markers that follow them, can be lit while parked.
+Both stay active with the ignition off — the CT4 is CONSTANT-powered from the START+ Forward Distribution Bus — so the headlights, and the parking/tail markers that follow them, can be lit while parked.
 
 ### DRL/Parking Lights
 
@@ -118,7 +118,7 @@ See [DRL & Parking][drl-parking] for the PMU logic, operation states, and load b
 | Red         | SW2, DOWN  | Left Turn (CT4 output)  | Front/rear left turn signals                                             | 10A max per output                                       |
 | Orange      | SW3, PULL  | Headlights (low beam)   | LP6 Pin 1 (low beam, both lights); tapped to PMU In 7 in the engine bay  | 10A output, 3.6A load, active with ignition off          |
 | Yellow      | SW4, PUSH  | High Beams              | LP6 Pin 4 (high beam, both lights); tapped to PMU In 5 in the engine bay | 10A output, 5.6A load, active with ignition off          |
-| Red (thick) | 12V Supply | Main power input        | PMU Out 13 (15A CONSTANT)                                                | Powers all SW outputs, allows hazards when ignition off  |
+| Red (thick) | 12V Supply | Main power input        | [START+ Forward Distribution Bus][start-fwd-bus] → 15A inline fuse → 14 AWG → HDP24 pin 2 → column | ~9A; CONSTANT — powers all SW outputs, allows hazards when ignition off |
 | Black       | Ground     | Ground return           | Chassis ground or firewall ground stud                                   | Via ignition/ground harness                              |
 | White/Gray  | Ignition   | Ignition signal input   | Cabin ignition bus bar Terminal 1 (18 AWG, ~20 mA, fused per bus doc)     | Ignition status only — no switch is ignition-disabled (see Programming Configuration) |
 
@@ -155,12 +155,12 @@ CT4 SW3 (low beam) taps to PMU In 7 and SW4 (high beam) to PMU In 5; the PMU tur
 
 Check-off items only. Wire gauges, pin assignments, and tail-light color codes
 live in the [Wiring Pinout](#wiring-pinout) section above and the linked light pages.
-Controller power feed (PMU Out 13) and ignition-signal distribution are tracked
+Controller power feed (START+ Forward Bus, 15A fuse) and ignition-signal distribution are tracked
 in the [Power Systems Checklist][power-checklist].
 
 ### Power, Ground & Ignition
 
-- [ ] Confirm CT4 12V supply (PMU Out 13) landed at steering column
+- [ ] Confirm CT4 12V supply (START+ Forward Bus → 15A fuse → HDP24 pin 2) landed at steering column
 - [ ] Confirm CT4 ground connected
 - [ ] Confirm CT4 ignition signal connected (cabin ignition bus bar Terminal 1)
 - [ ] Verify SW3/SW4 (headlights) work with the ignition off (parking/tail markers follow them)
@@ -222,7 +222,9 @@ in the [Power Systems Checklist][power-checklist].
 [pmu-power-distribution]: ../01-power-systems/04-pmu/index.md
 [drl-parking]: ../03-lighting-systems/05-drl-parking.md
 [power-checklist]: ../09-installation/01-power-systems-checklist.md
+[start-fwd-bus]: ../01-power-systems/02-starter-battery-distribution/index.md#start-forward-bus
 
 [^ct4-manual]: SwitchPros *Command-Touch CT4* manual, Rev. 1.0091524 — p.1 (overview: 10A per switch, 40A module, hazard "flashes all outputs in sync"); p.2–3 (programming table and step 2: Ignition/Battery set per switch, default Ignition); p.5 (GPS mounting: level, label up, no metal obstruction, keep dry); p.6 (wiring diagram: Brown SW1 right turn, Red SW2 left turn, Orange SW3 horn, Yellow SW4 aux). <https://www.switchpros.com/wp-content/uploads/CT4-Rev-1.0.pdf>
 [^ct4-kit]: SwitchPros store, "Command-Touch CT4 Accessory Controller GPS Turn Signal Kit for 1.5 Steering Column" product page, accessed 2026-09-27. <https://store.switchpros.com/command-touch-ct4-accessory-controller-gps-turn-signal-kit-for-1-5-steering-column/>
+[^pmu-manual]: ECUMaster, *PMU User Manual* 122.3.1 (2026-09-21): §2.13 connector current capacity (2.8 mm terminal 25 A @ 23°C with 12 AWG, 23 A @ 40°C, two adjacent 38 A; 1.5 mm terminal 19 A @ 23°C with 14 AWG); §16.7 Delayed turn off ("By default, the PMU switches off immediately when the ignition is switched off"); wire table p.137. https://www.ecumaster.com/files/PMU/PMU_Manual.pdf (accessed 2026-10-17).
 [^ct4-clamp]: Owner purchase, 2026-09 — Axia Alloys 1.125" clamp bought separately for the LJ column. The kit's 1.5" clamp is listed for Polaris RZR Turbo S / Ranger / Speed UTV columns on the SwitchPros product page (accessed 2026-09-27).

@@ -28,7 +28,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 
 **Mounting:** HDPE panel on firewall behind dashboard
 
-**Power:** [PMU OUT9][pmu-outputs] (25A capacity, CONSTANT power) — {{ tbd(144) }} (architecture decision: PMU OUT9 vs Critical Cabin PDU Slot 2)
+**Power:** [PMU OUT3][pmu-outputs] (25 A output, 12 AWG from the PMU; ~12A typical / 25A worst-case for the HDX system) — on while the PMU is on (ignition, plus the Delayed turn off window)
 
 ## Specifications
 
@@ -93,7 +93,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | TACH WARN                | -           | -                            | -                       | Not used (J1939 provides tach via BIM-01-2)      |
 | TACH                     | -           | -                            | -                       | Not used (J1939 provides tach via BIM-01-2)      |
 | **IGNITION PWR**         | 16 AWG      | Ignition bus bar             | HDX ignition input      | Switched 12V for ignition-controlled features    |
-| **12 VDC CONSTANT**      | 16 AWG ✓    | Critical Cabin PDU Slot 2 ({{ tbd(144) }}) | HDX power input | 10A fuse, CONSTANT power, ~2 ft                  |
+| **12 VDC CONSTANT**      | 16 AWG ✓    | [PMU OUT3][pmu-outputs] (12 AWG from the PMU; 16 AWG at the HDX pigtail) | HDX power input | HDX-side 10A fuse; on while the PMU is on, not key-off CONSTANT |
 | **DIM**                  | 18 AWG ✓    | Tail light circuit           | HDX DIM input           | Dash dimming control (variable voltage)          |
 | **ENGINE**               | 18 AWG ✓    | ECM Pin 22 (white wire, MIL) | HDX ENGINE input        | Check engine light / MIL signal — sink-circuit (active low at wire) per Cummins R2.8 Installation Guide 5504137 |
 | **BRAKE**                | 18 AWG ✓    | Brake switch or CT4          | HDX BRAKE input         | Brake pedal indicator                            |
@@ -110,7 +110,7 @@ Main control box for HDX instrument system. Processes sensor inputs, BIM module 
 | **DISPLAY CABLE**        | Proprietary | HDX control                  | Dashboard cluster       | Factory harness included, ~2 ft                  |
 | CLOCK CABLE              | -           | -                            | -                       | Not used (GPS-50-2 provides clock sync via BIM)  |
 | **BIM I/O**              | Proprietary | HDX 3.5mm jack               | BIM modules             | Daisy-chain to 4 BIM modules (power + data)      |
-| **Ground**               | 16 AWG ✓    | HDX ground                   | Critical PDU ground bus | Shared cabin ground, ~1 ft                       |
+| **Ground**               | 16 AWG ✓    | HDX ground                   | [Firewall Stud Bus][firewall-ground] | ~1 ft                                            |
 
 ## BIM Module Integration
 
@@ -137,7 +137,7 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 - [Dakota Digital System Overview][gauge-system] - Complete system architecture
 - [Dashboard Cluster][dashboard-cluster] - HDX display specifications
 - [BIM Modules][bim-j1939] - Expansion module details
-- [PMU Outputs][pmu-outputs] - Power source (OUT9)
+- [PMU Outputs][pmu-outputs] - Power source (OUT3)
 - [Ignition Signal Distribution][ignition-bus] - Ignition power source
 - [Command Touch CT4][ct4] - Lighting signal sources (turn, high beam, etc.)
 - [Cummins R2.8 ECM][ecm] - WAIT/EX (Pin 35 yellow) and ENGINE/MIL (Pin 22 white) signal sources
@@ -149,6 +149,7 @@ All BIM modules connect via single daisy-chain harness from HDX control 3.5mm po
 [dashboard-cluster]: 02-dashboard-cluster.md
 [bim-j1939]: 03-bim-j1939.md
 [pmu-outputs]: ../../01-power-systems/04-pmu/03-pmu-outputs.md
+[firewall-ground]: ../../01-power-systems/05-grounding/02-firewall-stud-bus.md
 [ignition-bus]: ../../01-power-systems/06-ignition-signal/index.md
 [ct4]: ../../05-control-interfaces/03-command-touch-ct4.md
 [ecm]: ../index.md
