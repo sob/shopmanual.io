@@ -13,6 +13,10 @@ Power generation and distribution architecture for the Jeep LJ build.
 
 ## File Organization
 
+### 1.0 Power Stages (`00-power-stages.md`)
+
+Authoritative assignment of every load to stage 0 (battery), 1 (main/chassis) or 2 (engine), plus the stage 0 rules. When adding or moving a load, pick its stage here first and add it to the stage table.
+
 ### 1.1 Power Generation (`01-power-generation/`)
 
 Batteries, alternator, BCDC charger, solar panel
@@ -64,7 +68,7 @@ Ignition sense signal to CT4, SwitchPros, Fusion Radio, BCDC
 
 ## When Changing Content
 
-**Adding load:** Determine battery → update terminal table → add CB if needed → update grounding → add to checklist
+**Adding load:** Determine stage ([Power Stages](00-power-stages.md)) → determine battery → update terminal table → add CB if needed → update grounding → add to checklist
 
 **Moving content:** Update cross-references → search for old links → verify build
 
