@@ -85,13 +85,6 @@ END
 **PMU Input Wiring:**
 
 - **Pin 7:** Ignition signal from the engine-bay distribution off HDP24 Pin 12 (PBS-I PINK IGN) — see [PMU Inputs][pmu-inputs]
-- **In 7:** CT4 SW3 output, tapped in the engine bay after HDP24 pin 9 — see [Firewall Ingress][firewall-ingress]
-- **In 5:** CT4 SW4 output, tapped in the engine bay after HDP24 pin 10
-
-**PMU Output Wiring:**
-
-- **Out 23:** 16 AWG from PMU (engine bay) to LP6 Pin 3 (DRL) on each headlight (0.8A total)
-- **Out 12:** 16 AWG from PMU (engine bay) → HDP24 pin 6 → H5 cabin trunk → rear splice: Maxbilt RED (each tail light) + RTL-S running + license-plate lamp; SwitchPros LIGHTS input tapped at the firewall
 
 **Wiring Method:** Simple inline splices; no junction box required at these loads.
 
