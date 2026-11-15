@@ -123,8 +123,6 @@ See [AUX Battery Distribution][aux-battery] for source battery and [Firewall CON
 
 **Switch Type:** Blue Sea 4160 latching push button, used as a signal switch. It closes TRIGGER-1 to ground and carries no lamp current.
 
-**Why not door switches:** the Jeep has no door switches and runs half doors or no doors (owner, 2026-09-24).
-
 **Wiring:**
 
 ```text
@@ -154,11 +152,8 @@ Rear Cargo Rocker Switch (SPST) → TRIGGER-2 (Pin 8, PINK)
 **Configuration:**
 
 - Program TRIGGER-2 → OUTPUT-13 (cargo light)
-- Switch type: SPST rocker or toggle switch
 
 ### TRIGGER-3: Air Pressure Switch → Auto Compressor Control
-
-ARB air tank pressure switch automatically activates compressor to maintain tank pressure between 135-150 PSI.
 
 **Wiring:**
 
@@ -167,10 +162,6 @@ ARB Pressure Switch (180901) → TRIGGER-3 (Pin 17, PINK)
 ```
 
 **Configuration:**
-
-Program TRIGGER-3 to activate compressor when tank pressure drops below 135 PSI:
-
-**SwitchPros Logic:**
 
 - **TRIGGER-3 OR Button 11 → OUTPUT-11 (compressor)**
 - When tank pressure < 135 PSI: TRIGGER-3 closes → OUTPUT-11 activates → compressor runs
@@ -214,7 +205,7 @@ and ground bus install are tracked in the [Power Systems Checklist][power-checkl
 
 ## Related Documentation
 
-- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Control Interfaces Overview][control-interfaces-overview]
 - [Offroad Lighting][offroad-auxiliary-lighting] - Complete wiring details for all lighting circuits controlled by SwitchPros
 - [Air System][air-system-arb-compressor-lockers] - ARB compressor wiring details (the lockers now run from [dash switches][dashboard-controls])
 - [AUX Battery Distribution][aux-battery] - Power feed specifications for SwitchPros

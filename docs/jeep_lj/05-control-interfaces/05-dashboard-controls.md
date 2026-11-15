@@ -20,7 +20,7 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 - LED-backlit OEM-look aesthetic
 - Switches snap-lock into their own cutout — no fascia/bezel required
 
-**Mounting:** Cutouts machined directly into the existing **Genright dash** at chosen positions — no separate fascia panel. Each switch snap-locks into its rectangular cutout, 0.83" wide × 1.54" tall.
+**Mounting:** Cutouts machined directly into the existing **Genright dash** at chosen positions.
 
 ---
 
@@ -86,7 +86,7 @@ This is the **correct** design for the Warn ZEON 10-S contactor, which has separ
 
 **Routing:** BODY PDU (firewall, cabin side) → ~3 ft 18 AWG to dash switch → out through HDP24 pins 16/17 → engine bay → winch contactor (front bumper).
 
-**Parallel Remote:** Handheld remote (wireless or wired) connects in parallel at winch contactor trigger terminals. Both dash switch and remote can trigger IN/OUT independently.
+**Parallel Remote:** Handheld remote (wireless or wired) connects in parallel at winch contactor trigger terminals.
 
 ### Winch Control Outstanding Items
 
@@ -151,7 +151,7 @@ There are no door switches on this Jeep, so TRIGGER-1 is free for this. See [Swi
 
 ## Related Documentation
 
-- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Control Interfaces Overview][control-interfaces-overview]
 - [SwitchPros SP-1200][switchpros-sp-1200-rcr-force-12] - Main lighting controller
 - [Air Lockers][air-lockers] - ARB lockers, solenoids, and air lines
 - [Recovery Systems][recovery-systems] - Winch system complete documentation

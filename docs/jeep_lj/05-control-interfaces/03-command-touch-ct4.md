@@ -81,7 +81,6 @@ Kit contents per the SwitchPros product page.[^ct4-kit]
 - **Front Turn Signals:** The kit's amber LED turn signals (dedicated turn signal only) — see [Turn Signals][turn-signals]
   - Wired to CT4 SW1 (right) and SW2 (left) outputs
   - Wire gauge: 14 AWG from CT4 to junction, 16 AWG to each light
-  - **Note:** These are dedicated turn signals, not dual-function with parking lights
 
 - **Rear Turn Signals:** Maxbilt Trail Tail lights (integrated brake/turn/marker/reverse)
   - **Brake/Turn wire (Yellow):** Combined brake and turn signal function
@@ -145,11 +144,6 @@ Recommended configuration for this build:
 
 - **Manual Override:** Can still manually cancel by moving lever to center or opposite direction
 - **Mounting:** Level surface, label facing up, not obstructed by any metal, kept dry (no pressure washing); orientation otherwise doesn't matter.[^ct4-manual] The manual's UTV location ("under the plastic hood") doesn't fit the LJ's steel hood — the dash top under the windshield meets every condition.
-- **Calibration:** May require initial calibration drive for optimal performance
-
-### PMU DRL Auto-Off Logic
-
-CT4 SW3 (low beam) taps to PMU In 7 and SW4 (high beam) to PMU In 5; the PMU turns Out 23 (DRL) off and Out 12 (parking/tail markers) on whenever either is active. See [DRL & Parking][drl-parking] for the full PMU logic, operation-state table, and load breakdown.
 
 ## Installation Checklist
 
@@ -209,7 +203,7 @@ in the [Power Systems Checklist][power-checklist].
 
 ## Related Documentation
 
-- [Control Interfaces Overview][control-interfaces-overview] - Main control interfaces overview
+- [Control Interfaces Overview][control-interfaces-overview]
 - [Vehicle Lighting][vehicle-lighting-overview] - Complete wiring details for all lighting circuits controlled by CT4
 - [Turn Signals][turn-signals] - Kit front LEDs and Maxbilt rear turns on SW1/SW2
 - [Horn System][horn] - Kit horn on PMU Out 18
