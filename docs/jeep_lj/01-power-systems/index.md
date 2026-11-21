@@ -9,6 +9,10 @@ hide:
 
 The Jeep LJ uses a dual-battery electrical system with intelligent power distribution and programmable power management.
 
+### Power Stages
+
+Every circuit is assigned to one of three stages: **0 Battery** (permanent), **1 Main power** (chassis, switched by PBS-I PINK IGN) and **2 Engine power** (ECM keyswitch feed). Brake assist, engine cooling, hazards and the keyless module are stage 0 so they don't depend on the PMU or the ignition feed. See [Power Stages](00-power-stages.md) for the rules and the full assignment.
+
 ### Power Generation & Storage
 
 - **START battery:** Odyssey PC1500 (850 CCA, 68 Ah) in driver rear wheel well - critical systems only

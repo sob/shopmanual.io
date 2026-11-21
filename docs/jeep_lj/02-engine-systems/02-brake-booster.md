@@ -123,8 +123,8 @@ Wilwood Tandem Compact, **1-1/8" bore** — re-sized 2026-09-16 for the Super Du
 
 | Circuit         | Wire Gauge | Source                               | Destination             | Notes                                                       |
 | :-------------- | :--------- | :----------------------------------- | :---------------------- | :---------------------------------------------------------- |
-| Main Power      | 8 AWG      | [START+ Forward Dist Bus][start-fwd-bus] (50A CB) | iBooster main connector | CONSTANT (safety requirement); START-direct, off the PMU    |
-| Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | SWITCHED (ignition RUN); ~5A; own firewall pin              |
+| Main Power      | 8 AWG      | [START+ Forward Dist Bus][start-fwd-bus] (50A CB) | iBooster main connector | Stage 0 ([Power Stages][power-stages]); START-direct, off the PMU |
+| Ignition Enable | 16 AWG     | [Ignition Signal bus][ignition-signal] (fused terminal) | iBooster ignition input | Stage 1 enable (ignition RUN); ~5A; own firewall pin        |
 | Ground          | 10 AWG     | iBooster ground                      | Engine Bay Bus Stud 7   | Dedicated/redundant ground recommended (a bad ground disables assist) |
 
 **No ABS or ESP module.** There is no hydraulic modulator downstream and nothing on CAN; the three circuits above are the whole electrical interface. The booster is expected to run on pedal position alone. That standalone behaviour comes from builder reports rather than a Bosch document, so confirm it with the harness vendor before committing to a harness ({{ tbd(105) }}).
@@ -311,3 +311,4 @@ See [tail/brake][tail-brake] (PMU lighting flow), [starter][starter] (crank chai
 [starter]: 01-starter.md
 [transmission]: ../10-drivetrain/01-transmission.md
 [backing-plate-dxf]: ../resources/lj-ibooster-backing-plate.dxf
+[power-stages]: ../01-power-systems/00-power-stages.md

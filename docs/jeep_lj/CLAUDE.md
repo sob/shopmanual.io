@@ -324,6 +324,7 @@ Firewall pattern is 60×80mm, mounted 80mm vertical.[^firewall-pattern]
 - Dual battery system: Front (critical), Rear (accessories)
 - Direct battery connections via circuit breakers (no bus bars between battery and major loads)
 - PMU for programmable power management
+- Every load is assigned a power stage (0 battery, 1 main/chassis, 2 engine) in `01-power-systems/00-power-stages.md`; stage 0 only for loads that must work key-off, must survive a PMU/ignition failure, or can't go through a switch
 - Separate control systems: CT4 (street lighting), SwitchPros (offroad), PMU (accessories)
 
 **Wiring Standards:**

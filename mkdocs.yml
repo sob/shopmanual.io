@@ -111,6 +111,7 @@ nav:
     - TBD Tracker: jeep_lj/tbd-tracker.md
     - Power Systems:
       - jeep_lj/01-power-systems/index.md
+      - 1.0 - Power Stages: jeep_lj/01-power-systems/00-power-stages.md
       - 1.1 - Power Generation:
         - jeep_lj/01-power-systems/01-power-generation/index.md
         - 1.1.1 - Batteries: jeep_lj/01-power-systems/01-power-generation/01-batteries.md
