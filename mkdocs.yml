@@ -172,6 +172,7 @@ nav:
         - 2.9.5 - BIM TPMS: jeep_lj/02-engine-systems/09-gauge-cluster/05-bim-tpms.md
         - 2.9.6 - BIM Compass: jeep_lj/02-engine-systems/09-gauge-cluster/06-bim-compass.md
       - 2.11 - Runaway Protection: jeep_lj/02-engine-systems/11-runaway-protection.md
+      - 2.12 - WAIT-to-Start Lockout (Design Note): jeep_lj/02-engine-systems/wait-to-start-lockout-design-note.md
     - Vehicle Lighting:
       - jeep_lj/03-lighting-systems/index.md
       - 3.1 - Lighting Overview: jeep_lj/03-lighting-systems/01-lighting-overview.md
