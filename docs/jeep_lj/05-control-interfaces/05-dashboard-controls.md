@@ -30,8 +30,8 @@ All dash-mounted physical switches use the **Toyota OEM cutout standard: 1.54" �
 |:-:|:-------|:-------|:---------|:------|:------|
 | 1 | **Winch IN/OUT** | ✓ Selected: CH4X4-TOY-D-WINIO | Dual-momentary push, IN and OUT | BODY PDU CB43 (10A) | See [Winch Control Switch](#winch-control-switch) below |
 | 2 | **Drive mode select** (transmission) | {{ tbd(72) }} | 3-position mode select (Street / Default / Offroad) — exact action depends on TCU spec | {{ tbd(72) }} (likely BODY PDU) | Verify TCU input requirements before sourcing |
-| 3 | **Driver heated seat** | {{ tbd(73) }} | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
-| 4 | **Passenger heated seat** | {{ tbd(73) }} | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
+| 3 | **Driver heated seat** | Toyota-style ON/OFF ([Purchase Tracker][purchase-tracker]) | ON/OFF latching (or momentary for Hi/Lo if available) | BODY PDU CB45 via relay K21 | Toyota-style equivalent needed |
+| 4 | **Passenger heated seat** | Toyota-style ON/OFF ([Purchase Tracker][purchase-tracker]) | ON/OFF latching | BODY PDU CB42 via relay K22 | Toyota-style equivalent needed |
 | 5 | **Rear air locker** | Part not chosen ([Purchase Tracker][purchase-tracker]) | ON/OFF latching | BODY PDU CB44 via relay K27 (ignition) | Moved off SwitchPros button 10 (2026-09-24). See [Locker Switches](#locker-switches) |
 | 6 | **Front air locker** | Part not chosen ([Purchase Tracker][purchase-tracker]) | ON/OFF latching | Rear locker switch output | Works only while the rear locker is on. Moved off SwitchPros button 9 |
 

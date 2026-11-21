@@ -48,7 +48,7 @@ The AUX battery has no local CONSTANT bus. Loads are distributed in two stages:
 
 | From                    | Cable     | Distance | Protection                | Voltage Drop @ 200A | Notes                                          |
 | :---------------------- | :-------- | :------- | :------------------------ | :------------------ | :--------------------------------------------- |
-| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 250A MRBF terminal fuse at AUX post | ~2.0% @ 20°C        | Routed via cabin trunk — see {{ tbd(75) }}     |
+| **AUX battery+**        | 2/0 AWG   | ~13 ft   | 250A MRBF terminal fuse at AUX post | ~2.0% @ 20°C        | Routed via cabin trunk; passenger-side firewall grommet in the [Purchase Tracker][purchase-tracker] |
 
 ## Load Distribution
 
@@ -93,3 +93,4 @@ See [Circuit Protection][circuit-breakers] for full specs.
 [safetyhub]: 04-safetyhub.md
 [body-rtmr]: 03-body-pdu.md
 [installation]: ../../09-installation/01-power-systems-checklist.md#phase-2-power-distribution
+[purchase-tracker]: ../../09-installation/03-purchase-tracker.md
